@@ -1,0 +1,2662 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#F4ECE0" />
+<meta name="apple-mobile-web-app-status-bar-style" content="default" />
+<title>The Sovereign Summit · February 5, 2027</title>
+<meta name="description" content="An immersive full-day Bitcoin experience at the Fontainebleau, Miami Beach. Friday, February 5, 2027." />
+
+<!-- Open Graph (iMessage, Facebook, LinkedIn, Slack, Discord) -->
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="The Sovereign Summit" />
+<meta property="og:url" content="https://thesovereignsummit.com/" />
+<meta property="og:title" content="The Sovereign Summit · February 5, 2027" />
+<meta property="og:description" content="An immersive full-day Bitcoin experience at the Fontainebleau, Miami Beach. Friday, February 5, 2027." />
+<meta property="og:image" content="https://thesovereignsummit.com/images/og-image.png" />
+<meta property="og:image:secure_url" content="https://thesovereignsummit.com/images/og-image.png" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:width" content="560" />
+<meta property="og:image:height" content="710" />
+<meta property="og:image:alt" content="The Sovereign Summit — mountain road and bitcoin badge" />
+
+<!-- Twitter / X -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="The Sovereign Summit · February 5, 2027" />
+<meta name="twitter:description" content="An immersive full-day Bitcoin experience at the Fontainebleau, Miami Beach." />
+<meta name="twitter:image" content="https://thesovereignsummit.com/images/og-image.png" />
+<meta name="twitter:image:alt" content="The Sovereign Summit — mountain road and bitcoin badge" />
+
+<link rel="icon" type="image/png" href="/images/og-image.png" />
+<link rel="apple-touch-icon" href="/images/og-image.png" />
+
+<!-- Self-hosted fonts: preload the two most-critical weights so they're available before first paint.
+     This eliminates the font-swap layout shift entirely (no more reliance on metric-matched fallbacks
+     hoping to fool the browser). The full @font-face declarations are inline in the <style> below. -->
+<link rel="preload" href="/fonts/InstrumentSerif.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/Archivo.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+/* Self-hosted brand fonts. Preloaded for fast first paint. font-display: swap
+   means real fonts always render eventually — visual fidelity over CLS score.
+   CLS will be flagged in PageSpeed but it's marked "Unscored" and doesn't
+   affect your actual performance score. */
+@font-face {
+  font-family: 'Instrument Serif';
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url('/fonts/InstrumentSerif.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Instrument Serif';
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+  src: url('/fonts/InstrumentSerif-Italic.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Archivo';
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url('/fonts/Archivo.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Archivo';
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  src: url('/fonts/Archivo-500.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url('/fonts/JetBrainsMono.woff2') format('woff2');
+}
+:root{--ink:#131e33;--ink-deep:#0a1224;--ink-soft:#2b3a58;--paper:#F4ECE0;--paper-deep:#EADFCC;--paper-light:#FAF5EA;--accent:#D9651F;--accent-deep:#A84810;--rule:rgba(19,30,51,.18);--rule-str:rgba(19,30,51,.35);--fd:'Instrument Serif',Georgia,serif;--fb:'Archivo',system-ui,sans-serif;--fm:'JetBrains Mono',ui-monospace,monospace;--gut:clamp(1.25rem,3vw,2.5rem);--max:1360px}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased;scroll-padding-top:112px;background:#F4ECE0;background-color:#F4ECE0;min-height:100%}
+@media (max-width:900px){html{scroll-padding-top:102px}}
+body{padding-bottom:env(safe-area-inset-bottom)}
+body{font-family:var(--fb);font-size:17px;line-height:1.55;color:var(--ink);background:#F4ECE0;background-color:#F4ECE0;overflow-x:hidden;min-height:100vh}
+img,svg{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;cursor:pointer;background:none;border:none}
+::selection{background:var(--ink);color:var(--paper)}
+.container{width:100%;max-width:var(--max);margin:0 auto;padding:0 var(--gut)}
+section{padding:clamp(2.5rem,5vw,4rem) 0;position:relative}
+@media (max-width:720px){
+  section{padding:2.25rem 0 2.75rem}
+  .sec-hd{margin-bottom:1.4rem}
+  .program{padding:2.5rem 0 3rem}
+  .news{padding:3rem 0}
+}
+.eyebrow{font-family:var(--fm);font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-soft)}
+.section-title{font-family:var(--fd);font-weight:400;font-size:clamp(2.25rem,5.5vw,4.5rem);line-height:1;letter-spacing:-.015em}
+.section-title em{font-style:italic;color:var(--accent-deep)}
+
+/* BUTTON */
+.btn{display:inline-flex;align-items:center;gap:.6rem;font-family:var(--fm);font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;padding:.95rem 1.6rem;border:1px solid var(--ink);transition:all .3s cubic-bezier(.2,.6,.2,1);position:relative;overflow:hidden;z-index:1}
+.btn::before{content:'';position:absolute;inset:0;background:var(--ink);transform:translateY(100%);transition:transform .3s cubic-bezier(.2,.6,.2,1);z-index:-1}
+.btn:hover{color:var(--paper)}
+.btn:hover::before{transform:translateY(0)}
+.btn__arrow{transition:transform .3s}
+.btn:hover .btn__arrow{transform:translateX(4px)}
+.btn--filled{background:var(--ink);color:var(--paper)}
+.btn--filled::before{background:var(--paper)}
+.btn--filled:hover{color:var(--ink)}
+.btn--accent{background:var(--accent-deep);color:var(--paper-light);border-color:var(--accent-deep)}
+.btn--accent::before{background:var(--ink)}
+.btn--accent:hover{color:var(--paper);border-color:var(--ink)}
+
+/* TICKER */
+.ticker{display:block;background:var(--ink);color:var(--paper);overflow:hidden;white-space:nowrap;padding:.32rem 0;border-bottom:1px solid var(--ink-deep);text-decoration:none;transition:background .2s}
+.ticker:hover{background:var(--ink-deep)}
+.ticker:hover .ticker__dot{color:var(--paper)}
+.ticker__track{display:flex;width:max-content;animation:tk 40s linear infinite;font-family:var(--fm);font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;will-change:transform}
+.ticker__item{display:flex;align-items:center;flex-shrink:0;padding:0 1.5rem}
+.ticker__dot{color:var(--accent);margin-left:3rem}
+@keyframes tk{to{transform:translateX(-50%)}}
+
+/* NAV */
+.nav-wrap{position:sticky;top:0;z-index:100;background:var(--paper);border-bottom:1px solid var(--rule);transition:background .3s}
+.nav-wrap.scrolled{background:var(--paper)}
+.nav{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:1.1rem 0;gap:2rem}
+.nav__brand{display:flex;align-items:center;justify-self:start}
+.nav__brand img{height:52px;width:auto;display:block;transition:opacity .2s}
+.nav__brand:hover img{opacity:.75}
+.nav__links{display:flex;gap:2.25rem;justify-self:center;list-style:none}
+.nav__link{font-family:var(--fm);font-size:.74rem;letter-spacing:.15em;text-transform:uppercase;color:var(--ink-soft);position:relative;transition:color .2s}
+.nav__link:hover{color:var(--ink)}
+.nav__link::after{content:'';position:absolute;left:0;bottom:-4px;width:0;height:1px;background:var(--ink);transition:width .3s}
+.nav__link:hover::after{width:100%}
+.nav__cta{}
+.nav__actions{
+  display:flex;
+  align-items:center;
+  gap:.85rem;
+  justify-self:end;
+}
+.nav__social{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:38px;
+  height:38px;
+  color:var(--ink-soft);
+  border:1px solid transparent;
+  transition:color .2s,border-color .2s,background .2s;
+}
+.nav__social:hover{
+  color:var(--ink);
+  border-color:var(--ink);
+  background:var(--paper-deep);
+}
+.nav__social svg{display:block}
+.mobile-menu__social{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:.6rem;
+  margin-top:1rem;
+  padding:1rem;
+  color:var(--ink-soft);
+  font-family:var(--fm);
+  font-size:.72rem;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  border:1px solid var(--rule);
+  transition:color .2s,border-color .2s,background .2s;
+}
+.mobile-menu__social:hover,.mobile-menu__social:focus{
+  color:var(--ink);
+  border-color:var(--ink);
+  background:var(--paper-deep);
+}
+.mobile-menu__social svg{display:block}
+
+/* MOBILE NAV TOGGLE (base styles must come BEFORE mobile media query) */
+.nav__toggle{display:none;width:44px;height:44px;flex-direction:column;justify-content:center;align-items:center;gap:5px;justify-self:end;border:1px solid var(--ink);background:transparent;cursor:pointer;padding:0;transition:background .2s}
+.nav__toggle:hover{background:var(--paper-deep)}
+.nav__toggle span{display:block;width:20px;height:1.5px;background:var(--ink);transition:transform .3s,opacity .3s}
+.nav__toggle[aria-expanded="true"] span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+.nav__toggle[aria-expanded="true"] span:nth-child(2){opacity:0}
+.nav__toggle[aria-expanded="true"] span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+
+/* MOBILE MENU DRAWER */
+.mobile-menu{position:fixed;top:0;left:0;right:0;bottom:0;background:var(--paper);padding:calc(var(--menu-offset, 5.5rem) + .5rem) 1.5rem 2rem;transform:translateY(-100%);transition:transform .4s cubic-bezier(.2,.6,.2,1);z-index:90;visibility:hidden;overflow-y:auto;-webkit-overflow-scrolling:touch}
+.mobile-menu.is-open{transform:translateY(0);visibility:visible}
+.mobile-menu__inner{max-width:560px;margin:0 auto}
+.mobile-menu__links{list-style:none;display:flex;flex-direction:column;gap:0;border-top:1px solid var(--rule)}
+.mobile-menu__link{display:flex;align-items:center;justify-content:space-between;padding:1.25rem .25rem;font-family:var(--fm);font-size:.85rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ink);border-bottom:1px solid var(--rule);transition:color .2s,padding-left .2s}
+.mobile-menu__link::after{content:'→';font-size:1rem;letter-spacing:0;opacity:0;transition:opacity .2s,transform .2s}
+.mobile-menu__link:hover,.mobile-menu__link:focus{color:var(--accent-deep);padding-left:.75rem}
+.mobile-menu__link:hover::after,.mobile-menu__link:focus::after{opacity:1;transform:translateX(2px)}
+.mobile-menu__cta{display:flex;align-items:center;justify-content:center;gap:.6rem;margin-top:1.75rem;background:var(--ink);color:var(--paper);text-align:center;padding:1.15rem;border:1px solid var(--ink);font-family:var(--fm);font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;transition:background .2s,color .2s}
+.mobile-menu__cta:hover{background:var(--accent-deep);border-color:var(--accent-deep);color:var(--paper)}
+body.menu-open{overflow:hidden}
+
+@media (max-width:900px){.nav__links{display:none}.nav__actions{display:none}.nav{grid-template-columns:1fr auto}.nav__brand img{height:42px}.nav__toggle{display:flex}}
+
+/* HERO */
+.hero{padding:clamp(1rem,2vw,1.5rem) 0}
+.hero > .container{max-width:none !important;padding:0 !important;width:100%}
+.hero__grid{display:grid;grid-template-columns:1fr 1fr;align-items:center;width:100%;min-height:calc(100vh - 130px);padding:0 clamp(1rem,2vw,2rem);max-height:calc(100vh - 130px)}
+.hero__logo-col{display:flex;align-items:center;justify-content:center;min-height:0;width:100%;overflow:hidden}
+.hero__logo-col img{display:block;width:100%;height:auto;aspect-ratio:1/1;max-height:calc(100vh - 180px);object-fit:contain}
+.hero__info{display:flex;flex-direction:column;gap:clamp(1rem,1.5vw,1.5rem);padding-left:clamp(1.5rem,3vw,3rem);padding-right:clamp(1rem,2vw,2rem);justify-content:center;max-height:calc(100vh - 180px);overflow:hidden}
+.hero__eyebrow{color:var(--accent-deep);font-size:.78rem;letter-spacing:.24em}
+.hero__warning{
+  display:flex;
+  flex-direction:column;
+  gap:.25rem;
+  padding:.85rem 1rem;
+  background:#c1272d;
+  color:#fff;
+  border:2px solid #8a1a1f;
+  border-radius:0;
+  font-family:var(--fm);
+  text-transform:uppercase;
+  letter-spacing:.08em;
+  line-height:1.25;
+  box-shadow:0 4px 14px rgba(193,39,45,.35);
+}
+.hero__warning strong{
+  font-size:1rem;
+  font-weight:700;
+  letter-spacing:.14em;
+}
+.hero__warning span{
+  font-size:.7rem;
+  font-weight:500;
+  opacity:.95;
+  letter-spacing:.06em;
+}
+.hero__headline{font-family:var(--fd);font-size:clamp(2.25rem,5vw,5rem);font-weight:400;line-height:1;letter-spacing:-.02em}
+.hero__headline .ital{font-style:italic;color:var(--accent-deep)}
+.hero__headline .accent{color:var(--accent-deep)}
+.hero__rule{height:1px;background:var(--rule)}
+.hero__facts{display:flex;flex-direction:column;gap:.85rem;list-style:none;margin:0}
+.hero__fact{display:grid;grid-template-columns:160px 1fr;gap:1.75rem;align-items:baseline;margin:0}
+.hero__fact dt{font-family:var(--fm);font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-soft);margin:0}
+.hero__fact dd{font-family:var(--fd);font-size:clamp(1.25rem,1.35vw,1.4rem);line-height:1.3;margin:0}
+.hero__fact dd em{font-style:italic;color:var(--accent-deep)}
+.hero__fact-link{color:inherit;text-decoration:none;border-bottom:1px solid rgba(19,30,51,.28);padding-bottom:1px;transition:border-bottom-color .2s}
+.hero__fact-link:hover{border-bottom-color:var(--accent-deep)}
+.hero__scroll{display:none}
+@media (max-width:860px){
+  .hero{padding:.55rem 0 .75rem}
+  .hero__grid{grid-template-columns:1fr;gap:.65rem;min-height:auto;max-height:none;padding:0 1rem}
+  .hero__logo-col{overflow:visible}
+  .hero__logo-col img{width:100%;height:auto;max-width:clamp(340px,64svh,540px);max-height:none}
+  .hero__info{padding-left:0;padding-right:0;max-height:none;overflow:visible;gap:.55rem}
+  .hero__eyebrow{font-size:.62rem;letter-spacing:.22em}
+  .hero__warning{padding:.65rem .85rem;gap:.15rem}
+  .hero__warning strong{font-size:.85rem;letter-spacing:.12em}
+  .hero__warning span{font-size:.6rem;letter-spacing:.05em;line-height:1.3}
+  .hero__headline{font-size:1.65rem;line-height:1.1}
+  .hero__headline br:not(.keep-mobile){display:none}
+  .hero__fact{grid-template-columns:88px 1fr;gap:.7rem}
+  .hero__fact dt{font-size:.58rem;letter-spacing:.18em}
+  .hero__fact dd{font-size:.88rem;line-height:1.25}
+  .hero__scroll{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    align-self:center;
+    margin:.6rem 0 .15rem;
+    width:48px;
+    height:48px;
+    color:var(--ink-soft);
+    text-decoration:none;
+    transition:color .2s;
+  }
+  .hero__scroll:hover,.hero__scroll:focus{color:var(--accent-deep)}
+  .hero__scroll-icon{font-size:1.65rem;line-height:1;display:block;animation:hero-scroll-bounce 1.8s ease-in-out infinite}
+  #hero-details{scroll-margin-top:96px}
+  .hero__facts{scroll-margin-bottom:1.25rem}
+}
+@media (max-width:480px){
+  .hero{padding:.5rem 0 1.25rem}
+  .hero__grid{gap:.55rem;padding:0}
+  .hero__logo-col img{max-width:clamp(300px,50svh,420px)}
+  .hero__info{gap:.55rem;padding:0 1rem}
+  .hero__eyebrow{font-size:.6rem}
+  .hero__warning{padding:.6rem .75rem;gap:.12rem}
+  .hero__warning strong{font-size:.8rem}
+  .hero__warning span{font-size:.56rem}
+  .hero__headline{font-size:1.6rem;line-height:1.05}
+  .hero__rule{margin-top:6rem}
+  .hero__facts{gap:.5rem}
+  .hero__fact{grid-template-columns:80px 1fr;gap:.6rem}
+  .hero__fact dt{font-size:.55rem}
+  .hero__fact dd{font-size:.86rem;line-height:1.25}
+  .hero__scroll{margin:.5rem 0 .25rem;width:44px;height:44px}
+  .hero__scroll-icon{font-size:1.5rem}
+}
+@keyframes hero-scroll-bounce{
+  0%,100%{transform:translateY(0)}
+  50%{transform:translateY(5px)}
+}
+
+/* SECTION HEADER */
+.sec-hd{display:grid;grid-template-columns:1fr 3fr;gap:clamp(2rem,5vw,4rem);align-items:start;margin-bottom:clamp(2.5rem,5vw,4rem)}
+.sec-hd__num{font-family:var(--fm);font-size:.78rem;letter-spacing:.24em;text-transform:uppercase;color:var(--ink-soft);padding-top:.8rem;border-top:1px solid var(--ink)}
+.sec-hd__title{padding-top:.5rem}
+@media (max-width:720px){.sec-hd{grid-template-columns:1fr;gap:1.25rem}}
+
+/* PROGRAM */
+.program{background:var(--ink);color:var(--paper);padding:clamp(5rem,10vw,8rem) 0}
+/* Cream fade at the bottom of the program section. Guarantees no dark navy
+   can bleed into the side-events area regardless of where the browser lands
+   the scroll target — iOS Safari's smooth scroll can momentarily overshoot
+   and would otherwise expose a sliver of dark navy below the sticky nav. */
+.program::after{content:'';position:absolute;bottom:0;left:0;right:0;height:80px;background:linear-gradient(to bottom,transparent,var(--paper));pointer-events:none;z-index:1}
+@media (max-width:720px){.program::after{height:48px}}
+.program .sec-hd__num{color:var(--paper-deep);opacity:.7;border-top-color:var(--paper-deep)}
+.program .section-title{color:var(--paper)}
+.program .section-title em{color:var(--accent)}
+.program__board{margin-top:clamp(2rem,4vw,3rem);border-top:1px solid rgba(244,236,224,.2)}
+.program__row{display:grid;grid-template-columns:130px 1fr auto;gap:clamp(1rem,3vw,2.5rem);padding:1.35rem .5rem;border-bottom:1px solid rgba(244,236,224,.14);align-items:baseline;transition:background .3s}
+.program__row:hover{background:rgba(244,236,224,.04)}
+.program__time{font-family:var(--fm);font-size:.82rem;letter-spacing:.1em;color:var(--paper-deep)}
+.program__title{font-family:var(--fd);font-size:clamp(1.2rem,2.2vw,1.6rem);line-height:1.15}
+.program__title em{font-style:italic;color:var(--accent)}
+.program__speaker{font-family:var(--fm);font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:var(--paper-deep);opacity:.75;margin-top:.3rem}
+.program__tag{font-family:var(--fm);font-size:.64rem;letter-spacing:.2em;text-transform:uppercase;color:var(--paper);opacity:.6;white-space:nowrap}
+.program__row--feat{background:rgba(217,101,31,.08)}
+.program__row--feat .program__tag{color:var(--accent);opacity:1}
+.program__row--break{opacity:.55;font-style:italic}
+.program__row--break .program__title{font-size:1.05rem;font-style:italic;color:var(--paper-deep)}
+@media (max-width:680px){.program__row{grid-template-columns:100px 1fr;gap:1rem}.program__tag{grid-column:2;margin-top:.3rem}}
+.program__footnote{margin-top:2rem;font-family:var(--fd);font-style:italic;font-size:1.05rem;color:rgba(244,236,224,.65);text-align:center;max-width:48ch;margin-left:auto;margin-right:auto}
+.program__footnote em{color:var(--accent)}
+
+/* SPEAKERS */
+.speakers__grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid var(--ink);border-left:1px solid var(--ink);border-right:1px solid var(--ink)}
+/* Tier 2/3 grid — 8 columns of compact medium cards */
+.speakers__grid--md{grid-template-columns:repeat(8,1fr);border-top:none}
+.speaker{padding:1.75rem 1.5rem 1.5rem;border-right:1px solid var(--ink);border-bottom:1px solid var(--ink);background:var(--paper-light);position:relative;transition:background .3s;text-decoration:none;color:inherit;display:flex;flex-direction:column;cursor:pointer}
+.speaker:nth-child(4n){border-right:none}
+.speaker--hidden{display:none}
+.speaker.speaker--hidden{display:none}
+.speakers{padding:clamp(.75rem,1.5vw,1.25rem) 0 clamp(.75rem,1.5vw,1.25rem)}
+.speakers .sec-hd{margin-bottom:.65rem;padding-top:.4rem}
+.speakers__actions{display:flex;justify-content:center;margin-top:.85rem}
+.speakers__toggle-hide{display:none}
+.speakers__toggle[aria-expanded="true"] .speakers__toggle-show{display:none}
+.speakers__toggle[aria-expanded="true"] .speakers__toggle-hide{display:inline}
+.speakers__toggle[aria-expanded="true"] .btn__arrow{transform:rotate(180deg)}
+.speaker__portrait{width:88px;height:88px;border-radius:50%;background:var(--ink);color:var(--paper);display:flex;align-items:center;justify-content:center;font-family:var(--fd);font-style:italic;font-size:2.3rem;line-height:1;margin-bottom:1.5rem;overflow:hidden;position:relative;flex-shrink:0}
+.speaker__photo{width:100%;height:100%;object-fit:cover;border-radius:50%;position:absolute;inset:0;z-index:2}
+.speaker__placeholder{font-family:var(--fd);font-style:italic;font-size:2.3rem;color:var(--paper);opacity:.5;position:relative;z-index:1}
+.speaker__portrait--hasphoto .speaker__placeholder{display:none}
+.speaker:hover{background:var(--paper-deep)}
+.speaker__index{position:absolute;top:1rem;right:1rem;font-family:var(--fm);font-size:.64rem;letter-spacing:.18em;color:var(--ink-soft)}
+
+.speaker__name{font-family:var(--fd);font-size:1.55rem;line-height:1.05;letter-spacing:-.01em;margin-bottom:.4rem;font-weight:400}
+.speaker__name em{font-style:italic}
+.speaker__role{font-family:var(--fm);font-size:.66rem;letter-spacing:.15em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:.7rem;line-height:1.5}
+.speaker__topic{font-family:var(--fd);font-style:italic;font-size:.95rem;line-height:1.3;color:var(--accent-deep);padding-top:.7rem;border-top:1px solid var(--rule)}
+
+/* Tier 1 cards (within the 4-col grid) — slimmer than original to free vertical space */
+.speakers__grid:not(.speakers__grid--md) .speaker{padding:1.1rem 1.1rem 1rem}
+.speakers__grid:not(.speakers__grid--md) .speaker__portrait{width:64px;height:64px;font-size:1.7rem;margin-bottom:.85rem}
+.speakers__grid:not(.speakers__grid--md) .speaker__placeholder{font-size:1.7rem}
+
+/* MEDIUM speaker card — used in tier 2/3 grids of 8 */
+.speaker--md{padding:.6rem .5rem .55rem;align-items:center;text-align:center}
+.speaker--md .speaker__index{display:none}
+.speaker--md .speaker__portrait{width:42px;height:42px;margin-bottom:.4rem;font-size:1.1rem}
+.speaker--md .speaker__placeholder{font-size:1.1rem}
+.speaker--md .speaker__name{font-size:.82rem;line-height:1.05;margin-bottom:.15rem;letter-spacing:-.005em}
+.speaker--md .speaker__role{font-size:.5rem;letter-spacing:.12em;margin-bottom:0;line-height:1.3}
+.speaker--md .speaker__topic{display:none}
+/* Override the tier-1 :nth-child(4n) right-border removal for medium grid */
+.speakers__grid--md .speaker{border-right:1px solid var(--ink)}
+.speakers__grid--md .speaker:nth-child(8n){border-right:none}
+
+@media (max-width:1080px){
+  .speakers__grid{grid-template-columns:repeat(2,1fr)}
+  .speakers__grid--md{grid-template-columns:repeat(4,1fr)}
+  .speakers__grid:not(.speakers__grid--md) .speaker:nth-child(4n){border-right:1px solid var(--ink)}
+  .speakers__grid:not(.speakers__grid--md) .speaker:nth-child(2n){border-right:none}
+  .speakers__grid--md .speaker:nth-child(8n){border-right:1px solid var(--ink)}
+  .speakers__grid--md .speaker:nth-child(4n){border-right:none}
+}
+@media (max-width:640px){
+  .speakers__grid--md{grid-template-columns:repeat(3,1fr)}
+  .speakers__grid--md .speaker:nth-child(4n){border-right:1px solid var(--ink)}
+  .speakers__grid--md .speaker:nth-child(3n){border-right:none}
+}
+@media (max-width:520px){
+  .speakers{padding:1rem 0 1.5rem}
+  .speakers .sec-hd{margin-bottom:.65rem;gap:.4rem;padding-top:0}
+  .speakers .sec-hd__num{padding-top:.5rem;font-size:.7rem}
+  .speakers .section-title{font-size:1.5rem}
+  .speakers .sec-hd__title{padding-top:0}
+  .speakers__grid{grid-template-columns:1fr;border-right:none}
+  .speakers__grid--md{grid-template-columns:repeat(2,1fr)}
+  .speakers__actions{margin-top:.65rem}
+  .speakers__toggle{padding:.65rem 1rem;font-size:.64rem;letter-spacing:.12em}
+  .speakers__footnote{display:none}
+  /* On mobile, also hide cards 13-20 by default — only first 8 medium cards visible.
+     The toggle reveals everything from card 13 onward. */
+  .speakers__grid--md .speaker[data-speaker="13"],
+  .speakers__grid--md .speaker[data-speaker="14"],
+  .speakers__grid--md .speaker[data-speaker="15"],
+  .speakers__grid--md .speaker[data-speaker="16"],
+  .speakers__grid--md .speaker[data-speaker="17"],
+  .speakers__grid--md .speaker[data-speaker="18"],
+  .speakers__grid--md .speaker[data-speaker="19"],
+  .speakers__grid--md .speaker[data-speaker="20"],
+  .speakers__grid--md .speaker[data-speaker="21"]{display:none}
+  .speakers__grid--md.is-expanded .speaker[data-speaker="13"],
+  .speakers__grid--md.is-expanded .speaker[data-speaker="14"],
+  .speakers__grid--md.is-expanded .speaker[data-speaker="15"],
+  .speakers__grid--md.is-expanded .speaker[data-speaker="16"],
+  .speakers__grid--md.is-expanded .speaker[data-speaker="17"],
+  .speakers__grid--md.is-expanded .speaker[data-speaker="18"],
+  .speakers__grid--md.is-expanded .speaker[data-speaker="19"],
+  .speakers__grid--md.is-expanded .speaker[data-speaker="20"],
+  .speakers__grid--md.is-expanded .speaker[data-speaker="21"]{display:flex}
+  .speaker{
+    display:grid;
+    grid-template-columns:42px 1fr;
+    grid-template-rows:auto auto auto;
+    column-gap:.7rem;
+    align-items:center;
+    padding:.5rem .75rem;
+    border-right:none !important
+  }
+  .speakers__grid--md .speaker:nth-child(2n){border-right:none}
+  .speakers__grid--md .speaker:nth-child(odd){border-right:1px solid var(--ink) !important}
+  .speaker__index{top:.45rem;right:.7rem;font-size:.5rem}
+  .speaker__portrait{
+    grid-column:1;
+    grid-row:1 / span 3;
+    width:42px;
+    height:42px;
+    margin-bottom:0;
+    align-self:center
+  }
+  .speakers__grid:not(.speakers__grid--md) .speaker__portrait{width:42px;height:42px;margin-bottom:0;font-size:1.1rem}
+  .speakers__grid:not(.speakers__grid--md) .speaker__placeholder{font-size:1.1rem}
+  .speaker__placeholder{font-size:1.1rem}
+  .speaker__name{
+    grid-column:2;
+    grid-row:1;
+    font-size:1rem;
+    margin-bottom:.05rem;
+    line-height:1.05;
+    padding-right:1.25rem
+  }
+  .speaker__role{
+    grid-column:2;
+    grid-row:2;
+    font-size:.52rem;
+    margin-bottom:.25rem;
+    letter-spacing:.13em;
+    line-height:1.35
+  }
+  .speaker__topic{
+    grid-column:2;
+    grid-row:3;
+    font-size:.74rem;
+    padding-top:.28rem;
+    line-height:1.2
+  }
+  /* Medium cards on mobile go back to compact stacked layout */
+  .speaker--md{
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    text-align:left;
+    gap:.6rem;
+    padding:.45rem .65rem
+  }
+  .speaker--md .speaker__portrait{width:32px;height:32px;margin-bottom:0;flex-shrink:0;font-size:.9rem}
+  .speaker--md .speaker__placeholder{font-size:.9rem}
+  .speaker--md .speaker__name{font-size:.78rem;margin-bottom:.02rem;padding-right:0;text-align:left;line-height:1.05}
+  .speaker--md .speaker__role{font-size:.46rem;text-align:left;line-height:1.3}
+}
+.speakers__footnote{margin-top:.75rem;font-family:var(--fd);font-style:italic;font-size:.95rem;color:var(--ink-soft);text-align:center;max-width:48ch;margin-left:auto;margin-right:auto}
+.speakers__footnote em{color:var(--accent-deep)}
+
+/* PARTNERS — mirrors .speakers structure */
+.partners{padding:clamp(1rem,2vw,1.5rem) 0 clamp(1rem,2vw,1.5rem)}
+.partners .sec-hd{margin-bottom:clamp(1.5rem,3vw,2.5rem)}
+.partners__grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid var(--ink);border-left:1px solid var(--ink)}
+.partner{padding:1.75rem 1.5rem 1.5rem;border-right:1px solid var(--ink);border-bottom:1px solid var(--ink);background:var(--paper-light);position:relative;transition:background .3s;text-decoration:none;color:inherit;display:flex;flex-direction:column;cursor:pointer}
+.partner--hidden{display:none}
+.partner.partner--hidden{display:none}
+.partner:hover{background:var(--paper-deep)}
+.partner__index{position:absolute;top:1rem;right:1rem;font-family:var(--fm);font-size:.64rem;letter-spacing:.18em;color:var(--ink-soft)}
+.partner__portrait{width:88px;height:88px;border-radius:50%;background:var(--paper-deep);color:var(--ink);display:flex;align-items:center;justify-content:center;font-family:var(--fd);font-style:italic;font-size:2.3rem;line-height:1;margin-bottom:1.5rem;overflow:visible;position:relative;flex-shrink:0;border:1px solid var(--rule);transition:background .3s,border-color .3s}
+.partner__photo{width:100%;height:100%;object-fit:contain;border-radius:0;position:absolute;top:0;left:0;z-index:2}
+.partner__placeholder{font-family:var(--fd);font-style:italic;font-size:2.3rem;color:var(--ink);opacity:.35;position:relative;z-index:1}
+/* When a logo loads, drop the circle chip entirely — the logo IS the visual */
+.partner__portrait--haslogo{background:transparent;border:none;border-radius:0}
+.partner__portrait--haslogo .partner__placeholder{display:none}
+.partner__name{font-family:var(--fd);font-size:1.75rem;line-height:1.05;letter-spacing:-.01em;margin-bottom:.45rem;font-weight:400}
+.partner__name em{font-style:italic}
+.partner__role{font-family:var(--fm);font-size:.68rem;letter-spacing:.15em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:.85rem;line-height:1.55}
+.partner__topic{font-family:var(--fd);font-style:italic;font-size:1.05rem;line-height:1.35;color:var(--accent-deep);padding-top:.85rem;border-top:1px solid var(--rule)}
+.partners__actions{display:flex;justify-content:center;margin-top:1.25rem}
+.partners__toggle-hide{display:none}
+.partners__toggle[aria-expanded="true"] .partners__toggle-show{display:none}
+.partners__toggle[aria-expanded="true"] .partners__toggle-hide{display:inline}
+.partners__toggle[aria-expanded="true"] .btn__arrow{transform:rotate(180deg)}
+.partners__footnote{margin-top:1rem;font-family:var(--fd);font-style:italic;font-size:1.1rem;color:var(--ink-soft);text-align:center;max-width:48ch;margin-left:auto;margin-right:auto}
+.partners__footnote em{color:var(--accent-deep)}
+@media (max-width:1080px){.partners__grid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:520px){
+  .partners{padding:1rem 0 1.5rem}
+  .partners .sec-hd{margin-bottom:.65rem;gap:.4rem}
+  .partners .sec-hd__num{padding-top:.5rem;font-size:.7rem}
+  .partners .section-title{font-size:1.5rem}
+  .partners .sec-hd__title{padding-top:0}
+  /* On mobile, override partner--hidden for cards 5 and 6 so 6 are visible by default.
+     The toggle still reveals cards 7 and 8 (which keep .partner--hidden until clicked).
+     Use display:grid to match the mobile horizontal layout of cards 1-4 (not the
+     desktop vertical layout that .partner uses by default). */
+  .partners__grid .partner[data-partner="05"].partner--hidden,
+  .partners__grid .partner[data-partner="06"].partner--hidden{display:grid}
+  .partners__grid{grid-template-columns:1fr}
+  .partners__actions{margin-top:.75rem}
+  .partners__toggle{padding:.7rem 1rem;font-size:.66rem;letter-spacing:.12em}
+  .partners__footnote{margin-top:.85rem;font-size:.9rem;line-height:1.4}
+  .partner{
+    display:grid;
+    grid-template-columns:48px 1fr;
+    grid-template-rows:auto auto auto;
+    column-gap:.85rem;
+    align-items:center;
+    padding:.7rem .9rem
+  }
+  .partner__index{top:.6rem;right:.8rem;font-size:.55rem}
+  .partner__portrait{
+    grid-column:1;
+    grid-row:1 / span 3;
+    width:48px;
+    height:48px;
+    margin-bottom:0;
+    align-self:center
+  }
+  .partner__placeholder{font-size:1.25rem}
+  .partner__name{
+    grid-column:2;
+    grid-row:1;
+    font-size:1.1rem;
+    margin-bottom:.1rem;
+    line-height:1.05;
+    padding-right:1.5rem
+  }
+  .partner__role{
+    grid-column:2;
+    grid-row:2;
+    font-size:.55rem;
+    margin-bottom:.35rem;
+    letter-spacing:.13em;
+    line-height:1.4
+  }
+  .partner__topic{
+    grid-column:2;
+    grid-row:3;
+    font-size:.8rem;
+    padding-top:.35rem;
+    line-height:1.25
+  }
+}
+
+/* VENUE */
+.venue{background:var(--paper-deep)}
+.venue{padding:1.25rem 0 1.75rem !important}
+.venue .sec-hd{margin-bottom:clamp(.85rem,1.75vw,1.25rem)}
+.venue .section-title{font-size:clamp(1.6rem,3vw,2.5rem)}
+.venue__grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:clamp(1.5rem,3.5vw,3rem);align-items:start}
+.venue__illus{background:var(--paper-light);aspect-ratio:16/9;max-height:420px;border:1px solid var(--ink);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.venue__illus::before{content:'';position:absolute;inset:.5rem;border:1px solid rgba(244,236,224,.4);pointer-events:none;z-index:1}
+.venue__illus svg{width:100%;height:auto;max-height:340px}
+.venue__illus img{width:100%;height:100%;object-fit:cover;display:block}
+.venue__photo-placeholder{width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--paper-light) 0%,var(--paper-deep) 100%);position:relative;min-height:240px}
+.venue__photo-frame{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;color:var(--ink-soft);padding:1.5rem;gap:1rem}
+.venue__photo-icon{width:80px;color:var(--ink);opacity:.4}
+.venue__photo-icon svg{width:100%;height:auto;display:block}
+.venue__photo-caption{font-family:var(--fd);font-style:italic;font-size:1.4rem;line-height:1.2;color:var(--ink);opacity:.7}
+.venue__photo-caption span{color:var(--accent-deep);opacity:.85}
+.venue__photo-meta{font-family:var(--fm);font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-soft);opacity:.65;margin-top:.25rem}
+.venue__eyebrow{font-size:.7rem!important}
+.venue__content h3{font-family:var(--fd);font-size:clamp(1.4rem,2.4vw,2rem);line-height:1.05;margin:.25rem 0 .5rem;letter-spacing:-.015em;font-weight:400}
+.venue__content h3 em{font-style:italic;color:var(--accent-deep)}
+.venue__content p{max-width:48ch;margin-bottom:.55rem;color:var(--ink-soft);font-size:.95rem;line-height:1.4}
+.venue__details{margin-top:.5rem;padding-top:.6rem;border-top:1px solid var(--rule);display:grid;grid-template-columns:repeat(2,1fr);gap:.5rem 1.25rem}
+.venue__detail-label{font-family:var(--fm);font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:.25rem}
+.venue__detail-value{font-family:var(--fd);font-size:.98rem;line-height:1.3}
+.venue__link{color:var(--accent-deep);text-decoration:none;border-bottom:1px solid var(--accent-deep);transition:color .2s,border-color .2s}
+.venue__link:hover{color:var(--ink);border-bottom-color:var(--ink)}
+@media (max-width:880px){.venue__grid{grid-template-columns:1fr}.venue__illus{aspect-ratio:16/9;max-height:200px}.venue__details{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:520px){
+  .venue{padding:.85rem 0 1.5rem !important}
+  .venue .sec-hd{margin-bottom:.5rem;gap:.4rem}
+  .venue .sec-hd__num{padding-top:.45rem;font-size:.7rem}
+  .venue .section-title{font-size:1.5rem}
+  .venue .sec-hd__title{padding-top:0}
+  .venue__grid{gap:.85rem}
+  .venue__illus{aspect-ratio:16/9;max-height:160px;padding:0}
+  .venue__photo-icon{width:46px}
+  .venue__photo-caption{font-size:1rem}
+  .venue__photo-meta{font-size:.55rem;letter-spacing:.18em}
+  .venue__content .eyebrow{font-size:.62rem;letter-spacing:.18em}
+  .venue__content h3{font-size:1.3rem;line-height:1.05;margin:.35rem 0 .45rem}
+  .venue__content p{font-size:.85rem;line-height:1.32;margin-bottom:.45rem}
+  .venue__details{margin-top:.55rem;padding-top:.6rem;gap:.55rem .85rem;grid-template-columns:repeat(2,1fr)}
+  .venue__detail-label{font-size:.55rem;letter-spacing:.16em;margin-bottom:.15rem}
+  .venue__detail-value{font-size:.78rem;line-height:1.25}
+}
+
+/* TICKETS */
+.tickets{padding:1.25rem 0 1.5rem !important}
+.tickets .sec-hd{margin-bottom:.85rem;padding-top:.75rem}
+.tickets .section-title{font-size:clamp(1.6rem,3vw,2.5rem)}
+.tickets__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.tier{background:var(--paper-light);border:1px solid var(--ink);padding:.85rem .9rem .85rem;position:relative;display:flex;flex-direction:column;min-height:auto;transition:transform .3s,box-shadow .3s}
+.tier:hover{transform:translateY(-4px);box-shadow:0 14px 40px -20px rgba(19,30,51,.3)}
+.tier::before{content:'';position:absolute;left:-1px;top:-1px;right:-1px;height:4px;background:var(--ink)}
+.tier--featured{background:var(--ink);color:var(--paper)}
+.tier--featured::before{background:var(--accent)}
+.tier--premium{border-color:var(--accent-deep)}
+.tier--premium::before{background:var(--accent-deep)}
+/* ALL ACCESS — full-width hero tier with deep teal + warm gold */
+.tier--allaccess{grid-column:1/-1;background:#0E4C5C;color:var(--paper-light);border-color:#0E4C5C;padding:1.35rem 1.6rem 1.25rem;margin-bottom:.5rem}
+.tier--allaccess::before{background:#D4A93C;height:6px}
+.tier--allaccess:hover{transform:translateY(-3px);box-shadow:0 16px 44px -22px rgba(14,76,92,.45)}
+.tier__allaccess-grid{display:grid;grid-template-columns:auto 1fr auto;gap:clamp(1.5rem,3vw,2.75rem);align-items:center}
+.tier__allaccess-left{display:flex;flex-direction:column;gap:.15rem}
+.tier__allaccess-mid{display:flex;flex-direction:column;gap:.7rem;min-width:0}
+.tier--allaccess .tier__eyebrow{color:#D4A93C;opacity:1;margin-bottom:.3rem;font-size:.66rem}
+.tier--allaccess .tier__name{font-size:clamp(1.85rem,3vw,2.5rem);margin-bottom:.15rem;line-height:1}
+.tier--allaccess .tier__name em{color:#D4A93C}
+.tier--allaccess .tier__price{font-size:clamp(2rem,3.2vw,2.5rem)}
+.tier--allaccess .tier__price-wrap{border-bottom:none;padding-bottom:0;margin-bottom:.05rem;align-items:baseline;gap:.45rem;flex-wrap:wrap}
+.tier--allaccess .tier__price-strike{font-family:var(--fd);font-size:1.05rem;color:var(--paper-deep);text-decoration:line-through;opacity:.55;margin-left:.15rem}
+.tier--allaccess .tier__price-unit{color:var(--paper-deep)}
+.tier--allaccess .tier__desc{color:var(--paper);opacity:.92;font-size:.92rem;line-height:1.35;margin-bottom:0}
+.tier--allaccess .tier__desc em{color:#D4A93C;font-style:italic}
+.tier--allaccess .tier__includes{display:grid;grid-template-columns:repeat(2,1fr);gap:.25rem 1.1rem;list-style:none;margin:0;padding:0}
+.tier--allaccess .tier__includes li{display:flex;align-items:baseline;gap:.45rem;font-size:.85rem;line-height:1.3;border:none;padding:0;color:var(--paper)}
+.tier--allaccess .tier__includes li::before{content:'·';color:#D4A93C;font-weight:600;font-family:var(--fm);font-size:1.1rem;line-height:1}
+.tier--allaccess .tier__includes strong{font-weight:500;color:#D4A93C;font-family:var(--fm);font-size:.72em;letter-spacing:.06em;margin-left:auto;padding-left:.4rem;white-space:nowrap}
+.tier--allaccess .btn{background:#D4A93C;color:#0E4C5C;border-color:#D4A93C;padding:1rem 1.5rem;font-size:.76rem;align-self:center;white-space:nowrap}
+.tier--allaccess .btn::before{background:var(--paper-light)}
+.tier--allaccess .btn:hover{color:#0E4C5C;border-color:var(--paper-light)}
+.tier--allaccess .tier__ribbon{background:#D4A93C;color:#0E4C5C;font-size:.62rem;padding:.3rem .75rem}
+.tier__ribbon{position:absolute;top:-8px;right:1.25rem;background:var(--accent);color:var(--ink);font-family:var(--fm);font-size:.55rem;letter-spacing:.2em;text-transform:uppercase;padding:.22rem .6rem;font-weight:500}
+.tier__eyebrow{font-family:var(--fm);font-size:.58rem;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:.4rem}
+.tier--featured .tier__eyebrow{color:var(--accent)}
+.tier__name{font-family:var(--fd);font-size:clamp(1.2rem,1.9vw,1.6rem);line-height:1;letter-spacing:-.015em;margin-bottom:.3rem;font-weight:400}
+.tier__name em{font-style:italic}
+.tier--featured .tier__name em{color:var(--accent)}
+.tier__price-wrap{display:flex;align-items:baseline;gap:.35rem;margin-bottom:.5rem;padding-bottom:.5rem;border-bottom:1px solid var(--rule)}
+.tier--featured .tier__price-wrap{border-bottom-color:rgba(244,236,224,.2)}
+.tier__price{font-family:var(--fd);font-size:1.5rem;line-height:1;letter-spacing:-.02em}
+.tier__price-unit{font-family:var(--fm);font-size:.58rem;letter-spacing:.15em;text-transform:uppercase;color:var(--ink-soft)}
+.tier--featured .tier__price-unit{color:var(--paper-deep)}
+.tier__desc{font-family:var(--fd);font-style:italic;font-size:.82rem;line-height:1.3;margin-bottom:.55rem;color:var(--ink-soft)}
+.tier--featured .tier__desc{color:var(--paper-deep)}
+.tier__list{list-style:none;margin-bottom:.65rem;flex:1}
+.tier__list li{display:flex;gap:.5rem;padding:.18rem 0;font-size:.74rem;line-height:1.25;border-bottom:1px solid var(--rule)}
+.tier__list li:last-child{border-bottom:none}
+.tier--featured .tier__list li{border-bottom-color:rgba(244,236,224,.14)}
+.tier__list li::before{content:'·';font-family:var(--fm);color:var(--accent-deep);font-size:1rem;line-height:1}
+.tier--featured .tier__list li::before{color:var(--accent)}
+.tier .btn{padding:.6rem .9rem;font-size:.64rem}
+.tier--featured .btn{background:var(--accent);color:var(--ink);border-color:var(--accent)}
+.tier--featured .btn::before{background:var(--paper)}
+.tier--featured .btn:hover{color:var(--ink);border-color:var(--paper)}
+@media (max-width:1100px){.tier__allaccess-grid{grid-template-columns:auto 1fr;gap:1.25rem}.tier--allaccess .btn{grid-column:1/-1;justify-self:start;align-self:start}}
+@media (max-width:960px){.tickets__grid{grid-template-columns:1fr}.tier{min-height:auto}.tier__allaccess-grid{grid-template-columns:1fr;gap:.75rem}.tier--allaccess .tier__includes{grid-template-columns:1fr}}
+@media (max-width:720px){
+  .tickets{padding:1.25rem 0 1.75rem !important}
+  .tickets .sec-hd{margin-bottom:.85rem}
+  .tickets .section-title{font-size:1.65rem}
+  .tickets__grid{gap:1rem}
+  .tier{padding:1.1rem 1.1rem 1.1rem}
+  .tier__ribbon{top:-8px;font-size:.55rem;padding:.22rem .55rem}
+  .tier__eyebrow{margin-bottom:.55rem;font-size:.6rem}
+  .tier__name{font-size:1.5rem;margin-bottom:.35rem}
+  .tier__price{font-size:1.7rem}
+  .tier__price-wrap{margin-bottom:.65rem;padding-bottom:.65rem;gap:.3rem}
+  .tier__desc{font-size:.86rem;margin-bottom:.8rem;line-height:1.3}
+  .tier__list{margin-bottom:.9rem}
+  .tier__list li{padding:.28rem 0;font-size:.82rem;line-height:1.3}
+  .tier .btn{padding:.85rem 1rem;font-size:.7rem}
+  .tier--allaccess{padding:.95rem 1rem}
+  .tier--allaccess .tier__name{font-size:1.5rem}
+  .tier--allaccess .tier__price{font-size:1.7rem}
+  .tier--allaccess .tier__price-strike{font-size:.85rem}
+  .tier--allaccess .tier__includes li{font-size:.74rem}
+  .tier--allaccess .tier__includes strong{font-size:.68em}
+  .tickets__trust{margin-top:1rem;font-size:.85rem;line-height:1.45}
+}
+.tickets__trust{margin:1.75rem auto 0;max-width:760px;text-align:center;font-family:var(--fd);font-style:italic;font-size:.92rem;line-height:1.55;color:var(--ink-soft)}
+
+
+/* SIDE EVENTS */
+.side-events{padding:.5rem 0 1.5rem !important}
+.side-events .sec-hd{margin-bottom:clamp(.85rem,1.75vw,1.25rem);padding-top:1.5rem}
+.side-events .section-title{font-size:clamp(1.6rem,3vw,2.5rem)}
+.side-events__grid{display:grid;grid-template-columns:repeat(2,1fr);gap:0;border-top:1px solid var(--ink);border-left:1px solid var(--ink)}
+.side-event{padding:.7rem .95rem;border-right:1px solid var(--ink);border-bottom:1px solid var(--ink);background:var(--paper-light);display:flex;flex-direction:column;gap:.3rem;transition:background .3s;text-decoration:none;color:inherit;position:relative}
+.side-event__link{position:absolute;inset:0;z-index:1;text-decoration:none}
+.side-event__link:focus-visible{outline:2px solid var(--accent-deep);outline-offset:-3px}
+.side-event:hover{background:var(--paper-deep)}
+.side-event:hover .side-event__title{color:var(--accent-deep)}
+.side-event__date{font-family:var(--fm);font-size:.66rem;letter-spacing:.22em;text-transform:uppercase;color:var(--accent-deep)}
+.side-event__time{font-family:var(--fm);font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:.05rem}
+.side-event__title{font-family:var(--fd);font-size:clamp(1.2rem,1.4vw,1.45rem);line-height:1.05;letter-spacing:-.01em;font-weight:400;margin-bottom:.05rem}
+.side-event__title em{font-style:italic}
+.side-event__venue{display:inline-flex;align-items:baseline;gap:.45rem;font-family:var(--fd);font-size:.9rem;color:var(--ink);padding:.2rem .5rem;background:var(--paper-deep);border-left:2px solid var(--accent-deep);align-self:flex-start;line-height:1.2}
+.side-event__venue-label{font-family:var(--fm);font-size:.55rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-soft)}
+.side-event__venue-name{font-style:italic;color:var(--accent-deep);font-weight:400}
+.side-event__desc{font-family:var(--fd);font-size:.82rem;line-height:1.3;color:var(--ink-soft);flex:1;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;margin:0}
+.side-event__meta{font-family:var(--fm);font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-soft);padding-top:.35rem;border-top:1px solid var(--rule)}
+.side-event__top{display:flex;justify-content:space-between;align-items:flex-start;gap:1rem;width:100%}
+.side-event__when{display:flex;flex-direction:column;gap:.05rem}
+.side-event__sponsor{display:inline-flex;align-items:center;gap:.4rem;font-family:var(--fm);font-size:.55rem;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-soft);padding:.4rem .65rem;border:1px dashed var(--rule-str);background:transparent;transition:all .25s ease;text-decoration:none;flex-shrink:0;position:relative;z-index:2}
+.side-event__sponsor:hover{background:var(--ink);color:var(--paper);border-color:var(--ink);border-style:solid}
+.side-event__sponsor-label{color:var(--accent-deep);transition:color .25s ease}
+.side-event__sponsor:hover .side-event__sponsor-label{color:var(--accent)}
+.side-event__sponsor-arrow{transition:transform .25s ease;font-size:.7rem;letter-spacing:0}
+.side-event__sponsor:hover .side-event__sponsor-arrow{transform:translateX(3px)}
+.side-events__grid > .side-event:nth-child(odd):last-child{grid-column:1/-1}
+@media (max-width:720px){.side-events__grid{grid-template-columns:1fr}}
+@media (max-width:520px){
+  .side-events{padding:2rem 0 1.5rem !important}
+  .side-events .sec-hd{margin-bottom:.5rem;gap:.4rem}
+  .side-events .sec-hd__num{padding-top:.45rem;font-size:.7rem}
+  .side-events .section-title{font-size:1.4rem}
+  .side-events .sec-hd__title{padding-top:0}
+  .side-event{
+    display:grid;
+    grid-template-columns:100px 1fr;
+    column-gap:.95rem;
+    align-items:start;
+    padding:.65rem .95rem;
+    gap:0
+  }
+  .side-event__top{display:contents}
+  .side-event__when{display:contents}
+  .side-event__date{
+    grid-column:1;
+    grid-row:1;
+    font-size:.58rem;
+    letter-spacing:.16em;
+    line-height:1.3;
+    margin-bottom:.15rem
+  }
+  .side-event__time{
+    grid-column:1;
+    grid-row:2;
+    font-size:.58rem;
+    letter-spacing:.16em;
+    line-height:1.3;
+    margin-bottom:0
+  }
+  .side-event__title{
+    grid-column:2;
+    grid-row:1;
+    font-size:1.1rem;
+    line-height:1.05;
+    margin-bottom:.25rem
+  }
+  .side-event__venue{
+    grid-column:2;
+    grid-row:2;
+    font-size:.78rem;
+    padding:.2rem .45rem;
+    margin-bottom:.3rem;
+    line-height:1.15;
+    gap:.4rem
+  }
+  .side-event__venue-label{font-size:.5rem;letter-spacing:.16em}
+  .side-event__desc{display:none}
+  .side-event__meta{
+    grid-column:2;
+    grid-row:3;
+    font-size:.55rem;
+    padding-top:.3rem;
+    letter-spacing:.16em
+  }
+  .side-event__sponsor{
+    grid-column:2;
+    grid-row:4;
+    font-size:.5rem;
+    letter-spacing:.14em;
+    padding:.35rem .5rem;
+    margin-top:.3rem;
+    gap:.3rem
+  }
+  .side-event__sponsor-arrow{font-size:.6rem}
+}
+
+/* FAQ */
+.faq{background:var(--paper-deep)}
+.faq__list{border-top:1px solid var(--ink);max-width:920px;margin:0 auto}
+.faq__item{border-bottom:1px solid var(--ink)}
+.faq__q{width:100%;display:grid;grid-template-columns:40px 1fr 40px;gap:1rem;align-items:center;padding:1.75rem 0;text-align:left;cursor:pointer;list-style:none;transition:color .2s}
+.faq__q::-webkit-details-marker{display:none}
+.faq__q:hover{color:var(--accent-deep)}
+.faq__num{font-family:var(--fm);font-size:.72rem;letter-spacing:.15em;color:var(--ink-soft)}
+.faq__q-text{font-family:var(--fd);font-size:clamp(1.15rem,2vw,1.5rem);line-height:1.25}
+.faq__q-text em{font-style:italic}
+.faq__icon{width:24px;height:24px;position:relative;justify-self:end}
+.faq__icon::before,.faq__icon::after{content:'';position:absolute;background:var(--ink);transition:transform .3s}
+.faq__icon::before{left:0;right:0;top:50%;height:1px;transform:translateY(-50%)}
+.faq__icon::after{top:0;bottom:0;left:50%;width:1px;transform:translateX(-50%)}
+.faq__item[open] .faq__icon::after{transform:translateX(-50%) rotate(90deg);opacity:0}
+.faq__a{padding:0 0 1.75rem 56px;max-width:64ch;font-size:1rem;line-height:1.65;color:var(--ink-soft)}
+.faq__a p+p{margin-top:.85em}
+.faq__bullets{list-style:none;margin:.85em 0;padding:0}
+.faq__bullets li{position:relative;padding-left:1.1rem;margin-bottom:.3rem;line-height:1.55}
+.faq__bullets li::before{content:'·';position:absolute;left:0;top:-.05em;color:var(--accent-deep);font-family:var(--fm);font-size:1.3rem;line-height:1}
+@media (max-width:640px){.faq__q{grid-template-columns:30px 1fr 24px;gap:.75rem}.faq__a{padding-left:40px}}
+
+/* FRIENDS */
+.friends__tier{margin-top:.6rem}
+.friends__tier:first-of-type{margin-top:0}
+.friends__tier--hidden{display:none}
+.friends__tier-label{font-family:var(--fm);font-size:.66rem;letter-spacing:.22em;text-transform:uppercase;color:var(--ink);display:flex;align-items:baseline;gap:.75rem;margin:0 0 .35rem}
+.friends__tier-label::after{content:"";flex:1;height:1px;background:var(--ink)}
+.friends__grid{display:grid;gap:0;border-top:1px solid var(--ink);border-left:1px solid var(--ink)}
+.friends__grid--platinum{grid-template-columns:1fr}
+.friends__grid--gold{grid-template-columns:repeat(2,1fr)}
+.friends__grid--silver{grid-template-columns:repeat(2,1fr)}
+.friends__grid--activation{grid-template-columns:repeat(4,1fr)}
+.friend{padding:1rem .9rem;border-right:1px solid var(--ink);border-bottom:1px solid var(--ink);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.3rem;text-align:center;min-height:80px;transition:background .2s;text-decoration:none;color:inherit;position:relative}
+.friend--platinum{min-height:auto;padding:.7rem 1rem .65rem;gap:.15rem}
+.friend--platinum .friend__name{font-size:1.55rem}
+.friend--gold{min-height:auto;padding:.7rem 1rem .65rem;gap:.15rem}
+.friend--gold .friend__name{font-size:1.05rem}
+.friend--silver{min-height:auto;padding:.7rem 1rem .65rem;gap:.15rem}
+.friend--silver .friend__name{font-size:.95rem}
+.friend--activation{min-height:62px;padding:.7rem .6rem;gap:.25rem}
+.friend--activation .friend__name{font-size:.95rem}
+.friends__grid--activation > .friend:last-child:nth-child(4n+3){grid-column:span 2}
+.friend--hidden{display:none}
+.friend.friend--hidden{display:none}
+.friend:hover{background:var(--paper-light)}
+.friend:hover .friend__name{color:var(--accent-deep)}
+.friend__logo{display:none}
+/* Gold / Silver / Activation logo support — show logo area when tier card has a logo image */
+/* Gold / Silver — hero-logo-first centered (matches platinum pattern, scaled down) */
+.friend--gold .friend__logo,
+.friend--silver .friend__logo{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:transparent;
+  position:relative;
+  z-index:2;
+  flex:0 0 auto;
+  width:auto;
+  max-width:100%;
+}
+.friend--gold .friend__logo{height:80px;max-width:320px;margin-bottom:.1rem}
+.friend--silver .friend__logo{height:80px;max-width:320px;margin-bottom:.1rem}
+.friend--gold .friend__logo img,
+.friend--silver .friend__logo img{
+  width:auto;
+  height:100%;
+  max-width:100%;
+  object-fit:contain;
+  display:block;
+}
+/* Activation — compact horizontal (logo + text on one row) */
+.friend--activation{
+  flex-direction:row;
+  align-items:center;
+  justify-content:center;
+  gap:.7rem;
+  text-align:left;
+  padding:.85rem .75rem;
+}
+.friend--activation .friend__logo{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:transparent;
+  position:relative;
+  z-index:2;
+  flex:0 0 64px;
+  width:64px;
+  height:64px;
+  margin-bottom:0;
+}
+.friend--activation .friend__logo img{
+  width:100%;
+  height:100%;
+  object-fit:contain;
+  display:block;
+}
+.friend--activation .friend__text{
+  align-items:flex-start;
+  text-align:left;
+}
+/* Fallback placeholders for all tiers */
+.friend--gold .friend__logo-fallback,
+.friend--silver .friend__logo-fallback{
+  font-family:var(--fd);
+  font-style:italic;
+  font-size:1.4rem;
+  letter-spacing:-.01em;
+  opacity:.5;
+}
+.friend--gold .friend__logo-fallback{color:#4a3208}
+.friend--silver .friend__logo-fallback{color:#14151a}
+.friend--activation .friend__logo-fallback{
+  font-family:var(--fm);
+  font-size:.62rem;
+  letter-spacing:.18em;
+  color:currentColor;
+  opacity:.4;
+}
+/* Hide tier name when wordmark is in logo (consistent with platinum pattern).
+   Show only when logo file isn't present yet. */
+.friend--gold .friend__logo--has-image ~ .friend__text .friend__name,
+.friend--silver .friend__logo--has-image ~ .friend__text .friend__name{display:none}
+/* Tier label refinement (matches platinum styling) */
+.friend--gold .friend__type,
+.friend--silver .friend__type{
+  font-family:var(--fm);
+  font-size:.55rem;
+  letter-spacing:.28em;
+  text-transform:uppercase;
+  font-weight:500;
+}
+.friend--gold .friend__type{color:#4a3208;opacity:.8}
+.friend--silver .friend__type{color:#14151a;opacity:.7}
+/* Hide the placeholder once a logo image successfully loads */
+.friend__logo--has-image .friend__logo-fallback{display:none}
+.friend__text{display:contents}
+.friend__name{font-family:var(--fd);font-size:1.15rem;font-style:italic;line-height:1.1}
+.friend__type{font-family:var(--fm);font-size:.55rem;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-soft)}
+.friends__actions{display:flex;justify-content:center;margin-top:.6rem}
+.friends{padding:.5rem 0 1.5rem !important}
+.friends .sec-hd{margin-bottom:.85rem !important;gap:1rem;padding-top:.5rem}
+.friends .section-title{font-size:clamp(1.6rem,3vw,2.5rem) !important}
+.friends__toggle-hide{display:none}
+.friends__toggle[aria-expanded="true"] .friends__toggle-show{display:none}
+.friends__toggle[aria-expanded="true"] .friends__toggle-hide{display:inline}
+.friends__toggle[aria-expanded="true"] .btn__arrow{transform:rotate(180deg)}
+@media (max-width:880px){
+  .friends__grid--platinum{grid-template-columns:1fr}
+  .friends__grid--gold{grid-template-columns:repeat(2,1fr)}
+  .friends__grid--silver{grid-template-columns:repeat(2,1fr)}
+  .friends__grid--activation{grid-template-columns:repeat(3,1fr)}
+  .friends__grid--activation > .friend:last-child:nth-child(4n+3){grid-column:auto}
+  .friends__grid--activation > .friend:last-child:nth-child(3n+1){grid-column:span 3}
+  .friend--platinum .friend__name{font-size:1.7rem}
+  .friend--gold .friend__name{font-size:1.45rem}
+}
+@media (max-width:540px){
+  .friends__grid--platinum{grid-template-columns:1fr}
+  .friends__grid--gold{grid-template-columns:repeat(2,1fr)}
+  .friends__grid--silver{grid-template-columns:repeat(2,1fr)}
+  .friends__grid--activation{grid-template-columns:repeat(2,1fr)}
+  .friends__grid--activation > .friend:last-child:nth-child(3n+1){grid-column:auto}
+  .friends__grid--activation > .friend:last-child:nth-child(2n+1){grid-column:span 2}
+}
+@media (max-width:520px){
+  .friends{padding:1rem 0 1.5rem}
+  .friends .sec-hd{margin-bottom:.6rem;gap:.5rem}
+  .friends .sec-hd__num{padding-top:.55rem;font-size:.7rem}
+  .friends .section-title{font-size:1.5rem}
+  .friends .sec-hd__title{padding-top:0}
+  .friends__tier{margin-top:1.25rem}
+  .friends__tier-label{font-size:.62rem;letter-spacing:.18em;margin-bottom:.45rem;gap:.6rem}
+  .friends__grid,
+  .friends__grid--platinum,
+  .friends__grid--gold,
+  .friends__grid--silver,
+  .friends__grid--activation{grid-template-columns:1fr}
+  .friends__grid--activation > .friend:last-child:nth-child(2n+1){grid-column:auto}
+  .friend,
+  .friend--platinum,
+  .friend--gold,
+  .friend--silver,
+  .friend--activation{
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    justify-content:flex-start;
+    gap:.95rem;
+    padding:.85rem 1rem;
+    min-height:0;
+    text-align:left
+  }
+  .friend__logo{
+    display:block;
+    flex:0 0 56px;
+    width:56px;
+    height:56px;
+    background:var(--ink)
+  }
+  /* Platinum override — column-centered hero treatment on mobile */
+  .friend--platinum{
+    flex-direction:column !important;
+    align-items:center !important;
+    justify-content:center !important;
+    text-align:center !important;
+    padding:.4rem .75rem .35rem !important;
+    gap:.1rem !important;
+  }
+  .friend--platinum .friend__logo{
+    background:transparent;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex:0 0 auto;
+    width:auto;
+    height:44px;
+    max-width:180px;
+    margin-bottom:.05rem;
+  }
+  .friend--platinum .friend__logo img{
+    width:auto;
+    height:100%;
+    max-width:100%;
+    object-fit:contain;
+    display:block;
+  }
+  .friend--platinum .friend__logo-fallback{
+    font-family:var(--fd);
+    font-style:italic;
+    font-size:1.6rem;
+    color:#2a2d3a;
+    opacity:.55;
+  }
+  .friend--platinum .friend__text{align-items:center;text-align:center}
+  .friend--platinum .friend__name{display:none}
+  .friend--platinum .friend__type{
+    font-family:var(--fm);
+    font-size:.55rem;
+    letter-spacing:.28em;
+    text-transform:uppercase;
+    color:#3a4060;
+    opacity:.75;
+    font-weight:500;
+    font-style:normal;
+  }
+  /* Gold / Silver — column-centered hero treatment on mobile (matches platinum) */
+  .friend--gold,
+  .friend--silver{
+    flex-direction:column !important;
+    align-items:center !important;
+    justify-content:center !important;
+    text-align:center !important;
+    padding:.4rem .75rem .35rem !important;
+    gap:.1rem !important;
+  }
+  .friend--gold .friend__logo,
+  .friend--silver .friend__logo{
+    background:transparent;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex:0 0 auto;
+    width:auto;
+    max-width:180px;
+    margin-bottom:.05rem;
+  }
+  .friend--gold .friend__logo{height:44px;max-width:180px}
+  .friend--silver .friend__logo{height:44px;max-width:180px}
+  .friend--gold .friend__logo img,
+  .friend--silver .friend__logo img{
+    width:auto;
+    height:100%;
+    max-width:100%;
+    object-fit:contain;
+    display:block;
+  }
+  .friend--gold .friend__logo-fallback,
+  .friend--silver .friend__logo-fallback{
+    font-family:var(--fd);
+    font-style:italic;
+    font-size:1.3rem;
+    opacity:.55;
+  }
+  .friend--gold .friend__logo-fallback{color:#4a3208}
+  .friend--silver .friend__logo-fallback{color:#14151a}
+  .friend--gold .friend__text,
+  .friend--silver .friend__text{align-items:center;text-align:center}
+  .friend--gold .friend__name,
+  .friend--silver .friend__name{font-style:normal}
+  .friend--gold .friend__logo--has-image ~ .friend__text .friend__name,
+  .friend--silver .friend__logo--has-image ~ .friend__text .friend__name{display:none}
+  .friend--gold .friend__type,
+  .friend--silver .friend__type{
+    font-family:var(--fm);
+    font-size:.52rem;
+    letter-spacing:.26em;
+    text-transform:uppercase;
+    font-weight:500;
+    font-style:normal;
+  }
+  .friend--gold .friend__type{color:#4a3208;opacity:.8}
+  .friend--silver .friend__type{color:#14151a;opacity:.7}
+
+  /* Activation — compact horizontal layout, consistent across all 7 cards */
+  .friend--activation{
+    flex-direction:row !important;
+    align-items:center !important;
+    justify-content:flex-start !important;
+    text-align:left !important;
+    padding:.65rem .85rem !important;
+    gap:.65rem !important;
+  }
+  .friend--activation .friend__logo{
+    background:transparent;
+    flex:0 0 32px;
+    width:32px;
+    height:32px;
+    margin-bottom:0;
+  }
+  .friend--activation .friend__text{align-items:flex-start;text-align:left}
+  .friend--activation .friend__name{font-size:.92rem;font-style:normal}
+  .friend--activation .friend__type{
+    font-family:var(--fm);
+    font-size:.5rem;
+    letter-spacing:.18em;
+    line-height:1.3;
+    color:var(--ink-soft);
+    text-transform:uppercase;
+  }
+  .friend__text{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    gap:.2rem;
+    flex:1 1 auto;
+    min-width:0
+  }
+  .friend__name{
+    font-size:1.2rem;
+    line-height:1.05;
+    font-style:italic
+  }
+  .friend--platinum .friend__name,
+  .friend--gold .friend__name,
+  .friend--silver .friend__name,
+  .friend--activation .friend__name{font-size:1.2rem}
+  .friend__type{
+    font-size:.58rem;
+    letter-spacing:.16em;
+    line-height:1.4;
+    color:var(--ink-soft)
+  }
+  .friends__actions{margin-top:.85rem}
+  .friends__toggle{padding:.7rem 1rem;font-size:.66rem;letter-spacing:.12em}
+  .friends__become{margin-top:1.25rem}
+  .friends__become-text{font-size:.95rem;margin-bottom:.75rem;line-height:1.35;max-width:32ch;margin-left:auto;margin-right:auto}
+  .friends__become .btn{padding:.7rem 1rem;font-size:.66rem;letter-spacing:.12em}
+}
+.friends__become{text-align:center;margin-top:1.25rem}
+.friends__become-text{font-family:var(--fd);font-style:italic;font-size:1.2rem;color:var(--ink-soft);margin-bottom:1.25rem}
+.friends__become-text em{color:var(--accent-deep)}
+
+/* METALLIC TIER STYLING */
+.friends__tier--platinum .friends__tier-label,
+.friends__tier--gold .friends__tier-label,
+.friends__tier--silver .friends__tier-label{font-weight:700;font-size:.82rem;letter-spacing:.26em}
+.friends__tier--platinum .friends__tier-label > span,
+.friends__tier--gold .friends__tier-label > span,
+.friends__tier--silver .friends__tier-label > span{
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+  display:inline-block;
+}
+
+/* PLATINUM LABEL — cool burnished metal, peaks stay readable on cream */
+.friends__tier--platinum .friends__tier-label > span{
+  background-image:linear-gradient(115deg,
+    #131e33 0%,
+    #1c2740 18%,
+    #2b3a58 35%,
+    #45527a 50%,
+    #2b3a58 65%,
+    #1c2740 82%,
+    #131e33 100%
+  );
+}
+.friends__tier--platinum .friends__tier-label::after{
+  height:4px;
+  background:linear-gradient(90deg,
+    #2a2d3a 0%,
+    #8488a0 18%,
+    #c4c8d8 35%,
+    #d0d4e0 50%,
+    #c4c8d8 65%,
+    #8488a0 82%,
+    #2a2d3a 100%
+  );
+  box-shadow:0 0 6px rgba(150,165,200,0.4);
+}
+
+/* GOLD LABEL — warm burnished bronze-gold */
+.friends__tier--gold .friends__tier-label > span{
+  background-image:linear-gradient(115deg,
+    #2a1c04 0%,
+    #3e2a08 18%,
+    #5a3e0c 35%,
+    #7a5814 50%,
+    #5a3e0c 65%,
+    #3e2a08 82%,
+    #2a1c04 100%
+  );
+}
+.friends__tier--gold .friends__tier-label::after{
+  height:3px;
+  background:linear-gradient(90deg,
+    #4a3208 0%,
+    #946018 18%,
+    #d4a035 35%,
+    #e8b840 50%,
+    #d4a035 65%,
+    #946018 82%,
+    #4a3208 100%
+  );
+  box-shadow:0 0 5px rgba(180,128,40,0.4);
+}
+
+/* SILVER LABEL — deep gunmetal */
+.friends__tier--silver .friends__tier-label > span{
+  background-image:linear-gradient(115deg,
+    #0a0c14 0%,
+    #161824 18%,
+    #25283a 35%,
+    #36394a 50%,
+    #25283a 65%,
+    #161824 82%,
+    #0a0c14 100%
+  );
+}
+.friends__tier--silver .friends__tier-label::after{
+  height:2px;
+  background:linear-gradient(90deg,
+    #14151a 0%,
+    #2e3140 25%,
+    #585c6c 50%,
+    #2e3140 75%,
+    #14151a 100%
+  );
+  box-shadow:0 0 3px rgba(50,55,68,0.35);
+}
+
+/* CARDS — base + animated sheen overlay + subtler outer glow */
+.friend--platinum,
+.friend--gold,
+.friend--silver{position:relative;overflow:hidden}
+.friend--platinum .friend__text,
+.friend--gold .friend__text,
+.friend--silver .friend__text{position:relative;z-index:2}
+.friend--platinum::before,
+.friend--gold::before,
+.friend--silver::before{
+  content:"";
+  position:absolute;
+  top:-25%;
+  left:-100%;
+  width:50%;
+  height:150%;
+  transform:skewX(-22deg);
+  pointer-events:none;
+  z-index:1;
+}
+
+/* PLATINUM CARDS — bright cool gradient, restrained glow */
+.friend--platinum{
+  background:linear-gradient(180deg,#eef1f8 0%,#d4d8e4 50%,#dfe3ec 100%);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.85),
+    inset 0 -1px 0 rgba(120,140,180,0.18),
+    0 0 32px rgba(160,180,210,0.35),
+    0 0 64px rgba(200,215,240,0.2);
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  gap:.5rem;
+  padding:1.4rem 1.5rem 1.2rem;
+  min-height:auto;
+}
+.friend--platinum .friend__logo{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex:0 0 auto;
+  width:auto;
+  height:80px;
+  max-width:320px;
+  background:transparent;
+  position:relative;
+  z-index:2;
+  margin-bottom:.1rem;
+}
+.friend--platinum .friend__logo img{
+  width:auto;
+  height:100%;
+  max-width:100%;
+  object-fit:contain;
+  display:block;
+}
+.friend--platinum .friend__logo-fallback{
+  font-family:var(--fd);
+  font-style:italic;
+  font-size:2.2rem;
+  color:#2a2d3a;
+  opacity:.55;
+  letter-spacing:-.02em;
+}
+.friend--platinum .friend__logo--has-image .friend__logo-fallback{display:none}
+.friend--platinum .friend__text{
+  align-items:center;
+  text-align:center;
+  flex:0 0 auto;
+}
+/* Hide the redundant company name when logo includes the wordmark.
+   The logo already says "Mastercard" — repeating it is visual noise. */
+.friend--platinum .friend__name{display:none}
+.friend--platinum .friend__type{
+  font-family:var(--fm);
+  font-size:.62rem;
+  letter-spacing:.32em;
+  text-transform:uppercase;
+  color:#3a4060;
+  opacity:.75;
+  font-weight:500;
+}
+.friend--platinum::before{
+  background:linear-gradient(90deg,
+    transparent 0%,
+    rgba(255,255,255,0.25) 35%,
+    rgba(255,255,255,0.55) 50%,
+    rgba(255,255,255,0.25) 65%,
+    transparent 100%
+  );
+  animation:sheen-platinum 4.5s ease-in-out infinite;
+}
+.friend--platinum:hover{background:linear-gradient(180deg,#f4f6fb 0%,#dde1ec 50%,#e6eaf2 100%)}
+.friend--platinum .friend__type{color:#3a4060}
+
+/* GOLD CARDS — saturated polished gold, warm restrained glow */
+.friend--gold{
+  background:linear-gradient(180deg,#f0d97a 0%,#caa83a 50%,#dab94a 100%);
+  box-shadow:
+    inset 0 1px 0 rgba(255,245,200,0.7),
+    inset 0 -1px 0 rgba(140,100,20,0.22),
+    0 0 24px rgba(220,180,90,0.3),
+    0 0 48px rgba(235,205,140,0.18);
+}
+.friend--gold::before{
+  background:linear-gradient(90deg,
+    transparent 0%,
+    rgba(255,240,180,0.2) 35%,
+    rgba(255,245,200,0.45) 50%,
+    rgba(255,240,180,0.2) 65%,
+    transparent 100%
+  );
+  animation:sheen-gold 5.5s ease-in-out infinite;
+}
+.friend--gold:hover{background:linear-gradient(180deg,#f4dd85 0%,#d2af40 50%,#dec050 100%)}
+.friend--gold .friend__type{color:#4a3208}
+
+/* SILVER CARDS — dark gunmetal, moody restrained glow */
+.friend--silver{
+  background:linear-gradient(180deg,#aaacb2 0%,#7a7c84 50%,#8e9097 100%);
+  box-shadow:
+    inset 0 1px 0 rgba(200,202,210,0.5),
+    inset 0 -1px 0 rgba(20,21,26,0.32),
+    0 0 18px rgba(110,113,120,0.32),
+    0 0 36px rgba(85,88,95,0.18);
+}
+.friend--silver::before{
+  background:linear-gradient(90deg,
+    transparent 0%,
+    rgba(220,222,228,0.18) 35%,
+    rgba(230,232,238,0.4) 50%,
+    rgba(220,222,228,0.18) 65%,
+    transparent 100%
+  );
+  animation:sheen-silver 6.5s ease-in-out infinite;
+}
+.friend--silver:hover{background:linear-gradient(180deg,#b2b4ba 0%,#82848c 50%,#96989f 100%)}
+.friend--silver .friend__type{color:#14151a}
+
+@keyframes sheen-platinum{
+  0%{left:-100%}
+  40%{left:200%}
+  100%{left:200%}
+}
+@keyframes sheen-gold{
+  0%{left:-100%}
+  36%{left:200%}
+  100%{left:200%}
+}
+@keyframes sheen-silver{
+  0%{left:-100%}
+  30%{left:200%}
+  100%{left:200%}
+}
+
+@media (prefers-reduced-motion:reduce){
+  .friend--platinum::before,
+  .friend--gold::before,
+  .friend--silver::before{animation:none}
+}
+
+/* NEWS */
+.news{background:var(--ink);color:var(--paper);padding:clamp(5rem,9vw,7rem) 0}
+.news__inner{max-width:720px;margin:0 auto;text-align:center}
+.news__mark{width:260px;max-width:60%;height:auto;margin:0 auto 2rem;opacity:.9;display:block}
+.news__title{font-family:var(--fd);font-size:clamp(2.5rem,6vw,4.5rem);line-height:1;letter-spacing:-.02em;margin-bottom:1rem;font-weight:400}
+.news__title em{font-style:italic;color:var(--accent)}
+.news__sub{font-family:var(--fd);font-style:italic;font-size:1.2rem;color:var(--paper-deep);margin-bottom:2.5rem;max-width:44ch;margin-left:auto;margin-right:auto}
+.news__form{display:flex;gap:.5rem;border-bottom:1px solid var(--paper);padding-bottom:.75rem;max-width:480px;margin:0 auto}
+.news__input{flex:1;background:transparent;border:none;font-family:var(--fb);font-size:1rem;color:var(--paper);padding:.5rem 0;outline:none}
+.news__input::placeholder{color:rgba(244,236,224,.45)}
+.news__submit{font-family:var(--fm);font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--paper);padding:.5rem 0;transition:color .2s}
+.news__submit:hover{color:var(--accent)}
+.news__note{margin-top:1.25rem;font-family:var(--fm);font-size:.66rem;letter-spacing:.15em;text-transform:uppercase;color:var(--paper-deep);opacity:.65}
+
+/* FOOTER */
+.footer{background:var(--ink-deep);color:var(--paper);padding:clamp(3rem,6vw,5rem) 0 2rem}
+.footer__top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:2.5rem;padding-bottom:3rem;border-bottom:1px solid rgba(244,236,224,.15)}
+.footer__brand-mark{display:block;width:100%;max-width:380px;height:auto;margin-bottom:1.25rem}
+@media (max-width:820px){.footer__brand-mark{max-width:240px}}
+
+.footer__col-label{font-family:var(--fm);font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin-bottom:1.25rem}
+.footer__col ul{list-style:none;display:flex;flex-direction:column;gap:.6rem}
+.footer__col a{font-size:.93rem;color:var(--paper-deep);transition:color .2s}
+.footer__col a:hover{color:var(--accent)}
+.footer__bottom{padding-top:2rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;font-family:var(--fm);font-size:.68rem;letter-spacing:.15em;text-transform:uppercase;color:var(--paper-deep);opacity:.75}
+@media (max-width:820px){.footer__top{grid-template-columns:1fr 1fr}.footer__brand{grid-column:1/-1}}
+
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .9s cubic-bezier(.2,.6,.2,1),transform .9s cubic-bezier(.2,.6,.2,1)}
+.reveal.in{opacity:1;transform:translateY(0)}
+</style>
+</head>
+<body>
+<a class="ticker" href="#tickets">
+  <div class="ticker__track">
+    <span class="ticker__item">Early Bird tickets now on sale — Limited release · The Sovereign Summit <span class="ticker__dot">●</span></span>
+    <span class="ticker__item">Early Bird tickets now on sale — Limited release · The Sovereign Summit <span class="ticker__dot">●</span></span>
+    <span class="ticker__item">Early Bird tickets now on sale — Limited release · The Sovereign Summit <span class="ticker__dot">●</span></span>
+    <span class="ticker__item">Early Bird tickets now on sale — Limited release · The Sovereign Summit <span class="ticker__dot">●</span></span>
+  </div>
+</a>
+
+<div class="nav-wrap" id="navWrap">
+  <div class="container">
+    <nav class="nav">
+      <a class="nav__brand" href="#top" aria-label="The Sovereign Summit">
+        <picture>
+          <img src="images/TSS_Word_Logo.png" alt="The Sovereign Summit" height="48" style="width:auto" fetchpriority="high">
+        </picture>
+      </a>
+      <ul class="nav__links">
+        <li><a class="nav__link" href="#speakers">Speakers</a></li>
+        <li><a class="nav__link" href="#agenda">Agenda</a></li>
+        <li><a class="nav__link" href="#side-events">Side Events</a></li>
+        <li><a class="nav__link" href="#sponsors">Sponsors</a></li>
+        <li><a class="nav__link" href="#partners">Partners</a></li>
+        <li><a class="nav__link" href="#venue">Venue</a></li>
+        <li><a class="nav__link" href="#faq">FAQ</a></li>
+      </ul>
+      <div class="nav__actions">
+        <a href="https://x.com/SovereignSummit" target="_blank" rel="noopener" class="nav__social" aria-label="Follow The Sovereign Summit on X">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
+            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+          </svg>
+        </a>
+        <a href="#tickets" class="btn btn--filled nav__cta">Buy Tickets <span class="btn__arrow">→</span></a>
+      </div>
+      <button class="nav__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </div>
+</div>
+
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+  <div class="mobile-menu__inner">
+    <ul class="mobile-menu__links">
+      <li><a class="mobile-menu__link" href="#speakers">Speakers</a></li>
+      <li><a class="mobile-menu__link" href="#agenda">Agenda</a></li>
+      <li><a class="mobile-menu__link" href="#side-events">Side Events</a></li>
+      <li><a class="mobile-menu__link" href="#sponsors">Sponsors</a></li>
+      <li><a class="mobile-menu__link" href="#partners">Partners</a></li>
+      <li><a class="mobile-menu__link" href="#venue">Venue</a></li>
+      <li><a class="mobile-menu__link" href="#faq">FAQ</a></li>
+    </ul>
+    <a href="#tickets" class="mobile-menu__cta">Buy Tickets <span>→</span></a>
+    <a href="https://x.com/SovereignSummit" target="_blank" rel="noopener" class="mobile-menu__social" aria-label="Follow The Sovereign Summit on X">
+      <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true">
+        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+      </svg>
+      <span>Follow on X</span>
+    </a>
+  </div>
+</div>
+
+<section class="hero" id="top">
+  <div class="container">
+    <div class="hero__grid">
+      <div class="hero__logo-col">
+        <picture>
+          <img src="images/TSS_Badge_Logo.png" alt="The Sovereign Summit" width="720" height="720" fetchpriority="high" />
+        </picture>
+      </div>
+      <div class="hero__info">
+<h1 class="hero__headline">
+          A <em>premier</em> gathering<br class="keep-mobile">
+          <span class="accent">discussing Bitcoin</span><br class="keep-mobile">
+          in Miami Beach, FL
+        </h1>
+        <a href="#hero-details" class="hero__scroll" aria-label="Scroll to event details">
+          <span class="hero__scroll-icon" aria-hidden="true">↓</span>
+        </a>
+        <div class="hero__rule" id="hero-details"></div>
+        <dl class="hero__facts">
+          <div class="hero__fact">
+            <dt>Date</dt>
+            <dd>Friday, <em>February 5</em>, 2027</dd>
+          </div>
+          <div class="hero__fact">
+            <dt>Venue</dt>
+            <dd><em>Fontainebleau</em> · Miami Beach</dd>
+          </div>
+          <div class="hero__fact">
+            <dt>Hours</dt>
+            <dd>9:00 AM — 5:00 PM · <em>all day</em></dd>
+          </div>
+          <div class="hero__fact">
+            <dt>More than a day</dt>
+            <dd><a class="hero__fact-link" href="#side-events"><em>Click here</em> to see all our side events</a></dd>
+          </div>
+        </dl>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="speakers">
+  <div class="container">
+    <header class="sec-hd" id="speakers">
+      <div class="sec-hd__num">Nº 01 — Speakers</div>
+      <h2 class="section-title sec-hd__title">The <em>best</em> of the <em>best.</em></h2>
+    </header>
+    <div class="speakers__grid" id="speakersGrid">
+      <a class="speaker" href="https://x.com/saylor" target="_blank" rel="noopener" data-speaker="01" aria-label="Michael Saylor on X">
+        <div class="speaker__index">01</div>
+        <div class="speaker__portrait">
+          <img class="speaker__photo" src="/images/speakers/saylor.webp" alt="Michael Saylor" onload="this.parentElement.classList.add('speaker__portrait--hasphoto')" onerror="this.style.display='none'" />
+          <div class="speaker__placeholder">M</div>
+        </div>
+        <h3 class="speaker__name">Michael <em>Saylor</em></h3>
+        <div class="speaker__role">Strategy</div>
+        <div class="speaker__topic">"Talk title coming soon."</div>
+      </a>
+      <a class="speaker" href="https://x.com/jack" target="_blank" rel="noopener" data-speaker="02" aria-label="Jack Dorsey on X">
+        <div class="speaker__index">02</div>
+        <div class="speaker__portrait">
+          <img class="speaker__photo" src="/images/speakers/dorsey.webp" alt="Jack Dorsey" onload="this.parentElement.classList.add('speaker__portrait--hasphoto')" onerror="this.style.display='none'" />
+          <div class="speaker__placeholder">J</div>
+        </div>
+        <h3 class="speaker__name">Jack <em>Dorsey</em></h3>
+        <div class="speaker__role">Block</div>
+        <div class="speaker__topic">"Talk title coming soon."</div>
+      </a>
+      <a class="speaker" href="https://x.com/adam3us" target="_blank" rel="noopener" data-speaker="03" aria-label="Adam Back on X">
+        <div class="speaker__index">03</div>
+        <div class="speaker__portrait">
+          <img class="speaker__photo" src="/images/speakers/back.webp" alt="Adam Back" onload="this.parentElement.classList.add('speaker__portrait--hasphoto')" onerror="this.style.display='none'" />
+          <div class="speaker__placeholder">A</div>
+        </div>
+        <h3 class="speaker__name">Adam <em>Back</em></h3>
+        <div class="speaker__role">Blockstream</div>
+        <div class="speaker__topic">"Talk title coming soon."</div>
+      </a>
+      <a class="speaker" href="https://x.com/CathieDWood" target="_blank" rel="noopener" data-speaker="04" aria-label="Cathie Wood on X">
+        <div class="speaker__index">04</div>
+        <div class="speaker__portrait">
+          <img class="speaker__photo" src="/images/speakers/wood.webp" alt="Cathie Wood" onload="this.parentElement.classList.add('speaker__portrait--hasphoto')" onerror="this.style.display='none'" />
+          <div class="speaker__placeholder">C</div>
+        </div>
+        <h3 class="speaker__name">Cathie <em>Wood</em></h3>
+        <div class="speaker__role">ARK Invest</div>
+        <div class="speaker__topic">"Talk title coming soon."</div>
+      </a>
+    </div>
+    <div class="speakers__grid speakers__grid--md" id="speakersGridMd">
+      <a class="speaker speaker--md" href="https://x.com/LynAldenContact" target="_blank" rel="noopener" data-speaker="05" aria-label="Lyn Alden on X">
+        <div class="speaker__index">05</div>
+        <div class="speaker__portrait">
+          <img class="speaker__photo" src="/images/speakers/alden.webp" alt="Lyn Alden" onload="this.parentElement.classList.add('speaker__portrait--hasphoto')" onerror="this.style.display='none'" />
+          <div class="speaker__placeholder">L</div>
+        </div>
+        <h3 class="speaker__name">Lyn <em>Alden</em></h3>
+        <div class="speaker__role">Ego Death Capital</div>
+        <div class="speaker__topic">"Talk title coming soon."</div>
+      </a>
+      <a class="speaker speaker--md" href="https://x.com/JeffBooth" target="_blank" rel="noopener" data-speaker="06" aria-label="Jeff Booth on X">
+        <div class="speaker__index">06</div>
+        <div class="speaker__portrait">
+          <img class="speaker__photo" src="/images/speakers/booth.webp" alt="Jeff Booth" onload="this.parentElement.classList.add('speaker__portrait--hasphoto')" onerror="this.style.display='none'" />
+          <div class="speaker__placeholder">J</div>
+        </div>
+        <h3 class="speaker__name">Jeff <em>Booth</em></h3>
+        <div class="speaker__role">Ego Death Capital</div>
+        <div class="speaker__topic">"Talk title coming soon."</div>
+      </a>
+      <a class="speaker speaker--md" href="https://x.com/eric_bigfund" target="_blank" rel="noopener" data-speaker="07" aria-label="Eric Weiss on X">
+        <div class="speaker__index">07</div>
+        <div class="speaker__portrait">
+          <img class="speaker__photo" src="/images/speakers/weiss.webp" alt="Eric Weiss" onload="this.parentElement.classList.add('speaker__portrait--hasphoto')" onerror="this.style.display='none'" />
+          <div class="speaker__placeholder">E</div>
+        </div>
+        <h3 class="speaker__name">Eric <em>Weiss</em></h3>
+        <div class="speaker__role">Bitcoin Investment Group</div>
+        <div class="speaker__topic">"Talk title coming soon."</div>
+      </a>
+      <a class="speaker speaker--md" href="https://x.com/gladstein" target="_blank" rel="noopener" data-speaker="08" aria-label="Alex Gladstein on X">
+        <div class="speaker__index">08</div>
+        <div class="speaker__portrait">
+          <img class="speaker__photo" src="/images/speakers/gladstein.webp" alt="Alex Gladstein" onload="this.parentElement.classList.add('speaker__portrait--hasphoto')" onerror="this.style.display='none'" />
+          <div class="speaker__placeholder">A</div>
+        </div>
+        <h3 class="speaker__name">Alex <em>Gladstein</em></h3>
+        <div class="speaker__role">Human Rights Foundation</div>
+        <div class="speaker__topic">"Talk title coming soon."</div>
+      </a>
+      <a class="speaker speaker--md" href="https://x.com/CaitlinLong_" target="_blank" rel="noopener" data-speaker="09" aria-label="Caitlin Long on X">
+        <div class="speaker__index">09</div>
+        <div class="speaker__portrait">
+          <img class="speaker__photo" src="/images/speakers/long.webp" alt="Caitlin Long" onload="this.parentElement.classList.add('speaker__portrait--hasphoto')" onerror="this.style.display='none'" />
+          <div class="speaker__placeholder">C</div>
+        </div>
+        <h3 class="speaker__name">Caitlin <em>Long</em></h3>
+        <div class="speaker__role">Custodia Bank</div>
+        <div class="speaker__topic">"Talk title coming soon."</div>
+      </a>
+      <a class="speaker speaker--md" href="https://x.com/natbrunell" target="_blank" rel="noopener" data-speaker="10" aria-label="Natalie Brunell on X">
+        <div class="speaker__index">10</div>
+        <div class="speaker__portrait">
+          <img class="speaker__photo" src="/images/speakers/brunell.webp" alt="Natalie Brunell" onload="this.parentElement.classList.add('speaker__portrait--hasphoto')" onerror="this.style.display='none'" />
+          <div class="speaker__placeholder">N</div>
+        </div>
+        <h3 class="speaker__name">Natalie <em>Brunell</em></h3>
+        <div class="speaker__role">Coin Stories</div>
+        <div class="speaker__topic">"Talk title coming soon."</div>
+      </a>
+      <a class="speaker speaker--md" href="https://x.com/PeterMcCormack" target="_blank" rel="noopener" data-speaker="11" aria-label="Peter McCormack on X">
+        <div class="speaker__index">11</div>
+        <div class="speaker__portrait">
+          <img class="speaker__photo" src="/images/speakers/mccormack.webp" alt="Peter McCormack" onload="this.parentElement.classList.add('speaker__portrait--hasphoto')" onerror="this.style.display='none'" />
+          <div class="speaker__placeholder">P</div>
+        </div>
+        <h3 class="speaker__name">Peter <em>McCormack</em></h3>
+        <div class="speaker__role">The Peter McCormack Show</div>
+        <div class="speaker__topic">"Talk title coming soon."</div>
+      </a>
+      <a class="speaker speaker--md" href="https://x.com/davidmarcus" target="_blank" rel="noopener" data-speaker="12" aria-label="David Marcus on X">
+        <div class="speaker__index">12</div>
+        <div class="speaker__portrait">
+          <img class="speaker__photo" src="/images/speakers/marcus.webp" alt="David Marcus" onload="this.parentElement.classList.add('speaker__portrait--hasphoto')" onerror="this.style.display='none'" />
+          <div class="speaker__placeholder">D</div>
+        </div>
+        <h3 class="speaker__name">David <em>Marcus</em></h3>
+        <div class="speaker__role">Lightspark</div>
+        <div class="speaker__topic">"Talk title coming soon."</div>
+      </a>
+      <a class="speaker speaker--md" href="https://x.com/starkness" target="_blank" rel="noopener" data-speaker="13" aria-label="Elizabeth Stark on X">
+        <div class="speaker__index">13</div>
+        <div class="speaker__portrait">
+          <img class="speaker__photo" src="/images/speakers/stark.webp" alt="Elizabeth Stark" onload="this.parentElement.classList.add('speaker__portrait--hasphoto')" onerror="this.style.display='none'" />
+          <div class="speaker__placeholder">E</div>
+        </div>
+        <h3 class="speaker__name">Elizabeth <em>Stark</em></h3>
+        <div class="speaker__role">Lightning Labs</div>
+        <div class="speaker__topic">"Talk title coming soon."</div>
+      </a>
+      <a class="speaker speaker--md" href="https://x.com/stephanlivera" target="_blank" rel="noopener" data-speaker="14" aria-label="Stephan Livera on X">
+        <div class="speaker__index">14</div>
+        <div class="speaker__portrait">
+          <img class="speaker__photo" src="/images/speakers/livera.webp" alt="Stephan Livera" onload="this.parentElement.classList.add('speaker__portrait--hasphoto')" onerror="this.style.display='none'" />
+          <div class="speaker__placeholder">S</div>
+        </div>
+        <h3 class="speaker__name">Stephan <em>Livera</em></h3>
+        <div class="speaker__role">Stephan Livera Podcast</div>
+        <div class="speaker__topic">"Talk title coming soon."</div>
+      </a>
+      <a class="speaker speaker--md" href="https://x.com/parkeralewis" target="_blank" rel="noopener" data-speaker="15" aria-label="Parker Lewis on X">
+        <div class="speaker__index">15</div>
+        <div class="speaker__portrait">
+          <img class="speaker__photo" src="/images/speakers/lewis.webp" alt="Parker Lewis" onload="this.parentElement.classList.add('speaker__portrait--hasphoto')" onerror="this.style.display='none'" />
+          <div class="speaker__placeholder">P</div>
+        </div>
+        <h3 class="speaker__name">Parker <em>Lewis</em></h3>
+        <div class="speaker__role">Zaprite</div>
+        <div class="speaker__topic">"Talk title coming soon."</div>
+      </a>
+      <a class="speaker speaker--md" href="https://x.com/real_vijay" target="_blank" rel="noopener" data-speaker="16" aria-label="Vijay Boyapati on X">
+        <div class="speaker__index">16</div>
+        <div class="speaker__portrait">
+          <img class="speaker__photo" src="/images/speakers/boyapati.webp" alt="Vijay Boyapati" onload="this.parentElement.classList.add('speaker__portrait--hasphoto')" onerror="this.style.display='none'" />
+          <div class="speaker__placeholder">V</div>
+        </div>
+        <h3 class="speaker__name">Vijay <em>Boyapati</em></h3>
+        <div class="speaker__role">Author · The Bullish Case</div>
+        <div class="speaker__topic">"Talk title coming soon."</div>
+      </a>
+      <a class="speaker speaker--md" href="https://x.com/jimmysong" target="_blank" rel="noopener" data-speaker="17" aria-label="Jimmy Song on X">
+        <div class="speaker__index">17</div>
+        <div class="speaker__portrait">
+          <img class="speaker__photo" src="/images/speakers/song.webp" alt="Jimmy Song" onload="this.parentElement.classList.add('speaker__portrait--hasphoto')" onerror="this.style.display='none'" />
+          <div class="speaker__placeholder">J</div>
+        </div>
+        <h3 class="speaker__name">Jimmy <em>Song</em></h3>
+        <div class="speaker__role">Programming Bitcoin</div>
+        <div class="speaker__topic">"Talk title coming soon."</div>
+      </a>
+      <a class="speaker speaker--md" href="https://x.com/pete_rizzo_" target="_blank" rel="noopener" data-speaker="18" aria-label="Pete Rizzo on X">
+        <div class="speaker__index">18</div>
+        <div class="speaker__portrait">
+          <img class="speaker__photo" src="/images/speakers/rizzo.webp" alt="Pete Rizzo" onload="this.parentElement.classList.add('speaker__portrait--hasphoto')" onerror="this.style.display='none'" />
+          <div class="speaker__placeholder">P</div>
+        </div>
+        <h3 class="speaker__name">Pete <em>Rizzo</em></h3>
+        <div class="speaker__role">BitcoinTreasuries.NET</div>
+        <div class="speaker__topic">"Talk title coming soon."</div>
+      </a>
+      <a class="speaker speaker--md" href="https://x.com/dylanleclair" target="_blank" rel="noopener" data-speaker="19" aria-label="Dylan LeClair on X">
+        <div class="speaker__index">19</div>
+        <div class="speaker__portrait">
+          <img class="speaker__photo" src="/images/speakers/leclair.webp" alt="Dylan LeClair" onload="this.parentElement.classList.add('speaker__portrait--hasphoto')" onerror="this.style.display='none'" />
+          <div class="speaker__placeholder">D</div>
+        </div>
+        <h3 class="speaker__name">Dylan <em>LeClair</em></h3>
+        <div class="speaker__role">Metaplanet</div>
+        <div class="speaker__topic">"Talk title coming soon."</div>
+      </a>
+      <a class="speaker speaker--md" href="https://x.com/thetrocro" target="_blank" rel="noopener" data-speaker="20" aria-label="Troy Cross on X">
+        <div class="speaker__index">20</div>
+        <div class="speaker__portrait">
+          <img class="speaker__photo" src="/images/speakers/cross.webp" alt="Troy Cross" onload="this.parentElement.classList.add('speaker__portrait--hasphoto')" onerror="this.style.display='none'" />
+          <div class="speaker__placeholder">T</div>
+        </div>
+        <h3 class="speaker__name">Troy <em>Cross</em></h3>
+        <div class="speaker__role">The Nakamoto Project</div>
+        <div class="speaker__topic">"Talk title coming soon."</div>
+      </a>
+      <a class="speaker speaker--md" href="https://x.com/DavidFBailey" target="_blank" rel="noopener" data-speaker="21" aria-label="David Bailey on X">
+        <div class="speaker__index">21</div>
+        <div class="speaker__portrait">
+          <img class="speaker__photo" src="/images/speakers/bailey.webp" alt="David Bailey" onload="this.parentElement.classList.add('speaker__portrait--hasphoto')" onerror="this.style.display='none'" />
+          <div class="speaker__placeholder">D</div>
+        </div>
+        <h3 class="speaker__name">David <em>Bailey</em></h3>
+        <div class="speaker__role">Nakamoto</div>
+        <div class="speaker__topic">"Talk title coming soon."</div>
+      </a>
+      <a class="speaker speaker--md speaker--hidden" href="https://x.com/leishman" target="_blank" rel="noopener" data-speaker="22" aria-label="Alex Leishman on X">
+        <div class="speaker__index">22</div>
+        <div class="speaker__portrait">
+          <img class="speaker__photo" src="/images/speakers/leishman.webp" alt="Alex Leishman" onload="this.parentElement.classList.add('speaker__portrait--hasphoto')" onerror="this.style.display='none'" />
+          <div class="speaker__placeholder">A</div>
+        </div>
+        <h3 class="speaker__name">Alex <em>Leishman</em></h3>
+        <div class="speaker__role">River</div>
+        <div class="speaker__topic">"Talk title coming soon."</div>
+      </a>
+      <a class="speaker speaker--md speaker--hidden" href="https://x.com/beau_turner21" target="_blank" rel="noopener" data-speaker="23" aria-label="Beau Turner on X">
+        <div class="speaker__index">23</div>
+        <div class="speaker__portrait">
+          <img class="speaker__photo" src="/images/speakers/turner.webp" alt="Beau Turner" onload="this.parentElement.classList.add('speaker__portrait--hasphoto')" onerror="this.style.display='none'" />
+          <div class="speaker__placeholder">B</div>
+        </div>
+        <h3 class="speaker__name">Beau <em>Turner</em></h3>
+        <div class="speaker__role">Abundant Mines</div>
+        <div class="speaker__topic">"Talk title coming soon."</div>
+      </a>
+      <a class="speaker speaker--md speaker--hidden" href="https://x.com/CedYoungelman" target="_blank" rel="noopener" data-speaker="24" aria-label="Cedric Youngelman on X">
+        <div class="speaker__index">24</div>
+        <div class="speaker__portrait">
+          <img class="speaker__photo" src="/images/speakers/youngelman.webp" alt="Cedric Youngelman" onload="this.parentElement.classList.add('speaker__portrait--hasphoto')" onerror="this.style.display='none'" />
+          <div class="speaker__placeholder">C</div>
+        </div>
+        <h3 class="speaker__name">Cedric <em>Youngelman</em></h3>
+        <div class="speaker__role">The Bitcoin Matrix</div>
+        <div class="speaker__topic">"Talk title coming soon."</div>
+      </a>
+      <a class="speaker speaker--md speaker--hidden" href="https://x.com/_dannyknowles" target="_blank" rel="noopener" data-speaker="25" aria-label="Danny Knowles on X">
+        <div class="speaker__index">25</div>
+        <div class="speaker__portrait">
+          <img class="speaker__photo" src="/images/speakers/knowles.webp" alt="Danny Knowles" onload="this.parentElement.classList.add('speaker__portrait--hasphoto')" onerror="this.style.display='none'" />
+          <div class="speaker__placeholder">D</div>
+        </div>
+        <h3 class="speaker__name">Danny <em>Knowles</em></h3>
+        <div class="speaker__role">What Bitcoin Did</div>
+        <div class="speaker__topic">"Talk title coming soon."</div>
+      </a>
+      <a class="speaker speaker--md speaker--hidden" href="https://x.com/dpatel_34" target="_blank" rel="noopener" data-speaker="26" aria-label="Dhruv Patel on X">
+        <div class="speaker__index">26</div>
+        <div class="speaker__portrait">
+          <img class="speaker__photo" src="/images/speakers/patel.webp" alt="Dhruv Patel" onload="this.parentElement.classList.add('speaker__portrait--hasphoto')" onerror="this.style.display='none'" />
+          <div class="speaker__placeholder">D</div>
+        </div>
+        <h3 class="speaker__name">Dhruv <em>Patel</em></h3>
+        <div class="speaker__role">Arch Lending</div>
+        <div class="speaker__topic">"Talk title coming soon."</div>
+      </a>
+      <a class="speaker speaker--md speaker--hidden" href="https://x.com/IIICapital" target="_blank" rel="noopener" data-speaker="27" aria-label="Joe Burnett on X">
+        <div class="speaker__index">27</div>
+        <div class="speaker__portrait">
+          <img class="speaker__photo" src="/images/speakers/burnett.webp" alt="Joe Burnett" onload="this.parentElement.classList.add('speaker__portrait--hasphoto')" onerror="this.style.display='none'" />
+          <div class="speaker__placeholder">J</div>
+        </div>
+        <h3 class="speaker__name">Joe <em>Burnett</em></h3>
+        <div class="speaker__role">Strive</div>
+        <div class="speaker__topic">"Talk title coming soon."</div>
+      </a>
+      <a class="speaker speaker--md speaker--hidden" href="https://x.com/josephkelly" target="_blank" rel="noopener" data-speaker="28" aria-label="Joe Kelly on X">
+        <div class="speaker__index">28</div>
+        <div class="speaker__portrait">
+          <img class="speaker__photo" src="/images/speakers/kelly.webp" alt="Joe Kelly" onload="this.parentElement.classList.add('speaker__portrait--hasphoto')" onerror="this.style.display='none'" />
+          <div class="speaker__placeholder">J</div>
+        </div>
+        <h3 class="speaker__name">Joe <em>Kelly</em></h3>
+        <div class="speaker__role">Unchained</div>
+        <div class="speaker__topic">"Talk title coming soon."</div>
+      </a>
+      <a class="speaker speaker--md speaker--hidden" href="https://x.com/khalliburton" target="_blank" rel="noopener" data-speaker="29" aria-label="Kent Halliburton on X">
+        <div class="speaker__index">29</div>
+        <div class="speaker__portrait">
+          <img class="speaker__photo" src="/images/speakers/halliburton.webp" alt="Kent Halliburton" onload="this.parentElement.classList.add('speaker__portrait--hasphoto')" onerror="this.style.display='none'" />
+          <div class="speaker__placeholder">K</div>
+        </div>
+        <h3 class="speaker__name">Kent <em>Halliburton</em></h3>
+        <div class="speaker__role">Sazmining</div>
+        <div class="speaker__topic">"Talk title coming soon."</div>
+      </a>
+      <a class="speaker speaker--md speaker--hidden" href="https://x.com/colemacro" target="_blank" rel="noopener" data-speaker="30" aria-label="Matt Cole on X">
+        <div class="speaker__index">30</div>
+        <div class="speaker__portrait">
+          <img class="speaker__photo" src="/images/speakers/cole.webp" alt="Matt Cole" onload="this.parentElement.classList.add('speaker__portrait--hasphoto')" onerror="this.style.display='none'" />
+          <div class="speaker__placeholder">M</div>
+        </div>
+        <h3 class="speaker__name">Matt <em>Cole</em></h3>
+        <div class="speaker__role">Strive</div>
+        <div class="speaker__topic">"Talk title coming soon."</div>
+      </a>
+      <a class="speaker speaker--md speaker--hidden" href="https://x.com/mtanguma" target="_blank" rel="noopener" data-speaker="31" aria-label="Michael Tanguma on X">
+        <div class="speaker__index">31</div>
+        <div class="speaker__portrait">
+          <img class="speaker__photo" src="/images/speakers/tanguma.webp" alt="Michael Tanguma" onload="this.parentElement.classList.add('speaker__portrait--hasphoto')" onerror="this.style.display='none'" />
+          <div class="speaker__placeholder">M</div>
+        </div>
+        <h3 class="speaker__name">Michael <em>Tanguma</em></h3>
+        <div class="speaker__role">Onramp</div>
+        <div class="speaker__topic">"Talk title coming soon."</div>
+      </a>
+      <a class="speaker speaker--md speaker--hidden" href="https://x.com/samcallah" target="_blank" rel="noopener" data-speaker="32" aria-label="Sam Callahan on X">
+        <div class="speaker__index">32</div>
+        <div class="speaker__portrait">
+          <img class="speaker__photo" src="/images/speakers/callahan.webp" alt="Sam Callahan" onload="this.parentElement.classList.add('speaker__portrait--hasphoto')" onerror="this.style.display='none'" />
+          <div class="speaker__placeholder">S</div>
+        </div>
+        <h3 class="speaker__name">Sam <em>Callahan</em></h3>
+        <div class="speaker__role">OranjeBTC</div>
+        <div class="speaker__topic">"Talk title coming soon."</div>
+      </a>
+      <a class="speaker speaker--md speaker--hidden" href="https://x.com/WSFoxley" target="_blank" rel="noopener" data-speaker="33" aria-label="Will Foxley on X">
+        <div class="speaker__index">33</div>
+        <div class="speaker__portrait">
+          <img class="speaker__photo" src="/images/speakers/foxley.webp" alt="Will Foxley" onload="this.parentElement.classList.add('speaker__portrait--hasphoto')" onerror="this.style.display='none'" />
+          <div class="speaker__placeholder">W</div>
+        </div>
+        <h3 class="speaker__name">Will <em>Foxley</em></h3>
+        <div class="speaker__role">Blockspace</div>
+        <div class="speaker__topic">"Talk title coming soon."</div>
+      </a>
+    </div>
+    <div class="speakers__actions">
+      <button type="button" class="btn speakers__toggle" id="speakersToggle" aria-expanded="false">
+        <span class="speakers__toggle-show">Show all 33 speakers</span>
+        <span class="speakers__toggle-hide">Show fewer</span>
+        <span class="btn__arrow">↓</span>
+      </button>
+    </div>
+    <p class="speakers__footnote">More speakers announced on a rolling basis. <em>Tap a card to follow them on X.</em></p>
+  </div>
+</section>
+
+<section class="program">
+  <div class="container">
+    <header class="sec-hd" id="agenda">
+      <div class="sec-hd__num">Nº 02 — Agenda</div>
+      <h2 class="section-title sec-hd__title">The full day, <em>coming soon.</em></h2>
+    </header>
+    <div class="program__board">
+      <div class="program__row program__row--break"><div class="program__time">07 : 30 AM</div><div><div class="program__title">Registration, breakfast &amp; morning coffee</div></div><div class="program__tag">Lobby</div></div>
+      <div class="program__row program__row--feat"><div class="program__time">09 : 00 AM</div><div><div class="program__title"><em>Opening keynote</em></div><div class="program__speaker">Speaker to be announced</div></div><div class="program__tag">Keynote · TBA</div></div>
+      <div class="program__row"><div class="program__time">10 : 00 AM</div><div><div class="program__title">1st Morning session</div><div class="program__speaker">Talks &amp; panels · TBA</div></div><div class="program__tag">Main stage</div></div>
+      <div class="program__row program__row--break"><div class="program__time">10 : 45 AM</div><div><div class="program__title">Break</div></div><div class="program__tag">15 min</div></div>
+      <div class="program__row"><div class="program__time">11 : 00 AM</div><div><div class="program__title">2nd Morning session</div><div class="program__speaker">Talks &amp; panels · TBA</div></div><div class="program__tag">Main stage</div></div>
+      <div class="program__row program__row--break"><div class="program__time">11 : 45 AM</div><div><div class="program__title">Lunch</div></div><div class="program__tag">Included</div></div>
+      <div class="program__row"><div class="program__time">1 : 00 PM</div><div><div class="program__title">1st Afternoon session</div><div class="program__speaker">Talks &amp; panels · TBA</div></div><div class="program__tag">Main stage</div></div>
+      <div class="program__row program__row--break"><div class="program__time">1 : 45 PM</div><div><div class="program__title">Break</div></div><div class="program__tag">15 min</div></div>
+      <div class="program__row"><div class="program__time">2 : 00 PM</div><div><div class="program__title">2nd Afternoon session</div><div class="program__speaker">Talks &amp; panels · TBA</div></div><div class="program__tag">Main stage</div></div>
+      <div class="program__row program__row--break"><div class="program__time">2 : 45 PM</div><div><div class="program__title">Break</div></div><div class="program__tag">15 min</div></div>
+      <div class="program__row"><div class="program__time">3 : 00 PM</div><div><div class="program__title">3rd Afternoon session</div><div class="program__speaker">Talks &amp; panels · TBA</div></div><div class="program__tag">Main stage</div></div>
+      <div class="program__row program__row--feat"><div class="program__time">4 : 00 PM</div><div><div class="program__title"><em>Closing keynote</em></div><div class="program__speaker">Speaker to be announced</div></div><div class="program__tag">Keynote · TBA</div></div>
+      <div class="program__row program__row--break"><div class="program__time">5 : 00 PM</div><div><div class="program__title">Day closes</div></div><div class="program__tag">—</div></div>
+      <div class="program__row program__row--break"><div class="program__time">7 : 30 PM</div><div><div class="program__title"><em>Dinner Reception</em></div></div><div class="program__tag">Side Event</div></div>
+    </div>
+    <p class="program__footnote">Full schedule, speaker assignments, and talk titles will be published closer to the event. <em>Subscribe below for updates.</em></p>
+  </div>
+</section>
+
+<section class="side-events">
+  <div class="container">
+    <header class="sec-hd" id="side-events">
+      <div class="sec-hd__num">Nº 03 — Side Events</div>
+      <h2 class="section-title sec-hd__title">Before and after <em>the main day.</em></h2>
+    </header>
+    <div class="side-events__grid">
+      <article class="side-event">
+        <a class="side-event__link" href="#" aria-label="Bitcoin Fundamentals — more info"></a>
+        <div class="side-event__top">
+          <div class="side-event__when">
+            <div class="side-event__date">Thu · Feb 4</div>
+            <div class="side-event__time">5PM — 6:30PM</div>
+          </div>
+          <a class="side-event__sponsor" href="https://bitcoinpark.com" target="_blank" rel="noopener"><span class="side-event__sponsor-label">Presented by</span> Bitcoin Park <span class="side-event__sponsor-arrow">→</span></a>
+        </div>
+        <h3 class="side-event__title">Bitcoin <em>Fundamentals</em></h3>
+        <div class="side-event__venue"><span class="side-event__venue-name">Ballroom TBD</span><span class="side-event__venue-label">inside Fontainebleau</span></div>
+        <p class="side-event__desc">3 short 30-minute sessions on the basics, mining, and why Bitcoin is important for human freedom. The night before the summit, for anyone who wants to walk in already fluent.</p>
+        <div class="side-event__meta">Free with ticket · Limited seats</div>
+      </article>
+      <article class="side-event">
+        <a class="side-event__link" href="#" aria-label="Welcome Dinner — more info"></a>
+        <div class="side-event__top">
+          <div class="side-event__when">
+            <div class="side-event__date">Thu · Feb 4</div>
+            <div class="side-event__time">7PM — 10PM</div>
+          </div>
+          <a class="side-event__sponsor" href="https://nydig.com" target="_blank" rel="noopener"><span class="side-event__sponsor-label">Presented by</span> NYDIG <span class="side-event__sponsor-arrow">→</span></a>
+        </div>
+        <h3 class="side-event__title">Welcome <em>Dinner</em></h3>
+        <div class="side-event__venue"><span class="side-event__venue-name">Arkadia Day Club</span><span class="side-event__venue-label">inside Fontainebleau</span></div>
+        <p class="side-event__desc">The night before, with Fontainebleau's day club privately reserved for the evening. Speakers, partners, and a small group of attendees gather for the first conversations of the week.</p>
+        <div class="side-event__meta">$295 · Separate ticket</div>
+      </article>
+      <article class="side-event">
+        <a class="side-event__link" href="#" aria-label="After Party — more info"></a>
+        <div class="side-event__top">
+          <div class="side-event__when">
+            <div class="side-event__date">Fri · Feb 5</div>
+            <div class="side-event__time">7PM — 10PM</div>
+          </div>
+          <a class="side-event__sponsor" href="https://www.bitrefill.com" target="_blank" rel="noopener"><span class="side-event__sponsor-label">Presented by</span> Bitrefill <span class="side-event__sponsor-arrow">→</span></a>
+        </div>
+        <h3 class="side-event__title">After <em>Party</em></h3>
+        <div class="side-event__venue"><span class="side-event__venue-name">La Côte</span><span class="side-event__venue-label">inside Fontainebleau</span></div>
+        <p class="side-event__desc">Drinks, dinner, and unhurried conversation poolside at Fontainebleau's Mediterranean restaurant. The day doesn't end at 5 — the most useful conversations rarely happen in the room.</p>
+        <div class="side-event__meta">$195 · Separate ticket</div>
+      </article>
+      <article class="side-event">
+        <a class="side-event__link" href="#" aria-label="bitcoin++ finds liquidity — more info"></a>
+        <div class="side-event__top">
+          <div class="side-event__when">
+            <div class="side-event__date">Sat · Feb 6</div>
+            <div class="side-event__time">10AM — 5PM</div>
+          </div>
+          <a class="side-event__sponsor" href="https://hrf.org" target="_blank" rel="noopener"><span class="side-event__sponsor-label">Presented by</span> Human Rights Foundation <span class="side-event__sponsor-arrow">→</span></a>
+        </div>
+        <h3 class="side-event__title">bitcoin++ <em>finds liquidity</em></h3>
+        <div class="side-event__venue"><span class="side-event__venue-name">The LAB Miami</span><span class="side-event__venue-label">offsite</span></div>
+        <p class="side-event__desc">A hands-on builder day in Wynwood with long-form talks, workshops, and deeper conversations around Bitcoin tech. More technical and intimate than the main summit.</p>
+        <div class="side-event__meta">$149 · Separate ticket</div>
+      </article>
+      <article class="side-event">
+        <a class="side-event__link" href="#" aria-label="Biscayne Bay Boat Tour — more info"></a>
+        <div class="side-event__top">
+          <div class="side-event__when">
+            <div class="side-event__date">Sun · Feb 7</div>
+            <div class="side-event__time">2PM — 5:30PM</div>
+          </div>
+          <a class="side-event__sponsor" href="https://onrampbitcoin.com" target="_blank" rel="noopener"><span class="side-event__sponsor-label">Presented by</span> Onramp <span class="side-event__sponsor-arrow">→</span></a>
+        </div>
+        <h3 class="side-event__title">Biscayne Bay <em>Boat Tour</em></h3>
+        <div class="side-event__venue"><span class="side-event__venue-name">Bayside Marina</span><span class="side-event__venue-label">Meet at Fontainebleau</span></div>
+        <p class="side-event__desc">A private afternoon cruise through Biscayne Bay with skyline views, ocean air, and one last chance for relaxed conversation before everyone heads home. Shuttle from the Fontainebleau lobby to Bayside Marketplace; departs from Miami Tour Company.</p>
+        <div class="side-event__meta">$99 · Separate ticket</div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="friends">
+  <div class="container">
+    <header class="sec-hd" id="sponsors">
+      <div class="sec-hd__num">Nº 04 — Sponsors</div>
+      <h2 class="section-title sec-hd__title"><em>Premium</em> Brands for a <em>Serious</em> Audience.</h2>
+    </header>
+    <div class="friends__tier friends__tier--platinum">
+      <div class="friends__tier-label"><span>Platinum</span></div>
+      <div class="friends__grid friends__grid--platinum">
+        <a class="friend friend--platinum" href="https://www.mastercard.com" target="_blank" rel="noopener" aria-label="Mastercard — Platinum sponsor">
+          <div class="friend__logo">
+            <img src="/images/sponsors/platinum.webp" alt="Mastercard logo" onload="this.parentElement.classList.add('friend__logo--has-image')" onerror="this.style.display='none'" />
+            <span class="friend__logo-fallback">M</span>
+          </div>
+          <div class="friend__text">
+            <div class="friend__name">Mastercard</div>
+            <div class="friend__type">Platinum Sponsor</div>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="friends__tier friends__tier--gold">
+      <div class="friends__tier-label"><span>Gold</span></div>
+      <div class="friends__grid friends__grid--gold">
+        <a class="friend friend--gold" href="https://www.vaneck.com" target="_blank" rel="noopener" aria-label="VanEck — Gold sponsor"><div class="friend__logo"><img src="/images/sponsors/gold-01.webp" alt="VanEck logo" onload="this.parentElement.classList.add('friend__logo--has-image')" onerror="this.style.display='none'" /><span class="friend__logo-fallback">V</span></div><div class="friend__text"><div class="friend__name">VanEck</div><div class="friend__type">Gold Sponsor</div></div></a>
+        <a class="friend friend--gold" href="https://unchained.com" target="_blank" rel="noopener" aria-label="Unchained — Gold sponsor"><div class="friend__logo"><img src="/images/sponsors/gold-02.webp" alt="Unchained logo" onload="this.parentElement.classList.add('friend__logo--has-image')" onerror="this.style.display='none'" /><span class="friend__logo-fallback">U</span></div><div class="friend__text"><div class="friend__name">Unchained</div><div class="friend__type">Gold Sponsor</div></div></a>
+      </div>
+    </div>
+    <div class="friends__tier friends__tier--silver">
+      <div class="friends__tier-label"><span>Silver</span></div>
+      <div class="friends__grid friends__grid--silver">
+        <a class="friend friend--silver" href="https://meanwhile.bm" target="_blank" rel="noopener" aria-label="Meanwhile — Silver sponsor"><div class="friend__logo"><img src="/images/sponsors/silver-01.webp" alt="Meanwhile logo" onload="this.parentElement.classList.add('friend__logo--has-image')" onerror="this.style.display='none'" /><span class="friend__logo-fallback">M</span></div><div class="friend__text"><div class="friend__name">Meanwhile</div><div class="friend__type">Silver Sponsor</div></div></a>
+        <a class="friend friend--silver" href="https://abundantmines.com" target="_blank" rel="noopener" aria-label="Abundant Mines — Silver sponsor"><div class="friend__logo"><img src="/images/sponsors/silver-02.webp" alt="Abundant Mines logo" onload="this.parentElement.classList.add('friend__logo--has-image')" onerror="this.style.display='none'" /><span class="friend__logo-fallback">A</span></div><div class="friend__text"><div class="friend__name">Abundant Mines</div><div class="friend__type">Silver Sponsor</div></div></a>
+      </div>
+    </div>
+    <div class="friends__tier friends__tier--hidden" id="friendsActivations">
+      <div class="friends__tier-label">Activation Sponsors</div>
+      <div class="friends__grid friends__grid--activation">
+        <a class="friend friend--activation" href="https://www.bitgo.com" target="_blank" rel="noopener" aria-label="BitGo — Badge sponsor"><div class="friend__logo"><img src="/images/sponsors/activation-01.webp" alt="BitGo logo" onload="this.parentElement.classList.add('friend__logo--has-image')" onerror="this.style.display='none'" /><span class="friend__logo-fallback">B</span></div><div class="friend__text"><div class="friend__name">BitGo</div><div class="friend__type">Badge</div></div></a>
+        <a class="friend friend--activation" href="https://archlending.com" target="_blank" rel="noopener" aria-label="Arch Lending — Lanyard sponsor"><div class="friend__logo"><img src="/images/sponsors/activation-02.webp" alt="Arch Lending logo" onload="this.parentElement.classList.add('friend__logo--has-image')" onerror="this.style.display='none'" /><span class="friend__logo-fallback">A</span></div><div class="friend__text"><div class="friend__name">Arch Lending</div><div class="friend__type">Lanyard</div></div></a>
+        <a class="friend friend--activation" href="https://liquiddeath.com" target="_blank" rel="noopener" aria-label="Liquid Death — Coffee &amp; Water sponsor"><div class="friend__logo"><img src="/images/sponsors/activation-03.webp" alt="Liquid Death logo" onload="this.parentElement.classList.add('friend__logo--has-image')" onerror="this.style.display='none'" /><span class="friend__logo-fallback">L</span></div><div class="friend__text"><div class="friend__name">Liquid Death</div><div class="friend__type">Coffee &amp; Water</div></div></a>
+        <a class="friend friend--activation" href="https://www.anchorwatch.com" target="_blank" rel="noopener" aria-label="AnchorWatch — Bag sponsor"><div class="friend__logo"><img src="/images/sponsors/activation-04.webp" alt="AnchorWatch logo" onload="this.parentElement.classList.add('friend__logo--has-image')" onerror="this.style.display='none'" /><span class="friend__logo-fallback">A</span></div><div class="friend__text"><div class="friend__name">AnchorWatch</div><div class="friend__type">Bag</div></div></a>
+        <a class="friend friend--activation" href="https://bitkey.world" target="_blank" rel="noopener" aria-label="Bitkey — Exhibition Table sponsor"><div class="friend__logo"><img src="/images/sponsors/activation-05.webp" alt="Bitkey logo" onload="this.parentElement.classList.add('friend__logo--has-image')" onerror="this.style.display='none'" /><span class="friend__logo-fallback">B</span></div><div class="friend__text"><div class="friend__name">Bitkey</div><div class="friend__type">Exhibition Table</div></div></a>
+        <a class="friend friend--activation" href="https://bitcoinpark.com" target="_blank" rel="noopener" aria-label="Bitcoin Park — Side Event sponsor"><div class="friend__logo"><img src="/images/sponsors/activation-10.webp" alt="Bitcoin Park logo" onload="this.parentElement.classList.add('friend__logo--has-image')" onerror="this.style.display='none'" /><span class="friend__logo-fallback">B</span></div><div class="friend__text"><div class="friend__name">Bitcoin Park</div><div class="friend__type">Side Event</div></div></a>
+        <a class="friend friend--activation" href="https://nydig.com" target="_blank" rel="noopener" aria-label="NYDIG — Side Event sponsor"><div class="friend__logo"><img src="/images/sponsors/activation-06.webp" alt="NYDIG logo" onload="this.parentElement.classList.add('friend__logo--has-image')" onerror="this.style.display='none'" /><span class="friend__logo-fallback">N</span></div><div class="friend__text"><div class="friend__name">NYDIG</div><div class="friend__type">Side Event</div></div></a>
+        <a class="friend friend--activation" href="https://www.bitrefill.com" target="_blank" rel="noopener" aria-label="Bitrefill — Side Event sponsor"><div class="friend__logo"><img src="/images/sponsors/activation-08.webp" alt="Bitrefill logo" onload="this.parentElement.classList.add('friend__logo--has-image')" onerror="this.style.display='none'" /><span class="friend__logo-fallback">B</span></div><div class="friend__text"><div class="friend__name">Bitrefill</div><div class="friend__type">Side Event</div></div></a>
+        <a class="friend friend--activation" href="https://hrf.org" target="_blank" rel="noopener" aria-label="Human Rights Foundation — Side Event sponsor"><div class="friend__logo"><img src="/images/sponsors/activation-09.webp" alt="Human Rights Foundation logo" onload="this.parentElement.classList.add('friend__logo--has-image')" onerror="this.style.display='none'" /><span class="friend__logo-fallback">H</span></div><div class="friend__text"><div class="friend__name">HRF</div><div class="friend__type">Side Event</div></div></a>
+        <a class="friend friend--activation" href="https://onrampbitcoin.com" target="_blank" rel="noopener" aria-label="Onramp — Side Event sponsor"><div class="friend__logo"><img src="/images/sponsors/activation-11.webp" alt="Onramp logo" onload="this.parentElement.classList.add('friend__logo--has-image')" onerror="this.style.display='none'" /><span class="friend__logo-fallback">O</span></div><div class="friend__text"><div class="friend__name">Onramp</div><div class="friend__type">Side Event</div></div></a>
+        <a class="friend friend--activation" href="#" aria-label="Activation sponsor — to be announced"><div class="friend__logo"><img src="/images/sponsors/activation-07.webp" alt="Activation sponsor logo" onload="this.parentElement.classList.add('friend__logo--has-image')" onerror="this.style.display='none'" /><span class="friend__logo-fallback">?</span></div><div class="friend__text"><div class="friend__name">TBD</div><div class="friend__type">Promotional Insert</div></div></a>
+      </div>
+    </div>
+    <div class="friends__actions">
+      <button type="button" class="btn friends__toggle" id="friendsToggle" aria-expanded="false" aria-controls="friendsActivations">
+        <span class="friends__toggle-show">Show activation sponsors</span>
+        <span class="friends__toggle-hide">Show fewer</span>
+        <span class="btn__arrow">↓</span>
+      </button>
+    </div>
+    <div class="friends__become">
+      <div class="friends__become-text">A handful of sponsorship seats remain. <em>Built Bitcoin-only?</em></div>
+      <a href="#" class="btn">Sponsorship details <span class="btn__arrow">→</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="partners">
+  <div class="container">
+    <header class="sec-hd" id="partners">
+      <div class="sec-hd__num">Nº 05 — Partners</div>
+      <h2 class="section-title sec-hd__title">The <em>collaborators</em> behind the summit.</h2>
+    </header>
+    <div class="partners__grid" id="partnersGrid">
+      <a class="partner" href="https://simplybitcoin.com" target="_blank" rel="noopener" data-partner="01" aria-label="Simply Bitcoin">
+        <div class="partner__index">01</div>
+        <div class="partner__portrait">
+          <img class="partner__photo" src="/images/partners/partner-01.webp" alt="Simply Bitcoin logo" onload="this.parentElement.classList.add('partner__portrait--haslogo')" onerror="this.style.display='none'" />
+          <div class="partner__placeholder">S</div>
+        </div>
+        <h3 class="partner__name">Simply <em>Bitcoin</em></h3>
+        <div class="partner__role">Media Partner</div>
+        <div class="partner__topic">"Bitcoin news, daily."</div>
+      </a>
+      <a class="partner" href="https://bitcoinmagazine.com" target="_blank" rel="noopener" data-partner="02" aria-label="Bitcoin Magazine">
+        <div class="partner__index">02</div>
+        <div class="partner__portrait">
+          <img class="partner__photo" src="/images/partners/partner-02.webp" alt="Bitcoin Magazine logo" onload="this.parentElement.classList.add('partner__portrait--haslogo')" onerror="this.style.display='none'" />
+          <div class="partner__placeholder">B</div>
+        </div>
+        <h3 class="partner__name">Bitcoin <em>Magazine</em></h3>
+        <div class="partner__role">Media Partner</div>
+        <div class="partner__topic">"The original Bitcoin publication."</div>
+      </a>
+      <a class="partner" href="https://www.petermccormack.com" target="_blank" rel="noopener" data-partner="03" aria-label="The Peter McCormack Show">
+        <div class="partner__index">03</div>
+        <div class="partner__portrait">
+          <img class="partner__photo" src="/images/partners/partner-03.webp" alt="The Peter McCormack Show logo" onload="this.parentElement.classList.add('partner__portrait--haslogo')" onerror="this.style.display='none'" />
+          <div class="partner__placeholder">P</div>
+        </div>
+        <h3 class="partner__name">The Peter <em>McCormack</em> Show</h3>
+        <div class="partner__role">Media Partner</div>
+        <div class="partner__topic">"Long-form interviews on money, politics &amp; power."</div>
+      </a>
+      <a class="partner" href="https://proofofconference.com" target="_blank" rel="noopener" data-partner="04" aria-label="Proof of Conference">
+        <div class="partner__index">04</div>
+        <div class="partner__portrait">
+          <img class="partner__photo" src="/images/partners/partner-04.webp" alt="Proof of Conference logo" onload="this.parentElement.classList.add('partner__portrait--haslogo')" onerror="this.style.display='none'" />
+          <div class="partner__placeholder">P</div>
+        </div>
+        <h3 class="partner__name">Proof of <em>Conference</em></h3>
+        <div class="partner__role">Event Partner</div>
+        <div class="partner__topic">"The Bitcoin events directory."</div>
+      </a>
+      <a class="partner partner--hidden" href="https://www.financialplanningassociation.org" target="_blank" rel="noopener" data-partner="05" aria-label="Financial Planning Association">
+        <div class="partner__index">05</div>
+        <div class="partner__portrait">
+          <img class="partner__photo" src="/images/partners/partner-05.webp" alt="Financial Planning Association logo" onload="this.parentElement.classList.add('partner__portrait--haslogo')" onerror="this.style.display='none'" />
+          <div class="partner__placeholder">F</div>
+        </div>
+        <h3 class="partner__name">Financial Planning <em>Association</em></h3>
+        <div class="partner__role">Industry Partner</div>
+        <div class="partner__topic">"The CFP® professional's partner in planning."</div>
+      </a>
+      <a class="partner partner--hidden" href="https://econclubmiami.org" target="_blank" rel="noopener" data-partner="06" aria-label="The Economic Club of Miami">
+        <div class="partner__index">06</div>
+        <div class="partner__portrait">
+          <img class="partner__photo" src="/images/partners/partner-06.webp" alt="The Economic Club of Miami logo" onload="this.parentElement.classList.add('partner__portrait--haslogo')" onerror="this.style.display='none'" />
+          <div class="partner__placeholder">E</div>
+        </div>
+        <h3 class="partner__name">The Economic Club <em>of Miami</em></h3>
+        <div class="partner__role">Community Partner</div>
+        <div class="partner__topic">"Where Miami's leaders convene, connect &amp; collaborate."</div>
+      </a>
+      <a class="partner partner--hidden" href="https://emergeamericas.com" target="_blank" rel="noopener" data-partner="07" aria-label="eMerge Americas">
+        <div class="partner__index">07</div>
+        <div class="partner__portrait">
+          <img class="partner__photo" src="/images/partners/partner-07.webp" alt="eMerge Americas logo" onload="this.parentElement.classList.add('partner__portrait--haslogo')" onerror="this.style.display='none'" />
+          <div class="partner__placeholder">e</div>
+        </div>
+        <h3 class="partner__name">eMerge <em>Americas</em></h3>
+        <div class="partner__role">Tech Ecosystem Partner</div>
+        <div class="partner__topic">"Where Miami's tech &amp; innovation converge."</div>
+      </a>
+      <a class="partner partner--hidden" href="https://www.miamifinanceforum.com" target="_blank" rel="noopener" data-partner="08" aria-label="Miami Finance Forum">
+        <div class="partner__index">08</div>
+        <div class="partner__portrait">
+          <img class="partner__photo" src="/images/partners/partner-08.webp" alt="Miami Finance Forum logo" onload="this.parentElement.classList.add('partner__portrait--haslogo')" onerror="this.style.display='none'" />
+          <div class="partner__placeholder">M</div>
+        </div>
+        <h3 class="partner__name">Miami Finance <em>Forum</em></h3>
+        <div class="partner__role">Finance Community Partner</div>
+        <div class="partner__topic">"South Florida's network of finance professionals."</div>
+      </a>
+      <a class="partner partner--hidden" href="https://tnorth.com" target="_blank" rel="noopener" data-partner="09" aria-label="True North">
+        <div class="partner__index">09</div>
+        <div class="partner__portrait">
+          <img class="partner__photo" src="/images/partners/partner-09.webp" alt="True North logo" onload="this.parentElement.classList.add('partner__portrait--haslogo')" onerror="this.style.display='none'" />
+          <div class="partner__placeholder">T</div>
+        </div>
+        <h3 class="partner__name">True <em>North</em></h3>
+        <div class="partner__role">Community Partner</div>
+        <div class="partner__topic">"Partnership details coming soon."</div>
+      </a>
+      <a class="partner partner--hidden" href="https://www.miamibeachfl.gov" target="_blank" rel="noopener" data-partner="10" aria-label="City of Miami Beach">
+        <div class="partner__index">10</div>
+        <div class="partner__portrait">
+          <img class="partner__photo" src="/images/partners/partner-10.webp" alt="City of Miami Beach logo" onload="this.parentElement.classList.add('partner__portrait--haslogo')" onerror="this.style.display='none'" />
+          <div class="partner__placeholder">M</div>
+        </div>
+        <h3 class="partner__name">City of Miami <em>Beach</em></h3>
+        <div class="partner__role">Host City Partner</div>
+        <div class="partner__topic">"Where the summit comes to life."</div>
+      </a>
+    </div>
+    <div class="partners__actions">
+      <button type="button" class="btn partners__toggle" id="partnersToggle" aria-expanded="false">
+        <span class="partners__toggle-show">Show all 10 partners</span>
+        <span class="partners__toggle-hide">Show fewer</span>
+        <span class="btn__arrow">↓</span>
+      </button>
+    </div>
+    <p class="partners__footnote">Curated collaborations with organizations aligned on bitcoin. <em>More to come.</em></p>
+  </div>
+</section>
+
+<section class="venue">
+  <div class="container">
+    <header class="sec-hd" id="venue">
+      <div class="sec-hd__num">Nº 06 — Venue</div>
+      <h2 class="section-title sec-hd__title"><em>Fontainebleau.</em> Miami Beach.</h2>
+    </header>
+    <div class="venue__grid">
+      <div class="venue__illus">
+        <picture>
+          <source srcset="images/fontainebleau.webp" type="image/webp">
+          <img src="images/fontainebleau.jpg" alt="Fontainebleau Miami Beach — aerial view of the resort, pool deck, and oceanfront" width="988" height="556" loading="lazy" decoding="async">
+        </picture>
+      </div>
+      <div class="venue__content">
+        <div class="eyebrow" style="color:var(--accent-deep)">The venue, confirmed</div>
+        <h3>The most <em>iconic</em> hotel in Miami Beach.</h3>
+        <p>Twenty oceanfront acres on Collins Avenue. Designed by Morris Lapidus in 1954, named to the National Register of Historic Places, and a fixture of American glamour ever since — from <em>Goldfinger</em> to Sinatra at La Ronde to a billion-dollar renovation that preserved every curve.</p>
+        <p>Fontainebleau serves as the home base for the week, with the summit, dinners, and after-parties all on-property. Offsite programming stays close: the bitcoin++ builder day in Wynwood and the closing Biscayne Bay boat tour are both a short ride away.</p>
+        <div class="venue__details">
+          <div><div class="venue__detail-label">Address</div><div class="venue__detail-value">4441 Collins Avenue<br>Miami Beach, FL 33140</div></div>
+          <div><div class="venue__detail-label">Getting there from airport</div><div class="venue__detail-value">~25 min from MIA<br>~45 min from FLL</div></div>
+          <div><div class="venue__detail-label">Lodging</div><div class="venue__detail-value"><a class="venue__link" href="https://www.fontainebleau.com/miamibeach/" target="_blank" rel="noopener">TSS Room Block @ Fontainebleau</a><br><span style="display:inline-block;margin-top:.5rem">Other hotels? <a class="venue__link" href="https://www.victoirevoyages.com" target="_blank" rel="noopener">Victoire Voyages</a> can secure preferred rates.</span></div></div>
+          <div><div class="venue__detail-label">Getting to side events</div><div class="venue__detail-value">Arkadia Day Club · on site<br>La Côte · on site<br>~20 min to The LAB Miami<br>~25 min to Bayside Marina</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="faq">
+  <div class="container">
+    <header class="sec-hd" id="faq">
+      <div class="sec-hd__num">Nº 07 — FAQ</div>
+      <h2 class="section-title sec-hd__title">Asked and <em>answered.</em></h2>
+    </header>
+    <div class="faq__list">
+      <details class="faq__item">
+        <summary class="faq__q"><span class="faq__num">01</span><span class="faq__q-text">Is this for <em>me?</em></span><span class="faq__icon"></span></summary>
+        <div class="faq__a"><p>Likely, yes, if you've spent serious time around bitcoin in some capacity: builder, allocator, founder, business owner, writer, operator, or serious learner.</p><p>It's also for thoughtful newcomers who want to go deeper. If you care about bitcoin, want better conversations, and are curious about why so many people dedicate their lives, capital, and careers to this network, you'll fit in.</p></div>
+      </details>
+      <details class="faq__item">
+        <summary class="faq__q"><span class="faq__num">02</span><span class="faq__q-text">Is this a <em>crypto</em> conference?</span><span class="faq__icon"></span></summary>
+        <div class="faq__a"><p>No.</p><p>The Sovereign Summit is a bitcoin-only conference. That doesn't mean you have to already agree with every bitcoin maximalist take to attend. In fact, part of the point is to help thoughtful people understand why bitcoin is different from the rest of crypto.</p><p>But this is not a place for token pitches, altcoin shilling, or "crypto" panels dressed up as bitcoin education. Many attendees will be bitcoin maximalists, meaning they believe bitcoin is meaningfully different from every other digital asset and that most of the crypto industry is either unnecessary, misleading, or outright harmful.</p><p>All are welcome. Shilling is not.</p></div>
+      </details>
+      <details class="faq__item">
+        <summary class="faq__q"><span class="faq__num">03</span><span class="faq__q-text">Why <em>bitcoin-only?</em></span><span class="faq__icon"></span></summary>
+        <div class="faq__a"><p>Because bitcoin is different from the rest of crypto in ways that are economic, technical, and ethical.</p><p>The fixed supply, proof-of-work, fair launch, lack of a controlling foundation, credible neutrality, decentralization, and monetary purpose all matter. These are not small differences. They are the core of why bitcoin has become the world's most important monetary network.</p><p>We'll be diving deeper into those specifics at the conference. The goal is not just to say "bitcoin is different," but to explain why.</p><p>One topic. Deeper conversations. No shitcoin tourism.</p></div>
+      </details>
+      <details class="faq__item">
+        <summary class="faq__q"><span class="faq__num">04</span><span class="faq__q-text">How is this different from other Bitcoin events?</span><span class="faq__icon"></span></summary>
+        <div class="faq__a"><p>The large conferences are great at being large. The Sovereign Summit is intentionally different.</p><p>This is a curated, one-day, single-stage event with roughly 300 seats, a premium speaker lineup, and a format designed around actually being in the room together. No expo hall. No competing tracks. No wandering through a massive venue hoping to catch the right person at the right time.</p><p>The smaller scale means you are more likely to meet the speakers, have real conversations with other attendees, and leave with relationships instead of just notes.</p><p>Think premium, curated, tighter-knit, and high-signal.</p></div>
+      </details>
+      <details class="faq__item">
+        <summary class="faq__q"><span class="faq__num">05</span><span class="faq__q-text">This is the inaugural year. Why should I <em>trust it?</em></span><span class="faq__icon"></span></summary>
+        <div class="faq__a"><p>Fair question.</p><p>While The Sovereign Summit is new, the organizers have deep experience putting on high-quality Bitcoin events and fostering meaningful communities in the space.</p><p>For this first year, we're focused on earning trust the right way: a confirmed landmark venue at Fontainebleau Miami Beach, a premium speaker lineup, transparent pricing, a clear refund policy, and a format intentionally designed for an exceptional year one.</p><p>We're not trying to be the biggest Bitcoin event in the world. We're trying to create one of the best rooms.</p></div>
+      </details>
+      <details class="faq__item">
+        <summary class="faq__q"><span class="faq__num">06</span><span class="faq__q-text">What does the day <em>actually look like?</em></span><span class="faq__icon"></span></summary>
+        <div class="faq__a"><p>Registration, breakfast, and morning coffee begin at 7:30 AM.</p><p>The main program runs from 9 AM to 5 PM with keynotes, panels, and fireside conversations on a single stage. There will be proper breaks between sessions, and lunch will be a buffet, with more details to be announced.</p><p>Most importantly, lunch will be long enough that you can actually finish a conversation.</p><p>The afternoon closes with a keynote talk and closing remarks before the evening After Party at La Côte. For those who want to keep the night going, late-night LobbyCon continues afterward at Bleau Bar.</p></div>
+      </details>
+      <details class="faq__item">
+        <summary class="faq__q"><span class="faq__num">07</span><span class="faq__q-text">What's included with my ticket?</span><span class="faq__icon"></span></summary>
+        <div class="faq__a"><p>Every summit ticket includes the full Friday program, breakfast, lunch, coffee, drinks during the day, and access to all main-stage sessions.</p><p>The ticket tiers differ by release timing and price, not by what you receive during the summit.</p></div>
+      </details>
+      <details class="faq__item">
+        <summary class="faq__q"><span class="faq__num">08</span><span class="faq__q-text">Are the side events <em>included?</em></span><span class="faq__icon"></span></summary>
+        <div class="faq__a"><p>No. The Welcome Dinner, After Party, bitcoin++ builder day, and Biscayne Bay boat tour are ticketed separately.</p><p>You can attend as many or as few as you want. The summit is designed to stand on its own, but the side events are there for people who want the full week experience.</p><p>See the <a class="venue__link" href="#side-events">Side Events</a> section for details.</p></div>
+      </details>
+      <details class="faq__item">
+        <summary class="faq__q"><span class="faq__num">09</span><span class="faq__q-text">What are the <em>side events?</em></span><span class="faq__icon"></span></summary>
+        <div class="faq__a"><p>The week is built around a few smaller, more social gatherings:</p><ul class="faq__bullets"><li>Welcome Dinner for early arrivals, speakers, and sponsors</li><li>After Party at La Côte after the summit</li><li>bitcoin++ Builder Day at The LAB Miami in Wynwood</li><li>Biscayne Bay Boat Tour departing from Bayside Marina</li></ul><p>Each event has its own ticket, capacity, and format. See the <a class="venue__link" href="#side-events">Side Events</a> section for details.</p></div>
+      </details>
+      <details class="faq__item">
+        <summary class="faq__q"><span class="faq__num">10</span><span class="faq__q-text">Will I get to <em>meet the speakers?</em></span><span class="faq__icon"></span></summary>
+        <div class="faq__a"><p>That's the hope — and it's one of the main reasons we're keeping the event small.</p><p>Of course, we can't control every speaker's schedule or guarantee every conversation. But a 300-person, single-stage conference creates a very different environment than a massive event with thousands of attendees, VIP rooms, expo halls, and multiple competing tracks.</p><p>The smaller scale gives attendees a much better chance to meet speakers naturally during breaks, lunch, side events, and the evening program.</p></div>
+      </details>
+      <details class="faq__item">
+        <summary class="faq__q"><span class="faq__num">11</span><span class="faq__q-text">Are talks <em>recorded?</em></span><span class="faq__icon"></span></summary>
+        <div class="faq__a"><p>Yes. Talks will be recorded, uploaded to YouTube, and made public after the event.</p><p>We will also record Q&amp;A, but we will not film the faces of attendees asking questions. The goal is to preserve the value of the conversation while still respecting attendee privacy.</p></div>
+      </details>
+      <details class="faq__item">
+        <summary class="faq__q"><span class="faq__num">12</span><span class="faq__q-text">What's the photo and social media policy?</span><span class="faq__icon"></span></summary>
+        <div class="faq__a"><p>The stage is fair game. Photograph and post freely.</p><p>The audience is not. Please ask before photographing, filming, or tagging fellow attendees, and respect anyone who declines.</p><p>We take privacy seriously because many of our attendees do.</p></div>
+      </details>
+      <details class="faq__item">
+        <summary class="faq__q"><span class="faq__num">13</span><span class="faq__q-text">What's the <em>dress code?</em></span><span class="faq__icon"></span></summary>
+        <div class="faq__a"><p>Smart casual, Miami Beach edition.</p><p>No one needs to show up in a suit, but the summit is at Fontainebleau, the speaker lineup is strong, and you may end up meeting people you actually want to impress. So maybe leave the beach shorts and flip-flops for the pool.</p><p>Dress like you're going to a beautiful hotel to meet serious Bitcoiners — because you are.</p></div>
+      </details>
+      <details class="faq__item">
+        <summary class="faq__q"><span class="faq__num">14</span><span class="faq__q-text">Where should I <em>stay?</em></span><span class="faq__icon"></span></summary>
+        <div class="faq__a"><p>Fontainebleau Miami Beach hosts the summit, and we've secured a preferred-rate room block through February 5. The booking link is in the <a class="venue__link" href="#venue">Venue</a> section.</p><p>If you'd rather stay elsewhere, our travel partner <a class="venue__link" href="https://www.victoirevoyages.com" target="_blank" rel="noopener">Victoire Voyages</a> can help secure rates at many Miami Beach and downtown properties.</p></div>
+      </details>
+      <details class="faq__item">
+        <summary class="faq__q"><span class="faq__num">15</span><span class="faq__q-text">How do I <em>get there?</em></span><span class="faq__icon"></span></summary>
+        <div class="faq__a"><p>The summit takes place at Fontainebleau Miami Beach.</p><p>Miami International Airport is roughly 25 minutes away by car, and Fort Lauderdale-Hollywood International Airport is roughly 45 minutes away, depending on traffic.</p><p>The bitcoin++ builder day is at The LAB Miami in Wynwood, about 20–25 minutes from Fontainebleau. The Biscayne Bay boat tour departs from Bayside Marina, about 25–30 minutes from Fontainebleau.</p></div>
+      </details>
+      <details class="faq__item">
+        <summary class="faq__q"><span class="faq__num">16</span><span class="faq__q-text">Can I pay <em>with bitcoin?</em></span><span class="faq__icon"></span></summary>
+        <div class="faq__a"><p>Of course.</p><p>Checkout supports on-chain bitcoin, Lightning, and card. Lightning is the fastest and our preferred method, but you'll get the same ticket either way.</p></div>
+      </details>
+      <details class="faq__item">
+        <summary class="faq__q"><span class="faq__num">17</span><span class="faq__q-text">Are there special discounted rates, such as group rates or team tickets?</span><span class="faq__icon"></span></summary>
+        <div class="faq__a"><p>Yes.</p><p>We may have discounted options for groups, teams, sponsors, and select partners. For more information, email <a class="venue__link" href="mailto:info@thesovereignsummit.com">info@thesovereignsummit.com</a>.</p></div>
+      </details>
+      <details class="faq__item">
+        <summary class="faq__q"><span class="faq__num">18</span><span class="faq__q-text">What's the refund policy?</span><span class="faq__icon"></span></summary>
+        <div class="faq__a"><p>Summit tickets are fully refundable through November 28, 2026.</p><p>Tickets are always transferable, so if you can't attend, you can send someone else in your place.</p><p>Side event tickets are refundable up to ten days before each event.</p><p>For refund or transfer questions, email <a class="venue__link" href="mailto:info@thesovereignsummit.com">info@thesovereignsummit.com</a>.</p></div>
+      </details>
+      <details class="faq__item">
+        <summary class="faq__q"><span class="faq__num">19</span><span class="faq__q-text">Are there <em>sponsorship</em> opportunities?</span><span class="faq__icon"></span></summary>
+        <div class="faq__a"><p>Yes, but selectively.</p><p>This is not an expo-driven event. We're only interested in sponsors that fit the room and add value to attendees.</p><p>See the <a class="venue__link" href="#sponsors">Sponsors</a> section or email <a class="venue__link" href="mailto:info@thesovereignsummit.com">info@thesovereignsummit.com</a> for more information.</p></div>
+      </details>
+      <details class="faq__item">
+        <summary class="faq__q"><span class="faq__num">20</span><span class="faq__q-text">Accessibility, dietary, and other accommodations?</span><span class="faq__icon"></span></summary>
+        <div class="faq__a"><p>Fontainebleau is ADA-accessible, which is one reason we chose it.</p><p>We'll do our best to accommodate dietary needs, accessibility needs, nursing rooms, prayer space, quiet rooms, or anything else that helps attendees have a better experience.</p><p>Please email <a class="venue__link" href="mailto:info@thesovereignsummit.com">info@thesovereignsummit.com</a> with any specific requests. The earlier we know, the easier it is to help.</p></div>
+      </details>
+      <details class="faq__item">
+        <summary class="faq__q"><span class="faq__num">21</span><span class="faq__q-text">Still have questions?</span><span class="faq__icon"></span></summary>
+        <div class="faq__a"><p>Email <a class="venue__link" href="mailto:info@thesovereignsummit.com">info@thesovereignsummit.com</a> or DM <a class="venue__link" href="https://x.com/SovereignSummit" target="_blank" rel="noopener">@SovereignSummit</a> on X.</p><p>A real person answers, usually within a day.</p></div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="tickets">
+  <div class="container">
+    <header class="sec-hd" id="tickets">
+      <div class="sec-hd__num">Nº 08 — Admission</div>
+      <h2 class="section-title sec-hd__title">Pick your <em>way in.</em></h2>
+    </header>
+    <div class="tickets__grid">
+      <article class="tier tier--allaccess">
+        <div class="tier__ribbon">Save $238</div>
+        <div class="tier__allaccess-grid">
+          <div class="tier__allaccess-left">
+            <div class="tier__eyebrow">All Access · Early Bird</div>
+            <h3 class="tier__name">All <em>Access</em></h3>
+            <div class="tier__price-wrap"><span class="tier__price">$995</span><span class="tier__price-unit">USD</span><span class="tier__price-strike">$1,233</span></div>
+          </div>
+          <div class="tier__allaccess-mid">
+            <p class="tier__desc"><em>Early Bird summit ticket</em> plus all four ticketed side events — bundled.</p>
+            <ul class="tier__includes">
+              <li>Welcome Dinner at Arkadia Day Club <strong>$295</strong></li>
+              <li>After Party at La Côte <strong>$195</strong></li>
+              <li>bitcoin++ Builder Day <strong>$149</strong></li>
+              <li>Biscayne Bay Boat Tour <strong>$99</strong></li>
+            </ul>
+          </div>
+          <a href="#" class="btn">Reserve All Access <span class="btn__arrow">→</span></a>
+        </div>
+      </article>
+      <article class="tier tier--featured">
+        <div class="tier__ribbon">Limited release</div>
+        <div class="tier__eyebrow">Phase 01 · Early Bird</div>
+        <h3 class="tier__name">Early <em>Bird</em></h3>
+        <div class="tier__price-wrap"><span class="tier__price">$495</span><span class="tier__price-unit">USD</span></div>
+        <p class="tier__desc">Save $500 vs. final release. Closing September 30.</p>
+        <ul class="tier__list">
+          <li>Full-day program · keynotes &amp; panels</li>
+          <li>Food &amp; drink throughout the day</li>
+          <li>Sessions recorded · available for playback</li>
+          <li>Hotel block &amp; group rate</li>
+        </ul>
+        <a href="#" class="btn">Reserve Early Bird <span class="btn__arrow">→</span></a>
+      </article>
+      <article class="tier">
+        <div class="tier__eyebrow">Phase 02 · Standard</div>
+        <h3 class="tier__name">Standard</h3>
+        <div class="tier__price-wrap"><span class="tier__price">$695</span><span class="tier__price-unit">USD</span></div>
+        <p class="tier__desc">Save $300 vs. final release. October 1 — December 31.</p>
+        <ul class="tier__list">
+          <li>Full-day program · keynotes &amp; panels</li>
+          <li>Food &amp; drink throughout the day</li>
+          <li>Sessions recorded · available for playback</li>
+          <li>Hotel block &amp; group rate</li>
+        </ul>
+        <a href="#" class="btn">Reserve Standard <span class="btn__arrow">→</span></a>
+      </article>
+      <article class="tier tier--premium">
+        <div class="tier__eyebrow">Phase 03 · Final Release</div>
+        <h3 class="tier__name">Final <em>Release</em></h3>
+        <div class="tier__price-wrap"><span class="tier__price">$995</span><span class="tier__price-unit">USD</span></div>
+        <p class="tier__desc">What remains after December 31.</p>
+        <ul class="tier__list">
+          <li>Full-day program · keynotes &amp; panels</li>
+          <li>Food &amp; drink throughout the day</li>
+          <li>Sessions recorded · available for playback</li>
+          <li>Hotel block &amp; group rate</li>
+        </ul>
+        <a href="#" class="btn">Reserve Final Release <span class="btn__arrow">→</span></a>
+      </article>
+    </div>
+    <p class="tickets__trust">Same seat, same program, same Friday — only the price changes. Full refund through December 1, 2026 · transfers honored until January 28, 2027.</p>
+  </div>
+</section>
+
+<section class="news">
+  <div class="container">
+    <div class="news__inner">
+<img class="news__mark" src="images/TSS_Word_Logo.png" alt="The Sovereign Summit" style="max-width:340px;width:100%;height:auto;margin-bottom:.5rem" loading="lazy" decoding="async">
+      <div class="eyebrow" style="color:var(--paper-deep);opacity:.7;margin-bottom:1.25rem;">Updates · Monthly</div>
+      <h2 class="news__title">One <em>letter</em> a month.<br>Nothing more.</h2>
+      <p class="news__sub">Speaker announcements, program updates, and the occasional essay. Unsubscribe any time you like.</p>
+      <form class="news__form" onsubmit="event.preventDefault(); this.querySelector('.news__input').value=''; this.querySelector('.news__submit').textContent='Subscribed ✓';">
+        <input class="news__input" type="email" placeholder="your@email.com" required>
+        <button type="submit" class="news__submit">Subscribe →</button>
+      </form>
+      <div class="news__note">We do not share emails. We do not newsletter-bomb.</div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__top">
+      <div class="footer__brand">
+<img class="footer__brand-mark" src="images/TSS_Badge_Logo.png" alt="The Sovereign Summit" width="320" height="320" loading="lazy" decoding="async" style="max-width:240px">
+      </div>
+      <div class="footer__col"><div class="footer__col-label">Summit</div><ul><li><a href="#speakers">Speakers</a></li><li><a href="#agenda">Agenda</a></li><li><a href="#side-events">Side Events</a></li><li><a href="#sponsors">Sponsors</a></li><li><a href="#partners">Partners</a></li><li><a href="#venue">Venue</a></li><li><a href="#faq">FAQ</a></li><li><a href="#tickets">Tickets</a></li></ul></div>
+      <div class="footer__col"><div class="footer__col-label">Contact</div><ul><li><a href="mailto:info@thesovereignsummit.com">info@thesovereignsummit.com</a></li></ul></div>
+      <div class="footer__col"><div class="footer__col-label">Follow</div><ul><li><a href="https://x.com/SovereignSummit" target="_blank" rel="noopener">@SovereignSummit on X</a></li></ul></div>
+    </div>
+    <div class="footer__bottom">
+      <div>© 2027 The Sovereign Summit · Miami Beach, FL</div>
+      <div>Designed &amp; set in Archivo, Instrument Serif &amp; JetBrains Mono</div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const navWrap = document.getElementById('navWrap');
+  // Defensive runtime overrides — these inline styles with !important beat any cached CSS
+  // that might still have older values (large section padding, scroll-margin-top, etc).
+  // This guarantees the tight layout works even if CDN/browser is serving stale stylesheets.
+  document.documentElement.style.setProperty('scroll-padding-top', '112px', 'important');
+  document.querySelectorAll('[id]').forEach((el) => {
+    if (el.style) el.style.setProperty('scroll-margin-top', '0px', 'important');
+  });
+  document.querySelectorAll('.side-events, .tickets').forEach((el) => {
+    if (el.style) {
+      el.style.setProperty('padding-top', '1.5rem', 'important');
+    }
+  });
+  // Match mobile via CSS-style media query check
+  if (window.matchMedia('(max-width: 900px)').matches) {
+    document.documentElement.style.setProperty('scroll-padding-top', '102px', 'important');
+  }
+  if (window.matchMedia('(max-width: 520px)').matches) {
+    document.querySelectorAll('.side-events').forEach((el) => {
+      if (el.style) el.style.setProperty('padding-top', '1.25rem', 'important');
+    });
+  }
+  // Compute layout-position Y of an element relative to the document, bypassing any
+  // CSS transforms (e.g., the .reveal class's translateY(18px) which would otherwise
+  // throw off scroll calculations).
+  const getDocumentY = (el) => {
+    let y = 0;
+    while (el) { y += el.offsetTop; el = el.offsetParent; }
+    return y;
+  };
+  // Shared scroll function — used for ALL in-page anchor clicks (desktop nav, mobile menu,
+  // brand link, FAQ inline links, etc). Bypasses browser scroll-padding-top to avoid
+  // iOS Safari quirks with smooth scrolling, and guarantees consistent breathing room
+  // below the sticky nav regardless of which link was clicked.
+  const scrollToAnchor = (target, targetId) => {
+    const navHeight = navWrap?.getBoundingClientRect().height || 80;
+    // 24px buffer below nav — tight, clean visual separation.
+    const buffer = 4;
+    const compute = () => getDocumentY(target) - navHeight - buffer;
+    window.scrollTo({ top: compute(), behavior: 'smooth' });
+    if (targetId && history.pushState) history.pushState(null, '', targetId);
+    // Defensive: re-check position after smooth scroll, correct if anything (cached CSS,
+    // browser quirks) interfered. Snap to correct position without animation.
+    setTimeout(() => {
+      const expected = navHeight + buffer;
+      const actualTop = target.getBoundingClientRect().top;
+      if (Math.abs(actualTop - expected) > 4) {
+        window.scrollTo({ top: compute(), behavior: 'auto' });
+      }
+    }, 950);
+  };
+  // On initial page load with a URL hash, override the browser's default scroll behavior
+  // (which uses scroll-padding-top and may be subject to caching/browser quirks) with our
+  // own scrollToAnchor so the offset is always exactly what we want.
+  if (window.location.hash) {
+    const initialTarget = document.querySelector(window.location.hash);
+    if (initialTarget) {
+      // Wait for layout to settle, then scroll. behavior:auto here for immediate jump.
+      window.addEventListener('load', () => {
+        setTimeout(() => {
+          const navHeight = navWrap?.getBoundingClientRect().height || 80;
+          window.scrollTo({ top: getDocumentY(initialTarget) - navHeight - 4, behavior: 'auto' });
+        }, 50);
+      });
+    }
+  }
+  // Wire up every in-page anchor link to use the shared scroll handler. Mobile menu
+  // links have their own handler that calls this function after closing the menu.
+  // Hero scroll arrow has its own custom scroll behavior, so exclude it.
+  document.querySelectorAll('a[href^="#"]').forEach((link) => {
+    if (link.closest('#mobileMenu')) return; // mobile menu links handled separately
+    if (link.classList.contains('hero__scroll')) return; // hero arrow has custom scroll
+    link.addEventListener('click', (e) => {
+      const targetId = link.getAttribute('href');
+      if (!targetId || targetId === '#') return;
+      const target = document.querySelector(targetId);
+      if (!target) return;
+      e.preventDefault();
+      scrollToAnchor(target, targetId);
+    });
+  });
+  // Use an invisible sentinel at the top of the page. When it scrolls out of view,
+  // the IntersectionObserver fires — off the main thread, no forced reflow. Replaces
+  // the old scroll-event + window.scrollY read pattern, which forced layout on every frame.
+  const scrollSentinel = document.createElement('div');
+  scrollSentinel.setAttribute('aria-hidden', 'true');
+  scrollSentinel.style.cssText = 'position:absolute;top:0;left:0;width:1px;height:8px;pointer-events:none;visibility:hidden';
+  document.body.prepend(scrollSentinel);
+  new IntersectionObserver(([entry]) => {
+    navWrap.classList.toggle('scrolled', !entry.isIntersecting);
+  }, { threshold: 0 }).observe(scrollSentinel);
+
+  // Mobile menu toggle
+  const navToggle = document.getElementById('navToggle');
+  const mobileMenu = document.getElementById('mobileMenu');
+  if (navToggle && mobileMenu) {
+    // Measure where the nav ends in the viewport right now and set as CSS var.
+    // When at top of page, the ticker is above the nav so nav.bottom > nav.height.
+    // After scrolling, the nav is sticky at top:0 so nav.bottom === nav.height.
+    const setMenuOffset = () => {
+      const navBottom = navWrap.getBoundingClientRect().bottom;
+      document.documentElement.style.setProperty('--menu-offset', Math.max(navBottom, 0) + 'px');
+    };
+    const closeMenu = () => {
+      navToggle.setAttribute('aria-expanded', 'false');
+      navToggle.setAttribute('aria-label', 'Open menu');
+      mobileMenu.setAttribute('aria-hidden', 'true');
+      mobileMenu.classList.remove('is-open');
+      document.body.classList.remove('menu-open');
+    };
+    const openMenu = () => {
+      setMenuOffset();
+      navToggle.setAttribute('aria-expanded', 'true');
+      navToggle.setAttribute('aria-label', 'Close menu');
+      mobileMenu.setAttribute('aria-hidden', 'false');
+      mobileMenu.classList.add('is-open');
+      document.body.classList.add('menu-open');
+    };
+    navToggle.addEventListener('click', () => {
+      const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+      expanded ? closeMenu() : openMenu();
+    });
+    // Tap a link → close menu, then scroll after transition finishes
+    mobileMenu.querySelectorAll('a[href^="#"]').forEach((link) => {
+      link.addEventListener('click', (e) => {
+        const targetId = link.getAttribute('href');
+        if (!targetId || targetId === '#') return;
+        const target = document.querySelector(targetId);
+        if (!target) return;
+        e.preventDefault();
+        closeMenu();
+        // wait for menu transform + scroll-lock release before scrolling
+        setTimeout(() => { scrollToAnchor(target, targetId); }, 280);
+      });
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && navToggle.getAttribute('aria-expanded') === 'true') closeMenu();
+    });
+    // Close menu if window resizes back to desktop
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 900 && navToggle.getAttribute('aria-expanded') === 'true') closeMenu();
+    });
+  }
+
+  // Hero scroll-down arrow: collapses the visual gap between arrow and facts (used to push
+  // facts below the fold at the top state), then smooth-scrolls so facts.bottom = viewport.bottom.
+  // Once the user has tapped the arrow, the gap stays collapsed for the rest of the session —
+  // it's only purpose is to keep facts off-screen on initial load.
+  const heroScroll = document.querySelector('.hero__scroll');
+  if (heroScroll) {
+    heroScroll.addEventListener('click', (e) => {
+      e.preventDefault();
+      const rule = document.querySelector('.hero__rule');
+      const facts = document.querySelector('.hero__facts');
+      if (!facts) return;
+      // Collapse the gap synchronously so the upcoming scroll target reflects the new layout
+      if (rule) rule.style.marginTop = '.55rem';
+      requestAnimationFrame(() => {
+        facts.scrollIntoView({ behavior: 'smooth', block: 'end' });
+      });
+    });
+  }
+
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((e) => {
+      if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('.sec-hd, .program__row, .speaker, .partner, .side-event, .venue__illus, .venue__content, .tier, .faq__item, .friend, .news__inner').forEach((el, i) => {
+    el.classList.add('reveal');
+    el.style.transitionDelay = (Math.min(i, 6) * 40) + 'ms';
+    io.observe(el);
+  });
+
+  document.querySelectorAll('.faq__item').forEach((item) => {
+    item.addEventListener('toggle', () => {
+      if (item.open) {
+        document.querySelectorAll('.faq__item').forEach((other) => { if (other !== item) other.open = false; });
+      }
+    });
+  });
+
+  // Speakers show-all toggle
+  // Desktop: hides cards 22-33 by default (via .speaker--hidden class on the markup),
+  //          toggle reveals them.
+  // Mobile (≤520px): also hides cards 14-21 via CSS rule on the grid; toggle adds
+  //          .is-expanded to the grid to reveal them.
+  // Both behaviors are driven by the same toggle for a unified UX.
+  const speakersToggle = document.getElementById('speakersToggle');
+  if (speakersToggle) {
+    speakersToggle.addEventListener('click', () => {
+      const expanded = speakersToggle.getAttribute('aria-expanded') === 'true';
+      const next = !expanded;
+      speakersToggle.setAttribute('aria-expanded', String(next));
+      // Tier 3 reveal (cards 21-32) — applies on all viewports
+      document.querySelectorAll('.speakers__grid--md .speaker').forEach((card) => {
+        card.classList.toggle('speaker--hidden', !next && parseInt(card.dataset.speaker, 10) > 21);
+      });
+      // Mobile second-row reveal (cards 13-20) — driven by class on the grid
+      const mdGrid = document.getElementById('speakersGridMd');
+      if (mdGrid) mdGrid.classList.toggle('is-expanded', next);
+    });
+  }
+
+  // Partners show-all toggle
+  const partnersToggle = document.getElementById('partnersToggle');
+  if (partnersToggle) {
+    partnersToggle.addEventListener('click', () => {
+      const grid = document.getElementById('partnersGrid');
+      const expanded = partnersToggle.getAttribute('aria-expanded') === 'true';
+      const next = !expanded;
+      partnersToggle.setAttribute('aria-expanded', String(next));
+      grid.querySelectorAll('.partner').forEach((card) => {
+        card.classList.toggle('partner--hidden', !next && parseInt(card.dataset.partner, 10) > 4);
+      });
+    });
+  }
+
+  // Sponsors show-all toggle (controls activations tier)
+  const friendsToggle = document.getElementById('friendsToggle');
+  if (friendsToggle) {
+    friendsToggle.addEventListener('click', () => {
+      const activations = document.getElementById('friendsActivations');
+      const expanded = friendsToggle.getAttribute('aria-expanded') === 'true';
+      const next = !expanded;
+      friendsToggle.setAttribute('aria-expanded', String(next));
+      if (activations) {
+        activations.classList.toggle('friends__tier--hidden', !next);
+      }
+    });
+  }
+</script>
+</body>
+</html>
