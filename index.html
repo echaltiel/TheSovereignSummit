@@ -209,7 +209,7 @@ body.menu-open{overflow:hidden}
 .hero__logo-col img{display:block;width:100%;height:auto;aspect-ratio:1/1;max-height:calc(100vh - 180px);object-fit:contain}
 .hero__info{display:flex;flex-direction:column;gap:clamp(1rem,1.5vw,1.5rem);padding-left:clamp(1.5rem,3vw,3rem);padding-right:clamp(1rem,2vw,2rem);justify-content:center;max-height:calc(100vh - 180px);overflow:hidden;position:relative}
 .hero__eyebrow{color:var(--accent-deep);font-size:.78rem;letter-spacing:.24em}
-.hero__warning{position:absolute;top:.6rem;right:.6rem;display:inline-flex;flex-direction:row;align-items:center;gap:.35rem;padding:.22rem .55rem;background:#c1272d;color:#fff;border:1px solid #8a1a1f;border-radius:3px;z-index:10}
+.hero__warning{display:inline-flex;flex-direction:row;align-items:center;gap:.35rem;padding:.22rem .55rem;background:#c1272d;color:#fff;border:1px solid #8a1a1f;border-radius:3px;z-index:10}
 .hero__warning strong{font-family:var(--fs);font-size:.58rem;letter-spacing:.12em;text-transform:uppercase;white-space:nowrap}
 .hero__warning span{display:none}
 .hero__headline{font-family:var(--fd);font-size:clamp(2.25rem,5vw,5rem);font-weight:400;line-height:1;letter-spacing:-.02em}
@@ -1455,6 +1455,9 @@ body.menu-open{overflow:hidden}
         <li><a class="nav__link" href="#faq">FAQ</a></li>
       </ul>
       <div class="nav__actions">
+        <a href="#" class="hero__warning" role="alert" style="text-decoration:none;position:static;border-radius:4px;padding:.35rem .7rem;font-size:.62rem;letter-spacing:.1em;margin-right:.5rem" aria-label="Sample website notice">
+          <strong>⚠ SAMPLE WEBSITE</strong>
+        </a>
         <a href="https://x.com/SovereignSummit" target="_blank" rel="noopener" class="nav__social" aria-label="Follow The Sovereign Summit on X">
           <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
             <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
@@ -1503,13 +1506,9 @@ body.menu-open{overflow:hidden}
         </div>
       </div>
       <div class="hero__info">
-        <div class="hero__warning" role="alert">
-          <strong>⚠ Sample website</strong>
-          <span>Nothing on this site is accurate. Used as an example only.</span>
-        </div>
-        <h1 class="hero__headline">
-          A <em>premier</em> gathering<br class="keep-mobile">
-          <span class="accent">discussing energy, AI,<br class="keep-mobile">Freedom and Bitcoin</span><br class="keep-mobile">
+<h1 class="hero__headline">
+          The <em>premier</em> gathering<br class="keep-mobile">
+          <span class="accent">discussing Energy, AI,<br class="keep-mobile">Freedom &amp; Bitcoin</span><br class="keep-mobile">
           in Miami Beach, FL
         </h1>
         <a href="#hero-details" class="hero__scroll" aria-label="Scroll to event details">
