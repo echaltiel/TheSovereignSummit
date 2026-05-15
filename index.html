@@ -1517,9 +1517,13 @@ body.menu-open{overflow:hidden}
   <div class="container">
     <div class="hero__grid">
       <div class="hero__logo-col" style="background:#F4ECE0">
-        <picture>
-          <img src="images/TSS_Badge_Logo.png" alt="The Sovereign Summit" width="720" height="720" fetchpriority="high" style="background:#F4ECE0;display:block" />
-        </picture>
+        <div role="img" aria-label="The Sovereign Summit"
+             style="width:100%;
+                    aspect-ratio:1/1;
+                    max-height:calc(100vh - 180px);
+                    background: #F4ECE0 url(images/TSS_Badge_Logo.png) center/contain no-repeat;
+                    flex-shrink:0">
+        </div>
       </div>
       <div class="hero__info">
 <h1 class="hero__headline">
