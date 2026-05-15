@@ -95,8 +95,8 @@ section{padding:clamp(2.5rem,5vw,4rem) 0;position:relative}
   .news{padding:3rem 0}
 }
 .eyebrow{font-family:var(--fm);font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-soft)}
-.section-title{font-family:var(--fd);font-weight:400;font-size:clamp(2.25rem,5.5vw,4.5rem);line-height:1;letter-spacing:-.015em}
-.section-title em{font-style:italic;color:var(--accent-deep)}
+.section-title{font-family:var(--fd);font-weight:400;font-size:clamp(1.6rem,3vw,2.6rem);line-height:1.05;letter-spacing:-.015em}
+.section-title em{font-style:italic;color:var(--accent-deep);font-size:1em;line-height:inherit}
 
 /* BUTTON */
 .btn{display:inline-flex;align-items:center;gap:.6rem;font-family:var(--fm);font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;padding:.95rem 1.6rem;border:1px solid var(--ink);transition:all .3s cubic-bezier(.2,.6,.2,1);position:relative;overflow:hidden;z-index:1}
@@ -373,7 +373,7 @@ body.menu-open{overflow:hidden}
   .speakers{padding:1rem 0 1.5rem}
   .speakers .sec-hd{margin-bottom:.65rem;gap:.4rem;padding-top:0}
   .speakers .sec-hd__num{padding-top:.5rem;font-size:.7rem}
-  .speakers .section-title{font-size:1.5rem}
+  
   .speakers .sec-hd__title{padding-top:0}
   .speakers__grid{grid-template-columns:1fr;border-right:none}
   .speakers__grid--md{grid-template-columns:repeat(2,1fr)}
@@ -494,7 +494,7 @@ body.menu-open{overflow:hidden}
   .partners{padding:1rem 0 1.5rem}
   .partners .sec-hd{margin-bottom:.65rem;gap:.4rem}
   .partners .sec-hd__num{padding-top:.5rem;font-size:.7rem}
-  .partners .section-title{font-size:1.5rem}
+  
   .partners .sec-hd__title{padding-top:0}
   /* On mobile, override partner--hidden for cards 5 and 6 so 6 are visible by default.
      The toggle still reveals cards 7 and 8 (which keep .partner--hidden until clicked).
@@ -553,7 +553,7 @@ body.menu-open{overflow:hidden}
 .venue{background:var(--paper-deep)}
 .venue{padding:1.25rem 0 1.75rem !important}
 .venue .sec-hd{margin-bottom:clamp(.85rem,1.75vw,1.25rem)}
-.venue .section-title{font-size:clamp(1.6rem,3vw,2.5rem)}
+
 .venue__grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:clamp(1.5rem,3.5vw,3rem);align-items:start}
 .venue__illus{background:var(--paper-light);aspect-ratio:16/9;max-height:420px;border:1px solid var(--ink);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
 .venue__illus::before{content:'';position:absolute;inset:.5rem;border:1px solid rgba(244,236,224,.4);pointer-events:none;z-index:1}
@@ -580,7 +580,7 @@ body.menu-open{overflow:hidden}
   .venue{padding:.85rem 0 1.5rem !important}
   .venue .sec-hd{margin-bottom:.5rem;gap:.4rem}
   .venue .sec-hd__num{padding-top:.45rem;font-size:.7rem}
-  .venue .section-title{font-size:1.5rem}
+  
   .venue .sec-hd__title{padding-top:0}
   .venue__grid{gap:.85rem}
   .venue__illus{aspect-ratio:16/9;max-height:160px;padding:0}
@@ -598,7 +598,7 @@ body.menu-open{overflow:hidden}
 /* TICKETS */
 .tickets{padding:1.25rem 0 1.5rem !important}
 .tickets .sec-hd{margin-bottom:.85rem;padding-top:.75rem}
-.tickets .section-title{font-size:clamp(1.6rem,3vw,2.5rem)}
+
 .tickets__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
 .tier{background:var(--paper-light);border:1px solid var(--ink);padding:.85rem .9rem .85rem;position:relative;display:flex;flex-direction:column;min-height:auto;transition:transform .3s,box-shadow .3s}
 .tier:hover{transform:translateY(-4px);box-shadow:0 14px 40px -20px rgba(19,30,51,.3)}
@@ -659,7 +659,7 @@ body.menu-open{overflow:hidden}
 @media (max-width:720px){
   .tickets{padding:1.25rem 0 1.75rem !important}
   .tickets .sec-hd{margin-bottom:.85rem}
-  .tickets .section-title{font-size:1.65rem}
+  
   .tickets__grid{gap:1rem}
   .tier{padding:1.1rem 1.1rem 1.1rem}
   .tier__ribbon{top:-8px;font-size:.55rem;padding:.22rem .55rem}
@@ -685,7 +685,7 @@ body.menu-open{overflow:hidden}
 /* SIDE EVENTS */
 .side-events{padding:.5rem 0 1.5rem !important}
 .side-events .sec-hd{margin-bottom:clamp(.85rem,1.75vw,1.25rem);padding-top:1.5rem}
-.side-events .section-title{font-size:clamp(1.6rem,3vw,2.5rem)}
+
 .side-events__grid{display:grid;grid-template-columns:repeat(2,1fr);gap:0;border-top:1px solid var(--ink);border-left:1px solid var(--ink)}
 .side-event{padding:.7rem .95rem;border-right:1px solid var(--ink);border-bottom:1px solid var(--ink);background:var(--paper-light);display:flex;flex-direction:column;gap:.3rem;transition:background .3s;text-decoration:none;color:inherit;position:relative}
 .side-event__link{position:absolute;inset:0;z-index:1;text-decoration:none}
@@ -715,7 +715,7 @@ body.menu-open{overflow:hidden}
   .side-events{padding:2rem 0 1.5rem !important}
   .side-events .sec-hd{margin-bottom:.5rem;gap:.4rem}
   .side-events .sec-hd__num{padding-top:.45rem;font-size:.7rem}
-  .side-events .section-title{font-size:1.4rem}
+  
   .side-events .sec-hd__title{padding-top:0}
   .side-event{
     display:grid;
@@ -924,7 +924,7 @@ body.menu-open{overflow:hidden}
 .friends__actions{display:flex;justify-content:center;margin-top:.6rem}
 .friends{padding:.5rem 0 1.5rem !important}
 .friends .sec-hd{margin-bottom:.85rem !important;gap:1rem;padding-top:.5rem}
-.friends .section-title{font-size:clamp(1.6rem,3vw,2.5rem) !important}
+
 .friends__toggle-hide{display:none}
 .friends__toggle[aria-expanded="true"] .friends__toggle-show{display:none}
 .friends__toggle[aria-expanded="true"] .friends__toggle-hide{display:inline}
@@ -951,7 +951,7 @@ body.menu-open{overflow:hidden}
   .friends{padding:1rem 0 1.5rem}
   .friends .sec-hd{margin-bottom:.6rem;gap:.5rem}
   .friends .sec-hd__num{padding-top:.55rem;font-size:.7rem}
-  .friends .section-title{font-size:1.5rem}
+  
   .friends .sec-hd__title{padding-top:0}
   .friends__tier{margin-top:1.25rem}
   .friends__tier-label{font-size:.62rem;letter-spacing:.18em;margin-bottom:.45rem;gap:.6rem}
