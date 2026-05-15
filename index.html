@@ -126,7 +126,7 @@ section{padding:clamp(2.5rem,5vw,4rem) 0;position:relative}
 .nav-wrap.scrolled{background:var(--paper)}
 .nav{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:1.1rem 0;gap:2rem}
 .nav__brand{display:flex;align-items:center;justify-self:start}
-.nav__brand img{height:90px;width:auto;display:block;transition:opacity .2s}
+.nav__brand img{height:60px;width:auto;display:block;transition:opacity .2s}
 .nav__brand:hover img{opacity:.75}
 .nav__links{display:flex;gap:2.25rem;justify-self:center;list-style:none}
 .nav__link{font-family:var(--fm);font-size:.74rem;letter-spacing:.15em;text-transform:uppercase;color:var(--ink-soft);position:relative;transition:color .2s}
@@ -199,7 +199,7 @@ section{padding:clamp(2.5rem,5vw,4rem) 0;position:relative}
 .mobile-menu__cta:hover{background:var(--accent-deep);border-color:var(--accent-deep);color:var(--paper)}
 body.menu-open{overflow:hidden}
 
-@media (max-width:900px){.nav__links{display:none}.nav__actions{display:none}.nav{grid-template-columns:1fr auto}.nav__brand img{height:78px}.nav__toggle{display:flex}}
+@media (max-width:900px){.nav__links{display:none}.nav__actions{display:none}.nav{grid-template-columns:1fr auto}.nav__brand img{height:52px}.nav__toggle{display:flex}}
 
 /* HERO */
 .hero{padding:clamp(1rem,2vw,1.5rem) 0}
@@ -1442,7 +1442,7 @@ body.menu-open{overflow:hidden}
     <nav class="nav">
       <a class="nav__brand" href="#top" aria-label="The Sovereign Summit">
         <picture>
-          <img src="images/TSS_Word_Logo.png" alt="The Sovereign Summit" height="48" style="width:auto" fetchpriority="high">
+          <img src="images/nav-logo-tight.png" alt="The Sovereign Summit" height="60" style="width:auto" fetchpriority="high">
         </picture>
       </a>
       <ul class="nav__links">
