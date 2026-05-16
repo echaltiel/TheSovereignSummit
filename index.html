@@ -559,7 +559,9 @@ body.menu-open{overflow:hidden}
 
 .venue__grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:clamp(1.5rem,3.5vw,3rem);align-items:start}
 .venue__media{display:flex;flex-direction:column;gap:.65rem;align-items:stretch}
-.venue__brand{display:block;width:auto;max-width:280px;max-height:60px;height:auto;align-self:center;object-fit:contain}
+.venue__brand-link{display:block;align-self:center;line-height:0;transition:opacity .25s ease}
+.venue__brand-link:hover{opacity:.65}
+.venue__brand{display:block;width:auto;max-width:380px;max-height:110px;height:auto;object-fit:contain}
 .venue__illus{background:var(--paper-light);aspect-ratio:16/9;max-height:360px;border:1px solid var(--ink);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
 .venue__illus::before{content:'';position:absolute;inset:.5rem;border:1px solid rgba(244,236,224,.4);pointer-events:none;z-index:1}
 .venue__illus svg{width:100%;height:auto;max-height:340px}
@@ -2299,7 +2301,9 @@ body.menu-open{overflow:hidden}
     </header>
     <div class="venue__grid">
       <div class="venue__media">
-        <img class="venue__brand" src="images/fontainebleau-logo.webp" alt="Fontainebleau Miami Beach" loading="lazy" decoding="async">
+        <a class="venue__brand-link" href="https://www.fontainebleau.com/miamibeach/" target="_blank" rel="noopener" aria-label="Visit Fontainebleau Miami Beach">
+          <img class="venue__brand" src="images/fontainebleau-logo.webp" alt="Fontainebleau Miami Beach" loading="lazy" decoding="async">
+        </a>
         <div class="venue__illus">
           <picture>
             <source srcset="images/fontainebleau.webp" type="image/webp">
