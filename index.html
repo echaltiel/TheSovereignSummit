@@ -478,6 +478,8 @@ body.menu-open{overflow:hidden}
 .partner__placeholder{font-family:var(--fd);font-style:italic;font-size:2.3rem;color:var(--ink);opacity:.35;position:relative;z-index:1}
 /* When a logo loads, drop the circle chip entirely — the logo IS the visual */
 .partner__portrait--haslogo{background:transparent;border:none;border-radius:0}
+/* Wordmark logos (wide horizontal wordmarks like Victoire Voyages) — wider, shorter portrait */
+.partner__portrait--wordmark{width:220px;height:56px;border-radius:0;background:transparent;border:none}
 .partner__portrait--haslogo .partner__placeholder{display:none}
 .partner__name{font-family:var(--fd);font-size:1.75rem;line-height:1.05;letter-spacing:-.01em;margin-bottom:.45rem;font-weight:400}
 .partner__name em{font-style:italic}
@@ -2265,9 +2267,9 @@ body.menu-open{overflow:hidden}
         <div class="partner__role">Host City Partner</div>
         <div class="partner__topic">"Where the summit comes to life."</div>
       </a>
-      <a class="partner" href="https://www.victoirevoyages.com/" target="_blank" rel="noopener" data-partner="11" aria-label="Victoire Voyages">
+      <a class="partner partner--hidden" href="https://www.victoirevoyages.com/" target="_blank" rel="noopener" data-partner="11" aria-label="Victoire Voyages">
         <div class="partner__index">11</div>
-        <div class="partner__portrait">
+        <div class="partner__portrait partner__portrait--wordmark">
           <img class="partner__photo" src="/images/partners/partner-11.webp" alt="Victoire Voyages logo" onload="this.parentElement.classList.add('partner__portrait--haslogo')" onerror="this.style.display='none'" />
           <div class="partner__placeholder">V</div>
         </div>
