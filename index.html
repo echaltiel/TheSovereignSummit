@@ -558,7 +558,9 @@ body.menu-open{overflow:hidden}
 .venue .sec-hd{margin-bottom:clamp(.85rem,1.75vw,1.25rem)}
 
 .venue__grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:clamp(1.5rem,3.5vw,3rem);align-items:start}
-.venue__illus{background:var(--paper-light);aspect-ratio:16/9;max-height:420px;border:1px solid var(--ink);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.venue__media{display:flex;flex-direction:column;gap:.65rem;align-items:stretch}
+.venue__brand{display:block;width:auto;max-width:280px;max-height:60px;height:auto;align-self:center;object-fit:contain}
+.venue__illus{background:var(--paper-light);aspect-ratio:16/9;max-height:360px;border:1px solid var(--ink);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
 .venue__illus::before{content:'';position:absolute;inset:.5rem;border:1px solid rgba(244,236,224,.4);pointer-events:none;z-index:1}
 .venue__illus svg{width:100%;height:auto;max-height:340px}
 .venue__illus img{width:100%;height:100%;object-fit:cover;display:block}
@@ -2296,11 +2298,14 @@ body.menu-open{overflow:hidden}
       <h2 class="section-title sec-hd__title"><em>Fontainebleau.</em> Miami Beach.</h2>
     </header>
     <div class="venue__grid">
-      <div class="venue__illus">
-        <picture>
-          <source srcset="images/fontainebleau.webp" type="image/webp">
-          <img src="images/fontainebleau.jpg" alt="Fontainebleau Miami Beach — aerial view of the resort, pool deck, and oceanfront" width="988" height="556" loading="lazy" decoding="async">
-        </picture>
+      <div class="venue__media">
+        <img class="venue__brand" src="images/fontainebleau-logo.webp" alt="Fontainebleau Miami Beach" loading="lazy" decoding="async">
+        <div class="venue__illus">
+          <picture>
+            <source srcset="images/fontainebleau.webp" type="image/webp">
+            <img src="images/fontainebleau.jpg" alt="Fontainebleau Miami Beach — aerial view of the resort, pool deck, and oceanfront" width="988" height="556" loading="lazy" decoding="async">
+          </picture>
+        </div>
       </div>
       <div class="venue__content">
         <div class="eyebrow" style="color:var(--accent-deep)">The venue, confirmed</div>
