@@ -599,13 +599,13 @@ body.menu-open{overflow:hidden}
 }
 
 /* TICKETS — tightened so the section fits one desktop viewport when navigated to via #tickets */
-.tickets{padding:.75rem 0 .65rem !important}
+.tickets{padding:.75rem 0 .35rem !important}
 .tickets .sec-hd{margin-bottom:.4rem;padding-top:.3rem;padding-bottom:.4rem}
 
 .tickets__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.8rem}
 
 /* Base phase-tier card */
-.tier{background:var(--paper-light);border:1px solid var(--ink);padding:.7rem .8rem;position:relative;display:flex;flex-direction:column;min-height:auto;transition:transform .3s,box-shadow .3s}
+.tier{background:var(--paper-light);border:1px solid var(--ink);padding:.55rem .8rem;position:relative;display:flex;flex-direction:column;min-height:auto;transition:transform .3s,box-shadow .3s}
 .tier:hover{transform:translateY(-4px);box-shadow:0 14px 40px -20px rgba(19,30,51,.3)}
 .tier::before{content:'';position:absolute;left:-1px;top:-1px;right:-1px;height:4px;background:var(--ink)}
 .tier--featured{background:var(--ink);color:var(--paper)}
@@ -721,15 +721,15 @@ body.menu-open{overflow:hidden}
 .tier__price{font-family:var(--fd);font-size:1.3rem;line-height:1;letter-spacing:-.02em}
 .tier__price-unit{font-family:var(--fm);font-size:.54rem;letter-spacing:.15em;text-transform:uppercase;color:var(--ink-soft)}
 .tier--featured .tier__price-unit{color:var(--paper-deep)}
-.tier__desc{font-family:var(--fd);font-style:italic;font-size:.76rem;line-height:1.28;margin-bottom:.4rem;color:var(--ink-soft)}
+.tier__desc{font-family:var(--fd);font-style:italic;font-size:.76rem;line-height:1.28;margin-bottom:.25rem;color:var(--ink-soft)}
 .tier--featured .tier__desc{color:var(--paper-deep)}
-.tier__list{list-style:none;margin-bottom:.5rem;flex:1}
-.tier__list li{display:flex;gap:.45rem;padding:.12rem 0;font-size:.7rem;line-height:1.25;border-bottom:1px solid var(--rule)}
+.tier__list{list-style:none;margin-bottom:.3rem;flex:1}
+.tier__list li{display:flex;gap:.45rem;padding:.07rem 0;font-size:.7rem;line-height:1.25;border-bottom:1px solid var(--rule)}
 .tier__list li:last-child{border-bottom:none}
 .tier--featured .tier__list li{border-bottom-color:rgba(244,236,224,.14)}
 .tier__list li::before{content:'·';font-family:var(--fm);color:var(--accent-deep);font-size:1rem;line-height:1}
 .tier--featured .tier__list li::before{color:var(--accent)}
-.tier .btn{padding:.5rem .8rem;font-size:.6rem}
+.tier .btn{padding:.4rem .8rem;font-size:.6rem}
 .tier--featured .btn{background:var(--accent);color:var(--ink);border-color:var(--accent)}
 .tier--featured .btn::before{background:var(--paper)}
 .tier--featured .btn:hover{color:var(--ink);border-color:var(--paper)}
@@ -757,7 +757,7 @@ body.menu-open{overflow:hidden}
   .tier--vipallaccess .tier__includes strong,.tier--allaccess .tier__includes strong{font-size:.68em}
   .tickets__trust{margin-top:1rem;font-size:.85rem;line-height:1.45}
 }
-.tickets__trust{margin:.4rem auto 0;max-width:760px;text-align:center;font-family:var(--fd);font-style:italic;font-size:.78rem;line-height:1.4;color:var(--ink-soft)}
+.tickets__trust{margin:.25rem auto 0;max-width:760px;text-align:center;font-family:var(--fd);font-style:italic;font-size:.74rem;line-height:1.35;color:var(--ink-soft)}
 
 
 /* SIDE EVENTS */
