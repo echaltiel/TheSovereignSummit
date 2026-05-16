@@ -222,8 +222,8 @@ body.menu-open{overflow:hidden}
 .hero__fact dt{font-family:var(--fm);font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-soft);margin:0}
 .hero__fact dd{font-family:var(--fd);font-size:clamp(1.25rem,1.35vw,1.4rem);line-height:1.3;margin:0}
 .hero__fact dd em{font-style:italic;color:var(--accent-deep)}
-.hero__fact-link{color:inherit;text-decoration:none;border-bottom:1px solid rgba(19,30,51,.7);padding-bottom:1px;transition:border-bottom-color .2s}
-.hero__fact-link:hover{border-bottom-color:var(--accent-deep)}
+.hero__fact-link{color:inherit;text-decoration:underline;text-decoration-color:rgba(19,30,51,.28);text-decoration-thickness:1px;text-underline-offset:3px;transition:text-decoration-color .2s}
+.hero__fact-link:hover{text-decoration-color:var(--accent-deep)}
 .hero__scroll{display:none}
 @media (max-width:860px){
   .hero{padding:.55rem 0 .75rem}
@@ -1637,7 +1637,7 @@ body.menu-open{overflow:hidden}
           </div>
           <div class="hero__fact">
             <dt>Spots</dt>
-            <dd><em>Limited to 400</em>. <a class="hero__fact-link" href="#tickets" style="text-decoration:underline;text-decoration-color:rgba(19,30,51,.28);text-decoration-thickness:1px;text-underline-offset:2px;border-bottom:none">Click here to secure your spot</a>.</dd>
+            <dd><em>Limited to 400</em>. <a class="hero__fact-link" href="#tickets">Click here to secure your spot</a>.</dd>
           </div>
         </dl>
       </div>
