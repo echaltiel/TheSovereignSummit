@@ -595,71 +595,146 @@ body.menu-open{overflow:hidden}
   .venue__detail-value{font-size:.78rem;line-height:1.25}
 }
 
-/* TICKETS */
+/* TICKETS — tightened so the section fits one desktop viewport when navigated to via #tickets */
 .tickets{padding:1.25rem 0 1.5rem !important}
-.tickets .sec-hd{margin-bottom:.85rem;padding-top:.75rem}
+.tickets .sec-hd{margin-bottom:.7rem;padding-top:.6rem;padding-bottom:.7rem}
 
-.tickets__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
-.tier{background:var(--paper-light);border:1px solid var(--ink);padding:.85rem .9rem .85rem;position:relative;display:flex;flex-direction:column;min-height:auto;transition:transform .3s,box-shadow .3s}
+.tickets__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.8rem}
+
+/* Base phase-tier card */
+.tier{background:var(--paper-light);border:1px solid var(--ink);padding:.7rem .8rem;position:relative;display:flex;flex-direction:column;min-height:auto;transition:transform .3s,box-shadow .3s}
 .tier:hover{transform:translateY(-4px);box-shadow:0 14px 40px -20px rgba(19,30,51,.3)}
 .tier::before{content:'';position:absolute;left:-1px;top:-1px;right:-1px;height:4px;background:var(--ink)}
 .tier--featured{background:var(--ink);color:var(--paper)}
 .tier--featured::before{background:var(--accent)}
 .tier--premium{border-color:var(--accent-deep)}
 .tier--premium::before{background:var(--accent-deep)}
-/* ALL ACCESS — full-width hero tier with deep teal + warm gold */
-.tier--allaccess{grid-column:1/-1;background:#0E4C5C;color:var(--paper-light);border-color:#0E4C5C;padding:1.35rem 1.6rem 1.25rem;margin-bottom:.5rem}
+
+/* ===== ALL ACCESS PAIR — VIP (left) + All Access (right) ===== */
+.tickets__allaccess-pair{
+  grid-column:1/-1;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:.8rem;
+  margin-bottom:.3rem;
+}
+
+/* Shared structure between the two hero tiles */
+.tier--vipallaccess,
+.tier--allaccess{
+  padding:.95rem 1.2rem .9rem;
+}
+.tier--vipallaccess .tier__name,
+.tier--allaccess .tier__name{
+  font-size:clamp(1.35rem,1.9vw,1.7rem);
+  margin-bottom:.08rem;line-height:1;
+}
+.tier--vipallaccess .tier__price,
+.tier--allaccess .tier__price{
+  font-size:clamp(1.55rem,2.2vw,1.9rem);
+}
+.tier--vipallaccess .tier__price-wrap,
+.tier--allaccess .tier__price-wrap{
+  border-bottom:none;padding-bottom:0;
+  margin-bottom:.5rem;
+  align-items:baseline;gap:.4rem;flex-wrap:wrap;
+}
+.tier--vipallaccess .tier__price-strike,
+.tier--allaccess .tier__price-strike{
+  font-family:var(--fd);font-size:.9rem;
+  text-decoration:line-through;
+  opacity:.55;margin-left:.15rem;
+}
+.tier--vipallaccess .tier__desc,
+.tier--allaccess .tier__desc{
+  font-size:.8rem;line-height:1.28;
+  margin-bottom:.55rem;font-style:italic;
+}
+.tier--vipallaccess .tier__includes,
+.tier--allaccess .tier__includes{
+  display:grid;grid-template-columns:1fr;
+  gap:.18rem;
+  list-style:none;margin:0 0 .65rem 0;padding:0;
+  flex:1;
+}
+.tier--vipallaccess .tier__includes li,
+.tier--allaccess .tier__includes li{
+  display:flex;align-items:baseline;gap:.45rem;
+  font-size:.76rem;line-height:1.3;
+  border:none;padding:0;
+}
+.tier--vipallaccess .tier__includes strong,
+.tier--allaccess .tier__includes strong{
+  font-weight:500;font-family:var(--fm);
+  font-size:.7em;letter-spacing:.06em;
+  margin-left:auto;padding-left:.4rem;white-space:nowrap;
+}
+
+/* All Access — teal + gold (existing colorway) */
+.tier--allaccess{background:#0E4C5C;color:var(--paper-light);border-color:#0E4C5C}
 .tier--allaccess::before{background:#D4A93C;height:6px}
 .tier--allaccess:hover{transform:translateY(-3px);box-shadow:0 16px 44px -22px rgba(14,76,92,.45)}
-.tier__allaccess-grid{display:grid;grid-template-columns:auto 1fr auto;gap:clamp(1.5rem,3vw,2.75rem);align-items:center}
-.tier__allaccess-left{display:flex;flex-direction:column;gap:.15rem}
-.tier__allaccess-mid{display:flex;flex-direction:column;gap:.7rem;min-width:0}
-.tier--allaccess .tier__eyebrow{color:#D4A93C;opacity:1;margin-bottom:.3rem;font-size:.66rem}
-.tier--allaccess .tier__name{font-size:clamp(1.85rem,3vw,2.5rem);margin-bottom:.15rem;line-height:1}
+.tier--allaccess .tier__eyebrow{color:#D4A93C;opacity:1;margin-bottom:.2rem;font-size:.6rem}
 .tier--allaccess .tier__name em{color:#D4A93C}
-.tier--allaccess .tier__price{font-size:clamp(2rem,3.2vw,2.5rem)}
-.tier--allaccess .tier__price-wrap{border-bottom:none;padding-bottom:0;margin-bottom:.05rem;align-items:baseline;gap:.45rem;flex-wrap:wrap}
-.tier--allaccess .tier__price-strike{font-family:var(--fd);font-size:1.05rem;color:var(--paper-deep);text-decoration:line-through;opacity:.55;margin-left:.15rem}
+.tier--allaccess .tier__price-strike{color:var(--paper-deep)}
 .tier--allaccess .tier__price-unit{color:var(--paper-deep)}
-.tier--allaccess .tier__desc{color:var(--paper);opacity:.92;font-size:.92rem;line-height:1.35;margin-bottom:0}
+.tier--allaccess .tier__desc{color:var(--paper);opacity:.92}
 .tier--allaccess .tier__desc em{color:#D4A93C;font-style:italic}
-.tier--allaccess .tier__includes{display:grid;grid-template-columns:repeat(2,1fr);gap:.25rem 1.1rem;list-style:none;margin:0;padding:0}
-.tier--allaccess .tier__includes li{display:flex;align-items:baseline;gap:.45rem;font-size:.85rem;line-height:1.3;border:none;padding:0;color:var(--paper)}
+.tier--allaccess .tier__includes li{color:var(--paper)}
 .tier--allaccess .tier__includes li::before{content:'·';color:#D4A93C;font-weight:600;font-family:var(--fm);font-size:1.1rem;line-height:1}
-.tier--allaccess .tier__includes strong{font-weight:500;color:#D4A93C;font-family:var(--fm);font-size:.72em;letter-spacing:.06em;margin-left:auto;padding-left:.4rem;white-space:nowrap}
-.tier--allaccess .btn{background:#D4A93C;color:#0E4C5C;border-color:#D4A93C;padding:1rem 1.5rem;font-size:.76rem;align-self:center;white-space:nowrap}
+.tier--allaccess .tier__includes strong{color:#D4A93C}
+.tier--allaccess .btn{background:#D4A93C;color:#0E4C5C;border-color:#D4A93C;padding:.7rem 1.05rem;font-size:.65rem;align-self:flex-start;white-space:nowrap}
 .tier--allaccess .btn::before{background:var(--paper-light)}
 .tier--allaccess .btn:hover{color:#0E4C5C;border-color:var(--paper-light)}
-.tier--allaccess .tier__ribbon{background:#D4A93C;color:#0E4C5C;font-size:.62rem;padding:.3rem .75rem}
-.tier__ribbon{position:absolute;top:-8px;right:1.25rem;background:var(--accent);color:var(--ink);font-family:var(--fm);font-size:.55rem;letter-spacing:.2em;text-transform:uppercase;padding:.22rem .6rem;font-weight:500}
-.tier__eyebrow{font-family:var(--fm);font-size:.58rem;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:.4rem}
+.tier--allaccess .tier__ribbon{background:#D4A93C;color:#0E4C5C;font-size:.58rem;padding:.26rem .6rem}
+
+/* VIP All Access — midnight ink + brighter gold (new premium colorway) */
+.tier--vipallaccess{background:#0A1224;color:var(--paper-light);border-color:#0A1224}
+.tier--vipallaccess::before{background:linear-gradient(90deg,#D4A93C 0%,#E8C46A 50%,#D4A93C 100%);height:6px}
+.tier--vipallaccess:hover{transform:translateY(-3px);box-shadow:0 16px 44px -22px rgba(10,18,36,.55)}
+.tier--vipallaccess .tier__eyebrow{color:#E8C46A;opacity:1;margin-bottom:.2rem;font-size:.6rem;letter-spacing:.24em}
+.tier--vipallaccess .tier__name em{color:#E8C46A}
+.tier--vipallaccess .tier__price-strike{color:var(--paper-deep)}
+.tier--vipallaccess .tier__price-unit{color:var(--paper-deep)}
+.tier--vipallaccess .tier__desc{color:var(--paper);opacity:.92}
+.tier--vipallaccess .tier__desc em{color:#E8C46A;font-style:italic}
+.tier--vipallaccess .tier__includes li{color:var(--paper)}
+.tier--vipallaccess .tier__includes li::before{content:'·';color:#E8C46A;font-weight:600;font-family:var(--fm);font-size:1.1rem;line-height:1}
+.tier--vipallaccess .tier__includes strong{color:#E8C46A}
+.tier--vipallaccess .btn{background:#E8C46A;color:#0A1224;border-color:#E8C46A;padding:.7rem 1.05rem;font-size:.65rem;align-self:flex-start;font-weight:500;white-space:nowrap}
+.tier--vipallaccess .btn::before{background:#F5E0A8}
+.tier--vipallaccess .btn:hover{color:#0A1224;border-color:#F5E0A8}
+.tier--vipallaccess .tier__ribbon{background:#E8C46A;color:#0A1224;font-size:.58rem;padding:.26rem .6rem;font-weight:500}
+
+/* Shared atoms */
+.tier__ribbon{position:absolute;top:-8px;right:1.1rem;background:var(--accent);color:var(--ink);font-family:var(--fm);font-size:.54rem;letter-spacing:.2em;text-transform:uppercase;padding:.2rem .55rem;font-weight:500}
+.tier__eyebrow{font-family:var(--fm);font-size:.54rem;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:.3rem}
 .tier--featured .tier__eyebrow{color:var(--accent)}
-.tier__name{font-family:var(--fd);font-size:clamp(1.2rem,1.9vw,1.6rem);line-height:1;letter-spacing:-.015em;margin-bottom:.3rem;font-weight:400}
+.tier__name{font-family:var(--fd);font-size:clamp(1.05rem,1.55vw,1.4rem);line-height:1;letter-spacing:-.015em;margin-bottom:.2rem;font-weight:400}
 .tier__name em{font-style:italic}
 .tier--featured .tier__name em{color:var(--accent)}
-.tier__price-wrap{display:flex;align-items:baseline;gap:.35rem;margin-bottom:.5rem;padding-bottom:.5rem;border-bottom:1px solid var(--rule)}
+.tier__price-wrap{display:flex;align-items:baseline;gap:.3rem;margin-bottom:.35rem;padding-bottom:.35rem;border-bottom:1px solid var(--rule)}
 .tier--featured .tier__price-wrap{border-bottom-color:rgba(244,236,224,.2)}
-.tier__price{font-family:var(--fd);font-size:1.5rem;line-height:1;letter-spacing:-.02em}
-.tier__price-unit{font-family:var(--fm);font-size:.58rem;letter-spacing:.15em;text-transform:uppercase;color:var(--ink-soft)}
+.tier__price{font-family:var(--fd);font-size:1.3rem;line-height:1;letter-spacing:-.02em}
+.tier__price-unit{font-family:var(--fm);font-size:.54rem;letter-spacing:.15em;text-transform:uppercase;color:var(--ink-soft)}
 .tier--featured .tier__price-unit{color:var(--paper-deep)}
-.tier__desc{font-family:var(--fd);font-style:italic;font-size:.82rem;line-height:1.3;margin-bottom:.55rem;color:var(--ink-soft)}
+.tier__desc{font-family:var(--fd);font-style:italic;font-size:.76rem;line-height:1.28;margin-bottom:.4rem;color:var(--ink-soft)}
 .tier--featured .tier__desc{color:var(--paper-deep)}
-.tier__list{list-style:none;margin-bottom:.65rem;flex:1}
-.tier__list li{display:flex;gap:.5rem;padding:.18rem 0;font-size:.74rem;line-height:1.25;border-bottom:1px solid var(--rule)}
+.tier__list{list-style:none;margin-bottom:.5rem;flex:1}
+.tier__list li{display:flex;gap:.45rem;padding:.12rem 0;font-size:.7rem;line-height:1.25;border-bottom:1px solid var(--rule)}
 .tier__list li:last-child{border-bottom:none}
 .tier--featured .tier__list li{border-bottom-color:rgba(244,236,224,.14)}
 .tier__list li::before{content:'·';font-family:var(--fm);color:var(--accent-deep);font-size:1rem;line-height:1}
 .tier--featured .tier__list li::before{color:var(--accent)}
-.tier .btn{padding:.6rem .9rem;font-size:.64rem}
+.tier .btn{padding:.5rem .8rem;font-size:.6rem}
 .tier--featured .btn{background:var(--accent);color:var(--ink);border-color:var(--accent)}
 .tier--featured .btn::before{background:var(--paper)}
 .tier--featured .btn:hover{color:var(--ink);border-color:var(--paper)}
-@media (max-width:1100px){.tier__allaccess-grid{grid-template-columns:auto 1fr;gap:1.25rem}.tier--allaccess .btn{grid-column:1/-1;justify-self:start;align-self:start}}
-@media (max-width:960px){.tickets__grid{grid-template-columns:1fr}.tier{min-height:auto}.tier__allaccess-grid{grid-template-columns:1fr;gap:.75rem}.tier--allaccess .tier__includes{grid-template-columns:1fr}}
+
+@media (max-width:960px){.tickets__grid{grid-template-columns:1fr}.tickets__allaccess-pair{grid-template-columns:1fr;gap:.8rem}.tier{min-height:auto}}
 @media (max-width:720px){
   .tickets{padding:1.25rem 0 1.75rem !important}
   .tickets .sec-hd{margin-bottom:.85rem}
-  
   .tickets__grid{gap:1rem}
   .tier{padding:1.1rem 1.1rem 1.1rem}
   .tier__ribbon{top:-8px;font-size:.55rem;padding:.22rem .55rem}
@@ -671,15 +746,15 @@ body.menu-open{overflow:hidden}
   .tier__list{margin-bottom:.9rem}
   .tier__list li{padding:.28rem 0;font-size:.82rem;line-height:1.3}
   .tier .btn{padding:.85rem 1rem;font-size:.7rem}
-  .tier--allaccess{padding:.95rem 1rem}
-  .tier--allaccess .tier__name{font-size:1.5rem}
-  .tier--allaccess .tier__price{font-size:1.7rem}
-  .tier--allaccess .tier__price-strike{font-size:.85rem}
-  .tier--allaccess .tier__includes li{font-size:.74rem}
-  .tier--allaccess .tier__includes strong{font-size:.68em}
+  .tier--vipallaccess,.tier--allaccess{padding:.95rem 1rem}
+  .tier--vipallaccess .tier__name,.tier--allaccess .tier__name{font-size:1.5rem}
+  .tier--vipallaccess .tier__price,.tier--allaccess .tier__price{font-size:1.7rem}
+  .tier--vipallaccess .tier__price-strike,.tier--allaccess .tier__price-strike{font-size:.85rem}
+  .tier--vipallaccess .tier__includes li,.tier--allaccess .tier__includes li{font-size:.78rem}
+  .tier--vipallaccess .tier__includes strong,.tier--allaccess .tier__includes strong{font-size:.68em}
   .tickets__trust{margin-top:1rem;font-size:.85rem;line-height:1.45}
 }
-.tickets__trust{margin:1.75rem auto 0;max-width:760px;text-align:center;font-family:var(--fd);font-style:italic;font-size:.92rem;line-height:1.55;color:var(--ink-soft)}
+.tickets__trust{margin:.9rem auto 0;max-width:760px;text-align:center;font-family:var(--fd);font-style:italic;font-size:.85rem;line-height:1.45;color:var(--ink-soft)}
 
 
 /* SIDE EVENTS */
@@ -2308,26 +2383,36 @@ body.menu-open{overflow:hidden}
       <h2 class="section-title sec-hd__title">Pick your <em>way in.</em></h2>
     </header>
     <div class="tickets__grid">
-      <article class="tier tier--allaccess">
-        <div class="tier__ribbon">Save $238</div>
-        <div class="tier__allaccess-grid">
-          <div class="tier__allaccess-left">
-            <div class="tier__eyebrow">All Access · Early Bird</div>
-            <h3 class="tier__name">All <em>Access</em></h3>
-            <div class="tier__price-wrap"><span class="tier__price">$995</span><span class="tier__price-unit">USD</span><span class="tier__price-strike">$1,233</span></div>
-          </div>
-          <div class="tier__allaccess-mid">
-            <p class="tier__desc"><em>Early Bird summit ticket</em> plus all four ticketed side events — bundled.</p>
-            <ul class="tier__includes">
-              <li>Welcome Dinner at Arkadia Day Club <strong>$295</strong></li>
-              <li>After Party at La Côte <strong>$195</strong></li>
-              <li>bitcoin++ Builder Day <strong>$149</strong></li>
-              <li>Biscayne Bay Boat Tour <strong>$99</strong></li>
-            </ul>
-          </div>
+      <div class="tickets__allaccess-pair">
+        <article class="tier tier--vipallaccess">
+          <div class="tier__ribbon">Limited · 25 seats</div>
+          <div class="tier__eyebrow">VIP All Access · Early Bird</div>
+          <h3 class="tier__name">VIP All <em>Access</em></h3>
+          <div class="tier__price-wrap"><span class="tier__price">$2,495</span><span class="tier__price-unit">USD</span><span class="tier__price-strike">$2,733</span></div>
+          <p class="tier__desc"><em>VIP summit experience</em> plus all four ticketed side events — bundled.</p>
+          <ul class="tier__includes">
+            <li>Reserved front-row seating <strong>VIP</strong></li>
+            <li>Speaker green room access <strong>VIP</strong></li>
+            <li>Private VIP reception <strong>VIP</strong></li>
+            <li>All four side events included <strong>$738</strong></li>
+          </ul>
+          <a href="#" class="btn">Reserve VIP All Access <span class="btn__arrow">→</span></a>
+        </article>
+        <article class="tier tier--allaccess">
+          <div class="tier__ribbon">Save $238</div>
+          <div class="tier__eyebrow">All Access · Early Bird</div>
+          <h3 class="tier__name">All <em>Access</em></h3>
+          <div class="tier__price-wrap"><span class="tier__price">$995</span><span class="tier__price-unit">USD</span><span class="tier__price-strike">$1,233</span></div>
+          <p class="tier__desc"><em>Early Bird summit ticket</em> plus all four ticketed side events — bundled.</p>
+          <ul class="tier__includes">
+            <li>Welcome Dinner at Arkadia Day Club <strong>$295</strong></li>
+            <li>After Party at La Côte <strong>$195</strong></li>
+            <li>bitcoin++ Builder Day <strong>$149</strong></li>
+            <li>Biscayne Bay Boat Tour <strong>$99</strong></li>
+          </ul>
           <a href="#" class="btn">Reserve All Access <span class="btn__arrow">→</span></a>
-        </div>
-      </article>
+        </article>
+      </div>
       <article class="tier tier--featured">
         <div class="tier__ribbon">Limited release</div>
         <div class="tier__eyebrow">Phase 01 · Early Bird</div>
