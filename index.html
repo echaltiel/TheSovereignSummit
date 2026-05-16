@@ -785,6 +785,23 @@ body.menu-open{overflow:hidden}
 .side-event__sponsor-arrow{transition:transform .25s ease;font-size:.7rem;letter-spacing:0}
 .side-event__sponsor:hover .side-event__sponsor-arrow{transform:translateX(3px)}
 .side-events__grid > .side-event:nth-child(odd):last-child{grid-column:1/-1}
+
+/* HRF AI for Individual Rights — pink event tile (cream text on saturated magenta) */
+.side-event--hrf{background:#DF068B;color:var(--paper-light)}
+.side-event--hrf:hover{background:#C70579}
+.side-event--hrf:hover .side-event__title{color:var(--paper-light)}
+.side-event--hrf .side-event__date{color:var(--paper-light)}
+.side-event--hrf .side-event__time{color:var(--paper-deep);opacity:.85}
+.side-event--hrf .side-event__title{color:var(--paper-light)}
+.side-event--hrf .side-event__venue{background:rgba(10,18,36,.92);border-left-color:var(--paper-light);color:var(--paper-light)}
+.side-event--hrf .side-event__venue-label{color:var(--paper-deep);opacity:.85}
+.side-event--hrf .side-event__venue-name{color:var(--paper-light);font-style:italic}
+.side-event--hrf .side-event__desc{color:var(--paper-light);opacity:.95}
+.side-event--hrf .side-event__meta{color:var(--paper-deep);border-top-color:rgba(244,236,224,.28)}
+.side-event--hrf .side-event__sponsor{border-color:rgba(244,236,224,.55);color:var(--paper-light);border-style:solid}
+.side-event--hrf .side-event__sponsor-label{color:var(--paper-deep);opacity:.9}
+.side-event--hrf .side-event__sponsor:hover{background:var(--ink);border-color:var(--ink);color:var(--paper)}
+.side-event--hrf .side-event__sponsor:hover .side-event__sponsor-label{color:#DF068B;opacity:1}
 @media (max-width:720px){.side-events__grid{grid-template-columns:1fr}}
 @media (max-width:520px){
   .side-events{padding:2rem 0 1.5rem !important}
@@ -2036,7 +2053,7 @@ body.menu-open{overflow:hidden}
         <p class="side-event__desc">Drinks, dinner, and unhurried conversation poolside at Fontainebleau's Mediterranean restaurant. The day doesn't end at 5 — the most useful conversations rarely happen in the room.</p>
         <div class="side-event__meta">$195 · Separate ticket</div>
       </article>
-      <article class="side-event">
+      <article class="side-event side-event--hrf">
         <a class="side-event__link" href="#" aria-label="AI for Individual Rights Day — more info"></a>
         <div class="side-event__top">
           <div class="side-event__when">
