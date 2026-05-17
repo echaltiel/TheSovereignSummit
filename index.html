@@ -686,6 +686,36 @@ body.menu-open{overflow:hidden}
   font-size:.78rem;line-height:1.22;
   margin-bottom:.3rem;font-style:italic;
 }
+.tier--vipallaccess .tier__desc-bullets,
+.tier--allaccess .tier__desc-bullets{
+  list-style:none;
+  margin:0 0 .4rem 0;
+  padding:0;
+  display:flex;
+  flex-direction:column;
+  gap:.18rem;
+}
+.tier--vipallaccess .tier__desc-bullets li,
+.tier--allaccess .tier__desc-bullets li{
+  position:relative;
+  padding-left:.85rem;
+  font-family:var(--fd);
+  font-size:.78rem;
+  line-height:1.24;
+  color:var(--paper-light);
+  font-style:italic;
+}
+.tier--vipallaccess .tier__desc-bullets li::before,
+.tier--allaccess .tier__desc-bullets li::before{
+  content:'•';
+  position:absolute;
+  left:.05rem;
+  top:0;
+  color:var(--paper-light);
+  font-style:normal;
+  font-family:var(--fm);
+  line-height:1.24;
+}
 .tier--vipallaccess .tier__includes,
 .tier--allaccess .tier__includes{
   display:grid;grid-template-columns:1fr;
@@ -2498,7 +2528,11 @@ body.menu-open{overflow:hidden}
           <div class="tier__eyebrow">VIP All Access Bundle</div>
           <h3 class="tier__name"><em>VIP</em> All Access <em>Bundle</em></h3>
           <div class="tier__price-wrap"><span class="tier__price">$2,495</span><span class="tier__price-unit">USD</span></div>
-          <p class="tier__desc"><em>VIP summit experience</em> + all 4 ticketed side events bundled.<br>The <em>Welcome Dinner, After Party + AI for Individual Rights Day</em> are not sold separately. A bundle is the only way to attend.<br><em>Limited to 100 VIPs.</em></p>
+          <ul class="tier__desc-bullets">
+            <li>VIP summit experience + all 4 side events bundled.</li>
+            <li>The Welcome Dinner, After Party are not sold separately, a bundle is the only way to attend.</li>
+            <li>Limited to 100 VIPs.</li>
+          </ul>
           <ul class="tier__includes">
             <li>Reserved front-row seating: summit + bundle-only AI for Individual Rights Day</li>
             <li>Speaker green-room access</li>
@@ -2513,7 +2547,11 @@ body.menu-open{overflow:hidden}
           <div class="tier__eyebrow">All Access Bundle</div>
           <h3 class="tier__name">All Access <em>Bundle</em></h3>
           <div class="tier__price-wrap"><span class="tier__price">$995</span><span class="tier__price-unit">USD</span><span class="tier__price-strike">$1,233</span></div>
-          <p class="tier__desc">Summit Early Bird + all 4 ticketed side events bundled.<br>The <em>Welcome Dinner, After Party + AI for Individual Rights Day</em> are not sold separately. A bundle is the only way to attend.<br><em>Just 100 bundles · Ends September 30.</em></p>
+          <ul class="tier__desc-bullets">
+            <li>Summit experience + all 4 side events bundled.</li>
+            <li>The Welcome Dinner, After Party are not sold separately, a bundle is the only way to attend.</li>
+            <li>Limited to 100 spots.</li>
+          </ul>
           <ul class="tier__includes">
             <li>Welcome Dinner at Arkadia Day Club <strong>$295</strong></li>
             <li>After Party at La Côte <strong>$195</strong></li>
