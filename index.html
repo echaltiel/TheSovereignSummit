@@ -619,14 +619,35 @@ body.menu-open{overflow:hidden}
 
 /* Coming Soon state — phases that haven't activated yet. Visually muted and non-clickable.
    To activate: remove `tier--coming-soon` from the article tag. */
-.tier--coming-soon{
-  opacity:.5;
-  filter:grayscale(.35);
+.tier.tier--coming-soon{
+  opacity:.42;
+  filter:grayscale(.5);
+}
+.tier.tier--coming-soon:hover{
+  transform:none;
+  box-shadow:none;
 }
 .tier--coming-soon .btn,
 .tier--coming-soon a{
   pointer-events:none;
   cursor:not-allowed;
+}
+.tier--coming-soon::after{
+  content:'Coming soon';
+  position:absolute;
+  top:.55rem;
+  right:.55rem;
+  font-family:var(--fm);
+  font-size:.5rem;
+  letter-spacing:.2em;
+  text-transform:uppercase;
+  color:var(--ink);
+  background:rgba(244,236,224,.85);
+  padding:.22rem .5rem;
+  border:1px solid var(--ink-soft);
+  pointer-events:none;
+  z-index:3;
+  font-weight:500;
 }
 
 /* ===== ALL ACCESS PAIR — VIP (left) + All Access (right) ===== */
