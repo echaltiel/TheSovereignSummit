@@ -604,7 +604,7 @@ body.menu-open{overflow:hidden}
 
 /* TICKETS — tightened so the section fits one desktop viewport when navigated to via #tickets */
 .tickets{padding:.3rem 0 .35rem !important}
-.tickets .sec-hd{margin-bottom:.4rem;padding-top:.3rem;padding-bottom:.4rem}
+.tickets .sec-hd{margin-bottom:.25rem;padding-top:.15rem;padding-bottom:.2rem}
 
 .tickets__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.8rem}
 
@@ -634,30 +634,31 @@ body.menu-open{overflow:hidden}
   column-gap:.8rem;
   row-gap:.6rem;
   border:1px solid var(--rule-str);
-  padding:.55rem .55rem .55rem;
+  padding:.4rem .55rem .45rem;
   position:relative;
 }
 .tickets__phases-label{
   position:absolute;
-  top:-.55rem;
+  top:-.65rem;
   left:50%;
   transform:translateX(-50%);
-  background:var(--paper);
-  padding:0 .85rem;
+  background:var(--ink);
+  color:var(--paper-light);
+  padding:.36rem 1rem;
   font-family:var(--fm);
-  font-size:.6rem;
+  font-size:.62rem;
   letter-spacing:.22em;
   text-transform:uppercase;
-  color:var(--ink);
   font-weight:500;
   white-space:nowrap;
   z-index:2;
+  box-shadow:0 4px 14px -8px rgba(19,30,51,.35);
 }
 
 /* Shared structure between the two hero tiles */
 .tier--vipallaccess,
 .tier--allaccess{
-  padding:.7rem 1.1rem .65rem;
+  padding:.55rem 1.1rem .5rem;
 }
 .tier--vipallaccess .tier__name,
 .tier--allaccess .tier__name{
@@ -671,7 +672,7 @@ body.menu-open{overflow:hidden}
 .tier--vipallaccess .tier__price-wrap,
 .tier--allaccess .tier__price-wrap{
   border-bottom:none;padding-bottom:0;
-  margin-bottom:.35rem;
+  margin-bottom:.25rem;
   align-items:baseline;gap:.4rem;flex-wrap:wrap;
 }
 .tier--vipallaccess .tier__price-strike,
@@ -682,20 +683,20 @@ body.menu-open{overflow:hidden}
 }
 .tier--vipallaccess .tier__desc,
 .tier--allaccess .tier__desc{
-  font-size:.78rem;line-height:1.25;
-  margin-bottom:.4rem;font-style:italic;
+  font-size:.78rem;line-height:1.22;
+  margin-bottom:.3rem;font-style:italic;
 }
 .tier--vipallaccess .tier__includes,
 .tier--allaccess .tier__includes{
   display:grid;grid-template-columns:1fr;
-  gap:.12rem;
-  list-style:none;margin:0 0 .45rem 0;padding:0;
+  gap:.08rem;
+  list-style:none;margin:0 0 .35rem 0;padding:0;
   flex:1;
 }
 .tier--vipallaccess .tier__includes li,
 .tier--allaccess .tier__includes li{
   display:flex;align-items:baseline;gap:.45rem;
-  font-size:.74rem;line-height:1.28;
+  font-size:.74rem;line-height:1.24;
   border:none;padding:0;
 }
 .tier--vipallaccess .tier__includes strong,
