@@ -603,7 +603,7 @@ body.menu-open{overflow:hidden}
 }
 
 /* TICKETS — tightened so the section fits one desktop viewport when navigated to via #tickets */
-.tickets{padding:.75rem 0 .35rem !important}
+.tickets{padding:.3rem 0 .35rem !important}
 .tickets .sec-hd{margin-bottom:.4rem;padding-top:.3rem;padding-bottom:.4rem}
 
 .tickets__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.8rem}
@@ -623,7 +623,35 @@ body.menu-open{overflow:hidden}
   display:grid;
   grid-template-columns:1fr 1fr;
   gap:.8rem;
-  margin-bottom:.15rem;
+  margin-bottom:0;
+}
+
+/* ===== PHASE GROUP — fieldset-style frame around the 3 single-day phase tickets ===== */
+.tickets__phases{
+  grid-column:1/-1;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  column-gap:.8rem;
+  row-gap:.6rem;
+  border:1px solid var(--rule-str);
+  padding:.55rem .55rem .55rem;
+  position:relative;
+}
+.tickets__phases-label{
+  position:absolute;
+  top:-.55rem;
+  left:50%;
+  transform:translateX(-50%);
+  background:var(--paper);
+  padding:0 .85rem;
+  font-family:var(--fm);
+  font-size:.6rem;
+  letter-spacing:.22em;
+  text-transform:uppercase;
+  color:var(--ink);
+  font-weight:500;
+  white-space:nowrap;
+  z-index:2;
 }
 
 /* Shared structure between the two hero tiles */
@@ -738,11 +766,13 @@ body.menu-open{overflow:hidden}
 .tier--featured .btn::before{background:var(--paper)}
 .tier--featured .btn:hover{color:var(--ink);border-color:var(--paper)}
 
-@media (max-width:960px){.tickets__grid{grid-template-columns:1fr}.tickets__allaccess-pair{grid-template-columns:1fr;gap:.8rem}.tier{min-height:auto}}
+@media (max-width:960px){.tickets__grid{grid-template-columns:1fr}.tickets__allaccess-pair{grid-template-columns:1fr;gap:.8rem}.tickets__phases{grid-template-columns:1fr;row-gap:.85rem}.tier{min-height:auto}}
 @media (max-width:720px){
   .tickets{padding:1.25rem 0 1.75rem !important}
   .tickets .sec-hd{margin-bottom:.85rem}
   .tickets__grid{gap:1rem}
+  .tickets__phases{padding:.7rem .65rem .65rem;row-gap:1rem}
+  .tickets__phases-label{font-size:.55rem;letter-spacing:.18em;padding:0 .65rem;top:-.5rem}
   .tier{padding:1.1rem 1.1rem 1.1rem}
   .tier__ribbon{top:-8px;font-size:.55rem;padding:.22rem .55rem}
   .tier__eyebrow{margin-bottom:.55rem;font-size:.6rem}
@@ -2492,7 +2522,9 @@ body.menu-open{overflow:hidden}
           <a href="#" class="btn">Reserve All Access Bundle <span class="btn__arrow">→</span></a>
         </article>
       </div>
-      <article class="tier tier--featured">
+      <div class="tickets__phases">
+        <div class="tickets__phases-label">Only 200 spots · split across 3 phases</div>
+        <article class="tier tier--featured">
         <div class="tier__ribbon">Ends September 30 · Save $200</div>
         <div class="tier__eyebrow">Phase 01 · Early Bird</div>
         <h3 class="tier__name">Early <em>Bird</em></h3>
@@ -2532,6 +2564,7 @@ body.menu-open{overflow:hidden}
         </ul>
         <a href="#" class="btn">Reserve Final Release <span class="btn__arrow">→</span></a>
       </article>
+      </div>
     </div>
     <p class="tickets__trust">Same seat, same program, same Friday — only the price changes. Full refund through December 1, 2026 · transfers honored until January 28, 2027.</p>
   </div>
