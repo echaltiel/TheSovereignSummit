@@ -617,6 +617,18 @@ body.menu-open{overflow:hidden}
 .tier--premium{border-color:var(--accent-deep)}
 .tier--premium::before{background:var(--accent-deep)}
 
+/* Coming Soon state — phases that haven't activated yet. Visually muted and non-clickable.
+   To activate: remove `tier--coming-soon` from the article tag. */
+.tier--coming-soon{
+  opacity:.5;
+  filter:grayscale(.35);
+}
+.tier--coming-soon .btn,
+.tier--coming-soon a{
+  pointer-events:none;
+  cursor:not-allowed;
+}
+
 /* ===== ALL ACCESS PAIR — VIP (left) + All Access (right) ===== */
 .tickets__allaccess-pair{
   grid-column:1/-1;
@@ -2564,7 +2576,7 @@ body.menu-open{overflow:hidden}
         </ul>
         <a href="#" class="btn">Reserve Early Bird <span class="btn__arrow">→</span></a>
       </article>
-      <article class="tier">
+      <article class="tier tier--coming-soon">
         <div class="tier__eyebrow">Phase 02 · Standard</div>
         <h3 class="tier__name">Standard</h3>
         <div class="tier__price-wrap"><span class="tier__price">$695</span><span class="tier__price-unit">USD</span></div>
@@ -2577,7 +2589,7 @@ body.menu-open{overflow:hidden}
         </ul>
         <a href="#" class="btn">Reserve Standard <span class="btn__arrow">→</span></a>
       </article>
-      <article class="tier tier--premium">
+      <article class="tier tier--premium tier--coming-soon">
         <div class="tier__eyebrow">Phase 03 · Final Release</div>
         <h3 class="tier__name">Final <em>Release</em></h3>
         <div class="tier__price-wrap"><span class="tier__price">$995</span><span class="tier__price-unit">USD</span></div>
