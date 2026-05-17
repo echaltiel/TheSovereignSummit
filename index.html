@@ -781,6 +781,21 @@ body.menu-open{overflow:hidden}
 .side-event__venue{display:inline-flex;align-items:baseline;gap:.45rem;font-family:var(--fd);font-size:.9rem;color:var(--ink);padding:.2rem .5rem;background:var(--paper-deep);border-left:2px solid var(--accent-deep);align-self:flex-start;line-height:1.2}
 .side-event__venue-label{font-family:var(--fm);font-size:.55rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-soft)}
 .side-event__venue-name{font-style:italic;color:var(--accent-deep);font-weight:400}
+
+/* Bundle-exclusive pill — for Welcome Dinner + After Party tiles. Gold gradient echoes the VIP/All Access admission tile ribbons. */
+.side-event__exclusive{
+  display:inline-flex;
+  align-self:flex-start;
+  font-family:var(--fm);
+  font-size:.55rem;
+  letter-spacing:.22em;
+  text-transform:uppercase;
+  color:#0A1224;
+  background:linear-gradient(90deg,#D4A93C 0%,#E8C46A 50%,#D4A93C 100%);
+  padding:.32rem .6rem;
+  font-weight:600;
+  line-height:1;
+}
 .side-event__desc{font-family:var(--fd);font-size:.82rem;line-height:1.3;color:var(--ink-soft);flex:1;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;margin:0}
 .side-event__meta{font-family:var(--fm);font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-soft);padding-top:.35rem;border-top:1px solid var(--rule)}
 .side-event__meta strong{color:var(--accent-deep);font-weight:inherit}
@@ -2054,9 +2069,10 @@ body.menu-open{overflow:hidden}
           <a class="side-event__sponsor" href="https://nydig.com" target="_blank" rel="noopener"><span class="side-event__sponsor-label">Presented by</span> NYDIG <span class="side-event__sponsor-arrow">→</span></a>
         </div>
         <h3 class="side-event__title">Welcome <em>Dinner</em></h3>
+        <div class="side-event__exclusive">All Access Only</div>
         <div class="side-event__venue"><span class="side-event__venue-name">Arkadia Day Club</span><span class="side-event__venue-label">inside Fontainebleau</span></div>
         <p class="side-event__desc">The night before, with Fontainebleau's day club privately reserved for the evening. Speakers, partners, and a small group of attendees gather for the first conversations of the week.</p>
-        <div class="side-event__meta"><strong>All Access only</strong> · $295 value · 200 seats</div>
+        <div class="side-event__meta">$295 value · 200 seats</div>
       </article>
       <article class="side-event">
         <a class="side-event__link" href="#" aria-label="After Party — more info"></a>
@@ -2068,9 +2084,10 @@ body.menu-open{overflow:hidden}
           <a class="side-event__sponsor" href="https://www.bitrefill.com" target="_blank" rel="noopener"><span class="side-event__sponsor-label">Presented by</span> Bitrefill <span class="side-event__sponsor-arrow">→</span></a>
         </div>
         <h3 class="side-event__title">After <em>Party</em></h3>
+        <div class="side-event__exclusive">All Access Only</div>
         <div class="side-event__venue"><span class="side-event__venue-name">La Côte</span><span class="side-event__venue-label">inside Fontainebleau</span></div>
         <p class="side-event__desc">Drinks, dinner, and unhurried conversation poolside at Fontainebleau's Mediterranean restaurant. The day doesn't end at 5 — the most useful conversations rarely happen in the room.</p>
-        <div class="side-event__meta"><strong>All Access only</strong> · $195 value · 200 seats</div>
+        <div class="side-event__meta">$195 value · 200 seats</div>
       </article>
       <article class="side-event side-event--hrf">
         <a class="side-event__link" href="#" aria-label="AI for Individual Rights Day — more info"></a>
@@ -2437,8 +2454,8 @@ body.menu-open{overflow:hidden}
       <div class="tickets__allaccess-pair">
         <article class="tier tier--vipallaccess">
           <div class="tier__ribbon">Limited · 100 spots</div>
-          <div class="tier__eyebrow">VIP All Access</div>
-          <h3 class="tier__name"><strong>VIP</strong> All Access</h3>
+          <div class="tier__eyebrow">VIP All Access Bundle</div>
+          <h3 class="tier__name"><em>VIP</em> All Access Bundle</h3>
           <div class="tier__price-wrap"><span class="tier__price">$2,495</span><span class="tier__price-unit">USD</span></div>
           <p class="tier__desc"><em>VIP summit experience</em> plus all four ticketed side events — bundled.</p>
           <ul class="tier__includes">
@@ -2448,12 +2465,12 @@ body.menu-open{overflow:hidden}
             <li>Your own VIP-only Biscayne Bay Boat Tour</li>
             <li>All four ticketed side events included</li>
           </ul>
-          <a href="#" class="btn">Reserve VIP All Access <span class="btn__arrow">→</span></a>
+          <a href="#" class="btn">Reserve VIP All Access Bundle <span class="btn__arrow">→</span></a>
         </article>
         <article class="tier tier--allaccess">
-          <div class="tier__ribbon">Ends Sept 30 · 100 spots</div>
-          <div class="tier__eyebrow">All Access · Early Bird</div>
-          <h3 class="tier__name">All Access <em>Early Bird</em></h3>
+          <div class="tier__ribbon">Limited · 100 spots</div>
+          <div class="tier__eyebrow">All Access Bundle</div>
+          <h3 class="tier__name">All Access <em>Bundle</em></h3>
           <div class="tier__price-wrap"><span class="tier__price">$995</span><span class="tier__price-unit">USD</span><span class="tier__price-strike">$1,233</span></div>
           <p class="tier__desc">Summit Early Bird + all 4 ticketed side events bundled.<br><em>The only path besides VIP</em> to the Welcome Dinner + After Party.<br><em>Just 100 bundles · Ends September 30.</em></p>
           <ul class="tier__includes">
@@ -2462,7 +2479,7 @@ body.menu-open{overflow:hidden}
             <li>AI for Individual Rights Day <strong>$149</strong></li>
             <li>Biscayne Bay Boat Tour <strong>$99</strong></li>
           </ul>
-          <a href="#" class="btn">Reserve All Access <span class="btn__arrow">→</span></a>
+          <a href="#" class="btn">Reserve All Access Bundle <span class="btn__arrow">→</span></a>
         </article>
       </div>
       <article class="tier tier--featured">
