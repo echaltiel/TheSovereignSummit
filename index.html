@@ -742,6 +742,83 @@ body.menu-open{overflow:hidden}
   width:100%;
 }
 
+/* === VIP Admission solo tile — centered, premium layout === */
+.tickets__vip-solo .tier--vipallaccess{
+  align-items:center;
+  text-align:center;
+  padding:2rem 2rem 1.75rem;
+}
+.tickets__vip-solo .tier--vipallaccess .tier__eyebrow{
+  margin-bottom:.4rem;
+}
+.tickets__vip-solo .tier--vipallaccess .tier__name{
+  font-size:clamp(2rem, 3.5vw, 2.6rem);
+  margin:.1rem 0 .4rem;
+}
+.tickets__vip-solo .tier--vipallaccess .tier__price-wrap{
+  display:flex;
+  justify-content:center;
+  align-items:baseline;
+  gap:.4rem;
+  margin:.2rem 0 1.25rem;
+  border-bottom:none;
+  padding:0;
+}
+.tickets__vip-solo .tier--vipallaccess .tier__price{
+  font-size:clamp(2.5rem, 4.5vw, 3.4rem);
+}
+.tickets__vip-solo .tier--vipallaccess .tier__desc-bullets{
+  max-width:680px;
+  margin:.25rem auto 1.5rem;
+  align-items:center;
+  text-align:center;
+}
+/* Subtle gold divider between description and includes */
+.tickets__vip-solo .tier__vip-divider{
+  width:60px;
+  height:1px;
+  background:linear-gradient(90deg, transparent, #E8C46A, transparent);
+  opacity:.6;
+  margin:.25rem auto 1.25rem;
+  border:none;
+}
+.tickets__vip-solo .tier__vip-includes-label{
+  font-family:var(--fm);
+  font-size:.6rem;
+  letter-spacing:.24em;
+  text-transform:uppercase;
+  color:#E8C46A;
+  margin:0 auto .9rem;
+  opacity:.9;
+}
+.tickets__vip-solo .tier--vipallaccess .tier__includes{
+  display:grid;
+  grid-template-columns:repeat(2, minmax(0, 1fr));
+  gap:.55rem 3rem;
+  max-width:880px;
+  margin:.25rem auto 1.5rem;
+  padding:0 .5rem;
+}
+.tickets__vip-solo .tier--vipallaccess .tier__includes li{
+  text-align:left;
+  font-size:.82rem;
+  line-height:1.3;
+}
+.tickets__vip-solo .tier--vipallaccess .btn{
+  align-self:center;
+  margin:.5rem auto 0;
+  padding-left:2.5rem;
+  padding-right:2.5rem;
+}
+@media (max-width:720px){
+  .tickets__vip-solo .tier--vipallaccess{padding:1.5rem 1.25rem 1.5rem}
+  .tickets__vip-solo .tier--vipallaccess .tier__includes{
+    grid-template-columns:1fr;
+    gap:.4rem;
+    padding:0;
+  }
+}
+
 /* ===== PHASE GROUP — fieldset-style frame around the 3 single-day phase tickets ===== */
 .tickets__phases{
   grid-column:1/-1;
@@ -750,7 +827,7 @@ body.menu-open{overflow:hidden}
   column-gap:.8rem;
   row-gap:.6rem;
   border:1px solid var(--rule-str);
-  padding:1.15rem .55rem .3rem;
+  padding:2rem .55rem .3rem;
   position:relative;
   margin-top:1.5rem;
 }
@@ -2261,7 +2338,7 @@ body.menu-open{overflow:hidden}
     </header>
     <div class="side-events__grid">
       <article class="side-event side-event--silver">
-        <a class="side-event__link" href="#" aria-label="Bitcoin Fundamentals — more info"></a>
+        <a class="side-event__link" href="https://luma.com/n6jb46op" target="_blank" rel="noopener" aria-label="Bitcoin Fundamentals — RSVP on Luma"></a>
         <div class="side-event__top">
           <div class="side-event__when">
             <div class="side-event__date">Thu · Feb 4</div>
@@ -2665,6 +2742,8 @@ body.menu-open{overflow:hidden}
             <li>The Welcome Dinner and After Party are VIP-only — there is no other way in.</li>
             <li>Limited to 200 VIPs.</li>
           </ul>
+          <hr class="tier__vip-divider">
+          <div class="tier__vip-includes-label">What's Included</div>
           <ul class="tier__includes">
             <li>Both days of the summit · reserved front-row seating</li>
             <li>Speaker green-room access</li>
