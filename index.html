@@ -1059,19 +1059,31 @@ body.menu-open{overflow:hidden}
 }
 
 /* GA day-grid: bordered, clickable, centered boxes — matches VIP aesthetic */
+.tickets__phases .tier__day-grid--3col{
+  gap:.4rem .4rem;
+}
 .tickets__phases .tier__day-label{
   justify-content:center;
   border-bottom:none;
   padding-bottom:0;
-  margin-bottom:.4rem;
+  margin-bottom:.35rem;
+  gap:.3rem;
+}
+.tickets__phases .tier__day-name{
+  font-size:.78rem;
+}
+.tickets__phases .tier__day-sub{
+  font-size:.46rem;
+  letter-spacing:.16em;
 }
 .tickets__phases .tier__day-list{
-  gap:.35rem;
+  gap:.3rem;
 }
 .tickets__phases .tier__day-list li{
   list-style:none;
   padding:0;
   margin:0;
+  font-size:.7rem;
 }
 .tickets__phases .tier__day-list li > a{
   display:flex;
@@ -1079,15 +1091,21 @@ body.menu-open{overflow:hidden}
   align-items:center;
   justify-content:center;
   text-align:center;
-  gap:.18rem;
-  padding:.5rem .4rem;
+  gap:.12rem;
+  padding:.4rem .3rem;
   border:1px solid;
   border-radius:1px;
-  min-height:50px;
+  min-height:46px;
   text-decoration:none;
   color:inherit;
   transition:background .2s ease,border-color .2s ease,transform .2s ease;
   cursor:pointer;
+}
+.tickets__phases .tier__day-list .tier__day-detail{
+  font-size:.92em;
+}
+.tickets__phases .tier__day-list .tier__day-link{
+  font-size:.92em;
 }
 .tickets__phases .tier__day-list .tier__day-detail::before{
   display:none;
@@ -1105,7 +1123,7 @@ body.menu-open{overflow:hidden}
   outline:2px solid var(--accent);
   outline-offset:2px;
 }
-/* Phase 02 / 03 (coming-soon, cream background) — grey borders, grey hover */
+/* Phase 02 / 03 (coming-soon, cream background) — grey borders, grey hover, bronze link */
 .tickets__phases .tier--coming-soon .tier__day-list li > a{
   border-color:rgba(122,122,122,.32);
 }
@@ -1117,6 +1135,9 @@ body.menu-open{overflow:hidden}
 .tickets__phases .tier--coming-soon .tier__day-list li > a:focus-visible{
   outline:2px solid #7A7A7A;
   outline-offset:2px;
+}
+.tickets__phases .tier--coming-soon .tier__day-list .tier__day-link{
+  color:var(--accent-deep);
 }
 
 /* Shared structure between the two hero tiles */
@@ -3053,7 +3074,13 @@ body.menu-open{overflow:hidden}
         <div class="tier__eyebrow">Phase 01 · Early Bird</div>
         <h3 class="tier__name"><em>Early Bird</em> General Admission</h3>
         <div class="tier__price-wrap"><span class="tier__price">$595</span><span class="tier__price-unit">USD</span></div>
-        <div class="tier__day-grid tier__day-grid--2col">
+        <div class="tier__day-grid tier__day-grid--3col">
+          <div class="tier__day">
+            <div class="tier__day-label"><span class="tier__day-name">Thursday</span><span class="tier__day-sub">Feb 4</span></div>
+            <ul class="tier__day-list">
+              <li><a href="https://luma.com/n6jb46op" target="_blank" rel="noopener"><strong>Bitcoin Fundamentals</strong><span class="tier__day-link">Sign Up Here</span></a></li>
+            </ul>
+          </div>
           <div class="tier__day">
             <div class="tier__day-label"><span class="tier__day-name">Friday</span><span class="tier__day-sub">Day 1</span></div>
             <ul class="tier__day-list">
@@ -3068,14 +3095,20 @@ body.menu-open{overflow:hidden}
             </ul>
           </div>
         </div>
-        <p class="tier__perk-footer">+ <strong>Bitcoin Fundamentals</strong> (Thu eve) · Breakfast &amp; Lunch · Recorded sessions · <a href="https://www.fontainebleau.com/miamibeach/" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;text-underline-offset:2px">Room block at Fontainebleau</a></p>
+        <p class="tier__perk-footer">+ Breakfast &amp; Lunch (both days) · Recorded sessions · <a href="https://www.fontainebleau.com/miamibeach/" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;text-underline-offset:2px">Room block at Fontainebleau</a></p>
         <a href="https://pay.zaprite.com/pl_wIAImtY5wz" target="_blank" rel="noopener" class="btn">Lock In Early Bird <span class="btn__arrow">→</span></a>
       </article>
       <article class="tier tier--coming-soon">
         <div class="tier__eyebrow">Phase 02 · Standard</div>
         <h3 class="tier__name"><em>General Admission</em></h3>
         <div class="tier__price-wrap"><span class="tier__price">$795</span><span class="tier__price-unit">USD</span></div>
-        <div class="tier__day-grid tier__day-grid--2col">
+        <div class="tier__day-grid tier__day-grid--3col">
+          <div class="tier__day">
+            <div class="tier__day-label"><span class="tier__day-name">Thursday</span><span class="tier__day-sub">Feb 4</span></div>
+            <ul class="tier__day-list">
+              <li><a href="https://luma.com/n6jb46op" target="_blank" rel="noopener"><strong>Bitcoin Fundamentals</strong><span class="tier__day-link">Sign Up Here</span></a></li>
+            </ul>
+          </div>
           <div class="tier__day">
             <div class="tier__day-label"><span class="tier__day-name">Friday</span><span class="tier__day-sub">Day 1</span></div>
             <ul class="tier__day-list">
@@ -3090,14 +3123,20 @@ body.menu-open{overflow:hidden}
             </ul>
           </div>
         </div>
-        <p class="tier__perk-footer">+ <strong>Bitcoin Fundamentals</strong> (Thu eve) · Breakfast &amp; Lunch · Recorded sessions · <a href="https://www.fontainebleau.com/miamibeach/" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;text-underline-offset:2px">Room block at Fontainebleau</a></p>
+        <p class="tier__perk-footer">+ Breakfast &amp; Lunch (both days) · Recorded sessions · <a href="https://www.fontainebleau.com/miamibeach/" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;text-underline-offset:2px">Room block at Fontainebleau</a></p>
         <a href="https://pay.zaprite.com/pl_wIAImtY5wz" target="_blank" rel="noopener" class="btn">Reserve General Admission <span class="btn__arrow">→</span></a>
       </article>
       <article class="tier tier--premium tier--coming-soon">
         <div class="tier__eyebrow">Phase 03 · Final Release</div>
         <h3 class="tier__name">Final Release <em>General Admission</em></h3>
         <div class="tier__price-wrap"><span class="tier__price">$995</span><span class="tier__price-unit">USD</span></div>
-        <div class="tier__day-grid tier__day-grid--2col">
+        <div class="tier__day-grid tier__day-grid--3col">
+          <div class="tier__day">
+            <div class="tier__day-label"><span class="tier__day-name">Thursday</span><span class="tier__day-sub">Feb 4</span></div>
+            <ul class="tier__day-list">
+              <li><a href="https://luma.com/n6jb46op" target="_blank" rel="noopener"><strong>Bitcoin Fundamentals</strong><span class="tier__day-link">Sign Up Here</span></a></li>
+            </ul>
+          </div>
           <div class="tier__day">
             <div class="tier__day-label"><span class="tier__day-name">Friday</span><span class="tier__day-sub">Day 1</span></div>
             <ul class="tier__day-list">
@@ -3112,7 +3151,7 @@ body.menu-open{overflow:hidden}
             </ul>
           </div>
         </div>
-        <p class="tier__perk-footer">+ <strong>Bitcoin Fundamentals</strong> (Thu eve) · Breakfast &amp; Lunch · Recorded sessions · <a href="https://www.fontainebleau.com/miamibeach/" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;text-underline-offset:2px">Room block at Fontainebleau</a></p>
+        <p class="tier__perk-footer">+ Breakfast &amp; Lunch (both days) · Recorded sessions · <a href="https://www.fontainebleau.com/miamibeach/" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;text-underline-offset:2px">Room block at Fontainebleau</a></p>
         <a href="https://pay.zaprite.com/pl_wIAImtY5wz" target="_blank" rel="noopener" class="btn">Reserve Final Release <span class="btn__arrow">→</span></a>
       </article>
       </div>
