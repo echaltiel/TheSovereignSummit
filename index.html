@@ -911,13 +911,21 @@ body.menu-open{overflow:hidden}
   margin:0;
   max-width:none;
 }
-/* VIP tile: stack each day item across 2 lines (name + detail/badge/link below) 
-   This makes long items fit consistently and creates a clean visual rhythm */
+/* VIP tile: each day item becomes a bordered box with centered content */
+.tier__vip-schedule .tier__day-list{
+  gap:.4rem;
+}
 .tier__vip-schedule .tier__day-list li{
   display:flex;
   flex-direction:column;
-  align-items:flex-start;
-  gap:.1rem;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  gap:.25rem;
+  padding:.6rem .5rem;
+  border:1px solid rgba(244,236,224,.18);
+  border-radius:1px;
+  min-height:60px;
 }
 .tier__vip-schedule .tier__day-list .tier__day-detail::before{
   display:none;
@@ -975,7 +983,8 @@ body.menu-open{overflow:hidden}
   gap:.55rem 1.4rem;
 }
 .tickets__vip-solo .tier--vipallaccess .tier__day-label{
-  margin-bottom:.3rem;
+  margin-bottom:.4rem;
+  justify-content:center;
 }
 .tickets__vip-solo .tier--vipallaccess .tier__day-name{
   font-size:.9rem;
