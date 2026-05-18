@@ -911,6 +911,20 @@ body.menu-open{overflow:hidden}
   margin:0;
   max-width:none;
 }
+/* VIP tile: stack each day item across 2 lines (name + detail/badge/link below) 
+   This makes long items fit consistently and creates a clean visual rhythm */
+.tier__vip-schedule .tier__day-list li{
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  gap:.1rem;
+}
+.tier__vip-schedule .tier__day-list .tier__day-detail::before{
+  display:none;
+}
+.tier__vip-schedule .tier__day-list .tier__day-vip-badge{
+  margin-left:0;
+}
 .tickets__vip-solo .tier--vipallaccess .tier__eyebrow{
   margin-bottom:.15rem;
 }
@@ -2916,7 +2930,7 @@ body.menu-open{overflow:hidden}
                 <div class="tier__day">
                   <div class="tier__day-label"><span class="tier__day-name">Thursday</span><span class="tier__day-sub">Feb 4</span></div>
                   <ul class="tier__day-list">
-                    <li><strong>Bitcoin Fundamentals</strong> · <a href="https://luma.com/n6jb46op" target="_blank" rel="noopener" class="tier__day-link">Limited Spots, Sign Up Here</a></li>
+                    <li><strong>Bitcoin Fundamentals</strong><a href="https://luma.com/n6jb46op" target="_blank" rel="noopener" class="tier__day-link">Limited Spots, Sign Up Here</a></li>
                     <li><strong>Welcome Reception</strong><span class="tier__day-vip-badge">VIP Ticket Only</span></li>
                   </ul>
                 </div>
