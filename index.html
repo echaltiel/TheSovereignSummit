@@ -663,7 +663,7 @@ body.menu-open{overflow:hidden}
 .tickets{padding:.3rem 0 .1rem !important}
 .tickets .sec-hd{margin-bottom:.25rem;padding-top:.15rem;padding-bottom:.2rem}
 
-.tickets__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.8rem}
+.tickets__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.4rem}
 
 /* Base phase-tier card */
 .tier{background:var(--paper-light);border:1px solid var(--ink);padding:.55rem .8rem;position:relative;display:flex;flex-direction:column;min-height:auto;transition:transform .3s,box-shadow .3s}
@@ -848,15 +848,16 @@ body.menu-open{overflow:hidden}
 
 /* === VIP Admission solo tile — 2-col internal layout for compactness === */
 .tickets__vip-solo .tier--vipallaccess{
-  padding:.65rem 2rem .65rem;
+  padding:.55rem 2rem .55rem;
+  justify-content:flex-start;
 }
 .tier__vip-layout{
   display:grid;
   grid-template-columns:minmax(280px,1fr) minmax(540px,1.5fr);
-  gap:2.2rem;
+  gap:1.8rem;
   align-items:center;
   width:100%;
-  margin-bottom:.8rem;
+  margin-bottom:.4rem;
 }
 .tier__vip-info{
   display:flex;
@@ -871,23 +872,23 @@ body.menu-open{overflow:hidden}
   max-width:none;
 }
 .tickets__vip-solo .tier--vipallaccess .tier__eyebrow{
-  margin-bottom:.18rem;
+  margin-bottom:.15rem;
 }
 .tickets__vip-solo .tier--vipallaccess .tier__name{
-  margin:0 0 .15rem;
+  margin:0 0 .12rem;
 }
 .tickets__vip-solo .tier--vipallaccess .tier__price-wrap{
   display:flex;
   justify-content:center;
   align-items:baseline;
   gap:.35rem;
-  margin:0 0 .55rem;
+  margin:0 0 .4rem;
   border-bottom:none;
   padding:0;
 }
 .tickets__vip-solo .tier--vipallaccess .tier__desc-bullets{
   max-width:100%;
-  margin:.2rem auto .5rem;
+  margin:.15rem auto .35rem;
   align-items:center;
   text-align:center;
   gap:.05rem;
@@ -899,7 +900,7 @@ body.menu-open{overflow:hidden}
 }
 .tickets__vip-solo .tier--vipallaccess .tier__perk-footer{
   max-width:100%;
-  margin:.4rem auto 0;
+  margin:.25rem auto 0;
   text-align:center;
   border-top:none;
   padding-top:0;
@@ -909,8 +910,8 @@ body.menu-open{overflow:hidden}
 }
 .tickets__vip-solo .tier--vipallaccess .btn{
   display:block;
-  margin:.3rem auto 0;
-  padding:.65rem 2.2rem;
+  margin:.1rem auto 0;
+  padding:.6rem 2rem;
   font-size:.65rem;
   width:fit-content;
 }
@@ -950,9 +951,9 @@ body.menu-open{overflow:hidden}
   column-gap:.8rem;
   row-gap:.6rem;
   border:1px solid var(--rule-str);
-  padding:1.35rem .55rem .3rem;
+  padding:1.1rem .55rem .35rem;
   position:relative;
-  margin-top:.85rem;
+  margin-top:.45rem;
 }
 .tickets__phases-label{
   position:absolute;
@@ -1126,22 +1127,8 @@ body.menu-open{overflow:hidden}
   .tier--vipallaccess .tier__includes strong,.tier--allaccess .tier__includes strong{font-size:.68em}
   .tickets__trust{margin-top:1rem;font-size:.85rem;line-height:1.45}
 }
-.tickets__subhead{
-  grid-column:1 / -1;
-  font-family:var(--fd);
-  font-style:italic;
-  font-size:clamp(.95rem,1.25vw,1.1rem);
-  line-height:1.35;
-  color:var(--ink-soft);
-  text-align:center;
-  margin:.55rem auto 0;
-  max-width:780px;
-  letter-spacing:-.005em;
-}
-.tickets__subhead em{
-  font-style:italic;
-  color:var(--accent-deep);
-}
+/* Tickets section: tight header gap + correct scroll anchor offset */
+.tickets .sec-hd{margin-bottom:1rem !important;scroll-margin-top:90px}
 .tickets__trust{margin:.1rem auto 0;max-width:880px;text-align:center;font-family:var(--fd);font-style:italic;font-size:.76rem;line-height:1.4;color:var(--ink-soft)}
 .tickets__trust strong{font-weight:500;color:var(--accent-deep);font-style:normal;letter-spacing:.01em}
 
@@ -2868,8 +2855,7 @@ body.menu-open{overflow:hidden}
   <div class="container">
     <header class="sec-hd" id="tickets">
       <div class="sec-hd__num">Nº 08 — Admission</div>
-      <h2 class="section-title sec-hd__title">Pick yours. <em>Only 400 spots.</em></h2>
-      <p class="tickets__subhead">Same single track. Same speakers. Same two days. <em>Pick how you experience it.</em></p>
+      <h2 class="section-title sec-hd__title">Only 400 spots. <em>Pick how you experience it.</em></h2>
     </header>
     <div class="tickets__grid">
       <div class="tickets__vip-solo">
