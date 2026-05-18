@@ -912,11 +912,16 @@ body.menu-open{overflow:hidden}
   margin:0;
   max-width:none;
 }
-/* VIP tile: each day item becomes a bordered box with centered content */
+/* VIP tile: each day item becomes a bordered clickable box with centered content */
 .tier__vip-schedule .tier__day-list{
   gap:.4rem;
 }
 .tier__vip-schedule .tier__day-list li{
+  list-style:none;
+  padding:0;
+  margin:0;
+}
+.tier__vip-schedule .tier__day-list li > a{
   display:flex;
   flex-direction:column;
   align-items:center;
@@ -927,6 +932,19 @@ body.menu-open{overflow:hidden}
   border:1px solid rgba(244,236,224,.18);
   border-radius:1px;
   min-height:60px;
+  text-decoration:none;
+  color:inherit;
+  transition:background .2s ease,border-color .2s ease,transform .2s ease;
+  cursor:pointer;
+}
+.tier__vip-schedule .tier__day-list li > a:hover{
+  background:rgba(232,196,106,.06);
+  border-color:rgba(232,196,106,.45);
+  transform:translateY(-1px);
+}
+.tier__vip-schedule .tier__day-list li > a:focus-visible{
+  outline:2px solid #E8C46A;
+  outline-offset:2px;
 }
 .tier__vip-schedule .tier__day-list .tier__day-detail::before{
   display:none;
@@ -1145,7 +1163,7 @@ body.menu-open{overflow:hidden}
 .tier--vipallaccess .tier__ribbon{background:#E8C46A;color:#0A1224;font-size:.58rem;padding:.26rem .6rem;font-weight:500}
 
 /* Shared atoms */
-.tier__ribbon{position:absolute;top:-8px;right:1.1rem;background:var(--accent);color:var(--ink);font-family:var(--fm);font-size:.54rem;letter-spacing:.2em;text-transform:uppercase;padding:.2rem .55rem;font-weight:500}
+.tier__ribbon{position:absolute;top:-8px;left:1.1rem;background:var(--accent);color:var(--ink);font-family:var(--fm);font-size:.54rem;letter-spacing:.2em;text-transform:uppercase;padding:.2rem .55rem;font-weight:500}
 .tier__eyebrow{font-family:var(--fm);font-size:.54rem;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:.3rem}
 .tier--featured .tier__eyebrow{color:var(--accent)}
 .tier__name{font-family:var(--fd);font-size:clamp(1.05rem,1.55vw,1.4rem);line-height:1;letter-spacing:-.015em;margin-bottom:.2rem;font-weight:400}
@@ -2577,7 +2595,7 @@ body.menu-open{overflow:hidden}
         <div class="side-event__meta"><strong>Food Buffet · Open Bar</strong></div>
       </article>
       <article class="side-event side-event--silver">
-        <a class="side-event__link" href="#tickets" aria-label="Biscayne Bay Boat Oceanfront Soiree — included with every ticket"></a>
+        <a class="side-event__link" href="#tickets" aria-label="Biscayne Bay Boat After Party — included with every ticket"></a>
         <div class="side-event__top">
           <div class="side-event__when">
             <div class="side-event__date">Sat · Feb 6</div>
@@ -2585,7 +2603,7 @@ body.menu-open{overflow:hidden}
           </div>
           <a class="side-event__sponsor" href="https://onrampbitcoin.com" target="_blank" rel="noopener"><span class="side-event__sponsor-label">Presented by</span> Onramp <span class="side-event__sponsor-arrow">→</span></a>
         </div>
-        <h3 class="side-event__title">Biscayne Bay <em>Boat Oceanfront Soiree</em></h3>
+        <h3 class="side-event__title">Biscayne Bay <em>Boat After Party</em></h3>
         <div class="side-event__exclusive">Included with every ticket</div>
         <div class="side-event__venue"><span class="side-event__venue-name">Bayside Marina</span><span class="side-event__venue-label">Meet at Fontainebleau</span></div>
         <p class="side-event__desc">Saturday night on Biscayne Bay — drinks, music, skyline views, and one last gathering to close the summit. Shuttle from the Fontainebleau lobby to Bayside Marketplace; departs from Miami Tour Company.</p>
@@ -2943,22 +2961,22 @@ body.menu-open{overflow:hidden}
                 <div class="tier__day">
                   <div class="tier__day-label"><span class="tier__day-name">Thursday</span><span class="tier__day-sub">Feb 4</span></div>
                   <ul class="tier__day-list">
-                    <li><strong>Bitcoin Fundamentals</strong><a href="https://luma.com/n6jb46op" target="_blank" rel="noopener" class="tier__day-link">Limited Spots, Sign Up Here</a></li>
-                    <li><strong>Welcome Reception</strong><span class="tier__day-vip-badge">VIP Ticket Only</span></li>
+                    <li><a href="https://luma.com/n6jb46op" target="_blank" rel="noopener"><strong>Bitcoin Fundamentals</strong><span class="tier__day-link">Limited Spots, Sign Up Here</span></a></li>
+                    <li><a href="#side-events"><strong>Welcome Reception</strong><span class="tier__day-vip-badge">VIP Ticket Only</span></a></li>
                   </ul>
                 </div>
                 <div class="tier__day">
                   <div class="tier__day-label"><span class="tier__day-name">Friday</span><span class="tier__day-sub">Day 1</span></div>
                   <ul class="tier__day-list">
-                    <li><strong>Summit</strong><span class="tier__day-detail">reserved front-row</span></li>
-                    <li><strong>Oceanfront Soiree</strong><span class="tier__day-vip-badge">VIP Ticket Only</span></li>
+                    <li><a href="#agenda" data-day="day1" class="tier__day-agenda-link"><strong>Summit</strong><span class="tier__day-detail">reserved front-row</span></a></li>
+                    <li><a href="#side-events"><strong>Oceanfront Soiree</strong><span class="tier__day-vip-badge">VIP Ticket Only</span></a></li>
                   </ul>
                 </div>
                 <div class="tier__day">
                   <div class="tier__day-label"><span class="tier__day-name">Saturday</span><span class="tier__day-sub">Day 2</span></div>
                   <ul class="tier__day-list">
-                    <li><strong>Summit</strong><span class="tier__day-detail">reserved front-row</span></li>
-                    <li><strong>Boat After Party</strong><span class="tier__day-detail">VIP deck</span></li>
+                    <li><a href="#agenda" data-day="day2" class="tier__day-agenda-link"><strong>Summit</strong><span class="tier__day-detail">reserved front-row</span></a></li>
+                    <li><a href="#side-events"><strong>Boat After Party</strong><span class="tier__day-detail">VIP deck</span></a></li>
                   </ul>
                 </div>
               </div>
@@ -3323,8 +3341,8 @@ body.menu-open{overflow:hidden}
     });
   });
 
-  // Hero date links → scroll to agenda + select correct day tab
-  document.querySelectorAll('.hero__date-link').forEach((link) => {
+  // Day-targeted links (hero dates + VIP Summit boxes) → scroll to agenda + select correct day tab
+  document.querySelectorAll('.hero__date-link, .tier__day-agenda-link').forEach((link) => {
     link.addEventListener('click', (e) => {
       e.preventDefault();
       const targetDay = link.dataset.day;
