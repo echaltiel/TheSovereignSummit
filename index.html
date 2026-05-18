@@ -222,6 +222,8 @@ body.menu-open{overflow:hidden}
 .hero__fact dt{font-family:var(--fm);font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-soft);margin:0}
 .hero__fact dd{font-family:var(--fd);font-size:clamp(1.25rem,1.35vw,1.4rem);line-height:1.3;margin:0}
 .hero__fact dd em{font-style:italic;color:var(--accent-deep)}
+.hero__date-fri{font-style:italic;color:var(--accent-deep)}
+.hero__date-sat{font-style:italic;color:#DF068B}
 .hero__fact-link{color:inherit;text-decoration:underline;text-decoration-color:rgba(19,30,51,.28);text-decoration-thickness:1px;text-underline-offset:3px;transition:text-decoration-color .2s}
 .hero__fact-link:hover{text-decoration-color:var(--accent-deep)}
 .hero__scroll{display:none}
@@ -734,15 +736,10 @@ body.menu-open{overflow:hidden}
   margin-bottom:0;
 }
 
-/* VIP solo card — centered, sized to match the previous bundle width */
+/* VIP solo card — spans full width of the tickets grid */
 .tickets__vip-solo{
   grid-column:1/-1;
-  max-width:760px;
   width:100%;
-  margin:0 auto;
-}
-@media (max-width:900px){
-  .tickets__vip-solo{max-width:100%}
 }
 
 /* ===== PHASE GROUP — fieldset-style frame around the 3 single-day phase tickets ===== */
@@ -963,6 +960,11 @@ body.menu-open{overflow:hidden}
   font-weight:600;
   line-height:1;
 }
+/* Silver variant — for events open to every ticket holder (Bitcoin Fundamentals, Boat Party) */
+.side-event--silver .side-event__exclusive{
+  background:linear-gradient(90deg,#9CA3AF 0%,#D1D5DB 50%,#9CA3AF 100%);
+  color:#0A1224;
+}
 .side-event__desc{font-family:var(--fd);font-size:.82rem;line-height:1.3;color:var(--ink-soft);flex:1;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;margin:0}
 .side-event__meta{font-family:var(--fm);font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-soft);padding-top:.35rem;border-top:1px solid var(--rule)}
 .side-event__meta strong{color:var(--accent-deep);font-weight:inherit}
@@ -1059,6 +1061,9 @@ body.menu-open{overflow:hidden}
     letter-spacing:.18em;
     margin-right:.15rem;
     display:inline-block
+  }
+  .side-event--silver .side-event__meta strong{
+    background:linear-gradient(90deg,#9CA3AF 0%,#D1D5DB 50%,#9CA3AF 100%);
   }
   .side-event__sponsor{
     grid-column:2;
@@ -1814,7 +1819,7 @@ body.menu-open{overflow:hidden}
         <dl class="hero__facts">
           <div class="hero__fact">
             <dt>Dates</dt>
-            <dd>Friday, <em>February 5</em> · Saturday, <em>February 6</em>, 2027</dd>
+            <dd><span class="hero__date-fri">Friday, February 5</span> and <span class="hero__date-sat">Saturday, February 6</span>, 2027</dd>
           </div>
           <div class="hero__fact">
             <dt>Venue</dt>
@@ -2200,12 +2205,12 @@ body.menu-open{overflow:hidden}
       <button class="program__tab program__tab--active" role="tab" aria-selected="true" data-day="day1">
         <span class="program__tab-day">Friday</span>
         <span class="program__tab-date">February 5, 2027</span>
-        <span class="program__tab-theme">Bitcoin · Energy · Freedom</span>
+        <span class="program__tab-theme">Day 1</span>
       </button>
       <button class="program__tab program__tab--day2" role="tab" aria-selected="false" data-day="day2">
         <span class="program__tab-day">Saturday</span>
         <span class="program__tab-date">February 6, 2027</span>
-        <span class="program__tab-theme">AI for Individual Rights Day</span>
+        <span class="program__tab-theme">Day 2</span>
       </button>
     </div>
 
@@ -2254,7 +2259,7 @@ body.menu-open{overflow:hidden}
       <h2 class="section-title sec-hd__title">Before and after <em>the summit.</em></h2>
     </header>
     <div class="side-events__grid">
-      <article class="side-event">
+      <article class="side-event side-event--silver">
         <a class="side-event__link" href="#" aria-label="Bitcoin Fundamentals — more info"></a>
         <div class="side-event__top">
           <div class="side-event__when">
@@ -2264,6 +2269,7 @@ body.menu-open{overflow:hidden}
           <a class="side-event__sponsor" href="https://bitcoinpark.com" target="_blank" rel="noopener"><span class="side-event__sponsor-label">Presented by</span> Bitcoin Park <span class="side-event__sponsor-arrow">→</span></a>
         </div>
         <h3 class="side-event__title">Bitcoin <em>Fundamentals</em></h3>
+        <div class="side-event__exclusive">Included with every ticket · First Come First Served · Sign Up To Attend</div>
         <div class="side-event__venue"><span class="side-event__venue-name">Ballroom TBD</span><span class="side-event__venue-label">inside Fontainebleau</span></div>
         <p class="side-event__desc">3 short 30-minute sessions on the basics, mining, and why Bitcoin is important for human freedom. The night before the summit, for anyone who wants to walk in already fluent.</p>
         <div class="side-event__meta"><strong>Included with every ticket</strong> · 100 spots · first-come</div>
@@ -2278,10 +2284,10 @@ body.menu-open{overflow:hidden}
           <a class="side-event__sponsor" href="https://nydig.com" target="_blank" rel="noopener"><span class="side-event__sponsor-label">Presented by</span> NYDIG <span class="side-event__sponsor-arrow">→</span></a>
         </div>
         <h3 class="side-event__title">Welcome <em>Dinner</em></h3>
-        <div class="side-event__exclusive">VIP Only</div>
+        <div class="side-event__exclusive">VIP Ticket Only</div>
         <div class="side-event__venue"><span class="side-event__venue-name">Arkadia Day Club</span><span class="side-event__venue-label">inside Fontainebleau</span></div>
         <p class="side-event__desc">The night before, with Fontainebleau's day club privately reserved for the evening. Speakers, partners, and a small group of attendees gather for the first conversations of the week.</p>
-        <div class="side-event__meta"><strong>VIP only</strong> · 200 seats</div>
+        <div class="side-event__meta"><strong>VIP ticket only</strong> · 200 seats</div>
       </article>
       <article class="side-event">
         <a class="side-event__link" href="#tickets" aria-label="After Party — VIP ticket required"></a>
@@ -2293,12 +2299,12 @@ body.menu-open{overflow:hidden}
           <a class="side-event__sponsor" href="https://www.bitrefill.com" target="_blank" rel="noopener"><span class="side-event__sponsor-label">Presented by</span> Bitrefill <span class="side-event__sponsor-arrow">→</span></a>
         </div>
         <h3 class="side-event__title">After <em>Party</em></h3>
-        <div class="side-event__exclusive">VIP Only</div>
+        <div class="side-event__exclusive">VIP Ticket Only</div>
         <div class="side-event__venue"><span class="side-event__venue-name">La Côte</span><span class="side-event__venue-label">inside Fontainebleau</span></div>
         <p class="side-event__desc">Drinks, dinner, and unhurried conversation poolside at Fontainebleau's Mediterranean restaurant. The day doesn't end at 5 — the most useful conversations rarely happen in the room.</p>
-        <div class="side-event__meta"><strong>VIP only</strong> · 200 seats</div>
+        <div class="side-event__meta"><strong>VIP ticket only</strong> · 200 seats</div>
       </article>
-      <article class="side-event">
+      <article class="side-event side-event--silver">
         <a class="side-event__link" href="#" aria-label="Biscayne Bay Boat Party — more info"></a>
         <div class="side-event__top">
           <div class="side-event__when">
@@ -2308,6 +2314,7 @@ body.menu-open{overflow:hidden}
           <a class="side-event__sponsor" href="https://onrampbitcoin.com" target="_blank" rel="noopener"><span class="side-event__sponsor-label">Presented by</span> Onramp <span class="side-event__sponsor-arrow">→</span></a>
         </div>
         <h3 class="side-event__title">Biscayne Bay <em>Boat Party</em></h3>
+        <div class="side-event__exclusive">Included with every ticket</div>
         <div class="side-event__venue"><span class="side-event__venue-name">Bayside Marina</span><span class="side-event__venue-label">Meet at Fontainebleau</span></div>
         <p class="side-event__desc">Saturday night on Biscayne Bay — drinks, music, skyline views, and one last gathering to close the summit. Shuttle from the Fontainebleau lobby to Bayside Marketplace; departs from Miami Tour Company.</p>
         <div class="side-event__meta"><strong>Included with every ticket</strong> · VIP deck for VIPs · 400 attendees</div>
@@ -2649,8 +2656,8 @@ body.menu-open{overflow:hidden}
       <div class="tickets__vip-solo">
         <article class="tier tier--vipallaccess">
           <div class="tier__ribbon">Limited · 200 spots</div>
-          <div class="tier__eyebrow">VIP</div>
-          <h3 class="tier__name"><em>VIP</em></h3>
+          <div class="tier__eyebrow">VIP Admission</div>
+          <h3 class="tier__name"><em>VIP</em> Admission</h3>
           <div class="tier__price-wrap"><span class="tier__price">$1,995</span><span class="tier__price-unit">USD</span></div>
           <ul class="tier__desc-bullets">
             <li>Every event. Front-row everywhere. The full experience.</li>
@@ -2665,7 +2672,7 @@ body.menu-open{overflow:hidden}
             <li>Biscayne Bay Boat Party · dedicated VIP deck</li>
             <li>Bitcoin Fundamentals · Thu evening</li>
           </ul>
-          <a href="https://pay.zaprite.com/pl_wIAImtY5wz" target="_blank" rel="noopener" class="btn">Reserve VIP <span class="btn__arrow">→</span></a>
+          <a href="https://pay.zaprite.com/pl_wIAImtY5wz" target="_blank" rel="noopener" class="btn">Reserve VIP Admission <span class="btn__arrow">→</span></a>
         </article>
       </div>
       <div class="tickets__phases">
@@ -2673,7 +2680,7 @@ body.menu-open{overflow:hidden}
         <article class="tier tier--featured">
         <div class="tier__ribbon">Ends September 30 · Save $400</div>
         <div class="tier__eyebrow">Phase 01 · Early Bird</div>
-        <h3 class="tier__name">Early <em>Bird</em></h3>
+        <h3 class="tier__name">Early Bird <em>General Admission</em></h3>
         <div class="tier__price-wrap"><span class="tier__price">$595</span><span class="tier__price-unit">USD</span></div>
         <p class="tier__desc">Save $400 vs. final release.<br>Ends September 30 so act quickly.</p>
         <ul class="tier__list">
@@ -2688,7 +2695,7 @@ body.menu-open{overflow:hidden}
       </article>
       <article class="tier tier--coming-soon">
         <div class="tier__eyebrow">Phase 02 · Standard</div>
-        <h3 class="tier__name">Standard</h3>
+        <h3 class="tier__name"><em>General Admission</em></h3>
         <div class="tier__price-wrap"><span class="tier__price">$795</span><span class="tier__price-unit">USD</span></div>
         <p class="tier__desc">Save $200 vs. final release. October 1 — December 31.</p>
         <ul class="tier__list">
@@ -2699,11 +2706,11 @@ body.menu-open{overflow:hidden}
           <li>Sessions recorded · available for playback</li>
           <li><a href="https://www.fontainebleau.com/miamibeach/" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;text-underline-offset:2px">Click here for the TSS Room Block Rate @ Fontainebleau</a></li>
         </ul>
-        <a href="https://pay.zaprite.com/pl_wIAImtY5wz" target="_blank" rel="noopener" class="btn">Reserve Standard <span class="btn__arrow">→</span></a>
+        <a href="https://pay.zaprite.com/pl_wIAImtY5wz" target="_blank" rel="noopener" class="btn">Reserve General Admission <span class="btn__arrow">→</span></a>
       </article>
       <article class="tier tier--premium tier--coming-soon">
         <div class="tier__eyebrow">Phase 03 · Final Release</div>
-        <h3 class="tier__name">Final <em>Release</em></h3>
+        <h3 class="tier__name">Final Release <em>General Admission</em></h3>
         <div class="tier__price-wrap"><span class="tier__price">$995</span><span class="tier__price-unit">USD</span></div>
         <p class="tier__desc">What remains after December 31.</p>
         <ul class="tier__list">
