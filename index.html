@@ -222,8 +222,9 @@ body.menu-open{overflow:hidden}
 .hero__fact dt{font-family:var(--fm);font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-soft);margin:0}
 .hero__fact dd{font-family:var(--fd);font-size:clamp(1.25rem,1.35vw,1.4rem);line-height:1.3;margin:0}
 .hero__fact dd em{font-style:italic;color:var(--accent-deep)}
-.hero__date-fri{font-style:italic;color:var(--accent-deep)}
-.hero__date-sat{font-style:italic;color:var(--accent-deep)}
+.hero__date-link{font-style:italic;color:var(--accent-deep);text-decoration:none;border-bottom:1px solid transparent;transition:border-color .2s ease,color .2s ease;cursor:pointer}
+.hero__date-link:hover{border-bottom-color:var(--accent-deep)}
+.hero__date-link:focus-visible{outline:2px solid var(--accent-deep);outline-offset:3px;border-radius:2px}
 .hero__fact-link{color:inherit;text-decoration:underline;text-decoration-color:rgba(19,30,51,.28);text-decoration-thickness:1px;text-underline-offset:3px;transition:text-decoration-color .2s}
 .hero__fact-link:hover{text-decoration-color:var(--accent-deep)}
 .hero__scroll{display:none}
@@ -1151,7 +1152,7 @@ body.menu-open{overflow:hidden}
 .side-event__venue-label{font-family:var(--fm);font-size:.55rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-soft)}
 .side-event__venue-name{font-style:italic;color:var(--accent-deep);font-weight:400}
 
-/* Bundle-exclusive pill — for Welcome Dinner + After Party tiles. Gold gradient echoes the VIP/All Access admission tile ribbons. */
+/* Bundle-exclusive pill — for Welcome Reception + Oceanfront Soiree tiles. Gold gradient echoes the VIP/All Access admission tile ribbons. */
 .side-event__exclusive{
   display:inline-flex;
   align-self:flex-start;
@@ -1165,7 +1166,7 @@ body.menu-open{overflow:hidden}
   font-weight:600;
   line-height:1;
 }
-/* Silver variant — for events open to every ticket holder (Bitcoin Fundamentals, Boat Party) */
+/* Silver variant — for events open to every ticket holder (Bitcoin Fundamentals, Boat After Party) */
 .side-event--silver .side-event__exclusive{
   background:linear-gradient(90deg,#9CA3AF 0%,#D1D5DB 50%,#9CA3AF 100%);
   color:#0A1224;
@@ -2024,7 +2025,7 @@ body.menu-open{overflow:hidden}
         <dl class="hero__facts">
           <div class="hero__fact">
             <dt>Dates</dt>
-            <dd><span class="hero__date-fri">Friday, February 5</span> and <span class="hero__date-sat">Saturday, February 6</span>, 2027</dd>
+            <dd><a href="#agenda" class="hero__date-link" data-day="day1">Friday, February 5</a> and <a href="#agenda" class="hero__date-link" data-day="day2">Saturday, February 6</a>, 2027</dd>
           </div>
           <div class="hero__fact">
             <dt>Venue</dt>
@@ -2433,7 +2434,7 @@ body.menu-open{overflow:hidden}
       <div class="program__row"><div class="program__time">3 : 00 PM</div><div><div class="program__title">3rd Afternoon session</div><div class="program__speaker">Talks &amp; panels · TBA</div></div><div class="program__tag">Main stage</div></div>
       <div class="program__row program__row--feat"><div class="program__time">4 : 00 PM</div><div><div class="program__title"><em>Closing keynote</em></div><div class="program__speaker">Speaker to be announced</div></div><div class="program__tag">Keynote · TBA</div></div>
       <div class="program__row program__row--break"><div class="program__time">5 : 00 PM</div><div><div class="program__title">Day 1 closes</div></div><div class="program__tag">—</div></div>
-      <div class="program__row program__row--break"><div class="program__time">7 : 00 PM</div><div><div class="program__title"><em>After Party at La Côte</em></div></div><div class="program__tag">Side Event</div></div>
+      <div class="program__row program__row--break"><div class="program__time">7 : 00 PM</div><div><div class="program__title"><em>Oceanfront Soiree at La Côte</em></div></div><div class="program__tag">Side Event</div></div>
     </div>
 
     <div class="program__board program__board--day2" data-day="day2" hidden>
@@ -2451,7 +2452,7 @@ body.menu-open{overflow:hidden}
       <div class="program__row"><div class="program__time">3 : 00 PM</div><div><div class="program__title">3rd Afternoon session</div><div class="program__speaker">Talks &amp; panels · TBA</div></div><div class="program__tag">Main stage</div></div>
       <div class="program__row program__row--feat"><div class="program__time">4 : 00 PM</div><div><div class="program__title"><em>Closing keynote</em></div><div class="program__speaker">Speaker to be announced</div></div><div class="program__tag">Keynote · TBA</div></div>
       <div class="program__row program__row--break"><div class="program__time">5 : 00 PM</div><div><div class="program__title">Summit closes</div></div><div class="program__tag">—</div></div>
-      <div class="program__row program__row--break"><div class="program__time">7 : 00 PM</div><div><div class="program__title"><em>Biscayne Bay Boat Party</em></div></div><div class="program__tag">Side Event</div></div>
+      <div class="program__row program__row--break"><div class="program__time">7 : 00 PM</div><div><div class="program__title"><em>Biscayne Bay Boat After Party</em></div></div><div class="program__tag">Side Event</div></div>
     </div>
     <p class="program__footnote">Full schedule, speaker assignments, and talk titles will be published closer to the event. <em>Subscribe below for updates.</em></p>
   </div>
@@ -2474,13 +2475,13 @@ body.menu-open{overflow:hidden}
           <a class="side-event__sponsor" href="https://bitcoinpark.com" target="_blank" rel="noopener"><span class="side-event__sponsor-label">Presented by</span> Bitcoin Park <span class="side-event__sponsor-arrow">→</span></a>
         </div>
         <h3 class="side-event__title">Bitcoin <em>Fundamentals</em></h3>
-        <div class="side-event__exclusive">Included with every ticket · First Come First Served · Sign Up To Attend</div>
+        <div class="side-event__exclusive">Included with every ticket · First Come First Served</div>
         <div class="side-event__venue"><span class="side-event__venue-name">Ballroom TBD</span><span class="side-event__venue-label">inside Fontainebleau</span></div>
         <p class="side-event__desc">3 short 30-minute sessions on the basics, mining, and why Bitcoin is important for human freedom. The night before the summit, for anyone who wants to walk in already fluent.</p>
-        <div class="side-event__meta"><strong>Included with every ticket</strong> · 100 spots · first-come</div>
+        <div class="side-event__meta"><strong>Click on this tile to sign up via Luma</strong></div>
       </article>
       <article class="side-event">
-        <a class="side-event__link" href="#tickets" aria-label="Welcome Dinner — VIP ticket required"></a>
+        <a class="side-event__link" href="#tickets" aria-label="Welcome Reception — VIP ticket required"></a>
         <div class="side-event__top">
           <div class="side-event__when">
             <div class="side-event__date">Thu · Feb 4</div>
@@ -2488,14 +2489,14 @@ body.menu-open{overflow:hidden}
           </div>
           <a class="side-event__sponsor" href="https://nydig.com" target="_blank" rel="noopener"><span class="side-event__sponsor-label">Presented by</span> NYDIG <span class="side-event__sponsor-arrow">→</span></a>
         </div>
-        <h3 class="side-event__title">Welcome <em>Dinner</em></h3>
+        <h3 class="side-event__title">Welcome <em>Reception</em></h3>
         <div class="side-event__exclusive">VIP Ticket Only</div>
         <div class="side-event__venue"><span class="side-event__venue-name">Arkadia Day Club</span><span class="side-event__venue-label">inside Fontainebleau</span></div>
         <p class="side-event__desc">The night before, with Fontainebleau's day club privately reserved for the evening. Speakers, partners, and a small group of attendees gather for the first conversations of the week.</p>
-        <div class="side-event__meta"><strong>VIP ticket only</strong> · 200 seats</div>
+        <div class="side-event__meta"><strong>Plenty of Tray-Passed Food · Open Bar</strong></div>
       </article>
       <article class="side-event">
-        <a class="side-event__link" href="#tickets" aria-label="After Party — VIP ticket required"></a>
+        <a class="side-event__link" href="#tickets" aria-label="Oceanfront Soiree — VIP ticket required"></a>
         <div class="side-event__top">
           <div class="side-event__when">
             <div class="side-event__date">Fri · Feb 5</div>
@@ -2503,14 +2504,14 @@ body.menu-open{overflow:hidden}
           </div>
           <a class="side-event__sponsor" href="https://www.bitrefill.com" target="_blank" rel="noopener"><span class="side-event__sponsor-label">Presented by</span> Bitrefill <span class="side-event__sponsor-arrow">→</span></a>
         </div>
-        <h3 class="side-event__title">After <em>Party</em></h3>
+        <h3 class="side-event__title">Oceanfront <em>Soiree</em></h3>
         <div class="side-event__exclusive">VIP Ticket Only</div>
         <div class="side-event__venue"><span class="side-event__venue-name">La Côte</span><span class="side-event__venue-label">inside Fontainebleau</span></div>
         <p class="side-event__desc">Drinks, dinner, and unhurried conversation poolside at Fontainebleau's Mediterranean restaurant. The day doesn't end at 5 — the most useful conversations rarely happen in the room.</p>
-        <div class="side-event__meta"><strong>VIP ticket only</strong> · 200 seats</div>
+        <div class="side-event__meta"><strong>Food Buffet · Open Bar</strong></div>
       </article>
       <article class="side-event side-event--silver">
-        <a class="side-event__link" href="#tickets" aria-label="Biscayne Bay Boat Party — included with every ticket"></a>
+        <a class="side-event__link" href="#tickets" aria-label="Biscayne Bay Boat Oceanfront Soiree — included with every ticket"></a>
         <div class="side-event__top">
           <div class="side-event__when">
             <div class="side-event__date">Sat · Feb 6</div>
@@ -2518,11 +2519,11 @@ body.menu-open{overflow:hidden}
           </div>
           <a class="side-event__sponsor" href="https://onrampbitcoin.com" target="_blank" rel="noopener"><span class="side-event__sponsor-label">Presented by</span> Onramp <span class="side-event__sponsor-arrow">→</span></a>
         </div>
-        <h3 class="side-event__title">Biscayne Bay <em>Boat Party</em></h3>
+        <h3 class="side-event__title">Biscayne Bay <em>Boat Oceanfront Soiree</em></h3>
         <div class="side-event__exclusive">Included with every ticket</div>
         <div class="side-event__venue"><span class="side-event__venue-name">Bayside Marina</span><span class="side-event__venue-label">Meet at Fontainebleau</span></div>
         <p class="side-event__desc">Saturday night on Biscayne Bay — drinks, music, skyline views, and one last gathering to close the summit. Shuttle from the Fontainebleau lobby to Bayside Marketplace; departs from Miami Tour Company.</p>
-        <div class="side-event__meta"><strong>Included with every ticket</strong> · VIP deck for VIPs · 400 attendees</div>
+        <div class="side-event__meta"><strong>Plenty of Tray-Passed Food · Open Bar for VIPs · Cash Bar for General Admission</strong></div>
       </article>
     </div>
   </div>
@@ -2749,7 +2750,7 @@ body.menu-open{overflow:hidden}
           <div><div class="venue__detail-label">Address</div><div class="venue__detail-value">4441 Collins Avenue<br>Miami Beach, FL 33140</div></div>
           <div><div class="venue__detail-label">Getting there from airport</div><div class="venue__detail-value">MIA · 25 min drive<br>FLL · 45 min drive</div></div>
           <div><div class="venue__detail-label">Lodging</div><div class="venue__detail-value"><a class="venue__link" href="https://www.fontainebleau.com/miamibeach/" target="_blank" rel="noopener">TSS Room Block @ Fontainebleau</a><br><span style="display:inline-block;margin-top:.5rem">Other hotels? <a class="venue__link" href="https://www.victoirevoyages.com" target="_blank" rel="noopener">Victoire Voyages</a> can secure preferred rates.</span></div></div>
-          <div><div class="venue__detail-label">Getting to side events</div><div class="venue__detail-value">Arkadia Day Club · on site<br>La Côte · on site<br>The LAB Miami · 20 min drive<br>Bayside Marina · 25 min drive</div></div>
+          <div><div class="venue__detail-label">Getting to side events</div><div class="venue__detail-value">Arkadia Day Club · on site<br>La Côte · on site<br>Bayside Marina · 25 min drive</div></div>
         </div>
       </div>
     </div>
@@ -2785,7 +2786,7 @@ body.menu-open{overflow:hidden}
       </details>
       <details class="faq__item">
         <summary class="faq__q"><span class="faq__num">06</span><span class="faq__q-text">What does each day <em>actually look like?</em></span><span class="faq__icon"></span></summary>
-        <div class="faq__a"><p>Doors and breakfast at 7:30 AM, both days.</p><p>The main program runs 9 AM to 5 PM — keynotes, panels, and fireside conversations on a single stage, with proper breaks between sessions and a long buffet lunch. <strong>Day 1 (Friday)</strong> threads Bitcoin, Energy, and Freedom. <strong>Day 2 (Saturday)</strong> is the AI for Individual Rights Day, presented with the Human Rights Foundation.</p><p>Friday closes with the After Party at La Côte. Saturday closes with the Biscayne Bay Boat Party. For anyone with stamina, late-night LobbyCon continues at Bleau Bar.</p></div>
+        <div class="faq__a"><p>Doors and breakfast at 7:30 AM, both days.</p><p>The main program runs 9 AM to 5 PM — keynotes, panels, and fireside conversations on a single stage, with proper breaks between sessions and a long buffet lunch. <strong>Day 1 (Friday)</strong> threads Bitcoin, Energy, and Freedom. <strong>Day 2 (Saturday)</strong> is the AI for Individual Rights Day, presented with the Human Rights Foundation.</p><p>Friday closes with the Oceanfront Soiree at La Côte. Saturday closes with the Biscayne Bay Boat After Party. For anyone with stamina, late-night LobbyCon continues at Bleau Bar.</p></div>
       </details>
       <details class="faq__item">
         <summary class="faq__q"><span class="faq__num">07</span><span class="faq__q-text">What's <em>included</em> with my ticket?</span><span class="faq__icon"></span></summary>
@@ -2793,15 +2794,15 @@ body.menu-open{overflow:hidden}
       </details>
       <details class="faq__item">
         <summary class="faq__q"><span class="faq__num">08</span><span class="faq__q-text">VIP vs. General Admission — what's the difference?</span><span class="faq__icon"></span></summary>
-        <div class="faq__a"><p>Two tiers, 200 seats each, 400 total.</p><p><strong>VIP — $1,995 · 200 seats.</strong> Every event. Reserved front-row seating for both days of the summit, speaker green-room access, VIP sections at the Welcome Dinner and After Party, and a dedicated VIP deck at the Biscayne Bay Boat Party. The Welcome Dinner and After Party are VIP-only — there's no other way in.</p><p><strong>General Admission — $595 / $795 / $995 · 200 seats · phased.</strong> Both days of the summit, the closing Biscayne Bay Boat Party on Saturday night, and Bitcoin Fundamentals on Thursday. Early Bird ends September 30.</p><p>If you want every event and the premium treatment, VIP. If you want the main event, General Admission.</p></div>
+        <div class="faq__a"><p>Two tiers, 200 seats each, 400 total.</p><p><strong>VIP — $1,995 · 200 seats.</strong> Every event. Reserved front-row seating for both days of the summit, speaker green-room access, VIP sections at the Welcome Reception and Oceanfront Soiree, and a dedicated VIP deck at the Biscayne Bay Boat After Party. The Welcome Reception and Oceanfront Soiree are VIP-only — there's no other way in.</p><p><strong>General Admission — $595 / $795 / $995 · 200 seats · phased.</strong> Both days of the summit, the closing Biscayne Bay Boat After Party on Saturday night, and Bitcoin Fundamentals on Thursday. Early Bird ends September 30.</p><p>If you want every event and the premium treatment, VIP. If you want the main event, General Admission.</p></div>
       </details>
       <details class="faq__item">
         <summary class="faq__q"><span class="faq__num">09</span><span class="faq__q-text">Are the side events <em>included?</em></span><span class="faq__icon"></span></summary>
-        <div class="faq__a"><p>Depends on the ticket.</p><p><strong>Every ticket</strong> — VIP and General Admission — includes the closing Biscayne Bay Boat Party on Saturday night and Bitcoin Fundamentals on Thursday evening (first-come, 100 spots).</p><p><strong>VIP only</strong> — the Welcome Dinner at Arkadia Day Club (Thursday) and the After Party at La Côte (Friday). These are not sold separately; a VIP ticket is the only way in.</p><p>See the <a class="venue__link" href="#side-events">Side Events</a> section for venues and timing.</p></div>
+        <div class="faq__a"><p>Depends on the ticket.</p><p><strong>Every ticket</strong> — VIP and General Admission — includes the closing Biscayne Bay Boat After Party on Saturday night and Bitcoin Fundamentals on Thursday evening (first-come, 100 spots).</p><p><strong>VIP only</strong> — the Welcome Reception at Arkadia Day Club (Thursday) and the Oceanfront Soiree at La Côte (Friday). These are not sold separately; a VIP ticket is the only way in.</p><p>See the <a class="venue__link" href="#side-events">Side Events</a> section for venues and timing.</p></div>
       </details>
       <details class="faq__item">
         <summary class="faq__q"><span class="faq__num">10</span><span class="faq__q-text">What are the <em>side events?</em></span><span class="faq__icon"></span></summary>
-        <div class="faq__a"><p>The week wraps the summit in a few smaller, more social gatherings:</p><ul class="faq__bullets"><li><strong>Bitcoin Fundamentals</strong> at Fontainebleau (Thursday evening) — three short sessions on the basics, mining, and why Bitcoin matters for human freedom. <em>Included with every ticket · first-come, 100 spots.</em></li><li><strong>Welcome Dinner</strong> at Arkadia Day Club (Thursday) — early arrivals, speakers, and sponsors. <em>VIP only.</em></li><li><strong>After Party</strong> at La Côte (Friday, after Day 1) — drinks and unhurried conversation poolside. <em>VIP only.</em></li><li><strong>Biscayne Bay Boat Party</strong> (Saturday, closing the summit) — drinks, music, and skyline views on the water from Bayside Marina. <em>Included with every ticket · VIP deck for VIPs.</em></li></ul><p>See the <a class="venue__link" href="#side-events">Side Events</a> section for details.</p></div>
+        <div class="faq__a"><p>The week wraps the summit in a few smaller, more social gatherings:</p><ul class="faq__bullets"><li><strong>Bitcoin Fundamentals</strong> at Fontainebleau (Thursday evening) — three short sessions on the basics, mining, and why Bitcoin matters for human freedom. <em>Included with every ticket · first-come, 100 spots.</em></li><li><strong>Welcome Reception</strong> at Arkadia Day Club (Thursday) — early arrivals, speakers, and sponsors. <em>VIP only.</em></li><li><strong>Oceanfront Soiree</strong> at La Côte (Friday, after Day 1) — drinks and unhurried conversation poolside. <em>VIP only.</em></li><li><strong>Biscayne Bay Boat After Party</strong> (Saturday, closing the summit) — drinks, music, and skyline views on the water from Bayside Marina. <em>Included with every ticket · VIP deck for VIPs.</em></li></ul><p>See the <a class="venue__link" href="#side-events">Side Events</a> section for details.</p></div>
       </details>
       <details class="faq__item">
         <summary class="faq__q"><span class="faq__num">11</span><span class="faq__q-text">Will I get to <em>meet the speakers?</em></span><span class="faq__icon"></span></summary>
@@ -2877,21 +2878,21 @@ body.menu-open{overflow:hidden}
                   <div class="tier__day-label"><span class="tier__day-name">Thursday</span><span class="tier__day-sub">Feb 4</span></div>
                   <ul class="tier__day-list">
                     <li><strong>Bitcoin Fundamentals</strong></li>
-                    <li><strong>Welcome Dinner</strong><span class="tier__day-detail">VIP section</span></li>
+                    <li><strong>Welcome Reception</strong><span class="tier__day-detail">VIP section</span></li>
                   </ul>
                 </div>
                 <div class="tier__day">
                   <div class="tier__day-label"><span class="tier__day-name">Friday</span><span class="tier__day-sub">Day 1</span></div>
                   <ul class="tier__day-list">
                     <li><strong>Summit</strong><span class="tier__day-detail">reserved front-row</span></li>
-                    <li><strong>After Party</strong><span class="tier__day-detail">VIP section</span></li>
+                    <li><strong>Oceanfront Soiree</strong><span class="tier__day-detail">VIP section</span></li>
                   </ul>
                 </div>
                 <div class="tier__day">
                   <div class="tier__day-label"><span class="tier__day-name">Saturday</span><span class="tier__day-sub">Day 2</span></div>
                   <ul class="tier__day-list">
                     <li><strong>Summit</strong><span class="tier__day-detail">reserved front-row</span></li>
-                    <li><strong>Boat Party</strong><span class="tier__day-detail">VIP deck</span></li>
+                    <li><strong>Boat After Party</strong><span class="tier__day-detail">VIP deck</span></li>
                   </ul>
                 </div>
               </div>
@@ -2918,7 +2919,7 @@ body.menu-open{overflow:hidden}
             <div class="tier__day-label"><span class="tier__day-name">Saturday</span><span class="tier__day-sub">Day 2</span></div>
             <ul class="tier__day-list">
               <li><strong>Summit</strong><span class="tier__day-detail">keynotes &amp; panels</span></li>
-              <li><strong>Biscayne Bay Boat Party</strong></li>
+              <li><strong>Biscayne Bay Boat After Party</strong></li>
             </ul>
           </div>
         </div>
@@ -2940,7 +2941,7 @@ body.menu-open{overflow:hidden}
             <div class="tier__day-label"><span class="tier__day-name">Saturday</span><span class="tier__day-sub">Day 2</span></div>
             <ul class="tier__day-list">
               <li><strong>Summit</strong><span class="tier__day-detail">keynotes &amp; panels</span></li>
-              <li><strong>Biscayne Bay Boat Party</strong></li>
+              <li><strong>Biscayne Bay Boat After Party</strong></li>
             </ul>
           </div>
         </div>
@@ -2962,7 +2963,7 @@ body.menu-open{overflow:hidden}
             <div class="tier__day-label"><span class="tier__day-name">Saturday</span><span class="tier__day-sub">Day 2</span></div>
             <ul class="tier__day-list">
               <li><strong>Summit</strong><span class="tier__day-detail">keynotes &amp; panels</span></li>
-              <li><strong>Biscayne Bay Boat Party</strong></li>
+              <li><strong>Biscayne Bay Boat After Party</strong></li>
             </ul>
           </div>
         </div>
@@ -3253,6 +3254,18 @@ body.menu-open{overflow:hidden}
       document.querySelectorAll('.program__board').forEach((board) => {
         board.hidden = board.dataset.day !== day;
       });
+    });
+  });
+
+  // Hero date links → scroll to agenda + select correct day tab
+  document.querySelectorAll('.hero__date-link').forEach((link) => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      const targetDay = link.dataset.day;
+      const targetTab = document.querySelector(`.program__tab[data-day="${targetDay}"]`);
+      if (targetTab) targetTab.click();
+      const agenda = document.getElementById('agenda');
+      if (agenda) agenda.scrollIntoView({ behavior: 'smooth', block: 'start' });
     });
   });
 </script>
