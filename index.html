@@ -843,7 +843,7 @@ body.menu-open{overflow:hidden}
 
 /* === VIP Admission solo tile — 2-col internal layout for compactness === */
 .tickets__vip-solo .tier--vipallaccess{
-  padding:1rem 2rem 1rem;
+  padding:.65rem 2rem .65rem;
 }
 .tier__vip-layout{
   display:grid;
@@ -945,9 +945,9 @@ body.menu-open{overflow:hidden}
   column-gap:.8rem;
   row-gap:.6rem;
   border:1px solid var(--rule-str);
-  padding:2rem .55rem .3rem;
+  padding:1.35rem .55rem .3rem;
   position:relative;
-  margin-top:1.5rem;
+  margin-top:.85rem;
 }
 .tickets__phases-label{
   position:absolute;
@@ -1121,7 +1121,23 @@ body.menu-open{overflow:hidden}
   .tier--vipallaccess .tier__includes strong,.tier--allaccess .tier__includes strong{font-size:.68em}
   .tickets__trust{margin-top:1rem;font-size:.85rem;line-height:1.45}
 }
-.tickets__trust{margin:.1rem auto 0;max-width:760px;text-align:center;font-family:var(--fd);font-style:italic;font-size:.74rem;line-height:1.35;color:var(--ink-soft)}
+.tickets__subhead{
+  font-family:var(--fd);
+  font-style:italic;
+  font-size:clamp(.95rem,1.3vw,1.1rem);
+  line-height:1.35;
+  color:var(--ink-soft);
+  text-align:center;
+  margin:.45rem auto 0;
+  max-width:780px;
+  letter-spacing:-.005em;
+}
+.tickets__subhead em{
+  font-style:italic;
+  color:var(--accent-deep);
+}
+.tickets__trust{margin:.1rem auto 0;max-width:880px;text-align:center;font-family:var(--fd);font-style:italic;font-size:.76rem;line-height:1.4;color:var(--ink-soft)}
+.tickets__trust strong{font-weight:500;color:var(--accent-deep);font-style:normal;letter-spacing:.01em}
 
 
 /* SIDE EVENTS */
@@ -2847,6 +2863,7 @@ body.menu-open{overflow:hidden}
     <header class="sec-hd" id="tickets">
       <div class="sec-hd__num">Nº 08 — Admission</div>
       <h2 class="section-title sec-hd__title">Pick yours. <em>Only 400 spots.</em></h2>
+      <p class="tickets__subhead">Same single track. Same speakers. Same two days. <em>Pick how you experience it.</em></p>
     </header>
     <div class="tickets__grid">
       <div class="tickets__vip-solo">
@@ -2888,7 +2905,7 @@ body.menu-open{overflow:hidden}
               </div>
             </div>
           </div>
-          <a href="https://pay.zaprite.com/pl_wIAImtY5wz" target="_blank" rel="noopener" class="btn">Reserve VIP Admission <span class="btn__arrow">→</span></a>
+          <a href="https://pay.zaprite.com/pl_wIAImtY5wz" target="_blank" rel="noopener" class="btn">Claim Your VIP Seat <span class="btn__arrow">→</span></a>
         </article>
       </div>
       <div class="tickets__phases">
@@ -2903,7 +2920,7 @@ body.menu-open{overflow:hidden}
             <div class="tier__day-label"><span class="tier__day-name">Friday</span><span class="tier__day-sub">Day 1</span></div>
             <ul class="tier__day-list">
               <li><strong>Summit</strong><span class="tier__day-detail">keynotes &amp; panels</span></li>
-              <li><strong>Bitcoin Fundamentals</strong><span class="tier__day-detail">Thursday evening</span></li>
+              <li><strong>Bitcoin Fundamentals</strong><span class="tier__day-detail">Thu eve</span></li>
             </ul>
           </div>
           <div class="tier__day">
@@ -2915,7 +2932,7 @@ body.menu-open{overflow:hidden}
           </div>
         </div>
         <p class="tier__perk-footer">+ Breakfast &amp; Lunch (both days) · Sessions recorded · <a href="https://www.fontainebleau.com/miamibeach/" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;text-underline-offset:2px">Room block at Fontainebleau</a></p>
-        <a href="https://pay.zaprite.com/pl_wIAImtY5wz" target="_blank" rel="noopener" class="btn">Reserve Early Bird <span class="btn__arrow">→</span></a>
+        <a href="https://pay.zaprite.com/pl_wIAImtY5wz" target="_blank" rel="noopener" class="btn">Lock In Early Bird <span class="btn__arrow">→</span></a>
       </article>
       <article class="tier tier--coming-soon">
         <div class="tier__eyebrow">Phase 02 · Standard</div>
@@ -2926,7 +2943,7 @@ body.menu-open{overflow:hidden}
             <div class="tier__day-label"><span class="tier__day-name">Friday</span><span class="tier__day-sub">Day 1</span></div>
             <ul class="tier__day-list">
               <li><strong>Summit</strong><span class="tier__day-detail">keynotes &amp; panels</span></li>
-              <li><strong>Bitcoin Fundamentals</strong><span class="tier__day-detail">Thursday evening</span></li>
+              <li><strong>Bitcoin Fundamentals</strong><span class="tier__day-detail">Thu eve</span></li>
             </ul>
           </div>
           <div class="tier__day">
@@ -2949,7 +2966,7 @@ body.menu-open{overflow:hidden}
             <div class="tier__day-label"><span class="tier__day-name">Friday</span><span class="tier__day-sub">Day 1</span></div>
             <ul class="tier__day-list">
               <li><strong>Summit</strong><span class="tier__day-detail">keynotes &amp; panels</span></li>
-              <li><strong>Bitcoin Fundamentals</strong><span class="tier__day-detail">Thursday evening</span></li>
+              <li><strong>Bitcoin Fundamentals</strong><span class="tier__day-detail">Thu eve</span></li>
             </ul>
           </div>
           <div class="tier__day">
@@ -2965,7 +2982,7 @@ body.menu-open{overflow:hidden}
       </article>
       </div>
     </div>
-    <p class="tickets__trust">Same seat, same program, same two days — only the price changes. Full refund through December 1, 2026 · transfers honored until January 28, 2027.</p>
+    <p class="tickets__trust"><strong>Bitcoin accepted</strong> · Same seat, same program — only the price changes · <strong>Full refund</strong> through December 1, 2026 · Transfers honored until January 28, 2027</p>
   </div>
 </section>
 
