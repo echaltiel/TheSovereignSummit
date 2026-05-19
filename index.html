@@ -860,8 +860,8 @@ body.menu-open{overflow:hidden}
   line-height:1.35;
   font-style:italic;
   opacity:.65;
-  margin:.35rem 0 .25rem;
-  padding-top:.3rem;
+  margin:.2rem 0 .15rem;
+  padding-top:.2rem;
   border-top:1px solid currentColor;
 }
 .tier__perk-footer strong{
@@ -881,7 +881,7 @@ body.menu-open{overflow:hidden}
 
 /* === VIP Admission solo tile — 2-col internal layout for compactness === */
 .tickets__vip-solo .tier--vipallaccess{
-  padding:.35rem 2rem .35rem;
+  padding:.2rem 2rem .2rem;
   justify-content:flex-start;
 }
 .tier__vip-layout{
@@ -906,7 +906,7 @@ body.menu-open{overflow:hidden}
   display:flex;
   flex-direction:column;
   justify-content:center;
-  gap:.45rem;
+  gap:.3rem;
 }
 .tier__vip-schedule .tier__day-grid{
   margin:0;
@@ -914,7 +914,7 @@ body.menu-open{overflow:hidden}
 }
 /* VIP tile: each day item becomes a bordered clickable box with centered content */
 .tier__vip-schedule .tier__day-list{
-  gap:.4rem;
+  gap:.3rem;
 }
 .tier__vip-schedule .tier__day-list li{
   list-style:none;
@@ -927,11 +927,11 @@ body.menu-open{overflow:hidden}
   align-items:center;
   justify-content:center;
   text-align:center;
-  gap:.25rem;
-  padding:.6rem .5rem;
+  gap:.2rem;
+  padding:.45rem .4rem;
   border:1px solid rgba(244,236,224,.18);
   border-radius:1px;
-  min-height:74px;
+  min-height:64px;
   text-decoration:none;
   color:inherit;
   transition:background .2s ease,border-color .2s ease,transform .2s ease;
@@ -1003,7 +1003,7 @@ body.menu-open{overflow:hidden}
   gap:.55rem 1.4rem;
 }
 .tickets__vip-solo .tier--vipallaccess .tier__day-label{
-  margin-bottom:.4rem;
+  margin-bottom:.25rem;
   justify-content:center;
   border-bottom:none;
   padding-bottom:0;
@@ -1036,9 +1036,9 @@ body.menu-open{overflow:hidden}
   column-gap:.8rem;
   row-gap:.6rem;
   border:1px solid var(--rule-str);
-  padding:.95rem .55rem .35rem;
+  padding:.7rem .55rem .3rem;
   position:relative;
-  margin-top:.25rem;
+  margin-top:.2rem;
 }
 .tickets__phases-label{
   position:absolute;
@@ -1060,13 +1060,13 @@ body.menu-open{overflow:hidden}
 
 /* GA day-grid: bordered, clickable, centered boxes — matches VIP aesthetic */
 .tickets__phases .tier__day-grid--3col{
-  gap:.4rem .4rem;
+  gap:.3rem .3rem;
 }
 .tickets__phases .tier__day-label{
   justify-content:center;
   border-bottom:none;
   padding-bottom:0;
-  margin-bottom:.35rem;
+  margin-bottom:.2rem;
   gap:.3rem;
 }
 .tickets__phases .tier__day-name{
@@ -1091,11 +1091,11 @@ body.menu-open{overflow:hidden}
   align-items:center;
   justify-content:center;
   text-align:center;
-  gap:.12rem;
-  padding:.4rem .3rem;
+  gap:.1rem;
+  padding:.3rem .25rem;
   border:1px solid;
   border-radius:1px;
-  min-height:46px;
+  min-height:40px;
   text-decoration:none;
   color:inherit;
   transition:background .2s ease,border-color .2s ease,transform .2s ease;
@@ -1246,12 +1246,13 @@ body.menu-open{overflow:hidden}
 
 /* Shared atoms */
 .tier__ribbon{position:absolute;top:-8px;left:1.1rem;background:var(--accent);color:var(--ink);font-family:var(--fm);font-size:.54rem;letter-spacing:.2em;text-transform:uppercase;padding:.2rem .55rem;font-weight:500}
+.tier__ribbon + .tier__eyebrow{margin-top:.75rem}
 .tier__eyebrow{font-family:var(--fm);font-size:.54rem;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:.3rem}
 .tier--featured .tier__eyebrow{color:var(--accent)}
 .tier__name{font-family:var(--fd);font-size:clamp(1.05rem,1.55vw,1.4rem);line-height:1;letter-spacing:-.015em;margin-bottom:.2rem;font-weight:400}
 .tier__name em{font-style:italic}
 .tier--featured .tier__name em{color:var(--accent)}
-.tier__price-wrap{display:flex;align-items:baseline;gap:.3rem;margin-bottom:.35rem;padding-bottom:.35rem;border-bottom:1px solid var(--rule)}
+.tier__price-wrap{display:flex;align-items:baseline;gap:.3rem;margin-bottom:.25rem;padding-bottom:.25rem;border-bottom:1px solid var(--rule)}
 .tier--featured .tier__price-wrap{border-bottom-color:rgba(244,236,224,.2)}
 .tier__price{font-family:var(--fd);font-size:1.3rem;line-height:1;letter-spacing:-.02em}
 .tier__price-unit{font-family:var(--fm);font-size:.54rem;letter-spacing:.15em;text-transform:uppercase;color:var(--ink-soft)}
@@ -1295,7 +1296,7 @@ body.menu-open{overflow:hidden}
   .tickets__trust{margin-top:1rem;font-size:.85rem;line-height:1.45}
 }
 /* Tickets section: tight header gap + correct scroll anchor offset */
-.tickets .sec-hd{margin-bottom:.6rem !important;scroll-margin-top:80px}
+.tickets .sec-hd{margin-bottom:.4rem !important;scroll-margin-top:75px}
 .tickets__trust{margin:.1rem auto 0;max-width:880px;text-align:center;font-family:var(--fd);font-style:italic;font-size:.76rem;line-height:1.4;color:var(--ink-soft)}
 .tickets__trust strong{font-weight:500;color:var(--accent-deep);font-style:normal;letter-spacing:.01em}
 
