@@ -1018,43 +1018,71 @@ body.menu-open{overflow:hidden}
   }
 }
 @media (max-width:720px){
-  .tickets__vip-solo .tier--vipallaccess{padding:.85rem 1rem .8rem}
+  .tickets__vip-solo .tier--vipallaccess{padding:.7rem .8rem .65rem}
+  /* Keep VIP day-grid 3-column on mobile so the entire tile fits in viewport */
   .tickets__vip-solo .tier--vipallaccess .tier__day-grid--3col{
-    grid-template-columns:1fr;
-    gap:.5rem;
+    grid-template-columns:repeat(3,1fr);
+    gap:.4rem .3rem;
+  }
+  /* Compact day boxes on mobile so they fit in 3 columns */
+  .tickets__vip-solo .tier--vipallaccess .tier__day-list li > a{
+    padding:.4rem .25rem;
+    min-height:62px;
+    gap:.15rem;
+  }
+  .tickets__vip-solo .tier--vipallaccess .tier__day-list li > a strong{
+    font-size:.7rem;
+    line-height:1.15;
+  }
+  .tickets__vip-solo .tier--vipallaccess .tier__day-list .tier__day-detail{
+    font-size:.58rem;
+    line-height:1.2;
+  }
+  .tickets__vip-solo .tier--vipallaccess .tier__day-list .tier__day-vip-badge{
+    font-size:.42rem;
+    padding:.1rem .3rem;
+    letter-spacing:.15em;
+  }
+  .tickets__vip-solo .tier--vipallaccess .tier__day-list .tier__day-link{
+    font-size:.58rem;
+  }
+  /* Compact day labels: stack name and sub vertically to save horizontal space */
+  .tickets__vip-solo .tier--vipallaccess .tier__day-label{
+    margin-bottom:.2rem;
+    gap:.15rem;
+    flex-direction:column;
+    align-items:center;
+  }
+  .tickets__vip-solo .tier--vipallaccess .tier__day-name{
+    font-size:.75rem;
+  }
+  .tickets__vip-solo .tier--vipallaccess .tier__day-sub{
+    font-size:.45rem;
   }
   /* Tighter gap between section title and VIP tile on mobile */
   .tickets .sec-hd{margin-bottom:-.4rem !important}
-  /* Floating arrow pinned above iOS Safari URL bar, visible only while in tickets section */
+  /* Simple bouncing arrow in normal flow between VIP and GA tiles */
   .tickets__scroll-hint{
-    position:fixed;
-    bottom:calc(env(safe-area-inset-bottom, 0px) + 4.5rem);
-    left:50%;
-    margin-left:-24px;
-    width:48px;
-    height:48px;
+    position:static;
     display:flex !important;
     align-items:center;
     justify-content:center;
+    margin:.6rem auto;
+    width:44px;
+    height:44px;
     background:transparent;
     border:none;
     box-shadow:none;
     text-decoration:none;
     cursor:pointer;
-    z-index:80;
-    opacity:0;
-    visibility:hidden;
-    pointer-events:none;
-    transition:opacity .3s ease, visibility .3s ease;
-  }
-  .tickets__scroll-hint--visible{
+    grid-column:1/-1;
+    justify-self:center;
     opacity:1;
     visibility:visible;
     pointer-events:auto;
   }
   .tickets__scroll-hint:active .tickets__scroll-hint-arrow{
     color:var(--accent-deep);
-    transform:translateY(2px);
   }
   .tickets__scroll-hint-arrow{
     display:inline-block;
@@ -1063,10 +1091,9 @@ body.menu-open{overflow:hidden}
     font-weight:700;
     color:var(--accent);
     animation:scrollHintBounce 1.4s ease-in-out infinite;
-    filter:drop-shadow(0 0 10px rgba(244,236,224,.85)) drop-shadow(0 2px 4px rgba(0,0,0,.3));
   }
   @keyframes scrollHintBounce{
-    0%,100%{transform:translateY(0);opacity:.85}
+    0%,100%{transform:translateY(0);opacity:.7}
     50%{transform:translateY(5px);opacity:1}
   }
 }
