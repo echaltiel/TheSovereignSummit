@@ -1023,7 +1023,46 @@ body.menu-open{overflow:hidden}
     grid-template-columns:1fr;
     gap:.5rem;
   }
+  /* Tighter gap between section title and VIP tile on mobile */
+  .tickets .sec-hd{margin-bottom:-.4rem !important}
+  /* Show the scroll-down hint to General Admission */
+  .tickets__scroll-hint{
+    display:flex !important;
+    align-items:center;
+    justify-content:center;
+    gap:.55rem;
+    margin-top:.85rem;
+    padding:.65rem .9rem;
+    background:rgba(244,236,224,.06);
+    border:1px solid rgba(244,236,224,.22);
+    border-radius:1px;
+    color:rgba(244,236,224,.82);
+    text-decoration:none;
+    font-family:var(--fm);
+    font-size:.58rem;
+    letter-spacing:.22em;
+    text-transform:uppercase;
+    transition:background .2s ease,color .2s ease,border-color .2s ease;
+  }
+  .tickets__scroll-hint:hover,
+  .tickets__scroll-hint:active{
+    background:rgba(244,236,224,.12);
+    color:#F4ECE0;
+    border-color:rgba(244,236,224,.4);
+  }
+  .tickets__scroll-hint-arrow{
+    display:inline-block;
+    font-size:1rem;
+    line-height:1;
+    animation:scrollHintBounce 1.8s ease-in-out infinite;
+  }
+  @keyframes scrollHintBounce{
+    0%,100%{transform:translateY(0);opacity:.7}
+    50%{transform:translateY(3px);opacity:1}
+  }
 }
+/* Hide the scroll-down hint on desktop (only useful when tiles stack vertically) */
+.tickets__scroll-hint{display:none}
 @media (max-width:520px){
   .tier__day-grid--2col{grid-template-columns:1fr;gap:.4rem}
 }
@@ -3057,13 +3096,17 @@ body.menu-open{overflow:hidden}
                 </div>
               </div>
               <a href="https://pay.zaprite.com/pl_wIAImtY5wz" target="_blank" rel="noopener" class="btn">Claim Your VIP Seat <span class="btn__arrow">→</span></a>
+              <a href="#early-bird" class="tickets__scroll-hint" aria-label="Scroll down to General Admission options">
+                <span class="tickets__scroll-hint-text">View General Admission</span>
+                <span class="tickets__scroll-hint-arrow" aria-hidden="true">↓</span>
+              </a>
             </div>
           </div>
         </article>
       </div>
       <div class="tickets__phases">
         <div class="tickets__phases-label">General Admission · 200 spots · split across 3 phases</div>
-        <article class="tier tier--featured">
+        <article class="tier tier--featured" id="early-bird">
         <div class="tier__ribbon">Ends September 30 · Save $400</div>
         <div class="tier__eyebrow">Phase 01 · Early Bird</div>
         <h3 class="tier__name"><em>Early Bird</em> General Admission</h3>
