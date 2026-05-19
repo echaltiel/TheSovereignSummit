@@ -1018,58 +1018,96 @@ body.menu-open{overflow:hidden}
   }
 }
 @media (max-width:720px){
-  .tickets__vip-solo .tier--vipallaccess{padding:.7rem .8rem .65rem}
-  /* Keep VIP day-grid 3-column on mobile so the entire tile fits in viewport */
+  /* Compressed VIP tile padding */
+  .tickets__vip-solo .tier--vipallaccess{padding:.35rem .9rem .3rem}
+  /* Revert to 1-column day grid (original look) */
   .tickets__vip-solo .tier--vipallaccess .tier__day-grid--3col{
-    grid-template-columns:repeat(3,1fr);
-    gap:.4rem .3rem;
+    grid-template-columns:1fr;
+    gap:.3rem;
   }
-  /* Compact day boxes on mobile so they fit in 3 columns */
+  /* Compressed VIP header */
+  .tickets__vip-solo .tier--vipallaccess .tier__eyebrow{
+    font-size:.52rem;
+    margin-bottom:.05rem;
+    padding-top:.1rem;
+  }
+  .tickets__vip-solo .tier--vipallaccess .tier__name{
+    font-size:1.05rem;
+    margin-bottom:.05rem;
+    line-height:1;
+  }
+  .tickets__vip-solo .tier--vipallaccess .tier__price-wrap{
+    margin-bottom:.15rem;
+    padding-bottom:.15rem;
+  }
+  .tickets__vip-solo .tier--vipallaccess .tier__price{
+    font-size:1.5rem;
+  }
+  .tickets__vip-solo .tier--vipallaccess .tier__price-unit{
+    font-size:.55rem;
+  }
+  .tickets__vip-solo .tier--vipallaccess .tier__desc-bullets{
+    font-size:.7rem;
+    line-height:1.2;
+    margin-bottom:.2rem;
+  }
+  /* Compact day labels */
+  .tickets__vip-solo .tier--vipallaccess .tier__day-label{
+    margin-bottom:.12rem;
+    padding-bottom:0;
+  }
+  .tickets__vip-solo .tier--vipallaccess .tier__day-name{
+    font-size:.85rem;
+  }
+  .tickets__vip-solo .tier--vipallaccess .tier__day-sub{
+    font-size:.48rem;
+  }
+  /* Compact day boxes - keep the 1-column layout but smaller */
+  .tickets__vip-solo .tier--vipallaccess .tier__day-list{
+    gap:.22rem;
+  }
   .tickets__vip-solo .tier--vipallaccess .tier__day-list li > a{
-    padding:.4rem .25rem;
-    min-height:62px;
-    gap:.15rem;
+    padding:.35rem .55rem;
+    min-height:0;
+    gap:.1rem;
   }
   .tickets__vip-solo .tier--vipallaccess .tier__day-list li > a strong{
-    font-size:.7rem;
+    font-size:.78rem;
     line-height:1.15;
   }
   .tickets__vip-solo .tier--vipallaccess .tier__day-list .tier__day-detail{
-    font-size:.58rem;
+    font-size:.62rem;
     line-height:1.2;
   }
   .tickets__vip-solo .tier--vipallaccess .tier__day-list .tier__day-vip-badge{
     font-size:.42rem;
-    padding:.1rem .3rem;
+    padding:.1rem .35rem;
     letter-spacing:.15em;
+    margin-top:.05rem;
   }
   .tickets__vip-solo .tier--vipallaccess .tier__day-list .tier__day-link{
-    font-size:.58rem;
+    font-size:.62rem;
   }
-  /* Compact day labels: stack name and sub vertically to save horizontal space */
-  .tickets__vip-solo .tier--vipallaccess .tier__day-label{
-    margin-bottom:.2rem;
-    gap:.15rem;
-    flex-direction:column;
-    align-items:center;
+  /* Compressed schedule gap (between day-grid and CTA) */
+  .tier__vip-schedule{gap:.3rem}
+  /* Smaller CTA button */
+  .tickets__vip-solo .tier--vipallaccess .btn{
+    padding:.65rem .85rem;
+    font-size:.7rem;
   }
-  .tickets__vip-solo .tier--vipallaccess .tier__day-name{
-    font-size:.75rem;
-  }
-  .tickets__vip-solo .tier--vipallaccess .tier__day-sub{
-    font-size:.45rem;
-  }
-  /* Tighter gap between section title and VIP tile on mobile */
-  .tickets .sec-hd{margin-bottom:-.4rem !important}
-  /* Simple bouncing arrow in normal flow between VIP and GA tiles */
+  /* Compressed section title above */
+  .tickets .sec-hd{margin-bottom:-.5rem !important}
+  .tickets .sec-hd__num{font-size:.62rem;padding-top:.3rem}
+  .tickets .sec-hd__title{font-size:1.35rem;line-height:1.1;padding-top:.2rem}
+  /* Simple bouncing arrow in normal flow */
   .tickets__scroll-hint{
     position:static;
     display:flex !important;
     align-items:center;
     justify-content:center;
-    margin:.6rem auto;
-    width:44px;
-    height:44px;
+    margin:.45rem auto;
+    width:40px;
+    height:40px;
     background:transparent;
     border:none;
     box-shadow:none;
@@ -1086,7 +1124,7 @@ body.menu-open{overflow:hidden}
   }
   .tickets__scroll-hint-arrow{
     display:inline-block;
-    font-size:1.5rem;
+    font-size:1.4rem;
     line-height:1;
     font-weight:700;
     color:var(--accent);
