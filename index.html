@@ -1018,16 +1018,17 @@ body.menu-open{overflow:hidden}
   }
 }
 @media (max-width:720px){
-  /* VIP tile padding — tight to keep tile compact */
-  .tickets__vip-solo .tier--vipallaccess{padding:.5rem .9rem .4rem}
+  /* VIP tile padding — tight; padding-top reduced because eyebrow has its own margin-top to clear the ribbon */
+  .tickets__vip-solo .tier--vipallaccess{padding:.15rem .9rem .4rem}
   /* 1-column day grid with moderate gap between day groups */
   .tickets__vip-solo .tier--vipallaccess .tier__day-grid--3col{
     grid-template-columns:1fr;
     gap:.5rem;
   }
-  /* VIP header — tight spacing, readable fonts */
+  /* VIP header — eyebrow needs margin-top because nested layout breaks .tier__ribbon + .tier__eyebrow adjacent-sibling rule */
   .tickets__vip-solo .tier--vipallaccess .tier__eyebrow{
     font-size:.56rem;
+    margin-top:.95rem;
     margin-bottom:.12rem;
     padding-top:.05rem;
   }
