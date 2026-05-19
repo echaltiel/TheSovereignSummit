@@ -1025,45 +1025,35 @@ body.menu-open{overflow:hidden}
   }
   /* Tighter gap between section title and VIP tile on mobile */
   .tickets .sec-hd{margin-bottom:-.4rem !important}
-  /* Bridge button between VIP and GA tiles — distinct from both tile CTAs */
+  /* Bouncing arrow between VIP and GA tiles — minimal, no box, no text */
   .tickets__scroll-hint{
     display:flex !important;
     align-items:center;
     justify-content:center;
-    gap:.7rem;
-    margin:1.1rem 0;
-    padding:1.1rem 1.3rem;
-    background:var(--ink);
-    color:var(--paper);
-    border:2px solid var(--accent);
-    border-radius:1px;
+    margin:.4rem auto .6rem;
+    width:60px;
+    height:60px;
+    background:transparent;
+    border:none;
+    box-shadow:none;
     text-decoration:none;
-    font-family:var(--fm);
-    font-size:.7rem;
-    letter-spacing:.22em;
-    text-transform:uppercase;
-    font-weight:500;
-    box-shadow:0 4px 0 var(--accent-deep), 0 6px 18px rgba(19,30,51,.2);
-    transition:background .2s ease,transform .15s ease,box-shadow .15s ease;
-    width:100%;
+    cursor:pointer;
     grid-column:1/-1;
-    position:relative;
   }
-  .tickets__scroll-hint:active{
-    transform:translateY(3px);
-    box-shadow:0 1px 0 var(--accent-deep), 0 2px 6px rgba(19,30,51,.25);
-    background:#0a1224;
+  .tickets__scroll-hint:active .tickets__scroll-hint-arrow{
+    color:var(--accent-deep);
   }
   .tickets__scroll-hint-arrow{
     display:inline-block;
-    font-size:1.15rem;
+    font-size:2.4rem;
     line-height:1;
+    font-weight:700;
     color:var(--accent);
     animation:scrollHintBounce 1.4s ease-in-out infinite;
   }
   @keyframes scrollHintBounce{
-    0%,100%{transform:translateY(0);opacity:.85}
-    50%{transform:translateY(4px);opacity:1}
+    0%,100%{transform:translateY(0);opacity:.7}
+    50%{transform:translateY(8px);opacity:1}
   }
 }
 /* Hide on desktop (tiles are side-by-side, no scroll needed) */
@@ -3105,8 +3095,7 @@ body.menu-open{overflow:hidden}
           </div>
         </article>
       </div>
-      <a href="#early-bird" class="tickets__scroll-hint" aria-label="Scroll down to General Admission options">
-        <span class="tickets__scroll-hint-text">View General Admission</span>
+      <a href="#early-bird" class="tickets__scroll-hint" aria-label="View General Admission options below">
         <span class="tickets__scroll-hint-arrow" aria-hidden="true">↓</span>
       </a>
       <div class="tickets__phases">
