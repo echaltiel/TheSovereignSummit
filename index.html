@@ -287,7 +287,7 @@ body.menu-open{overflow:hidden}
 @media (max-width:720px){.sec-hd{grid-template-columns:1fr;gap:1.25rem}}
 
 /* PROGRAM */
-.program{background:var(--ink);color:var(--paper);padding:clamp(5rem,10vw,8rem) 0}
+.program{background:var(--ink);color:var(--paper);padding:clamp(2rem,4vw,3rem) 0}
 /* Cream fade at the bottom of the program section. Guarantees no dark navy
    can bleed into the side-events area regardless of where the browser lands
    the scroll target — iOS Safari's smooth scroll can momentarily overshoot
@@ -897,7 +897,7 @@ body.menu-open{overflow:hidden}
   font-weight:600;
   line-height:1;
 }
-.side-event__desc{font-family:var(--fd);font-size:.82rem;line-height:1.3;color:var(--ink-soft);flex:1;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;margin:0}
+.side-event__desc{font-family:var(--fd);font-size:.82rem;line-height:1.5;color:var(--ink-soft);flex:1;margin:0}
 .side-event__meta{font-family:var(--fm);font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-soft);padding-top:.35rem;border-top:1px solid var(--rule)}
 .side-event__meta strong{color:var(--accent-deep);font-weight:inherit}
 .side-event__top{display:flex;justify-content:space-between;align-items:flex-start;gap:1rem;width:100%}
@@ -2079,85 +2079,87 @@ body.menu-open{overflow:hidden}
   <div class="container">
     <header class="sec-hd" id="side-events">
       <div class="sec-hd__num">Nº 03 — Side Events</div>
-      <h2 class="section-title sec-hd__title">Before and after <em>the main day.</em></h2>
+      <h2 class="section-title sec-hd__title">An <em>immersive</em> week in Miami Beach.</h2>
     </header>
     <div class="side-events__grid">
+
+      <!-- Bitcoin Fundamentals -->
       <article class="side-event">
-        <a class="side-event__link" href="#" aria-label="Bitcoin Fundamentals — more info"></a>
+        <a class="side-event__link" href="#" aria-label="Bitcoin Fundamentals — sign up via Luma"></a>
         <div class="side-event__top">
           <div class="side-event__when">
             <div class="side-event__date">Thu · Feb 4</div>
             <div class="side-event__time">5PM — 6:30PM</div>
           </div>
-          <a class="side-event__sponsor" href="https://bitcoinpark.com" target="_blank" rel="noopener"><span class="side-event__sponsor-label">Presented by</span> Bitcoin Park <span class="side-event__sponsor-arrow">→</span></a>
+          <a class="side-event__sponsor" href="#" aria-label="Sponsor TBD"><span class="side-event__sponsor-label">Presented by</span> TBD</a>
         </div>
         <h3 class="side-event__title">Bitcoin <em>Fundamentals</em></h3>
-        <div class="side-event__venue"><span class="side-event__venue-name">Ballroom TBD</span><span class="side-event__venue-label">inside Fontainebleau</span></div>
-        <p class="side-event__desc">3 short 30-minute sessions on the basics, mining, and why Bitcoin is important for human freedom. The night before the summit, for anyone who wants to walk in already fluent.</p>
-        <div class="side-event__meta">Free with ticket · Limited to 100 spots</div>
+        <div style="display:flex;gap:.5rem;flex-wrap:wrap">
+          <div class="side-event__exclusive">Included with every ticket</div>
+          <div class="side-event__exclusive" style="background:linear-gradient(90deg,#8B5E1A,#C8882A,#8B5E1A);color:#fff">First Come First Served</div>
+        </div>
+        <div class="side-event__venue"><span class="side-event__venue-name">Coastal Convention Center</span><span class="side-event__venue-label">inside Fontainebleau</span></div>
+        <p class="side-event__desc">3 short 30-minute sessions on the basics, mining, and why Bitcoin is important for human freedom. The night before the Summit, for anyone who wants to walk in already fluent.</p>
+        <div class="side-event__meta">Click on this tile to sign up via Luma</div>
       </article>
+
+      <!-- Welcome Reception -->
       <article class="side-event">
-        <a class="side-event__link" href="#tickets" aria-label="Welcome Dinner — reserve via bundle"></a>
+        <a class="side-event__link" href="#tickets" aria-label="Welcome Reception — VIP ticket required"></a>
         <div class="side-event__top">
           <div class="side-event__when">
             <div class="side-event__date">Thu · Feb 4</div>
             <div class="side-event__time">7PM — 10PM</div>
           </div>
-          <a class="side-event__sponsor" href="https://nydig.com" target="_blank" rel="noopener"><span class="side-event__sponsor-label">Presented by</span> NYDIG <span class="side-event__sponsor-arrow">→</span></a>
+          <a class="side-event__sponsor" href="#" aria-label="Sponsor TBD"><span class="side-event__sponsor-label">Presented by</span> TBD</a>
         </div>
-        <h3 class="side-event__title">Welcome <em>Dinner</em></h3>
-        <div class="side-event__exclusive">All Access Only</div>
+        <h3 class="side-event__title">Welcome <em>Reception</em></h3>
+        <div class="side-event__exclusive" style="background:linear-gradient(90deg,#D4A93C 0%,#E8C46A 50%,#D4A93C 100%);color:#0A1224;align-self:flex-start">VIP Ticket Only</div>
         <div class="side-event__venue"><span class="side-event__venue-name">Arkadia Day Club</span><span class="side-event__venue-label">inside Fontainebleau</span></div>
-        <p class="side-event__desc">The night before, with Fontainebleau's day club privately reserved for the evening. Speakers, partners, and a small group of attendees gather for the first conversations of the week.</p>
-        <div class="side-event__meta"><strong>All Access only</strong> · $295 value · 200 seats</div>
+        <p class="side-event__desc">The evening before the Summit, Fontainebleau&#8217;s day club will be privately reserved for an exclusive Welcome Reception. Speakers, partners, and <em>only VIP ticket holders</em> will come together for the first conversations of the week, setting the tone for the days ahead.</p>
+        <div class="side-event__meta">Plenty of tray-passed food · Open bar</div>
       </article>
+
+      <!-- Oceanfront Soiree -->
       <article class="side-event">
-        <a class="side-event__link" href="#tickets" aria-label="After Party — reserve via bundle"></a>
+        <a class="side-event__link" href="#tickets" aria-label="Oceanfront Soiree — VIP ticket required"></a>
         <div class="side-event__top">
           <div class="side-event__when">
             <div class="side-event__date">Fri · Feb 5</div>
             <div class="side-event__time">7PM — 10PM</div>
           </div>
-          <a class="side-event__sponsor" href="https://www.bitrefill.com" target="_blank" rel="noopener"><span class="side-event__sponsor-label">Presented by</span> Bitrefill <span class="side-event__sponsor-arrow">→</span></a>
+          <a class="side-event__sponsor" href="#" aria-label="Sponsor TBD"><span class="side-event__sponsor-label">Presented by</span> TBD</a>
         </div>
-        <h3 class="side-event__title">After <em>Party</em></h3>
-        <div class="side-event__exclusive">All Access Only</div>
-        <div class="side-event__venue"><span class="side-event__venue-name">La Côte</span><span class="side-event__venue-label">inside Fontainebleau</span></div>
-        <p class="side-event__desc">Drinks, dinner, and unhurried conversation poolside at Fontainebleau's Mediterranean restaurant. The day doesn't end at 5 — the most useful conversations rarely happen in the room.</p>
-        <div class="side-event__meta"><strong>All Access only</strong> · $195 value · 200 seats</div>
+        <h3 class="side-event__title">Oceanfront <em>Soiree</em></h3>
+        <div class="side-event__exclusive" style="background:linear-gradient(90deg,#D4A93C 0%,#E8C46A 50%,#D4A93C 100%);color:#0A1224;align-self:flex-start">VIP Ticket Only</div>
+        <div class="side-event__venue"><span class="side-event__venue-name">La C&#244;te</span><span class="side-event__venue-label">inside Fontainebleau</span></div>
+        <p class="side-event__desc">Following the first day of programming, the Oceanfront Soiree brings speakers, partners, and <em>only VIP ticket holders</em> together for drinks, dinner, and relaxed conversation with ocean views at Fontainebleau&#8217;s La C&#244;te. The official sessions may end at 5, but the real connections often continue well into the evening.</p>
+        <div class="side-event__meta">Food buffet · Open bar</div>
       </article>
-      <article class="side-event side-event--hrf">
-        <a class="side-event__link" href="#" aria-label="AI for Individual Rights Day — more info"></a>
-        <div class="side-event__top">
-          <div class="side-event__when">
-            <div class="side-event__date">Sat · Feb 6</div>
-            <div class="side-event__time">10AM — 5PM</div>
-          </div>
-          <a class="side-event__sponsor" href="https://hrf.org/program/ai-for-individual-rights/" target="_blank" rel="noopener"><span class="side-event__sponsor-label">Presented by</span> Human Rights Foundation <span class="side-event__sponsor-arrow">→</span></a>
-        </div>
-        <h3 class="side-event__title">AI for Individual Rights <em>Day</em></h3>
-        <div class="side-event__venue"><span class="side-event__venue-name">The LAB Miami</span><span class="side-event__venue-label">offsite</span></div>
-        <p class="side-event__desc">How dictatorships are weaponizing AI — and how open-source, privacy-protecting tools can put that power back in individual hands. A day of talks, workshops, and working sessions with the builders.</p>
-        <div class="side-event__meta">$149 · 400 spots total (200 Individual Tickets + 200 All Access Bundles)</div>
-      </article>
+
+      <!-- Boat After Party -->
       <article class="side-event">
-        <a class="side-event__link" href="#" aria-label="Biscayne Bay Boat Party — more info"></a>
+        <a class="side-event__link" href="#tickets" aria-label="Boat After Party — more info"></a>
         <div class="side-event__top">
           <div class="side-event__when">
             <div class="side-event__date">Sat · Feb 6</div>
             <div class="side-event__time">7PM — 10PM</div>
           </div>
-          <a class="side-event__sponsor" href="https://onrampbitcoin.com" target="_blank" rel="noopener"><span class="side-event__sponsor-label">Presented by</span> Onramp <span class="side-event__sponsor-arrow">→</span></a>
+          <a class="side-event__sponsor" href="#" aria-label="Sponsor TBD"><span class="side-event__sponsor-label">Presented by</span> TBD</a>
         </div>
-        <h3 class="side-event__title">Biscayne Bay <em>Boat Party</em></h3>
-        <div class="side-event__venue"><span class="side-event__venue-name">Bayside Marina</span><span class="side-event__venue-label">Meet at Fontainebleau</span></div>
-        <p class="side-event__desc">Saturday night on Biscayne Bay — drinks, music, skyline views, and one last gathering before the week winds down. Shuttle from the Fontainebleau lobby to Bayside Marketplace; departs from Miami Tour Company.</p>
-        <div class="side-event__meta">$199 · Separate ticket · 400 spots total (200 Individual Tickets + 200 All Access Bundles)</div>
+        <h3 class="side-event__title">Boat <em>After Party</em></h3>
+        <div style="display:flex;gap:.5rem;flex-wrap:wrap">
+          <div class="side-event__exclusive" style="background:linear-gradient(90deg,#D4A93C 0%,#E8C46A 50%,#D4A93C 100%);color:#0A1224">Included with VIP Ticket</div>
+          <div class="side-event__exclusive" style="background:linear-gradient(90deg,#8B5E1A,#C8882A,#8B5E1A);color:#fff">Add-On for GA</div>
+        </div>
+        <div class="side-event__venue"><span class="side-event__venue-name">Bayside Marina</span><span class="side-event__venue-label">meet at Fontainebleau</span></div>
+        <p class="side-event__desc">To close the Summit, guests will gather Saturday night aboard Biscayne Bay Yacht Charters for an evening on Biscayne Bay with drinks, music, and Miami skyline views. Shuttles will run from the Fontainebleau lobby to Bayside Marketplace, with boarding at Bayside Marina, Pier 1. VIP ticket holders have guaranteed access. Additional spots are available as an add-on for GA ticket holders &#8211; limited to 400 total guests.</p>
+        <div class="side-event__meta">Food &amp; open bar included · Limited capacity</div>
       </article>
+
     </div>
   </div>
 </section>
-
 <section class="friends">
   <div class="container">
     <header class="sec-hd" id="sponsors">
