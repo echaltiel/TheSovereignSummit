@@ -612,7 +612,11 @@ body.menu-open{overflow:hidden}
 
 /* VENUE */
 .venue{background:var(--paper-deep)}
-.venue .sec-hd{margin-bottom:clamp(.85rem,1.75vw,1.25rem)}
+.venue-hd{display:grid;grid-template-columns:1fr 3fr;gap:clamp(2rem,5vw,4rem);align-items:start;margin-bottom:clamp(.85rem,1.75vw,1.25rem)}
+.venue-hd__num{font-family:var(--fm);font-size:.78rem;letter-spacing:.24em;text-transform:uppercase;color:var(--ink-soft);padding-top:.8rem;border-top:1px solid var(--ink)}
+.venue-hd__title{font-family:var(--fd);font-weight:400;font-size:clamp(1.6rem,3vw,2.6rem);line-height:1.05;letter-spacing:-.015em;padding-top:.5rem;color:var(--ink)}
+.venue-hd__title em{font-style:italic;color:var(--accent-deep)}
+@media(max-width:720px){.venue-hd{grid-template-columns:1fr;gap:1.25rem}}
 
 .venue__grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:clamp(1.5rem,3.5vw,3rem);align-items:start}
 .venue__media{display:flex;flex-direction:column;gap:.65rem;align-items:stretch}
@@ -2929,10 +2933,10 @@ body.menu-open{overflow:hidden}
 
 <section class="venue" id="venue">
   <div class="container">
-    <header class="sec-hd">
-      <div class="sec-hd__num">Nº 06 — Venue</div>
-      <h2 class="section-title sec-hd__title"><em>Fontainebleau.</em> Miami Beach.</h2>
-    </header>
+    <div class="venue-hd">
+      <div class="venue-hd__num">Nº 06 — Venue</div>
+      <h2 class="venue-hd__title"><em>Fontainebleau.</em> Miami Beach.</h2>
+    </div>
     <div class="venue__grid">
       <div class="venue__media">
         <a class="venue__brand-link" href="https://www.fontainebleau.com/miamibeach/" target="_blank" rel="noopener" aria-label="Visit Fontainebleau Miami Beach">
