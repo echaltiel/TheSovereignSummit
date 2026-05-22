@@ -1594,7 +1594,7 @@ body.menu-open{overflow:hidden}
 .friends__grid--activation{grid-template-columns:repeat(4,1fr)}
 .friend{padding:1rem .9rem;border-right:1px solid var(--ink);border-bottom:1px solid var(--ink);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.3rem;text-align:center;min-height:80px;transition:background .2s;text-decoration:none;color:inherit;position:relative}
 .friend--platinum{min-height:auto;padding:.7rem 1rem .65rem;gap:.15rem}
-.friend--platinum .friend__name{font-size:1.55rem}
+.friend--platinum .friend__name{font-size:1.05rem}
 .friend--gold{min-height:auto;padding:.7rem 1rem .65rem;gap:.15rem}
 .friend--gold .friend__name{font-size:1.05rem}
 .friend--silver{min-height:auto;padding:.7rem 1rem .65rem;gap:.15rem}
@@ -2045,8 +2045,8 @@ body.menu-open{overflow:hidden}
   flex-direction:column;
   justify-content:center;
   align-items:center;
-  gap:.3rem;
-  padding:.85rem 1.5rem .75rem;
+  gap:.15rem;
+  padding:.7rem 1rem .65rem;
   min-height:auto;
 }
 .friend--platinum .friend__logo{
@@ -2055,12 +2055,12 @@ body.menu-open{overflow:hidden}
   justify-content:center;
   flex:0 0 auto;
   width:auto;
-  height:44px;
+  height:80px;
   max-width:320px;
   background:transparent;
   position:relative;
   z-index:2;
-  margin-bottom:.05rem;
+  margin-bottom:.1rem;
 }
 .friend--platinum .friend__logo img{
   width:auto;
@@ -2072,9 +2072,9 @@ body.menu-open{overflow:hidden}
 .friend--platinum .friend__logo-fallback{
   font-family:var(--fd);
   font-style:italic;
-  font-size:1.2rem;
+  font-size:1.6rem;
   color:#2a2d3a;
-  opacity:.55;
+  opacity:.45;
   letter-spacing:-.02em;
 }
 .friend--platinum .friend__logo--has-image .friend__logo-fallback{display:none}
@@ -2086,7 +2086,7 @@ body.menu-open{overflow:hidden}
 /* Hide tier name when wordmark is in logo (consistent with platinum pattern).
    The logo already says "Mastercard" — repeating it is visual noise. */
 .friend--platinum .friend__logo--has-image ~ .friend__text .friend__name{display:none}
-.friend--platinum .friend__name{font-size:1.1rem}
+.friend--platinum .friend__name{font-size:1.05rem}
 .friend--platinum .friend__type{
   font-family:var(--fm);
   font-size:.62rem;
