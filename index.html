@@ -2058,7 +2058,7 @@ body.menu-open{overflow:hidden}
   align-items:center;
   justify-content:center;
   flex:0 0 auto;
-  width:auto;
+  width:180px;
   height:44px;
   max-width:320px;
   background:transparent;
@@ -3401,7 +3401,7 @@ body.menu-open{overflow:hidden}
       if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
     });
   }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
-  document.querySelectorAll('.sec-hd, .program__row, .speaker, .partner, .side-event, .venue__illus, .venue__content, .tier, .faq__item, .friend, .news__inner').forEach((el, i) => {
+  document.querySelectorAll('.program__row, .speaker, .partner, .side-event, .venue__illus, .venue__content, .tier, .faq__item, .friend, .news__inner').forEach((el, i) => {
     el.classList.add('reveal');
     el.style.transitionDelay = (Math.min(i, 6) * 40) + 'ms';
     io.observe(el);
