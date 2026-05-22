@@ -1607,6 +1607,7 @@ body.menu-open{overflow:hidden}
 .friend:hover{background:var(--paper-light)}
 .friend:hover .friend__name{color:var(--accent-deep)}
 .friend__logo{display:none}
+.friend__logo--placeholder{display:flex;align-items:center;justify-content:center}
 /* Gold / Silver / Activation logo support — show logo area when tier card has a logo image */
 /* Gold / Silver — hero-logo-first centered (matches platinum pattern, scaled down) */
 .friend--gold .friend__logo,
@@ -1623,6 +1624,7 @@ body.menu-open{overflow:hidden}
 }
 .friend--gold .friend__logo{height:44px;width:180px;max-width:320px;margin-bottom:.05rem}
 .friend--silver .friend__logo{height:44px;width:180px;max-width:320px;margin-bottom:.05rem}
+.friend--activation .friend__logo--placeholder{height:32px;width:140px}
 .friend--gold .friend__logo img,
 .friend--silver .friend__logo img{
   width:auto;
@@ -1664,16 +1666,11 @@ body.menu-open{overflow:hidden}
 }
 /* Fallback placeholders — sponsor logo image */
 .friend__logo-fallback{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-family:var(--fd);
-  font-style:italic;
-  font-size:1.4rem;
-  color:var(--paper-deep);
-  opacity:.4;
-  width:100%;
+  width:auto;
   height:100%;
+  max-width:90%;
+  object-fit:contain;
+  opacity:.6;
 }
 .friend--gold .friend__logo-fallback,
 .friend--silver .friend__logo-fallback{
@@ -2327,9 +2324,9 @@ body.menu-open{overflow:hidden}
   </div>
 </section>
 
-<section class="speakers">
+<section class="speakers" id="speakers">
   <div class="container">
-    <header class="sec-hd" id="speakers">
+    <header class="sec-hd">
       <div class="sec-hd__num">Nº 01 — Speakers</div>
       <h2 class="section-title sec-hd__title">World-class <em>speakers.</em></h2>
     </header>
@@ -2645,9 +2642,9 @@ body.menu-open{overflow:hidden}
   </div>
 </section>
 
-<section class="program">
+<section class="program" id="agenda">
   <div class="container">
-    <header class="sec-hd" id="agenda">
+    <header class="sec-hd">
       <div class="sec-hd__num">Nº 02 — Agenda</div>
       <h2 class="section-title sec-hd__title">Two days, <em>coming soon.</em></h2>
     </header>
@@ -2702,9 +2699,9 @@ body.menu-open{overflow:hidden}
   </div>
 </section>
 
-<section class="side-events">
+<section class="side-events" id="side-events">
   <div class="container">
-    <header class="sec-hd" id="side-events">
+    <header class="sec-hd">
       <div class="sec-hd__num">Nº 03 — Side Events</div>
       <h2 class="section-title sec-hd__title">An <em>immersive</em> week in Miami Beach.</h2>
     </header>
@@ -2779,46 +2776,46 @@ body.menu-open{overflow:hidden}
   </div>
 </section>
 
-<section class="friends">
+<section class="friends" id="sponsors">
   <div class="container">
-    <header class="sec-hd" id="sponsors">
+    <header class="sec-hd">
       <div class="sec-hd__num">Nº 04 — Sponsors</div>
       <h2 class="section-title sec-hd__title">Organizations <em>building toward something real.</em></h2>
     </header>
     <div class="friends__tier friends__tier--platinum">
       <div class="friends__tier-label"><span>Platinum</span></div>
       <div class="friends__grid friends__grid--platinum">
-        <div class="friend friend--platinum"><div class="friend__logo"><span class="friend__logo-fallback">?</span></div><div class="friend__text"><div class="friend__name">Platinum Sponsor</div><div class="friend__type">TBD</div></div></div>
+        <div class="friend friend--platinum"><div class="friend__logo friend__logo--placeholder"><img src="images/sponsor-placeholder.png" alt="" class="friend__logo-fallback"></div><div class="friend__text"><div class="friend__name">Platinum Sponsor</div><div class="friend__type">TBD</div></div></div>
       </div>
     </div>
     <div class="friends__tier friends__tier--gold">
       <div class="friends__tier-label"><span>Gold</span></div>
       <div class="friends__grid friends__grid--gold">
-        <div class="friend friend--gold"><div class="friend__logo"><span class="friend__logo-fallback">?</span></div><div class="friend__text"><div class="friend__name">Gold Sponsor</div><div class="friend__type">TBD</div></div></div>
-        <div class="friend friend--gold"><div class="friend__logo"><span class="friend__logo-fallback">?</span></div><div class="friend__text"><div class="friend__name">Gold Sponsor</div><div class="friend__type">TBD</div></div></div>
+        <div class="friend friend--gold"><div class="friend__logo friend__logo--placeholder"><img src="images/sponsor-placeholder.png" alt="" class="friend__logo-fallback"></div><div class="friend__text"><div class="friend__name">Gold Sponsor</div><div class="friend__type">TBD</div></div></div>
+        <div class="friend friend--gold"><div class="friend__logo friend__logo--placeholder"><img src="images/sponsor-placeholder.png" alt="" class="friend__logo-fallback"></div><div class="friend__text"><div class="friend__name">Gold Sponsor</div><div class="friend__type">TBD</div></div></div>
       </div>
     </div>
     <div class="friends__tier friends__tier--silver">
       <div class="friends__tier-label"><span>Silver</span></div>
       <div class="friends__grid friends__grid--silver">
-        <div class="friend friend--silver"><div class="friend__logo"><span class="friend__logo-fallback">?</span></div><div class="friend__text"><div class="friend__name">Silver Sponsor</div><div class="friend__type">TBD</div></div></div>
-        <div class="friend friend--silver"><div class="friend__logo"><span class="friend__logo-fallback">?</span></div><div class="friend__text"><div class="friend__name">Silver Sponsor</div><div class="friend__type">TBD</div></div></div>
+        <div class="friend friend--silver"><div class="friend__logo friend__logo--placeholder"><img src="images/sponsor-placeholder.png" alt="" class="friend__logo-fallback"></div><div class="friend__text"><div class="friend__name">Silver Sponsor</div><div class="friend__type">TBD</div></div></div>
+        <div class="friend friend--silver"><div class="friend__logo friend__logo--placeholder"><img src="images/sponsor-placeholder.png" alt="" class="friend__logo-fallback"></div><div class="friend__text"><div class="friend__name">Silver Sponsor</div><div class="friend__type">TBD</div></div></div>
       </div>
     </div>
     <div class="friends__tier friends__tier--hidden" id="friendsActivations">
       <div class="friends__tier-label">Activation Sponsors</div>
       <div class="friends__grid friends__grid--activation">
-        <div class="friend friend--activation"><div class="friend__logo"><span class="friend__logo-fallback">?</span></div><div class="friend__text"><div class="friend__name">Sponsor</div><div class="friend__type">TBD</div></div></div>
-        <div class="friend friend--activation"><div class="friend__logo"><span class="friend__logo-fallback">?</span></div><div class="friend__text"><div class="friend__name">Sponsor</div><div class="friend__type">TBD</div></div></div>
-        <div class="friend friend--activation"><div class="friend__logo"><span class="friend__logo-fallback">?</span></div><div class="friend__text"><div class="friend__name">Sponsor</div><div class="friend__type">TBD</div></div></div>
-        <div class="friend friend--activation"><div class="friend__logo"><span class="friend__logo-fallback">?</span></div><div class="friend__text"><div class="friend__name">Sponsor</div><div class="friend__type">TBD</div></div></div>
-        <div class="friend friend--activation"><div class="friend__logo"><span class="friend__logo-fallback">?</span></div><div class="friend__text"><div class="friend__name">Sponsor</div><div class="friend__type">TBD</div></div></div>
-        <div class="friend friend--activation"><div class="friend__logo"><span class="friend__logo-fallback">?</span></div><div class="friend__text"><div class="friend__name">Sponsor</div><div class="friend__type">TBD</div></div></div>
-        <div class="friend friend--activation"><div class="friend__logo"><span class="friend__logo-fallback">?</span></div><div class="friend__text"><div class="friend__name">Sponsor</div><div class="friend__type">TBD</div></div></div>
-        <div class="friend friend--activation"><div class="friend__logo"><span class="friend__logo-fallback">?</span></div><div class="friend__text"><div class="friend__name">Sponsor</div><div class="friend__type">TBD</div></div></div>
-        <div class="friend friend--activation"><div class="friend__logo"><span class="friend__logo-fallback">?</span></div><div class="friend__text"><div class="friend__name">Sponsor</div><div class="friend__type">TBD</div></div></div>
-        <div class="friend friend--activation"><div class="friend__logo"><span class="friend__logo-fallback">?</span></div><div class="friend__text"><div class="friend__name">Sponsor</div><div class="friend__type">TBD</div></div></div>
-        <div class="friend friend--activation"><div class="friend__logo"><span class="friend__logo-fallback">?</span></div><div class="friend__text"><div class="friend__name">Sponsor</div><div class="friend__type">TBD</div></div></div>
+        <div class="friend friend--activation"><div class="friend__logo friend__logo--placeholder"><img src="images/sponsor-placeholder.png" alt="" class="friend__logo-fallback"></div><div class="friend__text"><div class="friend__name">Sponsor</div><div class="friend__type">TBD</div></div></div>
+        <div class="friend friend--activation"><div class="friend__logo friend__logo--placeholder"><img src="images/sponsor-placeholder.png" alt="" class="friend__logo-fallback"></div><div class="friend__text"><div class="friend__name">Sponsor</div><div class="friend__type">TBD</div></div></div>
+        <div class="friend friend--activation"><div class="friend__logo friend__logo--placeholder"><img src="images/sponsor-placeholder.png" alt="" class="friend__logo-fallback"></div><div class="friend__text"><div class="friend__name">Sponsor</div><div class="friend__type">TBD</div></div></div>
+        <div class="friend friend--activation"><div class="friend__logo friend__logo--placeholder"><img src="images/sponsor-placeholder.png" alt="" class="friend__logo-fallback"></div><div class="friend__text"><div class="friend__name">Sponsor</div><div class="friend__type">TBD</div></div></div>
+        <div class="friend friend--activation"><div class="friend__logo friend__logo--placeholder"><img src="images/sponsor-placeholder.png" alt="" class="friend__logo-fallback"></div><div class="friend__text"><div class="friend__name">Sponsor</div><div class="friend__type">TBD</div></div></div>
+        <div class="friend friend--activation"><div class="friend__logo friend__logo--placeholder"><img src="images/sponsor-placeholder.png" alt="" class="friend__logo-fallback"></div><div class="friend__text"><div class="friend__name">Sponsor</div><div class="friend__type">TBD</div></div></div>
+        <div class="friend friend--activation"><div class="friend__logo friend__logo--placeholder"><img src="images/sponsor-placeholder.png" alt="" class="friend__logo-fallback"></div><div class="friend__text"><div class="friend__name">Sponsor</div><div class="friend__type">TBD</div></div></div>
+        <div class="friend friend--activation"><div class="friend__logo friend__logo--placeholder"><img src="images/sponsor-placeholder.png" alt="" class="friend__logo-fallback"></div><div class="friend__text"><div class="friend__name">Sponsor</div><div class="friend__type">TBD</div></div></div>
+        <div class="friend friend--activation"><div class="friend__logo friend__logo--placeholder"><img src="images/sponsor-placeholder.png" alt="" class="friend__logo-fallback"></div><div class="friend__text"><div class="friend__name">Sponsor</div><div class="friend__type">TBD</div></div></div>
+        <div class="friend friend--activation"><div class="friend__logo friend__logo--placeholder"><img src="images/sponsor-placeholder.png" alt="" class="friend__logo-fallback"></div><div class="friend__text"><div class="friend__name">Sponsor</div><div class="friend__type">TBD</div></div></div>
+        <div class="friend friend--activation"><div class="friend__logo friend__logo--placeholder"><img src="images/sponsor-placeholder.png" alt="" class="friend__logo-fallback"></div><div class="friend__text"><div class="friend__name">Sponsor</div><div class="friend__type">TBD</div></div></div>
       </div>
     </div>
     <div class="friends__actions">
@@ -2835,9 +2832,9 @@ body.menu-open{overflow:hidden}
   </div>
 </section>
 
-<section class="partners">
+<section class="partners" id="partners">
   <div class="container">
-    <header class="sec-hd" id="partners">
+    <header class="sec-hd">
       <div class="sec-hd__num">Nº 05 — Partners</div>
       <h2 class="section-title sec-hd__title">Built with the <em>best in the space.</em></h2>
     </header>
@@ -2931,9 +2928,9 @@ body.menu-open{overflow:hidden}
   </div>
 </section>
 
-<section class="venue">
+<section class="venue" id="venue">
   <div class="container">
-    <header class="sec-hd" id="venue">
+    <header class="sec-hd">
       <div class="sec-hd__num">Nº 06 — Venue</div>
       <h2 class="section-title sec-hd__title"><em>Fontainebleau.</em> Miami Beach.</h2>
     </header>
@@ -2965,9 +2962,9 @@ body.menu-open{overflow:hidden}
   </div>
 </section>
 
-<section class="faq">
+<section class="faq" id="faq">
   <div class="container">
-    <header class="sec-hd" id="faq">
+    <header class="sec-hd">
       <div class="sec-hd__num">Nº 07 — FAQ</div>
       <h2 class="section-title sec-hd__title">Everything you need <em>to know.</em></h2>
     </header>
@@ -3060,9 +3057,9 @@ body.menu-open{overflow:hidden}
   </div>
 </section>
 
-<section class="tickets">
+<section class="tickets" id="tickets">
   <div class="container">
-    <header class="sec-hd" id="tickets">
+    <header class="sec-hd">
       <div class="sec-hd__num">Nº 08 — Admission</div>
       <h2 class="section-title sec-hd__title">Two ways to <em>experience the summit.</em></h2>
     </header>
