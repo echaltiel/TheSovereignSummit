@@ -6,14 +6,14 @@
 <meta name="theme-color" content="#F4ECE0" />
 <meta name="apple-mobile-web-app-status-bar-style" content="default" />
 <title>The Sovereign Summit · February 5, 2027</title>
-<meta name="description" content="An immersive full-day Bitcoin experience at the Coastal Convention Center, Fontainebleau Miami Beach. Friday, February 5, 2027." />
+<meta name="description" content="An immersive full-day Bitcoin experience at the Fontainebleau, Miami Beach. Friday, February 5, 2027." />
 
 <!-- Open Graph (iMessage, Facebook, LinkedIn, Slack, Discord) -->
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="The Sovereign Summit" />
 <meta property="og:url" content="https://thesovereignsummit.com/" />
 <meta property="og:title" content="The Sovereign Summit · February 5, 2027" />
-<meta property="og:description" content="An immersive full-day Bitcoin experience at the Coastal Convention Center, Fontainebleau Miami Beach. Friday, February 5, 2027." />
+<meta property="og:description" content="An immersive full-day Bitcoin experience at the Fontainebleau, Miami Beach. Friday, February 5, 2027." />
 <meta property="og:image" content="https://thesovereignsummit.com/images/TSS_Badge_Cream.png" />
 <meta property="og:image:secure_url" content="https://thesovereignsummit.com/images/TSS_Badge_Cream.png" />
 <meta property="og:image:type" content="image/png" />
@@ -24,7 +24,7 @@
 <!-- Twitter / X -->
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="The Sovereign Summit · February 5, 2027" />
-<meta name="twitter:description" content="An immersive full-day Bitcoin experience at the Coastal Convention Center, Fontainebleau Miami Beach." />
+<meta name="twitter:description" content="An immersive full-day Bitcoin experience at the Fontainebleau, Miami Beach." />
 <meta name="twitter:image" content="https://thesovereignsummit.com/images/TSS_Badge_Cream.png" />
 <meta name="twitter:image:alt" content="The Sovereign Summit badge logo" />
 
@@ -79,7 +79,7 @@
 :root{--ink:#131e33;--ink-deep:#0a1224;--ink-soft:#2b3a58;--paper:#F4ECE0;--paper-deep:#EADFCC;--paper-light:#FAF5EA;--accent:#D9651F;--accent-deep:#A84810;--rule:rgba(19,30,51,.18);--rule-str:rgba(19,30,51,.35);--fd:'Instrument Serif',Georgia,serif;--fb:'Archivo',system-ui,sans-serif;--fm:'JetBrains Mono',ui-monospace,monospace;--gut:clamp(1.25rem,3vw,2.5rem);--max:1360px}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased;scroll-padding-top:112px;background:#F4ECE0;background-color:#F4ECE0;min-height:100%}
-@media (max-width:1080px){html{scroll-padding-top:102px}}
+@media (max-width:900px){html{scroll-padding-top:102px}}
 body{padding-bottom:env(safe-area-inset-bottom)}
 body{font-family:var(--fb);font-size:17px;line-height:1.55;color:var(--ink);background:#F4ECE0;background-color:#F4ECE0;overflow-x:hidden;min-height:100vh}
 img,svg{display:block;max-width:100%}
@@ -199,15 +199,15 @@ section{padding:clamp(2.5rem,5vw,4rem) 0;position:relative}
 .mobile-menu__cta:hover{background:var(--accent-deep);border-color:var(--accent-deep);color:var(--paper)}
 body.menu-open{overflow:hidden}
 
-@media (max-width:1080px){.nav__links{display:none}.nav__actions{display:none}.nav{grid-template-columns:1fr auto}.nav__brand img{height:52px}.nav__toggle{display:flex}}
+@media (max-width:900px){.nav__links{display:none}.nav__actions{display:none}.nav{grid-template-columns:1fr auto}.nav__brand img{height:52px}.nav__toggle{display:flex}}
 
 /* HERO */
 .hero{padding:clamp(1rem,2vw,1.5rem) 0}
 .hero > .container{max-width:none !important;padding:0 !important;width:100%}
-.hero__grid{display:grid;grid-template-columns:1fr 1fr;align-items:stretch;width:100%;min-height:calc(100vh - 130px);padding:0 clamp(1rem,2vw,2rem);max-height:calc(100vh - 130px)}
+.hero__grid{display:grid;grid-template-columns:1fr 1fr;align-items:center;width:100%;min-height:calc(100vh - 130px);padding:0 clamp(1rem,2vw,2rem);max-height:calc(100vh - 130px)}
 .hero__logo-col{display:flex;align-items:center;justify-content:center;min-height:0;width:100%;overflow:hidden;background:var(--paper)}
 .hero__logo-col img{display:block;width:100%;height:auto;aspect-ratio:1/1;max-height:calc(100vh - 180px);object-fit:contain}
-.hero__info{display:flex;flex-direction:column;gap:clamp(1rem,1.5vw,1.5rem);padding-left:clamp(1.5rem,3vw,3rem);padding-right:clamp(1rem,2vw,2rem);justify-content:center;max-height:calc(100vh - 130px);overflow:hidden;position:relative}
+.hero__info{display:flex;flex-direction:column;gap:clamp(1rem,1.5vw,1.5rem);padding-left:clamp(1.5rem,3vw,3rem);padding-right:clamp(1rem,2vw,2rem);justify-content:center;max-height:calc(100vh - 180px);overflow:hidden;position:relative}
 .hero__eyebrow{color:var(--accent-deep);font-size:.78rem;letter-spacing:.24em}
 .hero__warning{display:flex;flex-direction:column;gap:.18rem;padding:.7rem 1rem;background:#C3282E;color:#fff;border:2px solid #5B1518;font-family:var(--fm);align-self:stretch;z-index:10}
 .hero__warning-title{font-size:.85rem;font-weight:500;text-transform:uppercase;letter-spacing:.22em;display:flex;align-items:center;gap:.55rem;line-height:1.1}
@@ -222,9 +222,6 @@ body.menu-open{overflow:hidden}
 .hero__fact dt{font-family:var(--fm);font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-soft);margin:0}
 .hero__fact dd{font-family:var(--fd);font-size:clamp(1.25rem,1.35vw,1.4rem);line-height:1.3;margin:0}
 .hero__fact dd em{font-style:italic;color:var(--accent-deep)}
-.hero__date-link{font-style:italic;color:var(--accent-deep);text-decoration:none;border-bottom:1px solid transparent;transition:border-color .2s ease,color .2s ease;cursor:pointer}
-.hero__date-link:hover{border-bottom-color:var(--accent-deep)}
-.hero__date-link:focus-visible{outline:2px solid var(--accent-deep);outline-offset:3px;border-radius:2px}
 .hero__fact-link{color:inherit;text-decoration:underline;text-decoration-color:rgba(19,30,51,.28);text-decoration-thickness:1px;text-underline-offset:3px;transition:text-decoration-color .2s}
 .hero__fact-link:hover{text-decoration-color:var(--accent-deep)}
 .hero__scroll{display:none}
@@ -300,63 +297,8 @@ body.menu-open{overflow:hidden}
 .program .sec-hd__num{color:var(--paper-deep);opacity:.7;border-top-color:var(--paper-deep)}
 .program .section-title{color:var(--paper)}
 .program .section-title em{color:var(--accent)}
-.program__board{margin-top:0;border-top:none}
-.program__board[hidden]{display:none}
+.program__board{margin-top:clamp(2rem,4vw,3rem);border-top:1px solid rgba(244,236,224,.2)}
 .program__row{display:grid;grid-template-columns:130px 1fr auto;gap:clamp(1rem,3vw,2.5rem);padding:1.35rem .5rem;border-bottom:1px solid rgba(244,236,224,.14);align-items:baseline;transition:background .3s}
-
-/* Two-day agenda tab switcher */
-.program__tabs{
-  display:flex;
-  gap:0;
-  margin-top:clamp(1.5rem,3vw,2rem);
-  border-bottom:1px solid rgba(244,236,224,.2);
-}
-.program__tab{
-  flex:1;
-  background:none;
-  border:none;
-  color:var(--paper-deep);
-  padding:1.1rem 1.4rem;
-  cursor:pointer;
-  text-align:left;
-  font-family:var(--fb);
-  display:flex;
-  flex-direction:column;
-  gap:.18rem;
-  border-bottom:2px solid transparent;
-  transition:color .25s, background .25s, border-color .25s;
-  margin-bottom:-1px;
-}
-.program__tab:hover{color:var(--paper);background:rgba(244,236,224,.04)}
-.program__tab--active{color:var(--paper);border-bottom-color:var(--accent);background:rgba(244,236,224,.04)}
-.program__tab--day2.program__tab--active{border-bottom-color:#DF068B}
-.program__tab-day{font-family:var(--fd);font-size:clamp(1.05rem,1.6vw,1.3rem);line-height:1.1}
-.program__tab-date{font-family:var(--fm);font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;opacity:.7}
-.program__tab-theme{font-family:var(--fm);font-size:.54rem;letter-spacing:.2em;text-transform:uppercase;opacity:.7;margin-top:.15rem}
-.program__tab--active .program__tab-theme{color:var(--accent);opacity:1}
-.program__tab--day2.program__tab--active .program__tab-theme{color:#DF068B}
-
-/* Day 2 themed board — HRF magenta accents */
-.program__board-theme{
-  font-family:var(--fm);
-  font-size:.58rem;
-  letter-spacing:.22em;
-  text-transform:uppercase;
-  color:#DF068B;
-  padding:1.1rem .5rem .8rem;
-  border-bottom:1px solid rgba(223,6,139,.22);
-  font-weight:500;
-}
-.program__board--day2 .program__row--feat{background:rgba(223,6,139,.1)}
-.program__board--day2 .program__row--feat .program__tag{color:#DF068B;opacity:1}
-.program__board--day2 .program__title em{color:#DF068B}
-
-@media (max-width:520px){
-  .program__tab{padding:.85rem 1rem}
-  .program__tab-day{font-size:1rem}
-  .program__tab-date{font-size:.55rem}
-  .program__tab-theme{font-size:.5rem;letter-spacing:.16em}
-}
 .program__row:hover{background:rgba(244,236,224,.04)}
 .program__time{font-family:var(--fm);font-size:.82rem;letter-spacing:.1em;color:var(--paper-deep)}
 .program__title{font-family:var(--fd);font-size:clamp(1.2rem,2.2vw,1.6rem);line-height:1.15}
@@ -401,13 +343,13 @@ body.menu-open{overflow:hidden}
 /* Tier 1 cards (within the 4-col grid) — slimmer than original to free vertical space */
 .speakers__grid:not(.speakers__grid--md) .speaker{padding:1.1rem 1.1rem 1rem}
 .speakers__grid:not(.speakers__grid--md) .speaker__portrait{width:64px;height:64px;font-size:1.7rem;margin-bottom:.85rem}
-.speakers__grid:not(.speakers__grid--md) .speaker__placeholder{font-size:0}
+.speakers__grid:not(.speakers__grid--md) .speaker__placeholder{font-size:1.7rem}
 
 /* MEDIUM speaker card — used in tier 2/3 grids of 8 */
 .speaker--md{padding:.6rem .5rem .55rem;align-items:center;text-align:center}
 .speaker--md .speaker__index{display:none}
 .speaker--md .speaker__portrait{width:42px;height:42px;margin-bottom:.4rem;font-size:1.1rem}
-.speaker--md .speaker__placeholder{font-size:0}
+.speaker--md .speaker__placeholder{font-size:1.1rem}
 .speaker--md .speaker__name{font-size:.82rem;line-height:1.05;margin-bottom:.15rem;letter-spacing:-.005em}
 .speaker--md .speaker__role{font-size:.5rem;letter-spacing:.12em;margin-bottom:0;line-height:1.3}
 .speaker--md .speaker__topic{display:none}
@@ -480,8 +422,8 @@ body.menu-open{overflow:hidden}
     align-self:center
   }
   .speakers__grid:not(.speakers__grid--md) .speaker__portrait{width:42px;height:42px;margin-bottom:0;font-size:1.1rem}
-  .speakers__grid:not(.speakers__grid--md) .speaker__placeholder{font-size:0}
-  .speaker__placeholder{font-size:0}
+  .speakers__grid:not(.speakers__grid--md) .speaker__placeholder{font-size:1.1rem}
+  .speaker__placeholder{font-size:1.1rem}
   .speaker__name{
     grid-column:2;
     grid-row:1;
@@ -612,11 +554,8 @@ body.menu-open{overflow:hidden}
 
 /* VENUE */
 .venue{background:var(--paper-deep)}
-.venue-hd{display:grid;grid-template-columns:1fr 3fr;gap:clamp(2rem,5vw,4rem);align-items:start;margin-bottom:clamp(.85rem,1.75vw,1.25rem)}
-.venue-hd__num{font-family:var(--fm);font-size:.78rem;letter-spacing:.24em;text-transform:uppercase;color:var(--ink-soft);padding-top:.8rem;border-top:1px solid var(--ink)}
-.venue-hd__title{font-family:var(--fd);font-weight:400;font-size:clamp(1.6rem,3vw,2.6rem);line-height:1.05;letter-spacing:-.015em;padding-top:.5rem;color:var(--ink)}
-.venue-hd__title em{font-style:italic;color:var(--accent-deep)}
-@media(max-width:720px){.venue-hd{grid-template-columns:1fr;gap:1.25rem}}
+.venue{padding:1.25rem 0 1.75rem !important}
+.venue .sec-hd{margin-bottom:clamp(.85rem,1.75vw,1.25rem)}
 
 .venue__grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:clamp(1.5rem,3.5vw,3rem);align-items:start}
 .venue__media{display:flex;flex-direction:column;gap:.65rem;align-items:stretch}
@@ -646,7 +585,7 @@ body.menu-open{overflow:hidden}
 @media (max-width:880px){.venue__grid{grid-template-columns:1fr}.venue__illus{aspect-ratio:16/9;max-height:200px}.venue__details{grid-template-columns:repeat(2,1fr)}.venue__brand-link{align-self:flex-start}}
 @media (max-width:520px){
   .venue{padding:.85rem 0 1.5rem !important}
-  .venue .sec-hd{margin-bottom:.5rem;gap:.4rem;margin-top:.5rem}
+  .venue .sec-hd{margin-bottom:.5rem;gap:.4rem}
   .venue .sec-hd__num{padding-top:.45rem;font-size:.7rem}
   
   .venue .sec-hd__title{padding-top:0}
@@ -667,7 +606,7 @@ body.menu-open{overflow:hidden}
 .tickets{padding:.3rem 0 .1rem !important}
 .tickets .sec-hd{margin-bottom:.25rem;padding-top:.15rem;padding-bottom:.2rem}
 
-.tickets__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.4rem}
+.tickets__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.8rem}
 
 /* Base phase-tier card */
 .tier{background:var(--paper-light);border:1px solid var(--ink);padding:.55rem .8rem;position:relative;display:flex;flex-direction:column;min-height:auto;transition:transform .3s,box-shadow .3s}
@@ -740,411 +679,6 @@ body.menu-open{overflow:hidden}
   margin-bottom:0;
 }
 
-/* VIP solo card — spans full width of the tickets grid */
-.tickets__vip-solo{
-  grid-column:1/-1;
-  width:100%;
-}
-
-/* === Day-by-day inclusion grid (used in VIP and GA tiles) === */
-.tier__day-grid{
-  display:grid;
-  width:100%;
-  gap:.6rem 2.2rem;
-  margin:.4rem 0;
-}
-.tier__day-grid--3col{
-  grid-template-columns:repeat(3, 1fr);
-}
-.tier__day-grid--2col{
-  grid-template-columns:repeat(2, 1fr);
-}
-.tier__day{
-  text-align:left;
-  min-width:0;
-}
-.tier__day-label{
-  display:flex;
-  align-items:baseline;
-  gap:.5rem;
-  margin-bottom:.45rem;
-  padding-bottom:.3rem;
-  border-bottom:1px solid currentColor;
-  opacity:.92;
-  flex-wrap:wrap;
-}
-.tier__day-name{
-  font-family:var(--fd);
-  font-size:.95rem;
-  font-style:italic;
-  line-height:1.1;
-  font-weight:400;
-  letter-spacing:0;
-  text-transform:none;
-}
-.tier__day-sub{
-  font-family:var(--fm);
-  font-size:.52rem;
-  letter-spacing:.18em;
-  text-transform:uppercase;
-  font-weight:500;
-  opacity:.7;
-}
-.tier__day-list{
-  list-style:none;
-  padding:0;
-  margin:0;
-  display:flex;
-  flex-direction:column;
-  gap:.36rem;
-}
-.tier__day-list li{
-  font-family:var(--fb);
-  font-size:.8rem;
-  line-height:1.42;
-  padding:0;
-}
-.tier__day-list li strong{
-  font-weight:500;
-  letter-spacing:-.005em;
-}
-.tier__day-list .tier__day-detail{
-  font-style:italic;
-  opacity:.72;
-  font-size:.94em;
-}
-.tier__day-list .tier__day-detail::before{
-  content:"·";
-  margin:0 .35em;
-  opacity:.55;
-  font-style:normal;
-  font-weight:400;
-}
-/* Clickable detail link — gold + underlined to signal action */
-.tier__day-list .tier__day-link{
-  color:#E8C46A;
-  text-decoration:underline;
-  text-decoration-thickness:1px;
-  text-underline-offset:2px;
-  font-style:italic;
-  font-size:.94em;
-  transition:color .2s ease;
-  cursor:pointer;
-}
-.tier__day-list .tier__day-link:hover{
-  color:#fff;
-  text-decoration-thickness:1.5px;
-}
-/* Gold VIP TICKET ONLY pill badge — matches side-event__exclusive style */
-.tier__day-list .tier__day-vip-badge{
-  display:inline-block;
-  background:linear-gradient(90deg,#D4A93C,#E8C46A,#D4A93C);
-  color:#0A1224;
-  font-family:var(--fm);
-  font-size:.48rem;
-  letter-spacing:.18em;
-  text-transform:uppercase;
-  font-weight:700;
-  padding:.14rem .42rem;
-  margin-left:.55rem;
-  border-radius:1px;
-  vertical-align:middle;
-  line-height:1.3;
-  white-space:nowrap;
-}
-/* Stronger contrast on VIP gold accent */
-.tier--vipallaccess .tier__day-list .tier__day-detail{
-  color:#E8C46A;
-  opacity:.78;
-}
-.tier__perk-footer{
-  font-family:var(--fb);
-  font-size:.6rem;
-  line-height:1.35;
-  font-style:italic;
-  opacity:.65;
-  margin:.2rem 0 .15rem;
-  padding-top:.2rem;
-  border-top:1px solid currentColor;
-}
-.tier__perk-footer strong{
-  font-weight:600;
-  font-style:normal;
-  letter-spacing:.01em;
-}
-/* Tier-specific day label colors */
-.tier--vipallaccess .tier__day-label{border-bottom-color:rgba(232,196,106,.35)}
-.tier--vipallaccess .tier__day-name{color:#E8C46A}
-.tier--vipallaccess .tier__day-sub{color:#E8C46A;opacity:.65}
-.tier--featured .tier__day-label{border-bottom-color:rgba(217,101,31,.4)}
-.tier--featured .tier__day-name{color:var(--accent)}
-.tier--featured .tier__day-sub{color:var(--accent);opacity:.75}
-.tier--vipallaccess .tier__perk-footer{border-top-color:rgba(232,196,106,.22)}
-.tier--featured .tier__perk-footer{border-top-color:rgba(244,236,224,.18);color:var(--paper-deep)}
-
-/* === VIP Admission solo tile — 2-col internal layout for compactness === */
-.tickets__vip-solo .tier--vipallaccess{
-  padding:.65rem 2rem .25rem;
-  justify-content:flex-start;
-}
-.tier__vip-layout{
-  display:grid;
-  grid-template-columns:minmax(280px,1fr) minmax(540px,1.5fr);
-  gap:1.8rem;
-  align-items:stretch;
-  width:100%;
-  margin-bottom:.2rem;
-}
-.tier__vip-info{
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  gap:.15rem;
-  width:100%;
-}
-.tier__vip-schedule{
-  width:100%;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  gap:.3rem;
-}
-.tier__vip-schedule .tier__day-grid{
-  margin:0;
-  max-width:none;
-}
-/* VIP tile: each day item becomes a bordered clickable box with centered content */
-.tier__vip-schedule .tier__day-list{
-  gap:.3rem;
-}
-.tier__vip-schedule .tier__day-list li{
-  list-style:none;
-  padding:0;
-  margin:0;
-}
-.tier__vip-schedule .tier__day-list li > a{
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  gap:.2rem;
-  padding:.45rem .4rem;
-  border:1px solid rgba(244,236,224,.18);
-  border-radius:1px;
-  min-height:56px;
-  text-decoration:none;
-  color:inherit;
-  transition:background .2s ease,border-color .2s ease,transform .2s ease;
-  cursor:pointer;
-}
-.tier__vip-schedule .tier__day-list li > a:hover{
-  background:rgba(232,196,106,.06);
-  border-color:rgba(232,196,106,.45);
-  transform:translateY(-1px);
-}
-.tier__vip-schedule .tier__day-list li > a:focus-visible{
-  outline:2px solid #E8C46A;
-  outline-offset:2px;
-}
-.tier__vip-schedule .tier__day-list .tier__day-detail::before{
-  display:none;
-}
-.tier__vip-schedule .tier__day-list .tier__day-vip-badge{
-  margin-left:0;
-}
-.tickets__vip-solo .tier--vipallaccess .tier__eyebrow{
-  margin-bottom:.15rem;
-}
-.tickets__vip-solo .tier--vipallaccess .tier__name{
-  margin:0 0 .12rem;
-}
-.tickets__vip-solo .tier--vipallaccess .tier__price-wrap{
-  display:flex;
-  justify-content:center;
-  align-items:baseline;
-  gap:.35rem;
-  margin:0 0 .4rem;
-  border-bottom:none;
-  padding:0;
-}
-.tickets__vip-solo .tier--vipallaccess .tier__desc-bullets{
-  max-width:100%;
-  margin:.15rem auto .35rem;
-  align-items:center;
-  text-align:center;
-  gap:.05rem;
-}
-.tickets__vip-solo .tier--vipallaccess .tier__desc-bullets li{
-  font-size:.78rem;
-  line-height:1.35;
-  font-style:italic;
-}
-.tickets__vip-solo .tier--vipallaccess .tier__perk-footer{
-  max-width:100%;
-  margin:.25rem auto 0;
-  text-align:center;
-  border-top:none;
-  padding-top:0;
-  font-style:italic;
-  font-size:.7rem;
-  opacity:.75;
-}
-.tickets__vip-solo .tier--vipallaccess .btn{
-  display:block;
-  margin:0;
-  padding:.75rem 2rem;
-  font-size:.7rem;
-  width:100%;
-  text-align:center;
-}
-/* tighter sub-column gap in 2-col layout */
-.tickets__vip-solo .tier--vipallaccess .tier__day-grid--3col{
-  grid-template-columns:repeat(3,1fr);
-  gap:.55rem 1.4rem;
-}
-.tickets__vip-solo .tier--vipallaccess .tier__day-label{
-  margin-bottom:.25rem;
-  justify-content:center;
-  border-bottom:none;
-  padding-bottom:0;
-}
-.tickets__vip-solo .tier--vipallaccess .tier__day-name{
-  font-size:.9rem;
-}
-@media (max-width:920px){
-  .tier__vip-layout{
-    grid-template-columns:1fr;
-    gap:1rem;
-  }
-}
-@media (max-width:720px){
-  /* VIP tile padding — tight; padding-top reduced because eyebrow has its own margin-top to clear the ribbon */
-  .tickets__vip-solo .tier--vipallaccess{padding:.15rem .9rem .4rem}
-  /* 1-column day grid with moderate gap between day groups */
-  .tickets__vip-solo .tier--vipallaccess .tier__day-grid--3col{
-    grid-template-columns:1fr;
-    gap:.5rem;
-  }
-  /* VIP header — eyebrow needs margin-top because nested layout breaks .tier__ribbon + .tier__eyebrow adjacent-sibling rule */
-  .tickets__vip-solo .tier--vipallaccess .tier__eyebrow{
-    font-size:.56rem;
-    margin-top:.95rem;
-    margin-bottom:.12rem;
-    padding-top:.05rem;
-  }
-  .tickets__vip-solo .tier--vipallaccess .tier__name{
-    font-size:1.1rem;
-    margin-bottom:.08rem;
-    line-height:1.05;
-  }
-  .tickets__vip-solo .tier--vipallaccess .tier__price-wrap{
-    margin-bottom:.2rem;
-    padding-bottom:.2rem;
-  }
-  .tickets__vip-solo .tier--vipallaccess .tier__price{
-    font-size:1.55rem;
-  }
-  .tickets__vip-solo .tier--vipallaccess .tier__price-unit{
-    font-size:.58rem;
-  }
-  .tickets__vip-solo .tier--vipallaccess .tier__desc-bullets{
-    font-size:.72rem;
-    line-height:1.3;
-    margin-bottom:.25rem;
-  }
-  /* Day labels — moderate spacing */
-  .tickets__vip-solo .tier--vipallaccess .tier__day-label{
-    margin-bottom:.22rem;
-    padding-bottom:0;
-  }
-  .tickets__vip-solo .tier--vipallaccess .tier__day-name{
-    font-size:.88rem;
-  }
-  .tickets__vip-solo .tier--vipallaccess .tier__day-sub{
-    font-size:.48rem;
-  }
-  /* Day boxes — readable text, moderate spacing */
-  .tickets__vip-solo .tier--vipallaccess .tier__day-list{
-    gap:.3rem;
-  }
-  .tickets__vip-solo .tier--vipallaccess .tier__day-list li > a{
-    padding:.4rem .6rem;
-    min-height:0;
-    gap:.15rem;
-  }
-  .tickets__vip-solo .tier--vipallaccess .tier__day-list li > a strong{
-    font-size:.8rem;
-    line-height:1.15;
-  }
-  .tickets__vip-solo .tier--vipallaccess .tier__day-list .tier__day-detail{
-    font-size:.66rem;
-    line-height:1.25;
-  }
-  .tickets__vip-solo .tier--vipallaccess .tier__day-list .tier__day-vip-badge{
-    font-size:.45rem;
-    padding:.13rem .4rem;
-    letter-spacing:.16em;
-    margin-top:.08rem;
-  }
-  .tickets__vip-solo .tier--vipallaccess .tier__day-list .tier__day-link{
-    font-size:.66rem;
-  }
-  /* Schedule gap between day-grid and CTA */
-  .tier__vip-schedule{gap:.4rem}
-  /* CTA button — tight */
-  .tickets__vip-solo .tier--vipallaccess .btn{
-    padding:.72rem 1rem;
-    font-size:.73rem;
-  }
-  /* Section title above */
-  .tickets .sec-hd{margin-bottom:-.45rem !important}
-  .tickets .sec-hd__num{font-size:.6rem;padding-top:.3rem}
-  .tickets .sec-hd__title{font-size:1.35rem;line-height:1.1;padding-top:.2rem}
-  /* Simple bouncing arrow in normal flow */
-  .tickets__scroll-hint{
-    position:static;
-    display:flex !important;
-    align-items:center;
-    justify-content:center;
-    margin:.45rem auto;
-    width:42px;
-    height:42px;
-    background:transparent;
-    border:none;
-    box-shadow:none;
-    text-decoration:none;
-    cursor:pointer;
-    grid-column:1/-1;
-    justify-self:center;
-    opacity:1;
-    visibility:visible;
-    pointer-events:auto;
-  }
-  .tickets__scroll-hint:active .tickets__scroll-hint-arrow{
-    color:var(--accent-deep);
-  }
-  .tickets__scroll-hint-arrow{
-    display:inline-block;
-    font-size:1.4rem;
-    line-height:1;
-    font-weight:700;
-    color:var(--accent);
-    animation:scrollHintBounce 1.4s ease-in-out infinite;
-  }
-  @keyframes scrollHintBounce{
-    0%,100%{transform:translateY(0);opacity:.7}
-    50%{transform:translateY(5px);opacity:1}
-  }
-}
-/* Hide on desktop (tiles are side-by-side, no scroll needed) */
-.tickets__scroll-hint{display:none}
-@media (max-width:520px){
-  .tier__day-grid--2col{grid-template-columns:1fr;gap:.4rem}
-}
-
 /* ===== PHASE GROUP — fieldset-style frame around the 3 single-day phase tickets ===== */
 .tickets__phases{
   grid-column:1/-1;
@@ -1153,9 +687,8 @@ body.menu-open{overflow:hidden}
   column-gap:.8rem;
   row-gap:.6rem;
   border:1px solid var(--rule-str);
-  padding:.7rem .55rem .15rem;
+  padding:.4rem .55rem .3rem;
   position:relative;
-  margin-top:.85rem;
 }
 .tickets__phases-label{
   position:absolute;
@@ -1173,88 +706,6 @@ body.menu-open{overflow:hidden}
   white-space:nowrap;
   z-index:2;
   box-shadow:0 4px 14px -8px rgba(19,30,51,.35);
-}
-
-/* GA day-grid: bordered, clickable, centered boxes — matches VIP aesthetic */
-.tickets__phases .tier__day-grid--3col{
-  gap:.3rem .3rem;
-}
-.tickets__phases .tier__day-label{
-  justify-content:center;
-  border-bottom:none;
-  padding-bottom:0;
-  margin-bottom:.2rem;
-  gap:.3rem;
-}
-.tickets__phases .tier__day-name{
-  font-size:.78rem;
-}
-.tickets__phases .tier__day-sub{
-  font-size:.46rem;
-  letter-spacing:.16em;
-}
-.tickets__phases .tier__day-list{
-  gap:.3rem;
-}
-.tickets__phases .tier__day-list li{
-  list-style:none;
-  padding:0;
-  margin:0;
-  font-size:.7rem;
-}
-.tickets__phases .tier__day-list li > a{
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  gap:.1rem;
-  padding:.3rem .25rem;
-  border:1px solid;
-  border-radius:1px;
-  min-height:34px;
-  text-decoration:none;
-  color:inherit;
-  transition:background .2s ease,border-color .2s ease,transform .2s ease;
-  cursor:pointer;
-}
-.tickets__phases .tier__day-list .tier__day-detail{
-  font-size:.92em;
-}
-.tickets__phases .tier__day-list .tier__day-link{
-  font-size:.92em;
-}
-.tickets__phases .tier__day-list .tier__day-detail::before{
-  display:none;
-}
-/* Phase 01 (active, navy background) — cream-tinted borders, orange hover */
-.tickets__phases .tier--featured .tier__day-list li > a{
-  border-color:rgba(244,236,224,.2);
-}
-.tickets__phases .tier--featured .tier__day-list li > a:hover{
-  background:rgba(217,101,31,.08);
-  border-color:rgba(217,101,31,.55);
-  transform:translateY(-1px);
-}
-.tickets__phases .tier--featured .tier__day-list li > a:focus-visible{
-  outline:2px solid var(--accent);
-  outline-offset:2px;
-}
-/* Phase 02 / 03 (coming-soon, cream background) — grey borders, grey hover, bronze link */
-.tickets__phases .tier--coming-soon .tier__day-list li > a{
-  border-color:rgba(122,122,122,.32);
-}
-.tickets__phases .tier--coming-soon .tier__day-list li > a:hover{
-  background:rgba(122,122,122,.06);
-  border-color:rgba(122,122,122,.55);
-  transform:translateY(-1px);
-}
-.tickets__phases .tier--coming-soon .tier__day-list li > a:focus-visible{
-  outline:2px solid #7A7A7A;
-  outline-offset:2px;
-}
-.tickets__phases .tier--coming-soon .tier__day-list .tier__day-link{
-  color:var(--accent-deep);
 }
 
 /* Shared structure between the two hero tiles */
@@ -1362,14 +813,13 @@ body.menu-open{overflow:hidden}
 .tier--vipallaccess .tier__ribbon{background:#E8C46A;color:#0A1224;font-size:.58rem;padding:.26rem .6rem;font-weight:500}
 
 /* Shared atoms */
-.tier__ribbon{position:absolute;top:-8px;left:1.1rem;background:var(--accent);color:var(--ink);font-family:var(--fm);font-size:.54rem;letter-spacing:.2em;text-transform:uppercase;padding:.2rem .55rem;font-weight:500}
-.tier__ribbon + .tier__eyebrow{margin-top:.75rem}
+.tier__ribbon{position:absolute;top:-8px;right:1.1rem;background:var(--accent);color:var(--ink);font-family:var(--fm);font-size:.54rem;letter-spacing:.2em;text-transform:uppercase;padding:.2rem .55rem;font-weight:500}
 .tier__eyebrow{font-family:var(--fm);font-size:.54rem;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:.3rem}
 .tier--featured .tier__eyebrow{color:var(--accent)}
 .tier__name{font-family:var(--fd);font-size:clamp(1.05rem,1.55vw,1.4rem);line-height:1;letter-spacing:-.015em;margin-bottom:.2rem;font-weight:400}
 .tier__name em{font-style:italic}
 .tier--featured .tier__name em{color:var(--accent)}
-.tier__price-wrap{display:flex;align-items:baseline;gap:.3rem;margin-bottom:.25rem;padding-bottom:.25rem;border-bottom:1px solid var(--rule)}
+.tier__price-wrap{display:flex;align-items:baseline;gap:.3rem;margin-bottom:.35rem;padding-bottom:.35rem;border-bottom:1px solid var(--rule)}
 .tier--featured .tier__price-wrap{border-bottom-color:rgba(244,236,224,.2)}
 .tier__price{font-family:var(--fd);font-size:1.3rem;line-height:1;letter-spacing:-.02em}
 .tier__price-unit{font-family:var(--fm);font-size:.54rem;letter-spacing:.15em;text-transform:uppercase;color:var(--ink-soft)}
@@ -1388,7 +838,6 @@ body.menu-open{overflow:hidden}
 .tier--featured .btn:hover{color:var(--ink);border-color:var(--paper)}
 
 @media (max-width:960px){.tickets__grid{grid-template-columns:1fr}.tickets__allaccess-pair{grid-template-columns:1fr;gap:.8rem}.tickets__phases{grid-template-columns:1fr;row-gap:.85rem}.tier{min-height:auto}}
-@media (max-width:1080px){.tickets__phases-label{font-size:.55rem;letter-spacing:.18em;padding:0 .65rem;top:-.5rem}}
 @media (max-width:720px){
   .tickets{padding:1.25rem 0 1.75rem !important}
   .tickets .sec-hd{margin-bottom:.85rem}
@@ -1413,10 +862,7 @@ body.menu-open{overflow:hidden}
   .tier--vipallaccess .tier__includes strong,.tier--allaccess .tier__includes strong{font-size:.68em}
   .tickets__trust{margin-top:1rem;font-size:.85rem;line-height:1.45}
 }
-/* Tickets section: tight header gap + correct scroll anchor offset */
-.tickets .sec-hd{margin-bottom:.25rem !important;scroll-margin-top:75px}
-.tickets__trust{margin:.1rem auto 0;max-width:880px;text-align:center;font-family:var(--fd);font-style:italic;font-size:.76rem;line-height:1.4;color:var(--ink-soft)}
-.tickets__trust strong{font-weight:500;color:var(--accent-deep);font-style:normal;letter-spacing:.01em}
+.tickets__trust{margin:.1rem auto 0;max-width:760px;text-align:center;font-family:var(--fd);font-style:italic;font-size:.74rem;line-height:1.35;color:var(--ink-soft)}
 
 
 /* SIDE EVENTS */
@@ -1437,7 +883,7 @@ body.menu-open{overflow:hidden}
 .side-event__venue-label{font-family:var(--fm);font-size:.55rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-soft)}
 .side-event__venue-name{font-style:italic;color:var(--accent-deep);font-weight:400}
 
-/* Bundle-exclusive pill — for Welcome Reception + Oceanfront Soiree tiles. Gold gradient echoes the VIP/All Access admission tile ribbons. */
+/* Bundle-exclusive pill — for Welcome Dinner + After Party tiles. Gold gradient echoes the VIP/All Access admission tile ribbons. */
 .side-event__exclusive{
   display:inline-flex;
   align-self:flex-start;
@@ -1451,13 +897,7 @@ body.menu-open{overflow:hidden}
   font-weight:600;
   line-height:1;
 }
-/* Silver variant — for events open to every ticket holder (Bitcoin Fundamentals, Boat After Party) */
-.side-event--silver .side-event__exclusive{
-  background:linear-gradient(90deg,#9CA3AF 0%,#D1D5DB 50%,#9CA3AF 100%);
-  color:#0A1224;
-}
-.side-event__desc{font-family:var(--fd);font-size:.82rem;line-height:1.35;color:var(--ink-soft);flex:1;margin:0}
-.side-event__desc strong{color:var(--accent-deep);font-weight:500;font-style:normal}
+.side-event__desc{font-family:var(--fd);font-size:.82rem;line-height:1.3;color:var(--ink-soft);flex:1;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;margin:0}
 .side-event__meta{font-family:var(--fm);font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-soft);padding-top:.35rem;border-top:1px solid var(--rule)}
 .side-event__meta strong{color:var(--accent-deep);font-weight:inherit}
 .side-event__top{display:flex;justify-content:space-between;align-items:flex-start;gap:1rem;width:100%}
@@ -1537,18 +977,22 @@ body.menu-open{overflow:hidden}
   }
   .side-event__venue-label{font-size:.5rem;letter-spacing:.16em}
   .side-event__desc{display:none}
-  .side-event__meta{display:none}
-  .side-event__exclusive{
-    display:block;
+  .side-event__exclusive{display:none}
+  .side-event__meta{
     grid-column:2;
     grid-row:3;
     font-size:.55rem;
-    padding:.35rem .55rem;
+    padding-top:.3rem;
+    letter-spacing:.16em
+  }
+  .side-event__meta strong{
+    background:linear-gradient(90deg,#D4A93C 0%,#E8C46A 50%,#D4A93C 100%);
+    color:#0A1224;
+    padding:.18rem .42rem;
+    font-weight:600;
     letter-spacing:.18em;
-    margin-top:.3rem;
-    line-height:1.35;
-    text-align:left;
-    align-self:flex-start;
+    margin-right:.15rem;
+    display:inline-block
   }
   .side-event__sponsor{
     grid-column:2;
@@ -1585,7 +1029,7 @@ body.menu-open{overflow:hidden}
 @media (max-width:640px){.faq__q{grid-template-columns:30px 1fr 24px;gap:.75rem}.faq__a{padding-left:40px}}
 
 /* FRIENDS */
-.friends__tier{margin-top:.35rem}
+.friends__tier{margin-top:.6rem}
 .friends__tier:first-of-type{margin-top:0}
 .friends__tier--hidden{display:none}
 .friends__tier-label{font-family:var(--fm);font-size:.66rem;letter-spacing:.22em;text-transform:uppercase;color:var(--ink);display:flex;align-items:baseline;gap:.75rem;margin:0 0 .35rem}
@@ -1596,8 +1040,8 @@ body.menu-open{overflow:hidden}
 .friends__grid--silver{grid-template-columns:repeat(2,1fr)}
 .friends__grid--activation{grid-template-columns:repeat(4,1fr)}
 .friend{padding:1rem .9rem;border-right:1px solid var(--ink);border-bottom:1px solid var(--ink);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.3rem;text-align:center;min-height:80px;transition:background .2s;text-decoration:none;color:inherit;position:relative}
-.friend--platinum{min-height:auto;padding:.55rem 1rem .5rem;gap:.1rem}
-.friend--platinum .friend__name{font-size:1.05rem}
+.friend--platinum{min-height:auto;padding:.7rem 1rem .65rem;gap:.15rem}
+.friend--platinum .friend__name{font-size:1.55rem}
 .friend--gold{min-height:auto;padding:.7rem 1rem .65rem;gap:.15rem}
 .friend--gold .friend__name{font-size:1.05rem}
 .friend--silver{min-height:auto;padding:.7rem 1rem .65rem;gap:.15rem}
@@ -1610,7 +1054,6 @@ body.menu-open{overflow:hidden}
 .friend:hover{background:var(--paper-light)}
 .friend:hover .friend__name{color:var(--accent-deep)}
 .friend__logo{display:none}
-.friend__logo--placeholder{display:flex;align-items:center;justify-content:center}
 /* Gold / Silver / Activation logo support — show logo area when tier card has a logo image */
 /* Gold / Silver — hero-logo-first centered (matches platinum pattern, scaled down) */
 .friend--gold .friend__logo,
@@ -1625,9 +1068,8 @@ body.menu-open{overflow:hidden}
   width:auto;
   max-width:100%;
 }
-.friend--gold .friend__logo{height:44px;width:180px;max-width:320px;margin-bottom:.05rem}
-.friend--silver .friend__logo{height:44px;width:180px;max-width:320px;margin-bottom:.05rem}
-.friend--activation .friend__logo--placeholder{height:32px;width:140px}
+.friend--gold .friend__logo{height:80px;max-width:320px;margin-bottom:.1rem}
+.friend--silver .friend__logo{height:80px;max-width:320px;margin-bottom:.1rem}
 .friend--gold .friend__logo img,
 .friend--silver .friend__logo img{
   width:auto;
@@ -1667,14 +1109,7 @@ body.menu-open{overflow:hidden}
   align-items:flex-start;
   text-align:left;
 }
-/* Fallback placeholders — sponsor logo image */
-.friend__logo-fallback{
-  width:auto;
-  height:100%;
-  max-width:90%;
-  object-fit:contain;
-  opacity:.6;
-}
+/* Fallback placeholders for all tiers */
 .friend--gold .friend__logo-fallback,
 .friend--silver .friend__logo-fallback{
   font-family:var(--fd);
@@ -1685,7 +1120,12 @@ body.menu-open{overflow:hidden}
 }
 .friend--gold .friend__logo-fallback{color:#4a3208}
 .friend--silver .friend__logo-fallback{color:#14151a}
-.friend--activation .friend__logo-fallback{  opacity:.4;
+.friend--activation .friend__logo-fallback{
+  font-family:var(--fm);
+  font-size:.62rem;
+  letter-spacing:.18em;
+  color:currentColor;
+  opacity:.4;
 }
 /* Hide tier name when wordmark is in logo (consistent with platinum pattern).
    Show only when logo file isn't present yet. */
@@ -1707,9 +1147,9 @@ body.menu-open{overflow:hidden}
 .friend__text{display:contents}
 .friend__name{font-family:var(--fd);font-size:1.15rem;font-style:italic;line-height:1.1}
 .friend__type{font-family:var(--fm);font-size:.55rem;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-soft)}
-.friends__actions{display:flex;justify-content:center;margin-top:.4rem}
+.friends__actions{display:flex;justify-content:center;margin-top:.6rem}
 .friends{padding:.5rem 0 1.5rem !important}
-.friends .sec-hd{margin-bottom:.5rem !important;gap:1rem;padding-top:.3rem}
+.friends .sec-hd{margin-bottom:.85rem !important;gap:1rem;padding-top:.5rem}
 
 .friends__toggle-hide{display:none}
 .friends__toggle[aria-expanded="true"] .friends__toggle-show{display:none}
@@ -1927,8 +1367,8 @@ body.menu-open{overflow:hidden}
   .friends__become-text{font-size:.95rem;margin-bottom:.75rem;line-height:1.35;max-width:32ch;margin-left:auto;margin-right:auto}
   .friends__become .btn{padding:.7rem 1rem;font-size:.66rem;letter-spacing:.12em}
 }
-.friends__become{text-align:center;margin-top:.6rem}
-.friends__become-text{font-family:var(--fd);font-style:italic;font-size:1.1rem;color:var(--ink-soft);margin-bottom:.75rem}
+.friends__become{text-align:center;margin-top:1.25rem}
+.friends__become-text{font-family:var(--fd);font-style:italic;font-size:1.2rem;color:var(--ink-soft);margin-bottom:1.25rem}
 .friends__become-text em{color:var(--accent-deep)}
 
 /* METALLIC TIER STYLING */
@@ -2052,8 +1492,8 @@ body.menu-open{overflow:hidden}
   flex-direction:column;
   justify-content:center;
   align-items:center;
-  gap:.15rem;
-  padding:.7rem 1rem .65rem;
+  gap:.5rem;
+  padding:1.4rem 1.5rem 1.2rem;
   min-height:auto;
 }
 .friend--platinum .friend__logo{
@@ -2061,13 +1501,13 @@ body.menu-open{overflow:hidden}
   align-items:center;
   justify-content:center;
   flex:0 0 auto;
-  width:180px;
-  height:44px;
+  width:auto;
+  height:80px;
   max-width:320px;
   background:transparent;
   position:relative;
   z-index:2;
-  margin-bottom:.05rem;
+  margin-bottom:.1rem;
 }
 .friend--platinum .friend__logo img{
   width:auto;
@@ -2079,22 +1519,20 @@ body.menu-open{overflow:hidden}
 .friend--platinum .friend__logo-fallback{
   font-family:var(--fd);
   font-style:italic;
-  font-size:1.25rem;
+  font-size:2.2rem;
   color:#2a2d3a;
-  opacity:.45;
+  opacity:.55;
   letter-spacing:-.02em;
 }
 .friend--platinum .friend__logo--has-image .friend__logo-fallback{display:none}
-.friend--platinum .friend__logo-fallback{width:240px;height:44px}
 .friend--platinum .friend__text{
   align-items:center;
   text-align:center;
   flex:0 0 auto;
 }
-/* Hide tier name when wordmark is in logo (consistent with platinum pattern).
+/* Hide the redundant company name when logo includes the wordmark.
    The logo already says "Mastercard" — repeating it is visual noise. */
-.friend--platinum .friend__logo--has-image ~ .friend__text .friend__name{display:none}
-.friend--platinum .friend__name{font-size:1.05rem}
+.friend--platinum .friend__name{display:none}
 .friend--platinum .friend__type{
   font-family:var(--fm);
   font-size:.62rem;
@@ -2205,7 +1643,7 @@ body.menu-open{overflow:hidden}
 
 .footer__col-label{font-family:var(--fm);font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin-bottom:1.25rem}
 .footer__col ul{list-style:none;display:flex;flex-direction:column;gap:.6rem}
-.footer__col a{font-size:.93rem;color:var(--paper-deep);transition:color .2s;overflow-wrap:anywhere;word-break:break-word}
+.footer__col a{font-size:.93rem;color:var(--paper-deep);transition:color .2s}
 .footer__col a:hover{color:var(--accent)}
 .footer__bottom{padding-top:2rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;font-family:var(--fm);font-size:.68rem;letter-spacing:.15em;text-transform:uppercase;color:var(--paper-deep);opacity:.75}
 @media (max-width:820px){.footer__top{grid-template-columns:1fr 1fr}.footer__brand{grid-column:1/-1}}
@@ -2291,6 +1729,13 @@ body.menu-open{overflow:hidden}
         </div>
       </div>
       <div class="hero__info">
+<div class="hero__warning" style="display:none" role="alert">
+  <div class="hero__warning-title">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+    Sample Website
+  </div>
+  <div class="hero__warning-body">Nothing on this site is accurate. Used as an example only.</div>
+</div>
 <h1 class="hero__headline">
           <em>The</em> <strong style="font-weight:600">premier</strong> gathering discussing<br>
           <span class="accent">Energy · AI · Freedom · Bitcoin</span><br>
@@ -2302,24 +1747,24 @@ body.menu-open{overflow:hidden}
         <div class="hero__rule" id="hero-details"></div>
         <dl class="hero__facts">
           <div class="hero__fact">
-            <dt>Dates</dt>
-            <dd><a href="#agenda" class="hero__date-link" data-day="day1">Friday, February 5</a> and <a href="#agenda" class="hero__date-link" data-day="day2">Saturday, February 6</a>, 2027</dd>
+            <dt>Date</dt>
+            <dd>Friday, <em>February 5</em>, 2027</dd>
           </div>
           <div class="hero__fact">
             <dt>Venue</dt>
-            <dd><em>Fontainebleau Miami Beach</em></dd>
+            <dd><em>Fontainebleau</em> · Miami Beach</dd>
           </div>
           <div class="hero__fact">
             <dt>Hours</dt>
-            <dd>9:00 AM — 5:00 PM · <em>both days</em></dd>
+            <dd>9:00 AM — 5:00 PM · <em>all day</em></dd>
           </div>
           <div class="hero__fact">
-            <dt>More than the summit</dt>
+            <dt>More than a day</dt>
             <dd><a class="hero__fact-link" href="#side-events"><em>Click here</em> to see all our side events</a></dd>
           </div>
           <div class="hero__fact">
-            <dt>VIP</dt>
-            <dd><em>Limited to 200</em>. <a class="hero__fact-link" href="#tickets">Click here to secure your VIP ticket</a>.</dd>
+            <dt>Spots</dt>
+            <dd><em>Limited to 400</em>. <a class="hero__fact-link" href="#tickets">Click here to secure your spot</a>.</dd>
           </div>
         </dl>
       </div>
@@ -2331,307 +1776,340 @@ body.menu-open{overflow:hidden}
   <div class="container">
     <header class="sec-hd" id="speakers">
       <div class="sec-hd__num">Nº 01 — Speakers</div>
-      <h2 class="section-title sec-hd__title">World-class <em>speakers.</em></h2>
+      <h2 class="section-title sec-hd__title">The <em>best</em> of the <em>best.</em></h2>
     </header>
     <div class="speakers__grid" id="speakersGrid">
-            <a class="speaker" href="#speakers" data-speaker="01" aria-label="Speaker 01 — To Be Announced">
+      <a class="speaker" href="https://x.com/saylor" target="_blank" rel="noopener" data-speaker="01" aria-label="Michael Saylor on X">
         <div class="speaker__index">01</div>
         <div class="speaker__portrait">
-          <div class="speaker__placeholder">?</div>
+          <img class="speaker__photo" src="/images/speakers/01.webp" alt="Michael Saylor" onload="this.parentElement.classList.add('speaker__portrait--hasphoto')" onerror="this.style.display='none'" />
+          <div class="speaker__placeholder">M</div>
         </div>
-        <h3 class="speaker__name"><em>Speaker TBA</em></h3>
-        <div class="speaker__role">To be announced</div>
-        <div class="speaker__topic">&ldquo;Talk title coming soon.&rdquo;</div>
+        <h3 class="speaker__name">Michael <em>Saylor</em></h3>
+        <div class="speaker__role">Strategy</div>
+        <div class="speaker__topic">"Talk title coming soon."</div>
       </a>
-            <a class="speaker" href="#speakers" data-speaker="02" aria-label="Speaker 02 — To Be Announced">
+      <a class="speaker" href="https://x.com/jack" target="_blank" rel="noopener" data-speaker="02" aria-label="Jack Dorsey on X">
         <div class="speaker__index">02</div>
         <div class="speaker__portrait">
-          <div class="speaker__placeholder">?</div>
+          <img class="speaker__photo" src="/images/speakers/02.webp" alt="Jack Dorsey" onload="this.parentElement.classList.add('speaker__portrait--hasphoto')" onerror="this.style.display='none'" />
+          <div class="speaker__placeholder">J</div>
         </div>
-        <h3 class="speaker__name"><em>Speaker TBA</em></h3>
-        <div class="speaker__role">To be announced</div>
-        <div class="speaker__topic">&ldquo;Talk title coming soon.&rdquo;</div>
+        <h3 class="speaker__name">Jack <em>Dorsey</em></h3>
+        <div class="speaker__role">Block</div>
+        <div class="speaker__topic">"Talk title coming soon."</div>
       </a>
-            <a class="speaker" href="#speakers" data-speaker="03" aria-label="Speaker 03 — To Be Announced">
+      <a class="speaker" href="https://x.com/adam3us" target="_blank" rel="noopener" data-speaker="03" aria-label="Adam Back on X">
         <div class="speaker__index">03</div>
         <div class="speaker__portrait">
-          <div class="speaker__placeholder">?</div>
+          <img class="speaker__photo" src="/images/speakers/03.webp" alt="Adam Back" onload="this.parentElement.classList.add('speaker__portrait--hasphoto')" onerror="this.style.display='none'" />
+          <div class="speaker__placeholder">A</div>
         </div>
-        <h3 class="speaker__name"><em>Speaker TBA</em></h3>
-        <div class="speaker__role">To be announced</div>
-        <div class="speaker__topic">&ldquo;Talk title coming soon.&rdquo;</div>
+        <h3 class="speaker__name">Adam <em>Back</em></h3>
+        <div class="speaker__role">Blockstream</div>
+        <div class="speaker__topic">"Talk title coming soon."</div>
       </a>
-            <a class="speaker" href="#speakers" data-speaker="04" aria-label="Speaker 04 — To Be Announced">
+      <a class="speaker" href="https://x.com/CathieDWood" target="_blank" rel="noopener" data-speaker="04" aria-label="Cathie Wood on X">
         <div class="speaker__index">04</div>
         <div class="speaker__portrait">
-          <div class="speaker__placeholder">?</div>
+          <img class="speaker__photo" src="/images/speakers/04.webp" alt="Cathie Wood" onload="this.parentElement.classList.add('speaker__portrait--hasphoto')" onerror="this.style.display='none'" />
+          <div class="speaker__placeholder">C</div>
         </div>
-        <h3 class="speaker__name"><em>Speaker TBA</em></h3>
-        <div class="speaker__role">To be announced</div>
-        <div class="speaker__topic">&ldquo;Talk title coming soon.&rdquo;</div>
+        <h3 class="speaker__name">Cathie <em>Wood</em></h3>
+        <div class="speaker__role">ARK Invest</div>
+        <div class="speaker__topic">"Talk title coming soon."</div>
       </a>
     </div>
     <div class="speakers__grid speakers__grid--md" id="speakersGridMd">
-      <a class="speaker speaker--md" href="#speakers" data-speaker="05" aria-label="Speaker 05 — To Be Announced">
+      <a class="speaker speaker--md" href="https://x.com/LynAldenContact" target="_blank" rel="noopener" data-speaker="05" aria-label="Lyn Alden on X">
         <div class="speaker__index">05</div>
         <div class="speaker__portrait">
-          <div class="speaker__placeholder">?</div>
+          <img class="speaker__photo" src="/images/speakers/05.webp" alt="Lyn Alden" onload="this.parentElement.classList.add('speaker__portrait--hasphoto')" onerror="this.style.display='none'" />
+          <div class="speaker__placeholder">L</div>
         </div>
-        <h3 class="speaker__name"><em>Speaker TBA</em></h3>
-        <div class="speaker__role">To be announced</div>
-        <div class="speaker__topic">&ldquo;Talk title coming soon.&rdquo;</div>
+        <h3 class="speaker__name">Lyn <em>Alden</em></h3>
+        <div class="speaker__role">Ego Death Capital</div>
+        <div class="speaker__topic">"Talk title coming soon."</div>
       </a>
-      <a class="speaker speaker--md" href="#speakers" data-speaker="06" aria-label="Speaker 06 — To Be Announced">
+      <a class="speaker speaker--md" href="https://x.com/JeffBooth" target="_blank" rel="noopener" data-speaker="06" aria-label="Jeff Booth on X">
         <div class="speaker__index">06</div>
         <div class="speaker__portrait">
-          <div class="speaker__placeholder">?</div>
+          <img class="speaker__photo" src="/images/speakers/06.webp" alt="Jeff Booth" onload="this.parentElement.classList.add('speaker__portrait--hasphoto')" onerror="this.style.display='none'" />
+          <div class="speaker__placeholder">J</div>
         </div>
-        <h3 class="speaker__name"><em>Speaker TBA</em></h3>
-        <div class="speaker__role">To be announced</div>
-        <div class="speaker__topic">&ldquo;Talk title coming soon.&rdquo;</div>
+        <h3 class="speaker__name">Jeff <em>Booth</em></h3>
+        <div class="speaker__role">Ego Death Capital</div>
+        <div class="speaker__topic">"Talk title coming soon."</div>
       </a>
-      <a class="speaker speaker--md" href="#speakers" data-speaker="07" aria-label="Speaker 07 — To Be Announced">
+      <a class="speaker speaker--md" href="https://x.com/eric_bigfund" target="_blank" rel="noopener" data-speaker="07" aria-label="Eric Weiss on X">
         <div class="speaker__index">07</div>
         <div class="speaker__portrait">
-          <div class="speaker__placeholder">?</div>
+          <img class="speaker__photo" src="/images/speakers/07.webp" alt="Eric Weiss" onload="this.parentElement.classList.add('speaker__portrait--hasphoto')" onerror="this.style.display='none'" />
+          <div class="speaker__placeholder">E</div>
         </div>
-        <h3 class="speaker__name"><em>Speaker TBA</em></h3>
-        <div class="speaker__role">To be announced</div>
-        <div class="speaker__topic">&ldquo;Talk title coming soon.&rdquo;</div>
+        <h3 class="speaker__name">Eric <em>Weiss</em></h3>
+        <div class="speaker__role">Bitcoin Investment Group</div>
+        <div class="speaker__topic">"Talk title coming soon."</div>
       </a>
-      <a class="speaker speaker--md" href="#speakers" data-speaker="08" aria-label="Speaker 08 — To Be Announced">
+      <a class="speaker speaker--md" href="https://x.com/gladstein" target="_blank" rel="noopener" data-speaker="08" aria-label="Alex Gladstein on X">
         <div class="speaker__index">08</div>
         <div class="speaker__portrait">
-          <div class="speaker__placeholder">?</div>
+          <img class="speaker__photo" src="/images/speakers/08.webp" alt="Alex Gladstein" onload="this.parentElement.classList.add('speaker__portrait--hasphoto')" onerror="this.style.display='none'" />
+          <div class="speaker__placeholder">A</div>
         </div>
-        <h3 class="speaker__name"><em>Speaker TBA</em></h3>
-        <div class="speaker__role">To be announced</div>
-        <div class="speaker__topic">&ldquo;Talk title coming soon.&rdquo;</div>
+        <h3 class="speaker__name">Alex <em>Gladstein</em></h3>
+        <div class="speaker__role">Human Rights Foundation</div>
+        <div class="speaker__topic">"Talk title coming soon."</div>
       </a>
-      <a class="speaker speaker--md" href="#speakers" data-speaker="09" aria-label="Speaker 09 — To Be Announced">
+      <a class="speaker speaker--md" href="https://x.com/CaitlinLong_" target="_blank" rel="noopener" data-speaker="09" aria-label="Caitlin Long on X">
         <div class="speaker__index">09</div>
         <div class="speaker__portrait">
-          <div class="speaker__placeholder">?</div>
+          <img class="speaker__photo" src="/images/speakers/09.webp" alt="Caitlin Long" onload="this.parentElement.classList.add('speaker__portrait--hasphoto')" onerror="this.style.display='none'" />
+          <div class="speaker__placeholder">C</div>
         </div>
-        <h3 class="speaker__name"><em>Speaker TBA</em></h3>
-        <div class="speaker__role">To be announced</div>
-        <div class="speaker__topic">&ldquo;Talk title coming soon.&rdquo;</div>
+        <h3 class="speaker__name">Caitlin <em>Long</em></h3>
+        <div class="speaker__role">Custodia Bank</div>
+        <div class="speaker__topic">"Talk title coming soon."</div>
       </a>
-      <a class="speaker speaker--md" href="#speakers" data-speaker="10" aria-label="Speaker 10 — To Be Announced">
+      <a class="speaker speaker--md" href="https://x.com/natbrunell" target="_blank" rel="noopener" data-speaker="10" aria-label="Natalie Brunell on X">
         <div class="speaker__index">10</div>
         <div class="speaker__portrait">
-          <div class="speaker__placeholder">?</div>
+          <img class="speaker__photo" src="/images/speakers/10.webp" alt="Natalie Brunell" onload="this.parentElement.classList.add('speaker__portrait--hasphoto')" onerror="this.style.display='none'" />
+          <div class="speaker__placeholder">N</div>
         </div>
-        <h3 class="speaker__name"><em>Speaker TBA</em></h3>
-        <div class="speaker__role">To be announced</div>
-        <div class="speaker__topic">&ldquo;Talk title coming soon.&rdquo;</div>
+        <h3 class="speaker__name">Natalie <em>Brunell</em></h3>
+        <div class="speaker__role">Coin Stories</div>
+        <div class="speaker__topic">"Talk title coming soon."</div>
       </a>
-      <a class="speaker speaker--md" href="#speakers" data-speaker="11" aria-label="Speaker 11 — To Be Announced">
+      <a class="speaker speaker--md" href="https://x.com/PeterMcCormack" target="_blank" rel="noopener" data-speaker="11" aria-label="Peter McCormack on X">
         <div class="speaker__index">11</div>
         <div class="speaker__portrait">
-          <div class="speaker__placeholder">?</div>
+          <img class="speaker__photo" src="/images/speakers/11.webp" alt="Peter McCormack" onload="this.parentElement.classList.add('speaker__portrait--hasphoto')" onerror="this.style.display='none'" />
+          <div class="speaker__placeholder">P</div>
         </div>
-        <h3 class="speaker__name"><em>Speaker TBA</em></h3>
-        <div class="speaker__role">To be announced</div>
-        <div class="speaker__topic">&ldquo;Talk title coming soon.&rdquo;</div>
+        <h3 class="speaker__name">Peter <em>McCormack</em></h3>
+        <div class="speaker__role">The Peter McCormack Show</div>
+        <div class="speaker__topic">"Talk title coming soon."</div>
       </a>
-      <a class="speaker speaker--md" href="#speakers" data-speaker="12" aria-label="Speaker 12 — To Be Announced">
+      <a class="speaker speaker--md" href="https://x.com/davidmarcus" target="_blank" rel="noopener" data-speaker="12" aria-label="David Marcus on X">
         <div class="speaker__index">12</div>
         <div class="speaker__portrait">
-          <div class="speaker__placeholder">?</div>
+          <img class="speaker__photo" src="/images/speakers/12.webp" alt="David Marcus" onload="this.parentElement.classList.add('speaker__portrait--hasphoto')" onerror="this.style.display='none'" />
+          <div class="speaker__placeholder">D</div>
         </div>
-        <h3 class="speaker__name"><em>Speaker TBA</em></h3>
-        <div class="speaker__role">To be announced</div>
-        <div class="speaker__topic">&ldquo;Talk title coming soon.&rdquo;</div>
+        <h3 class="speaker__name">David <em>Marcus</em></h3>
+        <div class="speaker__role">Lightspark</div>
+        <div class="speaker__topic">"Talk title coming soon."</div>
       </a>
-            <a class="speaker speaker--md speaker--hidden" href="#speakers" data-speaker="13" aria-label="Speaker 13 — To Be Announced">
+      <a class="speaker speaker--md" href="https://x.com/starkness" target="_blank" rel="noopener" data-speaker="13" aria-label="Elizabeth Stark on X">
         <div class="speaker__index">13</div>
         <div class="speaker__portrait">
-          <div class="speaker__placeholder">?</div>
+          <img class="speaker__photo" src="/images/speakers/13.webp" alt="Elizabeth Stark" onload="this.parentElement.classList.add('speaker__portrait--hasphoto')" onerror="this.style.display='none'" />
+          <div class="speaker__placeholder">E</div>
         </div>
-        <h3 class="speaker__name"><em>Speaker TBA</em></h3>
-        <div class="speaker__role">To be announced</div>
-        <div class="speaker__topic">&ldquo;Talk title coming soon.&rdquo;</div>
+        <h3 class="speaker__name">Elizabeth <em>Stark</em></h3>
+        <div class="speaker__role">Lightning Labs</div>
+        <div class="speaker__topic">"Talk title coming soon."</div>
       </a>
-            <a class="speaker speaker--md speaker--hidden" href="#speakers" data-speaker="14" aria-label="Speaker 14 — To Be Announced">
+      <a class="speaker speaker--md" href="https://x.com/stephanlivera" target="_blank" rel="noopener" data-speaker="14" aria-label="Stephan Livera on X">
         <div class="speaker__index">14</div>
         <div class="speaker__portrait">
-          <div class="speaker__placeholder">?</div>
+          <img class="speaker__photo" src="/images/speakers/14.webp" alt="Stephan Livera" onload="this.parentElement.classList.add('speaker__portrait--hasphoto')" onerror="this.style.display='none'" />
+          <div class="speaker__placeholder">S</div>
         </div>
-        <h3 class="speaker__name"><em>Speaker TBA</em></h3>
-        <div class="speaker__role">To be announced</div>
-        <div class="speaker__topic">&ldquo;Talk title coming soon.&rdquo;</div>
+        <h3 class="speaker__name">Stephan <em>Livera</em></h3>
+        <div class="speaker__role">Stephan Livera Podcast</div>
+        <div class="speaker__topic">"Talk title coming soon."</div>
       </a>
-            <a class="speaker speaker--md speaker--hidden" href="#speakers" data-speaker="15" aria-label="Speaker 15 — To Be Announced">
+      <a class="speaker speaker--md" href="https://x.com/parkeralewis" target="_blank" rel="noopener" data-speaker="15" aria-label="Parker Lewis on X">
         <div class="speaker__index">15</div>
         <div class="speaker__portrait">
-          <div class="speaker__placeholder">?</div>
+          <img class="speaker__photo" src="/images/speakers/15.webp" alt="Parker Lewis" onload="this.parentElement.classList.add('speaker__portrait--hasphoto')" onerror="this.style.display='none'" />
+          <div class="speaker__placeholder">P</div>
         </div>
-        <h3 class="speaker__name"><em>Speaker TBA</em></h3>
-        <div class="speaker__role">To be announced</div>
-        <div class="speaker__topic">&ldquo;Talk title coming soon.&rdquo;</div>
+        <h3 class="speaker__name">Parker <em>Lewis</em></h3>
+        <div class="speaker__role">Zaprite</div>
+        <div class="speaker__topic">"Talk title coming soon."</div>
       </a>
-            <a class="speaker speaker--md speaker--hidden" href="#speakers" data-speaker="16" aria-label="Speaker 16 — To Be Announced">
+      <a class="speaker speaker--md" href="https://x.com/real_vijay" target="_blank" rel="noopener" data-speaker="16" aria-label="Vijay Boyapati on X">
         <div class="speaker__index">16</div>
         <div class="speaker__portrait">
-          <div class="speaker__placeholder">?</div>
+          <img class="speaker__photo" src="/images/speakers/16.webp" alt="Vijay Boyapati" onload="this.parentElement.classList.add('speaker__portrait--hasphoto')" onerror="this.style.display='none'" />
+          <div class="speaker__placeholder">V</div>
         </div>
-        <h3 class="speaker__name"><em>Speaker TBA</em></h3>
-        <div class="speaker__role">To be announced</div>
-        <div class="speaker__topic">&ldquo;Talk title coming soon.&rdquo;</div>
+        <h3 class="speaker__name">Vijay <em>Boyapati</em></h3>
+        <div class="speaker__role">Author · The Bullish Case</div>
+        <div class="speaker__topic">"Talk title coming soon."</div>
       </a>
-            <a class="speaker speaker--md speaker--hidden" href="#speakers" data-speaker="17" aria-label="Speaker 17 — To Be Announced">
+      <a class="speaker speaker--md" href="https://x.com/jimmysong" target="_blank" rel="noopener" data-speaker="17" aria-label="Jimmy Song on X">
         <div class="speaker__index">17</div>
         <div class="speaker__portrait">
-          <div class="speaker__placeholder">?</div>
+          <img class="speaker__photo" src="/images/speakers/17.webp" alt="Jimmy Song" onload="this.parentElement.classList.add('speaker__portrait--hasphoto')" onerror="this.style.display='none'" />
+          <div class="speaker__placeholder">J</div>
         </div>
-        <h3 class="speaker__name"><em>Speaker TBA</em></h3>
-        <div class="speaker__role">To be announced</div>
-        <div class="speaker__topic">&ldquo;Talk title coming soon.&rdquo;</div>
+        <h3 class="speaker__name">Jimmy <em>Song</em></h3>
+        <div class="speaker__role">Programming Bitcoin</div>
+        <div class="speaker__topic">"Talk title coming soon."</div>
       </a>
-            <a class="speaker speaker--md speaker--hidden" href="#speakers" data-speaker="18" aria-label="Speaker 18 — To Be Announced">
+      <a class="speaker speaker--md" href="https://x.com/pete_rizzo_" target="_blank" rel="noopener" data-speaker="18" aria-label="Pete Rizzo on X">
         <div class="speaker__index">18</div>
         <div class="speaker__portrait">
-          <div class="speaker__placeholder">?</div>
+          <img class="speaker__photo" src="/images/speakers/18.webp" alt="Pete Rizzo" onload="this.parentElement.classList.add('speaker__portrait--hasphoto')" onerror="this.style.display='none'" />
+          <div class="speaker__placeholder">P</div>
         </div>
-        <h3 class="speaker__name"><em>Speaker TBA</em></h3>
-        <div class="speaker__role">To be announced</div>
-        <div class="speaker__topic">&ldquo;Talk title coming soon.&rdquo;</div>
+        <h3 class="speaker__name">Pete <em>Rizzo</em></h3>
+        <div class="speaker__role">BitcoinTreasuries.NET</div>
+        <div class="speaker__topic">"Talk title coming soon."</div>
       </a>
-            <a class="speaker speaker--md speaker--hidden" href="#speakers" data-speaker="19" aria-label="Speaker 19 — To Be Announced">
+      <a class="speaker speaker--md" href="https://x.com/dylanleclair" target="_blank" rel="noopener" data-speaker="19" aria-label="Dylan LeClair on X">
         <div class="speaker__index">19</div>
         <div class="speaker__portrait">
-          <div class="speaker__placeholder">?</div>
+          <img class="speaker__photo" src="/images/speakers/19.webp" alt="Dylan LeClair" onload="this.parentElement.classList.add('speaker__portrait--hasphoto')" onerror="this.style.display='none'" />
+          <div class="speaker__placeholder">D</div>
         </div>
-        <h3 class="speaker__name"><em>Speaker TBA</em></h3>
-        <div class="speaker__role">To be announced</div>
-        <div class="speaker__topic">&ldquo;Talk title coming soon.&rdquo;</div>
+        <h3 class="speaker__name">Dylan <em>LeClair</em></h3>
+        <div class="speaker__role">Metaplanet</div>
+        <div class="speaker__topic">"Talk title coming soon."</div>
       </a>
-            <a class="speaker speaker--md speaker--hidden" href="#speakers" data-speaker="20" aria-label="Speaker 20 — To Be Announced">
+      <a class="speaker speaker--md" href="https://x.com/thetrocro" target="_blank" rel="noopener" data-speaker="20" aria-label="Troy Cross on X">
         <div class="speaker__index">20</div>
         <div class="speaker__portrait">
-          <div class="speaker__placeholder">?</div>
+          <img class="speaker__photo" src="/images/speakers/20.webp" alt="Troy Cross" onload="this.parentElement.classList.add('speaker__portrait--hasphoto')" onerror="this.style.display='none'" />
+          <div class="speaker__placeholder">T</div>
         </div>
-        <h3 class="speaker__name"><em>Speaker TBA</em></h3>
-        <div class="speaker__role">To be announced</div>
-        <div class="speaker__topic">&ldquo;Talk title coming soon.&rdquo;</div>
+        <h3 class="speaker__name">Troy <em>Cross</em></h3>
+        <div class="speaker__role">The Nakamoto Project</div>
+        <div class="speaker__topic">"Talk title coming soon."</div>
       </a>
-            <a class="speaker speaker--md speaker--hidden" href="#speakers" data-speaker="21" aria-label="Speaker 21 — To Be Announced">
+      <a class="speaker speaker--md speaker--hidden" href="https://x.com/DavidFBailey" target="_blank" rel="noopener" data-speaker="21" aria-label="David Bailey on X">
         <div class="speaker__index">21</div>
         <div class="speaker__portrait">
-          <div class="speaker__placeholder">?</div>
+          <img class="speaker__photo" src="/images/speakers/21.webp" alt="David Bailey" onload="this.parentElement.classList.add('speaker__portrait--hasphoto')" onerror="this.style.display='none'" />
+          <div class="speaker__placeholder">D</div>
         </div>
-        <h3 class="speaker__name"><em>Speaker TBA</em></h3>
-        <div class="speaker__role">To be announced</div>
-        <div class="speaker__topic">&ldquo;Talk title coming soon.&rdquo;</div>
+        <h3 class="speaker__name">David <em>Bailey</em></h3>
+        <div class="speaker__role">Nakamoto</div>
+        <div class="speaker__topic">"Talk title coming soon."</div>
       </a>
-            <a class="speaker speaker--md speaker--hidden" href="#speakers" data-speaker="22" aria-label="Speaker 22 — To Be Announced">
+      <a class="speaker speaker--md speaker--hidden" href="https://x.com/leishman" target="_blank" rel="noopener" data-speaker="22" aria-label="Alex Leishman on X">
         <div class="speaker__index">22</div>
         <div class="speaker__portrait">
-          <div class="speaker__placeholder">?</div>
+          <img class="speaker__photo" src="/images/speakers/22.webp" alt="Alex Leishman" onload="this.parentElement.classList.add('speaker__portrait--hasphoto')" onerror="this.style.display='none'" />
+          <div class="speaker__placeholder">A</div>
         </div>
-        <h3 class="speaker__name"><em>Speaker TBA</em></h3>
-        <div class="speaker__role">To be announced</div>
-        <div class="speaker__topic">&ldquo;Talk title coming soon.&rdquo;</div>
+        <h3 class="speaker__name">Alex <em>Leishman</em></h3>
+        <div class="speaker__role">River</div>
+        <div class="speaker__topic">"Talk title coming soon."</div>
       </a>
-            <a class="speaker speaker--md speaker--hidden" href="#speakers" data-speaker="23" aria-label="Speaker 23 — To Be Announced">
+      <a class="speaker speaker--md speaker--hidden" href="https://x.com/beau_turner21" target="_blank" rel="noopener" data-speaker="23" aria-label="Beau Turner on X">
         <div class="speaker__index">23</div>
         <div class="speaker__portrait">
-          <div class="speaker__placeholder">?</div>
+          <img class="speaker__photo" src="/images/speakers/23.webp" alt="Beau Turner" onload="this.parentElement.classList.add('speaker__portrait--hasphoto')" onerror="this.style.display='none'" />
+          <div class="speaker__placeholder">B</div>
         </div>
-        <h3 class="speaker__name"><em>Speaker TBA</em></h3>
-        <div class="speaker__role">To be announced</div>
-        <div class="speaker__topic">&ldquo;Talk title coming soon.&rdquo;</div>
+        <h3 class="speaker__name">Beau <em>Turner</em></h3>
+        <div class="speaker__role">Abundant Mines</div>
+        <div class="speaker__topic">"Talk title coming soon."</div>
       </a>
-            <a class="speaker speaker--md speaker--hidden" href="#speakers" data-speaker="24" aria-label="Speaker 24 — To Be Announced">
+      <a class="speaker speaker--md speaker--hidden" href="https://x.com/CedYoungelman" target="_blank" rel="noopener" data-speaker="24" aria-label="Cedric Youngelman on X">
         <div class="speaker__index">24</div>
         <div class="speaker__portrait">
-          <div class="speaker__placeholder">?</div>
+          <img class="speaker__photo" src="/images/speakers/24.webp" alt="Cedric Youngelman" onload="this.parentElement.classList.add('speaker__portrait--hasphoto')" onerror="this.style.display='none'" />
+          <div class="speaker__placeholder">C</div>
         </div>
-        <h3 class="speaker__name"><em>Speaker TBA</em></h3>
-        <div class="speaker__role">To be announced</div>
-        <div class="speaker__topic">&ldquo;Talk title coming soon.&rdquo;</div>
+        <h3 class="speaker__name">Cedric <em>Youngelman</em></h3>
+        <div class="speaker__role">The Bitcoin Matrix</div>
+        <div class="speaker__topic">"Talk title coming soon."</div>
       </a>
-            <a class="speaker speaker--md speaker--hidden" href="#speakers" data-speaker="25" aria-label="Speaker 25 — To Be Announced">
+      <a class="speaker speaker--md speaker--hidden" href="https://x.com/_dannyknowles" target="_blank" rel="noopener" data-speaker="25" aria-label="Danny Knowles on X">
         <div class="speaker__index">25</div>
         <div class="speaker__portrait">
-          <div class="speaker__placeholder">?</div>
+          <img class="speaker__photo" src="/images/speakers/25.webp" alt="Danny Knowles" onload="this.parentElement.classList.add('speaker__portrait--hasphoto')" onerror="this.style.display='none'" />
+          <div class="speaker__placeholder">D</div>
         </div>
-        <h3 class="speaker__name"><em>Speaker TBA</em></h3>
-        <div class="speaker__role">To be announced</div>
-        <div class="speaker__topic">&ldquo;Talk title coming soon.&rdquo;</div>
+        <h3 class="speaker__name">Danny <em>Knowles</em></h3>
+        <div class="speaker__role">What Bitcoin Did</div>
+        <div class="speaker__topic">"Talk title coming soon."</div>
       </a>
-            <a class="speaker speaker--md speaker--hidden" href="#speakers" data-speaker="26" aria-label="Speaker 26 — To Be Announced">
+      <a class="speaker speaker--md speaker--hidden" href="https://x.com/dpatel_34" target="_blank" rel="noopener" data-speaker="26" aria-label="Dhruv Patel on X">
         <div class="speaker__index">26</div>
         <div class="speaker__portrait">
-          <div class="speaker__placeholder">?</div>
+          <img class="speaker__photo" src="/images/speakers/26.webp" alt="Dhruv Patel" onload="this.parentElement.classList.add('speaker__portrait--hasphoto')" onerror="this.style.display='none'" />
+          <div class="speaker__placeholder">D</div>
         </div>
-        <h3 class="speaker__name"><em>Speaker TBA</em></h3>
-        <div class="speaker__role">To be announced</div>
-        <div class="speaker__topic">&ldquo;Talk title coming soon.&rdquo;</div>
+        <h3 class="speaker__name">Dhruv <em>Patel</em></h3>
+        <div class="speaker__role">Arch Lending</div>
+        <div class="speaker__topic">"Talk title coming soon."</div>
       </a>
-            <a class="speaker speaker--md speaker--hidden" href="#speakers" data-speaker="27" aria-label="Speaker 27 — To Be Announced">
+      <a class="speaker speaker--md speaker--hidden" href="https://x.com/IIICapital" target="_blank" rel="noopener" data-speaker="27" aria-label="Joe Burnett on X">
         <div class="speaker__index">27</div>
         <div class="speaker__portrait">
-          <div class="speaker__placeholder">?</div>
+          <img class="speaker__photo" src="/images/speakers/27.webp" alt="Joe Burnett" onload="this.parentElement.classList.add('speaker__portrait--hasphoto')" onerror="this.style.display='none'" />
+          <div class="speaker__placeholder">J</div>
         </div>
-        <h3 class="speaker__name"><em>Speaker TBA</em></h3>
-        <div class="speaker__role">To be announced</div>
-        <div class="speaker__topic">&ldquo;Talk title coming soon.&rdquo;</div>
+        <h3 class="speaker__name">Joe <em>Burnett</em></h3>
+        <div class="speaker__role">Strive</div>
+        <div class="speaker__topic">"Talk title coming soon."</div>
       </a>
-            <a class="speaker speaker--md speaker--hidden" href="#speakers" data-speaker="28" aria-label="Speaker 28 — To Be Announced">
+      <a class="speaker speaker--md speaker--hidden" href="https://x.com/josephkelly" target="_blank" rel="noopener" data-speaker="28" aria-label="Joe Kelly on X">
         <div class="speaker__index">28</div>
         <div class="speaker__portrait">
-          <div class="speaker__placeholder">?</div>
+          <img class="speaker__photo" src="/images/speakers/28.webp" alt="Joe Kelly" onload="this.parentElement.classList.add('speaker__portrait--hasphoto')" onerror="this.style.display='none'" />
+          <div class="speaker__placeholder">J</div>
         </div>
-        <h3 class="speaker__name"><em>Speaker TBA</em></h3>
-        <div class="speaker__role">To be announced</div>
-        <div class="speaker__topic">&ldquo;Talk title coming soon.&rdquo;</div>
+        <h3 class="speaker__name">Joe <em>Kelly</em></h3>
+        <div class="speaker__role">Unchained</div>
+        <div class="speaker__topic">"Talk title coming soon."</div>
       </a>
-            <a class="speaker speaker--md speaker--hidden" href="#speakers" data-speaker="29" aria-label="Speaker 29 — To Be Announced">
+      <a class="speaker speaker--md speaker--hidden" href="https://x.com/khalliburton" target="_blank" rel="noopener" data-speaker="29" aria-label="Kent Halliburton on X">
         <div class="speaker__index">29</div>
         <div class="speaker__portrait">
-          <div class="speaker__placeholder">?</div>
+          <img class="speaker__photo" src="/images/speakers/29.webp" alt="Kent Halliburton" onload="this.parentElement.classList.add('speaker__portrait--hasphoto')" onerror="this.style.display='none'" />
+          <div class="speaker__placeholder">K</div>
         </div>
-        <h3 class="speaker__name"><em>Speaker TBA</em></h3>
-        <div class="speaker__role">To be announced</div>
-        <div class="speaker__topic">&ldquo;Talk title coming soon.&rdquo;</div>
+        <h3 class="speaker__name">Kent <em>Halliburton</em></h3>
+        <div class="speaker__role">Sazmining</div>
+        <div class="speaker__topic">"Talk title coming soon."</div>
       </a>
-            <a class="speaker speaker--md speaker--hidden" href="#speakers" data-speaker="30" aria-label="Speaker 30 — To Be Announced">
+      <a class="speaker speaker--md speaker--hidden" href="https://x.com/colemacro" target="_blank" rel="noopener" data-speaker="30" aria-label="Matt Cole on X">
         <div class="speaker__index">30</div>
         <div class="speaker__portrait">
-          <div class="speaker__placeholder">?</div>
+          <img class="speaker__photo" src="/images/speakers/30.webp" alt="Matt Cole" onload="this.parentElement.classList.add('speaker__portrait--hasphoto')" onerror="this.style.display='none'" />
+          <div class="speaker__placeholder">M</div>
         </div>
-        <h3 class="speaker__name"><em>Speaker TBA</em></h3>
-        <div class="speaker__role">To be announced</div>
-        <div class="speaker__topic">&ldquo;Talk title coming soon.&rdquo;</div>
+        <h3 class="speaker__name">Matt <em>Cole</em></h3>
+        <div class="speaker__role">Strive</div>
+        <div class="speaker__topic">"Talk title coming soon."</div>
       </a>
-            <a class="speaker speaker--md speaker--hidden" href="#speakers" data-speaker="31" aria-label="Speaker 31 — To Be Announced">
+      <a class="speaker speaker--md speaker--hidden" href="https://x.com/mtanguma" target="_blank" rel="noopener" data-speaker="31" aria-label="Michael Tanguma on X">
         <div class="speaker__index">31</div>
         <div class="speaker__portrait">
-          <div class="speaker__placeholder">?</div>
+          <img class="speaker__photo" src="/images/speakers/31.webp" alt="Michael Tanguma" onload="this.parentElement.classList.add('speaker__portrait--hasphoto')" onerror="this.style.display='none'" />
+          <div class="speaker__placeholder">M</div>
         </div>
-        <h3 class="speaker__name"><em>Speaker TBA</em></h3>
-        <div class="speaker__role">To be announced</div>
-        <div class="speaker__topic">&ldquo;Talk title coming soon.&rdquo;</div>
+        <h3 class="speaker__name">Michael <em>Tanguma</em></h3>
+        <div class="speaker__role">Onramp</div>
+        <div class="speaker__topic">"Talk title coming soon."</div>
       </a>
-            <a class="speaker speaker--md speaker--hidden" href="#speakers" data-speaker="32" aria-label="Speaker 32 — To Be Announced">
+      <a class="speaker speaker--md speaker--hidden" href="https://x.com/samcallah" target="_blank" rel="noopener" data-speaker="32" aria-label="Sam Callahan on X">
         <div class="speaker__index">32</div>
         <div class="speaker__portrait">
-          <div class="speaker__placeholder">?</div>
+          <img class="speaker__photo" src="/images/speakers/32.webp" alt="Sam Callahan" onload="this.parentElement.classList.add('speaker__portrait--hasphoto')" onerror="this.style.display='none'" />
+          <div class="speaker__placeholder">S</div>
         </div>
-        <h3 class="speaker__name"><em>Speaker TBA</em></h3>
-        <div class="speaker__role">To be announced</div>
-        <div class="speaker__topic">&ldquo;Talk title coming soon.&rdquo;</div>
+        <h3 class="speaker__name">Sam <em>Callahan</em></h3>
+        <div class="speaker__role">OranjeBTC</div>
+        <div class="speaker__topic">"Talk title coming soon."</div>
       </a>
-            <a class="speaker speaker--md speaker--hidden" href="#speakers" data-speaker="33" aria-label="Speaker 33 — To Be Announced">
+      <a class="speaker speaker--md speaker--hidden" href="https://x.com/WSFoxley" target="_blank" rel="noopener" data-speaker="33" aria-label="Will Foxley on X">
         <div class="speaker__index">33</div>
         <div class="speaker__portrait">
-          <div class="speaker__placeholder">?</div>
+          <img class="speaker__photo" src="/images/speakers/33.webp" alt="Will Foxley" onload="this.parentElement.classList.add('speaker__portrait--hasphoto')" onerror="this.style.display='none'" />
+          <div class="speaker__placeholder">W</div>
         </div>
-        <h3 class="speaker__name"><em>Speaker TBA</em></h3>
-        <div class="speaker__role">To be announced</div>
-        <div class="speaker__topic">&ldquo;Talk title coming soon.&rdquo;</div>
+        <h3 class="speaker__name">Will <em>Foxley</em></h3>
+        <div class="speaker__role">Blockspace</div>
+        <div class="speaker__topic">"Talk title coming soon."</div>
       </a>
     </div>
     <div class="speakers__actions">
@@ -2641,7 +2119,7 @@ body.menu-open{overflow:hidden}
         <span class="btn__arrow">↓</span>
       </button>
     </div>
-    <p class="speakers__footnote">Speaker lineup announced on a rolling basis. <em>Subscribe below for announcements.</em></p>
+    <p class="speakers__footnote">More speakers announced on a rolling basis. <em>Tap a card to follow them on X.</em></p>
   </div>
 </section>
 
@@ -2649,23 +2127,9 @@ body.menu-open{overflow:hidden}
   <div class="container">
     <header class="sec-hd" id="agenda">
       <div class="sec-hd__num">Nº 02 — Agenda</div>
-      <h2 class="section-title sec-hd__title">Two days, <em>coming soon.</em></h2>
+      <h2 class="section-title sec-hd__title">The full day, <em>coming soon.</em></h2>
     </header>
-
-    <div class="program__tabs" role="tablist">
-      <button class="program__tab program__tab--active" role="tab" aria-selected="true" data-day="day1">
-        <span class="program__tab-day">Friday</span>
-        <span class="program__tab-date">February 5, 2027</span>
-        <span class="program__tab-theme">Day 1</span>
-      </button>
-      <button class="program__tab program__tab--day2" role="tab" aria-selected="false" data-day="day2">
-        <span class="program__tab-day">Saturday</span>
-        <span class="program__tab-date">February 6, 2027</span>
-        <span class="program__tab-theme">Day 2</span>
-      </button>
-    </div>
-
-    <div class="program__board" data-day="day1">
+    <div class="program__board">
       <div class="program__row program__row--break"><div class="program__time">07 : 30 AM</div><div><div class="program__title">Registration, breakfast &amp; morning coffee</div></div><div class="program__tag">Lobby</div></div>
       <div class="program__row program__row--feat"><div class="program__time">09 : 00 AM</div><div><div class="program__title"><em>Opening keynote</em></div><div class="program__speaker">Speaker to be announced</div></div><div class="program__tag">Keynote · TBA</div></div>
       <div class="program__row"><div class="program__time">10 : 00 AM</div><div><div class="program__title">1st Morning session</div><div class="program__speaker">Talks &amp; panels · TBA</div></div><div class="program__tag">Main stage</div></div>
@@ -2678,27 +2142,10 @@ body.menu-open{overflow:hidden}
       <div class="program__row program__row--break"><div class="program__time">2 : 45 PM</div><div><div class="program__title">Break</div></div><div class="program__tag">15 min</div></div>
       <div class="program__row"><div class="program__time">3 : 00 PM</div><div><div class="program__title">3rd Afternoon session</div><div class="program__speaker">Talks &amp; panels · TBA</div></div><div class="program__tag">Main stage</div></div>
       <div class="program__row program__row--feat"><div class="program__time">4 : 00 PM</div><div><div class="program__title"><em>Closing keynote</em></div><div class="program__speaker">Speaker to be announced</div></div><div class="program__tag">Keynote · TBA</div></div>
-      <div class="program__row program__row--break"><div class="program__time">5 : 00 PM</div><div><div class="program__title">Day 1 closes</div></div><div class="program__tag">—</div></div>
-      <div class="program__row program__row--break"><div class="program__time">7 : 00 PM</div><div><div class="program__title"><em>Oceanfront Soiree at La Côte</em></div></div><div class="program__tag">Side Event</div></div>
+      <div class="program__row program__row--break"><div class="program__time">5 : 00 PM</div><div><div class="program__title">Day closes</div></div><div class="program__tag">—</div></div>
+      <div class="program__row program__row--break"><div class="program__time">7 : 30 PM</div><div><div class="program__title"><em>Dinner Reception</em></div></div><div class="program__tag">Side Event</div></div>
     </div>
-
-    <div class="program__board program__board--day2" data-day="day2" hidden>
-      <div class="program__row program__row--break"><div class="program__time">07 : 30 AM</div><div><div class="program__title">Registration, breakfast &amp; morning coffee</div></div><div class="program__tag">Lobby</div></div>
-      <div class="program__row program__row--feat"><div class="program__time">09 : 00 AM</div><div><div class="program__title"><em>Opening keynote</em></div><div class="program__speaker">Speaker to be announced</div></div><div class="program__tag">Keynote · TBA</div></div>
-      <div class="program__row"><div class="program__time">10 : 00 AM</div><div><div class="program__title">1st Morning session</div><div class="program__speaker">Talks &amp; panels · TBA</div></div><div class="program__tag">Main stage</div></div>
-      <div class="program__row program__row--break"><div class="program__time">10 : 45 AM</div><div><div class="program__title">Break</div></div><div class="program__tag">15 min</div></div>
-      <div class="program__row"><div class="program__time">11 : 00 AM</div><div><div class="program__title">2nd Morning session</div><div class="program__speaker">Talks &amp; panels · TBA</div></div><div class="program__tag">Main stage</div></div>
-      <div class="program__row program__row--break"><div class="program__time">11 : 45 AM</div><div><div class="program__title">Lunch</div></div><div class="program__tag">Included</div></div>
-      <div class="program__row"><div class="program__time">1 : 00 PM</div><div><div class="program__title">1st Afternoon session</div><div class="program__speaker">Talks &amp; panels · TBA</div></div><div class="program__tag">Main stage</div></div>
-      <div class="program__row program__row--break"><div class="program__time">1 : 45 PM</div><div><div class="program__title">Break</div></div><div class="program__tag">15 min</div></div>
-      <div class="program__row"><div class="program__time">2 : 00 PM</div><div><div class="program__title">2nd Afternoon session</div><div class="program__speaker">Talks &amp; panels · TBA</div></div><div class="program__tag">Main stage</div></div>
-      <div class="program__row program__row--break"><div class="program__time">2 : 45 PM</div><div><div class="program__title">Break</div></div><div class="program__tag">15 min</div></div>
-      <div class="program__row"><div class="program__time">3 : 00 PM</div><div><div class="program__title">3rd Afternoon session</div><div class="program__speaker">Talks &amp; panels · TBA</div></div><div class="program__tag">Main stage</div></div>
-      <div class="program__row program__row--feat"><div class="program__time">4 : 00 PM</div><div><div class="program__title"><em>Closing keynote</em></div><div class="program__speaker">Speaker to be announced</div></div><div class="program__tag">Keynote · TBA</div></div>
-      <div class="program__row program__row--break"><div class="program__time">5 : 00 PM</div><div><div class="program__title">Summit closes</div></div><div class="program__tag">—</div></div>
-      <div class="program__row program__row--break"><div class="program__time">7 : 00 PM</div><div><div class="program__title"><em>Biscayne Bay Boat After Party</em></div></div><div class="program__tag">Side Event</div></div>
-    </div>
-    <p class="program__footnote">Full schedule, speaker assignments, and talk titles published as confirmed. <em>Subscribe below to stay current.</em></p>
+    <p class="program__footnote">Full schedule, speaker assignments, and talk titles will be published closer to the event. <em>Subscribe below for updates.</em></p>
   </div>
 </section>
 
@@ -2706,74 +2153,80 @@ body.menu-open{overflow:hidden}
   <div class="container">
     <header class="sec-hd" id="side-events">
       <div class="sec-hd__num">Nº 03 — Side Events</div>
-      <h2 class="section-title sec-hd__title">An <em>immersive</em> week in Miami Beach.</h2>
+      <h2 class="section-title sec-hd__title">Before and after <em>the main day.</em></h2>
     </header>
     <div class="side-events__grid">
-      <article class="side-event side-event--silver">
-        <a class="side-event__link" href="https://luma.com/n6jb46op" target="_blank" rel="noopener" aria-label="Bitcoin Fundamentals — RSVP on Luma"></a>
+      <article class="side-event">
+        <a class="side-event__link" href="#" aria-label="Bitcoin Fundamentals — more info"></a>
         <div class="side-event__top">
           <div class="side-event__when">
             <div class="side-event__date">Thu · Feb 4</div>
             <div class="side-event__time">5PM — 6:30PM</div>
           </div>
-          <span class="side-event__sponsor" style="border-style:dashed;opacity:.45;cursor:default"><span class="side-event__sponsor-label">Presented by</span> TBD</span>
+          <a class="side-event__sponsor" href="https://bitcoinpark.com" target="_blank" rel="noopener"><span class="side-event__sponsor-label">Presented by</span> Bitcoin Park <span class="side-event__sponsor-arrow">→</span></a>
         </div>
         <h3 class="side-event__title">Bitcoin <em>Fundamentals</em></h3>
-        <div style="display:flex;flex-direction:column;gap:.35rem;grid-column:2;grid-row:3">
-          <div class="side-event__exclusive" style="display:flex;align-self:stretch">Included with every ticket</div>
-          <div class="side-event__exclusive" style="display:flex;align-self:stretch;background:linear-gradient(90deg,#8B5E1A,#C8882A,#8B5E1A);color:#fff">First Come First Served</div>
-        </div>
-        <div class="side-event__venue"><span class="side-event__venue-name">Coastal Convention Center</span><span class="side-event__venue-label">inside Fontainebleau</span></div>
-        <p class="side-event__desc">3 short 30-minute sessions on the basics, mining, and why Bitcoin is important for human freedom. The night before the Summit, for anyone who wants to walk in already fluent.</p>
-        <div class="side-event__meta"><strong>Click on this tile to sign up via Luma</strong></div>
+        <div class="side-event__venue"><span class="side-event__venue-name">Ballroom TBD</span><span class="side-event__venue-label">inside Fontainebleau</span></div>
+        <p class="side-event__desc">3 short 30-minute sessions on the basics, mining, and why Bitcoin is important for human freedom. The night before the summit, for anyone who wants to walk in already fluent.</p>
+        <div class="side-event__meta">Free with ticket · Limited to 100 spots</div>
       </article>
       <article class="side-event">
-        <a class="side-event__link" href="#tickets" aria-label="Welcome Reception — VIP ticket required"></a>
+        <a class="side-event__link" href="#tickets" aria-label="Welcome Dinner — reserve via bundle"></a>
         <div class="side-event__top">
           <div class="side-event__when">
             <div class="side-event__date">Thu · Feb 4</div>
             <div class="side-event__time">7PM — 10PM</div>
           </div>
-          <span class="side-event__sponsor" style="border-style:dashed;opacity:.45;cursor:default"><span class="side-event__sponsor-label">Presented by</span> TBD</span>
+          <a class="side-event__sponsor" href="https://nydig.com" target="_blank" rel="noopener"><span class="side-event__sponsor-label">Presented by</span> NYDIG <span class="side-event__sponsor-arrow">→</span></a>
         </div>
-        <h3 class="side-event__title">Welcome <em>Reception</em></h3>
-        <div class="side-event__exclusive">VIP Ticket Only</div>
+        <h3 class="side-event__title">Welcome <em>Dinner</em></h3>
+        <div class="side-event__exclusive">All Access Only</div>
         <div class="side-event__venue"><span class="side-event__venue-name">Arkadia Day Club</span><span class="side-event__venue-label">inside Fontainebleau</span></div>
-        <p class="side-event__desc">The evening before the Summit, Fontainebleau's day club will be privately reserved for an exclusive Welcome Reception. Speakers, partners, and <strong>only VIP ticket holders</strong> will come together for the first conversations of the week, setting the tone for the days ahead.</p>
-        <div class="side-event__meta"><strong>Plenty of Tray-Passed Food · Open Bar</strong></div>
+        <p class="side-event__desc">The night before, with Fontainebleau's day club privately reserved for the evening. Speakers, partners, and a small group of attendees gather for the first conversations of the week.</p>
+        <div class="side-event__meta"><strong>All Access only</strong> · $295 value · 200 seats</div>
       </article>
       <article class="side-event">
-        <a class="side-event__link" href="#tickets" aria-label="Oceanfront Soiree — VIP ticket required"></a>
+        <a class="side-event__link" href="#tickets" aria-label="After Party — reserve via bundle"></a>
         <div class="side-event__top">
           <div class="side-event__when">
             <div class="side-event__date">Fri · Feb 5</div>
             <div class="side-event__time">7PM — 10PM</div>
           </div>
-          <span class="side-event__sponsor" style="border-style:dashed;opacity:.45;cursor:default"><span class="side-event__sponsor-label">Presented by</span> TBD</span>
+          <a class="side-event__sponsor" href="https://www.bitrefill.com" target="_blank" rel="noopener"><span class="side-event__sponsor-label">Presented by</span> Bitrefill <span class="side-event__sponsor-arrow">→</span></a>
         </div>
-        <h3 class="side-event__title">Oceanfront <em>Soiree</em></h3>
-        <div class="side-event__exclusive">VIP Ticket Only</div>
+        <h3 class="side-event__title">After <em>Party</em></h3>
+        <div class="side-event__exclusive">All Access Only</div>
         <div class="side-event__venue"><span class="side-event__venue-name">La Côte</span><span class="side-event__venue-label">inside Fontainebleau</span></div>
-        <p class="side-event__desc">Following the first day of programming, the Oceanfront Soiree brings speakers, partners, and <strong>only VIP ticket holders</strong> together for drinks, dinner, and relaxed conversation with ocean views at Fontainebleau's La Côte. The official sessions may end at 5, but the real connections often continue well into the evening.</p>
-        <div class="side-event__meta"><strong>Food Buffet · Open Bar</strong></div>
+        <p class="side-event__desc">Drinks, dinner, and unhurried conversation poolside at Fontainebleau's Mediterranean restaurant. The day doesn't end at 5 — the most useful conversations rarely happen in the room.</p>
+        <div class="side-event__meta"><strong>All Access only</strong> · $195 value · 200 seats</div>
       </article>
-      <article class="side-event side-event--silver">
-        <a class="side-event__link" href="https://pay.zaprite.com/pl_wIAImtY5wz" target="_blank" rel="noopener" aria-label="Boat After Party — get tickets"></a>
+      <article class="side-event side-event--hrf">
+        <a class="side-event__link" href="#" aria-label="AI for Individual Rights Day — more info"></a>
+        <div class="side-event__top">
+          <div class="side-event__when">
+            <div class="side-event__date">Sat · Feb 6</div>
+            <div class="side-event__time">10AM — 5PM</div>
+          </div>
+          <a class="side-event__sponsor" href="https://hrf.org/program/ai-for-individual-rights/" target="_blank" rel="noopener"><span class="side-event__sponsor-label">Presented by</span> Human Rights Foundation <span class="side-event__sponsor-arrow">→</span></a>
+        </div>
+        <h3 class="side-event__title">AI for Individual Rights <em>Day</em></h3>
+        <div class="side-event__venue"><span class="side-event__venue-name">The LAB Miami</span><span class="side-event__venue-label">offsite</span></div>
+        <p class="side-event__desc">How dictatorships are weaponizing AI — and how open-source, privacy-protecting tools can put that power back in individual hands. A day of talks, workshops, and working sessions with the builders.</p>
+        <div class="side-event__meta">$149 · 400 spots total (200 Individual Tickets + 200 All Access Bundles)</div>
+      </article>
+      <article class="side-event">
+        <a class="side-event__link" href="#" aria-label="Biscayne Bay Boat Party — more info"></a>
         <div class="side-event__top">
           <div class="side-event__when">
             <div class="side-event__date">Sat · Feb 6</div>
             <div class="side-event__time">7PM — 10PM</div>
           </div>
-          <span class="side-event__sponsor" style="border-style:dashed;opacity:.45;cursor:default"><span class="side-event__sponsor-label">Presented by</span> TBD</span>
+          <a class="side-event__sponsor" href="https://onrampbitcoin.com" target="_blank" rel="noopener"><span class="side-event__sponsor-label">Presented by</span> Onramp <span class="side-event__sponsor-arrow">→</span></a>
         </div>
-        <h3 class="side-event__title">Boat <em>After Party</em></h3>
-        <div style="display:flex;flex-direction:column;gap:.35rem;grid-column:2;grid-row:3">
-          <div class="side-event__exclusive" style="display:flex;align-self:stretch;background:linear-gradient(90deg,#D4A93C 0%,#E8C46A 50%,#D4A93C 100%);color:#0A1224">Included with VIP Ticket</div>
-          <div class="side-event__exclusive" style="display:flex;align-self:stretch;background:linear-gradient(90deg,#8B5E1A,#C8882A,#8B5E1A);color:#fff">Add-On for GA</div>
-        </div>
+        <h3 class="side-event__title">Biscayne Bay <em>Boat Party</em></h3>
         <div class="side-event__venue"><span class="side-event__venue-name">Bayside Marina</span><span class="side-event__venue-label">Meet at Fontainebleau</span></div>
-        <p class="side-event__desc">To close the Summit, guests will gather Saturday night aboard Biscayne Lady Yacht Charters for an evening on Biscayne Bay with drinks, music, and Miami skyline views. Shuttles will run from the Fontainebleau lobby to Bayside Marketplace, with boarding at Bayside Marina, Pier 1. VIP ticket holders have guaranteed access. Additional spots are available as an add-on for GA ticket holders — limited to 400 total guests.</p>
-        <div class="side-event__meta"><strong>Food &amp; Open Bar Included · Limited Capacity</strong></div>
+        <p class="side-event__desc">Saturday night on Biscayne Bay — drinks, music, skyline views, and one last gathering before the week winds down. Shuttle from the Fontainebleau lobby to Bayside Marketplace; departs from Miami Tour Company.</p>
+        <div class="side-event__meta">$199 · Separate ticket · 400 spots total (200 Individual Tickets + 200 All Access Bundles)</div>
       </article>
     </div>
   </div>
@@ -2783,42 +2236,51 @@ body.menu-open{overflow:hidden}
   <div class="container">
     <header class="sec-hd" id="sponsors">
       <div class="sec-hd__num">Nº 04 — Sponsors</div>
-      <h2 class="section-title sec-hd__title">Organizations <em>building toward something real.</em></h2>
+      <h2 class="section-title sec-hd__title"><span style="color:var(--accent-deep)">Brands</span> that care about <span style="color:var(--accent-deep)">Sovereignty.</span></h2>
     </header>
     <div class="friends__tier friends__tier--platinum">
       <div class="friends__tier-label"><span>Platinum</span></div>
       <div class="friends__grid friends__grid--platinum">
-        <div class="friend friend--platinum"><div class="friend__logo friend__logo--placeholder"><img src="images/sponsor-placeholder.png" alt="" class="friend__logo-fallback"></div><div class="friend__text"><div class="friend__name">Platinum Sponsor</div><div class="friend__type">TBD</div></div></div>
+        <a class="friend friend--platinum" href="https://block.xyz/" target="_blank" rel="noopener" aria-label="Block — Platinum sponsor">
+          <div class="friend__logo">
+            <img src="/images/sponsors/platinum.webp" alt="Block logo" onload="this.parentElement.classList.add('friend__logo--has-image')" onerror="this.style.display='none'" />
+            <span class="friend__logo-fallback">B</span>
+          </div>
+          <div class="friend__text">
+            <div class="friend__name">Block</div>
+            <div class="friend__type">Platinum Sponsor</div>
+          </div>
+        </a>
       </div>
     </div>
     <div class="friends__tier friends__tier--gold">
       <div class="friends__tier-label"><span>Gold</span></div>
       <div class="friends__grid friends__grid--gold">
-        <div class="friend friend--gold"><div class="friend__logo friend__logo--placeholder"><img src="images/sponsor-placeholder.png" alt="" class="friend__logo-fallback"></div><div class="friend__text"><div class="friend__name">Gold Sponsor</div><div class="friend__type">TBD</div></div></div>
-        <div class="friend friend--gold"><div class="friend__logo friend__logo--placeholder"><img src="images/sponsor-placeholder.png" alt="" class="friend__logo-fallback"></div><div class="friend__text"><div class="friend__name">Gold Sponsor</div><div class="friend__type">TBD</div></div></div>
+        <a class="friend friend--gold" href="https://unchained.com" target="_blank" rel="noopener" aria-label="Unchained — Gold sponsor"><div class="friend__logo"><img src="/images/sponsors/gold-01.webp" alt="Unchained logo" onload="this.parentElement.classList.add('friend__logo--has-image')" onerror="this.style.display='none'" /><span class="friend__logo-fallback">U</span></div><div class="friend__text"><div class="friend__name">Unchained</div><div class="friend__type">Gold Sponsor</div></div></a>
+        <a class="friend friend--gold" href="https://hrf.org" target="_blank" rel="noopener" aria-label="Human Rights Foundation — Gold sponsor"><div class="friend__logo"><img src="/images/sponsors/gold-02.webp" alt="Human Rights Foundation logo" onload="this.parentElement.classList.add('friend__logo--has-image')" onerror="this.style.display='none'" /><span class="friend__logo-fallback">H</span></div><div class="friend__text"><div class="friend__name">Human Rights Foundation</div><div class="friend__type">Gold Sponsor</div></div></a>
       </div>
     </div>
     <div class="friends__tier friends__tier--silver">
       <div class="friends__tier-label"><span>Silver</span></div>
       <div class="friends__grid friends__grid--silver">
-        <div class="friend friend--silver"><div class="friend__logo friend__logo--placeholder"><img src="images/sponsor-placeholder.png" alt="" class="friend__logo-fallback"></div><div class="friend__text"><div class="friend__name">Silver Sponsor</div><div class="friend__type">TBD</div></div></div>
-        <div class="friend friend--silver"><div class="friend__logo friend__logo--placeholder"><img src="images/sponsor-placeholder.png" alt="" class="friend__logo-fallback"></div><div class="friend__text"><div class="friend__name">Silver Sponsor</div><div class="friend__type">TBD</div></div></div>
+        <a class="friend friend--silver" href="https://meanwhile.bm" target="_blank" rel="noopener" aria-label="Meanwhile — Silver sponsor"><div class="friend__logo"><img src="/images/sponsors/silver-01.webp" alt="Meanwhile logo" onload="this.parentElement.classList.add('friend__logo--has-image')" onerror="this.style.display='none'" /><span class="friend__logo-fallback">M</span></div><div class="friend__text"><div class="friend__name">Meanwhile</div><div class="friend__type">Silver Sponsor</div></div></a>
+        <a class="friend friend--silver" href="https://www.mara.com/" target="_blank" rel="noopener" aria-label="Mara — Silver sponsor"><div class="friend__logo"><img src="/images/sponsors/silver-02.webp" alt="Mara logo" onload="this.parentElement.classList.add('friend__logo--has-image')" onerror="this.style.display='none'" /><span class="friend__logo-fallback">M</span></div><div class="friend__text"><div class="friend__name">Mara</div><div class="friend__type">Silver Sponsor</div></div></a>
       </div>
     </div>
     <div class="friends__tier friends__tier--hidden" id="friendsActivations">
       <div class="friends__tier-label">Activation Sponsors</div>
       <div class="friends__grid friends__grid--activation">
-        <div class="friend friend--activation"><div class="friend__logo friend__logo--placeholder"><img src="images/sponsor-placeholder.png" alt="" class="friend__logo-fallback"></div><div class="friend__text"><div class="friend__name">Sponsor</div><div class="friend__type">TBD</div></div></div>
-        <div class="friend friend--activation"><div class="friend__logo friend__logo--placeholder"><img src="images/sponsor-placeholder.png" alt="" class="friend__logo-fallback"></div><div class="friend__text"><div class="friend__name">Sponsor</div><div class="friend__type">TBD</div></div></div>
-        <div class="friend friend--activation"><div class="friend__logo friend__logo--placeholder"><img src="images/sponsor-placeholder.png" alt="" class="friend__logo-fallback"></div><div class="friend__text"><div class="friend__name">Sponsor</div><div class="friend__type">TBD</div></div></div>
-        <div class="friend friend--activation"><div class="friend__logo friend__logo--placeholder"><img src="images/sponsor-placeholder.png" alt="" class="friend__logo-fallback"></div><div class="friend__text"><div class="friend__name">Sponsor</div><div class="friend__type">TBD</div></div></div>
-        <div class="friend friend--activation"><div class="friend__logo friend__logo--placeholder"><img src="images/sponsor-placeholder.png" alt="" class="friend__logo-fallback"></div><div class="friend__text"><div class="friend__name">Sponsor</div><div class="friend__type">TBD</div></div></div>
-        <div class="friend friend--activation"><div class="friend__logo friend__logo--placeholder"><img src="images/sponsor-placeholder.png" alt="" class="friend__logo-fallback"></div><div class="friend__text"><div class="friend__name">Sponsor</div><div class="friend__type">TBD</div></div></div>
-        <div class="friend friend--activation"><div class="friend__logo friend__logo--placeholder"><img src="images/sponsor-placeholder.png" alt="" class="friend__logo-fallback"></div><div class="friend__text"><div class="friend__name">Sponsor</div><div class="friend__type">TBD</div></div></div>
-        <div class="friend friend--activation"><div class="friend__logo friend__logo--placeholder"><img src="images/sponsor-placeholder.png" alt="" class="friend__logo-fallback"></div><div class="friend__text"><div class="friend__name">Sponsor</div><div class="friend__type">TBD</div></div></div>
-        <div class="friend friend--activation"><div class="friend__logo friend__logo--placeholder"><img src="images/sponsor-placeholder.png" alt="" class="friend__logo-fallback"></div><div class="friend__text"><div class="friend__name">Sponsor</div><div class="friend__type">TBD</div></div></div>
-        <div class="friend friend--activation"><div class="friend__logo friend__logo--placeholder"><img src="images/sponsor-placeholder.png" alt="" class="friend__logo-fallback"></div><div class="friend__text"><div class="friend__name">Sponsor</div><div class="friend__type">TBD</div></div></div>
-        <div class="friend friend--activation"><div class="friend__logo friend__logo--placeholder"><img src="images/sponsor-placeholder.png" alt="" class="friend__logo-fallback"></div><div class="friend__text"><div class="friend__name">Sponsor</div><div class="friend__type">TBD</div></div></div>
+        <a class="friend friend--activation" href="https://www.bitgo.com" target="_blank" rel="noopener" aria-label="BitGo — Badge sponsor"><div class="friend__logo"><img src="/images/sponsors/activation-01.webp" alt="BitGo logo" onload="this.parentElement.classList.add('friend__logo--has-image')" onerror="this.style.display='none'" /><span class="friend__logo-fallback">B</span></div><div class="friend__text"><div class="friend__name">BitGo</div><div class="friend__type">Badge</div></div></a>
+        <a class="friend friend--activation" href="https://archlending.com" target="_blank" rel="noopener" aria-label="Arch Lending — Lanyard sponsor"><div class="friend__logo"><img src="/images/sponsors/activation-02.webp" alt="Arch Lending logo" onload="this.parentElement.classList.add('friend__logo--has-image')" onerror="this.style.display='none'" /><span class="friend__logo-fallback">A</span></div><div class="friend__text"><div class="friend__name">Arch Lending</div><div class="friend__type">Lanyard</div></div></a>
+        <a class="friend friend--activation" href="https://liquiddeath.com" target="_blank" rel="noopener" aria-label="Liquid Death — Coffee &amp; Water sponsor"><div class="friend__logo"><img src="/images/sponsors/activation-03.webp" alt="Liquid Death logo" onload="this.parentElement.classList.add('friend__logo--has-image')" onerror="this.style.display='none'" /><span class="friend__logo-fallback">L</span></div><div class="friend__text"><div class="friend__name">Liquid Death</div><div class="friend__type">Coffee &amp; Water</div></div></a>
+        <a class="friend friend--activation" href="https://www.anchorwatch.com" target="_blank" rel="noopener" aria-label="AnchorWatch — Bag sponsor"><div class="friend__logo"><img src="/images/sponsors/activation-04.webp" alt="AnchorWatch logo" onload="this.parentElement.classList.add('friend__logo--has-image')" onerror="this.style.display='none'" /><span class="friend__logo-fallback">A</span></div><div class="friend__text"><div class="friend__name">AnchorWatch</div><div class="friend__type">Bag</div></div></a>
+        <a class="friend friend--activation" href="https://bitkey.world" target="_blank" rel="noopener" aria-label="Bitkey — Exhibition Table sponsor"><div class="friend__logo"><img src="/images/sponsors/activation-05.webp" alt="Bitkey logo" onload="this.parentElement.classList.add('friend__logo--has-image')" onerror="this.style.display='none'" /><span class="friend__logo-fallback">B</span></div><div class="friend__text"><div class="friend__name">Bitkey</div><div class="friend__type">Exhibition Table</div></div></a>
+        <a class="friend friend--activation" href="https://bitcoinpark.com" target="_blank" rel="noopener" aria-label="Bitcoin Park — Side Event sponsor"><div class="friend__logo"><img src="/images/sponsors/activation-10.webp" alt="Bitcoin Park logo" onload="this.parentElement.classList.add('friend__logo--has-image')" onerror="this.style.display='none'" /><span class="friend__logo-fallback">B</span></div><div class="friend__text"><div class="friend__name">Bitcoin Park</div><div class="friend__type">Side Event</div></div></a>
+        <a class="friend friend--activation" href="https://nydig.com" target="_blank" rel="noopener" aria-label="NYDIG — Side Event sponsor"><div class="friend__logo"><img src="/images/sponsors/activation-06.webp" alt="NYDIG logo" onload="this.parentElement.classList.add('friend__logo--has-image')" onerror="this.style.display='none'" /><span class="friend__logo-fallback">N</span></div><div class="friend__text"><div class="friend__name">NYDIG</div><div class="friend__type">Side Event</div></div></a>
+        <a class="friend friend--activation" href="https://www.bitrefill.com" target="_blank" rel="noopener" aria-label="Bitrefill — Side Event sponsor"><div class="friend__logo"><img src="/images/sponsors/activation-08.webp" alt="Bitrefill logo" onload="this.parentElement.classList.add('friend__logo--has-image')" onerror="this.style.display='none'" /><span class="friend__logo-fallback">B</span></div><div class="friend__text"><div class="friend__name">Bitrefill</div><div class="friend__type">Side Event</div></div></a>
+        <a class="friend friend--activation" href="https://hrf.org" target="_blank" rel="noopener" aria-label="Human Rights Foundation — Side Event sponsor"><div class="friend__logo"><img src="/images/sponsors/activation-09.webp" alt="Human Rights Foundation logo" onload="this.parentElement.classList.add('friend__logo--has-image')" onerror="this.style.display='none'" /><span class="friend__logo-fallback">H</span></div><div class="friend__text"><div class="friend__name">HRF</div><div class="friend__type">Side Event</div></div></a>
+        <a class="friend friend--activation" href="https://onrampbitcoin.com" target="_blank" rel="noopener" aria-label="Onramp — Side Event sponsor"><div class="friend__logo"><img src="/images/sponsors/activation-11.webp" alt="Onramp logo" onload="this.parentElement.classList.add('friend__logo--has-image')" onerror="this.style.display='none'" /><span class="friend__logo-fallback">O</span></div><div class="friend__text"><div class="friend__name">Onramp</div><div class="friend__type">Side Event</div></div></a>
+        <a class="friend friend--activation" href="#" aria-label="Activation sponsor — to be announced"><div class="friend__logo"><img src="/images/sponsors/activation-07.webp" alt="Activation sponsor logo" onload="this.parentElement.classList.add('friend__logo--has-image')" onerror="this.style.display='none'" /><span class="friend__logo-fallback">?</span></div><div class="friend__text"><div class="friend__name">TBD</div><div class="friend__type">Promotional Insert</div></div></a>
       </div>
     </div>
     <div class="friends__actions">
@@ -2829,7 +2291,7 @@ body.menu-open{overflow:hidden}
       </button>
     </div>
     <div class="friends__become">
-      <div class="friends__become-text">A select number of sponsorship opportunities remain. <em>If your brand belongs at the intersection of Bitcoin, energy, AI, and sovereignty — let's talk.</em></div>
+      <div class="friends__become-text">A handful of sponsorship seats remain. <em>Built Bitcoin-only?</em></div>
       <a href="#" class="btn">Sponsorship details <span class="btn__arrow">→</span></a>
     </div>
   </div>
@@ -2844,81 +2306,114 @@ body.menu-open{overflow:hidden}
     <div class="partners__grid" id="partnersGrid">
       <a class="partner" href="https://simplybitcoin.com" target="_blank" rel="noopener" data-partner="01" aria-label="Simply Bitcoin">
         <div class="partner__index">01</div>
-        <div class="partner__portrait"><div class="partner__placeholder">?</div></div>
-        <h3 class="partner__name"><em>Partner TBA</em></h3>
-        <div class="partner__role">To be announced</div>
-        <div class="partner__topic">&ldquo;Coming soon.&rdquo;</div>
+        <div class="partner__portrait">
+          <img class="partner__photo" src="/images/partners/partner-01.webp" alt="Simply Bitcoin logo" onload="this.parentElement.classList.add('partner__portrait--haslogo')" onerror="this.style.display='none'" />
+          <div class="partner__placeholder">S</div>
+        </div>
+        <h3 class="partner__name">Simply <em>Bitcoin</em></h3>
+        <div class="partner__role">Media Partner</div>
+        <div class="partner__topic">"Bitcoin news, daily."</div>
       </a>
       <a class="partner" href="https://bitcoinmagazine.com" target="_blank" rel="noopener" data-partner="02" aria-label="Bitcoin Magazine">
         <div class="partner__index">02</div>
-        <div class="partner__portrait"><div class="partner__placeholder">?</div></div>
-        <h3 class="partner__name"><em>Partner TBA</em></h3>
-        <div class="partner__role">To be announced</div>
-        <div class="partner__topic">&ldquo;Coming soon.&rdquo;</div>
+        <div class="partner__portrait">
+          <img class="partner__photo" src="/images/partners/partner-02.webp" alt="Bitcoin Magazine logo" onload="this.parentElement.classList.add('partner__portrait--haslogo')" onerror="this.style.display='none'" />
+          <div class="partner__placeholder">B</div>
+        </div>
+        <h3 class="partner__name">Bitcoin <em>Magazine</em></h3>
+        <div class="partner__role">Media Partner</div>
+        <div class="partner__topic">"The original Bitcoin publication."</div>
       </a>
       <a class="partner" href="https://www.petermccormack.com" target="_blank" rel="noopener" data-partner="03" aria-label="The Peter McCormack Show">
         <div class="partner__index">03</div>
-        <div class="partner__portrait"><div class="partner__placeholder">?</div></div>
-        <h3 class="partner__name"><em>Partner TBA</em></h3>
-        <div class="partner__role">To be announced</div>
-        <div class="partner__topic">&ldquo;Coming soon.&rdquo;</div>
+        <div class="partner__portrait">
+          <img class="partner__photo" src="/images/partners/partner-03.webp" alt="The Peter McCormack Show logo" onload="this.parentElement.classList.add('partner__portrait--haslogo')" onerror="this.style.display='none'" />
+          <div class="partner__placeholder">P</div>
+        </div>
+        <h3 class="partner__name">The Peter <em>McCormack</em> Show</h3>
+        <div class="partner__role">Media Partner</div>
+        <div class="partner__topic">"Long-form interviews on money, politics &amp; power."</div>
       </a>
       <a class="partner" href="https://proofofconference.com" target="_blank" rel="noopener" data-partner="04" aria-label="Proof of Conference">
         <div class="partner__index">04</div>
-        <div class="partner__portrait"><div class="partner__placeholder">?</div></div>
-        <h3 class="partner__name"><em>Partner TBA</em></h3>
-        <div class="partner__role">To be announced</div>
-        <div class="partner__topic">&ldquo;Coming soon.&rdquo;</div>
+        <div class="partner__portrait">
+          <img class="partner__photo" src="/images/partners/partner-04.webp" alt="Proof of Conference logo" onload="this.parentElement.classList.add('partner__portrait--haslogo')" onerror="this.style.display='none'" />
+          <div class="partner__placeholder">P</div>
+        </div>
+        <h3 class="partner__name">Proof of <em>Conference</em></h3>
+        <div class="partner__role">Event Partner</div>
+        <div class="partner__topic">"The Bitcoin events directory."</div>
       </a>
       <a class="partner partner--hidden" href="https://www.victoirevoyages.com/" target="_blank" rel="noopener" data-partner="05" aria-label="Victoire Voyages">
         <div class="partner__index">05</div>
-        <div class="partner__portrait"><div class="partner__placeholder">?</div></div>
-        <h3 class="partner__name"><em>Partner TBA</em></h3>
-        <div class="partner__role">To be announced</div>
-        <div class="partner__topic">&ldquo;Coming soon.&rdquo;</div>
+        <div class="partner__portrait partner__portrait--wordmark">
+          <img class="partner__photo" src="/images/partners/partner-05.webp" alt="Victoire Voyages logo" onload="this.parentElement.classList.add('partner__portrait--haslogo')" onerror="this.style.display='none'" />
+          <div class="partner__placeholder">V</div>
+        </div>
+        <h3 class="partner__name">Victoire <em>Voyages</em></h3>
+        <div class="partner__role">Event Partner</div>
+        <div class="partner__topic">"Bespoke family travel planning."</div>
       </a>
       <a class="partner partner--hidden" href="https://econclubmiami.org" target="_blank" rel="noopener" data-partner="06" aria-label="The Economic Club of Miami">
         <div class="partner__index">06</div>
-        <div class="partner__portrait"><div class="partner__placeholder">?</div></div>
-        <h3 class="partner__name"><em>Partner TBA</em></h3>
-        <div class="partner__role">To be announced</div>
-        <div class="partner__topic">&ldquo;Coming soon.&rdquo;</div>
+        <div class="partner__portrait">
+          <img class="partner__photo" src="/images/partners/partner-06.webp" alt="The Economic Club of Miami logo" onload="this.parentElement.classList.add('partner__portrait--haslogo')" onerror="this.style.display='none'" />
+          <div class="partner__placeholder">E</div>
+        </div>
+        <h3 class="partner__name">The Economic Club <em>of Miami</em></h3>
+        <div class="partner__role">Community Partner</div>
+        <div class="partner__topic">"Where Miami's leaders convene, connect &amp; collaborate."</div>
       </a>
       <a class="partner partner--hidden" href="https://emergeamericas.com" target="_blank" rel="noopener" data-partner="07" aria-label="eMerge Americas">
         <div class="partner__index">07</div>
-        <div class="partner__portrait"><div class="partner__placeholder">?</div></div>
-        <h3 class="partner__name"><em>Partner TBA</em></h3>
-        <div class="partner__role">To be announced</div>
-        <div class="partner__topic">&ldquo;Coming soon.&rdquo;</div>
+        <div class="partner__portrait">
+          <img class="partner__photo" src="/images/partners/partner-07.webp" alt="eMerge Americas logo" onload="this.parentElement.classList.add('partner__portrait--haslogo')" onerror="this.style.display='none'" />
+          <div class="partner__placeholder">e</div>
+        </div>
+        <h3 class="partner__name">eMerge <em>Americas</em></h3>
+        <div class="partner__role">Tech Ecosystem Partner</div>
+        <div class="partner__topic">"Where Miami's tech &amp; innovation converge."</div>
       </a>
       <a class="partner partner--hidden" href="https://www.miamifinanceforum.com" target="_blank" rel="noopener" data-partner="08" aria-label="Miami Finance Forum">
         <div class="partner__index">08</div>
-        <div class="partner__portrait"><div class="partner__placeholder">?</div></div>
-        <h3 class="partner__name"><em>Partner TBA</em></h3>
-        <div class="partner__role">To be announced</div>
-        <div class="partner__topic">&ldquo;Coming soon.&rdquo;</div>
+        <div class="partner__portrait">
+          <img class="partner__photo" src="/images/partners/partner-08.webp" alt="Miami Finance Forum logo" onload="this.parentElement.classList.add('partner__portrait--haslogo')" onerror="this.style.display='none'" />
+          <div class="partner__placeholder">M</div>
+        </div>
+        <h3 class="partner__name">Miami Finance <em>Forum</em></h3>
+        <div class="partner__role">Finance Community Partner</div>
+        <div class="partner__topic">"South Florida's network of finance professionals."</div>
       </a>
       <a class="partner partner--hidden" href="https://tnorth.com" target="_blank" rel="noopener" data-partner="09" aria-label="True North">
         <div class="partner__index">09</div>
-        <div class="partner__portrait"><div class="partner__placeholder">?</div></div>
-        <h3 class="partner__name"><em>Partner TBA</em></h3>
-        <div class="partner__role">To be announced</div>
-        <div class="partner__topic">&ldquo;Coming soon.&rdquo;</div>
+        <div class="partner__portrait">
+          <img class="partner__photo" src="/images/partners/partner-09.webp" alt="True North logo" onload="this.parentElement.classList.add('partner__portrait--haslogo')" onerror="this.style.display='none'" />
+          <div class="partner__placeholder">T</div>
+        </div>
+        <h3 class="partner__name">True <em>North</em></h3>
+        <div class="partner__role">Community Partner</div>
+        <div class="partner__topic">"Partnership details coming soon."</div>
       </a>
       <a class="partner partner--hidden" href="https://www.miamibeachfl.gov" target="_blank" rel="noopener" data-partner="10" aria-label="City of Miami Beach">
         <div class="partner__index">10</div>
-        <div class="partner__portrait"><div class="partner__placeholder">?</div></div>
-        <h3 class="partner__name"><em>Partner TBA</em></h3>
-        <div class="partner__role">To be announced</div>
-        <div class="partner__topic">&ldquo;Coming soon.&rdquo;</div>
+        <div class="partner__portrait">
+          <img class="partner__photo" src="/images/partners/partner-10.webp" alt="City of Miami Beach logo" onload="this.parentElement.classList.add('partner__portrait--haslogo')" onerror="this.style.display='none'" />
+          <div class="partner__placeholder">M</div>
+        </div>
+        <h3 class="partner__name">City of Miami <em>Beach</em></h3>
+        <div class="partner__role">Host City Partner</div>
+        <div class="partner__topic">"Where the summit comes to life."</div>
       </a>
       <a class="partner partner--hidden" href="https://www.financialplanningassociation.org" target="_blank" rel="noopener" data-partner="11" aria-label="Financial Planning Association">
         <div class="partner__index">11</div>
-        <div class="partner__portrait"><div class="partner__placeholder">?</div></div>
-        <h3 class="partner__name"><em>Partner TBA</em></h3>
-        <div class="partner__role">To be announced</div>
-        <div class="partner__topic">&ldquo;Coming soon.&rdquo;</div>
-      </div>
+        <div class="partner__portrait">
+          <img class="partner__photo" src="/images/partners/partner-11.webp" alt="Financial Planning Association logo" onload="this.parentElement.classList.add('partner__portrait--haslogo')" onerror="this.style.display='none'" />
+          <div class="partner__placeholder">F</div>
+        </div>
+        <h3 class="partner__name">Financial Planning <em>Association</em></h3>
+        <div class="partner__role">Industry Partner</div>
+        <div class="partner__topic">"The CFP® professional's partner in planning."</div>
+      </a>
     </div>
     <div class="partners__actions">
       <button type="button" class="btn partners__toggle" id="partnersToggle" aria-expanded="false">
@@ -2927,7 +2422,7 @@ body.menu-open{overflow:hidden}
         <span class="btn__arrow">↓</span>
       </button>
     </div>
-    <p class="partners__footnote">Curated collaborations with organizations aligned on Bitcoin, energy, AI, and sovereignty. <em>More announced on a rolling basis.</em></p>
+    <p class="partners__footnote">Curated collaborations with organizations aligned on Bitcoin, energy, AI, and sovereignty. <em>More to come.</em></p>
   </div>
 </section>
 
@@ -2953,12 +2448,12 @@ body.menu-open{overflow:hidden}
         <div class="eyebrow" style="color:var(--accent-deep)">The venue, confirmed</div>
         <h3>The most <em>iconic</em> hotel in Miami Beach.</h3>
         <p>Twenty oceanfront acres on Collins Avenue. Designed by Morris Lapidus in 1954, named to the National Register of Historic Places, and a fixture of American glamour ever since — from <em>Goldfinger</em> to Sinatra at La Ronde to a billion-dollar renovation that preserved every curve.</p>
-        <p>The Summit takes place in the <strong>Coastal Convention Center</strong> — Fontainebleau's dedicated event space — with the venue serving as home base for the entire week. Dinners and after-parties are all on-property. The closing Biscayne Bay boat party is the only offsite event — a short ride away from the lobby.</p>
+        <p>Fontainebleau serves as the home base for the week, with the summit, dinners, and after-parties all on-property. Offsite programming stays close: AI for Individual Rights Day in Wynwood and the closing Biscayne Bay boat party are both a short ride away.</p>
         <div class="venue__details">
           <div><div class="venue__detail-label">Address</div><div class="venue__detail-value">4441 Collins Avenue<br>Miami Beach, FL 33140</div></div>
           <div><div class="venue__detail-label">Getting there from airport</div><div class="venue__detail-value">MIA · 25 min drive<br>FLL · 45 min drive</div></div>
           <div><div class="venue__detail-label">Lodging</div><div class="venue__detail-value"><a class="venue__link" href="https://www.fontainebleau.com/miamibeach/" target="_blank" rel="noopener">TSS Room Block @ Fontainebleau</a><br><span style="display:inline-block;margin-top:.5rem">Other hotels? <a class="venue__link" href="https://www.victoirevoyages.com" target="_blank" rel="noopener">Victoire Voyages</a> can secure preferred rates.</span></div></div>
-          <div><div class="venue__detail-label">Getting to side events</div><div class="venue__detail-value">Arkadia Day Club · on site<br>La Côte · on site<br>Bayside Marina · 25 min drive</div></div>
+          <div><div class="venue__detail-label">Getting to side events</div><div class="venue__detail-value">Arkadia Day Club · on site<br>La Côte · on site<br>The LAB Miami · 20 min drive<br>Bayside Marina · 25 min drive</div></div>
         </div>
       </div>
     </div>
@@ -2973,88 +2468,88 @@ body.menu-open{overflow:hidden}
     </header>
     <div class="faq__list">
       <details class="faq__item">
-        <summary class="faq__q"><span class="faq__num">01</span><span class="faq__q-text">Who attends <em>The Sovereign Summit?</em></span><span class="faq__icon"></span></summary>
-        <div class="faq__a"><p>The Sovereign Summit draws founders, operators, investors, researchers, and senior leaders who are building at — or moving toward — the intersection of Bitcoin, energy, AI, and individual sovereignty.</p><p>You'll find institutional allocators alongside independent builders. Veteran Bitcoiners alongside first-time attendees from energy and AI who are only beginning to connect the dots. The common thread is high agency and genuine intellectual seriousness.</p><p>This is not a conference for spectators. It's built for people who show up ready to think, engage, and act.</p></div>
+        <summary class="faq__q"><span class="faq__num">01</span><span class="faq__q-text">Is this for <em>me?</em></span><span class="faq__icon"></span></summary>
+        <div class="faq__a"><p>Likely yes, if you care about where money, energy, AI, and freedom are heading. You don't need a portfolio or a protocol to belong here. You need real interest in the questions.</p><p>Builders, allocators, founders, operators, writers, researchers, and serious learners all fit. So do thoughtful skeptics. What doesn't fit is bad faith.</p><p>If you're curious why people are reorganizing their careers around hard money, abundant energy, sovereign AI, and personal liberty — you'll find your people here.</p></div>
       </details>
       <details class="faq__item">
         <summary class="faq__q"><span class="faq__num">02</span><span class="faq__q-text">Is this a <em>crypto</em> conference?</span><span class="faq__icon"></span></summary>
-        <div class="faq__a"><p>No.</p><p>On the monetary side, The Sovereign Summit is Bitcoin-only. No altcoin tracks, no token pitches, no "crypto" panels dressed up as education. Bitcoin is treated as the monetary layer of a sovereign future — not as a trading asset.</p><p>That said, monetary sovereignty is one of four pillars. Energy, AI, and freedom bring attendees who may not hold bitcoin at all — and that's by design. The conversation is broader than any single asset. What isn't welcome is promotion dressed as content.</p></div>
+        <div class="faq__a"><p>No.</p><p>On the monetary side, The Sovereign Summit is bitcoin-only. No token pitches. No altcoin tracks. No "crypto" panels dressed up as bitcoin education.</p><p>That said, monetary policy is one thread of four. Energy, AI, and freedom bring people who may not hold any bitcoin at all — and that's the point. All are welcome. Shilling is not.</p></div>
       </details>
       <details class="faq__item">
         <summary class="faq__q"><span class="faq__num">03</span><span class="faq__q-text">Why <em>these four topics</em> together?</span><span class="faq__icon"></span></summary>
-        <div class="faq__a"><p>Because the most important story of this decade is not happening inside any single industry — it's happening at the collisions between them.</p><p>Bitcoin is reshaping energy markets. AI is the largest new draw on the global grid since air conditioning — and the most consequential question of our era is who controls it. Energy abundance and monetary sovereignty are two sides of the same coin. Underneath all of it is a deeper question: who controls your money, your data, your decisions?</p><p>The Sovereign Summit is built around these intersections. The conversations here don't happen anywhere else — because nowhere else puts all four pillars on the same stage, for the same audience, at the same time.</p></div>
+        <div class="faq__a"><p>Because they're already converging in reality, whether or not the rest of the world has noticed.</p><p>Bitcoin needs energy. Energy markets are being rewritten by bitcoin. AI is the largest new draw on the grid since air conditioning — and the most consequential question of the decade is who controls it. Underneath all of it sits the older question: sovereign over your money, your data, and your decisions — or not?</p><p>The most interesting conversations are happening at the intersections. We're building the room for them.</p></div>
       </details>
       <details class="faq__item">
-        <summary class="faq__q"><span class="faq__num">04</span><span class="faq__q-text">How is this different from other <em>industry events?</em></span><span class="faq__icon"></span></summary>
-        <div class="faq__a"><p>Most major conferences optimize for attendance numbers. The Sovereign Summit optimizes for signal quality.</p><p>One stage. No competing tracks. A single curated program at the Coastal Convention Center inside Fontainebleau Miami Beach — one of the most iconic venues in the world. Every attendee hears the same sessions. Every conversation happens in the same building. The format is designed to concentrate the room, not diffuse it.</p><p>When you're not in sessions, you're within reach of every speaker, investor, and operator in the building. That proximity — at this caliber of attendee — is the real product.</p></div>
+        <summary class="faq__q"><span class="faq__num">04</span><span class="faq__q-text">How is this different from other industry events?</span><span class="faq__icon"></span></summary>
+        <div class="faq__a"><p>The big bitcoin, AI, and energy conferences are good at being big. The Sovereign Summit is intentionally the opposite.</p><p>One day. One stage. Roughly 400 seats at Fontainebleau Miami Beach. A curated speaker lineup, no expo hall, no competing tracks, no wandering through a cavernous venue hoping to catch the right person at the right time. Lunches long enough to finish a conversation.</p><p>The smaller scale isn't a limitation. It's the point.</p></div>
       </details>
       <details class="faq__item">
         <summary class="faq__q"><span class="faq__num">05</span><span class="faq__q-text">This is the inaugural year. Why should I <em>trust it?</em></span><span class="faq__icon"></span></summary>
-        <div class="faq__a"><p>The summit is new. The team behind it isn't.</p><p>The organizers have spent years running high-caliber Bitcoin and technology events and understand what separates a forgettable conference from one that shapes careers and becomes a fixture on the annual calendar. They know what makes a room work — and what kills it.</p><p>For the inaugural edition, we're focused on the fundamentals: a world-class venue confirmed, a speaker lineup announced early and continuously updated, transparent pricing with a clear refund policy, and a format built for a premium experience at scale.</p><p>Year one exists to earn the right to year two. We're building something that gets better every edition.</p></div>
+        <div class="faq__a"><p>Fair question.</p><p>The summit is new. The team isn't. The organizers have spent years running high-quality bitcoin and tech gatherings, and know what makes a room work — and what kills it.</p><p>For year one we're focused on the things that earn trust: a confirmed venue at Fontainebleau, a strong speaker lineup announced early, transparent pricing, a clear refund policy, and a format intentionally sized for an exceptional first edition.</p><p>We're not trying to be the biggest. We're trying to be the best room.</p></div>
       </details>
       <details class="faq__item">
-        <summary class="faq__q"><span class="faq__num">06</span><span class="faq__q-text">What does each day <em>actually look like?</em></span><span class="faq__icon"></span></summary>
-        <div class="faq__a"><p>Doors open at 7:30 AM both days with breakfast. The main program runs 9 AM to 5 PM — keynotes, panels, and fireside conversations on a single stage, with structured breaks and a sit-down buffet lunch designed for conversation, not just eating.</p><p><strong>Day 1 (Friday, February 5)</strong> covers Bitcoin, Energy, and Freedom — the monetary and geopolitical architecture of the next decade.</p><p><strong>Day 2 (Saturday, February 6)</strong> focuses on AI for Individual Rights — the most consequential technology question of our era, examined through the lens of sovereignty and human freedom.</p><p>Friday evening closes with the Oceanfront Soiree at La Côte (VIP). Saturday night closes with the Biscayne Bay Boat After Party aboard Biscayne Lady Yacht Charters. For the resilient, late-night LobbyCon continues at Bleau Bar.</p></div>
+        <summary class="faq__q"><span class="faq__num">06</span><span class="faq__q-text">What does the day <em>actually look like?</em></span><span class="faq__icon"></span></summary>
+        <div class="faq__a"><p>Doors and breakfast at 7:30 AM.</p><p>The main program runs 9 AM to 5 PM — keynotes, panels, and fireside conversations on a single stage, with proper breaks between sessions and a long buffet lunch.</p><p>The afternoon closes with a marquee keynote and closing remarks. From there it's straight into the After Party at La Côte. For anyone with stamina, late-night LobbyCon continues at Bleau Bar.</p></div>
       </details>
       <details class="faq__item">
         <summary class="faq__q"><span class="faq__num">07</span><span class="faq__q-text">What's <em>included</em> with my ticket?</span><span class="faq__icon"></span></summary>
-        <div class="faq__a"><p>Every General Admission and VIP ticket includes access to the full two-day program: all main-stage keynotes, panels, and fireside conversations on Friday and Saturday, plus breakfast, lunch, coffee, and refreshments throughout both days. Sessions are recorded and distributed after the event.</p><p>The three GA pricing phases — Early Bird, Standard, and Final Release — differ only in price and availability. Same seat, same stage, same program. The earlier you move, the more you save.</p></div>
+        <div class="faq__a"><p>Every summit ticket includes the full Friday program: all main-stage sessions, breakfast, lunch, coffee, and drinks throughout the day.</p><p>Phase tiers (Early Bird, Standard, Final Release) differ only by release timing and price. Same seat. Same program. Same Friday.</p></div>
       </details>
       <details class="faq__item">
-        <summary class="faq__q"><span class="faq__num">08</span><span class="faq__q-text">VIP vs. General Admission — what's the difference?</span><span class="faq__icon"></span></summary>
-        <div class="faq__a"><p><strong>VIP — $2,495 · Limited to 200.</strong> The definitive summit experience. Reserved front-row seating both days, speaker green-room access, VIP sections at the Welcome Reception (Thursday) and Oceanfront Soiree (Friday), and a dedicated VIP deck with open bar aboard the Saturday night Biscayne Bay Boat After Party. The Welcome Reception and Oceanfront Soiree are VIP-exclusive — they are not available for individual purchase.</p><p><strong>General Admission — $795 / $995 / $1,195 · three phases.</strong> Full access to both days of the main program, breakfast, and lunch. The Early Bird phase at $795 closes September 30. Price increases with each subsequent phase.</p><p><strong>Boat After Party — optional add-on.</strong> Available for all ticket holders, limited to 400 total guests. VIP holders are automatically included.</p></div>
+        <summary class="faq__q"><span class="faq__num">08</span><span class="faq__q-text">VIP All Access vs. All Access — what's the difference?</span><span class="faq__icon"></span></summary>
+        <div class="faq__a"><p>Both are bundles. VIP buys access; All Access buys economics. Both are capped at 100.</p><p><strong>VIP All Access Bundle — $2,495 · 100 seats.</strong> Reserved front-row seating for the summit and AI for Individual Rights Day, speaker green-room access, a VIP section at the Welcome Dinner and After Party, and a VIP deck at the Biscayne Bay Boat Party. All four ticketed side events bundled in.</p><p><strong>All Access Bundle — $995 · 100 seats · ends September 30.</strong> Standard summit seating plus all four ticketed side events at a meaningful discount. The only path besides VIP into the Welcome Dinner and After Party — both are bundle-exclusive.</p><p>If you want the experience, VIP. If you want the value, All Access. Either way, only 200 bundles exist.</p></div>
       </details>
       <details class="faq__item">
         <summary class="faq__q"><span class="faq__num">09</span><span class="faq__q-text">Are the side events <em>included?</em></span><span class="faq__icon"></span></summary>
-        <div class="faq__a"><p><strong>VIP</strong> — all side events included. The Welcome Reception at Arkadia Day Club (Thursday evening), the Oceanfront Soiree at La Côte (Friday evening after Day 1), and the Biscayne Bay Boat After Party with a reserved VIP deck and open bar (Saturday night). None of these VIP events are sold separately — they're exclusive to the VIP tier.</p><p><strong>General Admission</strong> — Bitcoin Fundamentals on Thursday evening is included on a first-come basis. The Biscayne Bay Boat After Party is available as a separate add-on, subject to availability.</p><p>Full details at the <a class="venue__link" href="#side-events">Side Events</a> section.</p></div>
+        <div class="faq__a"><p>Depends which side event.</p><p>Two are available à la carte:</p><ul class="faq__bullets"><li><strong>AI for Individual Rights Day</strong> — $149 · 200 individual tickets (plus 200 reserved for All Access Bundles).</li><li><strong>Biscayne Bay Boat Party</strong> — $199 · 200 individual tickets (plus 200 reserved for All Access Bundles).</li></ul><p>Two are <em>bundle-exclusive</em>: the Welcome Dinner and the After Party. The only way in is a VIP All Access Bundle or an All Access Bundle.</p><p>See the <a class="venue__link" href="#side-events">Side Events</a> section for details.</p></div>
       </details>
       <details class="faq__item">
         <summary class="faq__q"><span class="faq__num">10</span><span class="faq__q-text">What are the <em>side events?</em></span><span class="faq__icon"></span></summary>
-        <div class="faq__a"><p>The Sovereign Summit extends well beyond the main stage:</p><ul class="faq__bullets"><li><strong>Bitcoin Fundamentals</strong> — Thursday evening at the Coastal Convention Center. Three focused sessions on Bitcoin basics, mining, and monetary sovereignty. Included with every ticket, first-come.</li><li><strong>Welcome Reception</strong> at Arkadia Day Club — Thursday evening. The first gathering of the week: speakers, sponsors, and VIP attendees come together before the summit opens. <em>VIP only.</em></li><li><strong>Oceanfront Soiree</strong> at La Côte — Friday evening after Day 1 closes. Ocean views, open bar, and the kind of conversations that continue long after the stage goes dark. <em>VIP only.</em></li><li><strong>Biscayne Bay Boat After Party</strong> — Saturday night aboard Biscayne Lady Yacht Charters. Drinks, music, and Miami skyline views to close the week. VIP holders included with dedicated deck and open bar. Available as an add-on for General Admission — 400 total guests.</li></ul><p>See the <a class="venue__link" href="#side-events">Side Events</a> section for venues, times, and details.</p></div>
+        <div class="faq__a"><p>The week wraps the summit in a few smaller, more social gatherings:</p><ul class="faq__bullets"><li><strong>Welcome Dinner</strong> at Arkadia Day Club — early arrivals, speakers, and sponsors. <em>Bundle-exclusive.</em></li><li><strong>AI for Individual Rights Day</strong> at The LAB Miami in Wynwood — a working day with HRF on open-source, privacy-protecting AI. 200 individual tickets plus 200 bundle-reserved seats.</li><li><strong>After Party</strong> at La Côte — immediately after the summit closes. <em>Bundle-exclusive.</em></li><li><strong>Biscayne Bay Boat Party</strong> — closing Saturday night on the water from Bayside Marina. 200 individual tickets plus 200 bundle-reserved seats; VIP All Access Bundle gets a dedicated VIP deck.</li></ul><p>Each has its own capacity, format, and ticket. See the <a class="venue__link" href="#side-events">Side Events</a> section.</p></div>
       </details>
       <details class="faq__item">
-        <summary class="faq__q"><span class="faq__num">11</span><span class="faq__q-text">How does networking <em>actually work here?</em></span><span class="faq__icon"></span></summary>
-        <div class="faq__a"><p>The format is deliberately built to make this possible.</p><p>One stage. One venue. Long breaks. Shared lunches. Every speaker, investor, and decision-maker in the building at the same time — with nowhere to disappear to. The Coastal Convention Center at Fontainebleau keeps everyone under one roof, which means the speaker you want to meet is likely in the same room you're already standing in.</p><p>VIP attendees also have access to the speaker green room — the highest-signal space at any summit. If you want guaranteed proximity to the people on stage, VIP is how you get it.</p></div>
+        <summary class="faq__q"><span class="faq__num">11</span><span class="faq__q-text">Will I get to <em>meet the speakers?</em></span><span class="faq__icon"></span></summary>
+        <div class="faq__a"><p>That's the hope — and one of the main reasons we kept it small.</p><p>We can't choreograph every conversation, but a 400-seat single-stage Friday at one hotel is a fundamentally different environment than a 20,000-person expo. Speakers are present. Breaks are long. Lunch is shared. The room is the room.</p></div>
       </details>
       <details class="faq__item">
         <summary class="faq__q"><span class="faq__num">12</span><span class="faq__q-text">Are talks <em>recorded?</em></span><span class="faq__icon"></span></summary>
-        <div class="faq__a"><p>Yes. All main-stage sessions are recorded and distributed after the event. Recordings are included with every ticket.</p><p>Audience Q&amp;A is captured for content, but we do not film the faces of attendees asking questions. The goal is to preserve the substance of every conversation while protecting the privacy of the people in the room.</p></div>
+        <div class="faq__a"><p>Yes. Talks are recorded and uploaded to YouTube after the event.</p><p>Audience Q&amp;A is recorded too, but we don't film the faces of attendees asking questions. The goal is to preserve the value of the conversation while still respecting the privacy of the people in the room.</p></div>
       </details>
       <details class="faq__item">
         <summary class="faq__q"><span class="faq__num">13</span><span class="faq__q-text">What's the photo and social media policy?</span><span class="faq__icon"></span></summary>
-        <div class="faq__a"><p>The stage, speakers, and official summit content are fair game — photograph and share freely.</p><p>Attendees are not. Ask before filming or tagging anyone in the audience, and honor a no without question. The Sovereign Summit draws people who take their privacy seriously. So do we. Discretion is part of the culture here.</p></div>
+        <div class="faq__a"><p>The stage is fair game. Photograph and post freely.</p><p>The audience is not. Ask before photographing, filming, or tagging anyone in the room, and respect a no.</p><p>Many people here take their privacy seriously. We do too.</p></div>
       </details>
       <details class="faq__item">
         <summary class="faq__q"><span class="faq__num">14</span><span class="faq__q-text">What's the <em>dress code?</em></span><span class="faq__icon"></span></summary>
-        <div class="faq__a"><p>Smart casual — elevated for the venue.</p><p>No suits required. No beach attire on the floor. Think: the kind of outfit you'd wear to a high-level dinner at a world-class hotel. You're at Fontainebleau Miami Beach for two days, meeting some of the most interesting people in the Bitcoin, energy, and AI space. Dress like it.</p></div>
+        <div class="faq__a"><p>Smart casual, Miami Beach edition.</p><p>You don't need a suit. You probably want to leave the beach shorts and flip-flops for the pool. Dress like you're going to a beautiful hotel to meet serious people — because you are.</p></div>
       </details>
       <details class="faq__item">
         <summary class="faq__q"><span class="faq__num">15</span><span class="faq__q-text">Where should I <em>stay,</em> and how do I <em>get there?</em></span><span class="faq__icon"></span></summary>
-        <div class="faq__a"><p>We recommend staying on-property. Fontainebleau Miami Beach is one of the great hotels in the country, and being steps from the venue — and from other attendees — is part of the experience. We've secured a preferred-rate room block through February 6. Booking link in the <a class="venue__link" href="#venue">Venue</a> section.</p><p>Prefer a different property? Our travel partner <a class="venue__link" href="https://www.victoirevoyages.com" target="_blank" rel="noopener">Victoire Voyages</a> can secure preferred rates at hotels across Miami Beach and downtown Miami.</p><p>Miami International Airport (MIA) is approximately 25 minutes by car. Fort Lauderdale (FLL) is approximately 45 minutes. The Saturday night boat party departs from Bayside Marina — roughly 25 minutes from Fontainebleau.</p></div>
+        <div class="faq__a"><p>Fontainebleau hosts the summit, and we've held a preferred-rate room block through February 5. The booking link is in the <a class="venue__link" href="#venue">Venue</a> section.</p><p>If you'd rather stay elsewhere, our travel partner <a class="venue__link" href="https://www.victoirevoyages.com" target="_blank" rel="noopener">Victoire Voyages</a> can secure rates at most Miami Beach and downtown properties.</p><p>MIA is about 25 minutes by car. FLL is about 45. AI for Individual Rights Day in Wynwood is roughly 20 minutes from Fontainebleau, and the boat party departs from Bayside Marina, about 25.</p></div>
       </details>
       <details class="faq__item">
         <summary class="faq__q"><span class="faq__num">16</span><span class="faq__q-text">Can I pay <em>with bitcoin?</em></span><span class="faq__icon"></span></summary>
-        <div class="faq__a"><p>Of course — this is The Sovereign Summit.</p><p>Checkout supports on-chain Bitcoin, Lightning Network, and card. Lightning is fastest and our preferred method. Your ticket is identical regardless of how you pay.</p></div>
+        <div class="faq__a"><p>Of course.</p><p>Checkout supports on-chain bitcoin, Lightning, and card. Lightning is fastest and our preferred method. The ticket is identical either way.</p></div>
       </details>
       <details class="faq__item">
         <summary class="faq__q"><span class="faq__num">17</span><span class="faq__q-text">Are there group, team, or partner rates?</span><span class="faq__icon"></span></summary>
-        <div class="faq__a"><p>Yes — for the right groups.</p><p>We offer discounted rates for teams, institutional delegations, and select partners. Email <a class="venue__link" href="mailto:info@thesovereignsummit.com">info@thesovereignsummit.com</a> with your group size and a brief note on who's coming. We'll respond promptly.</p></div>
+        <div class="faq__a"><p>Yes — selectively.</p><p>We have discounted options for groups, teams, sponsors, and select partners. Email <a class="venue__link" href="mailto:info@thesovereignsummit.com">info@thesovereignsummit.com</a> with the size of your group and a sentence about who's coming.</p></div>
       </details>
       <details class="faq__item">
         <summary class="faq__q"><span class="faq__num">18</span><span class="faq__q-text">What's the <em>refund policy?</em></span><span class="faq__icon"></span></summary>
-        <div class="faq__a"><p>Summit tickets are fully refundable through <strong>December 1, 2026</strong>. If your plans change after that date, tickets are transferable to another attendee through <strong>January 28, 2027</strong> — simply send someone in your place.</p><p>Side event add-ons are refundable up to ten days prior to each event.</p><p>All refund and transfer requests: <a class="venue__link" href="mailto:info@thesovereignsummit.com">info@thesovereignsummit.com</a>.</p></div>
+        <div class="faq__a"><p>Summit tickets: full refund through <strong>December 1, 2026.</strong> Tickets are transferable through <strong>January 28, 2027</strong> — if you can't make it, send someone else.</p><p>Side event tickets: refundable up to ten days before each event.</p><p>Refund or transfer questions → <a class="venue__link" href="mailto:info@thesovereignsummit.com">info@thesovereignsummit.com</a>.</p></div>
       </details>
       <details class="faq__item">
         <summary class="faq__q"><span class="faq__num">19</span><span class="faq__q-text">Are there <em>sponsorship</em> opportunities?</span><span class="faq__icon"></span></summary>
-        <div class="faq__a"><p>Yes — and selectively. We partner with a curated group of organizations whose work is genuinely aligned with the summit's pillars. Sponsorship here is about belonging in the room, not just having a logo on a banner.</p><p>If your organization operates at the intersection of Bitcoin, energy, AI, or sovereignty and you're interested in being part of The Sovereign Summit's inaugural year, email <a class="venue__link" href="mailto:info@thesovereignsummit.com">info@thesovereignsummit.com</a> for the sponsorship overview.</p></div>
+        <div class="faq__a"><p>Yes — and selectively.</p><p>This isn't an expo-driven event. We work with a small set of sponsors that fit the room and add real value to attendees.</p><p>See the <a class="venue__link" href="#sponsors">Sponsors</a> section or email <a class="venue__link" href="mailto:info@thesovereignsummit.com">info@thesovereignsummit.com</a> for the deck.</p></div>
       </details>
       <details class="faq__item">
         <summary class="faq__q"><span class="faq__num">20</span><span class="faq__q-text">Accessibility, dietary, and other accommodations?</span><span class="faq__icon"></span></summary>
-        <div class="faq__a"><p>Fontainebleau Miami Beach and the Coastal Convention Center are fully ADA-accessible — one of several reasons we chose this venue.</p><p>We are committed to making The Sovereign Summit accessible and comfortable for all attendees. If you have dietary requirements, mobility needs, nursing accommodations, a quiet space request, or anything else we can help with, please reach out early so we can prepare.</p><p>Email <a class="venue__link" href="mailto:info@thesovereignsummit.com">info@thesovereignsummit.com</a>. The sooner we know, the better we can accommodate.</p></div>
+        <div class="faq__a"><p>Fontainebleau is ADA-accessible — one reason we chose it.</p><p>We'll do our best with dietary needs, accessibility requests, nursing rooms, prayer space, quiet rooms — anything that helps you have a better experience.</p><p>Email <a class="venue__link" href="mailto:info@thesovereignsummit.com">info@thesovereignsummit.com</a>. The earlier we know, the more we can do.</p></div>
       </details>
       <details class="faq__item">
         <summary class="faq__q"><span class="faq__num">21</span><span class="faq__q-text">Still have <em>questions?</em></span><span class="faq__icon"></span></summary>
-        <div class="faq__a"><p>Email <a class="venue__link" href="mailto:info@thesovereignsummit.com">info@thesovereignsummit.com</a> or find us on X at <a class="venue__link" href="https://x.com/sovereignmiami" target="_blank" rel="noopener">@sovereignmiami</a>.</p><p>A real person reads every message and responds within one business day.</p></div>
+        <div class="faq__a"><p>Email <a class="venue__link" href="mailto:info@thesovereignsummit.com">info@thesovereignsummit.com</a> or DM <a class="venue__link" href="https://x.com/sovereignmiami" target="_blank" rel="noopener">@sovereignmiami</a> on X.</p><p>A real person answers, usually within a day.</p></div>
       </details>
     </div>
   </div>
@@ -3064,141 +2559,93 @@ body.menu-open{overflow:hidden}
   <div class="container">
     <header class="sec-hd" id="tickets">
       <div class="sec-hd__num">Nº 08 — Admission</div>
-      <h2 class="section-title sec-hd__title">Two ways to <em>experience the summit.</em></h2>
+      <h2 class="section-title sec-hd__title">Pick yours. <em>Only 400.</em></h2>
     </header>
     <div class="tickets__grid">
-      <div class="tickets__vip-solo">
+      <div class="tickets__allaccess-pair">
         <article class="tier tier--vipallaccess">
-          <div class="tier__ribbon">Limited · 200 spots</div>
-          <div class="tier__vip-layout">
-            <div class="tier__vip-info">
-              <div class="tier__eyebrow">VIP Admission</div>
-              <h3 class="tier__name"><em>VIP</em> Admission</h3>
-              <div class="tier__price-wrap"><span class="tier__price">$2,495</span><span class="tier__price-unit">USD</span></div>
-              <ul class="tier__desc-bullets">
-                <li>The complete summit experience — reserved seating, exclusive access, and every event on the calendar.</li>
-              </ul>
-            </div>
-            <div class="tier__vip-schedule">
-              <div class="tier__day-grid tier__day-grid--3col">
-                <div class="tier__day">
-                  <div class="tier__day-label"><span class="tier__day-name">Thursday</span><span class="tier__day-sub">Feb 4</span></div>
-                  <ul class="tier__day-list">
-                    <li><a href="https://luma.com/n6jb46op" target="_blank" rel="noopener"><strong>Bitcoin Fundamentals</strong><span class="tier__day-link">Limited Spots, Sign Up Here</span></a></li>
-                    <li><a href="#side-events"><strong>Welcome Reception</strong><span class="tier__day-vip-badge">VIP Ticket Only</span></a></li>
-                  </ul>
-                </div>
-                <div class="tier__day">
-                  <div class="tier__day-label"><span class="tier__day-name">Friday</span><span class="tier__day-sub">Day 1</span></div>
-                  <ul class="tier__day-list">
-                    <li><a href="#agenda" data-day="day1" class="tier__day-agenda-link"><strong>Summit</strong><span class="tier__day-detail">reserved front-row</span><span class="tier__day-detail">speaker green-room access</span></a></li>
-                    <li><a href="#side-events"><strong>Oceanfront Soiree</strong><span class="tier__day-vip-badge">VIP Ticket Only</span></a></li>
-                  </ul>
-                </div>
-                <div class="tier__day">
-                  <div class="tier__day-label"><span class="tier__day-name">Saturday</span><span class="tier__day-sub">Day 2</span></div>
-                  <ul class="tier__day-list">
-                    <li><a href="#agenda" data-day="day2" class="tier__day-agenda-link"><strong>Summit</strong><span class="tier__day-detail">reserved front-row</span><span class="tier__day-detail">speaker green-room access</span></a></li>
-                    <li><a href="#side-events"><strong>Boat After Party</strong><span class="tier__day-vip-badge" style="background:linear-gradient(90deg,#6b7280,#9ca3af,#6b7280);color:#fff;letter-spacing:.12em">Included with VIP</span></a></li>
-                  </ul>
-                </div>
-              </div>
-              <a href="https://pay.zaprite.com/pl_wIAImtY5wz" target="_blank" rel="noopener" class="btn">Claim Your VIP Seat <span class="btn__arrow">→</span></a>
-            </div>
-          </div>
+          <div class="tier__ribbon">Limited · 100 spots</div>
+          <div class="tier__eyebrow">VIP All Access Bundle</div>
+          <h3 class="tier__name"><em>VIP</em> All Access <em>Bundle</em></h3>
+          <div class="tier__price-wrap"><span class="tier__price">$2,495</span><span class="tier__price-unit">USD</span></div>
+          <ul class="tier__desc-bullets">
+            <li>VIP summit experience + all 4 side events bundled.</li>
+            <li>The Welcome Dinner, After Party are not sold separately, a bundle is the only way to attend.</li>
+            <li>Limited to 100 VIPs.</li>
+          </ul>
+          <ul class="tier__includes">
+            <li>Reserved front-row seating: summit + AI for Individual Rights Day</li>
+            <li>Speaker green-room access</li>
+            <li>VIP section at the bundle-only Welcome Dinner + After Party</li>
+            <li>VIP deck at the Biscayne Bay Boat Party</li>
+            <li>All four ticketed side events included</li>
+          </ul>
+          <a href="https://pay.zaprite.com/pl_wIAImtY5wz" target="_blank" rel="noopener" class="btn">Reserve VIP All Access Bundle <span class="btn__arrow">→</span></a>
+        </article>
+        <article class="tier tier--allaccess">
+          <div class="tier__ribbon">Limited · 100 spots</div>
+          <div class="tier__eyebrow">All Access Bundle</div>
+          <h3 class="tier__name">All Access <em>Bundle</em></h3>
+          <div class="tier__price-wrap"><span class="tier__price">$995</span><span class="tier__price-unit">USD</span><span class="tier__price-strike">$1,333</span></div>
+          <ul class="tier__desc-bullets">
+            <li>Summit experience + all 4 side events bundled.</li>
+            <li>The Welcome Dinner, After Party are not sold separately, a bundle is the only way to attend.</li>
+            <li>Limited to 100 spots.</li>
+          </ul>
+          <ul class="tier__includes">
+            <li>Welcome Dinner at Arkadia Day Club <strong>$295</strong></li>
+            <li>After Party at La Côte <strong>$195</strong></li>
+            <li>AI for Individual Rights Day <strong>$149</strong></li>
+            <li>Biscayne Bay Boat Party <strong>$199</strong></li>
+          </ul>
+          <a href="https://pay.zaprite.com/pl_wIAImtY5wz" target="_blank" rel="noopener" class="btn">Reserve All Access Bundle <span class="btn__arrow">→</span></a>
         </article>
       </div>
-      <a href="#early-bird" class="tickets__scroll-hint" aria-label="View General Admission options below">
-        <span class="tickets__scroll-hint-arrow" aria-hidden="true">↓</span>
-      </a>
       <div class="tickets__phases">
-        <div class="tickets__phases-label">General Admission · three price phases — same seat, same program</div>
-        <article class="tier tier--featured" id="early-bird">
-        <div class="tier__ribbon">Ends September 30 · Save $400</div>
+        <div class="tickets__phases-label">Only 200 spots · split across 3 phases</div>
+        <article class="tier tier--featured">
+        <div class="tier__ribbon">Ends September 30 · Save $200</div>
         <div class="tier__eyebrow">Phase 01 · Early Bird</div>
-        <h3 class="tier__name"><em>Early Bird</em> General Admission</h3>
-        <div class="tier__price-wrap"><span class="tier__price">$795</span><span class="tier__price-unit">USD</span></div>
-        <div class="tier__day-grid tier__day-grid--3col">
-          <div class="tier__day">
-            <div class="tier__day-label"><span class="tier__day-name">Thursday</span><span class="tier__day-sub">Feb 4</span></div>
-            <ul class="tier__day-list">
-              <li><a href="https://luma.com/n6jb46op" target="_blank" rel="noopener"><strong>Bitcoin Fundamentals</strong><span class="tier__day-link">Sign Up Here</span></a></li>
-            </ul>
-          </div>
-          <div class="tier__day">
-            <div class="tier__day-label"><span class="tier__day-name">Friday</span><span class="tier__day-sub">Day 1</span></div>
-            <ul class="tier__day-list">
-              <li><a href="#agenda" data-day="day1" class="tier__day-agenda-link"><strong>Summit</strong><span class="tier__day-detail">keynotes &amp; panels</span></a></li>
-            </ul>
-          </div>
-          <div class="tier__day">
-            <div class="tier__day-label"><span class="tier__day-name">Saturday</span><span class="tier__day-sub">Day 2</span></div>
-            <ul class="tier__day-list">
-              <li><a href="#agenda" data-day="day2" class="tier__day-agenda-link"><strong>Summit</strong><span class="tier__day-detail">keynotes &amp; panels</span></a></li>
-            </ul>
-          </div>
-        </div>
-        <p class="tier__perk-footer">+ Breakfast &amp; Lunch (both days) · Recorded sessions · <a href="https://www.fontainebleau.com/miamibeach/" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;text-underline-offset:2px">Room block at Fontainebleau</a></p>
-        <a href="https://pay.zaprite.com/pl_wIAImtY5wz" target="_blank" rel="noopener" class="btn">Lock In Early Bird <span class="btn__arrow">→</span></a>
+        <h3 class="tier__name">Early <em>Bird</em></h3>
+        <div class="tier__price-wrap"><span class="tier__price">$495</span><span class="tier__price-unit">USD</span></div>
+        <p class="tier__desc">Save $200 vs. standard release.<br>Ends September 30 so act quickly.</p>
+        <ul class="tier__list">
+          <li>Full-day program · keynotes &amp; panels</li>
+          <li>Light Breakfast &amp; Lunch Included</li>
+          <li>Sessions recorded · available for playback</li>
+          <li><a href="https://www.fontainebleau.com/miamibeach/" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;text-underline-offset:2px">Click here for the TSS Room Block Rate @ Fontainebleau</a></li>
+        </ul>
+        <a href="https://pay.zaprite.com/pl_wIAImtY5wz" target="_blank" rel="noopener" class="btn">Reserve Early Bird <span class="btn__arrow">→</span></a>
       </article>
       <article class="tier tier--coming-soon">
         <div class="tier__eyebrow">Phase 02 · Standard</div>
-        <h3 class="tier__name"><em>General Admission</em></h3>
-        <div class="tier__price-wrap"><span class="tier__price">$995</span><span class="tier__price-unit">USD</span></div>
-        <div class="tier__day-grid tier__day-grid--3col">
-          <div class="tier__day">
-            <div class="tier__day-label"><span class="tier__day-name">Thursday</span><span class="tier__day-sub">Feb 4</span></div>
-            <ul class="tier__day-list">
-              <li><a href="https://luma.com/n6jb46op" target="_blank" rel="noopener"><strong>Bitcoin Fundamentals</strong><span class="tier__day-link">Sign Up Here</span></a></li>
-            </ul>
-          </div>
-          <div class="tier__day">
-            <div class="tier__day-label"><span class="tier__day-name">Friday</span><span class="tier__day-sub">Day 1</span></div>
-            <ul class="tier__day-list">
-              <li><a href="#agenda" data-day="day1" class="tier__day-agenda-link"><strong>Summit</strong><span class="tier__day-detail">keynotes &amp; panels</span></a></li>
-            </ul>
-          </div>
-          <div class="tier__day">
-            <div class="tier__day-label"><span class="tier__day-name">Saturday</span><span class="tier__day-sub">Day 2</span></div>
-            <ul class="tier__day-list">
-              <li><a href="#agenda" data-day="day2" class="tier__day-agenda-link"><strong>Summit</strong><span class="tier__day-detail">keynotes &amp; panels</span></a></li>
-            </ul>
-          </div>
-        </div>
-        <p class="tier__perk-footer">+ Breakfast &amp; Lunch (both days) · Recorded sessions · <a href="https://www.fontainebleau.com/miamibeach/" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;text-underline-offset:2px">Room block at Fontainebleau</a></p>
-        <a href="https://pay.zaprite.com/pl_wIAImtY5wz" target="_blank" rel="noopener" class="btn">Reserve General Admission <span class="btn__arrow">→</span></a>
+        <h3 class="tier__name">Standard</h3>
+        <div class="tier__price-wrap"><span class="tier__price">$695</span><span class="tier__price-unit">USD</span></div>
+        <p class="tier__desc">Save $300 vs. final release. October 1 — December 31.</p>
+        <ul class="tier__list">
+          <li>Full-day program · keynotes &amp; panels</li>
+          <li>Light Breakfast &amp; Lunch Included</li>
+          <li>Sessions recorded · available for playback</li>
+          <li><a href="https://www.fontainebleau.com/miamibeach/" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;text-underline-offset:2px">Click here for the TSS Room Block Rate @ Fontainebleau</a></li>
+        </ul>
+        <a href="https://pay.zaprite.com/pl_wIAImtY5wz" target="_blank" rel="noopener" class="btn">Reserve Standard <span class="btn__arrow">→</span></a>
       </article>
       <article class="tier tier--premium tier--coming-soon">
         <div class="tier__eyebrow">Phase 03 · Final Release</div>
-        <h3 class="tier__name">Final Release <em>General Admission</em></h3>
-        <div class="tier__price-wrap"><span class="tier__price">$1,195</span><span class="tier__price-unit">USD</span></div>
-        <div class="tier__day-grid tier__day-grid--3col">
-          <div class="tier__day">
-            <div class="tier__day-label"><span class="tier__day-name">Thursday</span><span class="tier__day-sub">Feb 4</span></div>
-            <ul class="tier__day-list">
-              <li><a href="https://luma.com/n6jb46op" target="_blank" rel="noopener"><strong>Bitcoin Fundamentals</strong><span class="tier__day-link">Sign Up Here</span></a></li>
-            </ul>
-          </div>
-          <div class="tier__day">
-            <div class="tier__day-label"><span class="tier__day-name">Friday</span><span class="tier__day-sub">Day 1</span></div>
-            <ul class="tier__day-list">
-              <li><a href="#agenda" data-day="day1" class="tier__day-agenda-link"><strong>Summit</strong><span class="tier__day-detail">keynotes &amp; panels</span></a></li>
-            </ul>
-          </div>
-          <div class="tier__day">
-            <div class="tier__day-label"><span class="tier__day-name">Saturday</span><span class="tier__day-sub">Day 2</span></div>
-            <ul class="tier__day-list">
-              <li><a href="#agenda" data-day="day2" class="tier__day-agenda-link"><strong>Summit</strong><span class="tier__day-detail">keynotes &amp; panels</span></a></li>
-            </ul>
-          </div>
-        </div>
-        <p class="tier__perk-footer">+ Breakfast &amp; Lunch (both days) · Recorded sessions · <a href="https://www.fontainebleau.com/miamibeach/" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;text-underline-offset:2px">Room block at Fontainebleau</a></p>
+        <h3 class="tier__name">Final <em>Release</em></h3>
+        <div class="tier__price-wrap"><span class="tier__price">$995</span><span class="tier__price-unit">USD</span></div>
+        <p class="tier__desc">What remains after December 31.</p>
+        <ul class="tier__list">
+          <li>Full-day program · keynotes &amp; panels</li>
+          <li>Light Breakfast &amp; Lunch Included</li>
+          <li>Sessions recorded · available for playback</li>
+          <li><a href="https://www.fontainebleau.com/miamibeach/" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;text-underline-offset:2px">Click here for the TSS Room Block Rate @ Fontainebleau</a></li>
+        </ul>
         <a href="https://pay.zaprite.com/pl_wIAImtY5wz" target="_blank" rel="noopener" class="btn">Reserve Final Release <span class="btn__arrow">→</span></a>
       </article>
       </div>
     </div>
-
-    <p class="tickets__trust"><strong>Bitcoin accepted</strong> · Early Bird saves $400 — price rises with each phase · <strong>Full refund</strong> through December 1, 2026 · Transfers honored through January 28, 2027</p>
+    <p class="tickets__trust">Same seat, same program, same Friday — only the price changes. Full refund through December 1, 2026 · transfers honored until January 28, 2027.</p>
   </div>
 </section>
 
@@ -3207,8 +2654,8 @@ body.menu-open{overflow:hidden}
     <div class="news__inner">
 <img class="news__mark" src="images/Newsletter_logo.png" alt="The Sovereign Summit" loading="lazy" decoding="async">
       <div class="eyebrow" style="color:var(--paper-deep);opacity:.7;margin-bottom:1.25rem;">Updates · Monthly</div>
-      <h2 class="news__title">Stay <em>ahead</em> of the room.</h2>
-      <p class="news__sub">Speaker announcements, program updates, and high-signal essays from the intersection of Bitcoin, energy, AI, and sovereignty. Unsubscribe anytime.</p>
+      <h2 class="news__title">One <em>letter</em> a month.<br>Nothing more.</h2>
+      <p class="news__sub">Speaker announcements, program updates, and the occasional essay. Unsubscribe any time you like.</p>
       <form class="news__form" onsubmit="event.preventDefault(); this.querySelector('.news__input').value=''; this.querySelector('.news__submit').textContent='Subscribed ✓';">
         <input class="news__input" type="email" placeholder="your@email.com" required>
         <button type="submit" class="news__submit">Subscribe →</button>
@@ -3250,7 +2697,7 @@ body.menu-open{overflow:hidden}
     }
   });
   // Match mobile via CSS-style media query check
-  if (window.matchMedia('(max-width: 1080px)').matches) {
+  if (window.matchMedia('(max-width: 900px)').matches) {
     document.documentElement.style.setProperty('scroll-padding-top', '102px', 'important');
   }
   if (window.matchMedia('(max-width: 520px)').matches) {
@@ -3432,9 +2879,9 @@ body.menu-open{overflow:hidden}
       speakersToggle.setAttribute('aria-expanded', String(next));
       // Tier 3 reveal (cards 21-32) — applies on all viewports
       document.querySelectorAll('.speakers__grid--md .speaker').forEach((card) => {
-        card.classList.toggle('speaker--hidden', !next && parseInt(card.dataset.speaker, 10) > 12);
+        card.classList.toggle('speaker--hidden', !next && parseInt(card.dataset.speaker, 10) > 21);
       });
-      // Mobile second-row reveal (cards 13+) — driven by class on the grid
+      // Mobile second-row reveal (cards 13-20) — driven by class on the grid
       const mdGrid = document.getElementById('speakersGridMd');
       if (mdGrid) mdGrid.classList.toggle('is-expanded', next);
     });
@@ -3467,62 +2914,6 @@ body.menu-open{overflow:hidden}
       }
     });
   }
-
-  // Agenda day-tab switcher
-  document.querySelectorAll('.program__tab').forEach((tab) => {
-    tab.addEventListener('click', () => {
-      const day = tab.dataset.day;
-      document.querySelectorAll('.program__tab').forEach((t) => {
-        const active = t.dataset.day === day;
-        t.classList.toggle('program__tab--active', active);
-        t.setAttribute('aria-selected', String(active));
-      });
-      document.querySelectorAll('.program__board').forEach((board) => {
-        board.hidden = board.dataset.day !== day;
-      });
-    });
-  });
-
-  // Day-targeted links (hero dates + VIP Summit boxes) → scroll to agenda + select correct day tab
-  document.querySelectorAll('.hero__date-link, .tier__day-agenda-link').forEach((link) => {
-    link.addEventListener('click', (e) => {
-      e.preventDefault();
-      const targetDay = link.dataset.day;
-      const targetTab = document.querySelector(`.program__tab[data-day="${targetDay}"]`);
-      if (targetTab) targetTab.click();
-      const agenda = document.getElementById('agenda');
-      if (agenda) agenda.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    });
-  });
-
-  // Mobile floating arrow: visible while VIP tile is in view, hidden once Early Bird tile appears
-  (function setupScrollHint() {
-    const scrollHint = document.querySelector('.tickets__scroll-hint');
-    const vipTile = document.querySelector('.tier--vipallaccess');
-    const earlyBird = document.getElementById('early-bird');
-    if (!scrollHint || !vipTile || !earlyBird) return;
-
-    let vipVisible = false;
-    let earlyBirdVisible = false;
-    const update = () => {
-      if (vipVisible && !earlyBirdVisible) {
-        scrollHint.classList.add('tickets__scroll-hint--visible');
-      } else {
-        scrollHint.classList.remove('tickets__scroll-hint--visible');
-      }
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.target === vipTile) vipVisible = entry.isIntersecting;
-        if (entry.target === earlyBird) earlyBirdVisible = entry.isIntersecting;
-      });
-      update();
-    }, { threshold: 0.05 });
-
-    observer.observe(vipTile);
-    observer.observe(earlyBird);
-  })();
 </script>
 </body>
 </html>
