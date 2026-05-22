@@ -2369,7 +2369,9 @@ body.menu-open{overflow:hidden}
         <div class="speaker__role">To be announced</div>
         <div class="speaker__topic">&ldquo;Talk title coming soon.&rdquo;</div>
       </a>
-      <a class="speaker" href="#speakers" data-speaker="05" aria-label="Speaker 05 — To Be Announced">
+    </div>
+    <div class="speakers__grid speakers__grid--md" id="speakersGridMd">
+      <a class="speaker speaker--md" href="#speakers" data-speaker="05" aria-label="Speaker 05 — To Be Announced">
         <div class="speaker__index">05</div>
         <div class="speaker__portrait">
           <div class="speaker__placeholder">?</div>
@@ -2378,7 +2380,7 @@ body.menu-open{overflow:hidden}
         <div class="speaker__role">To be announced</div>
         <div class="speaker__topic">&ldquo;Talk title coming soon.&rdquo;</div>
       </a>
-      <a class="speaker" href="#speakers" data-speaker="06" aria-label="Speaker 06 — To Be Announced">
+      <a class="speaker speaker--md" href="#speakers" data-speaker="06" aria-label="Speaker 06 — To Be Announced">
         <div class="speaker__index">06</div>
         <div class="speaker__portrait">
           <div class="speaker__placeholder">?</div>
@@ -2387,7 +2389,7 @@ body.menu-open{overflow:hidden}
         <div class="speaker__role">To be announced</div>
         <div class="speaker__topic">&ldquo;Talk title coming soon.&rdquo;</div>
       </a>
-      <a class="speaker" href="#speakers" data-speaker="07" aria-label="Speaker 07 — To Be Announced">
+      <a class="speaker speaker--md" href="#speakers" data-speaker="07" aria-label="Speaker 07 — To Be Announced">
         <div class="speaker__index">07</div>
         <div class="speaker__portrait">
           <div class="speaker__placeholder">?</div>
@@ -2396,7 +2398,7 @@ body.menu-open{overflow:hidden}
         <div class="speaker__role">To be announced</div>
         <div class="speaker__topic">&ldquo;Talk title coming soon.&rdquo;</div>
       </a>
-      <a class="speaker" href="#speakers" data-speaker="08" aria-label="Speaker 08 — To Be Announced">
+      <a class="speaker speaker--md" href="#speakers" data-speaker="08" aria-label="Speaker 08 — To Be Announced">
         <div class="speaker__index">08</div>
         <div class="speaker__portrait">
           <div class="speaker__placeholder">?</div>
@@ -2405,9 +2407,7 @@ body.menu-open{overflow:hidden}
         <div class="speaker__role">To be announced</div>
         <div class="speaker__topic">&ldquo;Talk title coming soon.&rdquo;</div>
       </a>
-    </div>
-    <div class="speakers__grid speakers__grid--md" id="speakersGridMd">
-            <a class="speaker speaker--md speaker--hidden" href="#speakers" data-speaker="09" aria-label="Speaker 09 — To Be Announced">
+      <a class="speaker speaker--md" href="#speakers" data-speaker="09" aria-label="Speaker 09 — To Be Announced">
         <div class="speaker__index">09</div>
         <div class="speaker__portrait">
           <div class="speaker__placeholder">?</div>
@@ -2416,7 +2416,7 @@ body.menu-open{overflow:hidden}
         <div class="speaker__role">To be announced</div>
         <div class="speaker__topic">&ldquo;Talk title coming soon.&rdquo;</div>
       </a>
-            <a class="speaker speaker--md speaker--hidden" href="#speakers" data-speaker="10" aria-label="Speaker 10 — To Be Announced">
+      <a class="speaker speaker--md" href="#speakers" data-speaker="10" aria-label="Speaker 10 — To Be Announced">
         <div class="speaker__index">10</div>
         <div class="speaker__portrait">
           <div class="speaker__placeholder">?</div>
@@ -2425,7 +2425,7 @@ body.menu-open{overflow:hidden}
         <div class="speaker__role">To be announced</div>
         <div class="speaker__topic">&ldquo;Talk title coming soon.&rdquo;</div>
       </a>
-            <a class="speaker speaker--md speaker--hidden" href="#speakers" data-speaker="11" aria-label="Speaker 11 — To Be Announced">
+      <a class="speaker speaker--md" href="#speakers" data-speaker="11" aria-label="Speaker 11 — To Be Announced">
         <div class="speaker__index">11</div>
         <div class="speaker__portrait">
           <div class="speaker__placeholder">?</div>
@@ -2434,7 +2434,7 @@ body.menu-open{overflow:hidden}
         <div class="speaker__role">To be announced</div>
         <div class="speaker__topic">&ldquo;Talk title coming soon.&rdquo;</div>
       </a>
-            <a class="speaker speaker--md speaker--hidden" href="#speakers" data-speaker="12" aria-label="Speaker 12 — To Be Announced">
+      <a class="speaker speaker--md" href="#speakers" data-speaker="12" aria-label="Speaker 12 — To Be Announced">
         <div class="speaker__index">12</div>
         <div class="speaker__portrait">
           <div class="speaker__placeholder">?</div>
@@ -3425,9 +3425,9 @@ body.menu-open{overflow:hidden}
       speakersToggle.setAttribute('aria-expanded', String(next));
       // Tier 3 reveal (cards 21-32) — applies on all viewports
       document.querySelectorAll('.speakers__grid--md .speaker').forEach((card) => {
-        card.classList.toggle('speaker--hidden', !next);
+        card.classList.toggle('speaker--hidden', !next && parseInt(card.dataset.speaker, 10) > 12);
       });
-      // Mobile second-row reveal (cards 13-20) — driven by class on the grid
+      // Mobile second-row reveal (cards 13+) — driven by class on the grid
       const mdGrid = document.getElementById('speakersGridMd');
       if (mdGrid) mdGrid.classList.toggle('is-expanded', next);
     });
