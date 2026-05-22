@@ -645,7 +645,7 @@ body.menu-open{overflow:hidden}
 .venue__link:hover{color:var(--ink);border-bottom-color:var(--ink)}
 @media (max-width:880px){.venue__grid{grid-template-columns:1fr}.venue__illus{aspect-ratio:16/9;max-height:200px}.venue__details{grid-template-columns:repeat(2,1fr)}.venue__brand-link{align-self:flex-start}}
 @media (max-width:520px){
-  .venue{padding:2.25rem 0 1.5rem !important}
+  .venue{padding:.85rem 0 1.5rem !important}
   .venue .sec-hd{margin-bottom:.5rem;gap:.4rem;margin-top:.5rem}
   .venue .sec-hd__num{padding-top:.45rem;font-size:.7rem}
   
@@ -2931,17 +2931,12 @@ body.menu-open{overflow:hidden}
   </div>
 </section>
 
-<div id="venue" style="background:var(--paper-deep);scroll-margin-top:120px">
+<section class="venue">
   <div class="container">
-    <header class="sec-hd" style="padding-top:clamp(2.5rem,5vw,4rem)">
+    <header class="sec-hd" id="venue">
       <div class="sec-hd__num">Nº 06 — Venue</div>
       <h2 class="section-title sec-hd__title"><em>Fontainebleau.</em> Miami Beach.</h2>
     </header>
-  </div>
-</div>
-
-<section class="venue" style="padding-top:0">
-  <div class="container">
     <div class="venue__grid">
       <div class="venue__media">
         <a class="venue__brand-link" href="https://www.fontainebleau.com/miamibeach/" target="_blank" rel="noopener" aria-label="Visit Fontainebleau Miami Beach">
@@ -3409,7 +3404,7 @@ body.menu-open{overflow:hidden}
       if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
     });
   }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
-  document.querySelectorAll('.program__row, .speaker, .partner, .side-event, .venue__illus, .venue__content, .tier, .faq__item, .friend, .news__inner').forEach((el, i) => {
+  document.querySelectorAll('.sec-hd, .program__row, .speaker, .partner, .side-event, .venue__illus, .venue__content, .tier, .faq__item, .friend, .news__inner').forEach((el, i) => {
     el.classList.add('reveal');
     el.style.transitionDelay = (Math.min(i, 6) * 40) + 'ms';
     io.observe(el);
