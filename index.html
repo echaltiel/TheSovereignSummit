@@ -1621,8 +1621,8 @@ body.menu-open{overflow:hidden}
   width:auto;
   max-width:100%;
 }
-.friend--gold .friend__logo{height:44px;max-width:320px;margin-bottom:.05rem}
-.friend--silver .friend__logo{height:44px;max-width:320px;margin-bottom:.05rem}
+.friend--gold .friend__logo{height:44px;width:180px;max-width:320px;margin-bottom:.05rem}
+.friend--silver .friend__logo{height:44px;width:180px;max-width:320px;margin-bottom:.05rem}
 .friend--gold .friend__logo img,
 .friend--silver .friend__logo img{
   width:auto;
@@ -1664,19 +1664,27 @@ body.menu-open{overflow:hidden}
 }
 /* Fallback placeholders — sponsor logo image */
 .friend__logo-fallback{
-  display:block;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-family:var(--fd);
+  font-style:italic;
+  font-size:1.4rem;
+  color:var(--paper-deep);
+  opacity:.4;
   width:100%;
   height:100%;
-  background-image:url('images/sponsor-placeholder.png');
-  background-size:contain;
-  background-repeat:no-repeat;
-  background-position:center;
-  font-size:0;
-  color:transparent;
 }
 .friend--gold .friend__logo-fallback,
-.friend--silver .friend__logo-fallback{opacity:.75}
-.friend--activation .friend__logo-fallback{background-size:70%}
+.friend--silver .friend__logo-fallback{
+  font-family:var(--fd);
+  font-style:italic;
+  font-size:1.4rem;
+  letter-spacing:-.01em;
+  opacity:.5;
+}
+.friend--gold .friend__logo-fallback{color:#4a3208}
+.friend--silver .friend__logo-fallback{color:#14151a}
 .friend--activation .friend__logo-fallback{  opacity:.4;
 }
 /* Hide tier name when wordmark is in logo (consistent with platinum pattern).
@@ -2077,6 +2085,7 @@ body.menu-open{overflow:hidden}
   letter-spacing:-.02em;
 }
 .friend--platinum .friend__logo--has-image .friend__logo-fallback{display:none}
+.friend--platinum .friend__logo-fallback{width:240px;height:44px}
 .friend--platinum .friend__text{
   align-items:center;
   text-align:center;
@@ -2360,7 +2369,7 @@ body.menu-open{overflow:hidden}
         <h3 class="speaker__name"><em>Speaker TBA</em></h3>
         <div class="speaker__role">To be announced</div>
         <div class="speaker__topic">&ldquo;Talk title coming soon.&rdquo;</div>
-      </div>
+      </a>
     </div>
     <div class="speakers__grid speakers__grid--md" id="speakersGridMd">
       <a class="speaker speaker--md" href="#speakers" data-speaker="05" aria-label="Speaker 05 — To Be Announced">
@@ -2623,7 +2632,7 @@ body.menu-open{overflow:hidden}
         <h3 class="speaker__name"><em>Speaker TBA</em></h3>
         <div class="speaker__role">To be announced</div>
         <div class="speaker__topic">&ldquo;Talk title coming soon.&rdquo;</div>
-      </div>
+      </a>
     </div>
     <div class="speakers__actions">
       <button type="button" class="btn speakers__toggle" id="speakersToggle" aria-expanded="false">
