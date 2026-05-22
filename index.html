@@ -1662,23 +1662,22 @@ body.menu-open{overflow:hidden}
   align-items:flex-start;
   text-align:left;
 }
-/* Fallback placeholders for all tiers */
-.friend--gold .friend__logo-fallback,
-.friend--silver .friend__logo-fallback{
-  font-family:var(--fd);
-  font-style:italic;
-  font-size:1.4rem;
-  letter-spacing:-.01em;
-  opacity:.5;
+/* Fallback placeholders — sponsor logo image */
+.friend__logo-fallback{
+  display:block;
+  width:100%;
+  height:100%;
+  background-image:url('images/sponsor-placeholder.png');
+  background-size:contain;
+  background-repeat:no-repeat;
+  background-position:center;
+  font-size:0;
+  color:transparent;
 }
-.friend--gold .friend__logo-fallback{color:#4a3208}
-.friend--silver .friend__logo-fallback{color:#14151a}
-.friend--activation .friend__logo-fallback{
-  font-family:var(--fm);
-  font-size:.62rem;
-  letter-spacing:.18em;
-  color:currentColor;
-  opacity:.4;
+.friend--gold .friend__logo-fallback,
+.friend--silver .friend__logo-fallback{opacity:.75}
+.friend--activation .friend__logo-fallback{background-size:70%}
+.friend--activation .friend__logo-fallback{  opacity:.4;
 }
 /* Hide tier name when wordmark is in logo (consistent with platinum pattern).
    Show only when logo file isn't present yet. */
@@ -2361,7 +2360,7 @@ body.menu-open{overflow:hidden}
         <h3 class="speaker__name"><em>Speaker TBA</em></h3>
         <div class="speaker__role">To be announced</div>
         <div class="speaker__topic">&ldquo;Talk title coming soon.&rdquo;</div>
-      </a>
+      </div>
     </div>
     <div class="speakers__grid speakers__grid--md" id="speakersGridMd">
       <a class="speaker speaker--md" href="#speakers" data-speaker="05" aria-label="Speaker 05 — To Be Announced">
@@ -2624,7 +2623,7 @@ body.menu-open{overflow:hidden}
         <h3 class="speaker__name"><em>Speaker TBA</em></h3>
         <div class="speaker__role">To be announced</div>
         <div class="speaker__topic">&ldquo;Talk title coming soon.&rdquo;</div>
-      </a>
+      </div>
     </div>
     <div class="speakers__actions">
       <button type="button" class="btn speakers__toggle" id="speakersToggle" aria-expanded="false">
@@ -2780,37 +2779,37 @@ body.menu-open{overflow:hidden}
     <div class="friends__tier friends__tier--platinum">
       <div class="friends__tier-label"><span>Platinum</span></div>
       <div class="friends__grid friends__grid--platinum">
-        <a class="friend friend--platinum" href="https://block.xyz/" target="_blank" rel="noopener" aria-label="Block — Platinum sponsor"><div class="friend__logo"><span class="friend__logo-fallback">?</span></div><div class="friend__text"><div class="friend__name">Platinum Sponsor</div><div class="friend__type">TBD</div></div></a>
+        <div class="friend friend--platinum"><div class="friend__logo"><span class="friend__logo-fallback">?</span></div><div class="friend__text"><div class="friend__name">Platinum Sponsor</div><div class="friend__type">TBD</div></div></div>
       </div>
     </div>
     <div class="friends__tier friends__tier--gold">
       <div class="friends__tier-label"><span>Gold</span></div>
       <div class="friends__grid friends__grid--gold">
-        <a class="friend friend--gold" href="https://unchained.com" target="_blank" rel="noopener" aria-label="Unchained — Gold sponsor"><div class="friend__logo"><span class="friend__logo-fallback">?</span></div><div class="friend__text"><div class="friend__name">Gold Sponsor</div><div class="friend__type">TBD</div></div></a>
-        <a class="friend friend--gold" href="https://hrf.org" target="_blank" rel="noopener" aria-label="Human Rights Foundation — Gold sponsor"><div class="friend__logo"><span class="friend__logo-fallback">?</span></div><div class="friend__text"><div class="friend__name">Gold Sponsor</div><div class="friend__type">TBD</div></div></a>
+        <div class="friend friend--gold"><div class="friend__logo"><span class="friend__logo-fallback">?</span></div><div class="friend__text"><div class="friend__name">Gold Sponsor</div><div class="friend__type">TBD</div></div></div>
+        <div class="friend friend--gold"><div class="friend__logo"><span class="friend__logo-fallback">?</span></div><div class="friend__text"><div class="friend__name">Gold Sponsor</div><div class="friend__type">TBD</div></div></div>
       </div>
     </div>
     <div class="friends__tier friends__tier--silver">
       <div class="friends__tier-label"><span>Silver</span></div>
       <div class="friends__grid friends__grid--silver">
-        <a class="friend friend--silver" href="https://meanwhile.bm" target="_blank" rel="noopener" aria-label="Meanwhile — Silver sponsor"><div class="friend__logo"><span class="friend__logo-fallback">?</span></div><div class="friend__text"><div class="friend__name">Silver Sponsor</div><div class="friend__type">TBD</div></div></a>
-        <a class="friend friend--silver" href="https://www.mara.com/" target="_blank" rel="noopener" aria-label="Mara — Silver sponsor"><div class="friend__logo"><span class="friend__logo-fallback">?</span></div><div class="friend__text"><div class="friend__name">Silver Sponsor</div><div class="friend__type">TBD</div></div></a>
+        <div class="friend friend--silver"><div class="friend__logo"><span class="friend__logo-fallback">?</span></div><div class="friend__text"><div class="friend__name">Silver Sponsor</div><div class="friend__type">TBD</div></div></div>
+        <div class="friend friend--silver"><div class="friend__logo"><span class="friend__logo-fallback">?</span></div><div class="friend__text"><div class="friend__name">Silver Sponsor</div><div class="friend__type">TBD</div></div></div>
       </div>
     </div>
     <div class="friends__tier friends__tier--hidden" id="friendsActivations">
       <div class="friends__tier-label">Activation Sponsors</div>
       <div class="friends__grid friends__grid--activation">
-        <a class="friend friend--activation" href="https://www.bitgo.com" target="_blank" rel="noopener" aria-label="BitGo — Badge sponsor"><div class="friend__logo"><span class="friend__logo-fallback">?</span></div><div class="friend__text"><div class="friend__name">Sponsor</div><div class="friend__type">TBD</div></div></a>
-        <a class="friend friend--activation" href="https://archlending.com" target="_blank" rel="noopener" aria-label="Arch Lending — Lanyard sponsor"><div class="friend__logo"><span class="friend__logo-fallback">?</span></div><div class="friend__text"><div class="friend__name">Sponsor</div><div class="friend__type">TBD</div></div></a>
-        <a class="friend friend--activation" href="https://liquiddeath.com" target="_blank" rel="noopener" aria-label="Liquid Death — Coffee &amp; Water sponsor"><div class="friend__logo"><span class="friend__logo-fallback">?</span></div><div class="friend__text"><div class="friend__name">Sponsor</div><div class="friend__type">TBD</div></div></a>
-        <a class="friend friend--activation" href="https://www.anchorwatch.com" target="_blank" rel="noopener" aria-label="AnchorWatch — Bag sponsor"><div class="friend__logo"><span class="friend__logo-fallback">?</span></div><div class="friend__text"><div class="friend__name">Sponsor</div><div class="friend__type">TBD</div></div></a>
-        <a class="friend friend--activation" href="https://bitkey.world" target="_blank" rel="noopener" aria-label="Bitkey — Exhibition Table sponsor"><div class="friend__logo"><span class="friend__logo-fallback">?</span></div><div class="friend__text"><div class="friend__name">Sponsor</div><div class="friend__type">TBD</div></div></a>
-        <a class="friend friend--activation" href="https://bitcoinpark.com" target="_blank" rel="noopener" aria-label="Bitcoin Park — Side Event sponsor"><div class="friend__logo"><span class="friend__logo-fallback">?</span></div><div class="friend__text"><div class="friend__name">Sponsor</div><div class="friend__type">TBD</div></div></a>
-        <a class="friend friend--activation" href="https://nydig.com" target="_blank" rel="noopener" aria-label="NYDIG — Side Event sponsor"><div class="friend__logo"><span class="friend__logo-fallback">?</span></div><div class="friend__text"><div class="friend__name">Sponsor</div><div class="friend__type">TBD</div></div></a>
-        <a class="friend friend--activation" href="https://www.bitrefill.com" target="_blank" rel="noopener" aria-label="Bitrefill — Side Event sponsor"><div class="friend__logo"><span class="friend__logo-fallback">?</span></div><div class="friend__text"><div class="friend__name">Sponsor</div><div class="friend__type">TBD</div></div></a>
-        <a class="friend friend--activation" href="https://hrf.org" target="_blank" rel="noopener" aria-label="Human Rights Foundation — Side Event sponsor"><div class="friend__logo"><span class="friend__logo-fallback">?</span></div><div class="friend__text"><div class="friend__name">Sponsor</div><div class="friend__type">TBD</div></div></a>
-        <a class="friend friend--activation" href="https://onrampbitcoin.com" target="_blank" rel="noopener" aria-label="Onramp — Side Event sponsor"><div class="friend__logo"><span class="friend__logo-fallback">?</span></div><div class="friend__text"><div class="friend__name">Sponsor</div><div class="friend__type">TBD</div></div></a>
-        <a class="friend friend--activation" href="#" aria-label="Activation sponsor — to be announced"><div class="friend__logo"><span class="friend__logo-fallback">?</span></div><div class="friend__text"><div class="friend__name">Sponsor</div><div class="friend__type">TBD</div></div></a>
+        <div class="friend friend--activation"><div class="friend__logo"><span class="friend__logo-fallback">?</span></div><div class="friend__text"><div class="friend__name">Sponsor</div><div class="friend__type">TBD</div></div></div>
+        <div class="friend friend--activation"><div class="friend__logo"><span class="friend__logo-fallback">?</span></div><div class="friend__text"><div class="friend__name">Sponsor</div><div class="friend__type">TBD</div></div></div>
+        <div class="friend friend--activation"><div class="friend__logo"><span class="friend__logo-fallback">?</span></div><div class="friend__text"><div class="friend__name">Sponsor</div><div class="friend__type">TBD</div></div></div>
+        <div class="friend friend--activation"><div class="friend__logo"><span class="friend__logo-fallback">?</span></div><div class="friend__text"><div class="friend__name">Sponsor</div><div class="friend__type">TBD</div></div></div>
+        <div class="friend friend--activation"><div class="friend__logo"><span class="friend__logo-fallback">?</span></div><div class="friend__text"><div class="friend__name">Sponsor</div><div class="friend__type">TBD</div></div></div>
+        <div class="friend friend--activation"><div class="friend__logo"><span class="friend__logo-fallback">?</span></div><div class="friend__text"><div class="friend__name">Sponsor</div><div class="friend__type">TBD</div></div></div>
+        <div class="friend friend--activation"><div class="friend__logo"><span class="friend__logo-fallback">?</span></div><div class="friend__text"><div class="friend__name">Sponsor</div><div class="friend__type">TBD</div></div></div>
+        <div class="friend friend--activation"><div class="friend__logo"><span class="friend__logo-fallback">?</span></div><div class="friend__text"><div class="friend__name">Sponsor</div><div class="friend__type">TBD</div></div></div>
+        <div class="friend friend--activation"><div class="friend__logo"><span class="friend__logo-fallback">?</span></div><div class="friend__text"><div class="friend__name">Sponsor</div><div class="friend__type">TBD</div></div></div>
+        <div class="friend friend--activation"><div class="friend__logo"><span class="friend__logo-fallback">?</span></div><div class="friend__text"><div class="friend__name">Sponsor</div><div class="friend__type">TBD</div></div></div>
+        <div class="friend friend--activation"><div class="friend__logo"><span class="friend__logo-fallback">?</span></div><div class="friend__text"><div class="friend__name">Sponsor</div><div class="friend__type">TBD</div></div></div>
       </div>
     </div>
     <div class="friends__actions">
@@ -2910,7 +2909,7 @@ body.menu-open{overflow:hidden}
         <h3 class="partner__name"><em>Partner TBA</em></h3>
         <div class="partner__role">To be announced</div>
         <div class="partner__topic">&ldquo;Coming soon.&rdquo;</div>
-      </a>
+      </div>
     </div>
     <div class="partners__actions">
       <button type="button" class="btn partners__toggle" id="partnersToggle" aria-expanded="false">
