@@ -207,7 +207,7 @@ body.menu-open{overflow:hidden}
 .hero__grid{display:grid;grid-template-columns:1fr 1fr;align-items:center;width:100%;min-height:calc(100vh - 130px);padding:0 clamp(1rem,2vw,2rem);max-height:calc(100vh - 130px)}
 .hero__logo-col{display:flex;align-items:center;justify-content:center;min-height:0;width:100%;overflow:hidden;background:var(--paper)}
 .hero__logo-col img{display:block;width:100%;height:auto;aspect-ratio:1/1;max-height:calc(100vh - 180px);object-fit:contain}
-.hero__info{display:flex;flex-direction:column;gap:clamp(1rem,1.5vw,1.5rem);padding-left:clamp(1.5rem,3vw,3rem);padding-right:clamp(1rem,2vw,2rem);justify-content:center;max-height:calc(100vh - 180px);overflow:hidden;position:relative}
+.hero__info{display:flex;flex-direction:column;gap:0;padding-left:clamp(1.5rem,3vw,3rem);padding-right:clamp(1rem,2vw,2rem);justify-content:flex-start;max-height:calc(100vh - 180px);overflow:hidden;position:relative}
 .hero__eyebrow{color:var(--accent-deep);font-size:.78rem;letter-spacing:.24em}
 .hero__warning{display:flex;flex-direction:column;gap:.18rem;padding:.7rem 1rem;background:#C3282E;color:#fff;border:2px solid #5B1518;font-family:var(--fm);align-self:stretch;z-index:10}
 .hero__warning-title{font-size:.85rem;font-weight:500;text-transform:uppercase;letter-spacing:.22em;display:flex;align-items:center;gap:.55rem;line-height:1.1}
@@ -2283,6 +2283,7 @@ body.menu-open{overflow:hidden}
         </div>
       </div>
       <div class="hero__info">
+<div style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:clamp(.75rem,1.2vw,1.2rem)">
 <h1 class="hero__headline">
           <em>The</em> <strong style="font-weight:600">premier</strong> gathering discussing<br>
           <span class="accent">Energy · AI · Freedom · Bitcoin</span><br>
@@ -2291,6 +2292,7 @@ body.menu-open{overflow:hidden}
         <a href="#hero-details" class="hero__scroll" aria-label="Scroll to event details">
           <span class="hero__scroll-icon" aria-hidden="true">↓</span>
         </a>
+</div>
         <div class="hero__rule" id="hero-details"></div>
         <dl class="hero__facts">
           <div class="hero__fact">
