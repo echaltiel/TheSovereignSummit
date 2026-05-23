@@ -840,55 +840,104 @@ body.menu-open{overflow:hidden}
 
 /* ===== TICKETS V2 ===== */
 .tickets__vip{grid-column:1/-1}
-.tickets__vip-inner{display:grid;grid-template-columns:260px 1fr;align-items:stretch;gap:0}
-.tickets__vip-left{display:flex;flex-direction:column;gap:.3rem;padding:.1rem 1.1rem .1rem 0;border-right:1px solid rgba(255,255,255,.15)}
+.tickets__vip-inner{display:grid;grid-template-columns:220px 1fr;align-items:start;gap:0}
+.tickets__vip-left{display:flex;flex-direction:column;gap:.3rem;padding:.1rem 1rem .1rem 0}
 .tickets__vip-right{display:flex;flex-direction:column}
 
-/* VIP schedule grid */
+/* VIP schedule — centered cells */
 .tickets__sched{display:grid;grid-template-columns:repeat(3,1fr);flex:1}
 .tickets__sched-head,.tickets__sched-row{display:contents}
-.tickets__sched-head > div{background:rgba(255,255,255,.07);font-family:var(--fm);font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;color:var(--paper-deep);padding:.5rem .6rem;border-right:1px solid rgba(255,255,255,.12);border-bottom:1px solid rgba(255,255,255,.12)}
-.tickets__sched-row > div{font-family:var(--fd);font-size:.73rem;line-height:1.35;color:var(--paper);padding:.5rem .6rem;border-right:1px solid rgba(255,255,255,.12);border-bottom:1px solid rgba(255,255,255,.12)}
-.tickets__sched-head > div:last-child,.tickets__sched-row > div:last-child{border-right:none}
+.tickets__sched-head > div{
+  background:rgba(255,255,255,.07);
+  font-family:var(--fd);
+  font-size:.7rem;
+  font-style:italic;
+  color:var(--accent);
+  padding:.55rem .6rem;
+  text-align:center;
+  border-right:1px solid rgba(255,255,255,.12);
+  border-bottom:1px solid rgba(255,255,255,.12)
+}
+.tickets__sched-head > div:last-child{border-right:none}
+.tickets__sched-sub{
+  display:block;
+  font-family:var(--fm);
+  font-style:normal;
+  font-size:.54rem;
+  letter-spacing:.13em;
+  margin-top:.1rem;
+  opacity:.55;
+  color:var(--paper-deep)
+}
+.tickets__sched-row > div{
+  font-family:var(--fd);
+  font-size:.73rem;
+  line-height:1.35;
+  color:var(--paper);
+  padding:.55rem .6rem;
+  text-align:center;
+  border-right:1px solid rgba(255,255,255,.12);
+  border-bottom:1px solid rgba(255,255,255,.12)
+}
+.tickets__sched-row > div:last-child{border-right:none}
 .tickets__sched-row:last-child > div{border-bottom:none}
-.tickets__sched-sub{display:block;font-family:var(--fm);font-size:.55rem;letter-spacing:.12em;margin-top:.1rem;opacity:.6}
-.tickets__vip-pill{display:inline-block;font-family:var(--fm);font-size:.5rem;letter-spacing:.13em;text-transform:uppercase;padding:.18rem .45rem;background:linear-gradient(90deg,#D4A93C,#E8C46A,#D4A93C);color:#0A1224;margin-top:.3rem}
+.tickets__vip-pill{
+  display:inline-block;
+  font-family:var(--fm);
+  font-size:.5rem;
+  letter-spacing:.13em;
+  text-transform:uppercase;
+  padding:.18rem .45rem;
+  background:linear-gradient(90deg,#D4A93C,#E8C46A,#D4A93C);
+  color:#0A1224;
+  margin-top:.3rem
+}
 
-/* VIP CTA button — override align-self:flex-start from tier--vipallaccess */
+/* VIP CTA — override align-self:flex-start */
 .tier--vipallaccess .tickets__vip-btn{
   align-self:stretch !important;
   text-align:center;
   justify-content:center;
   padding:.9rem 1rem;
   font-size:.65rem;
-  letter-spacing:.2em;
-  border-top:none !important;
-  margin-top:0;
+  letter-spacing:.2em
 }
 
-/* Phase 01 full-width ribbon banner */
-.tier--featured{padding-top:1.9rem}
-.tier--featured .tier__ribbon{
-  top:0;left:-1px;right:-1px;
-  text-align:left;
-  font-size:.57rem;
-  letter-spacing:.17em;
-  padding:.32rem .85rem;
-}
+/* Phase 01 ribbon — keep standard pill, just revert any overrides */
+.tier--featured{padding-top:.55rem}
 
 /* Mini schedule for GA tiers */
-.tickets__mini{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--rule);overflow:hidden;margin:.25rem 0 .35rem;flex:1}
+.tickets__mini{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid rgba(255,255,255,.18);overflow:hidden;margin:.25rem 0 .35rem;flex:1}
 .tickets__mini-head,.tickets__mini-row{display:contents}
-.tickets__mini-head > div{background:rgba(0,0,0,.04);font-family:var(--fm);font-size:.54rem;letter-spacing:.12em;color:var(--ink-soft);padding:.32rem .4rem;border-right:1px solid var(--rule);border-bottom:1px solid var(--rule)}
-.tickets__mini-row > div{font-family:var(--fd);font-size:.65rem;line-height:1.3;color:var(--ink-soft);padding:.35rem .4rem;border-right:1px solid var(--rule)}
-.tickets__mini-head > div:last-child,.tickets__mini-row > div:last-child{border-right:none}
-.tickets__mini-sub{display:block;font-family:var(--fm);font-size:.5rem;letter-spacing:.1em;margin-top:.08rem;opacity:.5}
-.tier--featured .tickets__mini{border-color:rgba(255,255,255,.15)}
-.tier--featured .tickets__mini-head > div{background:rgba(255,255,255,.06);color:var(--paper-deep);border-color:rgba(255,255,255,.13)}
-.tier--featured .tickets__mini-head em{color:var(--paper)}
-.tier--featured .tickets__mini-row > div{color:var(--paper-deep);border-color:rgba(255,255,255,.13)}
+.tickets__mini-head > div{
+  background:rgba(255,255,255,.07);
+  font-family:var(--fd);
+  font-size:.63rem;
+  font-style:italic;
+  color:var(--accent);
+  padding:.32rem .4rem;
+  text-align:center;
+  border-right:1px solid rgba(255,255,255,.12);
+  border-bottom:1px solid rgba(255,255,255,.12)
+}
+.tickets__mini-head > div:last-child{border-right:none}
+.tickets__mini-sub{display:block;font-family:var(--fm);font-style:normal;font-size:.5rem;letter-spacing:.1em;margin-top:.06rem;opacity:.5;color:var(--paper-deep)}
+.tickets__mini-row > div{
+  font-family:var(--fd);
+  font-size:.65rem;
+  line-height:1.3;
+  color:var(--paper-deep);
+  padding:.35rem .4rem;
+  text-align:center;
+  border-right:1px solid rgba(255,255,255,.12)
+}
+.tickets__mini-row > div:last-child{border-right:none}
+
+/* Coming soon mini schedule */
 .tier--coming-soon .tickets__mini{border-color:#c0b8aa}
-.tier--coming-soon .tickets__mini-head > div,.tier--coming-soon .tickets__mini-row > div{border-color:#c0b8aa;color:#999}
+.tier--coming-soon .tickets__mini-head > div{background:rgba(0,0,0,.03);color:#999;border-color:#c0b8aa;font-style:italic}
+.tier--coming-soon .tickets__mini-row > div{color:#aaa;border-color:#c0b8aa}
+.tier--coming-soon .tickets__mini-sub{color:#aaa}
 
 /* Extras line */
 .tier__extras{font-family:var(--fm);font-size:.56rem;letter-spacing:.1em;line-height:1.4;color:var(--ink-soft);margin-bottom:.3rem}
