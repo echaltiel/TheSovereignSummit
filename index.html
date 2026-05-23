@@ -1479,6 +1479,8 @@ body.menu-open{overflow:hidden}
 
 /* Bundle-exclusive pill — for Welcome Reception + Oceanfront Soiree tiles. Gold gradient echoes the VIP/All Access admission tile ribbons. */
 .side-event__badges{display:flex;gap:.5rem;flex-wrap:wrap}
+/* "@ $250" suffix on the GA Ticket badge — mobile only. */
+.side-event__exclusive-price{display:none}
 .side-event__exclusive{
   display:inline-flex;
   align-self:flex-start;
@@ -1604,6 +1606,7 @@ body.menu-open{overflow:hidden}
     margin-top:0;
     align-self:stretch;
   }
+  .side-event__exclusive-price{display:inline}
   .side-event__sponsor{
     grid-column:2;
     grid-row:4;
@@ -2824,7 +2827,7 @@ body.menu-open{overflow:hidden}
         <h3 class="side-event__title">Boat <em>After Party</em></h3>
         <div class="side-event__badges">
           <div class="side-event__exclusive" style="background:linear-gradient(90deg,#D4A93C 0%,#E8C46A 50%,#D4A93C 100%);color:#0A1224">Included with VIP Ticket</div>
-          <div class="side-event__exclusive" style="background:linear-gradient(90deg,#8B5E1A,#C8882A,#8B5E1A);color:#fff">Add-On for GA Ticket</div>
+          <div class="side-event__exclusive" style="background:linear-gradient(90deg,#8B5E1A,#C8882A,#8B5E1A);color:#fff">Add-On for GA Ticket<span class="side-event__exclusive-price"> @ $250</span></div>
         </div>
         <div class="side-event__venue"><span class="side-event__venue-name">Bayside Marina</span><span class="side-event__venue-label">meet at Fontainebleau</span></div>
         <p class="side-event__desc">To close the Summit, guests will gather Saturday night aboard Biscayne Bay Yacht Charters for an evening on Biscayne Bay with drinks, music, and Miami skyline views. Shuttles will run from the Fontainebleau lobby to Bayside Marketplace, with boarding at Bayside Marina, Pier 1. VIP ticket holders have guaranteed access. Additional spots are available as an add-on for GA ticket holders &#8211; limited to 400 total guests.</p>
