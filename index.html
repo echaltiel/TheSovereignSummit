@@ -292,7 +292,7 @@ body.menu-open{overflow:hidden}
    can bleed into the side-events area regardless of where the browser lands
    the scroll target — iOS Safari's smooth scroll can momentarily overshoot
    and would otherwise expose a sliver of dark navy below the sticky nav. */
-.program::after{content:'';position:absolute;bottom:0;left:0;right:0;height:80px;background:linear-gradient(to bottom,transparent,var(--paper));pointer-events:none;z-index:1}
+.program::after{content:none}
 @media (max-width:720px){.program::after{height:48px}}
 .program .sec-hd__num{color:var(--paper-deep);opacity:.7;border-top-color:var(--paper-deep)}
 .program .section-title{color:var(--paper)}
