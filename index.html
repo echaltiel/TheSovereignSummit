@@ -600,38 +600,43 @@ body.menu-open{overflow:hidden}
   .partners__footnote{margin-top:.85rem;font-size:.9rem;line-height:1.4}
   .partner{
     display:grid;
-    grid-template-columns:80px 1fr;
-    grid-template-rows:auto auto auto;
-    column-gap:.85rem;
+    grid-template-columns:110px 1fr;
+    grid-template-rows:1fr 1fr;
+    column-gap:.95rem;
     align-items:center;
-    padding:.7rem .9rem
+    padding:.85rem .95rem;
+    position:relative
   }
   .partner__index{top:.6rem;right:.8rem;font-size:.55rem}
   .partner__portrait{
     grid-column:1;
-    grid-row:1 / span 3;
-    width:80px;
-    height:80px;
+    grid-row:1 / span 2;
+    width:110px;
+    height:110px;
     margin:0;
-    border-bottom:none;
-    align-self:center
+    border-bottom:none
   }
   .partner__placeholder{font-size:1.25rem}
   .partner__name{
     grid-column:2;
     grid-row:1;
-    font-size:1.1rem;
-    margin-bottom:.1rem;
-    line-height:1.05;
-    padding-right:1.5rem
+    font-size:1.2rem;
+    margin-bottom:0;
+    line-height:1.1;
+    padding-right:1.5rem;
+    text-align:left;
+    align-self:end
   }
   .partner__role{
     grid-column:2;
     grid-row:2;
-    font-size:.55rem;
-    margin-bottom:.35rem;
-    letter-spacing:.13em;
-    line-height:1.4
+    font-size:.6rem;
+    margin-bottom:0;
+    letter-spacing:.14em;
+    line-height:1.4;
+    text-align:left;
+    align-self:start;
+    margin-top:.25rem
   }
   .partner__topic{
     grid-column:2;
