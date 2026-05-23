@@ -288,6 +288,7 @@ body.menu-open{overflow:hidden}
 
 /* PROGRAM */
 .program{background:var(--ink);color:var(--paper);padding:clamp(2rem,4vw,3rem) 0 clamp(2.5rem,4vw,3.5rem);position:relative}
+.program::after{content:none}
 /* Cream fade at the bottom of the program section. Guarantees no dark navy
    can bleed into the side-events area regardless of where the browser lands
    the scroll target — iOS Safari's smooth scroll can momentarily overshoot
