@@ -977,10 +977,31 @@ body.menu-open{overflow:hidden}
   }
   .side-event__venue-label{font-size:.5rem;letter-spacing:.16em}
   .side-event__desc{display:none}
-  .side-event__exclusive{display:none}
-  .side-event__meta{
+  .side-event__exclusive{
+    display:inline-flex;
     grid-column:2;
     grid-row:3;
+    font-size:.52rem;
+    letter-spacing:.14em;
+    padding:.22rem .5rem;
+    margin-bottom:.2rem
+  }
+  .side-event__badges{
+    grid-column:2;
+    grid-row:3;
+    display:flex;
+    gap:.35rem;
+    flex-wrap:wrap;
+    margin-bottom:.2rem
+  }
+  .side-event__badges .side-event__exclusive{
+    grid-column:unset;
+    grid-row:unset;
+    margin-bottom:0
+  }
+  .side-event__meta{
+    grid-column:2;
+    grid-row:4;
     font-size:.55rem;
     padding-top:.3rem;
     letter-spacing:.16em
@@ -996,7 +1017,7 @@ body.menu-open{overflow:hidden}
   }
   .side-event__sponsor{
     grid-column:2;
-    grid-row:4;
+    grid-row:5;
     font-size:.5rem;
     letter-spacing:.14em;
     padding:.35rem .5rem;
@@ -2094,7 +2115,7 @@ body.menu-open{overflow:hidden}
           <a class="side-event__sponsor" href="#" aria-label="Sponsor TBD"><span class="side-event__sponsor-label">Presented by</span> TBD</a>
         </div>
         <h3 class="side-event__title">Bitcoin <em>Fundamentals</em></h3>
-        <div style="display:flex;gap:.5rem;flex-wrap:wrap">
+        <div class="side-event__badges" style="display:flex;gap:.5rem;flex-wrap:wrap">
           <div class="side-event__exclusive">Included with every ticket</div>
           <div class="side-event__exclusive" style="background:linear-gradient(90deg,#8B5E1A,#C8882A,#8B5E1A);color:#fff">First Come First Served</div>
         </div>
@@ -2148,7 +2169,7 @@ body.menu-open{overflow:hidden}
           <a class="side-event__sponsor" href="#" aria-label="Sponsor TBD"><span class="side-event__sponsor-label">Presented by</span> TBD</a>
         </div>
         <h3 class="side-event__title">Boat <em>After Party</em></h3>
-        <div style="display:flex;gap:.5rem;flex-wrap:wrap">
+        <div class="side-event__badges" style="display:flex;gap:.5rem;flex-wrap:wrap">
           <div class="side-event__exclusive" style="background:linear-gradient(90deg,#D4A93C 0%,#E8C46A 50%,#D4A93C 100%);color:#0A1224">Included with VIP Ticket</div>
           <div class="side-event__exclusive" style="background:linear-gradient(90deg,#8B5E1A,#C8882A,#8B5E1A);color:#fff">Add-On for GA</div>
         </div>
