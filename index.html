@@ -359,20 +359,46 @@ body.menu-open{overflow:hidden}
 /* Day divider line between columns handled above */
 
 @media (max-width:720px){
-  .program__timeline{flex-wrap:wrap;gap:.5rem}
-  .program__tl-bridge{flex-basis:100%;order:3;padding:0;margin-top:.25rem}
-  .program__tl-day--right{margin-left:auto}
+  /* Keep timeline header on a single horizontal row so it stays compact */
+  .program__timeline{margin:.5rem 0 .35rem}
+  .program__tl-bridge{padding:0 .6rem}
+  .program__tl-day-label{font-size:.55rem;letter-spacing:.22em}
+  .program__tl-day-date{font-size:1rem}
+  .program__tl-arrow{font-size:.95rem}
+  .program__tl-day--right{text-align:right}
 }
 @media (max-width:680px){
-  .program__blocks{grid-template-columns:1fr;gap:.85rem}
-  .program__blocks::after{display:none}
-  .program__block-title{font-size:1.3rem}
-  .program__block-desc{font-size:1rem}
-  .program__block-step{font-size:1.6rem}
+  /* Keep 2-col grid on mobile so all four blocks are visible at once.
+     Source order 01,03,02,04 fills as:
+       Row 1: 01 | 03   (Day 1 top / Day 2 top)
+       Row 2: 02 | 04   (Day 1 bot / Day 2 bot)
+     Preserves the Day 1 = left column, Day 2 = right column reading. */
+  .program__blocks{gap:.5rem}
+  .program__block{padding:.6rem .65rem .55rem;gap:.2rem;border-left-width:3px}
+  /* Stack number above chip — narrow columns can't fit them side-by-side */
+  .program__block-header{flex-direction:column;align-items:flex-start;gap:.15rem;margin-bottom:.1rem}
+  .program__block-step{font-size:1.4rem}
+  .program__block-theme{font-size:.44rem;padding:.15rem .35rem;letter-spacing:.14em;margin-top:0}
+  .program__block-title{font-size:1rem;line-height:1.1}
+  .program__block-desc{font-size:.78rem;line-height:1.35}
+  .program__block-coming{font-size:.45rem;letter-spacing:.18em;margin-top:.15rem;padding-top:.25rem}
 }
-@media (max-width:480px){
-  .program__block{padding:.85rem .95rem .8rem}
-  .program__block-title{font-size:1.2rem}
+@media (max-width:360px){
+  /* Very narrow phones — fall back to single column for readability */
+  .program__blocks{grid-template-columns:1fr;gap:.65rem}
+  .program__blocks::after{display:none}
+  .program__block{padding:.75rem .85rem .65rem}
+  /* Restore side-by-side header now that there's full card width */
+  .program__block-header{flex-direction:row;align-items:flex-start;gap:.75rem;margin-bottom:.05rem}
+  .program__block-theme{font-size:.5rem;padding:.2rem .5rem;letter-spacing:.18em;margin-top:.2rem}
+  .program__block-title{font-size:1.15rem}
+  .program__block-desc{font-size:.9rem}
+  .program__block-step{font-size:1.5rem}
+  /* Restore numerical order when stacked single-column */
+  .program__block--01{order:1}
+  .program__block--02{order:2}
+  .program__block--03{order:3}
+  .program__block--04{order:4}
 }
 
 
@@ -2784,7 +2810,7 @@ body.menu-open{overflow:hidden}
         </div>
         <div class="side-event__venue"><span class="side-event__venue-name">Bayside Marina</span><span class="side-event__venue-label">meet at Fontainebleau</span></div>
         <p class="side-event__desc">To close the Summit, guests will gather Saturday night aboard Biscayne Bay Yacht Charters for an evening on Biscayne Bay with drinks, music, and Miami skyline views. Shuttles will run from the Fontainebleau lobby to Bayside Marketplace, with boarding at Bayside Marina, Pier 1. VIP ticket holders have guaranteed access. Additional spots are available as an add-on for GA ticket holders &#8211; limited to 400 total guests.</p>
-        <div class="side-event__meta">Food &amp; open bar included · Limited capacity · Click tile to buy tickets</div>
+        <div class="side-event__meta">Food &amp; open bar included · Limited capacity · $250</div>
       </article>
 
     </div>
