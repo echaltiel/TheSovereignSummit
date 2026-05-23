@@ -755,6 +755,7 @@ body.menu-open{overflow:hidden}
   width:100%;
   gap:.6rem 2.2rem;
   margin:.4rem 0;
+  align-items:stretch;
 }
 .tier__day-grid--3col{
   grid-template-columns:repeat(3, 1fr);
@@ -765,6 +766,11 @@ body.menu-open{overflow:hidden}
 .tier__day{
   text-align:left;
   min-width:0;
+  display:flex;
+  flex-direction:column;
+}
+.tier__day .tier__day-list{
+  flex:1;
 }
 .tier__day-label{
   display:flex;
@@ -3211,7 +3217,7 @@ body.menu-open{overflow:hidden}
       </article>
       </div>
     </div>
-    <p class="tickets__trust"><strong>Bitcoin accepted</strong> · Same seat, same program — only the price changes · <strong>Full refund</strong> through December 1, 2026 · Transfers honored until January 28, 2027</p>
+    <p class="tickets__trust"><strong>Full refund</strong> through December 1, 2026 · Transfers honored until January 28, 2027</p>
   </div>
 </section>
 
