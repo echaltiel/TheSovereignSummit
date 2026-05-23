@@ -676,22 +676,24 @@ body.menu-open{overflow:hidden}
 .venue__link:hover{color:var(--ink);border-bottom-color:var(--ink)}
 @media (max-width:880px){.venue__grid{grid-template-columns:1fr}.venue__illus{aspect-ratio:16/9;max-height:200px}.venue__details{grid-template-columns:repeat(2,1fr)}.venue__brand-link{align-self:flex-start}}
 @media (max-width:520px){
-  .venue{padding:.85rem 0 1.5rem !important}
-  .venue .sec-hd{margin-bottom:.5rem;gap:.4rem}
-  .venue .sec-hd__num{padding-top:.45rem;font-size:.7rem}
+  .venue{padding:.85rem 0 1.25rem !important}
+  .venue .sec-hd{margin-bottom:.4rem;gap:.3rem}
+  .venue .sec-hd__num{padding-top:.4rem;font-size:.65rem}
   
   .venue .sec-hd__title{padding-top:0}
-  .venue__grid{gap:.85rem}
-  .venue__illus{aspect-ratio:16/9;max-height:160px;padding:0}
+  .venue__grid{gap:.5rem}
+  /* Wordmark hidden on mobile — section title already says "Fontainebleau" */
+  .venue__brand-link{display:none}
+  .venue__illus{aspect-ratio:16/9;max-height:140px;padding:0}
   .venue__photo-icon{width:46px}
   .venue__photo-caption{font-size:1rem}
   .venue__photo-meta{font-size:.55rem;letter-spacing:.18em}
-  .venue__content .eyebrow{font-size:.62rem;letter-spacing:.18em}
-  .venue__content h3{font-size:1.3rem;line-height:1.05;margin:.35rem 0 .45rem}
-  .venue__content p{font-size:.85rem;line-height:1.32;margin-bottom:.45rem}
-  .venue__details{margin-top:.55rem;padding-top:.6rem;gap:.55rem .85rem;grid-template-columns:repeat(2,1fr)}
-  .venue__detail-label{font-size:.55rem;letter-spacing:.16em;margin-bottom:.15rem}
-  .venue__detail-value{font-size:.78rem;line-height:1.25}
+  .venue__content .eyebrow{font-size:.55rem;letter-spacing:.18em;margin-top:.3rem}
+  .venue__content h3{font-size:1.15rem;line-height:1.1;margin:.2rem 0 .3rem}
+  .venue__content p{font-size:.78rem;line-height:1.3;margin-bottom:.3rem}
+  .venue__details{margin-top:.35rem;padding-top:.4rem;gap:.4rem .75rem;grid-template-columns:repeat(2,1fr)}
+  .venue__detail-label{font-size:.5rem;letter-spacing:.14em;margin-bottom:.1rem}
+  .venue__detail-value{font-size:.72rem;line-height:1.25}
 }
 
 /* TICKETS — tightened so the section fits one desktop viewport when navigated to via #tickets */
