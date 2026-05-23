@@ -287,12 +287,12 @@ body.menu-open{overflow:hidden}
 @media (max-width:720px){.sec-hd{grid-template-columns:1fr;gap:1.25rem}}
 
 /* PROGRAM */
-.program{background:var(--ink);color:var(--paper);padding:clamp(2rem,4vw,3rem) 0 clamp(4rem,7vw,6rem)}
+.program{background:var(--ink);color:var(--paper);padding:clamp(2rem,4vw,3rem) 0 clamp(4rem,7vw,6rem);position:relative}
 /* Cream fade at the bottom of the program section. Guarantees no dark navy
    can bleed into the side-events area regardless of where the browser lands
    the scroll target — iOS Safari's smooth scroll can momentarily overshoot
    and would otherwise expose a sliver of dark navy below the sticky nav. */
-.program::after{content:none}
+.program::after{content:'';position:absolute;bottom:0;left:0;right:0;height:140px;background:linear-gradient(to bottom,transparent,var(--paper));pointer-events:none;z-index:1}
 @media (max-width:720px){.program::after{height:48px}}
 .program .sec-hd__num{color:var(--paper-deep);opacity:.7;border-top-color:var(--paper-deep)}
 .program .section-title{color:var(--paper)}
