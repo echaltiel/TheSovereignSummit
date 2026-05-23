@@ -1599,11 +1599,11 @@ body.menu-open{overflow:hidden}
 .friends__grid--silver{grid-template-columns:repeat(2,1fr)}
 .friends__grid--activation{grid-template-columns:repeat(4,1fr);overflow:hidden}
 .friend{padding:1rem .9rem;border-right:1px solid var(--ink);border-bottom:1px solid var(--ink);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.3rem;text-align:center;min-height:80px;transition:background .2s;text-decoration:none;color:inherit;position:relative}
-.friend--platinum{min-height:auto;padding:.7rem 1rem .65rem;gap:.15rem}
+.friend--platinum{min-height:auto;padding:.5rem 1rem .45rem;gap:.15rem}
 .friend--platinum .friend__name{font-size:1.55rem}
-.friend--gold{min-height:auto;padding:.7rem 1rem .65rem;gap:.15rem}
+.friend--gold{min-height:auto;padding:.5rem 1rem .45rem;gap:.15rem}
 .friend--gold .friend__name{font-size:1.05rem}
-.friend--silver{min-height:auto;padding:.7rem 1rem .65rem;gap:.15rem}
+.friend--silver{min-height:auto;padding:.5rem 1rem .45rem;gap:.15rem}
 .friend--silver .friend__name{font-size:.95rem}
 .friend--activation{min-height:62px;padding:.7rem .6rem;gap:.25rem}
 .friend--activation .friend__name{font-size:.95rem}
@@ -1708,7 +1708,7 @@ body.menu-open{overflow:hidden}
 .friend__type{font-family:var(--fm);font-size:.55rem;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-soft)}
 .friends__actions{display:flex;justify-content:center;margin-top:.4rem}
 .friends{padding:clamp(1rem,1.5vw,1.5rem) 0 1.5rem !important}
-.friends .sec-hd{margin-bottom:.85rem !important;gap:1rem;padding-top:.5rem}
+.friends .sec-hd{margin-bottom:.5rem !important;gap:1rem;padding-top:.5rem}
 
 .friends__toggle-hide{display:none}
 .friends__toggle[aria-expanded="true"] .friends__toggle-show{display:none}
@@ -1927,7 +1927,7 @@ body.menu-open{overflow:hidden}
   .friends__become .btn{padding:.7rem 1rem;font-size:.66rem;letter-spacing:.12em}
 }
 .friends__become{text-align:center;margin-top:.75rem}
-.friends__become-text{font-family:var(--fd);font-style:italic;font-size:1.2rem;color:var(--ink-soft);margin-bottom:1.25rem}
+.friends__become-text{font-family:var(--fd);font-style:italic;font-size:1.2rem;color:var(--ink-soft);margin-bottom:.65rem}
 .friends__become-text em{color:var(--accent-deep)}
 
 /* METALLIC TIER STYLING */
@@ -2307,11 +2307,11 @@ body.menu-open{overflow:hidden}
         <dl class="hero__facts">
           <div class="hero__fact">
             <dt>Dates</dt>
-            <dd>Friday, <em>February 5</em> and Saturday, February 6, 2027</dd>
+            <dd><a class="hero__fact-link" href="#agenda">Friday, <em>February 5</em> and Saturday, February 6, 2027</a></dd>
           </div>
           <div class="hero__fact">
             <dt>Venue</dt>
-            <dd><em>Fontainebleau</em> · Miami Beach</dd>
+            <dd><a class="hero__fact-link" href="#venue"><em>Fontainebleau</em> · Miami Beach</a></dd>
           </div>
           <div class="hero__fact">
             <dt>Hours</dt>
@@ -2616,7 +2616,7 @@ body.menu-open{overflow:hidden}
         <span class="btn__arrow">↓</span>
       </button>
     </div>
-    <p class="speakers__footnote">Speaker lineup announced on a rolling basis. <em>Subscribe below for announcements.</em></p>
+    <p class="speakers__footnote">Speaker lineup announced on a rolling basis.<br><a href="#subscribe" style="color:var(--accent-deep);text-decoration:none"><em>Subscribe below to stay up to date with all our updates.</em></a></p>
   </div>
 </section>
 
@@ -2701,7 +2701,7 @@ body.menu-open{overflow:hidden}
   <div class="container">
     <header class="sec-hd" id="side-events">
       <div class="sec-hd__num">Nº 03 — Side Events</div>
-      <h2 class="section-title sec-hd__title">Before, During, and <em>After</em> The Summit.</h2>
+      <h2 class="section-title sec-hd__title"><em>Before</em>, <em>During</em>, and <em>After</em> The Summit.</h2>
     </header>
     <div class="side-events__grid">
 
@@ -2761,7 +2761,7 @@ body.menu-open{overflow:hidden}
 
       <!-- Boat After Party -->
       <article class="side-event">
-        <a class="side-event__link" href="#tickets" aria-label="Boat After Party — more info"></a>
+        <a class="side-event__link" href="https://pay.zaprite.com/pl_wIAImtY5wz" target="_blank" rel="noopener" aria-label="Boat After Party — buy tickets"></a>
         <div class="side-event__top">
           <div class="side-event__when">
             <div class="side-event__date">Sat · Feb 6</div>
@@ -2772,11 +2772,11 @@ body.menu-open{overflow:hidden}
         <h3 class="side-event__title">Boat <em>After Party</em></h3>
         <div class="side-event__badges" style="display:flex;gap:.5rem;flex-wrap:wrap">
           <div class="side-event__exclusive" style="background:linear-gradient(90deg,#D4A93C 0%,#E8C46A 50%,#D4A93C 100%);color:#0A1224">Included with VIP Ticket</div>
-          <div class="side-event__exclusive" style="background:linear-gradient(90deg,#8B5E1A,#C8882A,#8B5E1A);color:#fff">Add-On for GA</div>
+          <div class="side-event__exclusive" style="background:linear-gradient(90deg,#8B5E1A,#C8882A,#8B5E1A);color:#fff">Add-On for GA Ticket</div>
         </div>
         <div class="side-event__venue"><span class="side-event__venue-name">Bayside Marina</span><span class="side-event__venue-label">meet at Fontainebleau</span></div>
         <p class="side-event__desc">To close the Summit, guests will gather Saturday night aboard Biscayne Bay Yacht Charters for an evening on Biscayne Bay with drinks, music, and Miami skyline views. Shuttles will run from the Fontainebleau lobby to Bayside Marketplace, with boarding at Bayside Marina, Pier 1. VIP ticket holders have guaranteed access. Additional spots are available as an add-on for GA ticket holders &#8211; limited to 400 total guests.</p>
-        <div class="side-event__meta">Food &amp; open bar included · Limited capacity</div>
+        <div class="side-event__meta">Food &amp; open bar included · Limited capacity · Click tile to buy tickets</div>
       </article>
 
     </div>
