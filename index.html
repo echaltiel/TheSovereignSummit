@@ -640,6 +640,9 @@ body.menu-open{overflow:hidden}
     padding-top:.35rem;
     line-height:1.25
   }
+  /* Desktop padding of 1.5rem is too large for the 48x48 mobile portrait
+     (with box-sizing:border-box it eats the entire image area). */
+  .partner__photo{padding:4px}
 }
 
 /* VENUE */
