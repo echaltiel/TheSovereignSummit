@@ -307,6 +307,38 @@ body.menu-open{overflow:hidden}
 @media (max-width:680px){.program__row{grid-template-columns:100px 1fr;gap:1rem}.program__tag{grid-column:2;margin-top:.3rem}}
 .program__footnote{margin-top:2rem;font-family:var(--fd);font-style:italic;font-size:1.05rem;color:rgba(244,236,224,.65);text-align:center;max-width:48ch;margin-left:auto;margin-right:auto}
 .program__footnote em{color:var(--accent)}
+/* PROGRAM BLOCKS — The Sovereign Arc */
+.program__day-label{font-family:var(--fm);font-size:.68rem;letter-spacing:.24em;text-transform:uppercase;color:var(--paper-deep);opacity:.5;padding:1.25rem 0 .6rem;border-top:1px solid rgba(244,236,224,.12)}
+.program__day-label--day2{padding-top:1.5rem;margin-top:.25rem}
+.program__blocks{margin-top:clamp(1rem,2vw,1.5rem)}
+.program__block{display:grid;grid-template-columns:130px 1fr auto;gap:clamp(1rem,2vw,2rem);padding:1.1rem .5rem;border-bottom:1px solid rgba(244,236,224,.1);align-items:start;transition:background .25s}
+.program__block:hover{background:rgba(244,236,224,.03)}
+.program__block-meta{padding-top:.2rem}
+.program__block-num{font-family:var(--fm);font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;color:var(--paper-deep);opacity:.5;margin-bottom:.6rem}
+.program__block-period{font-family:var(--fm);font-size:.65rem;letter-spacing:.18em;text-transform:uppercase;color:var(--paper-deep);opacity:.4;margin-bottom:.25rem}
+.program__block-time{font-family:var(--fm);font-size:.68rem;letter-spacing:.1em;color:var(--paper-deep);opacity:.45}
+.program__block-title{font-family:var(--fd);font-size:clamp(1.3rem,2.2vw,2rem);font-weight:400;line-height:1.05;letter-spacing:-.015em;color:var(--paper);margin-bottom:.5rem}
+.program__block-desc{font-family:var(--fd);font-style:italic;font-size:clamp(.85rem,.95vw,.98rem);line-height:1.5;color:var(--paper-deep);max-width:44ch;opacity:.8}
+.program__block-cast{text-align:right;display:flex;flex-direction:column;gap:.65rem;min-width:170px;padding-top:.15rem}
+.program__block-role-label{font-family:var(--fm);font-size:.58rem;letter-spacing:.24em;text-transform:uppercase;color:var(--accent);margin-bottom:.35rem}
+.program__block-role-name{font-family:var(--fd);font-size:1.1rem;line-height:1.05;color:var(--paper)}
+.program__block-role-name--tba{color:var(--paper-deep);opacity:.3;font-style:italic}
+@media (max-width:860px){
+  .program__block{grid-template-columns:120px 1fr;grid-template-rows:auto auto}
+  .program__block-cast{grid-column:2;grid-row:2;flex-direction:row;text-align:left;min-width:0;gap:1.5rem;padding-top:.75rem;border-top:1px solid rgba(244,236,224,.1)}
+}
+@media (max-width:580px){
+  .program__block{grid-template-columns:1fr;gap:.85rem;padding:1.5rem .25rem}
+  .program__block-meta{display:flex;gap:1rem;align-items:baseline;flex-wrap:wrap}
+  .program__block-num{margin-bottom:0}
+  .program__block-period{margin-bottom:0}
+  .program__block-cast{grid-column:auto;flex-direction:row;text-align:left;gap:1.25rem;padding-top:.75rem;border-top:1px solid rgba(244,236,224,.1)}
+  .program__block-title{font-size:1.65rem}
+  .program__block-desc{font-size:.92rem}
+  .program__block-role-name{font-size:1.1rem}
+  .program__day-label{padding-top:2rem}
+}
+
 
 /* SPEAKERS */
 .speakers__grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid var(--ink);border-left:1px solid var(--ink);border-right:1px solid var(--ink)}
@@ -2556,13 +2588,102 @@ body.menu-open{overflow:hidden}
   <div class="container">
     <header class="sec-hd" id="agenda">
       <div class="sec-hd__num">Nº 02 — Agenda</div>
-      <h2 class="section-title sec-hd__title">Two days, <em>coming soon.</em></h2>
+      <h2 class="section-title sec-hd__title">Four blocks. <em>One story.</em></h2>
     </header>
-    <div style="max-width:58ch;margin:clamp(1.5rem,3vw,2.5rem) auto 0;text-align:center">
-      <p style="font-family:var(--fd);font-size:clamp(1.1rem,1.4vw,1.3rem);line-height:1.65;color:var(--paper);margin:0 0 1.25rem">Two full days of world-class talks, panels, and unscripted conversations — built around the ideas that actually matter: <em>Energy, AI, Freedom,</em> and <em>Bitcoin.</em></p>
-      <p style="font-family:var(--fd);font-size:clamp(1rem,1.2vw,1.15rem);line-height:1.65;color:var(--paper-deep);margin:0">No filler sessions. No death-by-PowerPoint. Just the sharpest minds in the room, on stage and off, working through the questions that define the next decade.</p>
+    <div style="max-width:58ch;margin:clamp(1rem,2vw,1.75rem) 0 clamp(1.25rem,2vw,2rem)">
+      <p style="font-family:var(--fd);font-size:clamp(1.1rem,1.4vw,1.3rem);line-height:1.65;color:var(--paper);margin:0 0 1.25rem">Two full days of world-class talks, panels, and unscripted conversations centered on the ideas shaping what comes next: <em>Energy, AI, Freedom,</em> and <em>Bitcoin.</em></p>
+      <p style="font-family:var(--fd);font-size:clamp(1rem,1.2vw,1.15rem);line-height:1.65;color:var(--paper-deep);margin:0">Below is a sample of the themes you can expect. These are not final, but they offer a glimpse into the conversations and ideas that will define the event.</p>
     </div>
-    <p class="program__footnote" style="text-align:center">Full schedule and speaker assignments published closer to the event. <em>Subscribe below to be first to know.</em></p>
+
+    <div class="program__blocks">
+
+      <div class="program__day-label">Day 1&nbsp;&nbsp;·&nbsp;&nbsp;Friday, February 5, 2027</div>
+
+      <article class="program__block">
+        <div class="program__block-meta">
+          <div class="program__block-num">Block Nº 01</div>
+        </div>
+        <div class="program__block-body">
+          <h3 class="program__block-title">The Inflection Point</h3>
+          <p class="program__block-desc">Why energy, money, intelligence, and freedom are all fracturing at once — and why this moment changes everything.</p>
+        </div>
+        <div class="program__block-cast">
+          <div class="program__block-role-group">
+            <div class="program__block-role-label">Curated by</div>
+            <div class="program__block-role-name program__block-role-name--tba">TBA</div>
+          </div>
+          <div class="program__block-role-group">
+            <div class="program__block-role-label">Keynote by</div>
+            <div class="program__block-role-name program__block-role-name--tba">TBA</div>
+          </div>
+        </div>
+      </article>
+
+      <article class="program__block">
+        <div class="program__block-meta">
+          <div class="program__block-num">Block Nº 02</div>
+        </div>
+        <div class="program__block-body">
+          <h3 class="program__block-title">The Convergence</h3>
+          <p class="program__block-desc">How energy, AI, Bitcoin, and freedom form one interlocking system — not four separate stories.</p>
+        </div>
+        <div class="program__block-cast">
+          <div class="program__block-role-group">
+            <div class="program__block-role-label">Curated by</div>
+            <div class="program__block-role-name program__block-role-name--tba">TBA</div>
+          </div>
+          <div class="program__block-role-group">
+            <div class="program__block-role-label">Keynote by</div>
+            <div class="program__block-role-name program__block-role-name--tba">TBA</div>
+          </div>
+        </div>
+      </article>
+
+      <div class="program__day-label program__day-label--day2">Day 2&nbsp;&nbsp;·&nbsp;&nbsp;Saturday, February 6, 2027</div>
+
+      <article class="program__block">
+        <div class="program__block-meta">
+          <div class="program__block-num">Block Nº 03</div>
+        </div>
+        <div class="program__block-body">
+          <h3 class="program__block-title">Sovereign Builders</h3>
+          <p class="program__block-desc">The founders, engineers, and operators turning sovereign infrastructure from vision into reality.</p>
+        </div>
+        <div class="program__block-cast">
+          <div class="program__block-role-group">
+            <div class="program__block-role-label">Curated by</div>
+            <div class="program__block-role-name program__block-role-name--tba">TBA</div>
+          </div>
+          <div class="program__block-role-group">
+            <div class="program__block-role-label">Keynote by</div>
+            <div class="program__block-role-name program__block-role-name--tba">TBA</div>
+          </div>
+        </div>
+      </article>
+
+      <article class="program__block">
+        <div class="program__block-meta">
+          <div class="program__block-num">Block Nº 04</div>
+        </div>
+        <div class="program__block-body">
+          <h3 class="program__block-title">The Flourishing</h3>
+          <p class="program__block-desc">What civilization looks like when individual sovereignty becomes the default setting for humanity.</p>
+        </div>
+        <div class="program__block-cast">
+          <div class="program__block-role-group">
+            <div class="program__block-role-label">Curated by</div>
+            <div class="program__block-role-name program__block-role-name--tba">TBA</div>
+          </div>
+          <div class="program__block-role-group">
+            <div class="program__block-role-label">Keynote by</div>
+            <div class="program__block-role-name program__block-role-name--tba">TBA</div>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+    <p class="program__footnote" style="margin-top:1.75rem;text-align:center">Full speaker assignments published on a rolling basis. <em>Subscribe below to be first to know.</em></p>
   </div>
 </section>
 
