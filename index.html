@@ -837,6 +837,36 @@ body.menu-open{overflow:hidden}
 .tier--featured .btn::before{background:var(--paper)}
 .tier--featured .btn:hover{color:var(--ink);border-color:var(--paper)}
 
+
+/* ===== TICKETS V2 — VIP + GA Schedule Layout ===== */
+.tickets__vip{grid-column:1/-1}
+.tickets__vip-inner{display:grid;grid-template-columns:minmax(180px,260px) 1fr;gap:1.2rem;align-items:start;padding-top:.3rem}
+.tickets__sched{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid rgba(255,255,255,.18);overflow:hidden}
+.tickets__sched-head,.tickets__sched-row{display:contents}
+.tickets__sched-head > div,.tickets__sched-row > div{padding:.45rem .55rem;border-right:1px solid rgba(255,255,255,.13);border-bottom:1px solid rgba(255,255,255,.13);font-family:var(--fd);font-size:.72rem;line-height:1.35;color:var(--paper)}
+.tickets__sched-head > div:last-child,.tickets__sched-row > div:last-child{border-right:none}
+.tickets__sched-head > div{background:rgba(255,255,255,.07);font-family:var(--fm);font-size:.58rem;letter-spacing:.15em;color:var(--paper-deep)}
+.tickets__sched-head em{font-style:italic;font-family:var(--fd);color:var(--paper);font-size:.95em}
+.tickets__sched-sub{opacity:.6;margin-left:.25rem}
+.tickets__sched-row:last-child > div{border-bottom:none}
+.tickets__vip-pill{display:inline-block;font-family:var(--fm);font-size:.5rem;letter-spacing:.14em;text-transform:uppercase;padding:.18rem .45rem;background:linear-gradient(90deg,#D4A93C 0%,#E8C46A 50%,#D4A93C 100%);color:#0A1224;margin-top:.25rem}
+.tickets__vip-btn{align-self:stretch;justify-content:center;text-align:center;margin-top:.25rem}
+.tickets__mini{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--rule);overflow:hidden;margin-bottom:.3rem;flex:1}
+.tickets__mini-head,.tickets__mini-row{display:contents}
+.tickets__mini-head > div,.tickets__mini-row > div{padding:.35rem .4rem;border-right:1px solid var(--rule);border-bottom:1px solid var(--rule);font-family:var(--fd);font-size:.65rem;line-height:1.3;color:var(--ink-soft)}
+.tickets__mini-head > div:last-child,.tickets__mini-row > div:last-child{border-right:none}
+.tickets__mini-head > div{background:rgba(0,0,0,.03);font-family:var(--fm);font-size:.54rem;letter-spacing:.12em;color:var(--ink-soft)}
+.tickets__mini-head em{font-style:italic;font-family:var(--fd);color:var(--ink);font-size:.95em}
+.tickets__mini-sub{opacity:.5;margin-left:.15rem}
+.tickets__mini-row:last-child > div{border-bottom:none}
+.tier--featured .tickets__mini{border-color:rgba(255,255,255,.15)}
+.tier--featured .tickets__mini-head > div{background:rgba(255,255,255,.06);color:var(--paper-deep);border-color:rgba(255,255,255,.13)}
+.tier--featured .tickets__mini-head em{color:var(--paper)}
+.tier--featured .tickets__mini-row > div{color:var(--paper-deep);border-color:rgba(255,255,255,.13)}
+.tier__extras{font-family:var(--fm);font-size:.56rem;letter-spacing:.1em;color:var(--ink-soft);margin-bottom:.35rem;line-height:1.4}
+.tier--featured .tier__extras{color:rgba(244,236,224,.6)}
+.tier__cs-badge{position:absolute;top:.5rem;right:.8rem;background:rgba(19,30,51,.07);color:var(--ink-soft);font-family:var(--fm);font-size:.5rem;letter-spacing:.18em;text-transform:uppercase;padding:.22rem .55rem;border:1px solid var(--rule)}
+
 @media (max-width:960px){.tickets__grid{grid-template-columns:1fr}.tickets__allaccess-pair{grid-template-columns:1fr;gap:.8rem}.tickets__phases{grid-template-columns:1fr;row-gap:.85rem}.tier{min-height:auto}}
 @media (max-width:720px){
   .tickets{padding:1.25rem 0 1.75rem !important}
@@ -2508,96 +2538,118 @@ body.menu-open{overflow:hidden}
   <div class="container">
     <header class="sec-hd" id="tickets">
       <div class="sec-hd__num">Nº 08 — Admission</div>
-      <h2 class="section-title sec-hd__title">Pick yours. <em>Only 400.</em></h2>
+      <h2 class="section-title sec-hd__title">Two ways to <em>experience the summit.</em></h2>
     </header>
     <div class="tickets__grid">
-      <div class="tickets__allaccess-pair">
-        <article class="tier tier--vipallaccess">
-          <div class="tier__ribbon">Limited · 100 spots</div>
-          <div class="tier__eyebrow">VIP All Access Bundle</div>
-          <h3 class="tier__name"><em>VIP</em> All Access <em>Bundle</em></h3>
-          <div class="tier__price-wrap"><span class="tier__price">$2,495</span><span class="tier__price-unit">USD</span></div>
-          <ul class="tier__desc-bullets">
-            <li>VIP summit experience + all 4 side events bundled.</li>
-            <li>The Welcome Dinner, After Party are not sold separately, a bundle is the only way to attend.</li>
-            <li>Limited to 100 VIPs.</li>
-          </ul>
-          <ul class="tier__includes">
-            <li>Reserved front-row seating: summit + AI for Individual Rights Day</li>
-            <li>Speaker green-room access</li>
-            <li>VIP section at the bundle-only Welcome Dinner + After Party</li>
-            <li>VIP deck at the Biscayne Bay Boat Party</li>
-            <li>All four ticketed side events included</li>
-          </ul>
-          <a href="https://pay.zaprite.com/pl_wIAImtY5wz" target="_blank" rel="noopener" class="btn">Reserve VIP All Access Bundle <span class="btn__arrow">→</span></a>
-        </article>
-        <article class="tier tier--allaccess">
-          <div class="tier__ribbon">Limited · 100 spots</div>
-          <div class="tier__eyebrow">All Access Bundle</div>
-          <h3 class="tier__name">All Access <em>Bundle</em></h3>
-          <div class="tier__price-wrap"><span class="tier__price">$995</span><span class="tier__price-unit">USD</span><span class="tier__price-strike">$1,333</span></div>
-          <ul class="tier__desc-bullets">
-            <li>Summit experience + all 4 side events bundled.</li>
-            <li>The Welcome Dinner, After Party are not sold separately, a bundle is the only way to attend.</li>
-            <li>Limited to 100 spots.</li>
-          </ul>
-          <ul class="tier__includes">
-            <li>Welcome Dinner at Arkadia Day Club <strong>$295</strong></li>
-            <li>After Party at La Côte <strong>$195</strong></li>
-            <li>AI for Individual Rights Day <strong>$149</strong></li>
-            <li>Biscayne Bay Boat Party <strong>$199</strong></li>
-          </ul>
-          <a href="https://pay.zaprite.com/pl_wIAImtY5wz" target="_blank" rel="noopener" class="btn">Reserve All Access Bundle <span class="btn__arrow">→</span></a>
-        </article>
-      </div>
+
+      <!-- VIP ADMISSION -->
+      <article class="tier tier--vipallaccess tickets__vip">
+        <div class="tier__ribbon">Limited · 200 spots</div>
+        <div class="tickets__vip-inner">
+          <div class="tickets__vip-left">
+            <div class="tier__eyebrow">VIP Admission</div>
+            <h3 class="tier__name"><em>VIP</em> Admission</h3>
+            <div class="tier__price-wrap"><span class="tier__price">$2,495</span><span class="tier__price-unit">USD</span></div>
+            <p class="tier__desc"><em>The complete summit experience — reserved seating, exclusive access, and every event on the calendar.</em></p>
+          </div>
+          <div class="tickets__vip-right">
+            <div class="tickets__sched">
+              <div class="tickets__sched-head">
+                <div><em>Thursday</em><span class="tickets__sched-sub">FEB 4</span></div>
+                <div><em>Friday</em><span class="tickets__sched-sub">DAY 1</span></div>
+                <div><em>Saturday</em><span class="tickets__sched-sub">DAY 2</span></div>
+              </div>
+              <div class="tickets__sched-row">
+                <div>Bitcoin Fundamentals<br><a href="#" style="color:var(--accent);text-decoration:underline;text-underline-offset:2px"><em>Limited Spots, Sign Up Here</em></a></div>
+                <div>Summit<br><span style="opacity:.7;font-size:.9em">reserved front-row<br>speaker green-room access</span></div>
+                <div>Summit<br><span style="opacity:.7;font-size:.9em">reserved front-row<br>speaker green-room access</span></div>
+              </div>
+              <div class="tickets__sched-row">
+                <div>Welcome Reception<br><span class="tickets__vip-pill">VIP TICKET ONLY</span></div>
+                <div>Oceanfront Soiree<br><span class="tickets__vip-pill">VIP TICKET ONLY</span></div>
+                <div>Boat After Party<br><span class="tickets__vip-pill">INCLUDED WITH VIP</span></div>
+              </div>
+            </div>
+            <a href="https://pay.zaprite.com/pl_wIAImtY5wz" target="_blank" rel="noopener" class="btn tickets__vip-btn">Claim your VIP seat <span class="btn__arrow">→</span></a>
+          </div>
+        </div>
+      </article>
+
+      <!-- GA PHASES -->
       <div class="tickets__phases">
-        <div class="tickets__phases-label">Only 200 spots · split across 3 phases</div>
+        <div class="tickets__phases-label">General Admission &middot; Three price phases &mdash; same seat, same program</div>
+
+        <!-- Phase 01 · Early Bird -->
         <article class="tier tier--featured">
-        <div class="tier__ribbon">Ends September 30 · Save $200</div>
-        <div class="tier__eyebrow">Phase 01 · Early Bird</div>
-        <h3 class="tier__name">Early <em>Bird</em></h3>
-        <div class="tier__price-wrap"><span class="tier__price">$495</span><span class="tier__price-unit">USD</span></div>
-        <p class="tier__desc">Save $200 vs. standard release.<br>Ends September 30 so act quickly.</p>
-        <ul class="tier__list">
-          <li>Full-day program · keynotes &amp; panels</li>
-          <li>Light Breakfast &amp; Lunch Included</li>
-          <li>Sessions recorded · available for playback</li>
-          <li><a href="https://www.fontainebleau.com/miamibeach/" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;text-underline-offset:2px">Click here for the TSS Room Block Rate @ Fontainebleau</a></li>
-        </ul>
-        <a href="https://pay.zaprite.com/pl_wIAImtY5wz" target="_blank" rel="noopener" class="btn">Reserve Early Bird <span class="btn__arrow">→</span></a>
-      </article>
-      <article class="tier tier--coming-soon">
-        <div class="tier__eyebrow">Phase 02 · Standard</div>
-        <h3 class="tier__name">Standard</h3>
-        <div class="tier__price-wrap"><span class="tier__price">$695</span><span class="tier__price-unit">USD</span></div>
-        <p class="tier__desc">Save $300 vs. final release. October 1 — December 31.</p>
-        <ul class="tier__list">
-          <li>Full-day program · keynotes &amp; panels</li>
-          <li>Light Breakfast &amp; Lunch Included</li>
-          <li>Sessions recorded · available for playback</li>
-          <li><a href="https://www.fontainebleau.com/miamibeach/" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;text-underline-offset:2px">Click here for the TSS Room Block Rate @ Fontainebleau</a></li>
-        </ul>
-        <a href="https://pay.zaprite.com/pl_wIAImtY5wz" target="_blank" rel="noopener" class="btn">Reserve Standard <span class="btn__arrow">→</span></a>
-      </article>
-      <article class="tier tier--premium tier--coming-soon">
-        <div class="tier__eyebrow">Phase 03 · Final Release</div>
-        <h3 class="tier__name">Final <em>Release</em></h3>
-        <div class="tier__price-wrap"><span class="tier__price">$995</span><span class="tier__price-unit">USD</span></div>
-        <p class="tier__desc">What remains after December 31.</p>
-        <ul class="tier__list">
-          <li>Full-day program · keynotes &amp; panels</li>
-          <li>Light Breakfast &amp; Lunch Included</li>
-          <li>Sessions recorded · available for playback</li>
-          <li><a href="https://www.fontainebleau.com/miamibeach/" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;text-underline-offset:2px">Click here for the TSS Room Block Rate @ Fontainebleau</a></li>
-        </ul>
-        <a href="https://pay.zaprite.com/pl_wIAImtY5wz" target="_blank" rel="noopener" class="btn">Reserve Final Release <span class="btn__arrow">→</span></a>
-      </article>
+          <div class="tier__ribbon">Ends September 30 &middot; Save $400</div>
+          <div class="tier__eyebrow">Phase 01 &middot; Early Bird</div>
+          <h3 class="tier__name"><em>Early Bird</em> General Admission</h3>
+          <div class="tier__price-wrap"><span class="tier__price">$795</span><span class="tier__price-unit">USD</span></div>
+          <div class="tickets__mini">
+            <div class="tickets__mini-head">
+              <div><em>Thursday</em><span class="tickets__mini-sub">FEB 4</span></div>
+              <div><em>Friday</em><span class="tickets__mini-sub">DAY 1</span></div>
+              <div><em>Saturday</em><span class="tickets__mini-sub">DAY 2</span></div>
+            </div>
+            <div class="tickets__mini-row">
+              <div>Bitcoin Fundamentals<br><a href="#" style="color:var(--accent);text-decoration:underline;text-underline-offset:2px"><em>Sign Up Here</em></a></div>
+              <div>Summit<br>keynotes &amp; panels</div>
+              <div>Summit<br>keynotes &amp; panels</div>
+            </div>
+          </div>
+          <p class="tier__extras">+ Breakfast &amp; Lunch (both days) &middot; Recorded sessions &middot; Room block at Fontainebleau</p>
+          <a href="https://pay.zaprite.com/pl_wIAImtY5wz" target="_blank" rel="noopener" class="btn">Lock in Early Bird <span class="btn__arrow">→</span></a>
+        </article>
+
+        <!-- Phase 02 · Standard -->
+        <article class="tier tier--coming-soon">
+          <div class="tier__cs-badge">Coming Soon</div>
+          <div class="tier__eyebrow">Phase 02 &middot; Standard</div>
+          <h3 class="tier__name"><em>General Admission</em></h3>
+          <div class="tier__price-wrap"><span class="tier__price">$995</span><span class="tier__price-unit">USD</span></div>
+          <div class="tickets__mini">
+            <div class="tickets__mini-head">
+              <div><em>Thursday</em><span class="tickets__mini-sub">FEB 4</span></div>
+              <div><em>Friday</em><span class="tickets__mini-sub">DAY 1</span></div>
+              <div><em>Saturday</em><span class="tickets__mini-sub">DAY 2</span></div>
+            </div>
+            <div class="tickets__mini-row">
+              <div>Bitcoin Fundamentals<br><a href="#"><em>Sign Up Here</em></a></div>
+              <div>Summit<br>keynotes &amp; panels</div>
+              <div>Summit<br>keynotes &amp; panels</div>
+            </div>
+          </div>
+          <p class="tier__extras">+ Breakfast &amp; Lunch (both days) &middot; Recorded sessions &middot; Room block at Fontainebleau</p>
+          <a href="https://pay.zaprite.com/pl_wIAImtY5wz" target="_blank" rel="noopener" class="btn">Reserve General Admission <span class="btn__arrow">→</span></a>
+        </article>
+
+        <!-- Phase 03 · Final Release -->
+        <article class="tier tier--premium tier--coming-soon">
+          <div class="tier__cs-badge">Coming Soon</div>
+          <div class="tier__eyebrow">Phase 03 &middot; Final Release</div>
+          <h3 class="tier__name">Final Release <em>General Admission</em></h3>
+          <div class="tier__price-wrap"><span class="tier__price">$1,195</span><span class="tier__price-unit">USD</span></div>
+          <div class="tickets__mini">
+            <div class="tickets__mini-head">
+              <div><em>Thursday</em><span class="tickets__mini-sub">FEB 4</span></div>
+              <div><em>Friday</em><span class="tickets__mini-sub">DAY 1</span></div>
+              <div><em>Saturday</em><span class="tickets__mini-sub">DAY 2</span></div>
+            </div>
+            <div class="tickets__mini-row">
+              <div>Bitcoin Fundamentals<br><a href="#"><em>Sign Up Here</em></a></div>
+              <div>Summit<br>keynotes &amp; panels</div>
+              <div>Summit<br>keynotes &amp; panels</div>
+            </div>
+          </div>
+          <p class="tier__extras">+ Breakfast &amp; Lunch (both days) &middot; Recorded sessions &middot; Room block at Fontainebleau</p>
+          <a href="https://pay.zaprite.com/pl_wIAImtY5wz" target="_blank" rel="noopener" class="btn">Reserve Final Release <span class="btn__arrow">→</span></a>
+        </article>
+
       </div>
     </div>
-    <p class="tickets__trust">Same seat, same program, same Friday — only the price changes. Full refund through December 1, 2026 · transfers honored until January 28, 2027.</p>
+    <p class="tickets__trust">Bitcoin accepted &middot; Early Bird saves $400 &mdash; price rises with each phase &middot; Full refund through December 1, 2026 &middot; Transfers honored through January 28, 2027</p>
   </div>
 </section>
-
 <section class="news">
   <div class="container">
     <div class="news__inner">
