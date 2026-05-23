@@ -600,7 +600,7 @@ body.menu-open{overflow:hidden}
   .partners__footnote{margin-top:.85rem;font-size:.9rem;line-height:1.4}
   .partner{
     display:grid;
-    grid-template-columns:48px 1fr;
+    grid-template-columns:80px 1fr;
     grid-template-rows:auto auto auto;
     column-gap:.85rem;
     align-items:center;
@@ -610,8 +610,8 @@ body.menu-open{overflow:hidden}
   .partner__portrait{
     grid-column:1;
     grid-row:1 / span 3;
-    width:48px;
-    height:48px;
+    width:80px;
+    height:80px;
     margin:0;
     border-bottom:none;
     align-self:center
@@ -640,8 +640,8 @@ body.menu-open{overflow:hidden}
     padding-top:.35rem;
     line-height:1.25
   }
-  /* Desktop padding of 1.5rem is too large for the 48x48 mobile portrait
-     (with box-sizing:border-box it eats the entire image area). */
+  /* Desktop padding of 1.5rem is too large for the mobile portrait
+     (with box-sizing:border-box it would eat the entire image area). */
   .partner__photo{padding:4px}
 }
 
