@@ -713,35 +713,22 @@ body.menu-open{overflow:hidden}
 .tier--premium{border-color:var(--accent-deep)}
 .tier--premium::before{background:var(--accent-deep)}
 
-/* Coming Soon state — phases that haven't activated yet. Visually muted and non-clickable.
+/* Coming Soon state — phases that haven't activated yet.
+   Acts as a STATE INDICATOR on top of the tile's underlying visual
+   treatment (e.g. featured/premium). Adds the "Coming soon" badge,
+   disables the CTA, and applies a subtle dim. Does NOT override
+   background/text colors.
    To activate: remove `tier--coming-soon` from the article tag. */
 .tier.tier--coming-soon{
-  background:#E8DCC6 !important;
-  border-color:#B5B5B5 !important;
-  color:#7A7A7A !important;
-}
-.tier.tier--coming-soon::before{
-  background:#B5B5B5 !important;
+  opacity:.88;
 }
 .tier.tier--coming-soon:hover{
   transform:none !important;
-  box-shadow:none !important;
-}
-.tier.tier--coming-soon .tier__eyebrow,
-.tier.tier--coming-soon .tier__name,
-.tier.tier--coming-soon .tier__name em,
-.tier.tier--coming-soon .tier__price,
-.tier.tier--coming-soon .tier__price-unit,
-.tier.tier--coming-soon .tier__desc,
-.tier.tier--coming-soon .tier__list li,
-.tier.tier--coming-soon .tier__list a,
-.tier.tier--coming-soon .tier__list li::before{
-  color:#7A7A7A !important;
 }
 .tier.tier--coming-soon .btn{
   background:transparent !important;
-  border-color:#B5B5B5 !important;
-  color:#7A7A7A !important;
+  border-color:rgba(244,236,224,.28) !important;
+  color:rgba(244,236,224,.55) !important;
 }
 .tier--coming-soon .btn,
 .tier--coming-soon a{
@@ -757,10 +744,10 @@ body.menu-open{overflow:hidden}
   font-size:.5rem;
   letter-spacing:.2em;
   text-transform:uppercase;
-  color:#5A5A5A;
-  background:rgba(244,236,224,.95);
+  color:var(--paper-deep);
+  background:rgba(19,30,51,.65);
   padding:.22rem .5rem;
-  border:1px solid #B5B5B5;
+  border:1px solid rgba(244,236,224,.22);
   pointer-events:none;
   z-index:3;
   font-weight:500;
@@ -3344,7 +3331,7 @@ body.menu-open{overflow:hidden}
         </div>
         <a href="https://pay.zaprite.com/pl_wIAImtY5wz" target="_blank" rel="noopener" class="btn" style="width:100%;justify-content:center;padding:1.1rem 1.6rem;font-size:.85rem;letter-spacing:.16em;margin-top:.5rem">Lock In Early Bird <span class="btn__arrow">→</span></a>
       </article>
-      <article class="tier tier--coming-soon">
+      <article class="tier tier--featured tier--coming-soon">
         <div class="tier__eyebrow">Phase 02 · Standard</div>
         <h3 class="tier__name"><em>General Admission</em></h3>
         <div class="tier__price-wrap"><span class="tier__price">$995</span><span class="tier__price-unit">USD</span></div>
@@ -3352,7 +3339,7 @@ body.menu-open{overflow:hidden}
           <div class="tier__day">
             <div class="tier__day-label"><span class="tier__day-name">Thursday</span><span class="tier__day-sub">Feb 4</span></div>
             <ul class="tier__day-list">
-              <li><a href="https://luma.com/n6jb46op" target="_blank" rel="noopener"><strong>Bitcoin Fundamentals</strong><span class="tier__day-vip-badge" style="background:rgba(90,90,90,0.12);color:#7A7A7A;border:1px solid rgba(90,90,90,0.25);font-weight:500;white-space:normal;line-height:1.2;letter-spacing:.08em">Included with Every Ticket</span></a></li>
+              <li><a href="https://luma.com/n6jb46op" target="_blank" rel="noopener"><strong>Bitcoin Fundamentals</strong><span class="tier__day-vip-badge" style="background:linear-gradient(90deg,#9CA3AF 0%,#D1D5DB 50%,#9CA3AF 100%);color:#0A1224;white-space:normal;line-height:1.2;letter-spacing:.08em">Included with Every Ticket</span></a></li>
             </ul>
           </div>
           <div class="tier__day">
@@ -3370,7 +3357,7 @@ body.menu-open{overflow:hidden}
         </div>
         <a href="https://pay.zaprite.com/pl_wIAImtY5wz" target="_blank" rel="noopener" class="btn" style="width:100%;justify-content:center;padding:1.1rem 1.6rem;font-size:.85rem;letter-spacing:.16em;margin-top:.5rem">Reserve General Admission <span class="btn__arrow">→</span></a>
       </article>
-      <article class="tier tier--premium tier--coming-soon">
+      <article class="tier tier--featured tier--premium tier--coming-soon">
         <div class="tier__eyebrow">Phase 03 · Final Release</div>
         <h3 class="tier__name">Final Release <em>General Admission</em></h3>
         <div class="tier__price-wrap"><span class="tier__price">$1,195</span><span class="tier__price-unit">USD</span></div>
@@ -3378,7 +3365,7 @@ body.menu-open{overflow:hidden}
           <div class="tier__day">
             <div class="tier__day-label"><span class="tier__day-name">Thursday</span><span class="tier__day-sub">Feb 4</span></div>
             <ul class="tier__day-list">
-              <li><a href="https://luma.com/n6jb46op" target="_blank" rel="noopener"><strong>Bitcoin Fundamentals</strong><span class="tier__day-vip-badge" style="background:rgba(90,90,90,0.12);color:#7A7A7A;border:1px solid rgba(90,90,90,0.25);font-weight:500;white-space:normal;line-height:1.2;letter-spacing:.08em">Included with Every Ticket</span></a></li>
+              <li><a href="https://luma.com/n6jb46op" target="_blank" rel="noopener"><strong>Bitcoin Fundamentals</strong><span class="tier__day-vip-badge" style="background:linear-gradient(90deg,#9CA3AF 0%,#D1D5DB 50%,#9CA3AF 100%);color:#0A1224;white-space:normal;line-height:1.2;letter-spacing:.08em">Included with Every Ticket</span></a></li>
             </ul>
           </div>
           <div class="tier__day">
