@@ -430,9 +430,11 @@ body.menu-open{overflow:hidden}
 .speaker__topic{font-family:var(--fd);font-style:italic;font-size:.95rem;line-height:1.3;color:var(--accent-deep);padding-top:.7rem;border-top:1px solid var(--rule)}
 
 /* Tier 1 cards (within the 4-col grid) — slimmer than original to free vertical space */
-.speakers__grid:not(.speakers__grid--md) .speaker{padding:1.1rem 1.1rem 1rem}
+.speakers__grid:not(.speakers__grid--md) .speaker{padding:1.1rem 1.1rem 1rem;align-items:center;text-align:center}
 .speakers__grid:not(.speakers__grid--md) .speaker__portrait{width:64px;height:64px;font-size:1.7rem;margin-bottom:.85rem}
 .speakers__grid:not(.speakers__grid--md) .speaker__placeholder{font-size:1.7rem}
+/* Keep the talk-title separator line full-width even though parent is align-items:center */
+.speakers__grid:not(.speakers__grid--md) .speaker__topic{align-self:stretch}
 
 /* MEDIUM speaker card — used in tier 2/3 grids of 8 */
 .speaker--md{padding:.6rem .5rem .55rem;align-items:center;text-align:center}
