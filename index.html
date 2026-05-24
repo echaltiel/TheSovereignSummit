@@ -1259,12 +1259,18 @@ body.menu-open{overflow:hidden}
   padding:.3rem .25rem;
   border:1px solid;
   border-radius:1px;
-  min-height:34px;
+  min-height:78px;
   flex:1;
   text-decoration:none;
   color:inherit;
   transition:background .2s ease,border-color .2s ease,transform .2s ease;
   cursor:pointer;
+}
+/* Phases 02/03 don't have the ribbon Phase 01 has — give their eyebrow
+   the same .75rem top margin the ribbon would add, so all three tiles'
+   day-grids start at the same Y. */
+.tickets__phases .tier--coming-soon .tier__eyebrow{
+  margin-top:.75rem;
 }
 .tickets__phases .tier__day-list .tier__day-detail{
   font-size:.92em;
@@ -1303,6 +1309,40 @@ body.menu-open{overflow:hidden}
 }
 .tickets__phases .tier--coming-soon .tier__day-list .tier__day-link{
   color:var(--accent-deep);
+}
+
+/* === GA phase tile cross-alignment ===
+   Without these rules, the three phase tiles look misaligned because:
+   1) Phase 01 has a .tier__ribbon whose adjacent-sibling rule pushes its
+      eyebrow down by .75rem. Phases 02/03 have no ribbon so their eyebrows
+      sit at the natural top, putting "PHASE 02/03 · ..." higher than Phase 01's.
+   2) Phase 02's title is one line ("General Admission") while Phase 01 and 03
+      are two lines, so the price/day-grid below land at different Ys.
+   3) Tiles are equal-height via grid, but content is top-anchored — Phases 02/03
+      end with empty space below their CTAs while Phase 01 doesn't.
+   These rules anchor the top block (eyebrow/title/price) at the same Y and push
+   the day-grid + CTA to the bottom of each tile so all three rows align. */
+.tickets__phases .tier .tier__eyebrow{
+  margin-top:.75rem;
+}
+/* Equalize title vertical space: Phase 02's "General Admission" is a single line
+   while Phase 01 ("Early Bird General Admission") and Phase 03 ("Final Release
+   General Admission") wrap to two. Without min-height, prices land at different
+   Ys across tiles. line-height is 1, so 2em = two lines of title text. */
+.tickets__phases .tier .tier__name{
+  min-height:2em;
+}
+.tickets__phases .tier .tier__day-grid{
+  margin-top:auto;
+}
+/* The metallic silver badge on Phase 01 inherits font-weight:700 from the
+   base .tier__day-vip-badge rule, while Phases 02/03 set it inline to 500.
+   Same letter-spacing + different weight = different wrap counts (Phase 01
+   wrapped to 3 lines, Phases 02/03 to 2). Normalizing to 500 makes all three
+   badges wrap to 2 lines, so the Thursday box (and therefore the whole
+   day-grid) is the same height across tiles. */
+.tickets__phases .tier__day-list .tier__day-vip-badge{
+  font-weight:500;
 }
 
 /* Shared structure between the two hero tiles */
