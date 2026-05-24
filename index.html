@@ -2294,17 +2294,20 @@ body.menu-open{overflow:hidden}
   --lift-highlight-dark: inset 0 1px 0 rgba(244,236,224,.07);
 }
 
-/* --- SPEAKERS (main grid only; compact --md variant left alone) --- */
-.speakers__grid:not(.speakers__grid--md){
+/* --- SPEAKERS (both main grid and compact --md variant) --- */
+.speakers__grid{
   border:none;
   gap:.6rem;
 }
-.speakers__grid:not(.speakers__grid--md) .speaker{
+.speakers__grid--md{
+  gap:.4rem;  /* tighter for the denser 8-col layout */
+}
+.speakers__grid .speaker{
   border:none;
   box-shadow: var(--lift-highlight), var(--lift-shadow);
   transition: background .3s, box-shadow .3s, transform .3s;
 }
-.speakers__grid:not(.speakers__grid--md) .speaker:hover{
+.speakers__grid .speaker:hover{
   box-shadow: var(--lift-highlight), var(--lift-shadow-hover);
   transform: translateY(-1px);
 }
@@ -2339,7 +2342,11 @@ body.menu-open{overflow:hidden}
   transform: translateY(-1px);
 }
 
-/* --- SPONSORS (friends) --- */
+/* --- SPONSORS (friends) ---
+   Activation tier gets the standard lift treatment.
+   Platinum/Gold/Silver KEEP their existing metallic background gradients,
+   inset highlights, and outer glow shadows — those are already a richer 3D
+   treatment than the cream lift, so we just strip the grid-line borders. */
 .friends__grid{
   border:none;
   gap:.6rem;
@@ -2347,11 +2354,13 @@ body.menu-open{overflow:hidden}
 }
 .friends__grid .friend{
   border:none;
+}
+.friends__grid .friend--activation{
   background: var(--paper-light);
   box-shadow: var(--lift-highlight), var(--lift-shadow);
   transition: background .3s, box-shadow .3s, transform .3s;
 }
-.friends__grid .friend:hover{
+.friends__grid .friend--activation:hover{
   box-shadow: var(--lift-highlight), var(--lift-shadow-hover);
   transform: translateY(-1px);
 }
