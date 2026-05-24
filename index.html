@@ -2265,6 +2265,136 @@ body.menu-open{overflow:hidden}
 /* REVEAL */
 .reveal{opacity:0;transform:translateY(18px);transition:opacity .9s cubic-bezier(.2,.6,.2,1),transform .9s cubic-bezier(.2,.6,.2,1)}
 .reveal.in{opacity:1;transform:translateY(0)}
+
+/* ============================================================
+   LIFTED PAPER — Direction 1
+   Converts tile sections from "grid-line" layout (connected
+   borders, no gaps) to "floating cards" with subtle layered
+   shadows. Keeps each section's signature accent.
+   Sections: speakers, agenda, side events, sponsors (friends),
+             partners, tickets.
+   To revert: delete this entire block.
+   ============================================================ */
+:root{
+  /* Shadow for tiles on the cream paper background */
+  --lift-shadow:
+    0 1px 1px rgba(19,30,51,.035),
+    0 2px 5px rgba(19,30,51,.05),
+    0 8px 18px rgba(19,30,51,.05);
+  --lift-shadow-hover:
+    0 2px 3px rgba(19,30,51,.06),
+    0 6px 14px rgba(19,30,51,.08),
+    0 16px 32px rgba(19,30,51,.07);
+  --lift-highlight: inset 0 1px 0 rgba(255,255,255,.55);
+  /* Shadow for tiles on the dark navy program background */
+  --lift-shadow-dark:
+    0 1px 2px rgba(0,0,0,.18),
+    0 4px 10px rgba(0,0,0,.22),
+    0 10px 24px rgba(0,0,0,.2);
+  --lift-highlight-dark: inset 0 1px 0 rgba(244,236,224,.07);
+}
+
+/* --- SPEAKERS (main grid only; compact --md variant left alone) --- */
+.speakers__grid:not(.speakers__grid--md){
+  border:none;
+  gap:.6rem;
+}
+.speakers__grid:not(.speakers__grid--md) .speaker{
+  border:none;
+  box-shadow: var(--lift-highlight), var(--lift-shadow);
+  transition: background .3s, box-shadow .3s, transform .3s;
+}
+.speakers__grid:not(.speakers__grid--md) .speaker:hover{
+  box-shadow: var(--lift-highlight), var(--lift-shadow-hover);
+  transform: translateY(-1px);
+}
+
+/* --- SIDE EVENTS --- */
+.side-events__grid{
+  border:none;
+  gap:.6rem;
+}
+.side-events__grid .side-event{
+  border:none;
+  box-shadow: var(--lift-highlight), var(--lift-shadow);
+  transition: background .3s, box-shadow .3s, transform .3s, color .3s;
+}
+.side-events__grid .side-event:hover{
+  box-shadow: var(--lift-highlight), var(--lift-shadow-hover);
+  transform: translateY(-1px);
+}
+
+/* --- PARTNERS --- */
+.partners__grid{
+  border:none;
+  gap:.6rem;
+}
+.partners__grid .partner{
+  border:none;
+  box-shadow: var(--lift-highlight), var(--lift-shadow);
+  transition: background .3s, box-shadow .3s, transform .3s;
+}
+.partners__grid .partner:hover{
+  box-shadow: var(--lift-highlight), var(--lift-shadow-hover);
+  transform: translateY(-1px);
+}
+
+/* --- SPONSORS (friends) --- */
+.friends__grid{
+  border:none;
+  gap:.6rem;
+  overflow:visible;
+}
+.friends__grid .friend{
+  border:none;
+  background: var(--paper-light);
+  box-shadow: var(--lift-highlight), var(--lift-shadow);
+  transition: background .3s, box-shadow .3s, transform .3s;
+}
+.friends__grid .friend:hover{
+  box-shadow: var(--lift-highlight), var(--lift-shadow-hover);
+  transform: translateY(-1px);
+}
+
+/* --- AGENDA (program blocks on dark navy bg) ---
+   Already has hover-lift; we add a STATIC shadow at rest. */
+.program__block{
+  box-shadow: var(--lift-highlight-dark), var(--lift-shadow-dark);
+}
+
+/* --- TICKETS --- */
+.tier{
+  border-color: var(--rule);
+  box-shadow: var(--lift-highlight), var(--lift-shadow);
+}
+.tier:hover{
+  box-shadow: var(--lift-highlight), var(--lift-shadow-hover);
+}
+/* Featured ticket has dark ink bg — use the dark shadow variant */
+.tier--featured{
+  box-shadow: var(--lift-highlight-dark), var(--lift-shadow-dark);
+}
+.tier--featured:hover{
+  box-shadow: var(--lift-highlight-dark),
+    0 2px 4px rgba(0,0,0,.25),
+    0 8px 18px rgba(0,0,0,.28),
+    0 20px 40px rgba(0,0,0,.22);
+}
+
+/* Tighter gaps on mobile so we don't undo the recent fit-to-viewport work */
+@media (max-width:720px){
+  .speakers__grid:not(.speakers__grid--md),
+  .side-events__grid,
+  .partners__grid,
+  .friends__grid{ gap:.4rem; }
+}
+@media (max-width:480px){
+  .speakers__grid:not(.speakers__grid--md),
+  .side-events__grid,
+  .partners__grid,
+  .friends__grid{ gap:.35rem; }
+}
+
 </style>
 </head>
 <body>
