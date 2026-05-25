@@ -2603,52 +2603,27 @@ body.menu-open{overflow:hidden}
   padding-top:clamp(.75rem,1.5vw,1.25rem);
   border-top:1px solid var(--rule);
 }
-.floor-plan__caption--inline{
-  margin:0;
-  padding:.85rem .95rem;
-  text-align:left;
-  font-size:.62rem;
-  letter-spacing:.16em;
-  line-height:1.65;
-  border-top:1px dashed var(--rule);
-  opacity:.55;
-}
 
-/* === Floor plan split layout ===
-   Image on the left, floor-detail tiles stacked on the right. Tiles in the
-   narrower right column stack zones vertically inside each tile (the wider
-   inner grids would be too cramped here). Mobile collapses to single column. */
+/* === Floor plan split layout (3-column) ===
+   Col 1: floor diagram + Fifth Floor tile stacked under it.
+   Col 2: Fourth + Third Floor tiles stacked.
+   Col 3: Second Floor tile (the heaviest, gets its own column). */
 .floor-plan__split{
   display:grid;
-  grid-template-columns:1fr 2fr;
+  grid-template-columns:1fr 1fr 1fr;
   gap:clamp(1rem,2vw,1.5rem);
   align-items:start;
 }
-.floor-plan__media{
-  position:sticky;
-  top:90px; /* sticky nav offset */
-  align-self:start;
-}
-
-/* === Floor detail tiles (compact strip format) ===
-   Tiles are short horizontal strips sized to fit alongside the diagram image
-   in the viewport. Bullets render inline with mid-dot separators to keep each
-   zone to 1-2 lines. */
-.floor-detail{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:.5rem;
-  margin-top:0;
-  align-items:start;
-}
-/* Right column: Second Floor tile + caption stacked together.
-   Fifth, Fourth, Third stack on the left in col 1. */
-.floor-detail__col2{
-  grid-column:2;
-  grid-row:1 / span 3;
+.floor-plan__col{
   display:flex;
   flex-direction:column;
-  gap:1rem;
+  gap:.5rem;
+  min-width:0;
+}
+/* The media column gets a slightly larger gap between image and tile
+   to visually separate the diagram from the data tile beneath. */
+.floor-plan__col--media{
+  gap:.85rem;
 }
 .floor-detail__floor{
   background:var(--paper-light);
@@ -2748,19 +2723,13 @@ body.menu-open{overflow:hidden}
 }
 
 @media (max-width:900px){
-  /* Stack the split: image first, tiles below */
+  /* Stack the split: each column becomes a row */
   .floor-plan__split{
     grid-template-columns:1fr;
     gap:1.5rem;
   }
-  .floor-plan__media{
-    position:static;
-    top:auto;
-  }
 }
 @media (max-width:720px){
-  .floor-detail{grid-template-columns:1fr}
-  .floor-detail__col2{grid-column:auto;grid-row:auto;display:contents}
   .floor-detail__floor{padding:.65rem .85rem .8rem}
   .floor-detail__label{font-size:.58rem;letter-spacing:.2em;margin-bottom:.3rem}
   .floor-detail__zone-name{font-size:1rem}
@@ -3576,113 +3545,111 @@ body.menu-open{overflow:hidden}
     </header>
     <p class="floor-plan__intro">Five floors. One Summit. Every space chosen with intent. Mainstage to expo, sovereign lounge to rooftop.</p>
     <div class="floor-plan__split">
-      <div class="floor-plan__media">
+      <!-- Column 1: Floor diagram + Fifth Floor tile -->
+      <div class="floor-plan__col floor-plan__col--media">
         <figure class="floor-plan__figure">
           <button type="button" class="floor-plan__expand-btn" aria-label="Expand floor plan to full size">
             <img src="images/floor-plan.jpg" alt="Coastal Convention Center floor plan: an isometric diagram of the four event floors of the venue, showing ballrooms, meeting rooms, junior ballrooms, the rooftop terrace, galleries, and back-of-house areas, with a color-coded legend." loading="lazy" decoding="async">
             <span class="floor-plan__expand-hint">Tap to expand</span>
           </button>
         </figure>
+        <div class="floor-detail__floor">
+          <div class="floor-detail__label">5 &middot; Fifth Floor</div>
+          <div class="floor-detail__zones">
+            <article class="floor-detail__zone">
+              <h3 class="floor-detail__zone-name">Tides Rooftop Terrace</h3>
+              <p class="floor-detail__zone-function"><em>VIP reception &amp; networking</em></p>
+              <p class="floor-detail__zone-meta">7,001 sq ft · Up to 500 reception · 480 banquet</p>
+              <ul class="floor-detail__zone-list">
+                <li>TBA</li>
+              </ul>
+            </article>
+          </div>
+        </div>
       </div>
-      <div class="floor-plan__detail">
-        <div class="floor-detail">
 
-          <div class="floor-detail__floor">
-            <div class="floor-detail__label">5 &middot; Fifth Floor</div>
-            <div class="floor-detail__zones">
-              <article class="floor-detail__zone">
-                <h3 class="floor-detail__zone-name">Tides Rooftop Terrace</h3>
-                <p class="floor-detail__zone-function"><em>VIP reception &amp; networking</em></p>
-                <p class="floor-detail__zone-meta">7,001 sq ft · Up to 500 reception · 480 banquet</p>
-                <ul class="floor-detail__zone-list">
-                  <li>TBA</li>
-                </ul>
-              </article>
-            </div>
+      <!-- Column 2: Fourth + Third Floor -->
+      <div class="floor-plan__col">
+        <div class="floor-detail__floor">
+          <div class="floor-detail__label">4 &middot; Fourth Floor</div>
+          <div class="floor-detail__zones">
+            <article class="floor-detail__zone">
+              <h3 class="floor-detail__zone-name">Pearl Ballroom 1–4</h3>
+              <p class="floor-detail__zone-function"><em>Mainstage</em></p>
+              <p class="floor-detail__zone-meta">16,500 sq ft · Up to 1,200 theater · 1,100 reception</p>
+              <ul class="floor-detail__zone-list">
+                <li>Keynotes, panels, headliners</li>
+                <li>All four Pearls, one stage</li>
+              </ul>
+            </article>
           </div>
+        </div>
+        <div class="floor-detail__floor">
+          <div class="floor-detail__label">3 &middot; Third Floor</div>
+          <div class="floor-detail__zones floor-detail__zones--two">
+            <article class="floor-detail__zone">
+              <h3 class="floor-detail__zone-name">Cove Gallerie</h3>
+              <p class="floor-detail__zone-function"><em>VIP Check-In</em></p>
+              <ul class="floor-detail__zone-list">
+                <li>Dedicated Private Registration</li>
+              </ul>
+            </article>
+            <article class="floor-detail__zone">
+              <h3 class="floor-detail__zone-name">Anchor 1/2/3</h3>
+              <p class="floor-detail__zone-function"><em>Sovereign Lounge &amp; Speaker Suite</em></p>
+              <p class="floor-detail__zone-meta">2,728 sq ft · Up to 245 reception · 200 theater</p>
+              <ul class="floor-detail__zone-list">
+                <li>VIP lounge &amp; bar</li>
+                <li>Speaker green rooms</li>
+                <li>Sponsor meetings</li>
+                <li>Media &amp; podcast studio</li>
+                <li>Production command center</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </div>
 
-          <div class="floor-detail__floor">
-            <div class="floor-detail__label">4 &middot; Fourth Floor</div>
-            <div class="floor-detail__zones">
-              <article class="floor-detail__zone">
-                <h3 class="floor-detail__zone-name">Pearl Ballroom 1–4</h3>
-                <p class="floor-detail__zone-function"><em>Mainstage</em></p>
-                <p class="floor-detail__zone-meta">16,500 sq ft · Up to 1,200 theater · 1,100 reception</p>
-                <ul class="floor-detail__zone-list">
-                  <li>Keynotes, panels, headliners</li>
-                  <li>All four Pearls, one stage</li>
-                </ul>
-              </article>
-            </div>
+      <!-- Column 3: Second Floor -->
+      <div class="floor-plan__col">
+        <div class="floor-detail__floor">
+          <div class="floor-detail__label">2 &middot; Second Floor</div>
+          <div class="floor-detail__zones floor-detail__zones--three">
+            <article class="floor-detail__zone">
+              <h3 class="floor-detail__zone-name">Coral 1/2/3</h3>
+              <p class="floor-detail__zone-function"><em>Main Expo Hall + Sovereign Lounge</em></p>
+              <p class="floor-detail__zone-meta">9,500 sq ft · Up to 800 reception · 800 theater</p>
+              <ul class="floor-detail__zone-list">
+                <li>Sponsor booths &amp; exhibits</li>
+                <li>Coffee &amp; Drinks</li>
+                <li>Sovereign Lounge for VIPs, sponsors &amp; speakers</li>
+              </ul>
+            </article>
+            <article class="floor-detail__zone">
+              <h3 class="floor-detail__zone-name">Dune 1/2</h3>
+              <p class="floor-detail__zone-function"><em>Open Source Area</em></p>
+              <p class="floor-detail__zone-meta">1,748 sq ft · Up to 145 reception · 140 theater</p>
+              <ul class="floor-detail__zone-list">
+                <li>Nonprofits</li>
+                <li>Community Builders</li>
+                <li>Small Business</li>
+              </ul>
+            </article>
+            <article class="floor-detail__zone">
+              <h3 class="floor-detail__zone-name">Shore 1/2</h3>
+              <p class="floor-detail__zone-function"><em>Workshops</em></p>
+              <p class="floor-detail__zone-meta">1,709 sq ft · Up to 140 reception · 140 theater</p>
+              <ul class="floor-detail__zone-list">
+                <li>Breakout sessions</li>
+                <li>Hands-on workshops</li>
+                <li>Roundtables &amp; masterclasses</li>
+              </ul>
+            </article>
           </div>
-
-          <div class="floor-detail__floor">
-            <div class="floor-detail__label">3 &middot; Third Floor</div>
-            <div class="floor-detail__zones floor-detail__zones--two">
-              <article class="floor-detail__zone">
-                <h3 class="floor-detail__zone-name">Cove Gallerie</h3>
-                <p class="floor-detail__zone-function"><em>VIP Check-In</em></p>
-                <ul class="floor-detail__zone-list">
-                  <li>Dedicated Private Registration</li>
-                </ul>
-              </article>
-              <article class="floor-detail__zone">
-                <h3 class="floor-detail__zone-name">Anchor 1/2/3</h3>
-                <p class="floor-detail__zone-function"><em>Sovereign Lounge &amp; Speaker Suite</em></p>
-                <p class="floor-detail__zone-meta">2,728 sq ft · Up to 245 reception · 200 theater</p>
-                <ul class="floor-detail__zone-list">
-                  <li>VIP lounge &amp; bar</li>
-                  <li>Speaker green rooms</li>
-                  <li>Sponsor meetings</li>
-                  <li>Media &amp; podcast studio</li>
-                  <li>Production command center</li>
-                </ul>
-              </article>
-            </div>
-          </div>
-
-          <div class="floor-detail__col2">
-          <div class="floor-detail__floor">
-            <div class="floor-detail__label">2 &middot; Second Floor</div>
-            <div class="floor-detail__zones floor-detail__zones--three">
-              <article class="floor-detail__zone">
-                <h3 class="floor-detail__zone-name">Coral 1/2/3</h3>
-                <p class="floor-detail__zone-function"><em>Main Expo Hall + Sovereign Lounge</em></p>
-                <p class="floor-detail__zone-meta">9,500 sq ft · Up to 800 reception · 800 theater</p>
-                <ul class="floor-detail__zone-list">
-                  <li>Sponsor booths &amp; exhibits</li>
-                  <li>Coffee &amp; Drinks</li>
-                  <li>Sovereign Lounge for VIPs, sponsors &amp; speakers</li>
-                </ul>
-              </article>
-              <article class="floor-detail__zone">
-                <h3 class="floor-detail__zone-name">Dune 1/2</h3>
-                <p class="floor-detail__zone-function"><em>Open Source Area</em></p>
-                <p class="floor-detail__zone-meta">1,748 sq ft · Up to 145 reception · 140 theater</p>
-                <ul class="floor-detail__zone-list">
-                  <li>Nonprofits</li>
-                  <li>Community Builders</li>
-                  <li>Small Business</li>
-                </ul>
-              </article>
-              <article class="floor-detail__zone">
-                <h3 class="floor-detail__zone-name">Shore 1/2</h3>
-                <p class="floor-detail__zone-function"><em>Workshops</em></p>
-                <p class="floor-detail__zone-meta">1,709 sq ft · Up to 140 reception · 140 theater</p>
-                <ul class="floor-detail__zone-list">
-                  <li>Breakout sessions</li>
-                  <li>Hands-on workshops</li>
-                  <li>Roundtables &amp; masterclasses</li>
-                </ul>
-              </article>
-            </div>
-          </div>
-          <p class="floor-plan__caption floor-plan__caption--inline">Floor plan reflects current planning. Final wayfinding shared with attendees ahead of the event.</p>
-          </div>
-
         </div>
       </div>
     </div>
+    <p class="floor-plan__caption floor-plan__caption--footnote">Floor plan reflects current planning. Final wayfinding shared with attendees ahead of the event.</p>
     <dialog class="floor-plan__dialog" aria-label="Floor plan, expanded view">
       <button type="button" class="floor-plan__dialog-close" aria-label="Close expanded floor plan">×</button>
       <img class="floor-plan__dialog-img" alt="">
