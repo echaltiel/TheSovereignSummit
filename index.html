@@ -2629,6 +2629,7 @@ body.menu-open{overflow:hidden}
   grid-template-columns:1fr 1fr;
   gap:.5rem;
   margin-top:0;
+  align-items:start;
 }
 .floor-detail__floor{
   background:var(--paper-light);
@@ -2693,15 +2694,15 @@ body.menu-open{overflow:hidden}
   opacity:.6;
 }
 .floor-detail__zone-function em{font-style:italic;color:inherit}
-.floor-detail__zone-meta{
-  font-family:var(--fm);
-  font-size:.55rem;
-  letter-spacing:.12em;
-  text-transform:uppercase;
-  color:var(--ink-soft);
-  margin:.3rem 0 .3rem;
-  opacity:.7;
+/* Add a small bottom-margin to function via an after-pseudo so bullets get
+   air below the inline name-function line. Needed because meta is hidden. */
+.floor-detail__zone-function::after{
+  content:"";
   display:block;
+  height:.4rem;
+}
+.floor-detail__zone-meta{
+  display:none; /* hidden to save vertical space; kept in HTML for semantic structure */
 }
 /* Inline bullet list: each item separated by a mid-dot */
 .floor-detail__zone-list{
