@@ -2489,7 +2489,7 @@ body.menu-open{overflow:hidden}
   display:block;
   width:auto;
   max-width:100%;
-  max-height:35vh;
+  max-height:30vh;
   height:auto;
   margin:0 auto;
   border-radius:2px;
@@ -2648,6 +2648,13 @@ body.menu-open{overflow:hidden}
   border-radius:1px;
   font-weight:500;
 }
+/* Navy variant — used to distinguish utility tiles (like Getting Here)
+   from numbered floor tiles. Same chip shape, ink palette instead of accent. */
+.floor-detail__label--alt{
+  color:var(--ink);
+  background:rgba(19,30,51,.06);
+  border-color:rgba(19,30,51,.18);
+}
 .floor-detail__zones,
 .floor-detail__zones--two,
 .floor-detail__zones--three{
@@ -2719,6 +2726,12 @@ body.menu-open{overflow:hidden}
   opacity:.7;
   padding:0 .12rem;
 }
+/* Block variant — each <li> is its own line. Used where bullets carry
+   richer descriptions that would clutter as inline mid-dot lists. */
+.floor-detail__zone-list--block li{display:block;margin:0 0 .35rem}
+.floor-detail__zone-list--block li:last-child{margin-bottom:0}
+.floor-detail__zone-list--block li:not(:last-child)::after{content:none}
+.floor-detail__zone-list--block li strong{font-weight:600;color:var(--ink)}
 
 @media (max-width:900px){
   /* Stack the split: each column becomes a row */
@@ -3551,15 +3564,15 @@ body.menu-open{overflow:hidden}
           </button>
         </figure>
         <div class="floor-detail__floor">
-          <div class="floor-detail__label">Getting Here</div>
+          <div class="floor-detail__label floor-detail__label--alt">Getting Here</div>
           <div class="floor-detail__zones">
             <article class="floor-detail__zone">
               <h3 class="floor-detail__zone-name">Coastal Convention Center</h3>
               <p class="floor-detail__zone-function"><em>Three entry points</em></p>
-              <ul class="floor-detail__zone-list">
-                <li>From Fontainebleau main lobby</li>
-                <li>From south drop-off</li>
-                <li>From Collins Ave</li>
+              <ul class="floor-detail__zone-list floor-detail__zone-list--block">
+                <li><strong>Fontainebleau main lobby:</strong> walk through the hotel from the main entrance, signs guide to the convention center</li>
+                <li><strong>South drop-off:</strong> dedicated entrance further south on Collins Ave for direct entry without crossing the hotel</li>
+                <li><strong>Collins Ave walk-up:</strong> pedestrian entrance directly off the street, for those staying nearby</li>
               </ul>
             </article>
           </div>
