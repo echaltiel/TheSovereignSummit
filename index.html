@@ -2489,7 +2489,7 @@ body.menu-open{overflow:hidden}
   display:block;
   width:auto;
   max-width:100%;
-  max-height:30vh;
+  max-height:27vh;
   height:auto;
   margin:0 auto;
   border-radius:2px;
@@ -2610,13 +2610,14 @@ body.menu-open{overflow:hidden}
   display:grid;
   grid-template-columns:1fr 1fr 1fr;
   gap:clamp(1rem,2vw,1.5rem);
-  align-items:start;
+  align-items:stretch;
 }
 .floor-plan__col{
   display:flex;
   flex-direction:column;
   gap:.5rem;
   min-width:0;
+  justify-content:space-between;
 }
 /* The media column gets a slightly larger gap between image and tile
    to visually separate the diagram from the data tile beneath. */
