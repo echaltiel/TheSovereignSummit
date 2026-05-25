@@ -124,7 +124,7 @@ section{padding:clamp(2.5rem,5vw,4rem) 0;position:relative}
 /* NAV */
 .nav-wrap{position:sticky;top:0;z-index:100;background:var(--paper);border-bottom:1px solid var(--rule);transition:background .3s}
 .nav-wrap.scrolled{background:var(--paper)}
-.nav{display:grid;grid-template-columns:auto auto 1fr;align-items:center;padding:1.1rem 0;gap:2rem}
+.nav{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:1.1rem 0;gap:2rem}
 .nav__brand{display:flex;align-items:center;justify-self:start}
 .nav__brand img{height:60px;width:auto;display:block;transition:opacity .2s}
 .nav__brand:hover img{opacity:.75}
@@ -2459,7 +2459,8 @@ body.menu-open{overflow:hidden}
    full-width image (the floor plan diagram carries its own legend), and
    a small mono footnote. Background --paper for a neutral surface that
    doesn't clash with the image's pale gray-blue ground. */
-.floor-plan{background:var(--paper);padding:clamp(2.5rem,5vw,5rem) 0}
+.floor-plan{background:var(--paper);padding:clamp(1.25rem,2.5vw,2rem) 0 clamp(1.5rem,3vw,2.5rem)}
+.floor-plan .sec-hd{margin-bottom:clamp(.85rem,1.75vw,1.25rem)}
 .floor-plan__intro{
   font-family:var(--fd);
   font-style:italic;
@@ -2467,7 +2468,7 @@ body.menu-open{overflow:hidden}
   line-height:1.45;
   color:var(--ink);
   max-width:52rem;
-  margin:0 0 clamp(2rem,3.5vw,3.5rem);
+  margin:0 0 clamp(1rem,1.75vw,1.5rem);
 }
 .floor-plan__figure{margin:0}
 
@@ -2488,7 +2489,7 @@ body.menu-open{overflow:hidden}
   display:block;
   width:auto;
   max-width:100%;
-  max-height:55vh;
+  max-height:45vh;
   height:auto;
   margin:0 auto;
   border-radius:2px;
@@ -2587,10 +2588,10 @@ body.menu-open{overflow:hidden}
   opacity:.6;
 }
 @media (max-width:680px){
-  .floor-plan{padding:1.5rem 0 2rem}
-  .floor-plan__intro{font-size:1rem;line-height:1.4;margin-bottom:1.5rem}
+  .floor-plan{padding:1rem 0 1.5rem}
+  .floor-plan__intro{font-size:1rem;line-height:1.4;margin-bottom:1rem}
   .floor-plan__caption{font-size:.62rem;letter-spacing:.12em;margin-top:.85rem}
-  .floor-plan__expand-btn img{max-height:55vh}
+  .floor-plan__expand-btn img{max-height:50vh}
   .floor-plan__expand-hint{font-size:.56rem;margin-top:.65rem}
   .floor-plan__dialog-close{top:.85rem;right:.85rem;width:2.25rem;height:2.25rem;font-size:1.35rem}
 }
