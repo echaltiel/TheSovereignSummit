@@ -2459,7 +2459,7 @@ body.menu-open{overflow:hidden}
    full-width image (the floor plan diagram carries its own legend), and
    a small mono footnote. Background --paper for a neutral surface that
    doesn't clash with the image's pale gray-blue ground. */
-.floor-plan{background:var(--paper);padding:clamp(1.25rem,2.5vw,2rem) 0 clamp(1.5rem,3vw,2.5rem)}
+.floor-plan{background:var(--paper);padding:clamp(1.25rem,2.5vw,2rem) 0 clamp(1rem,2vw,1.5rem)}
 .floor-plan .sec-hd{margin-bottom:clamp(.85rem,1.75vw,1.25rem)}
 .floor-plan__intro{
   font-family:var(--fd);
@@ -2470,6 +2470,9 @@ body.menu-open{overflow:hidden}
   max-width:52rem;
   margin:0 0 clamp(1rem,1.75vw,1.5rem);
 }
+/* Tighten the section header bottom margin to keep the whole section
+   within viewport on standard laptop screens. */
+.floor-plan .sec-hd{margin-bottom:clamp(1.5rem,3vw,2.25rem)}
 .floor-plan__figure{margin:0}
 
 /* Clickable thumbnail: image is constrained to fit in the viewport (max 70vh)
@@ -2593,14 +2596,14 @@ body.menu-open{overflow:hidden}
   letter-spacing:.14em;
   text-transform:uppercase;
   color:var(--ink-soft);
-  margin:1.25rem 0 0;
+  margin:.65rem 0 0;
   text-align:center;
   opacity:.6;
 }
 /* When used as a standalone section footnote (not under the figure) */
 .floor-plan__caption--footnote{
-  margin-top:clamp(1.5rem,2.5vw,2.25rem);
-  padding-top:clamp(.75rem,1.5vw,1.25rem);
+  margin-top:clamp(1rem,1.75vw,1.5rem);
+  padding-top:clamp(.55rem,1vw,.85rem);
   border-top:1px solid var(--rule);
 }
 
