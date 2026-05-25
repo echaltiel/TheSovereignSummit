@@ -2531,7 +2531,7 @@ body.menu-open{overflow:hidden}
   max-width:100vw;
   max-height:100vh;
   margin:0;
-  overflow:hidden;
+  overflow:auto; /* allow scrolling when image is zoomed past viewport */
 }
 .floor-plan__dialog::backdrop{
   background:rgba(10,18,36,.94);
@@ -2548,6 +2548,16 @@ body.menu-open{overflow:hidden}
   position:absolute;
   inset:0;
   border-radius:2px;
+  cursor:zoom-in;
+  transition:max-width .2s ease, max-height .2s ease;
+}
+/* Click-to-zoom: render image at natural size; dialog scrolls to pan around */
+.floor-plan__dialog-img--zoomed{
+  max-width:none;
+  max-height:none;
+  position:static;
+  margin:0;
+  cursor:zoom-out;
 }
 .floor-plan__dialog-close{
   position:fixed;
@@ -2588,20 +2598,35 @@ body.menu-open{overflow:hidden}
   opacity:.6;
 }
 
+/* === Floor plan split layout ===
+   Image on the left, floor-detail tiles stacked on the right. Tiles in the
+   narrower right column stack zones vertically inside each tile (the wider
+   inner grids would be too cramped here). Mobile collapses to single column. */
+.floor-plan__split{
+  display:grid;
+  grid-template-columns:1.05fr 1fr;
+  gap:clamp(1.25rem,2.5vw,2rem);
+  align-items:start;
+}
+.floor-plan__media{
+  position:sticky;
+  top:90px; /* sticky nav offset */
+  align-self:start;
+}
+
 /* === Floor detail tiles ===
-   Each floor renders as a full-width lifted-paper tile, matching the tile
-   aesthetic used across the site (speakers, side events, agenda blocks).
-   Multi-zone floors (Third/Second) use an inner grid to lay zones side by side
-   so tile heights stay reasonable across all four floors. */
+   Each floor renders as a lifted-paper tile. In the split layout the right
+   column is narrow, so zones inside multi-zone tiles stack vertically with
+   a thin rule between them. */
 .floor-detail{
   display:flex;
   flex-direction:column;
-  gap:clamp(.75rem, 1.5vw, 1.25rem);
-  margin-top:clamp(1.75rem, 3vw, 2.5rem);
+  gap:clamp(.6rem,1.2vw,1rem);
+  margin-top:0;
 }
 .floor-detail__floor{
   background:var(--paper-light);
-  padding:clamp(1.35rem, 2.25vw, 1.85rem) clamp(1.5rem, 2.5vw, 2rem) clamp(1.5rem, 2.5vw, 2rem);
+  padding:clamp(1.1rem,1.85vw,1.5rem) clamp(1.2rem,2vw,1.65rem) clamp(1.2rem,2vw,1.65rem);
   border-radius:2px;
   box-shadow: var(--lift-highlight), var(--lift-shadow);
   transition: box-shadow .3s ease, transform .3s ease;
@@ -2612,27 +2637,32 @@ body.menu-open{overflow:hidden}
 }
 .floor-detail__label{
   font-family:var(--fm);
-  font-size:.78rem;
-  letter-spacing:.24em;
+  font-size:.72rem;
+  letter-spacing:.22em;
   text-transform:uppercase;
   color:var(--ink-soft);
-  padding-top:.5rem;
+  padding-top:.45rem;
   border-top:1px solid var(--ink);
-  margin:0 0 clamp(1rem, 1.75vw, 1.5rem);
+  margin:0 0 clamp(.85rem,1.5vw,1.15rem);
   display:inline-block;
 }
-.floor-detail__zones{
-  display:grid;
-  gap:clamp(1.25rem, 2.5vw, 2rem);
+.floor-detail__zones,
+.floor-detail__zones--two,
+.floor-detail__zones--three{
+  display:flex;
+  flex-direction:column;
+  gap:0;
 }
-.floor-detail__zones--two{grid-template-columns:1fr 1fr}
-.floor-detail__zones--three{grid-template-columns:repeat(3, 1fr)}
-
 .floor-detail__zone{padding:0}
+.floor-detail__zone + .floor-detail__zone{
+  border-top:1px solid var(--rule);
+  padding-top:clamp(.85rem,1.5vw,1.25rem);
+  margin-top:clamp(.85rem,1.5vw,1.25rem);
+}
 .floor-detail__zone-name{
   font-family:var(--fd);
   font-weight:400;
-  font-size:clamp(1.15rem, 1.6vw, 1.45rem);
+  font-size:clamp(1.05rem,1.35vw,1.25rem);
   line-height:1.15;
   letter-spacing:-.01em;
   color:var(--ink);
@@ -2640,19 +2670,19 @@ body.menu-open{overflow:hidden}
 }
 .floor-detail__zone-function{
   font-family:var(--fd);
-  font-size:clamp(.95rem, 1.15vw, 1.05rem);
+  font-size:clamp(.9rem,1.05vw,1rem);
   line-height:1.3;
   color:var(--ink-soft);
-  margin:0 0 .55rem;
+  margin:0 0 .5rem;
 }
 .floor-detail__zone-function em{color:var(--accent-deep)}
 .floor-detail__zone-meta{
   font-family:var(--fm);
-  font-size:.68rem;
+  font-size:.64rem;
   letter-spacing:.12em;
   text-transform:uppercase;
   color:var(--ink-soft);
-  margin:0 0 .6rem;
+  margin:0 0 .55rem;
   opacity:.85;
 }
 .floor-detail__zone-list{
@@ -2661,32 +2691,47 @@ body.menu-open{overflow:hidden}
   margin:0;
   display:flex;
   flex-direction:column;
-  gap:.3rem;
+  gap:.25rem;
 }
 .floor-detail__zone-list li{
   font-family:var(--fd);
-  font-size:clamp(.92rem, 1.05vw, 1rem);
-  line-height:1.45;
+  font-size:clamp(.88rem,1vw,.95rem);
+  line-height:1.4;
   color:var(--ink);
   opacity:.82;
   position:relative;
-  padding-left:1rem;
+  padding-left:.9rem;
 }
 .floor-detail__zone-list li::before{
   content:"";
   position:absolute;
   left:0;
-  top:.7em;
-  width:.4rem;
+  top:.65em;
+  width:.35rem;
   height:1px;
   background:var(--accent);
   opacity:.7;
 }
 
+@media (max-width:900px){
+  /* Stack the split: image first, tiles below */
+  .floor-plan__split{
+    grid-template-columns:1fr;
+    gap:1.5rem;
+  }
+  .floor-plan__media{
+    position:static;
+    top:auto;
+  }
+}
 @media (max-width:720px){
-  .floor-detail__floor{padding:1.1rem 1.15rem 1.25rem}
-  .floor-detail__label{font-size:.7rem;letter-spacing:.2em;margin-bottom:.85rem}
-  .floor-detail__zone-name{font-size:1.15rem}
+  .floor-detail__floor{padding:1.05rem 1.1rem 1.2rem}
+  .floor-detail__label{font-size:.68rem;letter-spacing:.2em;margin-bottom:.8rem}
+  .floor-detail__zone-name{font-size:1.1rem}
+  .floor-detail__zone-function{font-size:.92rem}
+  .floor-detail__zone-meta{font-size:.6rem;letter-spacing:.1em}
+  .floor-detail__zone-list li{font-size:.9rem}
+}
   .floor-detail__zone-function{font-size:.95rem}
   .floor-detail__zone-meta{font-size:.62rem;letter-spacing:.1em}
   .floor-detail__zone-list li{font-size:.92rem}
@@ -3490,29 +3535,34 @@ body.menu-open{overflow:hidden}
       <h2 class="section-title sec-hd__title">The Summit, <em>mapped.</em></h2>
     </header>
     <p class="floor-plan__intro">Five floors. One Summit. Every space chosen with intent. Mainstage to expo, sovereign lounge to rooftop.</p>
-    <figure class="floor-plan__figure">
-            <button type="button" class="floor-plan__expand-btn" aria-label="Expand floor plan to full size">
-        <img src="images/floor-plan.jpg" alt="Coastal Convention Center floor plan: an isometric diagram of the four event floors of the venue, showing ballrooms, meeting rooms, junior ballrooms, the rooftop terrace, galleries, and back-of-house areas, with a color-coded legend." loading="lazy" decoding="async">
-        <span class="floor-plan__expand-hint">Tap to expand</span>
-      </button>
-      <figcaption class="floor-plan__caption">Floor plan reflects current planning. Final wayfinding shared with attendees ahead of the event.</figcaption>
-    </figure>
+    <div class="floor-plan__split">
+      <div class="floor-plan__media">
+      <figure class="floor-plan__figure">
+              <button type="button" class="floor-plan__expand-btn" aria-label="Expand floor plan to full size">
+          <img src="images/floor-plan.jpg" alt="Coastal Convention Center floor plan: an isometric diagram of the four event floors of the venue, showing ballrooms, meeting rooms, junior ballrooms, the rooftop terrace, galleries, and back-of-house areas, with a color-coded legend." loading="lazy" decoding="async">
+          <span class="floor-plan__expand-hint">Tap to expand</span>
+        </button>
+        <figcaption class="floor-plan__caption">Floor plan reflects current planning. Final wayfinding shared with attendees ahead of the event.</figcaption>
+      </figure>
+      </div>
+      <div class="floor-plan__detail">
+      <div class="floor-detail">
 
-    <div class="floor-detail">
-
-      <div class="floor-detail__floor">
-        <div class="floor-detail__label">Fifth Floor</div>
-        <div class="floor-detail__zones">
-          <article class="floor-detail__zone">
-            <h3 class="floor-detail__zone-name">Tides Rooftop Terrace</h3>
-            <p class="floor-detail__zone-function"><em>VIP reception &amp; networking</em></p>
-            <p class="floor-detail__zone-meta">7,001 sq ft · Up to 500 reception · 480 banquet</p>
-            <ul class="floor-detail__zone-list">
-              <li>Evening receptions and VIP mixers</li>
-              <li>Sponsor hospitality activations</li>
-            </ul>
-          </article>
-        </div>
+        <div class="floor-detail__floor">
+          <div class="floor-detail__label">Fifth Floor</div>
+          <div class="floor-detail__zones">
+            <article class="floor-detail__zone">
+              <h3 class="floor-detail__zone-name">Tides Rooftop Terrace</h3>
+              <p class="floor-detail__zone-function"><em>VIP reception &amp; networking</em></p>
+              <p class="floor-detail__zone-meta">7,001 sq ft · Up to 500 reception · 480 banquet</p>
+              <ul class="floor-detail__zone-list">
+                <li>Evening receptions and VIP mixers</li>
+                <li>Sponsor hospitality activations</li>
+              </ul>
+            </article>
+          </div>
+      </div>
+    </div>
       </div>
 
       <div class="floor-detail__floor">
@@ -4109,6 +4159,9 @@ body.menu-open{overflow:hidden}
       dlgImg.src = thumbImg.src;
       dlgImg.alt = thumbImg.alt || '';
     }
+    // Always open un-zoomed
+    if (dlgImg) dlgImg.classList.remove('floor-plan__dialog-img--zoomed');
+    if (dlg) { dlg.scrollTop = 0; dlg.scrollLeft = 0; }
     if (typeof dlg.showModal === 'function') {
       dlg.showModal();
     } else {
@@ -4118,6 +4171,22 @@ body.menu-open{overflow:hidden}
   });
 
   if (closeBtn) closeBtn.addEventListener('click', function(){ dlg.close(); });
+
+  // Click image to toggle zoom (fit <-> natural size). Stop propagation so
+  // it doesn't trigger the backdrop-close handler.
+  if (dlgImg) {
+    dlgImg.addEventListener('click', function(e){
+      e.stopPropagation();
+      dlgImg.classList.toggle('floor-plan__dialog-img--zoomed');
+      // When zooming in, center the scroll position
+      if (dlgImg.classList.contains('floor-plan__dialog-img--zoomed')) {
+        requestAnimationFrame(function(){
+          dlg.scrollLeft = (dlg.scrollWidth - dlg.clientWidth) / 2;
+          dlg.scrollTop = (dlg.scrollHeight - dlg.clientHeight) / 2;
+        });
+      }
+    });
+  }
 
   // Close when clicking the backdrop (outside the image)
   dlg.addEventListener('click', function(e){
