@@ -2489,7 +2489,7 @@ body.menu-open{overflow:hidden}
   display:block;
   width:auto;
   max-width:100%;
-  max-height:38vh;
+  max-height:35vh;
   height:auto;
   margin:0 auto;
   border-radius:2px;
@@ -2603,9 +2603,9 @@ body.menu-open{overflow:hidden}
 }
 
 /* === Floor plan split layout (3-column) ===
-   Col 1: floor diagram + Fifth Floor tile stacked under it.
-   Col 2: Fourth + Third Floor tiles stacked.
-   Col 3: Second Floor tile (the heaviest, gets its own column). */
+   Col 1: floor diagram + Getting Here tile stacked under it.
+   Col 2: Fifth + Fourth + Third Floor tiles stacked.
+   Col 3: Second + First Floor tiles stacked. */
 .floor-plan__split{
   display:grid;
   grid-template-columns:1fr 1fr 1fr;
@@ -3542,7 +3542,7 @@ body.menu-open{overflow:hidden}
     </header>
     <p class="floor-plan__intro">Five floors. One Summit. Every space chosen with intent. Mainstage to expo, sovereign lounge to rooftop.</p>
     <div class="floor-plan__split">
-      <!-- Column 1: Floor diagram + Fifth Floor tile -->
+      <!-- Column 1: Floor diagram + Getting Here tile -->
       <div class="floor-plan__col floor-plan__col--media">
         <figure class="floor-plan__figure">
           <button type="button" class="floor-plan__expand-btn" aria-label="Expand floor plan to full size">
@@ -3550,6 +3550,24 @@ body.menu-open{overflow:hidden}
             <span class="floor-plan__expand-hint">Tap to expand</span>
           </button>
         </figure>
+        <div class="floor-detail__floor">
+          <div class="floor-detail__label">Getting Here</div>
+          <div class="floor-detail__zones">
+            <article class="floor-detail__zone">
+              <h3 class="floor-detail__zone-name">Coastal Convention Center</h3>
+              <p class="floor-detail__zone-function"><em>Three entry points</em></p>
+              <ul class="floor-detail__zone-list">
+                <li>From Fontainebleau main lobby</li>
+                <li>From south drop-off</li>
+                <li>From Collins Ave</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </div>
+
+      <!-- Column 2: Fifth + Fourth + Third Floor -->
+      <div class="floor-plan__col">
         <div class="floor-detail__floor">
           <div class="floor-detail__label">5 &middot; Fifth Floor</div>
           <div class="floor-detail__zones">
@@ -3563,10 +3581,6 @@ body.menu-open{overflow:hidden}
             </article>
           </div>
         </div>
-      </div>
-
-      <!-- Column 2: Fourth + Third Floor -->
-      <div class="floor-plan__col">
         <div class="floor-detail__floor">
           <div class="floor-detail__label">4 &middot; Fourth Floor</div>
           <div class="floor-detail__zones">
@@ -3605,7 +3619,7 @@ body.menu-open{overflow:hidden}
         </div>
       </div>
 
-      <!-- Column 3: Second Floor -->
+      <!-- Column 3: Second + First Floor -->
       <div class="floor-plan__col">
         <div class="floor-detail__floor">
           <div class="floor-detail__label">2 &middot; Second Floor</div>
@@ -3639,6 +3653,19 @@ body.menu-open{overflow:hidden}
                 <li>Breakout sessions</li>
                 <li>Hands-on workshops</li>
                 <li>Roundtables &amp; masterclasses</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+        <div class="floor-detail__floor">
+          <div class="floor-detail__label">1 &middot; First Floor</div>
+          <div class="floor-detail__zones">
+            <article class="floor-detail__zone">
+              <h3 class="floor-detail__zone-name">Main Lobby</h3>
+              <p class="floor-detail__zone-function"><em>GA Check-In</em></p>
+              <ul class="floor-detail__zone-list">
+                <li>General Admission Registration</li>
+                <li>More TBA</li>
               </ul>
             </article>
           </div>
