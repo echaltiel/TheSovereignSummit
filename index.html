@@ -2604,8 +2604,8 @@ body.menu-open{overflow:hidden}
    inner grids would be too cramped here). Mobile collapses to single column. */
 .floor-plan__split{
   display:grid;
-  grid-template-columns:1.05fr 1fr;
-  gap:clamp(1.25rem,2.5vw,2rem);
+  grid-template-columns:1fr 1fr;
+  gap:clamp(1rem,2vw,1.5rem);
   align-items:start;
 }
 .floor-plan__media{
@@ -2614,19 +2614,19 @@ body.menu-open{overflow:hidden}
   align-self:start;
 }
 
-/* === Floor detail tiles ===
-   Each floor renders as a lifted-paper tile. In the split layout the right
-   column is narrow, so zones inside multi-zone tiles stack vertically with
-   a thin rule between them. */
+/* === Floor detail tiles (compact strip format) ===
+   Tiles are short horizontal strips sized to fit alongside the diagram image
+   in the viewport. Bullets render inline with mid-dot separators to keep each
+   zone to 1-2 lines. */
 .floor-detail{
   display:flex;
   flex-direction:column;
-  gap:clamp(.6rem,1.2vw,1rem);
+  gap:.5rem;
   margin-top:0;
 }
 .floor-detail__floor{
   background:var(--paper-light);
-  padding:clamp(1.1rem,1.85vw,1.5rem) clamp(1.2rem,2vw,1.65rem) clamp(1.2rem,2vw,1.65rem);
+  padding:.7rem .95rem .85rem;
   border-radius:2px;
   box-shadow: var(--lift-highlight), var(--lift-shadow);
   transition: box-shadow .3s ease, transform .3s ease;
@@ -2637,14 +2637,12 @@ body.menu-open{overflow:hidden}
 }
 .floor-detail__label{
   font-family:var(--fm);
-  font-size:.72rem;
+  font-size:.62rem;
   letter-spacing:.22em;
   text-transform:uppercase;
   color:var(--ink-soft);
-  padding-top:.45rem;
-  border-top:1px solid var(--ink);
-  margin:0 0 clamp(.85rem,1.5vw,1.15rem);
-  display:inline-block;
+  margin:0 0 .35rem;
+  opacity:.75;
 }
 .floor-detail__zones,
 .floor-detail__zones--two,
@@ -2656,61 +2654,64 @@ body.menu-open{overflow:hidden}
 .floor-detail__zone{padding:0}
 .floor-detail__zone + .floor-detail__zone{
   border-top:1px solid var(--rule);
-  padding-top:clamp(.85rem,1.5vw,1.25rem);
-  margin-top:clamp(.85rem,1.5vw,1.25rem);
+  padding-top:.45rem;
+  margin-top:.45rem;
 }
 .floor-detail__zone-name{
   font-family:var(--fd);
   font-weight:400;
-  font-size:clamp(1.05rem,1.35vw,1.25rem);
+  font-size:1.05rem;
   line-height:1.15;
   letter-spacing:-.01em;
   color:var(--ink);
-  margin:0 0 .15rem;
+  margin:0;
+  display:inline;
 }
 .floor-detail__zone-function{
   font-family:var(--fd);
-  font-size:clamp(.9rem,1.05vw,1rem);
-  line-height:1.3;
+  font-size:.92rem;
+  line-height:1.2;
   color:var(--ink-soft);
-  margin:0 0 .5rem;
+  margin:0 0 .25rem;
+  display:inline;
+}
+.floor-detail__zone-function::before{
+  content:" — ";
+  color:var(--ink-soft);
+  opacity:.6;
 }
 .floor-detail__zone-function em{color:var(--accent-deep)}
 .floor-detail__zone-meta{
   font-family:var(--fm);
-  font-size:.64rem;
-  letter-spacing:.12em;
+  font-size:.58rem;
+  letter-spacing:.1em;
   text-transform:uppercase;
   color:var(--ink-soft);
-  margin:0 0 .55rem;
-  opacity:.85;
+  margin:.18rem 0 .25rem;
+  opacity:.75;
+  display:block;
 }
+/* Inline bullet list: each item separated by a mid-dot */
 .floor-detail__zone-list{
   list-style:none;
   padding:0;
   margin:0;
-  display:flex;
-  flex-direction:column;
-  gap:.25rem;
+  font-family:var(--fd);
+  font-size:.85rem;
+  line-height:1.35;
+  color:var(--ink);
+  opacity:.78;
 }
 .floor-detail__zone-list li{
-  font-family:var(--fd);
-  font-size:clamp(.88rem,1vw,.95rem);
-  line-height:1.4;
-  color:var(--ink);
-  opacity:.82;
-  position:relative;
-  padding-left:.9rem;
+  display:inline;
+  padding:0;
 }
-.floor-detail__zone-list li::before{
-  content:"";
-  position:absolute;
-  left:0;
-  top:.65em;
-  width:.35rem;
-  height:1px;
-  background:var(--accent);
+.floor-detail__zone-list li::before{content:none}
+.floor-detail__zone-list li:not(:last-child)::after{
+  content:" · ";
+  color:var(--accent);
   opacity:.7;
+  padding:0 .12rem;
 }
 
 @media (max-width:900px){
@@ -2725,9 +2726,13 @@ body.menu-open{overflow:hidden}
   }
 }
 @media (max-width:720px){
-  .floor-detail__floor{padding:1.05rem 1.1rem 1.2rem}
-  .floor-detail__label{font-size:.68rem;letter-spacing:.2em;margin-bottom:.8rem}
-  .floor-detail__zone-name{font-size:1.1rem}
+  .floor-detail__floor{padding:.65rem .85rem .8rem}
+  .floor-detail__label{font-size:.58rem;letter-spacing:.2em;margin-bottom:.3rem}
+  .floor-detail__zone-name{font-size:1rem}
+  .floor-detail__zone-function{font-size:.88rem}
+  .floor-detail__zone-meta{font-size:.55rem;letter-spacing:.08em}
+  .floor-detail__zone-list{font-size:.8rem}
+}
   .floor-detail__zone-function{font-size:.92rem}
   .floor-detail__zone-meta{font-size:.6rem;letter-spacing:.1em}
   .floor-detail__zone-list li{font-size:.9rem}
