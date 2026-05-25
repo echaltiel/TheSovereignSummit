@@ -2597,6 +2597,12 @@ body.menu-open{overflow:hidden}
   text-align:center;
   opacity:.6;
 }
+/* When used as a standalone section footnote (not under the figure) */
+.floor-plan__caption--footnote{
+  margin-top:clamp(1.5rem,2.5vw,2.25rem);
+  padding-top:clamp(.75rem,1.5vw,1.25rem);
+  border-top:1px solid var(--rule);
+}
 
 /* === Floor plan split layout ===
    Image on the left, floor-detail tiles stacked on the right. Tiles in the
@@ -2604,7 +2610,7 @@ body.menu-open{overflow:hidden}
    inner grids would be too cramped here). Mobile collapses to single column. */
 .floor-plan__split{
   display:grid;
-  grid-template-columns:1fr 1fr;
+  grid-template-columns:1fr 2fr;
   gap:clamp(1rem,2vw,1.5rem);
   align-items:start;
 }
@@ -3547,7 +3553,6 @@ body.menu-open{overflow:hidden}
             <img src="images/floor-plan.jpg" alt="Coastal Convention Center floor plan: an isometric diagram of the four event floors of the venue, showing ballrooms, meeting rooms, junior ballrooms, the rooftop terrace, galleries, and back-of-house areas, with a color-coded legend." loading="lazy" decoding="async">
             <span class="floor-plan__expand-hint">Tap to expand</span>
           </button>
-          <figcaption class="floor-plan__caption">Floor plan reflects current planning. Final wayfinding shared with attendees ahead of the event.</figcaption>
         </figure>
       </div>
       <div class="floor-plan__detail">
@@ -3649,6 +3654,7 @@ body.menu-open{overflow:hidden}
         </div>
       </div>
     </div>
+    <p class="floor-plan__caption floor-plan__caption--footnote">Floor plan reflects current planning. Final wayfinding shared with attendees ahead of the event.</p>
     <dialog class="floor-plan__dialog" aria-label="Floor plan, expanded view">
       <button type="button" class="floor-plan__dialog-close" aria-label="Close expanded floor plan">×</button>
       <img class="floor-plan__dialog-img" alt="">
