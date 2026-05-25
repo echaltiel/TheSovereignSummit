@@ -2588,20 +2588,18 @@ body.menu-open{overflow:hidden}
   outline-offset:2px;
 }
 .floor-plan__caption{
-  font-family:var(--fm);
-  font-size:.7rem;
-  letter-spacing:.14em;
-  text-transform:uppercase;
+  margin:1rem auto 0;
+  font-family:var(--fd);
+  font-style:italic;
+  font-size:1.1rem;
+  line-height:1.45;
   color:var(--ink-soft);
-  margin:.65rem 0 0;
   text-align:center;
-  opacity:.6;
+  max-width:72ch;
 }
 /* When used as a standalone section footnote (not under the figure) */
 .floor-plan__caption--footnote{
-  margin-top:clamp(1rem,1.75vw,1.5rem);
-  padding-top:clamp(.55rem,1vw,.85rem);
-  border-top:1px solid var(--rule);
+  margin-top:clamp(1.25rem,2vw,1.75rem);
 }
 
 /* === Floor plan split layout (3-column) ===
@@ -2760,7 +2758,7 @@ body.menu-open{overflow:hidden}
 @media (max-width:680px){
   .floor-plan{padding:1rem 0 1.5rem}
   .floor-plan__intro{font-size:1rem;line-height:1.4;margin-bottom:1rem}
-  .floor-plan__caption{font-size:.62rem;letter-spacing:.12em;margin-top:.85rem}
+  .floor-plan__caption{font-size:.9rem;line-height:1.4;margin-top:.85rem}
   .floor-plan__expand-btn img{max-height:50vh}
   .floor-plan__expand-hint{font-size:.56rem;margin-top:.65rem}
   .floor-plan__dialog-close{top:.85rem;right:.85rem;width:2.25rem;height:2.25rem;font-size:1.35rem}
