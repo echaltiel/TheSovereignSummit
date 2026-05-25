@@ -2625,14 +2625,14 @@ body.menu-open{overflow:hidden}
    in the viewport. Bullets render inline with mid-dot separators to keep each
    zone to 1-2 lines. */
 .floor-detail{
-  display:flex;
-  flex-direction:column;
-  gap:.4rem;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:.5rem;
   margin-top:0;
 }
 .floor-detail__floor{
   background:var(--paper-light);
-  padding:.55rem .85rem .65rem;
+  padding:.75rem .95rem .85rem;
   border-radius:2px;
   box-shadow: var(--lift-highlight), var(--lift-shadow);
   transition: box-shadow .3s ease, transform .3s ease;
@@ -2642,13 +2642,18 @@ body.menu-open{overflow:hidden}
   transform: translateY(-1px);
 }
 .floor-detail__label{
+  display:inline-block;
   font-family:var(--fm);
-  font-size:.58rem;
-  letter-spacing:.22em;
+  font-size:.6rem;
+  letter-spacing:.2em;
   text-transform:uppercase;
-  color:var(--ink-soft);
-  margin:0 0 .25rem;
-  opacity:.75;
+  color:var(--accent-deep);
+  background:rgba(217,101,31,.09);
+  border:1px solid rgba(217,101,31,.22);
+  padding:.22rem .55rem .2rem;
+  margin:0 0 .55rem;
+  border-radius:1px;
+  font-weight:500;
 }
 .floor-detail__zones,
 .floor-detail__zones--two,
@@ -2665,9 +2670,9 @@ body.menu-open{overflow:hidden}
 }
 .floor-detail__zone-name{
   font-family:var(--fd);
-  font-weight:400;
-  font-size:.95rem;
-  line-height:1.15;
+  font-weight:500;
+  font-size:1rem;
+  line-height:1.2;
   letter-spacing:-.01em;
   color:var(--ink);
   margin:0;
@@ -2675,10 +2680,11 @@ body.menu-open{overflow:hidden}
 }
 .floor-detail__zone-function{
   font-family:var(--fd);
-  font-size:.85rem;
+  font-style:italic;
+  font-size:.88rem;
   line-height:1.2;
-  color:var(--ink-soft);
-  margin:0 0 .2rem;
+  color:var(--accent-deep);
+  margin:0;
   display:inline;
 }
 .floor-detail__zone-function::before{
@@ -2686,15 +2692,15 @@ body.menu-open{overflow:hidden}
   color:var(--ink-soft);
   opacity:.6;
 }
-.floor-detail__zone-function em{color:var(--accent-deep)}
+.floor-detail__zone-function em{font-style:italic;color:inherit}
 .floor-detail__zone-meta{
   font-family:var(--fm);
   font-size:.55rem;
-  letter-spacing:.1em;
+  letter-spacing:.12em;
   text-transform:uppercase;
   color:var(--ink-soft);
-  margin:.15rem 0 .2rem;
-  opacity:.75;
+  margin:.3rem 0 .3rem;
+  opacity:.7;
   display:block;
 }
 /* Inline bullet list: each item separated by a mid-dot */
@@ -2703,8 +2709,8 @@ body.menu-open{overflow:hidden}
   padding:0;
   margin:0;
   font-family:var(--fd);
-  font-size:.78rem;
-  line-height:1.3;
+  font-size:.8rem;
+  line-height:1.35;
   color:var(--ink);
   opacity:.78;
 }
@@ -2732,6 +2738,7 @@ body.menu-open{overflow:hidden}
   }
 }
 @media (max-width:720px){
+  .floor-detail{grid-template-columns:1fr}
   .floor-detail__floor{padding:.65rem .85rem .8rem}
   .floor-detail__label{font-size:.58rem;letter-spacing:.2em;margin-bottom:.3rem}
   .floor-detail__zone-name{font-size:1rem}
@@ -3566,8 +3573,9 @@ body.menu-open{overflow:hidden}
                 <p class="floor-detail__zone-function"><em>VIP reception &amp; networking</em></p>
                 <p class="floor-detail__zone-meta">7,001 sq ft · Up to 500 reception · 480 banquet</p>
                 <ul class="floor-detail__zone-list">
-                  <li>Evening receptions and VIP mixers</li>
-                  <li>Sponsor hospitality activations</li>
+                  <li>Evening receptions</li>
+                  <li>VIP mixers</li>
+                  <li>Sponsor hospitality</li>
                 </ul>
               </article>
             </div>
@@ -3581,8 +3589,8 @@ body.menu-open{overflow:hidden}
                 <p class="floor-detail__zone-function"><em>Mainstage</em></p>
                 <p class="floor-detail__zone-meta">16,500 sq ft · Up to 1,200 theater · 1,100 reception</p>
                 <ul class="floor-detail__zone-list">
-                  <li>Keynotes, panels, and headliners</li>
-                  <li>All four Pearls combined into a single stage</li>
+                  <li>Keynotes, panels, headliners</li>
+                  <li>All four Pearls, one stage</li>
                 </ul>
               </article>
             </div>
@@ -3595,9 +3603,9 @@ body.menu-open{overflow:hidden}
                 <h3 class="floor-detail__zone-name">VIP Check-In</h3>
                 <p class="floor-detail__zone-function"><em>Private entry for VIPs &amp; speakers</em></p>
                 <ul class="floor-detail__zone-list">
-                  <li>Fast-track entrance for VIPs and speakers</li>
-                  <li>Private registration and wristbanding</li>
-                  <li>Dedicated concierge team</li>
+                  <li>Fast-track entrance</li>
+                  <li>Private registration</li>
+                  <li>Dedicated concierge</li>
                 </ul>
               </article>
               <article class="floor-detail__zone">
@@ -3605,11 +3613,11 @@ body.menu-open{overflow:hidden}
                 <p class="floor-detail__zone-function"><em>Sovereign Lounge &amp; Speaker Suite</em></p>
                 <p class="floor-detail__zone-meta">2,728 sq ft · Up to 245 reception · 200 theater</p>
                 <ul class="floor-detail__zone-list">
-                  <li>VIP lounge, hospitality, and private bar</li>
-                  <li>Speaker green rooms and holding</li>
-                  <li>Sponsor meetings and private calls</li>
-                  <li>Media room and podcast studio</li>
-                  <li>Staff and production command center</li>
+                  <li>VIP lounge &amp; bar</li>
+                  <li>Speaker green rooms</li>
+                  <li>Sponsor meetings</li>
+                  <li>Media &amp; podcast studio</li>
+                  <li>Production command center</li>
                 </ul>
               </article>
             </div>
@@ -3623,10 +3631,9 @@ body.menu-open{overflow:hidden}
                 <p class="floor-detail__zone-function"><em>Main Expo Hall + Sovereign Lounge</em></p>
                 <p class="floor-detail__zone-meta">9,500 sq ft · Up to 800 reception · 800 theater</p>
                 <ul class="floor-detail__zone-list">
-                  <li>Sponsor booths, partners, and exhibits</li>
-                  <li>Coffee, food, and book signings</li>
-                  <li>High-traffic hub for all attendees</li>
-                  <li>Coral 3 includes a dedicated Sovereign Lounge for VIPs, sponsors, and speakers</li>
+                  <li>Sponsor booths &amp; exhibits</li>
+                  <li>Coffee, food, book signings</li>
+                  <li>Coral 3: Sovereign Lounge for VIPs, sponsors &amp; speakers</li>
                 </ul>
               </article>
               <article class="floor-detail__zone">
@@ -3634,8 +3641,9 @@ body.menu-open{overflow:hidden}
                 <p class="floor-detail__zone-function"><em>Open Source Stage</em></p>
                 <p class="floor-detail__zone-meta">1,748 sq ft · Up to 145 reception · 140 theater</p>
                 <ul class="floor-detail__zone-list">
-                  <li>Nonprofits, builders, and community</li>
-                  <li>Panel discussions and lightning talks</li>
+                  <li>Nonprofits &amp; builders</li>
+                  <li>Panel discussions</li>
+                  <li>Lightning talks</li>
                 </ul>
               </article>
               <article class="floor-detail__zone">
@@ -3645,7 +3653,7 @@ body.menu-open{overflow:hidden}
                 <ul class="floor-detail__zone-list">
                   <li>Breakout sessions</li>
                   <li>Hands-on workshops</li>
-                  <li>Roundtables and masterclasses</li>
+                  <li>Roundtables &amp; masterclasses</li>
                 </ul>
               </article>
             </div>
