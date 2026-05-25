@@ -2631,6 +2631,12 @@ body.menu-open{overflow:hidden}
   margin-top:0;
   align-items:start;
 }
+/* Second Floor (4th tile in document order) occupies the full right column
+   while Fifth, Fourth, Third stack on the left. */
+.floor-detail__floor:nth-child(4){
+  grid-column:2;
+  grid-row:1 / span 3;
+}
 .floor-detail__floor{
   background:var(--paper-light);
   padding:.75rem .95rem .85rem;
@@ -2741,6 +2747,7 @@ body.menu-open{overflow:hidden}
 }
 @media (max-width:720px){
   .floor-detail{grid-template-columns:1fr}
+  .floor-detail__floor:nth-child(4){grid-column:auto;grid-row:auto}
   .floor-detail__floor{padding:.65rem .85rem .8rem}
   .floor-detail__label{font-size:.58rem;letter-spacing:.2em;margin-bottom:.3rem}
   .floor-detail__zone-name{font-size:1rem}
