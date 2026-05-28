@@ -2520,7 +2520,7 @@ body.menu-open{overflow:hidden}
    full-width image (the floor plan diagram carries its own legend), and
    a small mono footnote. Background --paper for a neutral surface that
    doesn't clash with the image's pale gray-blue ground. */
-.floor-plan{background:var(--paper);padding:clamp(1.25rem,2.5vw,2rem) 0 clamp(3rem,4vw,4rem)}
+.floor-plan{background:var(--paper);padding:clamp(.75rem,1.5vw,1.25rem) 0 clamp(1.5rem,2vw,2rem)}
 .floor-plan .sec-hd{margin-bottom:clamp(.75rem,1.25vw,1.15rem)}
 .floor-plan__intro{
   font-family:var(--fd);
@@ -2529,7 +2529,7 @@ body.menu-open{overflow:hidden}
   line-height:1.45;
   color:var(--ink);
   max-width:52rem;
-  margin:0 0 clamp(1rem,1.75vw,1.5rem);
+  margin:0 0 .35rem;
 }
 .floor-plan__figure{margin:0}
 
@@ -2670,13 +2670,13 @@ body.menu-open{overflow:hidden}
 .floor-plan__split{
   display:grid;
   grid-template-columns:1fr 1fr 1fr;
-  gap:clamp(1rem,2vw,1.5rem);
+  gap:clamp(.6rem,1.2vw,.9rem);
   align-items:stretch;
 }
 .floor-plan__col{
   display:flex;
   flex-direction:column;
-  gap:.5rem;
+  gap:.35rem;
   min-width:0;
   justify-content:space-between;
 }
@@ -2687,7 +2687,7 @@ body.menu-open{overflow:hidden}
 }
 .floor-detail__floor{
   background:var(--paper-light);
-  padding:.75rem .95rem .85rem;
+  padding:.5rem .75rem .55rem;
   border-radius:2px;
   box-shadow: var(--lift-highlight), var(--lift-shadow);
   transition: box-shadow .3s ease, transform .3s ease;
@@ -2761,7 +2761,7 @@ body.menu-open{overflow:hidden}
 .floor-detail__zone-function::after{
   content:"";
   display:block;
-  height:.4rem;
+  height:.2rem;
 }
 .floor-detail__zone-meta{
   display:none; /* hidden to save vertical space; kept in HTML for semantic structure */
