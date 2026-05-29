@@ -209,6 +209,7 @@ body.menu-open{overflow:hidden}
 .hero__logo-col img{display:block;width:100%;height:auto;aspect-ratio:1/1;max-height:calc(100vh - 180px);object-fit:contain}
 .hero__info{display:flex;flex-direction:column;padding-left:clamp(1.5rem,3vw,3rem);padding-right:clamp(1rem,2vw,2rem);height:100%;max-height:calc(100vh - 180px);overflow:hidden;position:relative;align-self:stretch}
 .hero__headline-wrap{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:0;gap:clamp(.75rem,1.2vw,1.2rem)}
+.hero__headline-center{display:contents}
 .hero__eyebrow{color:var(--accent-deep);font-size:.78rem;letter-spacing:.24em}
 .hero__warning{display:flex;flex-direction:column;gap:.18rem;padding:.7rem 1rem;background:#C3282E;color:#fff;border:2px solid #5B1518;font-family:var(--fm);align-self:stretch;z-index:10}
 .hero__warning-title{font-size:.85rem;font-weight:500;text-transform:uppercase;letter-spacing:.22em;display:flex;align-items:center;gap:.55rem;line-height:1.1}
@@ -232,7 +233,8 @@ body.menu-open{overflow:hidden}
   .hero__logo-col{overflow:visible}
   .hero__logo-col img{width:100%;height:auto;max-width:clamp(340px,64svh,540px);max-height:none}
   .hero__info{padding-left:0;padding-right:0;max-height:none;overflow:visible}
-  .hero__headline-wrap{flex:1;gap:.55rem}
+  .hero__headline-wrap{flex:1;gap:.55rem;min-height:clamp(9rem,28vw,14rem)}
+  .hero__headline-center{display:flex;flex:1;align-items:center;justify-content:center;min-height:0}
   .hero__eyebrow{font-size:.62rem;letter-spacing:.22em}
   .hero__warning{padding:.55rem .8rem}
   .hero__warning-title{font-size:.7rem;letter-spacing:.18em}
@@ -2930,11 +2932,13 @@ body.menu-open{overflow:hidden}
   <div class="hero__warning-body">Nothing on this site is accurate. Used as an example only.</div>
 </div>
 <div class="hero__headline-wrap">
+<div class="hero__headline-center">
 <h1 class="hero__headline">
           <em>The</em> <strong style="font-weight:600">premier</strong> gathering discussing<br>
           <span class="accent">Energy · AI · Freedom · Bitcoin</span><br>
           in vibrant Miami Beach, FL
         </h1>
+</div>
         <a href="#hero-details" class="hero__scroll" aria-label="Scroll to event details">
           <span class="hero__scroll-icon" aria-hidden="true">↓</span>
         </a>
