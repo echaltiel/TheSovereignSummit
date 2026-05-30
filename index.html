@@ -2675,7 +2675,7 @@ body.menu-open{overflow:hidden}
    Col 3: Second + First Floor tiles stacked. */
 .floor-plan__split{
   display:grid;
-  grid-template-columns:1fr 1fr 1fr;
+  grid-template-columns:1fr 2fr;
   gap:clamp(.6rem,1.2vw,.9rem);
   align-items:stretch;
 }
@@ -2685,6 +2685,13 @@ body.menu-open{overflow:hidden}
   gap:.35rem;
   min-width:0;
   justify-content:space-between;
+}
+.floor-plan__floors-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:clamp(.35rem,.7vw,.6rem);
+  align-content:start;
+  min-width:0;
 }
 /* The media column gets a slightly larger gap between image and tile
    to visually separate the diagram from the data tile beneath. */
@@ -2823,6 +2830,9 @@ body.menu-open{overflow:hidden}
   .floor-plan__split{
     grid-template-columns:1fr;
     gap:1.5rem;
+  }
+  .floor-plan__floors-grid{
+    grid-template-columns:1fr;
   }
 }
 
@@ -3797,7 +3807,7 @@ body.menu-open{overflow:hidden}
     </div>
 
     <div class="floor-plan__split">
-      <!-- Column 1: Floor diagram + 5th Floor tile -->
+      <!-- Column 1: Floor diagram only -->
       <div class="floor-plan__col floor-plan__col--media">
         <figure class="floor-plan__figure">
           <button type="button" class="floor-plan__expand-btn" aria-label="Expand floor plan to full size">
@@ -3805,6 +3815,10 @@ body.menu-open{overflow:hidden}
             <span class="floor-plan__expand-hint">Tap to expand</span>
           </button>
         </figure>
+      </div>
+
+      <!-- Columns 2+3: 2×2 floor grid — 5F|4F top row, 3F|2F bottom row -->
+      <div class="floor-plan__floors-grid">
         <div class="floor-detail__floor">
           <div class="floor-detail__label">5 &middot; Fifth Floor</div>
           <div class="floor-detail__zones">
@@ -3818,10 +3832,6 @@ body.menu-open{overflow:hidden}
             </article>
           </div>
         </div>
-      </div>
-
-      <!-- Column 2: Fourth + Third Floor -->
-      <div class="floor-plan__col">
         <div class="floor-detail__floor">
           <div class="floor-detail__label">4 &middot; Fourth Floor</div>
           <div class="floor-detail__zones">
@@ -3859,10 +3869,6 @@ body.menu-open{overflow:hidden}
             </article>
           </div>
         </div>
-      </div>
-
-      <!-- Column 3: Second Floor only -->
-      <div class="floor-plan__col">
         <div class="floor-detail__floor">
           <div class="floor-detail__label">2 &middot; Second Floor</div>
           <div class="floor-detail__zones floor-detail__zones--three">
