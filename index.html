@@ -2556,7 +2556,7 @@ body.menu-open{overflow:hidden}
   display:block;
   width:auto;
   max-width:100%;
-  max-height:27vh;
+  max-height:22vh;
   height:auto;
   margin:0 auto;
   border-radius:2px;
@@ -3795,18 +3795,14 @@ body.menu-open{overflow:hidden}
     </div>
 
     <div class="floor-plan__split">
-      <!-- Column 1: Floor diagram only, centered vertically -->
-      <div class="floor-plan__col floor-plan__col--media" style="justify-content:center">
+      <!-- Column 1: Floor diagram + 5th Floor tile -->
+      <div class="floor-plan__col floor-plan__col--media">
         <figure class="floor-plan__figure">
           <button type="button" class="floor-plan__expand-btn" aria-label="Expand floor plan to full size">
             <img src="images/floor-plan.jpg" alt="Coastal Convention Center floor plan: an isometric diagram of the four event floors of the venue, showing ballrooms, meeting rooms, junior ballrooms, the rooftop terrace, galleries, and back-of-house areas, with a color-coded legend." loading="lazy" decoding="async">
             <span class="floor-plan__expand-hint">Tap to expand</span>
           </button>
         </figure>
-      </div>
-
-      <!-- Column 2: Fifth + Fourth + Third Floor -->
-      <div class="floor-plan__col">
         <div class="floor-detail__floor">
           <div class="floor-detail__label">5 &middot; Fifth Floor</div>
           <div class="floor-detail__zones">
@@ -3820,6 +3816,10 @@ body.menu-open{overflow:hidden}
             </article>
           </div>
         </div>
+      </div>
+
+      <!-- Column 2: Fourth + Third Floor -->
+      <div class="floor-plan__col">
         <div class="floor-detail__floor">
           <div class="floor-detail__label">4 &middot; Fourth Floor</div>
           <div class="floor-detail__zones">
