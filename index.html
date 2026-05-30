@@ -12,13 +12,13 @@
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="The Sovereign Summit" />
 <meta property="og:url" content="https://thesovereignsummit.com/" />
-<meta property="og:title" content="The Sovereign Summit · February 5 &amp; 6, 2027 · Miami Beach" />
-<meta property="og:description" content="Energy. AI. Freedom. Bitcoin. February 5 &amp; 6, 2027 at the iconic Fontainebleau in Miami Beach." />
-<meta property="og:image" content="https://thesovereignsummit.com/images/og-image.png" />
-<meta property="og:image:secure_url" content="https://thesovereignsummit.com/images/og-image.png" />
+<meta property="og:title" content="The Sovereign Summit · February 5 &amp; 6, 2027" />
+<meta property="og:description" content="Two days, one stage, one hotel. Fontainebleau Miami Beach. February 5 and 6, 2027." />
+<meta property="og:image" content="https://thesovereignsummit.com/images/TSS_Badge_Cream.png" />
+<meta property="og:image:secure_url" content="https://thesovereignsummit.com/images/TSS_Badge_Cream.png" />
 <meta property="og:image:type" content="image/png" />
-<meta property="og:image:width" content="1200" />
-<meta property="og:image:height" content="630" />
+<meta property="og:image:width" content="560" />
+<meta property="og:image:height" content="710" />
 <meta property="og:image:alt" content="The Sovereign Summit badge logo" />
 
 <!-- Twitter / X -->
@@ -205,11 +205,9 @@ body.menu-open{overflow:hidden}
 .hero{padding:clamp(1rem,2vw,1.5rem) 0}
 .hero > .container{max-width:none !important;padding:0 !important;width:100%}
 .hero__grid{display:grid;grid-template-columns:1fr 1fr;align-items:center;width:100%;min-height:calc(100vh - 130px);padding:0 clamp(1rem,2vw,2rem);max-height:calc(100vh - 130px)}
-.hero__logo-col{display:flex;align-items:center;justify-content:center;min-height:0;width:100%;overflow:hidden;background:transparent}
+.hero__logo-col{display:flex;align-items:center;justify-content:center;min-height:0;width:100%;overflow:hidden;background:var(--paper)}
 .hero__logo-col img{display:block;width:100%;height:auto;aspect-ratio:1/1;max-height:calc(100vh - 180px);object-fit:contain}
-.hero__info{display:flex;flex-direction:column;padding-left:clamp(1.5rem,3vw,3rem);padding-right:clamp(1rem,2vw,2rem);height:100%;max-height:calc(100vh - 180px);overflow:hidden;position:relative;align-self:stretch}
-.hero__headline-wrap{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:0;gap:clamp(.75rem,1.2vw,1.2rem)}
-.hero__headline-center{display:contents}
+.hero__info{display:flex;flex-direction:column;gap:clamp(1rem,1.5vw,1.5rem);padding-left:clamp(1.5rem,3vw,3rem);padding-right:clamp(1rem,2vw,2rem);justify-content:center;max-height:calc(100vh - 180px);overflow:hidden;position:relative}
 .hero__eyebrow{color:var(--accent-deep);font-size:.78rem;letter-spacing:.24em}
 .hero__warning{display:flex;flex-direction:column;gap:.18rem;padding:.7rem 1rem;background:#C3282E;color:#fff;border:2px solid #5B1518;font-family:var(--fm);align-self:stretch;z-index:10}
 .hero__warning-title{font-size:.85rem;font-weight:500;text-transform:uppercase;letter-spacing:.22em;display:flex;align-items:center;gap:.55rem;line-height:1.1}
@@ -218,8 +216,8 @@ body.menu-open{overflow:hidden}
 .hero__headline{text-align:center;font-family:var(--fd);font-size:clamp(1.8rem,3.6vw,3.8rem);font-weight:400;line-height:1.1;letter-spacing:-.02em}
 .hero__headline .ital{font-style:italic;color:var(--accent-deep)}
 .hero__headline .accent{color:var(--accent-deep)}
-.hero__rule{height:1px;background:var(--rule);margin-top:clamp(.75rem,1.2vw,1.2rem)}
-.hero__facts{display:flex;flex-direction:column;gap:.85rem;list-style:none;margin:clamp(.75rem,1.2vw,1.2rem) 0 0}
+.hero__rule{height:1px;background:var(--rule)}
+.hero__facts{display:flex;flex-direction:column;gap:.85rem;list-style:none;margin:0}
 .hero__fact{display:grid;grid-template-columns:160px 1fr;gap:1.75rem;align-items:baseline;margin:0}
 .hero__fact dt{font-family:var(--fm);font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-soft);margin:0}
 .hero__fact dd{font-family:var(--fd);font-size:clamp(1.25rem,1.35vw,1.4rem);line-height:1.3;margin:0}
@@ -232,10 +230,7 @@ body.menu-open{overflow:hidden}
   .hero__grid{grid-template-columns:1fr;gap:.65rem;min-height:auto;max-height:none;padding:0 1rem}
   .hero__logo-col{overflow:visible}
   .hero__logo-col img{width:100%;height:auto;max-width:clamp(340px,64svh,540px);max-height:none}
-  .hero__info{padding-left:0;padding-right:0;max-height:none;overflow:visible}
-  .hero__headline-wrap{flex:1;gap:0;min-height:clamp(13rem,42vw,18rem)}
-  .hero__headline-center{display:flex;flex:1;align-items:center;justify-content:center;min-height:0}
-  .hero__scroll{margin-top:.75rem;margin-bottom:.25rem}
+  .hero__info{padding-left:0;padding-right:0;max-height:none;overflow:visible;gap:.55rem}
   .hero__eyebrow{font-size:.62rem;letter-spacing:.22em}
   .hero__warning{padding:.55rem .8rem}
   .hero__warning-title{font-size:.7rem;letter-spacing:.18em}
@@ -266,13 +261,13 @@ body.menu-open{overflow:hidden}
   .hero{padding:.5rem 0 1.25rem}
   .hero__grid{gap:.55rem;padding:0}
   .hero__logo-col img{max-width:clamp(300px,50svh,420px)}
-  .hero__info{padding:0 1rem}
-  .hero__headline-wrap{gap:.55rem}
+  .hero__info{gap:.55rem;padding:0 1rem}
   .hero__eyebrow{font-size:.6rem}
   .hero__warning{padding:.5rem .7rem}
   .hero__warning-title{font-size:.66rem}
   .hero__warning-body{font-size:.52rem}
   .hero__headline{text-align:center;font-size:1.6rem;line-height:1.05}
+  .hero__rule{margin-top:6rem}
   .hero__facts{gap:.5rem}
   .hero__fact{grid-template-columns:80px 1fr;gap:.6rem}
   .hero__fact dt{font-size:.55rem}
@@ -410,30 +405,12 @@ body.menu-open{overflow:hidden}
 /* SPEAKERS */
 .speakers__grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid var(--ink);border-left:1px solid var(--ink);border-right:1px solid var(--ink)}
 /* Tier 2/3 grid — 8 columns of compact medium cards */
-.speakers__grid--md .speaker[data-speaker="13"],
-.speakers__grid--md .speaker[data-speaker="14"],
-.speakers__grid--md .speaker[data-speaker="15"],
-.speakers__grid--md .speaker[data-speaker="16"],
-.speakers__grid--md .speaker[data-speaker="17"],
-.speakers__grid--md .speaker[data-speaker="18"],
-.speakers__grid--md .speaker[data-speaker="19"],
-.speakers__grid--md .speaker[data-speaker="20"],
-.speakers__grid--md .speaker[data-speaker="21"]{display:none}
-.speakers__grid--md.is-expanded .speaker[data-speaker="13"],
-.speakers__grid--md.is-expanded .speaker[data-speaker="14"],
-.speakers__grid--md.is-expanded .speaker[data-speaker="15"],
-.speakers__grid--md.is-expanded .speaker[data-speaker="16"],
-.speakers__grid--md.is-expanded .speaker[data-speaker="17"],
-.speakers__grid--md.is-expanded .speaker[data-speaker="18"],
-.speakers__grid--md.is-expanded .speaker[data-speaker="19"],
-.speakers__grid--md.is-expanded .speaker[data-speaker="20"],
-.speakers__grid--md.is-expanded .speaker[data-speaker="21"]{display:flex}
 .speakers__grid--md{grid-template-columns:repeat(8,1fr);border-top:none}
 .speaker{padding:1.75rem 1.5rem 1.5rem;border-right:1px solid var(--ink);border-bottom:1px solid var(--ink);background:var(--paper-light);position:relative;transition:background .3s;text-decoration:none;color:inherit;display:flex;flex-direction:column;cursor:pointer}
 .speaker:nth-child(4n){border-right:none}
 .speaker--hidden{display:none}
 .speaker.speaker--hidden{display:none}
-.speakers{padding:clamp(.75rem,1.5vw,1.25rem) 0 clamp(4rem,5vw,5rem)}
+.speakers{padding:clamp(.75rem,1.5vw,1.25rem) 0 clamp(.75rem,1.5vw,1.25rem)}
 .speakers .sec-hd{margin-bottom:clamp(1.25rem,2vw,1.75rem);padding-top:.4rem}
 .speakers__actions{display:flex;justify-content:center;margin-top:.85rem}
 .speakers__toggle-hide{display:none}
@@ -485,7 +462,7 @@ body.menu-open{overflow:hidden}
   .speakers__grid--md .speaker:nth-child(3n){border-right:none}
 }
 @media (max-width:520px){
-  .speakers{padding:1rem 0 4rem}
+  .speakers{padding:1rem 0 1.5rem}
   .speakers .sec-hd{margin-bottom:1.1rem;gap:.4rem;padding-top:0}
   .speakers .sec-hd__num{padding-top:.5rem;font-size:.7rem}
   
@@ -671,7 +648,7 @@ body.menu-open{overflow:hidden}
 
 /* VENUE */
 .venue{background:var(--paper-deep)}
-.venue{padding:.85rem 0 5rem !important}
+.venue{padding:.85rem 0 1rem !important}
 .venue .sec-hd{margin-bottom:clamp(.85rem,1.75vw,1.25rem)}
 
 .venue__grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:clamp(1.5rem,3.5vw,3rem);align-items:start}
@@ -679,7 +656,7 @@ body.menu-open{overflow:hidden}
 .venue__brand-link{display:block;align-self:center;line-height:0;transition:opacity .25s ease}
 .venue__brand-link:hover{opacity:.65}
 .venue__brand{display:block;width:auto;max-width:380px;max-height:110px;height:auto;object-fit:contain}
-.venue__illus{background:var(--paper-light);aspect-ratio:16/9;max-height:220px;border:1px solid var(--ink);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.venue__illus{background:var(--paper-light);aspect-ratio:16/9;max-height:270px;border:1px solid var(--ink);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
 .venue__illus::before{content:'';position:absolute;inset:.5rem;border:1px solid rgba(244,236,224,.4);pointer-events:none;z-index:1}
 .venue__illus svg{width:100%;height:auto;max-height:340px}
 .venue__illus img{width:100%;height:100%;object-fit:cover;display:block}
@@ -706,7 +683,7 @@ body.menu-open{overflow:hidden}
 .venue__link:hover{color:var(--ink);border-bottom-color:var(--ink)}
 @media (max-width:880px){.venue__grid{grid-template-columns:1fr}.venue__illus{aspect-ratio:16/9;max-height:200px}.venue__details{grid-template-columns:repeat(2,1fr)}.venue__amenities{columns:1}.venue__brand-link{align-self:flex-start}}
 @media (max-width:520px){
-  .venue{padding:.85rem 0 4rem !important}
+  .venue{padding:.85rem 0 1.25rem !important}
   .venue .sec-hd{margin-bottom:.4rem;gap:.3rem}
   .venue .sec-hd__num{padding-top:.4rem;font-size:.65rem}
   
@@ -730,9 +707,9 @@ body.menu-open{overflow:hidden}
   .venue__amenities li::before{font-size:.95rem}
 }
 
-/* TICKETS */
-.tickets{padding:2.5rem 0 5rem}
-.tickets .sec-hd{margin-bottom:1.5rem;padding-top:.5rem;padding-bottom:.5rem}
+/* TICKETS — tightened so the section fits one desktop viewport when navigated to via #tickets */
+.tickets{padding:.3rem 0 .1rem !important}
+.tickets .sec-hd{margin-bottom:.25rem;padding-top:.15rem;padding-bottom:.2rem}
 
 .tickets__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.4rem}
 
@@ -1227,7 +1204,7 @@ body.menu-open{overflow:hidden}
   column-gap:.8rem;
   row-gap:.6rem;
   border:1px solid var(--rule-str);
-  padding:.7rem .55rem .75rem;
+  padding:.7rem .55rem .15rem;
   position:relative;
   margin-top:.85rem;
 }
@@ -1510,7 +1487,7 @@ body.menu-open{overflow:hidden}
 @media (max-width:960px){.tickets__grid{grid-template-columns:1fr}.tickets__allaccess-pair{grid-template-columns:1fr;gap:.8rem}.tickets__phases{grid-template-columns:1fr;row-gap:.85rem}.tier{min-height:auto}}
 @media (max-width:1080px){.tickets__phases-label{font-size:.55rem;letter-spacing:.18em;padding:0 .65rem;top:-.5rem}}
 @media (max-width:720px){
-  .tickets{padding:1.5rem 0 4rem}
+  .tickets{padding:1.25rem 0 1.75rem !important}
   .tickets .sec-hd{margin-bottom:.85rem}
   .tickets__grid{gap:1rem}
   .tickets__phases{padding:.7rem .65rem .65rem;row-gap:1rem}
@@ -2309,40 +2286,6 @@ body.menu-open{overflow:hidden}
   100%{left:200%}
 }
 
-/* ROOM BLOCK BUTTON — metallic bitcoin orange */
-.room-block-btn{
-  display:block;
-  margin-top:1rem;
-  background:linear-gradient(180deg,#ffaa38 0%,#f7931a 50%,#e8820f 100%);
-  box-shadow:
-    inset 0 1px 0 rgba(255,220,160,0.8),
-    inset 0 -1px 0 rgba(120,50,0,0.3),
-    0 0 28px rgba(247,147,26,0.4),
-    0 0 56px rgba(247,147,26,0.15);
-  color:#3d1a00;
-  text-decoration:none;
-  padding:1rem 1.25rem;
-  position:relative;
-  overflow:hidden;
-  transition:background .2s;
-}
-.room-block-btn::before{
-  content:'';
-  position:absolute;
-  top:0;bottom:0;width:60%;
-  background:linear-gradient(90deg,
-    transparent 0%,
-    rgba(255,200,120,0.1) 35%,
-    rgba(255,210,140,0.22) 50%,
-    rgba(255,200,120,0.1) 65%,
-    transparent 100%
-  );
-  animation:sheen-gold 5.5s ease-in-out infinite;
-}
-.room-block-btn:hover{
-  background:linear-gradient(180deg,#ffb84a 0%,#f99c25 50%,#f08c1a 100%);
-}
-
 @media (prefers-reduced-motion:reduce){
   .friend--platinum::before,
   .friend--gold::before,
@@ -2525,8 +2468,8 @@ body.menu-open{overflow:hidden}
    full-width image (the floor plan diagram carries its own legend), and
    a small mono footnote. Background --paper for a neutral surface that
    doesn't clash with the image's pale gray-blue ground. */
-.floor-plan{background:var(--paper);padding:clamp(.4rem,.8vw,.7rem) 0 clamp(.75rem,1.2vw,1.25rem)}
-.floor-plan .sec-hd{margin-bottom:clamp(.4rem,.7vw,.65rem)}
+.floor-plan{background:var(--paper);padding:clamp(1.25rem,2.5vw,2rem) 0 clamp(1rem,2vw,1.5rem)}
+.floor-plan .sec-hd{margin-bottom:clamp(.75rem,1.25vw,1.15rem)}
 .floor-plan__intro{
   font-family:var(--fd);
   font-style:italic;
@@ -2534,8 +2477,7 @@ body.menu-open{overflow:hidden}
   line-height:1.45;
   color:var(--ink);
   max-width:52rem;
-  margin:.9rem 0 .9rem;
-  text-align:left;
+  margin:0 0 clamp(1rem,1.75vw,1.5rem);
 }
 .floor-plan__figure{margin:0}
 
@@ -2556,7 +2498,7 @@ body.menu-open{overflow:hidden}
   display:block;
   width:auto;
   max-width:100%;
-  max-height:22vh;
+  max-height:27vh;
   height:auto;
   margin:0 auto;
   border-radius:2px;
@@ -2675,49 +2617,25 @@ body.menu-open{overflow:hidden}
    Col 3: Second + First Floor tiles stacked. */
 .floor-plan__split{
   display:grid;
-  grid-template-columns:1fr 2fr;
-  gap:clamp(.6rem,1.2vw,.9rem);
+  grid-template-columns:1fr 1fr 1fr;
+  gap:clamp(1rem,2vw,1.5rem);
   align-items:stretch;
 }
 .floor-plan__col{
   display:flex;
   flex-direction:column;
-  gap:.35rem;
+  gap:.5rem;
   min-width:0;
   justify-content:space-between;
 }
-.floor-plan__floors-grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:clamp(.35rem,.7vw,.6rem);
-  align-content:start;
-  min-width:0;
-}
 /* The media column gets a slightly larger gap between image and tile
    to visually separate the diagram from the data tile beneath. */
-/* Media col: image floats centered in space above 5F tile */
 .floor-plan__col--media{
   gap:.85rem;
 }
-.floor-plan__col--media .floor-plan__figure{
-  flex:1;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:center;
-}
-.floor-plan__col--media .floor-plan__expand-btn{
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-}
-/* Rightmost column: single tile vertically centered */
-.floor-plan__split > .floor-plan__col:last-child{
-  justify-content:center;
-}
 .floor-detail__floor{
   background:var(--paper-light);
-  padding:.4rem .65rem .45rem;
+  padding:.55rem .8rem .6rem;
   border-radius:2px;
   box-shadow: var(--lift-highlight), var(--lift-shadow);
   transition: box-shadow .3s ease, transform .3s ease;
@@ -2736,7 +2654,7 @@ body.menu-open{overflow:hidden}
   background:rgba(217,101,31,.09);
   border:1px solid rgba(217,101,31,.22);
   padding:.22rem .55rem .2rem;
-  margin:0 0 .55rem;
+  margin:0 0 .4rem;
   border-radius:1px;
   font-weight:500;
 }
@@ -2757,14 +2675,14 @@ body.menu-open{overflow:hidden}
 .floor-detail__zone{padding:0}
 .floor-detail__zone + .floor-detail__zone{
   border-top:1px solid var(--rule);
-  padding-top:.35rem;
-  margin-top:.35rem;
+  padding-top:.28rem;
+  margin-top:.28rem;
 }
 .floor-detail__zone-name{
   font-family:var(--fd);
   font-weight:500;
-  font-size:1rem;
-  line-height:1.2;
+  font-size:.94rem;
+  line-height:1.15;
   letter-spacing:-.01em;
   color:var(--ink);
   margin:0;
@@ -2774,8 +2692,8 @@ body.menu-open{overflow:hidden}
   font-family:var(--fd);
   font-style:italic;
   font-weight:600;
-  font-size:.88rem;
-  line-height:1.2;
+  font-size:.84rem;
+  line-height:1.15;
   color:var(--accent-deep);
   margin:0;
   display:inline;
@@ -2791,7 +2709,7 @@ body.menu-open{overflow:hidden}
 .floor-detail__zone-function::after{
   content:"";
   display:block;
-  height:.2rem;
+  height:.28rem;
 }
 .floor-detail__zone-meta{
   display:none; /* hidden to save vertical space; kept in HTML for semantic structure */
@@ -2802,8 +2720,8 @@ body.menu-open{overflow:hidden}
   padding:0;
   margin:0;
   font-family:var(--fd);
-  font-size:.8rem;
-  line-height:1.35;
+  font-size:.76rem;
+  line-height:1.3;
   color:var(--ink);
   opacity:.78;
 }
@@ -2820,7 +2738,7 @@ body.menu-open{overflow:hidden}
 }
 /* Block variant — each <li> is its own line. Used where bullets carry
    richer descriptions that would clutter as inline mid-dot lists. */
-.floor-detail__zone-list--block li{display:block;margin:0 0 .35rem}
+.floor-detail__zone-list--block li{display:block;margin:0 0 .28rem}
 .floor-detail__zone-list--block li:last-child{margin-bottom:0}
 .floor-detail__zone-list--block li:not(:last-child)::after{content:none}
 .floor-detail__zone-list--block li strong{font-weight:600;color:var(--ink)}
@@ -2830,116 +2748,6 @@ body.menu-open{overflow:hidden}
   .floor-plan__split{
     grid-template-columns:1fr;
     gap:1.5rem;
-  }
-  .floor-plan__floors-grid{
-    grid-template-columns:1fr;
-  }
-}
-
-/* Getting Here — one wide card with 3 internal columns */
-.floor-plan__getting-here{
-  margin-top:clamp(.3rem,.5vw,.5rem);
-  margin-bottom:clamp(.3rem,.5vw,.5rem);
-}
-.floor-plan__getting-here.floor-detail__floor{
-  padding:.4rem .65rem .45rem;
-}
-/* Registration wide tile */
-.floor-plan__reg-tile{
-  margin-top:0;
-  margin-bottom:clamp(.3rem,.5vw,.5rem);
-}
-.floor-plan__reg-label{
-  color:#1a7a40 !important;
-  border-color:rgba(26,122,64,.4) !important;
-  background:rgba(26,122,64,.1) !important;
-  margin-bottom:.55rem;
-}
-.floor-plan__reg-cols{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:0;
-  align-items:flex-start;
-}
-.floor-plan__reg-col{
-  display:flex;
-  flex-direction:column;
-  gap:.3rem;
-  padding-right:clamp(.75rem,1.5vw,1.25rem);
-}
-.floor-plan__reg-col--right{
-  padding-left:clamp(.75rem,1.5vw,1.25rem);
-  padding-right:0;
-  border-left:1px solid var(--rule);
-}
-@media (max-width:900px){
-  .floor-plan__reg-cols{grid-template-columns:1fr;gap:.65rem}
-  .floor-plan__reg-col,.floor-plan__reg-col--right{padding-left:0;padding-right:0;border-left:none}
-  .floor-plan__reg-col+.floor-plan__reg-col{border-top:1px solid var(--rule);padding-top:.55rem}
-}
-.floor-plan__getting-here-cols{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:0;
-  align-items:flex-start;
-}
-.floor-plan__entry-card{
-  display:flex;
-  flex-direction:column;
-  gap:.35rem;
-  padding-right:clamp(.75rem,1.5vw,1.25rem);
-}
-.floor-plan__entry-card--mid{
-  padding-left:clamp(.75rem,1.5vw,1.25rem);
-  padding-right:clamp(.75rem,1.5vw,1.25rem);
-  border-left:1px solid var(--rule);
-  border-right:1px solid var(--rule);
-}
-.floor-plan__getting-here-cols > .floor-plan__entry-card:last-child{
-  padding-left:clamp(.75rem,1.5vw,1.25rem);
-  padding-right:0;
-}
-.floor-plan__entry-name{
-  font-family:var(--fd);
-  font-size:.88rem;
-  font-weight:600;
-  line-height:1.2;
-  color:var(--ink);
-  display:block;
-}
-.floor-plan__entry-map-link{
-  color:var(--accent-deep);
-  text-decoration:none;
-  border-bottom:1px solid rgba(217,101,31,.3);
-}
-.floor-plan__entry-map-link:hover{
-  border-bottom-color:var(--accent-deep);
-}
-.floor-plan__entry-body{
-  font-family:var(--fd);
-  font-size:.72rem;
-  line-height:1.36;
-  color:var(--ink);
-  opacity:.78;
-  margin:0;
-}
-@media (max-width:900px){
-  .floor-plan__getting-here-cols{
-    grid-template-columns:1fr;
-    gap:.85rem;
-  }
-  .floor-plan__entry-card,
-  .floor-plan__entry-card--mid{
-    padding-left:0;
-    padding-right:0;
-    border-left:none;
-    border-right:none;
-    border-top:1px solid var(--rule);
-    padding-top:.65rem;
-  }
-  .floor-plan__entry-card:first-child{
-    border-top:none;
-    padding-top:0;
   }
 }
 @media (max-width:720px){
@@ -3049,7 +2857,7 @@ body.menu-open{overflow:hidden}
 <section class="hero" id="top">
   <div class="container">
     <div class="hero__grid">
-      <div class="hero__logo-col" style="background:transparent">
+      <div class="hero__logo-col" style="background:#F4ECE0">
         <div role="img" aria-label="The Sovereign Summit"
              style="width:100%;
                     aspect-ratio:1/1;
@@ -3066,18 +2874,14 @@ body.menu-open{overflow:hidden}
   </div>
   <div class="hero__warning-body">Nothing on this site is accurate. Used as an example only.</div>
 </div>
-<div class="hero__headline-wrap">
-<div class="hero__headline-center">
 <h1 class="hero__headline">
           <em>The</em> <strong style="font-weight:600">premier</strong> gathering discussing<br>
           <span class="accent">Energy · AI · Freedom · Bitcoin</span><br>
           in vibrant Miami Beach, FL
         </h1>
-</div>
         <a href="#hero-details" class="hero__scroll" aria-label="Scroll to event details">
           <span class="hero__scroll-icon" aria-hidden="true">↓</span>
         </a>
-</div>
         <div class="hero__rule" id="hero-details"></div>
         <dl class="hero__facts">
           <div class="hero__fact">
@@ -3618,9 +3422,7 @@ body.menu-open{overflow:hidden}
     </div>
     <div class="friends__become">
       <div class="friends__become-text" style="font-style:normal;font-size:clamp(1.1rem,1.5vw,1.35rem);color:var(--ink);font-weight:400;letter-spacing:-.01em">Become a founding sponsor of <em>The Sovereign Summit.</em></div>
-      <div style="margin-top:.6rem;font-family:var(--fd);font-size:clamp(.95rem,1.1vw,1.1rem);color:var(--ink-soft);line-height:1.5">
-        Founding sponsorships are limited — <a href="mailto:info@thesovereignsummit.com" style="color:var(--accent-deep);font-style:italic;text-decoration:none;border-bottom:1px solid currentColor">email&nbsp;us&nbsp;at&nbsp;info@thesovereignsummit.com</a> to reserve your spot before they're gone.
-      </div>
+      <a href="#" class="btn" style="background:var(--ink);color:var(--paper);border-color:var(--ink);padding:1rem 2rem;font-size:.8rem;letter-spacing:.18em">Sponsorship details <span class="btn__arrow">→</span></a>
     </div>
   </div>
 </section>
@@ -3717,7 +3519,7 @@ body.menu-open{overflow:hidden}
         <span class="btn__arrow">↓</span>
       </button>
     </div>
-    <p class="partners__footnote">Know an organization, media outlet, or community that belongs in this room?<br><a href="mailto:info@thesovereignsummit.com" style="color:var(--accent-deep);text-decoration:none;border-bottom:1px solid currentColor"><em>Email info@thesovereignsummit.com to explore a partnership.</em></a></p>
+    <p class="partners__footnote">Reach out to us to become a founding partner of The Sovereign Summit.<br><a href="#subscribe" style="color:var(--accent-deep);text-decoration:none"><em>Subscribe below to stay up to date with all our updates.</em></a></p>
   </div>
 </section>
 
@@ -3738,20 +3540,6 @@ body.menu-open{overflow:hidden}
             <img src="images/fontainebleau.jpg" alt="Fontainebleau Miami Beach — aerial view of the resort, pool deck, and oceanfront" width="988" height="556" loading="lazy" decoding="async">
           </picture>
         </div>
-        <a href="https://www.fontainebleau.com/miamibeach/" target="_blank" rel="noopener" class="room-block-btn">
-          <div style="display:flex;align-items:center;justify-content:space-between;gap:1.25rem;">
-            <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;flex:1;text-align:center;gap:.35rem;">
-              <div style="font-family:var(--fd);font-style:italic;font-size:1.5rem;font-weight:700;line-height:1.1;">Official Summit<br>Room Block</div>
-              <div style="font-family:var(--fm);font-size:.56rem;letter-spacing:.13em;text-transform:uppercase;opacity:.8;white-space:nowrap;">Stay Onsite for the Summit</div>
-              <div style="font-family:var(--fm);font-size:.56rem;letter-spacing:.13em;text-transform:uppercase;opacity:.8;white-space:nowrap;">Discounted Rate Guaranteed</div>
-            </div>
-            <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;border-left:1px solid rgba(74,50,8,.2);padding-left:1.25rem;flex-shrink:0;">
-              <div style="font-family:var(--fd);font-size:2rem;line-height:1;font-weight:400;">$425<span style="font-size:.9rem;opacity:.65;">/night</span></div>
-              <div style="font-family:var(--fm);font-size:.56rem;letter-spacing:.18em;text-transform:uppercase;margin-top:.65rem;opacity:.7;font-weight:700;line-height:1.8;">Click Here To<br>Reserve Your Rate &rarr;</div>
-            </div>
-          </div>
-          <div style="margin-top:.75rem;padding-top:.65rem;border-top:1px solid rgba(74,50,8,.15);text-align:center;font-family:var(--fm);font-size:.5rem;letter-spacing:.1em;text-transform:uppercase;opacity:.7;white-space:nowrap;">Email info@thesovereignsummit.com with questions/concerns</div>
-        </a>
       </div>
       <div class="venue__content">
         <div class="eyebrow" style="color:var(--accent-deep)">Coastal Convention Center</div>
@@ -3760,7 +3548,7 @@ body.menu-open{overflow:hidden}
         <p>Fontainebleau was chosen because the best events do not end when the sessions do. They keep unfolding in the lobby, over dinner, by the pool, at the bar, and in the late-night conversations no agenda can manufacture. The Sovereign Summit is built around that kind of energy: an integrated resort experience where many attendees are staying on property, major moments happen on site, and the community stays together instead of scattering across the city. That is what makes Fontainebleau different. It turns the venue into the social engine of the Summit.</p>
         <div class="venue__details">
           <div><div class="venue__detail-label">Address</div><div class="venue__detail-value">4441 Collins Avenue<br>Miami Beach, FL 33140</div></div>
-          <div><div class="venue__detail-label">Getting There</div><div class="venue__detail-value">12 miles from MIA<br>28 miles from FLL<br>130 miles from Naples, FL<br>239 miles from Orlando, FL<br>285 miles from Tampa, FL</div></div>
+          <div><div class="venue__detail-label">Airports</div><div class="venue__detail-value">12 miles from MIA<br>28 miles from FLL</div></div>
           <div><div class="venue__detail-label">Lodging</div><div class="venue__detail-value"><a class="venue__link" href="https://www.fontainebleau.com/miamibeach/" target="_blank" rel="noopener">TSS Room Block @ Fontainebleau</a><br><span style="display:inline-block;margin-top:.5rem">Prefer a family-friendly or budget hotel?</span><br><a class="venue__link" href="https://www.victoirevoyages.com" target="_blank" rel="noopener">Victoire Voyages</a> can secure preferred rates.</div></div>
           <div class="venue__detail--wide">
             <div class="venue__detail-label">On-property amenities</div>
@@ -3785,29 +3573,9 @@ body.menu-open{overflow:hidden}
       <div class="sec-hd__num">Nº 07 — Floor Plan</div>
       <h2 class="section-title sec-hd__title">The Summit, <em>mapped.</em></h2>
     </header>
-    <p class="floor-plan__intro">Five floors inside the <strong>Coastal Convention Center</strong>, connected to the Fontainebleau by skybridge.</p>
-
-    <!-- Getting Here — one wide tile with 3 internal columns -->
-    <div class="floor-detail__floor floor-plan__getting-here">
-      <div class="floor-detail__label floor-detail__label--alt" style="margin-bottom:.65rem">Getting Here</div>
-      <div class="floor-plan__getting-here-cols">
-        <div class="floor-plan__entry-card">
-          <strong class="floor-plan__entry-name"><a href="https://maps.app.goo.gl/bTpqhgUcmu2nDwZN7" target="_blank" rel="noopener" class="floor-plan__entry-map-link">Arrivals Drive ↗</a></strong>
-          <p class="floor-plan__entry-body">Follow signs for the Coastal Convention Center, in the same direction as the Trésor Tower. Near the Trésor Tower, take the elevator labeled "Coastal Convention Center." Select the Skybridge Level. Walk across the skybridge, which will bring you directly to the third floor of the Coastal Convention Center.</p>
-        </div>
-        <div class="floor-plan__entry-card floor-plan__entry-card--mid">
-          <strong class="floor-plan__entry-name"><a href="https://maps.app.goo.gl/5YkczQygMQBGN16r9" target="_blank" rel="noopener" class="floor-plan__entry-map-link">Departures Drive ↗</a></strong>
-          <p class="floor-plan__entry-body">As you pull into the area, look for the Coastal Convention Center sign on the building that's on the right-hand side. Walk through the doors toward the Trésor Tower area. Take the elevator labeled "Coastal Convention Center." Select the Skybridge Level. Walk across the skybridge, which will bring you directly to the third floor of the Coastal Convention Center.</p>
-        </div>
-        <div class="floor-plan__entry-card">
-          <strong class="floor-plan__entry-name"><a href="https://maps.app.goo.gl/fKQqf2RDcDq8r1k99" target="_blank" rel="noopener" class="floor-plan__entry-map-link">Collins Avenue Walk-Up ↗</a></strong>
-          <p class="floor-plan__entry-body">On Collins Avenue, directly across from Soho Beach House, look for the pedestrian entrance to the Coastal Convention Center. Walk through the doors and take the elevator or stairs up into the convention center.</p>
-        </div>
-      </div>
-    </div>
-
+    <p class="floor-plan__intro">Five floors. One Summit. Every space chosen with intent. Mainstage to expo, sovereign lounge to rooftop.</p>
     <div class="floor-plan__split">
-      <!-- Column 1: Floor diagram only -->
+      <!-- Column 1: Floor diagram + Getting Here tile -->
       <div class="floor-plan__col floor-plan__col--media">
         <figure class="floor-plan__figure">
           <button type="button" class="floor-plan__expand-btn" aria-label="Expand floor plan to full size">
@@ -3815,10 +3583,23 @@ body.menu-open{overflow:hidden}
             <span class="floor-plan__expand-hint">Tap to expand</span>
           </button>
         </figure>
+        <div class="floor-detail__floor">
+          <div class="floor-detail__label floor-detail__label--alt">Getting Here</div>
+          <div class="floor-detail__zones">
+            <article class="floor-detail__zone">
+              <h3 class="floor-detail__zone-name">Coastal Convention Center</h3>
+              <p class="floor-detail__zone-function"><em>Three entry points</em></p>
+              <ul class="floor-detail__zone-list floor-detail__zone-list--block">
+                <li><strong>Fontainebleau main lobby &amp; South drop-off:</strong> Follow signs to the Trésor Tower skybridge, take elevators or walkways to the skybridge level, cross over Collins Ave into the 3rd floor of the CCC.</li>
+                <li><strong>Collins Ave walk-up:</strong> Pedestrian entrance off Collins Ave into the 1st floor of the CCC.</li>
+              </ul>
+            </article>
+          </div>
+        </div>
       </div>
 
-      <!-- Columns 2+3: 2×2 floor grid — 5F|4F top row, 3F|2F bottom row -->
-      <div class="floor-plan__floors-grid">
+      <!-- Column 2: Fifth + Fourth + Third Floor -->
+      <div class="floor-plan__col">
         <div class="floor-detail__floor">
           <div class="floor-detail__label">5 &middot; Fifth Floor</div>
           <div class="floor-detail__zones">
@@ -3851,24 +3632,27 @@ body.menu-open{overflow:hidden}
           <div class="floor-detail__zones floor-detail__zones--two">
             <article class="floor-detail__zone">
               <h3 class="floor-detail__zone-name">Cove Gallerie</h3>
-              <p class="floor-detail__zone-function"><em>GA Check-In</em></p>
+              <p class="floor-detail__zone-function"><em>VIP Check-In</em></p>
               <ul class="floor-detail__zone-list">
-                <li>Present your QR code to receive your badge and lanyard &mdash; your credentials for the full summit experience</li>
+                <li>Dedicated Private Registration</li>
               </ul>
             </article>
             <article class="floor-detail__zone">
               <h3 class="floor-detail__zone-name">Anchor 1/2/3</h3>
-              <p class="floor-detail__zone-function"><em>VIP Area &amp; VIP Check-In</em></p>
+              <p class="floor-detail__zone-function"><em>VIP &amp; Speaker Area</em></p>
               <p class="floor-detail__zone-meta">2,728 sq ft · Up to 245 reception · 200 theater</p>
               <ul class="floor-detail__zone-list">
-                <li>VIP Check-In</li>
                 <li>Sovereign Lounge for VIPs</li>
                 <li>Speaker Green Room Area</li>
-                <li>More TBA</li>
+                <li>More Specifics TBA</li>
               </ul>
             </article>
           </div>
         </div>
+      </div>
+
+      <!-- Column 3: Second + First Floor -->
+      <div class="floor-plan__col">
         <div class="floor-detail__floor">
           <div class="floor-detail__label">2 &middot; Second Floor</div>
           <div class="floor-detail__zones floor-detail__zones--three">
@@ -3905,9 +3689,21 @@ body.menu-open{overflow:hidden}
             </article>
           </div>
         </div>
+        <div class="floor-detail__floor">
+          <div class="floor-detail__label">1 &middot; First Floor</div>
+          <div class="floor-detail__zones">
+            <article class="floor-detail__zone">
+              <h3 class="floor-detail__zone-name">Main Lobby</h3>
+              <p class="floor-detail__zone-function"><em>GA Check-In</em></p>
+              <ul class="floor-detail__zone-list">
+                <li>General Admission Registration</li>
+                <li>More TBA</li>
+              </ul>
+            </article>
+          </div>
+        </div>
       </div>
     </div>
-
     <p class="floor-plan__caption floor-plan__caption--footnote">Floor plan reflects current planning. Final wayfinding shared with attendees ahead of the event.</p>
     <dialog class="floor-plan__dialog" aria-label="Floor plan, expanded view">
       <button type="button" class="floor-plan__dialog-close" aria-label="Close expanded floor plan">×</button>
@@ -3925,75 +3721,75 @@ body.menu-open{overflow:hidden}
     <div class="faq__list">
       <details class="faq__item">
         <summary class="faq__q"><span class="faq__num">01</span><span class="faq__q-text">What is <em>The Sovereign Summit?</em></span><span class="faq__icon"></span></summary>
-        <div class="faq__a"><p>Two days in Miami Beach where <strong>Energy, AI, Freedom, and Bitcoin</strong> stop being separate conversations and start being one. Built for people who already sense these things are connected but haven&rsquo;t had a room where all four are treated as equals. <em><u>We say Bitcoin and not crypto intentionally.</u> Sound money belongs here. Speculative assets don&rsquo;t.</em></p><p>We do it in a resort, not a convention center, on purpose. When everyone is staying, eating, and drinking in the same place, the conference doesn&rsquo;t end when the session does. That&rsquo;s the design, not a happy accident.</p><p>What&rsquo;s inside:</p><ul class="faq__bullets"><li>A big open <strong>main stage</strong></li><li>An <strong>expo floor</strong> with companies and organizations that care about sovereignty</li><li>A <strong>Workshops Area</strong> with breakout sessions and hands-on workshops</li><li>An <strong>Open Source Area</strong> for nonprofits, community builders, and small businesses</li><li><strong>VIP Areas</strong> exclusively for VIP ticket holders</li></ul><p><em>Come away with a clearer picture of where the world is going, the people making it happen, and connections that last well beyond the event.</em></p></div>
+        <div class="faq__a"><p>Two days, one stage, one hotel. February 5 and 6, 2027 at Fontainebleau Miami Beach. Talks and conversations across Energy, AI, Freedom, and Bitcoin with some of the best speakers in the world. Sessions run 10 to 5. Make sure to check out the <a class="venue__link" href="#side-events">side events</a> for what&rsquo;s happening before, during and after the summit.</p></div>
       </details>
       <details class="faq__item">
         <summary class="faq__q"><span class="faq__num">02</span><span class="faq__q-text">Who is <em>this for?</em></span><span class="faq__icon"></span></summary>
-        <div class="faq__a"><p><strong>For people who are curious to learn more about the world around them and better understand how quickly things are changing.</strong></p><p>Builders, founders, investors, and researchers. People who work in energy, AI, finance, Bitcoin, or policy and sense that what&rsquo;s happening in the other rooms matters to their room too. People who are new to Bitcoin and want the honest version, not the sales pitch. People who have been in Bitcoin for years and want to think bigger.</p><p><u>You don&rsquo;t need to be an expert in all four pillars.</u> You just need to be genuinely curious about at least one of them and open to where the others take you.</p></div>
+        <div class="faq__a"><p>Builders, founders, capital allocators, researchers, and the operators around them. For people who are curious to learn more about the world around them and better understand how quickly things are changing. We also created this conference for those who appreciate an all-in-one experience having an iconic hotel as the home base for most of the events happening during the summit.</p></div>
       </details>
       <details class="faq__item">
-        <summary class="faq__q"><span class="faq__num">03</span><span class="faq__q-text">Why <em>Bitcoin</em> and not Crypto?</span><span class="faq__icon"></span></summary>
-        <div class="faq__a"><p><strong>Bitcoin &ne; Crypto.</strong> If you disagree, this conference isn&rsquo;t for you. If you don&rsquo;t understand, this conference is definitely for you to get there. We treat Bitcoin as sound money and a freedom technology, not a market to trade. Bitcoin sits alongside Energy, AI, and Freedom as one of four equal threads.</p></div>
+        <summary class="faq__q"><span class="faq__num">03</span><span class="faq__q-text">Why isn&rsquo;t this a <em>crypto</em> conference?</span><span class="faq__icon"></span></summary>
+        <div class="faq__a"><p>Bitcoin &ne; Crypto. If you disagree, this conference isn&rsquo;t for you. If you don&rsquo;t understand, this conference is definitely for you to get there. We treat Bitcoin as sound money and a freedom technology, not a market to trade. Bitcoin sits alongside Energy, AI, and Freedom as one of four equal threads.</p></div>
       </details>
       <details class="faq__item">
         <summary class="faq__q"><span class="faq__num">04</span><span class="faq__q-text">How is this different from other <em>Bitcoin events?</em></span><span class="faq__icon"></span></summary>
-        <div class="faq__a"><p><strong>Most Bitcoin conferences start with the right idea and drift.</strong> Sponsors come from finance and trading, so the program fills up with price predictions, ETF panels, and institutional adoption talk. It&rsquo;s not wrong, but it&rsquo;s not the whole picture. The soul of Bitcoin -- sound money, energy, freedom, individual sovereignty -- gets crowded out by whatever fills the most seats and sells the most sponsorships.</p><p><em>Size and venue matter more than most organizers admit.</em> Too small and it&rsquo;s a meetup. Too big and it&rsquo;s a trade show with fifteen competing stages and a convention hall that swallows the program. We chose an integrated resort and a single stage on purpose. The format forces focus. The setting keeps everyone in the same place, long after the last session ends.</p><p><u>The right size. The right venue. The right topics.</u> Curated enough to be worth your time, big enough to matter.</p></div>
+        <div class="faq__a"><p>Most Bitcoin events are either too big (tens of thousands of attendees, multiple stages, a trade-show floor that drowns the program) or too small to land the speakers worth flying in for. We picked the middle. One stage. One hotel and venue. When the sessions end at five, the evenings carry the conversation into the Fontainebleau either at a side event or at the hotel lobby bar for LobbyCon. Four threads instead of one, because each is part of the framework for how the future unfolds.</p></div>
       </details>
       <details class="faq__item">
         <summary class="faq__q"><span class="faq__num">05</span><span class="faq__q-text">This is the first year. Why should I <em>trust it?</em></span><span class="faq__icon"></span></summary>
-        <div class="faq__a"><p><em>Fair question.</em> Inaugural events live or die on curation, not scale, and curation is exactly what we are obsessing over: the speakers, the venue, the format, the sponsors, the crowd.</p><p><strong>The honest answer is that you can&rsquo;t fully trust a first edition until it happens.</strong> What we can tell you is who is involved, what we&rsquo;re building, and why we think it&rsquo;s worth showing up for. The speaker lineup, the venue, and the program will speak for themselves as they come together. Follow along and make your own call.</p><p><u>What we will promise:</u> every sponsor in the room is here because they&rsquo;re aligned with what this conference stands for. We chose them carefully, and that same standard applies to every part of the program.</p></div>
+        <div class="faq__a"><p>Inaugural events live or die on curation, not scale. We&rsquo;re optimizing for the right venue, speakers, sponsors and partners. The venue, the format, and the refund terms are set up so the downside is small if it doesn&rsquo;t work out. The upside is being early to something worth coming back to.</p></div>
       </details>
       <details class="faq__item">
         <summary class="faq__q"><span class="faq__num">06</span><span class="faq__q-text">What&rsquo;s in a <em>General Admission</em> ticket?</span><span class="faq__icon"></span></summary>
-        <div class="faq__a"><p><strong>Full access to both days of the summit.</strong> Every mainstage session, the expo floor, the Workshops Area, and the Open Source Area. Food and drink on site during summit hours.</p><p>General Admission is the full conference experience, <em>with the exception of VIP Areas and VIP-only events.</em> If you&rsquo;re here for the ideas, the sessions, and the people, GA gets you everything you need.</p><p><em>The <a href="https://pay.zaprite.com/pl_wIAImtY5wz" target="_blank"><u>Saturday Boat After Party</u></a> is currently the only official side event open to GA ticket holders.</em> More side events will be announced as we get closer to February.</p><p><strong><a href="https://pay.zaprite.com/pl_wIAImtY5wz" target="_blank"><u>Grab your GA ticket here.</u></a></strong></p></div>
+        <div class="faq__a"><p>Both main days, all mainstage sessions, the Thursday Bitcoin Fundamentals session, and food and drink on site during summit hours.</p></div>
       </details>
       <details class="faq__item">
         <summary class="faq__q"><span class="faq__num">07</span><span class="faq__q-text">What does <em>VIP</em> include?</span><span class="faq__icon"></span></summary>
-        <div class="faq__a"><p><strong>Everything in GA, plus a lot more.</strong> Reserved front-row seating. A dedicated VIP area on the 3rd floor for the duration of the summit. And three events that are the real reason people upgrade.</p><p><em>The Thursday Welcome Reception</em> kicks the weekend off with only the VIPs before the conference opens. <em>The Friday Oceanfront Soiree</em> is another VIP only night and another opportunity to mingle with the speakers, sponsors, and other like-minded people. <em>The Saturday Boat After Party</em> closes it out the right way with a fun big closing party.</p><p><u>VIP is capped at 200 people.</u> At that size, you will meet everyone who matters. That&rsquo;s the point.</p><p><strong><u><a href="https://pay.zaprite.com/pl_wIAImtY5wz" target="_blank">Secure your VIP spot here.</a></u></strong></p></div>
+        <div class="faq__a"><p>Everything in GA, plus reserved front-row seating, the dedicated 3rd floor area for VIPs, the Thursday Welcome Reception, the Friday Oceanfront Soiree, and the Saturday Boat After Party. Capped at 200 spots.</p></div>
       </details>
       <details class="faq__item">
         <summary class="faq__q"><span class="faq__num">08</span><span class="faq__q-text">What about <em>side events?</em></span><span class="faq__icon"></span></summary>
-        <div class="faq__a"><p><strong>Side events are where a lot of the magic happens.</strong> They run before, during, and after the main conference days and range from intimate dinners and workshops to larger evening events. Some are included with your ticket. Some are available to purchase separately. Some are VIP only.</p><p><em>Think of them as the unofficial official program.</em> The conversations that start on the main stage tend to continue at the side events, often with the same speakers in a much smaller room.</p><p>Check out the <strong><u><a href="#side-events">Side Events section</a></u></strong> for the current lineup. More will be announced as we get closer to February.</p></div>
+        <div class="faq__a"><p>Four of them, before and around the main days. See the <a class="venue__link" href="#side-events">Side Events section</a> for the full lineup.</p></div>
       </details>
       <details class="faq__item">
         <summary class="faq__q"><span class="faq__num">09</span><span class="faq__q-text">What&rsquo;s the <em>refund and transfer</em> policy?</span><span class="faq__icon"></span></summary>
-        <div class="faq__a"><p><strong>Full refunds through December 1, 2026.</strong> Free transfers through January 28, 2027, no questions asked.</p><p><em>Life happens.</em> If your situation changes and neither option works, <a href="mailto:info@thesovereignsummit.com"><strong><u>email us</u></strong></a> and we&rsquo;ll figure it out.</p></div>
+        <div class="faq__a"><p>Full refunds through December 1, 2026. Free transfers through January 28, 2027, no questions asked. For anything else, <a class="venue__link" href="mailto:info@thesovereignsummit.com">email us</a>.</p></div>
       </details>
       <details class="faq__item">
         <summary class="faq__q"><span class="faq__num">10</span><span class="faq__q-text">Can I pay in <em>Bitcoin?</em></span><span class="faq__icon"></span></summary>
-        <div class="faq__a"><p><em>Yes, and we wouldn&rsquo;t have it any other way.</em> On-chain and Lightning both work. Lightning settles fastest. Price is identical however you pay.</p><p><strong><u><a href="https://pay.zaprite.com/pl_wIAImtY5wz" target="_blank">Grab your ticket here.</a></u></strong></p></div>
+        <div class="faq__a"><p>Yes. On-chain and Lightning both work; Lightning settles fastest. Price is identical.</p></div>
       </details>
       <details class="faq__item">
         <summary class="faq__q"><span class="faq__num">11</span><span class="faq__q-text">Where should I <em>stay?</em></span><span class="faq__icon"></span></summary>
-        <div class="faq__a"><p><strong>Stay on property.</strong> The conference is built around the Fontainebleau and that&rsquo;s where most of the action happens, on and off the clock. <strong><u><a href="https://www.fontainebleau.com/miamibeach/" target="_blank">Click here for our preferred-rate room block.</a></u></strong> For off-property options, <strong><u><a href="https://www.victoirevoyages.com" target="_blank" rel="noopener">Victoire Voyages</a></u></strong> can help with suggestions, rates, and perks.</p></div>
+        <div class="faq__a"><p>On property at the Fontainebleau. We hold a preferred-rate room block, and the format is built around the assumption that most attendees stay there. For off-property options, contact <a class="venue__link" href="https://www.victoirevoyages.com" target="_blank" rel="noopener">Victoire Voyages</a> for suggestions and the best rates, upgrades and perks.</p></div>
       </details>
       <details class="faq__item">
         <summary class="faq__q"><span class="faq__num">12</span><span class="faq__q-text">What&rsquo;s the <em>dress code?</em></span><span class="faq__icon"></span></summary>
-        <div class="faq__a"><p><em>There isn&rsquo;t one, but dress for where you might end up.</em> Pool attire at the pool. What you&rsquo;d normally wear at a conference for your role. Something decent for Miami nights that could go anywhere. After all, LIV is at the Fontainebleau. <strong>Miami in February is warm but not hot</strong>, so check the <strong><u><a href="https://weather.com/weather/today/l/Miami+Beach+FL+33139" target="_blank" rel="noopener">forecast</a></u></strong> before you pack.</p></div>
+        <div class="faq__a"><p>There is none, but dress accordingly to how you want to be perceived. Pool attire at the pool. What you&rsquo;d normally wear at a conference for your role. Something decent for Miami nights where you don&rsquo;t know where they might end up. After all, LIV is at the Fontainebleau. Miami in February is warm but not hot, so check the <a class="venue__link" href="https://weather.com/weather/today/l/Miami+Beach+FL+33139" target="_blank" rel="noopener">forecast</a>.</p></div>
       </details>
       <details class="faq__item">
         <summary class="faq__q"><span class="faq__num">13</span><span class="faq__q-text"><em>Dietary needs, accessibility, or quiet spaces?</em></span><span class="faq__icon"></span></summary>
-        <div class="faq__a"><p><strong>The Fontainebleau is fully ADA-accessible.</strong> For anything else: dietary restrictions, nursing rooms, prayer space, quiet areas, or anything that helps you have a good experience, <strong><u><a href="mailto:info@thesovereignsummit.com">email us</a></u></strong> early. Earlier requests get better answers.</p></div>
+        <div class="faq__a"><p>Fontainebleau is fully ADA-accessible. Tell us early about dietary restrictions, nursing rooms, prayer space, or anything else that helps you have a good event. Email <a class="venue__link" href="mailto:info@thesovereignsummit.com">info@thesovereignsummit.com</a>. Earlier requests get better answers.</p></div>
       </details>
       <details class="faq__item">
-        <summary class="faq__q"><span class="faq__num">14</span><span class="faq__q-text">Can I bring <em>my kids?</em></span><span class="faq__icon"></span></summary>
-        <div class="faq__a"><p><strong>Every attendee needs a paid ticket, including kids <u>under 18.</u></strong></p><p>For GA, we offer a <strong><u><a href="https://pay.zaprite.com/pl_wIAImtY5wz" target="_blank">Kids General Admission ticket</a></u></strong> for children attending with a parent or guardian.</p><p>For VIP, we do not offer a Kids VIP ticket. Parents with VIP tickets who want to bring their kids to VIP areas and VIP-only events will need to purchase a full-price VIP ticket for them.</p><p><em>If your child looks 18 or older, we may ask for proof of age at the door.</em></p><p><em>Miami Beach in February is also a great city to bring the family for the days around the conference.</em></p></div>
+        <summary class="faq__q"><span class="faq__num">14</span><span class="faq__q-text">Can I bring <em>family, spouse, or kids?</em></span><span class="faq__icon"></span></summary>
+        <div class="faq__a"><p>Every person needs a paid ticket. We approve exceptions for kids on a case-by-case basis. <a class="venue__link" href="mailto:info@thesovereignsummit.com">Email us</a> to ask. Miami Beach is also a great city to bring family along for the surrounding days.</p></div>
       </details>
       <details class="faq__item">
         <summary class="faq__q"><span class="faq__num">15</span><span class="faq__q-text">Will sessions be <em>recorded or streamed?</em></span><span class="faq__icon"></span></summary>
-        <div class="faq__a"><p><strong>No public livestream.</strong> Sessions will be recorded and released after the event. <strong><u><a href="#subscribe">Subscribe below</a></u></strong> to stay up to date on release timing and everything else.</p></div>
+        <div class="faq__a"><p>No public livestream. Sessions will be recorded and released after the event. Release timing to be confirmed.</p></div>
       </details>
       <details class="faq__item">
         <summary class="faq__q"><span class="faq__num">16</span><span class="faq__q-text">What&rsquo;s the <em>code of conduct?</em></span><span class="faq__icon"></span></summary>
-        <div class="faq__a"><p><em>Treat people the way you&rsquo;d want to be treated.</em> That covers speakers, staff, and attendees. Personal photos are fine. Recording sessions without permission isn&rsquo;t. Harassment of any kind ends your access immediately with no refund. <strong>This is a private event and we reserve the right to refuse entry to anyone whose presence conflicts with the spirit of the room.</strong></p></div>
+        <div class="faq__a"><p>Treat people the way you&rsquo;d want to be treated, including speakers, staff, and other attendees. Personal photos are fine; recording sessions without permission isn&rsquo;t. Harassment of any kind ends your access immediately, with no refund. This is a private event and we reserve the right to refuse entry to anyone whose presence conflicts with the spirit of the room.</p></div>
       </details>
       <details class="faq__item">
         <summary class="faq__q"><span class="faq__num">17</span><span class="faq__q-text">Interested in <em>sponsoring?</em></span><span class="faq__icon"></span></summary>
-        <div class="faq__a"><p><em>We work with a small number of partners whose product or company genuinely belongs in front of this room.</em> If that sounds like you, <strong><u><a href="mailto:info@thesovereignsummit.com">email us</a></u></strong> or <strong><u><a href="#sponsors">learn more here.</a></u></strong></p></div>
+        <div class="faq__a"><p>We work with a small number of partners whose product or company belongs in front of this room. Email <a class="venue__link" href="mailto:info@thesovereignsummit.com">info@thesovereignsummit.com</a> or <a class="venue__link" href="#sponsors">click here</a> for more information.</p></div>
       </details>
       <details class="faq__item">
         <summary class="faq__q"><span class="faq__num">18</span><span class="faq__q-text">Still have <em>questions?</em></span><span class="faq__icon"></span></summary>
-        <div class="faq__a"><p><strong><u><a href="mailto:info@thesovereignsummit.com">Email us</a></u></strong> or DM <strong><u><a href="https://x.com/sovereignmiami" target="_blank" rel="noopener">@sovereignmiami</a></u></strong> on X. A real person answers, typically within a day.</p></div>
+        <div class="faq__a"><p>Email <a class="venue__link" href="mailto:info@thesovereignsummit.com">info@thesovereignsummit.com</a> or DM <a class="venue__link" href="https://x.com/sovereignmiami" target="_blank" rel="noopener">@sovereignmiami</a> on X. A real person answers, typically within a day.</p></div>
       </details>
     </div>
   </div>
