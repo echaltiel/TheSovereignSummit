@@ -2817,6 +2817,39 @@ body.menu-open{overflow:hidden}
 .floor-plan__getting-here.floor-detail__floor{
   padding:.4rem .65rem .45rem;
 }
+/* Registration wide tile */
+.floor-plan__reg-tile{
+  margin-top:0;
+  margin-bottom:clamp(.3rem,.5vw,.5rem);
+}
+.floor-plan__reg-label{
+  color:#1a7a40 !important;
+  border-color:rgba(26,122,64,.4) !important;
+  background:rgba(26,122,64,.1) !important;
+  margin-bottom:.55rem;
+}
+.floor-plan__reg-cols{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:0;
+  align-items:flex-start;
+}
+.floor-plan__reg-col{
+  display:flex;
+  flex-direction:column;
+  gap:.3rem;
+  padding-right:clamp(.75rem,1.5vw,1.25rem);
+}
+.floor-plan__reg-col--right{
+  padding-left:clamp(.75rem,1.5vw,1.25rem);
+  padding-right:0;
+  border-left:1px solid var(--rule);
+}
+@media (max-width:900px){
+  .floor-plan__reg-cols{grid-template-columns:1fr;gap:.65rem}
+  .floor-plan__reg-col,.floor-plan__reg-col--right{padding-left:0;padding-right:0;border-left:none}
+  .floor-plan__reg-col+.floor-plan__reg-col{border-top:1px solid var(--rule);padding-top:.55rem}
+}
 .floor-plan__getting-here-cols{
   display:grid;
   grid-template-columns:repeat(3,1fr);
@@ -3737,11 +3770,26 @@ body.menu-open{overflow:hidden}
         </div>
         <div class="floor-plan__entry-card floor-plan__entry-card--mid">
           <strong class="floor-plan__entry-name"><a href="https://maps.app.goo.gl/5YkczQygMQBGN16r9" target="_blank" rel="noopener" class="floor-plan__entry-map-link">Departures Drive ↗</a></strong>
-          <p class="floor-plan__entry-body">As you pull into the departures area, look for the Coastal Convention Center sign on the right-hand side. Walk through the doors toward the Trésor Tower area. Take the elevator labeled "Coastal Convention Center." Select the Skybridge Level. Walk across the skybridge, which will bring you directly to the third floor of the Coastal Convention Center.</p>
+          <p class="floor-plan__entry-body">As you pull into the area, look for the Coastal Convention Center sign on the building that's on the right-hand side. Walk through the doors toward the Trésor Tower area. Take the elevator labeled "Coastal Convention Center." Select the Skybridge Level. Walk across the skybridge, which will bring you directly to the third floor of the Coastal Convention Center.</p>
         </div>
         <div class="floor-plan__entry-card">
           <strong class="floor-plan__entry-name"><a href="https://maps.app.goo.gl/fKQqf2RDcDq8r1k99" target="_blank" rel="noopener" class="floor-plan__entry-map-link">Collins Avenue Walk-Up ↗</a></strong>
-          <p class="floor-plan__entry-body">On Collins Avenue, directly across from Soho Beach House, look for the pedestrian entrance to the Coastal Convention Center. Take the elevator or stairs up into the convention center.</p>
+          <p class="floor-plan__entry-body">On Collins Avenue, directly across from Soho Beach House, look for the pedestrian entrance to the Coastal Convention Center. Walk through the doors and take the elevator or stairs up into the convention center.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Registration & Check-In — full-width 2-column tile -->
+    <div class="floor-detail__floor floor-plan__getting-here floor-plan__reg-tile">
+      <div class="floor-detail__label floor-plan__reg-label">Registration &amp; Check-In &nbsp;·&nbsp; 3rd Floor</div>
+      <div class="floor-plan__reg-cols">
+        <div class="floor-plan__reg-col">
+          <strong class="floor-plan__entry-name">GA Check-In</strong>
+          <p class="floor-plan__entry-body">Present your Zaprite QR code at Cove Gallerie (3rd floor) to receive your badge and lanyard — your credentials for the full summit experience.</p>
+        </div>
+        <div class="floor-plan__reg-col floor-plan__reg-col--right">
+          <strong class="floor-plan__entry-name">VIP Check-In</strong>
+          <p class="floor-plan__entry-body">Proceed to Anchor 1/2/3 VIP Area (3rd floor) and present your Zaprite QR code to receive your badge and lanyard.</p>
         </div>
       </div>
     </div>
@@ -3811,7 +3859,7 @@ body.menu-open{overflow:hidden}
         </div>
       </div>
 
-      <!-- Column 3: Second + First Floor -->
+      <!-- Column 3: Second Floor only -->
       <div class="floor-plan__col">
         <div class="floor-detail__floor">
           <div class="floor-detail__label">2 &middot; Second Floor</div>
@@ -3845,19 +3893,6 @@ body.menu-open{overflow:hidden}
                 <li>Breakout sessions</li>
                 <li>Hands-on workshops</li>
                 <li>Roundtables &amp; masterclasses</li>
-              </ul>
-            </article>
-          </div>
-        </div>
-        <div class="floor-detail__floor">
-          <div class="floor-detail__label" style="color:#1a7a40;border-color:rgba(26,122,64,.4);background:rgba(26,122,64,.1)">Registration &amp; Check-In</div>
-          <div class="floor-detail__zones">
-            <article class="floor-detail__zone">
-              <h3 class="floor-detail__zone-name">3rd Floor</h3>
-              <p class="floor-detail__zone-function"><em>GA &amp; VIP Check-In</em></p>
-              <ul class="floor-detail__zone-list floor-detail__zone-list--block">
-                <li><strong>GA Check-In:</strong> Present your Zaprite QR code to receive your badge and lanyard.</li>
-                <li><strong>VIP Check-In:</strong> Proceed to Anchor 1/2/3 VIP Area and present your Zaprite QR code to receive your badge and lanyard.</li>
               </ul>
             </article>
           </div>
