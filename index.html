@@ -2688,8 +2688,25 @@ body.menu-open{overflow:hidden}
 }
 /* The media column gets a slightly larger gap between image and tile
    to visually separate the diagram from the data tile beneath. */
+/* Media col: image floats centered in space above 5F tile */
 .floor-plan__col--media{
   gap:.85rem;
+}
+.floor-plan__col--media .floor-plan__figure{
+  flex:1;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+}
+.floor-plan__col--media .floor-plan__expand-btn{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+/* Rightmost column: single tile vertically centered */
+.floor-plan__split > .floor-plan__col:last-child{
+  justify-content:center;
 }
 .floor-detail__floor{
   background:var(--paper-light);
