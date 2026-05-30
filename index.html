@@ -2705,11 +2705,26 @@ body.menu-open{overflow:hidden}
   flex-direction:column;
   align-items:center;
   justify-content:center;
+  min-height:0;
 }
 .floor-plan__col--media .floor-plan__expand-btn{
   display:flex;
   flex-direction:column;
   align-items:center;
+  justify-content:center;
+  flex:1;
+  min-height:0;
+  width:100%;
+}
+/* In the media column the image fills the available column height (bounded by
+   the floor-tile grid beside it), instead of being capped at a small vh value. */
+.floor-plan__col--media .floor-plan__expand-btn img{
+  flex:1 1 0;
+  min-height:0;
+  max-height:none;
+  width:auto;
+  max-width:100%;
+  object-fit:contain;
 }
 /* Rightmost column: single tile vertically centered */
 .floor-plan__split > .floor-plan__col:last-child{
@@ -3792,11 +3807,11 @@ body.menu-open{overflow:hidden}
       <div class="floor-detail__label floor-detail__label--alt" style="margin-bottom:.65rem">Getting Here</div>
       <div class="floor-plan__getting-here-cols">
         <div class="floor-plan__entry-card">
-          <strong class="floor-plan__entry-name"><a href="https://maps.app.goo.gl/bTpqhgUcmu2nDwZN7" target="_blank" rel="noopener" class="floor-plan__entry-map-link">Arrivals Drive ↗</a></strong>
+          <strong class="floor-plan__entry-name"><a href="https://maps.app.goo.gl/bTpqhgUcmu2nDwZN7" target="_blank" rel="noopener" class="floor-plan__entry-map-link">Arrivals Drive @ Fontainebleau ↗</a></strong>
           <p class="floor-plan__entry-body">Follow signs for the Coastal Convention Center, in the same direction as the Trésor Tower. Near the Trésor Tower, take the elevator labeled "Coastal Convention Center." Select the Skybridge Level. Walk across the skybridge, which will bring you directly to the third floor of the Coastal Convention Center.</p>
         </div>
         <div class="floor-plan__entry-card floor-plan__entry-card--mid">
-          <strong class="floor-plan__entry-name"><a href="https://maps.app.goo.gl/5YkczQygMQBGN16r9" target="_blank" rel="noopener" class="floor-plan__entry-map-link">Departures Drive ↗</a></strong>
+          <strong class="floor-plan__entry-name"><a href="https://maps.app.goo.gl/5YkczQygMQBGN16r9" target="_blank" rel="noopener" class="floor-plan__entry-map-link">Departures Drive @ Fontainebleau ↗</a></strong>
           <p class="floor-plan__entry-body">As you pull into the area, look for the Coastal Convention Center sign on the building that's on the right-hand side. Walk through the doors toward the Trésor Tower area. Take the elevator labeled "Coastal Convention Center." Select the Skybridge Level. Walk across the skybridge, which will bring you directly to the third floor of the Coastal Convention Center.</p>
         </div>
         <div class="floor-plan__entry-card">
