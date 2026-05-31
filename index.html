@@ -1348,7 +1348,7 @@ body.menu-open{overflow:hidden}
    1) Phase 01 has a .tier__ribbon whose adjacent-sibling rule pushes its
       eyebrow down by .75rem. Phases 02/03 have no ribbon so their eyebrows
       sit at the natural top, putting "PHASE 02/03 · ..." higher than Phase 01's.
-   2) Phase 02's title is one line ("General Admission") while Phase 01 and 03
+   2) Phase 02's title is one line ("Summit Pass") while Phase 01 and 03
       are two lines, so the price/day-grid below land at different Ys.
    3) Tiles are equal-height via grid, but content is top-anchored — Phases 02/03
       end with empty space below their CTAs while Phase 01 doesn't.
@@ -1357,9 +1357,9 @@ body.menu-open{overflow:hidden}
 .tickets__phases .tier .tier__eyebrow{
   margin-top:.75rem;
 }
-/* Equalize title vertical space: Phase 02's "General Admission" is a single line
-   while Phase 01 ("Early Bird General Admission") and Phase 03 ("Final Release
-   General Admission") wrap to two. Without min-height, prices land at different
+/* Equalize title vertical space: Phase 02's "Summit Pass" is a single line
+   while Phase 01 ("Early Bird Summit Pass") and Phase 03 ("Final Release
+   Summit Pass") wrap to two. Without min-height, prices land at different
    Ys across tiles. line-height is 1, so 2em = two lines of title text. */
 .tickets__phases .tier .tier__name{
   min-height:2em;
@@ -3128,7 +3128,7 @@ body.menu-open{overflow:hidden}
             <dd><a class="hero__fact-link" href="#side-events"><em>Click here</em> to see all our side events</a></dd>
           </div>
           <div class="hero__fact">
-            <dt>VIP</dt>
+            <dt>VIP Summit Pass</dt>
             <dd><em>Limited to 200</em>. <a class="hero__fact-link" href="https://thesovereignsummit.com/#tickets">Click here to secure your spot</a>.</dd>
           </div>
         </dl>
@@ -3533,7 +3533,7 @@ body.menu-open{overflow:hidden}
 
       <!-- Welcome Reception -->
       <article class="side-event">
-        <a class="side-event__link" href="#tickets" aria-label="Welcome Reception — VIP ticket required"></a>
+        <a class="side-event__link" href="#tickets" aria-label="Welcome Reception — VIP Summit Pass required"></a>
         <div class="side-event__top">
           <div class="side-event__when">
             <div class="side-event__date">Thu · Feb 4</div>
@@ -3542,15 +3542,15 @@ body.menu-open{overflow:hidden}
           <a class="side-event__sponsor" href="#" aria-label="Sponsor TBD"><span class="side-event__sponsor-label">Presented by</span> TBD</a>
         </div>
         <h3 class="side-event__title">Welcome <em>Reception</em></h3>
-        <div class="side-event__exclusive" style="background:linear-gradient(90deg,#D4A93C 0%,#E8C46A 50%,#D4A93C 100%);color:#0A1224;align-self:flex-start">VIP Ticket Only</div>
+        <div class="side-event__exclusive" style="background:linear-gradient(90deg,#D4A93C 0%,#E8C46A 50%,#D4A93C 100%);color:#0A1224;align-self:flex-start">VIP Summit Pass Only</div>
         <div class="side-event__venue"><span class="side-event__venue-name">TBD</span><span class="side-event__venue-label">TBD</span></div>
-        <p class="side-event__desc">The evening before the Summit, an exclusive Welcome Reception. Speakers, partners, and <em>only VIP ticket holders</em> come together for the first conversations of the week, setting the tone for the days ahead.</p>
+        <p class="side-event__desc">The evening before the Summit, an exclusive Welcome Reception. Speakers, partners, and <em>only VIP Summit Pass holders</em> come together for the first conversations of the week, setting the tone for the days ahead.</p>
         <div class="side-event__meta">Plenty of tray-passed food · Open bar</div>
       </article>
 
       <!-- Oceanfront Soiree -->
       <article class="side-event">
-        <a class="side-event__link" href="#tickets" aria-label="Oceanfront Soiree — VIP ticket required"></a>
+        <a class="side-event__link" href="#tickets" aria-label="Oceanfront Soiree — VIP Summit Pass required"></a>
         <div class="side-event__top">
           <div class="side-event__when">
             <div class="side-event__date">Fri · Feb 5</div>
@@ -3559,9 +3559,9 @@ body.menu-open{overflow:hidden}
           <a class="side-event__sponsor" href="#" aria-label="Sponsor TBD"><span class="side-event__sponsor-label">Presented by</span> TBD</a>
         </div>
         <h3 class="side-event__title">Oceanfront <em>Soiree</em></h3>
-        <div class="side-event__exclusive" style="background:linear-gradient(90deg,#D4A93C 0%,#E8C46A 50%,#D4A93C 100%);color:#0A1224;align-self:flex-start">VIP Ticket Only</div>
+        <div class="side-event__exclusive" style="background:linear-gradient(90deg,#D4A93C 0%,#E8C46A 50%,#D4A93C 100%);color:#0A1224;align-self:flex-start">VIP Summit Pass Only</div>
         <div class="side-event__venue"><span class="side-event__venue-name">TBD</span><span class="side-event__venue-label">TBD</span></div>
-        <p class="side-event__desc">Following the first day of programming, an evening gathering for speakers, partners, and <em>only VIP ticket holders</em>. The official sessions may end at 5, but the real connections often continue well into the evening.</p>
+        <p class="side-event__desc">Following the first day of programming, an evening gathering for speakers, partners, and <em>only VIP Summit Pass holders</em>. The official sessions may end at 5, but the real connections often continue well into the evening.</p>
         <div class="side-event__meta">Food buffet · Open bar</div>
       </article>
 
@@ -3577,11 +3577,11 @@ body.menu-open{overflow:hidden}
         </div>
         <h3 class="side-event__title">Boat <em>After Party</em></h3>
         <div class="side-event__badges">
-          <div class="side-event__exclusive" style="background:linear-gradient(90deg,#D4A93C 0%,#E8C46A 50%,#D4A93C 100%);color:#0A1224">Included with VIP Ticket</div>
-          <div class="side-event__exclusive" style="background:linear-gradient(90deg,#8B5E1A,#C8882A,#8B5E1A);color:#fff">Add-On for GA Ticket<span class="side-event__exclusive-price"> @ $250</span></div>
+          <div class="side-event__exclusive" style="background:linear-gradient(90deg,#D4A93C 0%,#E8C46A 50%,#D4A93C 100%);color:#0A1224">Included with VIP Summit Pass</div>
+          <div class="side-event__exclusive" style="background:linear-gradient(90deg,#8B5E1A,#C8882A,#8B5E1A);color:#fff">Add-On for Summit Pass<span class="side-event__exclusive-price"> @ $250</span></div>
         </div>
         <div class="side-event__venue"><span class="side-event__venue-name">TBD</span><span class="side-event__venue-label">nearby Marina</span></div>
-        <p class="side-event__desc">To close the Summit, we&#8217;re taking the celebration to the water. On Saturday night, guests will board a private boat for an unforgettable evening of drinks, music, and sweeping views of the Miami skyline. VIP ticket holders receive guaranteed access, while GA ticket holders may purchase one of 200 additional boat party add-ons, bringing total capacity to 400 guests.</p>
+        <p class="side-event__desc">To close the Summit, we&#8217;re taking the celebration to the water. On Saturday night, guests will board a private boat for an unforgettable evening of drinks, music, and sweeping views of the Miami skyline. VIP Summit Pass holders receive guaranteed access, while Summit Pass holders may purchase one of 200 additional boat party add-ons, bringing total capacity to 400 guests.</p>
         <div class="side-event__meta">Food &amp; open bar included · Limited capacity · $250</div>
       </article>
 
@@ -3882,17 +3882,17 @@ body.menu-open{overflow:hidden}
           <div class="floor-detail__zones floor-detail__zones--two">
             <article class="floor-detail__zone">
               <h3 class="floor-detail__zone-name">Cove Gallerie</h3>
-              <p class="floor-detail__zone-function"><em>GA Check-In</em></p>
+              <p class="floor-detail__zone-function"><em>Summit Pass Check-In</em></p>
               <ul class="floor-detail__zone-list">
                 <li>Present your QR code to receive your badge and lanyard &mdash; your credentials for the full summit experience</li>
               </ul>
             </article>
             <article class="floor-detail__zone">
               <h3 class="floor-detail__zone-name">Anchor 1/2/3</h3>
-              <p class="floor-detail__zone-function"><em>VIP Area &amp; VIP Check-In</em></p>
+              <p class="floor-detail__zone-function"><em>VIP Area &amp; VIP Summit Pass Check-In</em></p>
               <p class="floor-detail__zone-meta">2,728 sq ft · Up to 245 reception · 200 theater</p>
               <ul class="floor-detail__zone-list">
-                <li>VIP Check-In</li>
+                <li>VIP Summit Pass Check-In</li>
                 <li>Sovereign Lounge for VIPs</li>
                 <li>Speaker Green Room Area</li>
                 <li>More TBA</li>
@@ -3956,7 +3956,7 @@ body.menu-open{overflow:hidden}
     <div class="faq__list">
       <details class="faq__item">
         <summary class="faq__q"><span class="faq__num">01</span><span class="faq__q-text">What is <em>The Sovereign Summit?</em></span><span class="faq__icon"></span></summary>
-        <div class="faq__a"><p>Two days in Miami Beach where <strong>Energy, AI, Freedom, and Bitcoin</strong> stop being separate conversations and start being one. Built for people who already sense these things are connected but haven&rsquo;t had a room where all four are treated as equals. <em><u>We say Bitcoin and not crypto intentionally.</u> Sound money belongs here. Speculative assets don&rsquo;t.</em></p><p>We do it in a resort, not a convention center, on purpose. When everyone is staying, eating, and drinking in the same place, the conference doesn&rsquo;t end when the session does. That&rsquo;s the design, not a happy accident.</p><p>What&rsquo;s inside:</p><ul class="faq__bullets"><li>A big open <strong>main stage</strong></li><li>An <strong>expo floor</strong> with companies and organizations that care about sovereignty</li><li>A <strong>Workshops Area</strong> with breakout sessions and hands-on workshops</li><li>An <strong>Open Source Area</strong> for nonprofits, community builders, and small businesses</li><li><strong>VIP Areas</strong> exclusively for VIP ticket holders</li></ul><p><em>Come away with a clearer picture of where the world is going, the people making it happen, and connections that last well beyond the event.</em></p></div>
+        <div class="faq__a"><p>Two days in Miami Beach where <strong>Energy, AI, Freedom, and Bitcoin</strong> stop being separate conversations and start being one. Built for people who already sense these things are connected but haven&rsquo;t had a room where all four are treated as equals. <em><u>We say Bitcoin and not crypto intentionally.</u> Sound money belongs here. Speculative assets don&rsquo;t.</em></p><p>We do it in a resort, not a convention center, on purpose. When everyone is staying, eating, and drinking in the same place, the conference doesn&rsquo;t end when the session does. That&rsquo;s the design, not a happy accident.</p><p>What&rsquo;s inside:</p><ul class="faq__bullets"><li>A big open <strong>main stage</strong></li><li>An <strong>expo floor</strong> with companies and organizations that care about sovereignty</li><li>A <strong>Workshops Area</strong> with breakout sessions and hands-on workshops</li><li>An <strong>Open Source Area</strong> for nonprofits, community builders, and small businesses</li><li><strong>VIP Areas</strong> exclusively for VIP Summit Pass holders</li></ul><p><em>Come away with a clearer picture of where the world is going, the people making it happen, and connections that last well beyond the event.</em></p></div>
       </details>
       <details class="faq__item">
         <summary class="faq__q"><span class="faq__num">02</span><span class="faq__q-text">Who is <em>this for?</em></span><span class="faq__icon"></span></summary>
@@ -3975,12 +3975,12 @@ body.menu-open{overflow:hidden}
         <div class="faq__a"><p><em>Fair question.</em> Inaugural events live or die on curation, not scale, and curation is exactly what we are obsessing over: the speakers, the venue, the format, the sponsors, the crowd.</p><p><strong>The honest answer is that you can&rsquo;t fully trust a first edition until it happens.</strong> What we can tell you is who is involved, what we&rsquo;re building, and why we think it&rsquo;s worth showing up for. The speaker lineup, the venue, and the program will speak for themselves as they come together. Follow along and make your own call.</p><p><u>What we will promise:</u> every sponsor in the room is here because they&rsquo;re aligned with what this conference stands for. We chose them carefully, and that same standard applies to every part of the program.</p></div>
       </details>
       <details class="faq__item">
-        <summary class="faq__q"><span class="faq__num">06</span><span class="faq__q-text">What&rsquo;s in a <em>General Admission</em> ticket?</span><span class="faq__icon"></span></summary>
-        <div class="faq__a"><p><strong>Full access to both days of the summit.</strong> Every mainstage session, the expo floor, the Workshops Area, and the Open Source Area. Food and drink on site during summit hours.</p><p>General Admission is the full conference experience, <em>with the exception of VIP Areas and VIP-only events.</em> If you&rsquo;re here for the ideas, the sessions, and the people, GA gets you everything you need.</p><p><em>The <a href="https://pay.zaprite.com/pl_wIAImtY5wz" target="_blank"><u>Saturday Boat After Party</u></a> is currently the only official side event open to GA ticket holders.</em> More side events will be announced as we get closer to February.</p><p><strong><a href="https://pay.zaprite.com/pl_wIAImtY5wz" target="_blank"><u>Grab your GA ticket here.</u></a></strong></p></div>
+        <summary class="faq__q"><span class="faq__num">06</span><span class="faq__q-text">What&rsquo;s in a <em>Summit Pass</em>?</span><span class="faq__icon"></span></summary>
+        <div class="faq__a"><p><strong>Full access to both days of the summit.</strong> Every mainstage session, the expo floor, the Workshops Area, and the Open Source Area. Food and drink on site during summit hours.</p><p>The Summit Pass is the full conference experience, <em>with the exception of VIP Areas and VIP-only events.</em> If you&rsquo;re here for the ideas, the sessions, and the people, the Summit Pass gets you everything you need.</p><p><em>The <a href="https://pay.zaprite.com/pl_wIAImtY5wz" target="_blank"><u>Saturday Boat After Party</u></a> is currently the only official side event open to Summit Pass holders.</em> More side events will be announced as we get closer to February.</p><p><strong><a href="https://pay.zaprite.com/pl_wIAImtY5wz" target="_blank"><u>Grab your Summit Pass here.</u></a></strong></p></div>
       </details>
       <details class="faq__item">
-        <summary class="faq__q"><span class="faq__num">07</span><span class="faq__q-text">What does <em>VIP</em> include?</span><span class="faq__icon"></span></summary>
-        <div class="faq__a"><p><strong>Everything in GA, plus a lot more.</strong> Reserved front-row seating. A dedicated VIP area on the 3rd floor for the duration of the summit. And three events that are the real reason people upgrade.</p><p><em>The Thursday Welcome Reception</em> kicks the weekend off with only the VIPs before the conference opens. <em>The Friday Oceanfront Soiree</em> is another VIP only night and another opportunity to mingle with the speakers, sponsors, and other like-minded people. <em>The Saturday Boat After Party</em> closes it out the right way with a fun big closing party.</p><p><u>VIP is capped at 200 people.</u> At that size, you will meet everyone who matters. That&rsquo;s the point.</p><p><strong><u><a href="https://pay.zaprite.com/pl_wIAImtY5wz" target="_blank">Secure your VIP spot here.</a></u></strong></p></div>
+        <summary class="faq__q"><span class="faq__num">07</span><span class="faq__q-text">What does the <em>VIP Summit Pass</em> include?</span><span class="faq__icon"></span></summary>
+        <div class="faq__a"><p><strong>Everything in the Summit Pass, plus a lot more.</strong> Reserved front-row seating. A dedicated VIP area on the 3rd floor for the duration of the summit. And three events that are the real reason people upgrade.</p><p><em>The Thursday Welcome Reception</em> kicks the weekend off with only the VIPs before the conference opens. <em>The Friday Oceanfront Soiree</em> is another VIP only night and another opportunity to mingle with the speakers, sponsors, and other like-minded people. <em>The Saturday Boat After Party</em> closes it out the right way with a fun big closing party.</p><p><u>The VIP Summit Pass is capped at 200 people.</u> At that size, you will meet everyone who matters. That&rsquo;s the point.</p><p><strong><u><a href="https://pay.zaprite.com/pl_wIAImtY5wz" target="_blank">Secure your VIP Summit Pass here.</a></u></strong></p></div>
       </details>
       <details class="faq__item">
         <summary class="faq__q"><span class="faq__num">08</span><span class="faq__q-text">What about <em>side events?</em></span><span class="faq__icon"></span></summary>
@@ -4008,7 +4008,7 @@ body.menu-open{overflow:hidden}
       </details>
       <details class="faq__item">
         <summary class="faq__q"><span class="faq__num">14</span><span class="faq__q-text">Can I bring <em>my kids?</em></span><span class="faq__icon"></span></summary>
-        <div class="faq__a"><p><strong>Every attendee needs a paid ticket, including kids <u>under 18.</u></strong></p><p>For GA, we offer a <strong><u><a href="https://pay.zaprite.com/pl_wIAImtY5wz" target="_blank">Kids General Admission ticket</a></u></strong> for children attending with a parent or guardian.</p><p>For VIP, we do not offer a Kids VIP ticket. Parents with VIP tickets who want to bring their kids to VIP areas and VIP-only events will need to purchase a full-price VIP ticket for them.</p><p><em>If your child looks 18 or older, we may ask for proof of age at the door.</em></p><p><em>Miami Beach in February is also a great city to bring the family for the days around the conference.</em></p></div>
+        <div class="faq__a"><p><strong>Every attendee needs a paid ticket, including kids <u>under 18.</u></strong></p><p>For the Summit Pass, we offer a <strong><u><a href="https://pay.zaprite.com/pl_wIAImtY5wz" target="_blank">Kids Summit Pass</a></u></strong> for children attending with a parent or guardian.</p><p>For the VIP Summit Pass, we do not offer a Kids VIP Summit Pass. Parents with a VIP Summit Pass who want to bring their kids to VIP areas and VIP-only events will need to purchase a full-price VIP Summit Pass for them.</p><p><em>If your child looks 18 or older, we may ask for proof of age at the door.</em></p><p><em>Miami Beach in February is also a great city to bring the family for the days around the conference.</em></p></div>
       </details>
       <details class="faq__item">
         <summary class="faq__q"><span class="faq__num">15</span><span class="faq__q-text">Will sessions be <em>recorded or streamed?</em></span><span class="faq__icon"></span></summary>
@@ -4042,8 +4042,8 @@ body.menu-open{overflow:hidden}
           <div class="tier__ribbon">Limited · 200 spots</div>
           <div class="tier__vip-layout">
             <div class="tier__vip-info">
-              <div class="tier__eyebrow">VIP Admission</div>
-              <h3 class="tier__name"><em>VIP</em> Admission</h3>
+              <div class="tier__eyebrow">VIP Summit Pass</div>
+              <h3 class="tier__name"><em>VIP</em> Summit Pass</h3>
               <div class="tier__price-wrap"><span class="tier__price">$2,495</span><span class="tier__price-unit">USD</span></div>
               <ul class="tier__desc-bullets">
                 <li>Every event. Front-row everywhere. The full experience.</li>
@@ -4056,21 +4056,21 @@ body.menu-open{overflow:hidden}
                   <div class="tier__day-label"><span class="tier__day-name">Thursday</span><span class="tier__day-sub">Feb 4</span></div>
                   <ul class="tier__day-list">
                     <li><a href="https://luma.com/n6jb46op" target="_blank" rel="noopener"><strong>Bitcoin Fundamentals</strong><span class="tier__day-vip-badge" style="background:linear-gradient(90deg,#9CA3AF 0%,#D1D5DB 50%,#9CA3AF 100%);color:#0A1224;white-space:normal;line-height:1.2;letter-spacing:.08em">Included with Every Ticket</span></a></li>
-                    <li><a href="#side-events"><strong>Welcome Reception</strong><span class="tier__day-vip-badge">VIP Ticket Only</span></a></li>
+                    <li><a href="#side-events"><strong>Welcome Reception</strong><span class="tier__day-vip-badge">VIP Summit Pass Only</span></a></li>
                   </ul>
                 </div>
                 <div class="tier__day">
                   <div class="tier__day-label"><span class="tier__day-name">Friday</span><span class="tier__day-sub">Day 1</span></div>
                   <ul class="tier__day-list">
                     <li><a href="#agenda" data-day="day1" class="tier__day-agenda-link"><strong>Summit</strong><span class="tier__day-detail">reserved front-row</span><span class="tier__day-detail">speaker green-room access</span></a></li>
-                    <li><a href="#side-events"><strong>Oceanfront Soiree</strong><span class="tier__day-vip-badge">VIP Ticket Only</span></a></li>
+                    <li><a href="#side-events"><strong>Oceanfront Soiree</strong><span class="tier__day-vip-badge">VIP Summit Pass Only</span></a></li>
                   </ul>
                 </div>
                 <div class="tier__day">
                   <div class="tier__day-label"><span class="tier__day-name">Saturday</span><span class="tier__day-sub">Day 2</span></div>
                   <ul class="tier__day-list">
                     <li><a href="#agenda" data-day="day2" class="tier__day-agenda-link"><strong>Summit</strong><span class="tier__day-detail">reserved front-row</span><span class="tier__day-detail">speaker green-room access</span></a></li>
-                    <li><a href="#side-events"><strong>Boat After Party</strong><span class="tier__day-vip-badge">Included with VIP Ticket</span></a></li>
+                    <li><a href="#side-events"><strong>Boat After Party</strong><span class="tier__day-vip-badge">Included with VIP Summit Pass</span></a></li>
                   </ul>
                 </div>
               </div>
@@ -4079,15 +4079,15 @@ body.menu-open{overflow:hidden}
           </div>
         </article>
       </div>
-      <a href="#early-bird" class="tickets__scroll-hint" aria-label="View General Admission options below">
+      <a href="#early-bird" class="tickets__scroll-hint" aria-label="View Summit Pass options below">
         <span class="tickets__scroll-hint-arrow" aria-hidden="true">↓</span>
       </a>
       <div class="tickets__phases">
-        <div class="tickets__phases-label">General Admission · split across 3 phases</div>
+        <div class="tickets__phases-label">Summit Pass · split across 3 phases</div>
         <article class="tier tier--featured" id="early-bird">
         <div class="tier__ribbon">Ends September 30 · Save $200</div>
         <div class="tier__eyebrow">Phase 01 · Early Bird</div>
-        <h3 class="tier__name"><em>Early Bird</em> General Admission</h3>
+        <h3 class="tier__name"><em>Early Bird</em> Summit Pass</h3>
         <div class="tier__price-wrap"><span class="tier__price">$795</span><span class="tier__price-unit">USD</span></div>
         <div class="tier__day-grid tier__day-grid--3col">
           <div class="tier__day">
@@ -4113,7 +4113,7 @@ body.menu-open{overflow:hidden}
       </article>
       <article class="tier tier--coming-soon">
         <div class="tier__eyebrow">Phase 02 · Standard</div>
-        <h3 class="tier__name"><em>General Admission</em></h3>
+        <h3 class="tier__name"><em>Summit Pass</em></h3>
         <div class="tier__price-wrap"><span class="tier__price">$995</span><span class="tier__price-unit">USD</span></div>
         <div class="tier__day-grid tier__day-grid--3col">
           <div class="tier__day">
@@ -4135,11 +4135,11 @@ body.menu-open{overflow:hidden}
             </ul>
           </div>
         </div>
-        <a href="https://pay.zaprite.com/pl_wIAImtY5wz" target="_blank" rel="noopener" class="btn" style="width:100%;justify-content:center;padding:1.1rem 1.6rem;font-size:.85rem;letter-spacing:.16em;margin-top:.5rem">Reserve General Admission <span class="btn__arrow">→</span></a>
+        <a href="https://pay.zaprite.com/pl_wIAImtY5wz" target="_blank" rel="noopener" class="btn" style="width:100%;justify-content:center;padding:1.1rem 1.6rem;font-size:.85rem;letter-spacing:.16em;margin-top:.5rem">Reserve Summit Pass <span class="btn__arrow">→</span></a>
       </article>
       <article class="tier tier--premium tier--coming-soon">
         <div class="tier__eyebrow">Phase 03 · Final Release</div>
-        <h3 class="tier__name">Final Release <em>General Admission</em></h3>
+        <h3 class="tier__name">Final Release <em>Summit Pass</em></h3>
         <div class="tier__price-wrap"><span class="tier__price">$1,195</span><span class="tier__price-unit">USD</span></div>
         <div class="tier__day-grid tier__day-grid--3col">
           <div class="tier__day">
