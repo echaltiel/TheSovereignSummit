@@ -1361,15 +1361,19 @@ body.menu-open{overflow:hidden}
    while Phase 01 ("Early Bird Summit Pass") and Phase 03 ("Final Release
    Summit Pass") wrap to two. Without min-height, prices land at different
    Ys across tiles. line-height is 1, so 2em = two lines of title text. */
-.tickets__phases .tier .tier__name{
-  /* Reserve two lines so prices stay aligned across the three phase tiles,
-     but bottom-align the title text so a one-line title (e.g. "Summit Pass")
-     sits snug above the price instead of leaving a blank line beneath it.
-     Column flex keeps normal text wrapping for the two-line titles. */
-  min-height:2em;
-  display:flex;
-  flex-direction:column;
-  justify-content:flex-end;
+@media (min-width:961px){
+  /* In the 3-across layout the columns are narrow, so the longest phase titles
+     ("Early Bird Summit Pass" / "Final Release Summit Pass") would wrap to two
+     lines. Shrink the title just enough and force a single line with nowrap.
+     Because every title is now one line, the eyebrow+title blocks are equal
+     height and the three prices stay aligned WITHOUT reserving a second line —
+     which removes the old blank gap and pulls the price/day-grid/CTA up. */
+  .tickets__phases .tier .tier__name{
+    font-size:clamp(.82rem,1.3vw,1.1rem);
+    letter-spacing:-.02em;
+    white-space:nowrap;
+  }
+  .tickets__phases{column-gap:.55rem;margin-top:.5rem}
 }
 .tickets__phases .tier .tier__day-grid{
   margin-top:auto;
