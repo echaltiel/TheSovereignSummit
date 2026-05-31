@@ -2849,6 +2849,22 @@ body.menu-open{overflow:hidden}
   .floor-plan__floors-grid{
     grid-template-columns:1fr;
   }
+  /* Once stacked, the media column has no sibling to derive its height from,
+     so the desktop flex:1 / min-height:0 sizing would collapse the diagram to
+     zero height. Reset to a normal block image bounded by the viewport so the
+     floor plan stays visible on mobile. */
+  .floor-plan__col--media .floor-plan__figure,
+  .floor-plan__col--media .floor-plan__expand-btn{
+    flex:none;
+    min-height:0;
+  }
+  .floor-plan__col--media .floor-plan__expand-btn img{
+    flex:none;
+    width:auto;
+    max-width:100%;
+    height:auto;
+    max-height:70vh;
+  }
 }
 
 /* Getting Here — one wide card with 3 internal columns */
