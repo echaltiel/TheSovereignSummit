@@ -116,6 +116,10 @@ section{padding:clamp(2.5rem,5vw,4rem) 0;position:relative}
 .ticker{display:block;background:var(--ink);color:var(--paper);padding:.4rem var(--gut);border-bottom:1px solid var(--ink-deep);text-decoration:none;transition:background .2s}
 .ticker:hover{background:var(--ink-deep)}
 .ticker__inner{display:flex;align-items:center;justify-content:center;gap:clamp(.85rem,3vw,2.4rem);flex-wrap:wrap;max-width:var(--max);margin:0 auto}
+.ticker__cta{font-family:var(--fm);font-size:.66rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;line-height:1.2;color:var(--accent);display:inline-flex;align-items:center;gap:.5rem;white-space:nowrap}
+.ticker__arrow{transition:transform .25s cubic-bezier(.2,.6,.2,1)}
+.ticker:hover .ticker__cta{color:var(--paper-light)}
+.ticker:hover .ticker__arrow{transform:translateX(.25rem)}
 .ticker__msg{font-family:var(--fm);font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;line-height:1.2;text-align:center}
 .ticker__count{display:flex;align-items:center;gap:clamp(.7rem,2vw,1.5rem)}
 .cd__unit{display:flex;align-items:baseline;gap:.4rem}
@@ -3027,6 +3031,7 @@ body.menu-open{overflow:hidden}
 <body>
 <a class="ticker" href="#tickets">
   <div class="ticker__inner">
+    <span class="ticker__cta">Click Here to Buy Your Pass Today <span class="ticker__arrow">→</span></span>
     <span class="ticker__msg">Prices increase on September 30 @ 11:59 PM</span>
     <span class="ticker__count" aria-label="Countdown to price increase">
       <span class="cd__unit"><span class="cd__lbl">Days</span><span class="cd__num" id="cd-days">--</span></span>
@@ -4095,14 +4100,14 @@ body.menu-open{overflow:hidden}
                 <div class="tier__day">
                   <div class="tier__day-label"><span class="tier__day-name">Friday</span><span class="tier__day-sub">Day 1</span></div>
                   <ul class="tier__day-list">
-                    <li><a href="#agenda" data-day="day1" class="tier__day-agenda-link"><strong>Summit</strong><span class="tier__day-detail">reserved front-row</span><span class="tier__day-detail">speaker green-room access</span></a></li>
+                    <li><a href="#agenda" data-day="day1" class="tier__day-agenda-link"><strong>Summit</strong><span class="tier__day-detail">Reserved Main Stage front-row seating</span><span class="tier__day-detail">Exclusive VIP Area Access</span></a></li>
                     <li><a href="#side-events"><strong>Oceanfront Soiree</strong><span class="tier__day-vip-badge">VIP Summit Pass Only</span></a></li>
                   </ul>
                 </div>
                 <div class="tier__day">
                   <div class="tier__day-label"><span class="tier__day-name">Saturday</span><span class="tier__day-sub">Day 2</span></div>
                   <ul class="tier__day-list">
-                    <li><a href="#agenda" data-day="day2" class="tier__day-agenda-link"><strong>Summit</strong><span class="tier__day-detail">reserved front-row</span><span class="tier__day-detail">speaker green-room access</span></a></li>
+                    <li><a href="#agenda" data-day="day2" class="tier__day-agenda-link"><strong>Summit</strong><span class="tier__day-detail">Reserved Main Stage front-row seating</span><span class="tier__day-detail">Exclusive VIP Area Access</span></a></li>
                     <li><a href="#side-events"><strong>Boat After Party</strong><span class="tier__day-vip-badge">Included with VIP Summit Pass</span></a></li>
                   </ul>
                 </div>
