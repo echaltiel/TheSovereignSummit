@@ -113,13 +113,14 @@ section{padding:clamp(2.5rem,5vw,4rem) 0;position:relative}
 .btn--accent:hover{color:var(--paper);border-color:var(--ink)}
 
 /* TICKER */
-.ticker{display:block;background:var(--ink);color:var(--paper);overflow:hidden;white-space:nowrap;padding:.32rem 0;border-bottom:1px solid var(--ink-deep);text-decoration:none;transition:background .2s}
+.ticker{display:block;background:var(--ink);color:var(--paper);padding:.4rem var(--gut);border-bottom:1px solid var(--ink-deep);text-decoration:none;transition:background .2s}
 .ticker:hover{background:var(--ink-deep)}
-.ticker:hover .ticker__dot{color:var(--paper)}
-.ticker__track{display:flex;width:max-content;animation:tk 40s linear infinite;font-family:var(--fm);font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;will-change:transform}
-.ticker__item{display:flex;align-items:center;flex-shrink:0;padding:0 1.5rem}
-.ticker__dot{color:var(--accent);margin-left:3rem}
-@keyframes tk{to{transform:translateX(-50%)}}
+.ticker__inner{display:flex;align-items:center;justify-content:center;gap:clamp(.85rem,3vw,2.4rem);flex-wrap:wrap;max-width:var(--max);margin:0 auto}
+.ticker__msg{font-family:var(--fm);font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;line-height:1.2;text-align:center}
+.ticker__count{display:flex;align-items:center;gap:clamp(.7rem,2vw,1.5rem)}
+.cd__unit{display:flex;align-items:baseline;gap:.4rem}
+.cd__lbl{font-family:var(--fm);font-size:.56rem;letter-spacing:.18em;text-transform:uppercase;color:var(--accent)}
+.cd__num{font-family:var(--fm);font-size:1.02rem;font-weight:700;line-height:1;font-variant-numeric:tabular-nums;color:var(--paper);min-width:1.3ch;text-align:center}
 
 /* NAV */
 .nav-wrap{position:sticky;top:0;z-index:100;background:var(--paper);border-bottom:1px solid var(--rule);transition:background .3s}
@@ -3025,13 +3026,34 @@ body.menu-open{overflow:hidden}
 </head>
 <body>
 <a class="ticker" href="#tickets">
-  <div class="ticker__track">
-    <span class="ticker__item">Early Bird Summit Pass now on sale — Ends September 30 <span class="ticker__dot">●</span></span>
-    <span class="ticker__item">Early Bird Summit Pass now on sale — Ends September 30 <span class="ticker__dot">●</span></span>
-    <span class="ticker__item">Early Bird Summit Pass now on sale — Ends September 30 <span class="ticker__dot">●</span></span>
-    <span class="ticker__item">Early Bird Summit Pass now on sale — Ends September 30 <span class="ticker__dot">●</span></span>
+  <div class="ticker__inner">
+    <span class="ticker__msg">Prices increase on September 30 @ 11:59 PM</span>
+    <span class="ticker__count" aria-label="Countdown to price increase">
+      <span class="cd__unit"><span class="cd__lbl">Days</span><span class="cd__num" id="cd-days">--</span></span>
+      <span class="cd__unit"><span class="cd__lbl">Hrs</span><span class="cd__num" id="cd-hrs">--</span></span>
+      <span class="cd__unit"><span class="cd__lbl">Min</span><span class="cd__num" id="cd-min">--</span></span>
+      <span class="cd__unit"><span class="cd__lbl">Sec</span><span class="cd__num" id="cd-sec">--</span></span>
+    </span>
   </div>
 </a>
+<script>
+(function(){
+  // Early Bird ends Sept 30, 2026 at 11:59 PM Miami time (EDT, UTC-4)
+  var target = new Date('2026-09-30T23:59:00-04:00').getTime();
+  var dEl=document.getElementById('cd-days'),hEl=document.getElementById('cd-hrs'),
+      mEl=document.getElementById('cd-min'),sEl=document.getElementById('cd-sec');
+  if(!dEl) return;
+  function pad(n){return String(n).padStart(2,'0');}
+  function tick(){
+    var diff=target-Date.now(); if(diff<0) diff=0;
+    dEl.textContent=Math.floor(diff/864e5);
+    hEl.textContent=pad(Math.floor(diff%864e5/36e5));
+    mEl.textContent=pad(Math.floor(diff%36e5/6e4));
+    sEl.textContent=pad(Math.floor(diff%6e4/1e3));
+  }
+  tick(); setInterval(tick,1000);
+})();
+</script>
 
 <div class="nav-wrap" id="navWrap">
   <div class="container">
