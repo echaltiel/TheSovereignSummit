@@ -239,7 +239,7 @@ body.menu-open{overflow:hidden}
   .hero__logo-col img{width:100%;height:auto;max-width:clamp(340px,64svh,540px);max-height:none}
   .hero__info{padding-left:0;padding-right:0;max-height:none;overflow:visible}
   .hero__headline-wrap{flex:1;gap:0;min-height:clamp(13rem,42vw,18rem)}
-  .hero__headline-center{display:flex;flex:1;align-items:center;justify-content:center;min-height:0}
+  .hero__headline-center{display:flex;flex:none;align-items:center;justify-content:center;min-height:0}
   .hero__scroll{margin-top:.75rem;margin-bottom:.25rem}
   .hero__eyebrow{font-size:.62rem;letter-spacing:.22em}
   .hero__warning{padding:.55rem .8rem}
@@ -255,15 +255,15 @@ body.menu-open{overflow:hidden}
     justify-content:center;
     align-items:center;
     align-self:center;
-    margin:.6rem 0 .15rem;
-    width:48px;
-    height:48px;
-    color:var(--ink-soft);
+    margin:.9rem 0 0;
+    width:56px;
+    height:56px;
+    color:var(--accent);
     text-decoration:none;
     transition:color .2s;
   }
   .hero__scroll:hover,.hero__scroll:focus{color:var(--accent-deep)}
-  .hero__scroll-icon{font-size:1.65rem;line-height:1;display:block;animation:hero-scroll-bounce 1.8s ease-in-out infinite}
+  .hero__scroll-icon{font-size:2.2rem;line-height:1;display:block;animation:hero-scroll-bounce 1.8s ease-in-out infinite}
   #hero-details{scroll-margin-top:96px}
   .hero__facts{scroll-margin-bottom:1.25rem}
 }
@@ -282,8 +282,8 @@ body.menu-open{overflow:hidden}
   .hero__fact{grid-template-columns:80px 1fr;gap:.6rem}
   .hero__fact dt{font-size:.55rem}
   .hero__fact dd{font-size:.86rem;line-height:1.25}
-  .hero__scroll{margin:.5rem 0 .25rem;width:44px;height:44px}
-  .hero__scroll-icon{font-size:1.5rem}
+  .hero__scroll{margin:.75rem 0 0;width:52px;height:52px}
+  .hero__scroll-icon{font-size:2rem}
 }
 @keyframes hero-scroll-bounce{
   0%,100%{transform:translateY(0)}
