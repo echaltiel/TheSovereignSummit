@@ -3276,7 +3276,7 @@ body.menu-open{overflow:hidden}
         <h3 class="speaker__name"><em>Speaker TBA</em></h3>
         <div class="speaker__role">To be announced</div>
       </div>
-      <div class="speaker speaker--md speaker--hidden" data-speaker="17">
+      <div class="speaker speaker--md" data-speaker="17">
         <div class="speaker__index">17</div>
         <div class="speaker__portrait">
           <div class="speaker__placeholder"></div>
@@ -3284,7 +3284,7 @@ body.menu-open{overflow:hidden}
         <h3 class="speaker__name"><em>Speaker TBA</em></h3>
         <div class="speaker__role">To be announced</div>
       </div>
-      <div class="speaker speaker--md speaker--hidden" data-speaker="18">
+      <div class="speaker speaker--md" data-speaker="18">
         <div class="speaker__index">18</div>
         <div class="speaker__portrait">
           <div class="speaker__placeholder"></div>
@@ -3292,7 +3292,7 @@ body.menu-open{overflow:hidden}
         <h3 class="speaker__name"><em>Speaker TBA</em></h3>
         <div class="speaker__role">To be announced</div>
       </div>
-      <div class="speaker speaker--md speaker--hidden" data-speaker="19">
+      <div class="speaker speaker--md" data-speaker="19">
         <div class="speaker__index">19</div>
         <div class="speaker__portrait">
           <div class="speaker__placeholder"></div>
@@ -3300,7 +3300,7 @@ body.menu-open{overflow:hidden}
         <h3 class="speaker__name"><em>Speaker TBA</em></h3>
         <div class="speaker__role">To be announced</div>
       </div>
-      <div class="speaker speaker--md speaker--hidden" data-speaker="20">
+      <div class="speaker speaker--md" data-speaker="20">
         <div class="speaker__index">20</div>
         <div class="speaker__portrait">
           <div class="speaker__placeholder"></div>
@@ -3308,7 +3308,7 @@ body.menu-open{overflow:hidden}
         <h3 class="speaker__name"><em>Speaker TBA</em></h3>
         <div class="speaker__role">To be announced</div>
       </div>
-      <div class="speaker speaker--md speaker--hidden" data-speaker="21">
+      <div class="speaker speaker--md" data-speaker="21">
         <div class="speaker__index">21</div>
         <div class="speaker__portrait">
           <div class="speaker__placeholder"></div>
@@ -3316,7 +3316,7 @@ body.menu-open{overflow:hidden}
         <h3 class="speaker__name"><em>Speaker TBA</em></h3>
         <div class="speaker__role">To be announced</div>
       </div>
-      <div class="speaker speaker--md speaker--hidden" data-speaker="22">
+      <div class="speaker speaker--md" data-speaker="22">
         <div class="speaker__index">22</div>
         <div class="speaker__portrait">
           <div class="speaker__placeholder"></div>
@@ -3324,7 +3324,7 @@ body.menu-open{overflow:hidden}
         <h3 class="speaker__name"><em>Speaker TBA</em></h3>
         <div class="speaker__role">To be announced</div>
       </div>
-      <div class="speaker speaker--md speaker--hidden" data-speaker="23">
+      <div class="speaker speaker--md" data-speaker="23">
         <div class="speaker__index">23</div>
         <div class="speaker__portrait">
           <div class="speaker__placeholder"></div>
@@ -3332,7 +3332,7 @@ body.menu-open{overflow:hidden}
         <h3 class="speaker__name"><em>Speaker TBA</em></h3>
         <div class="speaker__role">To be announced</div>
       </div>
-      <div class="speaker speaker--md speaker--hidden" data-speaker="24">
+      <div class="speaker speaker--md" data-speaker="24">
         <div class="speaker__index">24</div>
         <div class="speaker__portrait">
           <div class="speaker__placeholder"></div>
@@ -4385,7 +4385,7 @@ body.menu-open{overflow:hidden}
   });
 
   // Speakers show-all toggle
-  // The first two rows (cards 01-16) are always shown. Cards 17-33 carry the
+  // The first three rows (cards 01-24) are always shown. Cards 25-33 carry the
   // .speaker--hidden class in the markup; the toggle adds/removes it to reveal them.
   const speakersToggle = document.getElementById('speakersToggle');
   if (speakersToggle) {
@@ -4395,7 +4395,7 @@ body.menu-open{overflow:hidden}
       speakersToggle.setAttribute('aria-expanded', String(next));
       // Reveal speakers beyond the first two rows (cards 17-33)
       document.querySelectorAll('.speakers__grid--md .speaker').forEach((card) => {
-        card.classList.toggle('speaker--hidden', !next && parseInt(card.dataset.speaker, 10) > 16);
+        card.classList.toggle('speaker--hidden', !next && parseInt(card.dataset.speaker, 10) > 24);
       });
     });
   }
