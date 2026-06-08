@@ -414,26 +414,8 @@ body.menu-open{overflow:hidden}
 
 /* SPEAKERS */
 .speakers__grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid var(--ink);border-left:1px solid var(--ink);border-right:1px solid var(--ink)}
-/* Tier 2/3 grid — 8 columns of compact medium cards */
-.speakers__grid--md .speaker[data-speaker="13"],
-.speakers__grid--md .speaker[data-speaker="14"],
-.speakers__grid--md .speaker[data-speaker="15"],
-.speakers__grid--md .speaker[data-speaker="16"],
-.speakers__grid--md .speaker[data-speaker="17"],
-.speakers__grid--md .speaker[data-speaker="18"],
-.speakers__grid--md .speaker[data-speaker="19"],
-.speakers__grid--md .speaker[data-speaker="20"],
-.speakers__grid--md .speaker[data-speaker="21"]{display:none}
-.speakers__grid--md.is-expanded .speaker[data-speaker="13"],
-.speakers__grid--md.is-expanded .speaker[data-speaker="14"],
-.speakers__grid--md.is-expanded .speaker[data-speaker="15"],
-.speakers__grid--md.is-expanded .speaker[data-speaker="16"],
-.speakers__grid--md.is-expanded .speaker[data-speaker="17"],
-.speakers__grid--md.is-expanded .speaker[data-speaker="18"],
-.speakers__grid--md.is-expanded .speaker[data-speaker="19"],
-.speakers__grid--md.is-expanded .speaker[data-speaker="20"],
-.speakers__grid--md.is-expanded .speaker[data-speaker="21"]{display:flex}
-.speakers__grid--md{grid-template-columns:repeat(8,1fr);border-top:none}
+/* Tier 2/3 grid — 8 columns of compact medium cards; rows beyond the first two are toggled via .speaker--hidden */
+.speakers__grid--md{grid-template-columns:repeat(8,1fr)}
 .speaker{padding:1.75rem 1.5rem 1.5rem;border-right:1px solid var(--ink);border-bottom:1px solid var(--ink);background:var(--paper-light);position:relative;transition:background .3s;text-decoration:none;color:inherit;display:flex;flex-direction:column;cursor:pointer}
 .speaker:nth-child(4n){border-right:none}
 .speaker--hidden{display:none}
@@ -500,26 +482,6 @@ body.menu-open{overflow:hidden}
   .speakers__actions{margin-top:.65rem}
   .speakers__toggle{padding:.65rem 1rem;font-size:.64rem;letter-spacing:.12em}
   .speakers__footnote{display:none}
-  /* On mobile, also hide cards 13-20 by default — only first 8 medium cards visible.
-     The toggle reveals everything from card 13 onward. */
-  .speakers__grid--md .speaker[data-speaker="13"],
-  .speakers__grid--md .speaker[data-speaker="14"],
-  .speakers__grid--md .speaker[data-speaker="15"],
-  .speakers__grid--md .speaker[data-speaker="16"],
-  .speakers__grid--md .speaker[data-speaker="17"],
-  .speakers__grid--md .speaker[data-speaker="18"],
-  .speakers__grid--md .speaker[data-speaker="19"],
-  .speakers__grid--md .speaker[data-speaker="20"],
-  .speakers__grid--md .speaker[data-speaker="21"]{display:none}
-  .speakers__grid--md.is-expanded .speaker[data-speaker="13"],
-  .speakers__grid--md.is-expanded .speaker[data-speaker="14"],
-  .speakers__grid--md.is-expanded .speaker[data-speaker="15"],
-  .speakers__grid--md.is-expanded .speaker[data-speaker="16"],
-  .speakers__grid--md.is-expanded .speaker[data-speaker="17"],
-  .speakers__grid--md.is-expanded .speaker[data-speaker="18"],
-  .speakers__grid--md.is-expanded .speaker[data-speaker="19"],
-  .speakers__grid--md.is-expanded .speaker[data-speaker="20"],
-  .speakers__grid--md.is-expanded .speaker[data-speaker="21"]{display:flex}
   .speaker{
     display:grid;
     grid-template-columns:42px 1fr;
@@ -3185,45 +3147,39 @@ body.menu-open{overflow:hidden}
       <div class="sec-hd__num">Nº 01 — Speakers</div>
       <h2 class="section-title sec-hd__title">World-class <em>speakers.</em></h2>
     </header>
-    <div class="speakers__grid" id="speakersGrid">
-      <div class="speaker" data-speaker="01">
+    <div class="speakers__grid speakers__grid--md" id="speakersGridMd">
+      <div class="speaker speaker--md" data-speaker="01">
         <div class="speaker__index">01</div>
         <div class="speaker__portrait">
           <div class="speaker__placeholder"></div>
         </div>
         <h3 class="speaker__name"><em>Speaker TBA</em></h3>
         <div class="speaker__role">To be announced</div>
-        <div class="speaker__topic">&ldquo;Talk title coming soon.&rdquo;</div>
       </div>
-      <div class="speaker" data-speaker="02">
+      <div class="speaker speaker--md" data-speaker="02">
         <div class="speaker__index">02</div>
         <div class="speaker__portrait">
           <div class="speaker__placeholder"></div>
         </div>
         <h3 class="speaker__name"><em>Speaker TBA</em></h3>
         <div class="speaker__role">To be announced</div>
-        <div class="speaker__topic">&ldquo;Talk title coming soon.&rdquo;</div>
       </div>
-      <div class="speaker" data-speaker="03">
+      <div class="speaker speaker--md" data-speaker="03">
         <div class="speaker__index">03</div>
         <div class="speaker__portrait">
           <div class="speaker__placeholder"></div>
         </div>
         <h3 class="speaker__name"><em>Speaker TBA</em></h3>
         <div class="speaker__role">To be announced</div>
-        <div class="speaker__topic">&ldquo;Talk title coming soon.&rdquo;</div>
       </div>
-      <div class="speaker" data-speaker="04">
+      <div class="speaker speaker--md" data-speaker="04">
         <div class="speaker__index">04</div>
         <div class="speaker__portrait">
           <div class="speaker__placeholder"></div>
         </div>
         <h3 class="speaker__name"><em>Speaker TBA</em></h3>
         <div class="speaker__role">To be announced</div>
-        <div class="speaker__topic">&ldquo;Talk title coming soon.&rdquo;</div>
       </div>
-    </div>
-    <div class="speakers__grid speakers__grid--md" id="speakersGridMd">
       <div class="speaker speaker--md" data-speaker="05">
         <div class="speaker__index">05</div>
         <div class="speaker__portrait">
@@ -3320,7 +3276,7 @@ body.menu-open{overflow:hidden}
         <h3 class="speaker__name"><em>Speaker TBA</em></h3>
         <div class="speaker__role">To be announced</div>
       </div>
-      <div class="speaker speaker--md" data-speaker="17">
+      <div class="speaker speaker--md speaker--hidden" data-speaker="17">
         <div class="speaker__index">17</div>
         <div class="speaker__portrait">
           <div class="speaker__placeholder"></div>
@@ -3328,7 +3284,7 @@ body.menu-open{overflow:hidden}
         <h3 class="speaker__name"><em>Speaker TBA</em></h3>
         <div class="speaker__role">To be announced</div>
       </div>
-      <div class="speaker speaker--md" data-speaker="18">
+      <div class="speaker speaker--md speaker--hidden" data-speaker="18">
         <div class="speaker__index">18</div>
         <div class="speaker__portrait">
           <div class="speaker__placeholder"></div>
@@ -3336,7 +3292,7 @@ body.menu-open{overflow:hidden}
         <h3 class="speaker__name"><em>Speaker TBA</em></h3>
         <div class="speaker__role">To be announced</div>
       </div>
-      <div class="speaker speaker--md" data-speaker="19">
+      <div class="speaker speaker--md speaker--hidden" data-speaker="19">
         <div class="speaker__index">19</div>
         <div class="speaker__portrait">
           <div class="speaker__placeholder"></div>
@@ -3344,7 +3300,7 @@ body.menu-open{overflow:hidden}
         <h3 class="speaker__name"><em>Speaker TBA</em></h3>
         <div class="speaker__role">To be announced</div>
       </div>
-      <div class="speaker speaker--md" data-speaker="20">
+      <div class="speaker speaker--md speaker--hidden" data-speaker="20">
         <div class="speaker__index">20</div>
         <div class="speaker__portrait">
           <div class="speaker__placeholder"></div>
@@ -4429,24 +4385,18 @@ body.menu-open{overflow:hidden}
   });
 
   // Speakers show-all toggle
-  // Desktop: hides cards 22-33 by default (via .speaker--hidden class on the markup),
-  //          toggle reveals them.
-  // Mobile (≤520px): also hides cards 14-21 via CSS rule on the grid; toggle adds
-  //          .is-expanded to the grid to reveal them.
-  // Both behaviors are driven by the same toggle for a unified UX.
+  // The first two rows (cards 01-16) are always shown. Cards 17-33 carry the
+  // .speaker--hidden class in the markup; the toggle adds/removes it to reveal them.
   const speakersToggle = document.getElementById('speakersToggle');
   if (speakersToggle) {
     speakersToggle.addEventListener('click', () => {
       const expanded = speakersToggle.getAttribute('aria-expanded') === 'true';
       const next = !expanded;
       speakersToggle.setAttribute('aria-expanded', String(next));
-      // Tier 3 reveal (cards 21-32) — applies on all viewports
+      // Reveal speakers beyond the first two rows (cards 17-33)
       document.querySelectorAll('.speakers__grid--md .speaker').forEach((card) => {
-        card.classList.toggle('speaker--hidden', !next && parseInt(card.dataset.speaker, 10) > 21);
+        card.classList.toggle('speaker--hidden', !next && parseInt(card.dataset.speaker, 10) > 16);
       });
-      // Mobile second-row reveal (cards 13-20) — driven by class on the grid
-      const mdGrid = document.getElementById('speakersGridMd');
-      if (mdGrid) mdGrid.classList.toggle('is-expanded', next);
     });
   }
 
