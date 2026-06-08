@@ -415,7 +415,7 @@ body.menu-open{overflow:hidden}
 /* SPEAKERS */
 .speakers__grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid var(--ink);border-left:1px solid var(--ink);border-right:1px solid var(--ink)}
 /* Tier 2/3 grid — 8 columns of compact medium cards; rows beyond the first two are toggled via .speaker--hidden */
-.speakers__grid--md{grid-template-columns:repeat(7,1fr)}
+.speakers__grid--md{grid-template-columns:repeat(8,1fr)}
 .speaker{padding:1.75rem 1.5rem 1.5rem;border-right:1px solid var(--ink);border-bottom:1px solid var(--ink);background:var(--paper-light);position:relative;transition:background .3s;text-decoration:none;color:inherit;display:flex;flex-direction:column;cursor:pointer}
 .speaker:nth-child(4n){border-right:none}
 .speaker--hidden{display:none}
@@ -456,7 +456,7 @@ body.menu-open{overflow:hidden}
 .speaker--md .speaker__topic{display:none}
 /* Override the tier-1 :nth-child(4n) right-border removal for medium grid */
 .speakers__grid--md .speaker{border-right:1px solid var(--ink)}
-.speakers__grid--md .speaker:nth-child(7n){border-right:none}
+.speakers__grid--md .speaker:nth-child(8n){border-right:none}
 /* Square medium tiles on desktop/tablet (mobile keeps the horizontal card layout) */
 @media (min-width:521px){
   .speakers__grid--md .speaker{aspect-ratio:1;justify-content:center}
@@ -471,7 +471,7 @@ body.menu-open{overflow:hidden}
   .speakers__grid--md{grid-template-columns:repeat(4,1fr)}
   .speakers__grid:not(.speakers__grid--md) .speaker:nth-child(4n){border-right:1px solid var(--ink)}
   .speakers__grid:not(.speakers__grid--md) .speaker:nth-child(2n){border-right:none}
-  .speakers__grid--md .speaker:nth-child(7n){border-right:1px solid var(--ink)}
+  .speakers__grid--md .speaker:nth-child(8n){border-right:1px solid var(--ink)}
   .speakers__grid--md .speaker:nth-child(4n){border-right:none}
 }
 @media (max-width:640px){
@@ -3324,7 +3324,7 @@ body.menu-open{overflow:hidden}
         <h3 class="speaker__name"><em>Speaker TBA</em></h3>
         <div class="speaker__role">To be announced</div>
       </div>
-      <div class="speaker speaker--md speaker--hidden" data-speaker="22">
+      <div class="speaker speaker--md" data-speaker="22">
         <div class="speaker__index">22</div>
         <div class="speaker__portrait">
           <div class="speaker__placeholder"></div>
@@ -3332,7 +3332,7 @@ body.menu-open{overflow:hidden}
         <h3 class="speaker__name"><em>Speaker TBA</em></h3>
         <div class="speaker__role">To be announced</div>
       </div>
-      <div class="speaker speaker--md speaker--hidden" data-speaker="23">
+      <div class="speaker speaker--md" data-speaker="23">
         <div class="speaker__index">23</div>
         <div class="speaker__portrait">
           <div class="speaker__placeholder"></div>
@@ -3340,7 +3340,7 @@ body.menu-open{overflow:hidden}
         <h3 class="speaker__name"><em>Speaker TBA</em></h3>
         <div class="speaker__role">To be announced</div>
       </div>
-      <div class="speaker speaker--md speaker--hidden" data-speaker="24">
+      <div class="speaker speaker--md" data-speaker="24">
         <div class="speaker__index">24</div>
         <div class="speaker__portrait">
           <div class="speaker__placeholder"></div>
@@ -4393,7 +4393,7 @@ body.menu-open{overflow:hidden}
   });
 
   // Speakers show-all toggle
-  // The first three rows (cards 01-21) are always shown. Cards 22-33 carry the
+  // The first three rows (cards 01-24) are always shown. Cards 25-33 carry the
   // .speaker--hidden class in the markup; the toggle adds/removes it to reveal them.
   const speakersToggle = document.getElementById('speakersToggle');
   if (speakersToggle) {
@@ -4403,7 +4403,7 @@ body.menu-open{overflow:hidden}
       speakersToggle.setAttribute('aria-expanded', String(next));
       // Reveal speakers beyond the first two rows (cards 17-33)
       document.querySelectorAll('.speakers__grid--md .speaker').forEach((card) => {
-        card.classList.toggle('speaker--hidden', !next && parseInt(card.dataset.speaker, 10) > 21);
+        card.classList.toggle('speaker--hidden', !next && parseInt(card.dataset.speaker, 10) > 24);
       });
     });
   }
