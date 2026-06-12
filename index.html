@@ -2054,6 +2054,8 @@ body.menu-open{overflow:hidden}
   .friends__become .btn{padding:.7rem 1rem;font-size:.66rem;letter-spacing:.12em}
 }
 .friends__become{text-align:center;margin-top:.65rem}
+.friends__become .only-mobile{display:none}
+@media (max-width:520px){.friends__become .only-mobile{display:inline}}
 .friends__become-text{font-family:var(--fd);font-style:italic;font-size:1.2rem;color:var(--ink-soft);margin-bottom:.5rem}
 .friends__become-text em{color:var(--accent-deep)}
 
@@ -3693,10 +3695,10 @@ body.menu-open{overflow:hidden}
       </button>
     </div>
     <div class="friends__become">
-      <div class="friends__become-text" style="font-style:normal;font-size:clamp(1.1rem,1.5vw,1.35rem);color:var(--ink);font-weight:400;letter-spacing:-.01em">Become a founding sponsor of<br><em>The Sovereign Summit.</em></div>
+      <div class="friends__become-text" style="font-style:normal;font-size:clamp(1.1rem,1.5vw,1.35rem);color:var(--ink);font-weight:400;letter-spacing:-.01em">Become a founding sponsor of <br class="only-mobile"><em>The Sovereign Summit.</em></div>
       <div style="margin-top:.6rem;font-family:var(--fd);font-size:clamp(.95rem,1.1vw,1.1rem);color:var(--ink-soft);line-height:1.5">
-        Founding sponsorships are limited —<br>
-        email us at <a href="mailto:info@thesovereignsummit.com" style="color:var(--accent-deep);font-style:italic;text-decoration:none;border-bottom:1px solid currentColor;white-space:nowrap">info@thesovereignsummit.com</a><br>
+        Founding sponsorships are limited<span class="only-mobile"> —</span><br>
+        email us at <a href="mailto:info@thesovereignsummit.com" style="color:var(--accent-deep);font-style:italic;text-decoration:none;border-bottom:1px solid currentColor;white-space:nowrap">info@thesovereignsummit.com</a><br class="only-mobile">
         to reserve your spot before they're gone.
       </div>
     </div>
