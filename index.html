@@ -2438,15 +2438,18 @@ body.menu-open{overflow:hidden}
   .speakers__grid--md:not(.speakers__grid--expanded) .speaker:nth-child(n+7){display:flex}
   .speakers__grid--md:not(.speakers__grid--expanded) .speaker:nth-child(n+9){display:none}
   .speakers__grid:not(.speakers__grid--md){grid-template-columns:repeat(2,1fr)}
+  /* Keep the base mobile grid layout (portrait left, name over role) but
+     scale it up so the featured four read larger than the md tiles */
   .speakers__grid:not(.speakers__grid--md) .speaker{
-    display:flex;flex-direction:row;align-items:center;text-align:left;
-    gap:.6rem;padding:.45rem .65rem
+    grid-template-columns:58px 1fr;
+    column-gap:.8rem;
+    padding:.8rem .8rem
   }
   .speakers__grid:not(.speakers__grid--md) .speaker__index{display:none}
-  .speakers__grid:not(.speakers__grid--md) .speaker__portrait{width:36px;height:36px;margin-bottom:0;flex-shrink:0;font-size:1rem}
-  .speakers__grid:not(.speakers__grid--md) .speaker__placeholder{font-size:1rem}
-  .speakers__grid:not(.speakers__grid--md) .speaker__name{font-size:.82rem;margin-bottom:.02rem;padding-right:0;text-align:left;line-height:1.05}
-  .speakers__grid:not(.speakers__grid--md) .speaker__role{font-size:.48rem;text-align:left;line-height:1.3;margin-bottom:0}
+  .speakers__grid:not(.speakers__grid--md) .speaker__portrait{width:58px;height:58px;margin-bottom:0;font-size:1.5rem}
+  .speakers__grid:not(.speakers__grid--md) .speaker__placeholder{font-size:1.5rem}
+  .speakers__grid:not(.speakers__grid--md) .speaker__name{font-size:1.1rem;margin-bottom:.06rem;padding-right:0;line-height:1.05}
+  .speakers__grid:not(.speakers__grid--md) .speaker__role{font-size:.52rem;line-height:1.3;margin-bottom:0}
 }
 
 /* --- SIDE EVENTS --- */
