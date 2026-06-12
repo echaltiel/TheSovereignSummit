@@ -2045,10 +2045,12 @@ body.menu-open{overflow:hidden}
     line-height:1.4;
     color:var(--ink-soft)
   }
-  .friends__actions{margin-top:.85rem}
-  .friends__toggle{padding:.7rem 1rem;font-size:.66rem;letter-spacing:.12em}
-  .friends__become{margin-top:1.25rem}
-  .friends__become-text{font-size:.95rem;margin-bottom:.75rem;line-height:1.35;max-width:32ch;margin-left:auto;margin-right:auto}
+  .friends__actions{margin-top:.6rem}
+  .friends__toggle{padding:.6rem .9rem;font-size:.62rem;letter-spacing:.12em}
+  .friends__become{margin-top:.85rem}
+  .friends__tier{margin-top:.35rem}
+  .friends__tier-label{margin-bottom:.15rem}
+  .friends__become-text{font-size:.95rem;margin-bottom:.6rem;line-height:1.35}
   .friends__become .btn{padding:.7rem 1rem;font-size:.66rem;letter-spacing:.12em}
 }
 .friends__become{text-align:center;margin-top:.65rem}
@@ -3691,7 +3693,7 @@ body.menu-open{overflow:hidden}
       </button>
     </div>
     <div class="friends__become">
-      <div class="friends__become-text" style="font-style:normal;font-size:clamp(1.1rem,1.5vw,1.35rem);color:var(--ink);font-weight:400;letter-spacing:-.01em">Become a founding sponsor of <em>The Sovereign Summit.</em></div>
+      <div class="friends__become-text" style="font-style:normal;font-size:clamp(1.1rem,1.5vw,1.35rem);color:var(--ink);font-weight:400;letter-spacing:-.01em">Become a founding sponsor of<br><em>The Sovereign Summit.</em></div>
       <div style="margin-top:.6rem;font-family:var(--fd);font-size:clamp(.95rem,1.1vw,1.1rem);color:var(--ink-soft);line-height:1.5">
         Founding sponsorships are limited —<br>
         email us at <a href="mailto:info@thesovereignsummit.com" style="color:var(--accent-deep);font-style:italic;text-decoration:none;border-bottom:1px solid currentColor;white-space:nowrap">info@thesovereignsummit.com</a><br>
@@ -4289,8 +4291,8 @@ body.menu-open{overflow:hidden}
   // below the sticky nav regardless of which link was clicked.
   const scrollToAnchor = (target, targetId) => {
     const navHeight = navWrap?.getBoundingClientRect().height || 80;
-    // 24px buffer below nav — tight, clean visual separation.
-    const buffer = 4;
+    // Buffer below nav — keeps section titles clear of the sticky header.
+    const buffer = 12;
     const compute = () => getDocumentY(target) - navHeight - buffer;
     window.scrollTo({ top: compute(), behavior: 'smooth' });
     if (targetId && history.pushState) history.pushState(null, '', targetId);
