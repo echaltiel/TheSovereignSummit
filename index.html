@@ -3039,6 +3039,38 @@ body.menu-open{overflow:hidden}
   .floor-plan__dialog-close{top:.85rem;right:.85rem;width:2.25rem;height:2.25rem;font-size:1.35rem}
 }
 
+/* ===== About / Founders (Nº 06) ===== */
+.about{padding:clamp(2.5rem,5vw,4rem) 0}
+.about .sec-hd{margin-bottom:clamp(1.75rem,3vw,2.75rem)}
+.about__founders{display:grid;grid-template-columns:0.82fr 1.18fr;align-items:stretch;border-top:1px solid var(--ink);border-left:1px solid var(--ink)}
+.about__photo{position:relative;border-right:1px solid var(--ink);border-bottom:1px solid var(--ink);background:var(--paper-deep);overflow:hidden;min-height:420px}
+.about__photo img{width:100%;height:100%;object-fit:cover;object-position:center 24%}
+.about__photo-cap{position:absolute;left:0;bottom:0;font-family:var(--fm);font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--paper);background:rgba(10,18,36,.74);padding:.55rem .8rem}
+.about__bios{border-right:1px solid var(--ink);border-bottom:1px solid var(--ink);background:var(--paper-light);padding:clamp(1.6rem,2.6vw,2.6rem);display:flex;flex-direction:column;justify-content:center}
+.about__eyebrow{font-family:var(--fm);font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:var(--accent-deep);margin-bottom:1.25rem;padding-bottom:.6rem;border-bottom:1px solid var(--rule)}
+.about__bio + .about__bio{margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid var(--rule)}
+.about__name{font-family:var(--fd);font-size:clamp(1.7rem,3vw,2.25rem);line-height:1.02;letter-spacing:-.01em;font-weight:400}
+.about__name em{font-style:italic}
+.about__role{font-family:var(--fm);font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-soft);margin:.5rem 0 .9rem}
+.about__text{font-size:.96rem;line-height:1.62;color:var(--ink-soft);max-width:64ch}
+.about__advisors{margin-top:clamp(1.75rem,3vw,2.75rem)}
+.about__advisors-head{font-family:var(--fm);font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:.95rem}
+.about__advisors-grid{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--ink);border-left:1px solid var(--ink)}
+.about__advisor{position:relative;border-right:1px solid var(--ink);border-bottom:1px solid var(--ink);background:var(--paper-light);padding:1.6rem 1.3rem 1.4rem;display:flex;flex-direction:column}
+.about__advisor-index{position:absolute;top:.9rem;right:1rem;font-family:var(--fm);font-size:.62rem;letter-spacing:.18em;color:var(--ink-soft)}
+.about__advisor-portrait{height:124px;margin:-1.6rem -1.3rem 1.15rem;background:var(--paper-deep);display:flex;align-items:center;justify-content:center;border-bottom:1px solid var(--rule)}
+.about__advisor-portrait span{font-family:var(--fd);font-style:italic;font-size:2.1rem;color:var(--ink);opacity:.32}
+.about__advisor-name{font-family:var(--fd);font-style:italic;font-size:1.45rem;line-height:1.05;font-weight:400;text-align:center;margin-bottom:.45rem}
+.about__advisor-role{font-family:var(--fm);font-size:.64rem;letter-spacing:.15em;text-transform:uppercase;color:var(--ink-soft);text-align:center}
+@media (max-width:900px){
+  .about__founders{grid-template-columns:1fr}
+  .about__photo{min-height:0;aspect-ratio:1/1}
+  .about__photo img{object-position:center 22%}
+}
+@media (max-width:720px){
+  .about__advisors-grid{grid-template-columns:1fr}
+  .about__photo{aspect-ratio:4/5}
+}
 </style>
 </head>
 <body>
@@ -3090,6 +3122,7 @@ body.menu-open{overflow:hidden}
         <li><a class="nav__link" href="#venue">Venue</a></li>
         <li><a class="nav__link" href="#floor-plan">Map</a></li>
         <li><a class="nav__link" href="#faq">FAQ</a></li>
+        <li><a class="nav__link" href="#about">About</a></li>
       </ul>
       <div class="nav__actions">
 <a href="https://x.com/sovereignmiami" target="_blank" rel="noopener" class="nav__social" aria-label="Follow The Sovereign Summit on X">
@@ -3117,6 +3150,7 @@ body.menu-open{overflow:hidden}
       <li><a class="mobile-menu__link" href="#venue">Venue</a></li>
       <li><a class="mobile-menu__link" href="#floor-plan">Map</a></li>
       <li><a class="mobile-menu__link" href="#faq">FAQ</a></li>
+      <li><a class="mobile-menu__link" href="#about">About</a></li>
     </ul>
 <a href="#tickets" class="mobile-menu__cta">Buy Tickets <span>→</span></a>
     <a href="https://x.com/sovereignmiami" target="_blank" rel="noopener" class="mobile-menu__social" aria-label="Follow The Sovereign Summit on X">
@@ -4084,10 +4118,61 @@ body.menu-open{overflow:hidden}
   </div>
 </section>
 
+<section class="about">
+  <div class="container">
+    <header class="sec-hd" id="about">
+      <div class="sec-hd__num">Nº 09 — About</div>
+      <h2 class="section-title sec-hd__title">Who's <em>behind</em> the Summit.</h2>
+    </header>
+    <div class="about__founders">
+      <div class="about__photo">
+        <img src="images/founders.jpg" alt="Eddy and Julia Chaltiel, founders of The Sovereign Summit" />
+        <div class="about__photo-cap">Eddy &amp; Julia · Miami</div>
+      </div>
+      <div class="about__bios">
+        <div class="about__eyebrow">The Founders</div>
+        <article class="about__bio">
+          <h3 class="about__name"><em>Edouard "Eddy" Chaltiel</em></h3>
+          <div class="about__role">Founder</div>
+          <p class="about__text">Eddy has had skin in the game in Bitcoin for over ten years and decided to dedicate his time fully to the ecosystem in 2021. He invests through Victoire Ventures LLC, his holding company, and now co-founded Victoire Hospitality LLC with his wife to run these Bitcoin events as a passion project. In 2024 and 2025 he threw grassroots events in Portland, Oregon through a nonprofit he cofounded called Bitcoin is for Everyone, drawing 250+ attendees both years. Now based in Miami, he's excited to grow the local community and push the standard for Bitcoin events higher with The Sovereign Summit through the Victoire Hospitality umbrella.</p>
+        </article>
+        <article class="about__bio">
+          <h3 class="about__name"><em>Julia Chaltiel</em></h3>
+          <div class="about__role">Co-Founder</div>
+          <p class="about__text">Julia co-founded Victoire Hospitality LLC with Eddy and leads its travel side, Victoire Voyages, where she designs curated travel experiences. For The Sovereign Summit she serves as Director of Business Development and Sponsorships. She's always supported Eddy's Bitcoin journey but got more into Bitcoin in 2021, the same year Eddy decided to dedicate himself to the ecosystem, and has been part of the journey ever since.</p>
+        </article>
+      </div>
+    </div>
+    <div class="about__advisors">
+      <div class="about__advisors-head">Advisors</div>
+      <div class="about__advisors-grid">
+        <div class="about__advisor">
+          <div class="about__advisor-index">01</div>
+          <div class="about__advisor-portrait"><span>TBA</span></div>
+          <h3 class="about__advisor-name"><em>Advisor TBA</em></h3>
+          <div class="about__advisor-role">To be announced</div>
+        </div>
+        <div class="about__advisor">
+          <div class="about__advisor-index">02</div>
+          <div class="about__advisor-portrait"><span>TBA</span></div>
+          <h3 class="about__advisor-name"><em>Advisor TBA</em></h3>
+          <div class="about__advisor-role">To be announced</div>
+        </div>
+        <div class="about__advisor">
+          <div class="about__advisor-index">03</div>
+          <div class="about__advisor-portrait"><span>TBA</span></div>
+          <h3 class="about__advisor-name"><em>Advisor TBA</em></h3>
+          <div class="about__advisor-role">To be announced</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="tickets">
   <div class="container">
     <header class="sec-hd" id="tickets">
-      <div class="sec-hd__num">Nº 09 — Admission</div>
+      <div class="sec-hd__num">Nº 10 — Admission</div>
       <h2 class="section-title sec-hd__title"><em>Pick how you experience</em> the summit.</h2>
     </header>
     <div class="tickets__grid">
