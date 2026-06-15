@@ -4385,7 +4385,7 @@ body.menu-open{overflow:hidden}
   const scrollToAnchor = (target, targetId) => {
     const navHeight = navWrap?.getBoundingClientRect().height || 80;
     // Buffer below nav — keeps section titles clear of the sticky header.
-    const buffer = 12;
+    const buffer = 40;
     const compute = () => getDocumentY(target) - navHeight - buffer;
     window.scrollTo({ top: compute(), behavior: 'smooth' });
     if (targetId && history.pushState) history.pushState(null, '', targetId);
@@ -4409,7 +4409,7 @@ body.menu-open{overflow:hidden}
       window.addEventListener('load', () => {
         setTimeout(() => {
           const navHeight = navWrap?.getBoundingClientRect().height || 80;
-          window.scrollTo({ top: getDocumentY(initialTarget) - navHeight - 4, behavior: 'auto' });
+          window.scrollTo({ top: getDocumentY(initialTarget) - navHeight - 40, behavior: 'auto' });
         }, 50);
       });
     }
