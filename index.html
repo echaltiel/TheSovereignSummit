@@ -3070,15 +3070,14 @@ body.menu-open{overflow:hidden}
 .about__advisor-role{font-family:var(--fm);font-size:.64rem;letter-spacing:.15em;text-transform:uppercase;color:var(--ink-soft);text-align:center}
 @media (max-width:900px){
   .about__founders{grid-template-columns:1fr}
-  .about__photo{min-height:0;aspect-ratio:1/1}
-  .about__photo img{object-position:center 22%}
+  .about__photo{min-height:0;aspect-ratio:auto}
+  .about__photo img{position:static;height:auto;object-position:center 22%}
   .about__bios-row{grid-template-columns:1fr}
   .about__bios-row .about__bio{padding-right:0}
   .about__bio + .about__bio{padding-left:0;border-left:0;margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid var(--rule)}
 }
 @media (max-width:720px){
   .about__advisors-grid{grid-template-columns:1fr}
-  .about__photo{aspect-ratio:4/5}
 }
 </style>
 </head>
