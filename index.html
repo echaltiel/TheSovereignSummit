@@ -472,6 +472,7 @@ body.menu-open{overflow:hidden}
 @media (max-width:1080px){
   .speakers__grid{grid-template-columns:repeat(2,1fr)}
   .speakers__grid--md{grid-template-columns:repeat(4,1fr)}
+  .speakers__grid:not(.speakers__grid--md) .speaker__placeholder{background-image:url('images/speaker-placeholder-sm.png');background-size:cover;background-position:center}
   .speakers__grid:not(.speakers__grid--md) .speaker:nth-child(4n){border-right:1px solid var(--ink)}
   .speakers__grid:not(.speakers__grid--md) .speaker:nth-child(2n){border-right:none}
   .speakers__grid--md .speaker:nth-child(8n){border-right:1px solid var(--ink)}
