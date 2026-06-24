@@ -716,6 +716,7 @@ body.menu-open{overflow:hidden}
 .tickets__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.4rem}
 .tier__meal-note{font-family:var(--fb);font-size:.7rem;letter-spacing:.04em;color:#E8C46A;text-align:center;line-height:1.35;margin-top:.05rem}
 .tier--coming-soon .tier__meal-note{color:#7A7A7A}
+.tier__vip-meal{font-family:var(--fb);font-size:.72rem;line-height:1.4;letter-spacing:.02em;color:#E8C46A;margin-top:1.5rem}
 
 /* Base phase-tier card */
 .tier{background:var(--paper-light);border:1px solid var(--ink);padding:.4rem .8rem;position:relative;display:flex;flex-direction:column;min-height:auto;transition:transform .3s,box-shadow .3s}
@@ -1078,6 +1079,7 @@ body.menu-open{overflow:hidden}
     grid-template-columns:1fr;
     gap:1rem;
   }
+  .tier__vip-meal{margin-top:.45rem;margin-bottom:.6rem}
 }
 @media (max-width:720px){
   /* VIP tile padding — tight; padding-top reduced because eyebrow has its own margin-top to clear the ribbon */
@@ -4216,7 +4218,7 @@ body.menu-open{overflow:hidden}
                 <li>Every event. Front-row everywhere. The full experience.</li>
                 <li style="font-family:var(--fd);font-size:.78rem;line-height:1.35;font-style:italic;color:var(--accent);margin-top:.15rem">Reserved exclusively for invited guests.</li>
               </ul>
-              <div style="font-family:var(--fb);font-size:.72rem;line-height:1.4;letter-spacing:.02em;color:#E8C46A;margin-top:1.5rem">*Breakfast and Lunch Included and Served in VIP Areas</div>
+              <div class="tier__vip-meal">*Breakfast and Lunch Included and Served in VIP Areas</div>
             </div>
             <div class="tier__vip-schedule">
               <div class="tier__day-grid tier__day-grid--3col">
