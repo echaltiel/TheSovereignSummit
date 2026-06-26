@@ -3081,16 +3081,8 @@ body.menu-open{overflow:hidden}
 .about__advisor-portrait span{font-family:var(--fd);font-style:italic;font-size:2.1rem;color:var(--ink);opacity:.32}
 .about__advisor-name{font-family:var(--fd);font-style:italic;font-size:1.45rem;line-height:1.05;font-weight:400;text-align:center;margin-bottom:.45rem}
 .about__advisor-role{font-family:var(--fm);font-size:.64rem;letter-spacing:.15em;text-transform:uppercase;color:var(--ink-soft);text-align:center}
-.about__team{margin-top:clamp(1.75rem,3vw,2.75rem)}
-.about__team-head{font-family:var(--fm);font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:var(--accent-deep);margin-bottom:.95rem}
-.about__team-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));border-top:1px solid var(--ink);border-left:1px solid var(--ink)}
-.about__team-member{display:flex;gap:1.15rem;align-items:flex-start;border-right:1px solid var(--ink);border-bottom:1px solid var(--ink);background:var(--paper-light);padding:1.4rem 1.3rem}
-.about__team-portrait{flex:0 0 92px;width:92px;height:92px;background:var(--paper-deep);border:1px solid var(--rule);display:flex;align-items:center;justify-content:center}
-.about__team-portrait span{font-family:var(--fm);font-size:.56rem;letter-spacing:.18em;text-transform:uppercase;color:var(--ink);opacity:.4}
-.about__team-info{flex:1;min-width:0}
-.about__team-name{font-family:var(--fd);font-style:italic;font-size:1.5rem;line-height:1.05;font-weight:400;margin-bottom:.3rem}
-.about__team-role{font-family:var(--fm);font-size:.62rem;letter-spacing:.15em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:.6rem}
-.about__team-bio{font-size:.82rem;line-height:1.45;color:var(--ink-soft)}
+.about__lead{margin-top:clamp(1.75rem,3vw,2.75rem)}
+.about__lead .about__photo{min-height:300px}
 @media (max-width:900px){
   .about__founders{grid-template-columns:1fr}
   .about__photo{min-height:0;aspect-ratio:1/1}
@@ -4187,17 +4179,17 @@ body.menu-open{overflow:hidden}
         </div>
       </div>
     </div>
-    <div class="about__team">
-      <div class="about__team-head">Leadership</div>
-      <div class="about__team-grid">
-        <div class="about__team-member">
-          <div class="about__team-portrait"><span>Photo</span></div>
-          <div class="about__team-info">
-            <h3 class="about__team-name"><em>Name TBA</em></h3>
-            <div class="about__team-role">Title TBA</div>
-            <p class="about__team-bio">To Be Announced</p>
-          </div>
-        </div>
+    <div class="about__founders about__lead">
+      <div class="about__photo">
+        <img src="images/leadership/placeholder.webp" alt="Leadership team member" />
+      </div>
+      <div class="about__bios">
+        <div class="about__eyebrow">Leadership</div>
+        <article class="about__bio">
+          <h3 class="about__name"><em>Name TBA</em></h3>
+          <div class="about__role">Title TBA</div>
+          <p class="about__text">To Be Announced</p>
+        </article>
       </div>
     </div>
     <div class="about__advisors">
