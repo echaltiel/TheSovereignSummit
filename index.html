@@ -3065,6 +3065,8 @@ body.menu-open{overflow:hidden}
 #content .friend,#content .partner{border-radius:16px;overflow:hidden}
 #content .partner__portrait--haslogo{border-radius:0!important} /* safe: parent clips */
 
+/* Hidden speakers stay hidden at every breakpoint until Show All */
+#content .speaker.speaker--hidden{display:none!important}
 #content em,#content i,#content cite{font-style:normal}
 /* ===== Full-viewport section rhythm, header-aware anchors, gentle snap ===== */
 /* Each top-level content section fills at least one viewport; short sections
@@ -3178,7 +3180,7 @@ html{scroll-snap-type:y proximity}
   <div class="container">
     <header class="sec-hd" id="speakers">
       <div class="sec-hd__num">Nº 01 — Speakers</div>
-      <h2 class="section-title sec-hd__title">World-class <em>speakers.</em></h2>
+      <h2 class="section-title sec-hd__title">The minds shaping <em>the next decade.</em></h2>
     </header>
     <div class="speakers__grid" id="speakersGridFeatured">
       <a class="speaker" data-speaker="01" href="https://x.com/JeffBooth" target="_blank" rel="noopener noreferrer">
@@ -3217,7 +3219,7 @@ html{scroll-snap-type:y proximity}
       </div>
     </div>
     <div class="speakers__grid speakers__grid--md" id="speakersGridMd">
-      <div class="speaker speaker--md" data-speaker="05">
+      <div class="speaker speaker--md speaker--hidden" data-speaker="05">
         <div class="speaker__index">05</div>
         <div class="speaker__portrait">
           <div class="speaker__placeholder"></div>
@@ -3225,7 +3227,7 @@ html{scroll-snap-type:y proximity}
         <h3 class="speaker__name"><em>Speaker TBA</em></h3>
         <div class="speaker__role">To be announced</div>
       </div>
-      <div class="speaker speaker--md" data-speaker="06">
+      <div class="speaker speaker--md speaker--hidden" data-speaker="06">
         <div class="speaker__index">06</div>
         <div class="speaker__portrait">
           <div class="speaker__placeholder"></div>
@@ -3233,7 +3235,7 @@ html{scroll-snap-type:y proximity}
         <h3 class="speaker__name"><em>Speaker TBA</em></h3>
         <div class="speaker__role">To be announced</div>
       </div>
-      <div class="speaker speaker--md" data-speaker="07">
+      <div class="speaker speaker--md speaker--hidden" data-speaker="07">
         <div class="speaker__index">07</div>
         <div class="speaker__portrait">
           <div class="speaker__placeholder"></div>
@@ -3241,7 +3243,7 @@ html{scroll-snap-type:y proximity}
         <h3 class="speaker__name"><em>Speaker TBA</em></h3>
         <div class="speaker__role">To be announced</div>
       </div>
-      <div class="speaker speaker--md" data-speaker="08">
+      <div class="speaker speaker--md speaker--hidden" data-speaker="08">
         <div class="speaker__index">08</div>
         <div class="speaker__portrait">
           <div class="speaker__placeholder"></div>
@@ -3249,7 +3251,7 @@ html{scroll-snap-type:y proximity}
         <h3 class="speaker__name"><em>Speaker TBA</em></h3>
         <div class="speaker__role">To be announced</div>
       </div>
-      <div class="speaker speaker--md" data-speaker="09">
+      <div class="speaker speaker--md speaker--hidden" data-speaker="09">
         <div class="speaker__index">09</div>
         <div class="speaker__portrait">
           <div class="speaker__placeholder"></div>
@@ -3257,7 +3259,7 @@ html{scroll-snap-type:y proximity}
         <h3 class="speaker__name"><em>Speaker TBA</em></h3>
         <div class="speaker__role">To be announced</div>
       </div>
-      <div class="speaker speaker--md" data-speaker="10">
+      <div class="speaker speaker--md speaker--hidden" data-speaker="10">
         <div class="speaker__index">10</div>
         <div class="speaker__portrait">
           <div class="speaker__placeholder"></div>
@@ -3265,7 +3267,7 @@ html{scroll-snap-type:y proximity}
         <h3 class="speaker__name"><em>Speaker TBA</em></h3>
         <div class="speaker__role">To be announced</div>
       </div>
-      <div class="speaker speaker--md" data-speaker="11">
+      <div class="speaker speaker--md speaker--hidden" data-speaker="11">
         <div class="speaker__index">11</div>
         <div class="speaker__portrait">
           <div class="speaker__placeholder"></div>
@@ -3273,7 +3275,7 @@ html{scroll-snap-type:y proximity}
         <h3 class="speaker__name"><em>Speaker TBA</em></h3>
         <div class="speaker__role">To be announced</div>
       </div>
-      <div class="speaker speaker--md" data-speaker="12">
+      <div class="speaker speaker--md speaker--hidden" data-speaker="12">
         <div class="speaker__index">12</div>
         <div class="speaker__portrait">
           <div class="speaker__placeholder"></div>
@@ -4499,7 +4501,7 @@ html{scroll-snap-type:y proximity}
       if (gridMd) gridMd.classList.toggle('speakers__grid--expanded', next);
       // Reveal speakers beyond the first md row (cards 13-33)
       document.querySelectorAll('.speakers__grid--md .speaker').forEach((card) => {
-        card.classList.toggle('speaker--hidden', !next && parseInt(card.dataset.speaker, 10) > 12);
+        card.classList.toggle('speaker--hidden', !next && parseInt(card.dataset.speaker, 10) > 4);
       });
     });
   }
