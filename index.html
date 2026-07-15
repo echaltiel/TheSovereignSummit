@@ -3030,6 +3030,41 @@ body.menu-open{overflow:hidden}
 
 #content .section-title,#content .sec-hd__title,#content h2[class]{font-family:var(--fb);font-weight:800;letter-spacing:-.022em}
 #content .section-title em,#content h2 em{font-family:var(--fd);font-weight:400;color:var(--accent);letter-spacing:0;font-size:1.04em}
+
+/* ===== De-frame: remove the reference's hairline table borders around grids ===== */
+#content .speakers__grid,
+#content .speakers__grid--md,
+#content .side-events__grid,
+#content .friends__grid,
+#content .partners__grid,
+#content .about__founders,
+#content .about__advisors-grid,
+#content .tickets__phases{border:none}
+/* Cell dividers that made sense in a contiguous table, not for floating cards */
+#content .speaker,#content .speakers__grid .speaker,#content .speakers__grid--md .speaker{border:none!important}
+#content .friends__tier-label::after{background:transparent}
+#content .floor-plan__entry-card{border-left:none;border-right:none}
+#content .about__photo,#content .about__bios,#content .about__advisor,#content .about__advisor-portrait{border:none}
+/* Dividers worth keeping, but quiet (these were currentColor = now full cream) */
+#content .about__bio{border-left-color:var(--dk-rule)}
+#content .faq__item{border-bottom-color:var(--dk-rule)}
+#content .tier__price-wrap{border-bottom-color:var(--dk-rule)}
+#content .news__form{border-bottom-color:var(--dk-rule)}
+#content .footer__top{border-bottom-color:var(--dk-rule)}
+#content .side-event__venue{border-left-color:var(--accent)}
+/* Radius corrections: agenda blocks are cards, not chips */
+#content .program__block{border-radius:16px}
+#content .side-event__sponsor{border-radius:10px}
+#content .tier__day-agenda-link,#content .floor-detail__label,#content .tier__day-vip-badge{border-radius:999px}
+
+
+/* Final de-frame details */
+#content .speakers__grid--md .speaker:nth-child(odd),
+#content .speakers__grid--md .speaker:nth-child(even){border:none!important}
+#content .friend{border:none}
+#content .friend,#content .partner{border-radius:16px;overflow:hidden}
+#content .partner__portrait--haslogo{border-radius:0!important} /* safe: parent clips */
+
 #content em,#content i,#content cite{font-style:normal}
 /* ===== Full-viewport section rhythm, header-aware anchors, gentle snap ===== */
 /* Each top-level content section fills at least one viewport; short sections
