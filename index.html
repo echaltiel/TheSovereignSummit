@@ -689,7 +689,7 @@ body.menu-open{overflow:hidden}
 <div class="header" id="siteHeader">
   <a class="ticker" href="#tickets">
     <div class="ticker__inner">
-      <span class="ticker__btc" id="btcTicker">1 ₿ig ₿eautiful ₿itcoin</span>
+      <span class="ticker__btc" id="btcTicker">₿itcoin</span>
     </div>
   </a>
   <div class="nav-wrap" id="navWrap">
@@ -1822,7 +1822,7 @@ body.menu-open{overflow:hidden}
     var showPrice = function(usd){
       var n = Math.round(Number(usd));
       if(!isFinite(n) || n <= 0) return;
-      btcEl.textContent = '$' + n.toLocaleString('en-US') + ' USD for 1 ₿ig ₿eautiful ₿itcoin';
+      btcEl.textContent = '$' + n.toLocaleString('en-US') + ' USD per ₿itcoin';
     };
     fetch('https://api.coinbase.com/v2/prices/BTC-USD/spot')
       .then(function(r){ return r.json(); })
