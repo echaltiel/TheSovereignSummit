@@ -111,32 +111,21 @@ h2.section-title{
 .btn__arrow{transition:transform .2s ease}
 .btn:hover .btn__arrow{transform:translateX(3px)}
 
-/* ---------- Fixed header: countdown strip + nav ---------- */
+/* ---------- Fixed header: BTC strip + nav ---------- */
 .header{position:fixed;inset:0 0 auto 0;z-index:100}
 .ticker{
-  display:block;background:var(--ink-3);border-bottom:1px solid var(--line);
+  display:block;background:var(--gold);
   transition:background .2s;
 }
-.ticker:hover{background:#1F3A4E}
+.ticker:hover{background:var(--gold-deep)}
 .ticker__inner{
   max-width:var(--max);margin:0 auto;padding:.5rem clamp(1rem,4vw,2rem);
-  display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:nowrap;
+  display:flex;align-items:center;justify-content:center;
 }
-.ticker__cta{
-  font-family:var(--fm);font-size:.66rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
-  color:var(--gold);display:inline-flex;align-items:center;gap:.5rem;white-space:nowrap;
+.ticker__btc{
+  font-family:var(--fm);font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--ink);white-space:nowrap;text-align:center;font-variant-numeric:tabular-nums;
 }
-.ticker__cta-short{display:none}
-.ticker__arrow{transition:transform .25s ease}
-.ticker:hover .ticker__arrow{transform:translateX(.25rem)}
-.ticker__msg{
-  font-family:var(--fm);font-size:.64rem;letter-spacing:.14em;text-transform:uppercase;
-  color:var(--cream-72);text-align:center;white-space:nowrap;
-}
-.ticker__count{display:flex;align-items:center;gap:clamp(.6rem,1.6vw,1.25rem)}
-.cd__unit{display:flex;align-items:baseline;gap:.35rem}
-.cd__lbl{font-family:var(--fm);font-size:.54rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold)}
-.cd__num{font-family:var(--fm);font-size:.98rem;font-weight:700;line-height:1;font-variant-numeric:tabular-nums;color:var(--cream);min-width:1.3ch;text-align:center}
 
 .nav-wrap{
   backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
@@ -213,14 +202,14 @@ body.menu-open{overflow:hidden}
 .hero__ctas{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px}
 
 /* ---------- Marquee ---------- */
-.marquee{border-top:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden;background:var(--ink)}
+.marquee{overflow:hidden;background:var(--gold)}
 .marquee__track{display:flex;width:max-content;animation:marquee 36s linear infinite;padding:15px 0}
 .marquee__track:hover{animation-play-state:paused}
 .marquee span{
   font-family:var(--fm);font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;
-  color:var(--cream-72);padding:0 32px;white-space:nowrap;
+  color:var(--ink);font-weight:700;padding:0 32px;white-space:nowrap;
 }
-.marquee span::after{content:"◆";color:var(--sea);margin-left:62px;font-size:.6rem}
+.marquee span::after{content:"◆";color:var(--ink);opacity:.55;margin-left:62px;font-size:.6rem}
 @keyframes marquee{to{transform:translateX(-50%)}}
 
 /* ---------- Speakers ---------- */
@@ -628,10 +617,6 @@ body.menu-open{overflow:hidden}
   color:var(--cream-50);font-size:.8rem;
 }
 
-@media (max-width:344px){
-  .cd__unit:last-child{display:none}
-}
-
 /* ---------- Reveal on scroll ---------- */
 .reveal{opacity:0;transform:translateY(20px);transition:opacity .65s ease, transform .65s ease}
 .reveal.in{opacity:1;transform:none}
@@ -658,7 +643,6 @@ body.menu-open{overflow:hidden}
 }
 @media (max-width:900px){
   :root{--header-h:96px}
-  .ticker__msg{display:none}
   .agenda__block{grid-template-columns:72px 1fr;grid-template-rows:auto auto}
   .agenda__block p{grid-column:2}
   .events__grid{grid-template-columns:1fr}
@@ -678,13 +662,8 @@ body.menu-open{overflow:hidden}
   :root{--header-h:92px}
   body{font-size:16px}
   section{padding:3.25rem 0}
-  .ticker__inner{justify-content:space-between;padding:.45rem .85rem;gap:.6rem}
-  .ticker__cta-full{display:none}
-  .ticker__cta-short{display:inline}
-  .ticker__count{gap:.55rem}
-  .cd__unit{gap:.25rem}
-  .cd__lbl{font-size:.5rem}
-  .cd__num{font-size:.88rem}
+  .ticker__inner{padding:.45rem .6rem}
+  .ticker__btc{font-size:.6rem;letter-spacing:.08em}
   .nav{height:60px}
   .nav__brand img{height:30px}
   .hero__ctas .btn{width:100%}
@@ -710,14 +689,7 @@ body.menu-open{overflow:hidden}
 <div class="header" id="siteHeader">
   <a class="ticker" href="#tickets">
     <div class="ticker__inner">
-      <span class="ticker__cta"><span class="ticker__cta-full">Buy Your Pass Today</span><span class="ticker__cta-short">Buy Passes</span> <span class="ticker__arrow">→</span></span>
-      <span class="ticker__msg">Prices increase on September 30 @ 11:59 PM</span>
-      <span class="ticker__count" aria-label="Countdown to price increase">
-        <span class="cd__unit"><span class="cd__lbl">Days</span><span class="cd__num" id="cd-days">--</span></span>
-        <span class="cd__unit"><span class="cd__lbl">Hrs</span><span class="cd__num" id="cd-hrs">--</span></span>
-        <span class="cd__unit"><span class="cd__lbl">Min</span><span class="cd__num" id="cd-min">--</span></span>
-        <span class="cd__unit"><span class="cd__lbl">Sec</span><span class="cd__num" id="cd-sec">--</span></span>
-      </span>
+      <span class="ticker__btc" id="btcTicker">1 ₿ig ₿eautiful ₿itcoin</span>
     </div>
   </a>
   <div class="nav-wrap" id="navWrap">
@@ -1844,20 +1816,23 @@ body.menu-open{overflow:hidden}
 
 <script>
 (function(){
-  // ---- Countdown: Early Bird ends Sept 30, 2026 at 11:59 PM Miami time (EDT, UTC-4)
-  var target = new Date('2026-09-30T23:59:00-04:00').getTime();
-  var dEl=document.getElementById('cd-days'),hEl=document.getElementById('cd-hrs'),
-      mEl=document.getElementById('cd-min'),sEl=document.getElementById('cd-sec');
-  if(dEl){
-    var pad=function(n){return String(n).padStart(2,'0');};
-    var tick=function(){
-      var diff=target-Date.now(); if(diff<0) diff=0;
-      dEl.textContent=Math.floor(diff/864e5);
-      hEl.textContent=pad(Math.floor(diff%864e5/36e5));
-      mEl.textContent=pad(Math.floor(diff%36e5/6e4));
-      sEl.textContent=pad(Math.floor(diff%6e4/1e3));
+  // ---- BTC price strip: fetched once on load (Coinbase spot, CoinGecko fallback)
+  var btcEl = document.getElementById('btcTicker');
+  if(btcEl && window.fetch){
+    var showPrice = function(usd){
+      var n = Math.round(Number(usd));
+      if(!isFinite(n) || n <= 0) return;
+      btcEl.textContent = '$' + n.toLocaleString('en-US') + ' USD for 1 ₿ig ₿eautiful ₿itcoin';
     };
-    tick(); setInterval(tick,1000);
+    fetch('https://api.coinbase.com/v2/prices/BTC-USD/spot')
+      .then(function(r){ return r.json(); })
+      .then(function(j){ showPrice(j && j.data && j.data.amount); })
+      .catch(function(){
+        fetch('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd')
+          .then(function(r){ return r.json(); })
+          .then(function(j){ showPrice(j && j.bitcoin && j.bitcoin.usd); })
+          .catch(function(){ /* keep fallback text */ });
+      });
   }
 
   // ---- Fixed-header height → CSS var + scroll padding (keeps anchors clear of the header)
