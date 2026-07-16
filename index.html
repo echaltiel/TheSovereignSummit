@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="theme-color" content="#F4ECE0" />
+<meta name="theme-color" content="#131E33" />
 <meta name="apple-mobile-web-app-status-bar-style" content="default" />
 <title>The Sovereign Summit · February 5 &amp; 6, 2027</title>
 <meta name="description" content="Two days, one stage, one hotel. Fontainebleau Miami Beach. February 5 and 6, 2027." />
@@ -76,12 +76,12 @@
   font-display: swap;
   src: url('/fonts/JetBrainsMono.woff2') format('woff2');
 }
-:root{--ink:#131e33;--ink-deep:#0a1224;--ink-soft:#2b3a58;--paper:#F4ECE0;--paper-deep:#EADFCC;--paper-light:#FAF5EA;--accent:#D9651F;--accent-deep:#A84810;--rule:rgba(19,30,51,.18);--rule-str:rgba(19,30,51,.35);--fd:'Instrument Serif',Georgia,serif;--fb:'Archivo',system-ui,sans-serif;--fm:'JetBrains Mono',ui-monospace,monospace;--gut:clamp(1.25rem,3vw,2.5rem);--max:1360px}
+:root{--ink:#F4ECE0;--ink-deep:#FFFFFF;--ink-soft:#A9B4CC;--paper:#131E33;--paper-deep:#0A1224;--paper-light:#1B2A47;--accent:#D9651F;--accent-deep:#E8863C;--rule:rgba(244,236,224,.18);--rule-str:rgba(244,236,224,.35);--fd:'Instrument Serif',Georgia,serif;--fb:'Archivo',system-ui,sans-serif;--fm:'JetBrains Mono',ui-monospace,monospace;--gut:clamp(1.25rem,3vw,2.5rem);--max:1360px}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased;scroll-padding-top:112px;background:#F4ECE0;background-color:#F4ECE0;min-height:100%}
+html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased;scroll-padding-top:112px;background:#131E33;background-color:#131E33;min-height:100%}
 @media (max-width:900px){html{scroll-padding-top:102px}}
 body{padding-bottom:env(safe-area-inset-bottom)}
-body{font-family:var(--fb);font-size:17px;line-height:1.55;color:var(--ink);background:#F4ECE0;background-color:#F4ECE0;overflow-x:hidden;min-height:100vh}
+body{font-family:var(--fb);font-size:17px;line-height:1.55;color:var(--ink);background:#131E33;background-color:#131E33;overflow-x:hidden;min-height:100vh}
 img,svg{display:block;max-width:100%}
 a{color:inherit;text-decoration:none}
 button{font:inherit;color:inherit;cursor:pointer;background:none;border:none}
@@ -229,7 +229,7 @@ body.menu-open{overflow:hidden}
 .hero__fact dt{font-family:var(--fm);font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-soft);margin:0}
 .hero__fact dd{font-family:var(--fd);font-size:clamp(1.25rem,1.35vw,1.4rem);line-height:1.3;margin:0}
 .hero__fact dd em{font-style:italic;color:var(--accent-deep)}
-.hero__fact-link{color:inherit;text-decoration:underline;text-decoration-color:rgba(19,30,51,.28);text-decoration-thickness:1px;text-underline-offset:3px;transition:text-decoration-color .2s}
+.hero__fact-link{color:inherit;text-decoration:underline;text-decoration-color:rgba(244,236,224,.35);text-decoration-thickness:1px;text-underline-offset:3px;transition:text-decoration-color .2s}
 .hero__fact-link:hover{text-decoration-color:var(--accent-deep)}
 .hero__scroll{display:none}
 @media (max-width:860px){
@@ -427,7 +427,7 @@ body.menu-open{overflow:hidden}
 .speakers__toggle[aria-expanded="true"] .speakers__toggle-show{display:none}
 .speakers__toggle[aria-expanded="true"] .speakers__toggle-hide{display:inline}
 .speakers__toggle[aria-expanded="true"] .btn__arrow{transform:rotate(180deg)}
-.speaker__portrait{width:88px;height:88px;border-radius:50%;background:rgba(19,30,51,.1);color:var(--paper);display:flex;align-items:center;justify-content:center;font-family:var(--fd);font-style:italic;font-size:2.3rem;line-height:1;margin-bottom:1.5rem;overflow:hidden;position:relative;flex-shrink:0}
+.speaker__portrait{width:88px;height:88px;border-radius:50%;background:rgba(244,236,224,.12);color:var(--ink);display:flex;align-items:center;justify-content:center;font-family:var(--fd);font-style:italic;font-size:2.3rem;line-height:1;margin-bottom:1.5rem;overflow:hidden;position:relative;flex-shrink:0}
 .speaker__photo{width:100%;height:100%;object-fit:cover;border-radius:50%;position:absolute;inset:0;z-index:2}
 .speaker__placeholder{font-size:0;color:transparent;position:relative;z-index:1;width:100%;height:100%;background-color:#E8DDD0;background-image:url('images/speaker-placeholder.png');background-size:90%;background-position:center 65%;background-repeat:no-repeat}
 .speaker__portrait--hasphoto .speaker__placeholder{display:none}
@@ -720,7 +720,7 @@ body.menu-open{overflow:hidden}
 
 /* Base phase-tier card */
 .tier{background:var(--paper-light);border:1px solid var(--ink);padding:.4rem .8rem;position:relative;display:flex;flex-direction:column;min-height:auto;transition:transform .3s,box-shadow .3s}
-.tier:hover{transform:translateY(-4px);box-shadow:0 14px 40px -20px rgba(19,30,51,.3)}
+.tier:hover{transform:translateY(-4px);box-shadow:0 14px 40px -20px rgba(0,0,0,.55)}
 .tier::before{content:'';position:absolute;left:-1px;top:-1px;right:-1px;height:4px;background:var(--ink)}
 .tier--featured{background:var(--ink);color:var(--paper)}
 .tier--featured::before{background:var(--accent)}
@@ -1234,7 +1234,7 @@ body.menu-open{overflow:hidden}
   font-weight:500;
   white-space:nowrap;
   z-index:2;
-  box-shadow:0 4px 14px -8px rgba(19,30,51,.35);
+  box-shadow:0 4px 14px -8px rgba(0,0,0,.55);
 }
 
 /* GA day-grid: bordered, clickable, centered boxes — matches VIP aesthetic */
@@ -2395,14 +2395,14 @@ body.menu-open{overflow:hidden}
 :root{
   /* Shadow for tiles on the cream paper background */
   --lift-shadow:
-    0 1px 1px rgba(19,30,51,.035),
-    0 2px 5px rgba(19,30,51,.05),
-    0 8px 18px rgba(19,30,51,.05);
+    0 1px 1px rgba(0,0,0,.18),
+    0 2px 5px rgba(0,0,0,.22),
+    0 8px 18px rgba(0,0,0,.22);
   --lift-shadow-hover:
-    0 2px 3px rgba(19,30,51,.06),
-    0 6px 14px rgba(19,30,51,.08),
-    0 16px 32px rgba(19,30,51,.07);
-  --lift-highlight: inset 0 1px 0 rgba(255,255,255,.55);
+    0 2px 3px rgba(0,0,0,.24),
+    0 6px 14px rgba(0,0,0,.3),
+    0 16px 32px rgba(0,0,0,.28);
+  --lift-highlight: inset 0 1px 0 rgba(244,236,224,.08);
   /* Shadow for tiles on the dark navy program background */
   --lift-shadow-dark:
     0 1px 2px rgba(0,0,0,.18),
@@ -2601,12 +2601,12 @@ body.menu-open{overflow:hidden}
   height:auto;
   margin:0 auto;
   border-radius:2px;
-  box-shadow:0 1px 2px rgba(19,30,51,.06),0 4px 14px rgba(19,30,51,.08);
+  box-shadow:0 1px 2px rgba(0,0,0,.25),0 4px 14px rgba(0,0,0,.3);
   transition:transform .25s ease, box-shadow .25s ease;
 }
 .floor-plan__expand-btn:hover img{
   transform:translateY(-1px);
-  box-shadow:0 6px 22px rgba(19,30,51,.16);
+  box-shadow:0 6px 22px rgba(0,0,0,.45);
 }
 .floor-plan__expand-btn:focus-visible{
   outline:0;
@@ -2800,8 +2800,8 @@ body.menu-open{overflow:hidden}
    from numbered floor tiles. Same chip shape, ink palette instead of accent. */
 .floor-detail__label--alt{
   color:var(--ink);
-  background:rgba(19,30,51,.06);
-  border-color:rgba(19,30,51,.18);
+  background:rgba(244,236,224,.08);
+  border-color:rgba(244,236,224,.22);
 }
 .floor-detail__zones,
 .floor-detail__zones--two,
@@ -3096,6 +3096,128 @@ body.menu-open{overflow:hidden}
   .about__advisors-grid{grid-template-columns:1fr}
   .about__photo{aspect-ratio:4/5}
 }
+
+/* ============================================================
+   NAVY THEME — global cream→navy inversion support
+   The :root palette is now dark (paper = navy, ink = cream).
+   Sections that were ALREADY dark keep their original hand-tuned
+   styling by locally restoring the original palette below, and a
+   few hardcoded-for-cream components are restyled for the navy
+   ground. The hero gets a faded Fontainebleau aerial backdrop.
+   To revert: delete this block and restore the old :root values.
+   ============================================================ */
+
+/* --- HERO: faded Fontainebleau aerial backdrop --- */
+.hero{position:relative;overflow:hidden}
+.hero::before{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(180deg,
+      rgba(19,30,51,.72) 0%,
+      rgba(19,30,51,.84) 55%,
+      rgba(19,30,51,.97) 88%,
+      #131E33 100%),
+    url('images/fontainebleau-hero.jpg') center 38%/cover no-repeat;
+  pointer-events:none;
+}
+.hero > .container{position:relative;z-index:1}
+
+/* --- Local palette restores for sections designed dark --- */
+.ticker{
+  --ink:#0A1224;--ink-deep:#060B16;--ink-soft:#2b3a58;
+  --paper:#F4ECE0;--paper-deep:#EADFCC;--paper-light:#FAF5EA;
+  border-bottom:1px solid rgba(244,236,224,.14);
+}
+.program{
+  --ink:#0A1224;--ink-deep:#060B16;--ink-soft:#2b3a58;
+  --paper:#F4ECE0;--paper-deep:#EADFCC;--paper-light:#FAF5EA;
+}
+.news{
+  --ink:#0A1224;--ink-deep:#060B16;--ink-soft:#2b3a58;
+  --paper:#F4ECE0;--paper-deep:#EADFCC;--paper-light:#FAF5EA;
+}
+.footer{
+  --ink:#131E33;--ink-deep:#0A1224;--ink-soft:#2b3a58;
+  --paper:#F4ECE0;--paper-deep:#EADFCC;--paper-light:#FAF5EA;
+}
+.tier--featured{
+  --ink:#131E33;--ink-deep:#0A1224;--ink-soft:#2b3a58;
+  --paper:#F4ECE0;--paper-deep:#EADFCC;--paper-light:#FAF5EA;
+  border-color:rgba(244,236,224,.25);
+}
+.tier--allaccess,
+.tier--vipallaccess,
+.side-event--hrf{
+  --ink:#131E33;--ink-deep:#0A1224;--ink-soft:#2b3a58;
+  --paper:#F4ECE0;--paper-deep:#EADFCC;--paper-light:#FAF5EA;
+}
+.tier--vipallaccess{border-color:rgba(232,196,106,.32)}
+.tier--allaccess{border-color:rgba(212,169,60,.32)}
+
+/* Dark-caption / dialog atoms that sit on hardcoded dark grounds */
+.about__photo-cap{color:#F4ECE0}
+.floor-plan__dialog-close{color:#F4ECE0}
+
+/* --- Coming Soon tiles: muted navy instead of muted beige --- */
+.tier.tier--coming-soon{
+  background:#17213B !important;
+  border-color:#3A4763 !important;
+  color:#8B96AF !important;
+}
+.tier.tier--coming-soon::before{background:#3A4763 !important}
+.tier.tier--coming-soon .tier__eyebrow,
+.tier.tier--coming-soon .tier__name,
+.tier.tier--coming-soon .tier__name em,
+.tier.tier--coming-soon .tier__price,
+.tier.tier--coming-soon .tier__price-unit,
+.tier.tier--coming-soon .tier__desc,
+.tier.tier--coming-soon .tier__list li,
+.tier.tier--coming-soon .tier__list a,
+.tier.tier--coming-soon .tier__list li::before{color:#8B96AF !important}
+.tier.tier--coming-soon .btn{
+  background:transparent !important;
+  border-color:#3A4763 !important;
+  color:#8B96AF !important;
+}
+.tier--coming-soon::after{
+  color:#A9B4CC;
+  background:rgba(10,18,36,.92);
+  border:1px solid #3A4763;
+}
+.tier--coming-soon .tier__meal-note{color:#8B96AF}
+.tickets__phases .tier--coming-soon .tier__day-list li > a{border-color:rgba(139,150,175,.3)}
+.tickets__phases .tier--coming-soon .tier__day-list li > a:hover{
+  background:rgba(139,150,175,.07);
+  border-color:rgba(139,150,175,.55);
+}
+.tickets__phases .tier--coming-soon .tier__day-list li > a:focus-visible{outline:2px solid #8B96AF}
+
+/* --- Metallic tier labels: brightened so the gradient text reads on navy --- */
+.friends__tier--platinum .friends__tier-label > span{
+  background-image:linear-gradient(115deg,
+    #8488a0 0%,#aab0c4 18%,#c4c8d8 35%,#e6eaf2 50%,#c4c8d8 65%,#aab0c4 82%,#8488a0 100%);
+}
+.friends__tier--gold .friends__tier-label > span{
+  background-image:linear-gradient(115deg,
+    #946018 0%,#c8882a 18%,#d4a035 35%,#e8c46a 50%,#d4a035 65%,#c8882a 82%,#946018 100%);
+}
+.friends__tier--silver .friends__tier-label > span{
+  background-image:linear-gradient(115deg,
+    #585c6c 0%,#7a7c84 18%,#8e9097 35%,#c8ccd6 50%,#8e9097 65%,#7a7c84 82%,#585c6c 100%);
+}
+
+/* Registration chip green: brightened for dark tile */
+.floor-plan__reg-label{
+  color:#3FBF74 !important;
+  border-color:rgba(63,191,116,.42) !important;
+  background:rgba(63,191,116,.1) !important;
+}
+
+/* Sponsor / partner logo wells stay light so uploaded logo files remain legible */
+.partner__portrait--haslogo{background:#FAF5EA !important}
+
 </style>
 </head>
 <body>
