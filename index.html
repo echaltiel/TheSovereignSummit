@@ -396,16 +396,6 @@ body.menu-open{overflow:hidden}
 #content .sec-hd__num{font-family:var(--fm);font-size:.78rem;letter-spacing:.24em;text-transform:uppercase;color:var(--ink-soft);padding-top:.8rem;border-top:1px solid var(--ink)}
 #content .sec-hd__title{padding-top:.5rem}
 @media (max-width:720px){#content .sec-hd{grid-template-columns:1fr;gap:1.25rem}}
-#content .story{padding:clamp(2rem,4vw,3.25rem) 0 clamp(1rem,2vw,1.75rem)}
-#content .story .sec-hd{margin-bottom:clamp(1.5rem,3vw,2.5rem)}
-#content .story__grid{display:grid;grid-template-columns:minmax(240px,380px) 1fr;gap:clamp(2rem,5vw,4.5rem);align-items:center}
-#content .story__badge{display:flex;justify-content:center}
-#content .story__badge img{width:100%;max-width:380px;height:auto;filter:drop-shadow(0 16px 40px rgba(0,0,0,.45))}
-#content .story__lead{font-family:var(--fd);font-size:clamp(1.35rem,2vw,1.9rem);line-height:1.3;margin:0 0 1.1rem}
-#content .story__lead em{font-style:normal;color:var(--accent)}
-#content .story__text{font-size:.98rem;line-height:1.7;color:var(--dk-c72);max-width:62ch;margin:0 0 1rem}
-#content .story__text:last-child{margin-bottom:0}
-@media (max-width:900px){#content .story__grid{grid-template-columns:1fr;gap:1.9rem}#content .story__badge img{max-width:min(60vw,280px)}}
 #content .program{background:var(--ink);color:var(--paper);padding:clamp(.75rem,1.2vw,1.1rem) 0 clamp(1.5rem,2.5vw,2rem);position:relative}
 #content .program::after{display:none}
 #content .program .sec-hd__num{color:var(--paper-deep);opacity:.7;border-top-color:var(--paper-deep)}
@@ -3186,30 +3176,10 @@ html{scroll-snap-type:y proximity}
 </div>
 
 <main id="content">
-<section class="story">
-  <div class="container">
-    <header class="sec-hd">
-      <div class="sec-hd__num">Nº 01 — The Story</div>
-      <h2 class="section-title sec-hd__title">From a Portland meetup to <em>Miami Beach.</em></h2>
-    </header>
-    <div class="story__grid">
-      <div class="story__badge">
-        <img src="images/TSS_Badge_Cream.png" alt="The Sovereign Summit badge" width="830" height="1100" loading="lazy" decoding="async">
-      </div>
-      <div class="story__copy">
-        <p class="story__lead">The Sovereign Summit began the way most good things do: <em>small.</em></p>
-        <p class="story__text">For two years, we ran Bitcoin is for Everyone, a grassroots nonprofit in Portland, Oregon that drew more than 250 people each year. No booths, no badges scanned at the door. Just great people in a room having the conversations that matter. It proved something we suspected: the appetite for real, unscripted dialogue is enormous, and almost no event serves it.</p>
-        <p class="story__text">At the same time, a conviction kept getting stronger. The defining forces of the next decade, AI, freedom, energy, and Bitcoin, are not four separate stories. They are one story, converging fast. Yet the rooms where those conversations happen rarely overlap: finance in one city, tech in another, energy and policy somewhere else entirely.</p>
-        <p class="story__text">So we built the event we always wanted to attend. Two days at the Fontainebleau Miami Beach, capped at 1,000 people, anti-convention in spirit and premium in execution. Less trade show, more gathering. That is the story, and February 5&ndash;6, 2027 is the next chapter.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
 <section class="speakers">
   <div class="container">
     <header class="sec-hd" id="speakers">
-      <div class="sec-hd__num">Nº 02 — Speakers</div>
+      <div class="sec-hd__num">Nº 01 — Speakers</div>
       <h2 class="section-title sec-hd__title">The minds shaping <em>the next decade.</em></h2>
     </header>
     <div class="speakers__grid" id="speakersGridFeatured">
@@ -3496,7 +3466,7 @@ html{scroll-snap-type:y proximity}
 <section class="program">
   <div class="container">
     <header class="sec-hd" id="agenda">
-      <div class="sec-hd__num">Nº 03 — Agenda</div>
+      <div class="sec-hd__num">Nº 02 — Agenda</div>
       <h2 class="section-title sec-hd__title">Four blocks. <em>One story.</em></h2>
     </header>
     <div style="margin:clamp(1.25rem,2vw,1.75rem) 0 clamp(.4rem,.7vw,.6rem)">
@@ -3573,7 +3543,7 @@ html{scroll-snap-type:y proximity}
 <section class="side-events">
   <div class="container">
     <header class="sec-hd" id="side-events">
-      <div class="sec-hd__num">Nº 04 — Side Events</div>
+      <div class="sec-hd__num">Nº 03 — Side Events</div>
       <h2 class="section-title sec-hd__title"><em>Before</em>, <em>During</em>, and <em>After</em> The Summit.</h2>
     </header>
     <div class="side-events__grid">
@@ -3659,7 +3629,7 @@ html{scroll-snap-type:y proximity}
 <section class="friends" id="sponsors">
   <div class="container">
     <header class="sec-hd">
-      <div class="sec-hd__num">Nº 05 — Sponsors</div>
+      <div class="sec-hd__num">Nº 04 — Sponsors</div>
       <h2 class="section-title sec-hd__title"><span style="color:var(--accent)">Brands</span> supporting <span style="color:var(--accent)">Sovereignty.</span></h2>
     </header>
     <div class="friends__tier friends__tier--platinum">
@@ -3728,7 +3698,7 @@ html{scroll-snap-type:y proximity}
 <section class="partners">
   <div class="container">
     <header class="sec-hd" id="partners">
-      <div class="sec-hd__num">Nº 06 — Partners</div>
+      <div class="sec-hd__num">Nº 05 — Partners</div>
       <h2 class="section-title sec-hd__title">Built with partners who understand <em>the mission.</em></h2>
     </header>
     <div class="partners__grid" id="partnersGrid">
@@ -3824,7 +3794,7 @@ html{scroll-snap-type:y proximity}
 <section class="venue">
   <div class="container">
     <header class="sec-hd" id="venue">
-      <div class="sec-hd__num">Nº 07 — Venue</div>
+      <div class="sec-hd__num">Nº 06 — Venue</div>
       <h2 class="section-title sec-hd__title"><em>Fontainebleau.</em> The Summit Campus.</h2>
     </header>
     <div class="venue__grid">
@@ -3883,7 +3853,7 @@ html{scroll-snap-type:y proximity}
 <section class="floor-plan">
   <div class="container">
     <header class="sec-hd" id="floor-plan">
-      <div class="sec-hd__num">Nº 08 — Floor Plan</div>
+      <div class="sec-hd__num">Nº 07 — Floor Plan</div>
       <h2 class="section-title sec-hd__title">The Summit, <em>mapped.</em></h2>
     </header>
     <p class="floor-plan__intro">Five floors inside the <strong>Coastal Convention Center</strong>, connected to the Fontainebleau by skybridge.</p>
@@ -4020,7 +3990,7 @@ html{scroll-snap-type:y proximity}
 <section class="faq">
   <div class="container">
     <header class="sec-hd" id="faq">
-      <div class="sec-hd__num">Nº 09 — FAQ</div>
+      <div class="sec-hd__num">Nº 08 — FAQ</div>
       <h2 class="section-title sec-hd__title">Everything you need <em>to know.</em></h2>
     </header>
     <div class="faq__list">
@@ -4107,7 +4077,7 @@ html{scroll-snap-type:y proximity}
 <section class="about">
   <div class="container">
     <header class="sec-hd" id="team">
-      <div class="sec-hd__num">Nº 10 — Team</div>
+      <div class="sec-hd__num">Nº 09 — Team</div>
       <h2 class="section-title sec-hd__title">Who's <em>behind</em> the Summit.</h2>
     </header>
     <div class="about__founders">
@@ -4180,7 +4150,7 @@ html{scroll-snap-type:y proximity}
 <section class="tickets">
   <div class="container">
     <header class="sec-hd" id="tickets">
-      <div class="sec-hd__num">Nº 11 — Admission</div>
+      <div class="sec-hd__num">Nº 10 — Admission</div>
       <h2 class="section-title sec-hd__title"><em>Capped at a thousand.</em> By design.</h2>
     </header>
     <div class="tickets__grid">
