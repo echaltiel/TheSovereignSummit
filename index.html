@@ -108,7 +108,7 @@ section{padding:clamp(4rem,8vw,6.5rem) 0;position:relative}
   height:66px;display:flex;align-items:center;justify-content:space-between;gap:16px;
 }
 .nav__brand{display:flex;align-items:center;min-width:0}
-.nav__brand img{height:38px;width:auto;max-width:min(60vw,320px);object-fit:contain}
+.nav__brand img{height:46px;width:auto;max-width:min(60vw,320px);object-fit:contain}
 .nav__links{display:flex;gap:clamp(.9rem,1.6vw,1.5rem);list-style:none}
 .nav__link{font-size:.85rem;font-weight:500;color:var(--cream-72);transition:color .2s;padding:.35rem 0}
 .nav__link:hover{color:var(--cream)}
@@ -150,10 +150,18 @@ body.menu-open{overflow:hidden}
 .hero__scrim{
   position:absolute;inset:0;z-index:1;
   background:
-    linear-gradient(90deg, rgba(19,30,51,.93) 0%, rgba(19,30,51,.8) 42%, rgba(19,30,51,.3) 100%),
+    linear-gradient(90deg, rgba(19,30,51,.5) 0%, rgba(19,30,51,.68) 42%, rgba(19,30,51,.93) 100%),
     linear-gradient(180deg, rgba(19,30,51,.62) 0%, rgba(19,30,51,.34) 40%, rgba(19,30,51,.96) 88%, var(--ink) 100%);
 }
 .hero__in{position:relative;z-index:2;width:100%}
+.hero__grid{display:grid;grid-template-columns:minmax(240px,400px) 1fr;gap:clamp(2rem,5vw,4.5rem);align-items:center}
+.hero__badge{display:flex;justify-content:center}
+.hero__badge img{width:100%;max-width:400px;height:auto;filter:drop-shadow(0 18px 44px rgba(10,18,36,.6))}
+@media (max-width:900px){
+  .hero__grid{grid-template-columns:1fr;gap:1.9rem}
+  .hero__badge{justify-content:flex-start}
+  .hero__badge img{max-width:min(52vw,230px)}
+}
 .hero__kicker{display:flex;flex-wrap:wrap;gap:10px 22px;align-items:center;margin-bottom:22px}
 .hero__kicker .mono{
   font-family:var(--fm);font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;
@@ -3097,7 +3105,7 @@ html{scroll-snap-type:y proximity}
   <div class="nav-wrap" id="navWrap">
     <nav class="nav">
       <a class="nav__brand" href="#top" aria-label="The Sovereign Summit">
-        <img src="images/TSS_Word_Logo%20(White%20The%20%26%20Summit).png" alt="The Sovereign Summit" fetchpriority="high">
+        <img src="images/New%20Logo.png" alt="The Sovereign Summit" fetchpriority="high">
       </a>
       <ul class="nav__links">
         <li><a class="nav__link" href="#speakers">Speakers</a></li>
@@ -3153,17 +3161,24 @@ html{scroll-snap-type:y proximity}
   </div>
   <div class="hero__scrim" aria-hidden="true"></div>
   <div class="wrap hero__in">
-    <div class="hero__kicker">
-      <span class="mono">February 5–6, 2027</span>
-    </div>
-    <h1>
-      AI. Freedom.<br>
-      Energy. Bitcoin.<br>
-      <span class="serif">Fontainebleau, Miami Beach.</span>
-    </h1>
-    <div class="hero__ctas">
-      <a class="btn" href="#tickets">Get Your Summit Pass <span class="btn__arrow">→</span></a>
-      <a class="btn btn--ghost" href="#side-events">See All Side Events ↓</a>
+    <div class="hero__grid">
+      <div class="hero__badge" aria-hidden="true">
+        <img src="images/TSS_Badge_Cream.png" alt="" width="830" height="1100" fetchpriority="high" decoding="async">
+      </div>
+      <div class="hero__copy">
+        <div class="hero__kicker">
+          <span class="mono">February 5–6, 2027</span>
+        </div>
+        <h1>
+          AI. Freedom.<br>
+          Energy. Bitcoin.<br>
+          <span class="serif">Fontainebleau, Miami Beach.</span>
+        </h1>
+        <div class="hero__ctas">
+          <a class="btn" href="#tickets">Get Your Summit Pass <span class="btn__arrow">→</span></a>
+          <a class="btn btn--ghost" href="#side-events">See All Side Events ↓</a>
+        </div>
+      </div>
     </div>
   </div>
 </section>
