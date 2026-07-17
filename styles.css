@@ -2994,24 +2994,17 @@ body.menu-open{overflow:hidden}
 /* Hidden speakers stay hidden at every breakpoint until Show All */
 #content .speaker.speaker--hidden{display:none!important}
 #content em,#content i,#content cite{font-style:normal}
-/* ===== Full-viewport section rhythm, header-aware anchors, gentle snap ===== */
-/* Each top-level content section fills at least one viewport; short sections
-   center their content vertically so nothing looks stranded at the top. */
+/* ===== Uniform section rhythm ===== */
+/* Sections size to their content; one shared top padding creates identical
+   spacing between the marquee and the first section and between every
+   pair of adjacent sections. */
 #content > section{
-  min-height:100svh;
-  display:flex;flex-direction:column;justify-content:center;
-  scroll-snap-align:start;
-  margin-top:clamp(1.5rem,3vw,2.5rem);
+  min-height:0;
+  padding-top:clamp(2rem,3.5vw,3rem) !important;
+  padding-bottom:0 !important;
 }
-/* Speakers is a short section now (single featured row) — let it size to its
-   content instead of stretching to a full viewport. */
-#content > section.speakers{min-height:0;justify-content:flex-start}
 /* Any anchor target clears the fixed header (belt) — html scroll-padding-top
    set in the base styles is the braces. --header-h is measured live by JS. */
 #content [id]{scroll-margin-top:calc(var(--header-h) + 10px)}
-/* Proximity snap: settles a section into place when you stop near its edge,
-   but never fights a mid-section reading position the way `mandatory` would. */
-html{scroll-snap-type:y proximity}
-@media (prefers-reduced-motion: reduce){
-  html{scroll-snap-type:none}
-}
+/* Proximity snap removed: with content-sized sections, snap points would
+   bunch up and fight natural scrolling. */
