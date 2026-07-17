@@ -167,7 +167,7 @@
       </details>
       <details class="faq__item">
         <summary class="faq__q"><span class="faq__num">16</span><span class="faq__q-text">Will sessions be <em>recorded or streamed?</em></span><span class="faq__icon"></span></summary>
-        <div class="faq__a"><p><strong>No public livestream.</strong> Sessions will be recorded and released after the event. <strong><u><a href="/#subscribe">Subscribe below</a></u></strong> to stay up to date on release timing and everything else.</p></div>
+        <div class="faq__a"><p><strong>No public livestream.</strong> Sessions will be recorded and released after the event. <strong><u><a href="#subscribe">Subscribe below</a></u></strong> to stay up to date on release timing and everything else.</p></div>
       </details>
       <details class="faq__item">
         <summary class="faq__q"><span class="faq__num">17</span><span class="faq__q-text">What&rsquo;s the <em>code of conduct?</em></span><span class="faq__icon"></span></summary>
@@ -184,6 +184,22 @@
     </div>
   </div>
 </section>
+<section class="news">
+  <div class="container">
+    <div class="news__inner" id="subscribe">
+<img class="news__mark" src="images/Newsletter_logo.png" alt="The Sovereign Summit" loading="lazy" decoding="async">
+      <div class="eyebrow" style="color:var(--paper-deep);opacity:.7;margin-bottom:1.25rem;">Updates · Monthly</div>
+      <h2 class="news__title">Stay in the loop.<br><em>No noise, just signal.</em></h2>
+      <p class="news__sub">Speaker announcements, program updates, and more. Unsubscribe any time you like.</p>
+      <form class="news__form" onsubmit="event.preventDefault(); this.querySelector('.news__input').value=''; this.querySelector('.news__submit').textContent='Subscribed ✓';">
+        <input class="news__input" type="email" placeholder="your@email.com" required>
+        <button type="submit" class="news__submit">Subscribe →</button>
+      </form>
+      <div class="news__note">We do not newsletter-bomb.</div>
+    </div>
+  </div>
+</section>
+
 <footer class="footer">
   <div class="container">
     <div class="footer__top">

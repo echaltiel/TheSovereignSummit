@@ -156,6 +156,22 @@
     </div>
   </div>
 </section>
+<section class="news">
+  <div class="container">
+    <div class="news__inner" id="subscribe">
+<img class="news__mark" src="images/Newsletter_logo.png" alt="The Sovereign Summit" loading="lazy" decoding="async">
+      <div class="eyebrow" style="color:var(--paper-deep);opacity:.7;margin-bottom:1.25rem;">Updates · Monthly</div>
+      <h2 class="news__title">Stay in the loop.<br><em>No noise, just signal.</em></h2>
+      <p class="news__sub">Speaker announcements, program updates, and more. Unsubscribe any time you like.</p>
+      <form class="news__form" onsubmit="event.preventDefault(); this.querySelector('.news__input').value=''; this.querySelector('.news__submit').textContent='Subscribed ✓';">
+        <input class="news__input" type="email" placeholder="your@email.com" required>
+        <button type="submit" class="news__submit">Subscribe →</button>
+      </form>
+      <div class="news__note">We do not newsletter-bomb.</div>
+    </div>
+  </div>
+</section>
+
 <footer class="footer">
   <div class="container">
     <div class="footer__top">
