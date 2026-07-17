@@ -47,6 +47,8 @@ section{padding:clamp(4rem,8vw,6.5rem) 0;position:relative}
 .btn:hover{transform:translateY(-1px);box-shadow:0 8px 26px rgba(244,128,13,.3)}
 .btn--ghost{background:transparent;color:var(--cream);border:1px solid var(--line-strong)}
 .btn--ghost:hover{border-color:var(--cream);box-shadow:none}
+.btn--room{background:var(--cream);color:#131E33}
+.btn--room:hover{box-shadow:0 8px 26px rgba(244,236,224,.28)}
 .btn__arrow{transition:transform .2s ease}
 .btn:hover .btn__arrow{transform:translateX(3px)}
 .header{position:fixed;inset:0 0 auto 0;z-index:100}
