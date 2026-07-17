@@ -3001,6 +3001,7 @@ body.menu-open{overflow:hidden}
   min-height:100svh;
   display:flex;flex-direction:column;justify-content:center;
   scroll-snap-align:start;
+  margin-top:clamp(1.5rem,3vw,2.5rem);
 }
 /* Speakers is a short section now (single featured row) — let it size to its
    content instead of stretching to a full viewport. */
