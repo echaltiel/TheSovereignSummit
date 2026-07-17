@@ -3017,3 +3017,11 @@ body.menu-open{overflow:hidden}
 #content .side-event__tag--vip{color:#8B5E1A;font-weight:700}
 #content .side-event__foot{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;flex-wrap:wrap;margin-top:auto;padding-top:.65rem;border-top:1px solid var(--rule);font-family:var(--fm);font-size:.7rem;letter-spacing:.13em;text-transform:uppercase;color:var(--ink-soft);line-height:1.6}
 #content .side-event__where{color:var(--ink);font-weight:600}
+
+/* Dark-theme colors for the new side-event tile rows */
+#content .side-event__kicker{color:var(--accent)}
+#content .side-event__presented{color:rgba(244,236,224,.45);opacity:1}
+#content .side-event__tags{color:var(--dk-c72)}
+#content .side-event__tag--vip{color:#E8C46A}
+#content .side-event__foot{color:var(--dk-c72);border-top-color:var(--dk-rule)}
+#content .side-event__where{color:rgba(244,236,224,.95)}
