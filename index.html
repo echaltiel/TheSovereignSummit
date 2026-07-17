@@ -104,18 +104,18 @@ section{padding:clamp(4rem,8vw,6.5rem) 0;position:relative}
   background:rgba(19,30,51,.8);border-bottom:1px solid var(--line);
 }
 .nav{
-  max-width:var(--max);margin:0 auto;padding:0 clamp(1rem,4vw,2rem);
+  max-width:1760px;margin:0 auto;padding:0 clamp(1rem,2.5vw,2.5rem);
   height:82px;display:flex;align-items:center;justify-content:space-between;gap:16px;
 }
 .nav__brand{display:flex;align-items:center;min-width:0}
 .nav__brand img{height:70px;width:auto;max-width:min(40vw,480px);object-fit:contain}
 .nav__links{display:flex;gap:clamp(.9rem,1.6vw,1.5rem);list-style:none}
-.nav__link{font-size:.85rem;font-weight:500;color:var(--cream-72);transition:color .2s;padding:.35rem 0}
+.nav__link{font-family:var(--fb);font-size:1rem;font-weight:600;letter-spacing:.015em;color:rgba(244,236,224,.88);transition:color .2s;padding:.35rem 0}
 .nav__link:hover{color:var(--cream)}
 .nav__actions{display:flex;align-items:center;gap:.9rem}
 .nav__social{color:var(--cream-72);transition:color .2s;display:flex;padding:.4rem}
 .nav__social:hover{color:var(--cream)}
-.nav__cta{font-size:.85rem;padding:.6rem 1.25rem;min-height:42px}
+.nav__cta{font-size:.95rem;padding:.7rem 1.5rem;min-height:46px}
 .nav__toggle{display:none;flex-direction:column;justify-content:center;gap:5px;width:48px;height:48px;align-items:center}
 .nav__toggle span{display:block;width:22px;height:2px;background:var(--cream);transition:transform .25s,opacity .25s}
 .nav__toggle[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
@@ -181,7 +181,7 @@ body.menu-open{overflow:hidden}
 .reveal{opacity:0;transform:translateY(20px);transition:opacity .65s ease, transform .65s ease}
 .reveal.in{opacity:1;transform:none}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}.marquee__track{animation:none}}
-@media (max-width:1080px){.nav__links{display:none}.nav__cta{display:none}.nav__toggle{display:flex}}
+@media (max-width:1280px){.nav__links{display:none}.nav__cta{display:none}.nav__toggle{display:flex}}
 @media (max-width:900px){:root{--header-h:96px}}
 @media (max-width:600px){:root{--header-h:92px}body{font-size:16px}section{padding:3.25rem 0}.ticker__inner{padding:.45rem .6rem}.ticker__btc{font-size:.6rem;letter-spacing:.08em}.nav{height:68px}.nav__brand img{height:44px;max-width:62vw}.hero__ctas .btn{width:100%}}
 
@@ -4444,7 +4444,7 @@ html{scroll-snap-type:y proximity}
       if(e.key === 'Escape' && navToggle.getAttribute('aria-expanded') === 'true') closeMenu();
     });
     window.addEventListener('resize', function(){
-      if(window.innerWidth > 1080 && navToggle.getAttribute('aria-expanded') === 'true') closeMenu();
+      if(window.innerWidth > 1280 && navToggle.getAttribute('aria-expanded') === 'true') closeMenu();
     });
   }
 
