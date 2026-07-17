@@ -2998,9 +2998,9 @@ body.menu-open{overflow:hidden}
 /* Sections size to their content; one shared top padding creates identical
    spacing between the marquee and the first section and between every
    pair of adjacent sections. */
-#content > section{
+#content > section[class]{
   min-height:0;
-  padding-top:clamp(2rem,3.5vw,3rem) !important;
+  padding-top:clamp(2.5rem,4vw,3.5rem) !important;
   padding-bottom:0 !important;
 }
 /* Any anchor target clears the fixed header (belt) — html scroll-padding-top
