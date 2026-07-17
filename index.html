@@ -536,30 +536,30 @@ body.menu-open{overflow:hidden}
 @media (max-width:640px){#content .speakers__grid--md{grid-template-columns:repeat(3,1fr)}
 #content .speakers__grid--md .speaker:nth-child(4n){border-right:1px solid var(--ink)}
 #content .speakers__grid--md .speaker:nth-child(3n){border-right:none}}
-@media (max-width:520px){#content .speakers{padding:.25rem 0 1.25rem}
-#content .speakers .sec-hd{margin-bottom:.9rem;gap:.4rem;padding-top:0}
+@media (max-width:520px){#content .speakers{padding:.75rem 0 2rem}
+#content .speakers .sec-hd{margin-bottom:1rem;gap:.4rem;padding-top:0}
 #content .speakers .sec-hd__num{padding-top:.5rem;font-size:.7rem}
 #content .speakers .sec-hd__title{padding-top:0}
-#content .speakers__grid{grid-template-columns:1fr;border-right:none}
-#content .speakers__grid--md{grid-template-columns:1fr}
+#content .speakers__grid{grid-template-columns:repeat(2,1fr);border-right:none}
+#content .speakers__grid--md{grid-template-columns:repeat(2,1fr)}
 #content .speakers__actions{margin-top:.85rem}
 #content .speakers__toggle{padding:.85rem 1.4rem;font-size:.78rem;letter-spacing:.14em}
 #content .speakers__footnote{font-size:1.05rem;margin-top:.85rem;padding:0 1rem}
-#content .speaker{border-right:none !important;padding:1.5rem 1.25rem 1.35rem;align-items:center;text-align:center}
+#content .speaker{border-right:none !important;padding:1.1rem .8rem 1.05rem;align-items:center;text-align:center}
 #content .speakers__grid--md .speaker{border-right:none !important}
-#content .speaker__index{top:.6rem;right:.8rem;font-size:.55rem}
-#content .speaker__portrait{width:96px;height:96px;margin-bottom:1rem;font-size:2.3rem}
-#content .speaker__placeholder{font-size:2.3rem}
-#content .speaker__name{font-size:1.85rem;margin-bottom:.35rem;padding-right:0}
-#content .speaker__role{font-size:.8rem;margin-bottom:.15rem;letter-spacing:.13em;line-height:1.45}
-#content .speaker__company{font-size:.8rem;letter-spacing:.13em;margin-bottom:0}
-#content .speaker__topic{font-size:.85rem;padding-top:.3rem;line-height:1.3}
-#content .speaker--md{flex-direction:column;align-items:center;text-align:center;gap:0;padding:1.5rem 1.25rem 1.35rem}
-#content .speaker--md .speaker__portrait{width:96px;height:96px;margin-bottom:1rem;flex-shrink:0;font-size:2.3rem}
-#content .speaker--md .speaker__placeholder{font-size:2.3rem}
-#content .speaker--md .speaker__name{font-size:1.85rem;margin-bottom:.35rem;padding-right:0;text-align:center;line-height:1.05}
-#content .speaker--md .speaker__role{font-size:.8rem;text-align:center;line-height:1.45}
-#content .speaker--md .speaker__company{font-size:.8rem;text-align:center}}
+#content .speaker__index{top:.5rem;right:.65rem;font-size:.5rem}
+#content .speaker__portrait{width:72px;height:72px;margin-bottom:.75rem;font-size:1.8rem}
+#content .speaker__placeholder{font-size:1.8rem}
+#content .speaker__name{font-size:1.3rem;margin-bottom:.3rem;padding-right:0}
+#content .speaker__role{font-size:.66rem;margin-bottom:.12rem;letter-spacing:.12em;line-height:1.4}
+#content .speaker__company{font-size:.66rem;letter-spacing:.12em;margin-bottom:0}
+#content .speaker__topic{font-size:.78rem;padding-top:.25rem;line-height:1.3}
+#content .speaker--md{flex-direction:column;align-items:center;text-align:center;gap:0;padding:1.1rem .8rem 1.05rem}
+#content .speaker--md .speaker__portrait{width:72px;height:72px;margin-bottom:.75rem;flex-shrink:0;font-size:1.8rem}
+#content .speaker--md .speaker__placeholder{font-size:1.8rem}
+#content .speaker--md .speaker__name{font-size:1.3rem;margin-bottom:.3rem;padding-right:0;text-align:center;line-height:1.05}
+#content .speaker--md .speaker__role{font-size:.66rem;text-align:center;line-height:1.4}
+#content .speaker--md .speaker__company{font-size:.66rem;text-align:center}}
 #content .speakers__footnote{margin-top:1rem;font-family:var(--fd);font-style:normal;font-size:1.3rem;color:var(--ink-soft);text-align:center;max-width:52ch;margin-left:auto;margin-right:auto}
 #content .speakers__footnote em{color:var(--accent-deep)}
 #content .partners{padding:clamp(1rem,2vw,1.5rem) 0 clamp(1rem,2vw,1.5rem)}
@@ -2191,17 +2191,17 @@ body.menu-open{overflow:hidden}
 @media (max-width:640px){#content .speakers__grid--md:not(.speakers__grid--expanded) .speaker:nth-child(n+7){display:none}}
 @media (max-width:520px){#content .speakers__grid--md:not(.speakers__grid--expanded) .speaker:nth-child(n+7){display:flex}
 #content .speakers__grid--md:not(.speakers__grid--expanded) .speaker:nth-child(n+9){display:none}
-#content .speakers__grid:not(.speakers__grid--md){grid-template-columns:1fr}
+#content .speakers__grid:not(.speakers__grid--md){grid-template-columns:repeat(2,1fr)}
 #content .speakers__grid:not(.speakers__grid--md) .speaker{
-    padding:1.35rem 1.25rem 1.3rem
+    padding:1rem .75rem .95rem
   }
 #content .speakers__grid:not(.speakers__grid--md) .speaker__index{display:none}
-#content .speakers__grid:not(.speakers__grid--md) .speaker__portrait{width:100%;height:170px;border-radius:14px;margin-bottom:.9rem;align-self:stretch;font-size:2.3rem}
-#content .speakers__grid:not(.speakers__grid--md) .speaker__photo{border-radius:14px;object-position:center 25%}
-#content .speakers__grid:not(.speakers__grid--md) .speaker__placeholder{background-size:cover;background-position:center;background-repeat:no-repeat;font-size:2.3rem}
-#content .speakers__grid:not(.speakers__grid--md) .speaker__name{font-size:1.9rem;margin-bottom:.35rem;padding-right:0;line-height:1.05}
-#content .speakers__grid:not(.speakers__grid--md) .speaker__role{font-size:.82rem;line-height:1.45;margin-bottom:.15rem}
-#content .speakers__grid:not(.speakers__grid--md) .speaker__company{font-size:.82rem;line-height:1.45;margin-bottom:0}}
+#content .speakers__grid:not(.speakers__grid--md) .speaker__portrait{width:100%;height:120px;border-radius:12px;margin-bottom:.7rem;align-self:stretch;font-size:1.8rem}
+#content .speakers__grid:not(.speakers__grid--md) .speaker__photo{border-radius:12px;object-position:center 25%}
+#content .speakers__grid:not(.speakers__grid--md) .speaker__placeholder{background-size:cover;background-position:center;background-repeat:no-repeat;font-size:1.8rem}
+#content .speakers__grid:not(.speakers__grid--md) .speaker__name{font-size:1.35rem;margin-bottom:.3rem;padding-right:0;line-height:1.05}
+#content .speakers__grid:not(.speakers__grid--md) .speaker__role{font-size:.66rem;line-height:1.4;margin-bottom:.12rem}
+#content .speakers__grid:not(.speakers__grid--md) .speaker__company{font-size:.66rem;line-height:1.4;margin-bottom:0}}
 #content .side-events__grid{
   border:none;
   gap:.6rem;
