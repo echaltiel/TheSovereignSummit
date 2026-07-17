@@ -1400,7 +1400,7 @@ body.menu-open{overflow:hidden}
 #content .side-event:hover .side-event__title{color:var(--accent-deep)}
 #content .side-event__date{font-family:var(--fm);font-size:.78rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--accent-deep)}
 #content .side-event__time{font-family:var(--fm);font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:0}
-#content .side-event__title{font-family:var(--fd);font-size:clamp(1.9rem,2.3vw,2.5rem);line-height:1.02;letter-spacing:-.01em;font-weight:400;margin:.1rem 0 .15rem}
+#content .side-event__title{font-family:var(--fd);font-size:clamp(1.9rem,2.3vw,2.5rem);line-height:1.02;letter-spacing:-.01em;font-weight:400;margin:.15rem 0 .2rem}
 #content .side-event__title em{font-style:normal}
 #content .side-event__venue{display:inline-flex;align-items:baseline;gap:.45rem;font-family:var(--fd);font-size:1rem;color:var(--ink);padding:.3rem .6rem;background:var(--paper-deep);border-left:2px solid var(--accent-deep);align-self:flex-start;line-height:1.2}
 #content .side-event__venue-label{font-family:var(--fm);font-size:.55rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-soft)}
@@ -3008,3 +3008,12 @@ body.menu-open{overflow:hidden}
 #content [id]{scroll-margin-top:calc(var(--header-h) + 10px)}
 /* Proximity snap removed: with content-sized sections, snap points would
    bunch up and fight natural scrolling. */
+
+/* ===== Side-event tile: clean four-row layout (homepage) ===== */
+#content .side-event__kickrow{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;flex-wrap:wrap}
+#content .side-event__kicker{font-family:var(--fm);font-size:.8rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--accent-deep)}
+#content .side-event__presented{font-family:var(--fm);font-size:.6rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-soft);opacity:.7}
+#content .side-event__tags{font-family:var(--fm);font-size:.74rem;letter-spacing:.13em;text-transform:uppercase;color:var(--ink-soft);line-height:1.7}
+#content .side-event__tag--vip{color:#8B5E1A;font-weight:700}
+#content .side-event__foot{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;flex-wrap:wrap;margin-top:auto;padding-top:.65rem;border-top:1px solid var(--rule);font-family:var(--fm);font-size:.7rem;letter-spacing:.13em;text-transform:uppercase;color:var(--ink-soft);line-height:1.6}
+#content .side-event__where{color:var(--ink);font-weight:600}
