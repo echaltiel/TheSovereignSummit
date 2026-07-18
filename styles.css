@@ -504,7 +504,7 @@ body.menu-open{overflow:hidden}
 #content .speakers__grid--md .speaker:nth-child(3n){border-right:none}}
 @media (max-width:520px){#content .speakers{padding:.75rem 0 2rem}
 #content .speakers .sec-hd{margin-bottom:1rem;gap:.4rem;padding-top:0}
-#content .speakers .sec-hd__num{padding-top:.5rem;font-size:.7rem}
+#content .speakers .sec-hd__num{padding-top:.75rem}
 
 #content .speakers__grid{grid-template-columns:repeat(2,1fr);border-right:none}
 #content .speakers__grid--md{grid-template-columns:repeat(2,1fr)}
@@ -556,7 +556,7 @@ body.menu-open{overflow:hidden}
 @media (max-width:1080px){#content .partners__grid{grid-template-columns:repeat(2,1fr)}}
 @media (max-width:520px){#content .partners{padding:1rem 0 1.5rem}
 #content .partners .sec-hd{margin-bottom:.65rem;gap:.4rem}
-#content .partners .sec-hd__num{padding-top:.5rem;font-size:.7rem}
+#content .partners .sec-hd__num{padding-top:.75rem}
 
 #content .partners__grid{grid-template-columns:1fr}
 #content .partners__actions{margin-top:.75rem}
@@ -650,7 +650,7 @@ body.menu-open{overflow:hidden}
 #content .venue__brand-link{align-self:flex-start}}
 @media (max-width:520px){#content .venue{padding:.85rem 0 2rem !important}
 #content .venue .sec-hd{margin-bottom:.4rem;gap:.3rem}
-#content .venue .sec-hd__num{padding-top:.4rem;font-size:.65rem}
+#content .venue .sec-hd__num{padding-top:.75rem}
 
 #content .venue__grid{gap:.5rem}
 #content .venue__brand-link{display:none}
@@ -1081,7 +1081,7 @@ body.menu-open{overflow:hidden}
     font-size:.73rem;
   }
 #content .tickets .sec-hd{margin-bottom:-.45rem !important}
-#content .tickets .sec-hd__num{font-size:.6rem;padding-top:.3rem}
+#content .tickets .sec-hd__num{padding-top:.75rem}
 #content .tickets .sec-hd__title{line-height:1.15;padding-top:0}
 #content .tickets__scroll-hint{
     position:static;
@@ -1455,7 +1455,7 @@ body.menu-open{overflow:hidden}
 @media (max-width:720px){#content .side-events__grid{grid-template-columns:1fr}}
 @media (max-width:520px){#content .side-events{padding:2rem 0 1.5rem !important}
 #content .side-events .sec-hd{margin-bottom:1.1rem;gap:.4rem}
-#content .side-events .sec-hd__num{padding-top:.45rem;font-size:.7rem}
+#content .side-events .sec-hd__num{padding-top:.75rem}
 
 #content .side-event{
     display:grid;
@@ -1685,7 +1685,7 @@ body.menu-open{overflow:hidden}
 #content .friends__grid--activation > .friend:last-child:nth-child(2n+1){grid-column:span 2}}
 @media (max-width:520px){#content .friends{padding:1.5rem 0 1.5rem}
 #content .friends .sec-hd{margin-bottom:.6rem;gap:.5rem}
-#content .friends .sec-hd__num{padding-top:.55rem;font-size:.7rem}
+#content .friends .sec-hd__num{padding-top:.75rem}
 #content .friends .sec-hd__title{padding-top:0}
 #content .friends__tier{margin-top:1.25rem}
 #content .friends__tier-label{font-size:.62rem;letter-spacing:.18em;margin-bottom:.45rem;gap:.6rem}
@@ -2751,7 +2751,7 @@ body.menu-open{overflow:hidden}
 #content .mobile-menu__link{color:var(--dk-c);border-bottom:1px solid var(--dk-rule)}
 #content .mobile-menu__cta{background:var(--dk-deep);border:1px solid var(--dk-rule-str)}
 #content .hero__fact dt{color:var(--dk-c72)}
-#content .sec-hd__num{color:var(--dk-c72);border-top:1px solid var(--dk-rule-str)}
+#content .sec-hd__num{color:var(--dk-c);border-top:1px solid var(--dk-rule-str)}
 #content .program{background:var(--dk-deep)}
 #content .speakers__grid{border-top:1px solid var(--dk-rule-str);border-left:1px solid var(--dk-rule-str);border-right:1px solid var(--dk-rule-str)}
 #content .speaker{border-right:1px solid var(--dk-rule-str);border-bottom:1px solid var(--dk-rule-str);background:var(--dk-card)}
@@ -3056,3 +3056,7 @@ body.menu-open{overflow:hidden}
 #content .tickets__trust{margin-top:1.1rem;font-size:1.05rem;max-width:960px}
 /* Space beneath the newsletter form (padding keeps the section background) */
 #content .news__inner{padding-bottom:2rem}
+
+/* Caption under the hero CTAs */
+.hero__cta-note{font-family:var(--fm);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--cream-50);margin-top:.8rem}
+@media (max-width:600px){.hero__cta-note{text-align:center;font-size:.68rem;margin-top:.65rem}}
