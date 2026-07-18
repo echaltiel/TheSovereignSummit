@@ -3057,8 +3057,8 @@ body.menu-open{overflow:hidden}
 /* Space beneath the newsletter form (padding keeps the section background) */
 #content .news__inner{padding-bottom:2rem}
 
-/* Two-line room booking button */
-.btn--room{flex-direction:column;gap:2px;line-height:1.2;text-align:center}
+/* Two-line room booking button: stacked text, arrow centered to the pill */
+.btn--room{flex-direction:row;align-items:center;gap:10px;line-height:1.2;text-align:center}
+.btn--room .btn--room-text{display:flex;flex-direction:column;gap:2px;align-items:center}
 .btn--room .btn--room-main{font-size:1em}
-.btn--room .btn--room-sub{font-size:.72em;font-weight:700;color:var(--gold);opacity:1;letter-spacing:.03em}
-.btn--room .btn--room-main{display:inline-flex;align-items:center;gap:8px}
+.btn--room .btn--room-sub{font-size:.72em;font-weight:700;color:var(--gold);letter-spacing:.03em}
