@@ -3062,3 +3062,26 @@ body.menu-open{overflow:hidden}
 .btn--room .btn--room-text{display:flex;flex-direction:column;gap:2px;align-items:center}
 .btn--room .btn--room-main{font-size:1em}
 .btn--room .btn--room-sub{font-size:.72em;font-weight:700;color:var(--gold);letter-spacing:.03em}
+
+/* ===== Single CTA tile for sponsors/partners ===== */
+#content .partners__grid--single{display:grid;grid-template-columns:minmax(0,440px);justify-content:center;border-right:none}
+#content .partners__grid--single .partner{border-right:none !important;text-decoration:none;color:inherit;transition:transform .2s ease}
+#content .partners__grid--single .partner:hover{transform:translateY(-3px)}
+
+/* ===== Inquiry form (get-involved) ===== */
+#content .inq-form{max-width:720px;margin:0 auto;display:flex;flex-direction:column;gap:1.2rem}
+#content .inq-form__row{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem}
+@media (max-width:640px){#content .inq-form__row{grid-template-columns:1fr}}
+#content .inq-form__field{display:flex;flex-direction:column;gap:.45rem}
+#content .inq-form__field span{font-family:var(--fm);font-size:.7rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--dk-c72)}
+#content .inq-form__field input,#content .inq-form__field select,#content .inq-form__field textarea{
+  font-family:var(--fb);font-size:1rem;color:var(--dk-c);
+  background:rgba(244,236,224,.05);border:1px solid var(--dk-rule);border-radius:8px;
+  padding:.8rem .9rem;outline:none;transition:border-color .2s;width:100%;
+}
+#content .inq-form__field textarea{resize:vertical}
+#content .inq-form__field select{appearance:none;-webkit-appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23F4ECE0' stroke-width='2' fill='none'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right .9rem center}
+#content .inq-form__field select option{background:#001839;color:#F4ECE0}
+#content .inq-form__field input:focus,#content .inq-form__field select:focus,#content .inq-form__field textarea:focus{border-color:var(--gold)}
+#content .inq-form__submit{align-self:flex-start;background:var(--gold);color:#001839;border:none;padding:1rem 2rem;font-size:.9rem;letter-spacing:.14em;border-radius:100px;cursor:pointer}
+#content .inq-form__thanks{font-family:var(--fd);font-size:1.2rem;color:var(--gold)}
