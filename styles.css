@@ -3102,7 +3102,7 @@ body.menu-open{overflow:hidden}
 }
 
 /* ===== "50+ more speakers" card ===== */
-#content .speaker--more{align-items:center;justify-content:center;text-align:center;gap:.4rem}
+#content .speakers__grid .speaker.speaker--more{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:.4rem;height:100%;padding:2rem 1rem}
 #content .speaker--more .speaker__more-num{font-family:var(--fd);font-size:clamp(3.4rem,5.5vw,5rem);line-height:1;color:var(--dk-c)}
 #content .speaker--more .speaker__more-label{font-family:var(--fb);font-weight:800;font-size:clamp(1rem,1.4vw,1.25rem);letter-spacing:.08em;text-transform:uppercase;color:var(--dk-c)}
 #content .speaker--more .speaker__more-sub{font-family:var(--fm);font-size:.78rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--dk-c72)}
