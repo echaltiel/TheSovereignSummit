@@ -34,7 +34,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Instrument+Serif&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=10">
+<link rel="stylesheet" href="styles.css?v=11">
 <style>#content{padding-top:calc(var(--header-h) + clamp(1rem,2.5vw,2rem))}</style>
 </head>
 <body>
@@ -162,14 +162,12 @@
 <section class="news">
   <div class="container">
     <div class="news__inner" id="subscribe">
-      <div class="eyebrow" style="color:var(--paper-deep);opacity:.7;margin-bottom:1.25rem;">Updates · Monthly</div>
       <h2 class="news__title">Stay in the loop.<br><em>No noise, just signal.</em></h2>
       <p class="news__sub">Speaker announcements, program updates, and more. Unsubscribe any time you like.</p>
       <form class="news__form" onsubmit="event.preventDefault(); this.querySelector('.news__input').value=''; this.querySelector('.news__submit').textContent='Subscribed ✓';">
         <input class="news__input" type="email" placeholder="your@email.com" required>
         <button type="submit" class="news__submit">Subscribe →</button>
       </form>
-      <div class="news__note">We do not newsletter-bomb.</div>
     </div>
   </div>
 </section>
