@@ -34,7 +34,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Instrument+Serif&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=26">
+<link rel="stylesheet" href="styles.css?v=27">
 </head>
 <body>
 <div class="header" id="siteHeader">
@@ -190,8 +190,11 @@
       <h2 class="section-title sec-hd__title">Brands supporting <em>Sovereignty.</em></h2>
     </header>
     <div class="partners__grid partners__grid--single">
-      <a class="partner partner--cta" href="/get-involved" aria-label="Become a sponsor of The Sovereign Summit">
-        <div class="partner__portrait partner__portrait--haslogo"><img class="partner__photo" src="images/sponsor-placeholder.png" alt="Become a sponsor" /></div>
+      <a class="partner partner--cta partner--cta-sponsor" href="/get-involved" aria-label="Become a sponsor of The Sovereign Summit">
+        <div class="partner__portrait partner__portrait--haslogo"><picture>
+          <source media="(max-width:600px)" srcset="images/sponsor-placeholder-mobile.png">
+          <img class="partner__photo" src="images/sponsor-placeholder.png" alt="Become a sponsor" />
+        </picture></div>
         <h3 class="partner__name"><em>Click Here</em></h3>
         <div class="partner__role">To Learn More</div>
       </a>

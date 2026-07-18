@@ -3087,3 +3087,10 @@ body.menu-open{overflow:hidden}
 #content .inq-form__field input:focus,#content .inq-form__field select:focus,#content .inq-form__field textarea:focus{border-color:var(--gold)}
 #content .inq-form__submit{align-self:flex-start;background:var(--gold);color:#001839;border:none;padding:1rem 2rem;font-size:.9rem;letter-spacing:.14em;border-radius:100px;cursor:pointer}
 #content .inq-form__thanks{font-family:var(--fd);font-size:1.2rem;color:var(--gold)}
+
+/* Mobile: square sponsor CTA tile artwork */
+#content .partners__grid--single .partner__portrait picture{position:absolute;inset:0}
+@media (max-width:600px){
+  #content .partner--cta-sponsor .partner__portrait{height:auto;aspect-ratio:1/1}
+  #content .partner--cta-sponsor .partner__photo{padding:.35rem}
+}
