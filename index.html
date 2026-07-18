@@ -34,7 +34,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Instrument+Serif&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=29">
+<link rel="stylesheet" href="styles.css?v=30">
 </head>
 <body>
 <div class="header" id="siteHeader">
@@ -210,7 +210,10 @@
     </header>
     <div class="partners__grid partners__grid--single">
       <a class="partner partner--cta" href="/get-involved" aria-label="Become a partner of The Sovereign Summit">
-        <div class="partner__portrait partner__portrait--haslogo"><img class="partner__photo" src="images/partner-placeholder.png" alt="Become a partner" /></div>
+        <div class="partner__portrait partner__portrait--haslogo"><picture>
+          <source media="(max-width:600px)" srcset="images/partner-placeholder-mobile.png">
+          <img class="partner__photo" src="images/partner-placeholder.png" alt="Become a partner" />
+        </picture></div>
         <h3 class="partner__name"><em>Click Here</em></h3>
         <div class="partner__role">To Learn More</div>
       </a>

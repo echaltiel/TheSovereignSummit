@@ -3065,7 +3065,9 @@ body.menu-open{overflow:hidden}
 
 /* ===== Single CTA tile for sponsors/partners ===== */
 #content .partners__grid--single{display:grid;grid-template-columns:minmax(0,440px);justify-content:start;border-right:none}
-#content .partners__grid--single .partner{border-right:none !important;text-decoration:none;color:inherit;transition:transform .2s ease}
+#content .partners__grid--single .partner{border-right:none !important;text-decoration:none;color:inherit;transition:transform .2s ease;align-items:center;text-align:center}
+#content .partners__grid--single .partner__name{text-align:center;width:100%}
+#content .partners__grid--single .partner__role{text-align:center;width:100%}
 #content .partners__grid--single .partner__portrait{height:215px}
 #content .partners__grid--single .partner__name{font-size:2.3rem;margin-bottom:.4rem}
 #content .partners__grid--single .partner__role{font-size:1.05rem;letter-spacing:.16em}
