@@ -3064,7 +3064,7 @@ body.menu-open{overflow:hidden}
 .btn--room .btn--room-sub{font-size:.72em;font-weight:700;color:var(--gold);letter-spacing:.03em}
 
 /* ===== Single CTA tile for sponsors/partners ===== */
-#content .partners__grid--single{display:grid;grid-template-columns:minmax(0,440px);justify-content:center;border-right:none}
+#content .partners__grid--single{display:grid;grid-template-columns:minmax(0,440px);justify-content:start;border-right:none}
 #content .partners__grid--single .partner{border-right:none !important;text-decoration:none;color:inherit;transition:transform .2s ease}
 #content .partners__grid--single .partner:hover{transform:translateY(-3px)}
 
