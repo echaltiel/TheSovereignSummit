@@ -3067,6 +3067,10 @@ body.menu-open{overflow:hidden}
 #content .partners__grid--single{display:grid;grid-template-columns:minmax(0,440px);justify-content:start;border-right:none}
 #content .partners__grid--single .partner{border-right:none !important;text-decoration:none;color:inherit;transition:transform .2s ease}
 #content .partners__grid--single .partner__portrait{height:215px}
+#content .partners__grid--single .partner__name{font-size:2.3rem;margin-bottom:.4rem}
+#content .partners__grid--single .partner__role{font-size:1.05rem;letter-spacing:.16em}
+@media (max-width:600px){#content .partners__grid--single .partner__name{font-size:2rem}
+#content .partners__grid--single .partner__role{font-size:.95rem}}
 #content .partners__grid--single .partner__photo{padding:.5rem;object-fit:contain}
 #content .partners__grid--single .partner:hover{transform:translateY(-3px)}
 
@@ -3091,6 +3095,6 @@ body.menu-open{overflow:hidden}
 /* Mobile: square sponsor CTA tile artwork */
 #content .partners__grid--single .partner__portrait picture{position:absolute;inset:0}
 @media (max-width:600px){
-  #content .partner--cta-sponsor .partner__portrait{height:auto;aspect-ratio:1/1}
-  #content .partner--cta-sponsor .partner__photo{padding:.35rem}
+  #content .partner--cta .partner__portrait{height:auto;aspect-ratio:1/1}
+  #content .partner--cta .partner__photo{padding:.35rem}
 }
