@@ -3100,3 +3100,15 @@ body.menu-open{overflow:hidden}
   #content .partner--cta .partner__portrait{height:auto;aspect-ratio:1/1}
   #content .partner--cta .partner__photo{padding:.35rem}
 }
+
+/* ===== "50+ more speakers" card ===== */
+#content .speaker--more{align-items:center;justify-content:center;text-align:center;gap:.4rem}
+#content .speaker--more .speaker__more-num{font-family:var(--fd);font-size:clamp(3.4rem,5.5vw,5rem);line-height:1;color:var(--dk-c)}
+#content .speaker--more .speaker__more-label{font-family:var(--fb);font-weight:800;font-size:clamp(1rem,1.4vw,1.25rem);letter-spacing:.08em;text-transform:uppercase;color:var(--dk-c)}
+#content .speaker--more .speaker__more-sub{font-family:var(--fm);font-size:.78rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--dk-c72)}
+@media (max-width:520px){
+  #content .speaker--more{gap:.3rem;padding:1.6rem .75rem}
+  #content .speaker--more .speaker__more-num{font-size:2.6rem}
+  #content .speaker--more .speaker__more-label{font-size:.82rem;letter-spacing:.06em}
+  #content .speaker--more .speaker__more-sub{font-size:.58rem;letter-spacing:.16em}
+}
