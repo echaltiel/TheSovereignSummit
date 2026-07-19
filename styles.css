@@ -3209,3 +3209,12 @@ body.menu-open{overflow:hidden}
   #content .partners__grid--single .partner__name{grid-column:2;align-self:end;text-align:center;margin:0 0 .2rem !important;width:100%}
   #content .partners__grid--single .partner__role{grid-column:2;align-self:start;text-align:center;width:100%}
 }
+
+/* VIP page: fit header + six tiles + gold button in one desktop viewport */
+@media (min-width:1001px){
+  #content .vip-page .sec-hd{margin-bottom:1.4rem}
+  #content .vip-perk{padding:.9rem 1.05rem}
+  #content .vip-perk__title{font-size:1.28rem}
+  #content .vip-perk__desc{font-size:.85rem;line-height:1.42}
+  #content .vip-buy{margin-top:1.6rem;padding-bottom:1.6rem}
+}
