@@ -70,7 +70,7 @@ section{padding:clamp(4rem,8vw,6.5rem) 0;position:relative}
   background:rgba(19,30,51,.8);border-bottom:1px solid var(--line);
 }
 .nav{
-  max-width:1760px;margin:0 auto;padding:0 clamp(1rem,2.5vw,2.5rem);
+  max-width:1380px;margin:0 auto;padding:0 clamp(1rem,2.5vw,2.5rem);
   height:82px;display:flex;align-items:center;justify-content:flex-start;gap:16px;
 }
 .nav__brand{display:flex;align-items:center;min-width:0}
