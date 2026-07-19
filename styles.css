@@ -3185,5 +3185,5 @@ body.menu-open{overflow:hidden}
 }
 
 /* Hero explanatory blurb: one elegant thought, balanced wrap */
-.hero__blurb{font-family:var(--fb);font-weight:400;font-size:clamp(1.1rem,1.3vw,1.25rem);line-height:1.6;letter-spacing:.005em;color:rgba(244,236,224,.75);max-width:640px;margin:1.25rem 0 0;text-wrap:balance}
+.hero__blurb{font-family:var(--fb);font-weight:400;font-size:clamp(1.1rem,1.3vw,1.25rem);line-height:1.6;letter-spacing:.005em;color:rgba(244,236,224,.75);max-width:1100px;margin:1.25rem 0 0;text-wrap:balance}
 @media (max-width:600px){.hero__blurb{font-size:1.02rem;margin-top:1rem}}
