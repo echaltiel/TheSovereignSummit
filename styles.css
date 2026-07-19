@@ -152,7 +152,7 @@ body.menu-open{overflow:hidden}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}.marquee__track{animation:none}}
 @media (max-width:1280px){.nav__links{display:none}.nav__cta{display:none}.nav__toggle{display:flex}.nav__sp{display:none}.nav__actions{margin-left:auto;margin-right:auto}}
 @media (max-width:900px){:root{--header-h:96px}}
-@media (max-width:600px){:root{--header-h:134px}body{font-size:16px}section{padding:3.25rem 0}.ticker__inner{padding:.5rem .6rem}.ticker__btc{font-size:.82rem;letter-spacing:.1em}.nav{height:102px}.nav__brand img{height:86px;max-width:66vw;object-fit:contain}.hero{align-items:stretch;min-height:calc(100svh - 36px);padding-bottom:2rem}.hero__in{display:flex;flex-direction:column}.hero__kicker{margin-top:auto}.hero__kicker .mono{font-size:1.22rem;letter-spacing:.17em}.hero__ctas{margin-top:auto;margin-bottom:auto}.hero__ctas .btn{width:100%}}
+@media (max-width:600px){:root{--header-h:134px}body{font-size:16px}section{padding:3.25rem 0}.ticker__inner{padding:.5rem .6rem}.ticker__btc{font-size:.82rem;letter-spacing:.1em}.nav{height:102px}.nav__brand img{height:86px;max-width:66vw;object-fit:contain}.hero{align-items:stretch;min-height:calc(100svh - 36px);padding-bottom:2rem}.hero__in{display:flex;flex-direction:column}.hero__kicker{margin-top:auto;margin-bottom:auto}.hero__kicker .mono{font-size:1.22rem;letter-spacing:.17em}.hero__ctas{margin-top:auto;margin-bottom:auto}.hero__ctas .btn{width:100%}}
 
 /* ===== Original-site design system (reference), scoped to #content ===== */
 #content{--ink:#001839;--ink-deep:#001227;--ink-soft:#24395C;--paper:#F4ECE0;--paper-deep:#EADFCC;--paper-light:#FAF5EA;--accent:#FF6941;--accent-deep:#D14B26;--rule:rgba(19,30,51,.18);--rule-str:rgba(19,30,51,.35);--fd:'Instrument Serif',Georgia,serif;--fb:'Archivo',system-ui,sans-serif;--fm:'JetBrains Mono',ui-monospace,monospace;--gut:clamp(1.25rem,3vw,2.5rem);--max:1360px;--lift-shadow:
@@ -3164,8 +3164,13 @@ body.menu-open{overflow:hidden}
 }
 
 /* ===== Footer: 3-column layout with integrated newsletter ===== */
-#content .footer__top--3col{display:grid !important;grid-template-columns:minmax(0,420px) max-content max-content !important;gap:3rem;align-items:start;justify-content:space-between !important}
-@media (min-width:861px){#content .footer__top--3col .footer__col ul{min-width:150px}}
+@media (min-width:861px){
+  #content .footer__top--3col{display:grid !important;grid-template-columns:minmax(0,420px) max-content max-content !important;gap:3rem;align-items:start;justify-content:space-between !important}
+  #content .footer__top--3col .footer__col ul{min-width:150px}
+}
+@media (max-width:860px){
+  #content .footer__top--3col{display:flex !important;flex-direction:column;gap:2.25rem;align-items:stretch}
+}
 @media (max-width:860px){#content .footer__top--3col{grid-template-columns:1fr;gap:2.25rem}}
 #content .footer__news .footer__brand-mark--nav{max-width:340px;width:100%;height:auto;margin:0 0 1.5rem;display:block}
 #content .footer__news-copy{margin-bottom:1.25rem !important}
@@ -3187,3 +3192,13 @@ body.menu-open{overflow:hidden}
 /* Hero explanatory blurb: one elegant thought, balanced wrap */
 .hero__blurb{font-family:var(--fb);font-weight:400;font-size:clamp(1.1rem,1.3vw,1.25rem);line-height:1.6;letter-spacing:.005em;color:rgba(244,236,224,.75);max-width:1100px;margin:1.25rem 0 0;text-wrap:balance}
 @media (max-width:600px){.hero__blurb{font-size:1.02rem;margin-top:1rem}}
+
+/* Mobile CTA tiles: image above centered text */
+@media (max-width:600px){
+  #content .partners__grid--single .partner{display:flex !important;flex-direction:column !important;align-items:center !important;text-align:center}
+  #content .partners__grid--single .partner__portrait{width:100% !important;margin:0 0 .9rem !important}
+  #content .partners__grid--single .partner__name{margin:0 0 .3rem !important;width:100%}
+  #content .partners__grid--single .partner__role{width:100%}
+}
+/* Space beneath the price-increase note */
+#content .tickets__trust{padding-bottom:2.25rem}
