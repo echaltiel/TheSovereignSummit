@@ -3059,7 +3059,7 @@ body.menu-open{overflow:hidden}
 
 /* Two-line room booking button: bed icon, stacked left-aligned text, centered arrow */
 .btn--room{flex-direction:row;align-items:center;gap:14px;line-height:1.2;text-align:left;border:2px solid var(--gold)}
-.btn--room .btn--room-icon{width:34px;height:26px;color:var(--gold);flex-shrink:0}
+.btn--room .btn--room-icon{width:40px;height:28px;color:var(--gold);flex-shrink:0}
 .btn--room .btn--room-text{display:flex;flex-direction:column;gap:2px;align-items:flex-start}
 .btn--room .btn--room-main{font-size:1em}
 .btn--room .btn--room-sub{font-size:.72em;font-weight:700;color:var(--gold);letter-spacing:.03em}
