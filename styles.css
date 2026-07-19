@@ -3216,3 +3216,10 @@ body.menu-open{overflow:hidden}
   #content .vip-perk__desc{font-size:.85rem;line-height:1.42}
   #content .vip-buy{margin-top:1.6rem;padding-bottom:1.6rem}
 }
+
+/* Fontainebleau logo presented on a cream card button */
+#content .venue__brand-card{display:flex;align-items:center;justify-content:center;background:var(--paper, #F4ECE0);border-radius:14px;padding:1.4rem 1.6rem;margin-top:1rem;transition:transform .2s ease, box-shadow .2s ease}
+#content .venue__brand-card:hover{transform:translateY(-2px);box-shadow:0 10px 30px rgba(0,8,20,.35)}
+#content .venue__brand-card .venue__brand{max-width:280px;width:100%;height:auto;margin:0}
+/* Room-block card: more presence */
+#content .room-block-btn{padding:1.5rem 1.6rem}
