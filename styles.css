@@ -3183,3 +3183,7 @@ body.menu-open{overflow:hidden}
   #content .pcard__features li{font-size:.88rem;line-height:1.4}
   #content .pcard__cta{font-size:.76rem;letter-spacing:.08em;padding:.8rem .75rem;white-space:normal}
 }
+
+/* Hero explanatory blurb */
+.hero__blurb{font-family:var(--fb);font-weight:500;font-size:clamp(1.05rem,1.35vw,1.3rem);line-height:1.5;color:rgba(244,236,224,.82);max-width:620px;margin:1.1rem 0 0}
+@media (max-width:600px){.hero__blurb{font-size:1rem;margin-top:.9rem}}
