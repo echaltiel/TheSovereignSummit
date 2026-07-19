@@ -3169,7 +3169,7 @@ body.menu-open{overflow:hidden}
   #content .footer__top--3col .footer__col ul{min-width:150px}
 }
 @media (max-width:860px){
-  #content .footer__top--3col{display:flex !important;flex-wrap:wrap;justify-content:center !important;align-items:flex-start;column-gap:clamp(3.5rem,15vw,6rem);row-gap:2rem}
+  #content .footer__top--3col{display:flex !important;flex-wrap:wrap;justify-content:center !important;align-items:flex-start;column-gap:clamp(5rem,28vw,10rem);row-gap:2rem}
   #content .footer__top--3col .footer__news{flex:1 1 100%}
   #content .footer__top--3col .footer__col:not(.footer__news){flex:0 0 auto}
   #content .footer__top--3col .footer__col:not(.footer__news) ul{margin:0;padding:0;list-style:none}
