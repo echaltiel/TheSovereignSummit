@@ -368,8 +368,6 @@ body.menu-open{overflow:hidden}
 #content .program{background:var(--ink);color:var(--paper);padding:clamp(.75rem,1.2vw,1.1rem) 0 clamp(1.5rem,2.5vw,2rem);position:relative}
 #content .program::after{display:none}
 
-#content .program .section-title{color:var(--paper)}
-#content .program .section-title em{color:var(--accent)}
 #content .program__board{margin-top:clamp(2rem,4vw,3rem);border-top:1px solid rgba(244,236,224,.2)}
 #content .program__row{display:grid;grid-template-columns:130px 1fr auto;gap:clamp(1rem,3vw,2.5rem);padding:1.35rem .5rem;border-bottom:1px solid rgba(244,236,224,.14);align-items:baseline;transition:background .3s}
 #content .program__row:hover{background:rgba(244,236,224,.04)}
