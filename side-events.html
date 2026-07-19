@@ -34,7 +34,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Instrument+Serif&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=32">
+<link rel="stylesheet" href="styles.css?v=33">
 <style>#content{padding-top:calc(var(--header-h) + clamp(1rem,2.5vw,2rem))}</style>
 </head>
 <body>
@@ -54,12 +54,21 @@
         <li><a class="nav__link" href="/speakers">Speakers</a></li>
         <li><a class="nav__link" href="/sponsors">Sponsors</a></li>
         <li><a class="nav__link" href="/partners">Partners</a></li>
-        <li><a class="nav__link" href="/agenda">Agenda</a></li>
-        <li><a class="nav__link" href="/side-events">Side Events</a></li>
+        <li class="nav__item--dd">
+          <button type="button" class="nav__link nav__dd-toggle" aria-expanded="false" aria-haspopup="true">Schedule <span class="nav__chev" aria-hidden="true">▾</span></button>
+          <div class="nav__dd">
+            <a class="nav__dd-link" href="/agenda">Summit Agenda</a>
+            <a class="nav__dd-link" href="/side-events">Side Events</a>
+          </div>
+        </li>
         <li><a class="nav__link" href="/venue">Venue</a></li>
-        <li><a class="nav__link" href="/map">Map</a></li>
-        <li><a class="nav__link" href="/faq">FAQ</a></li>
-        <li><a class="nav__link" href="/team">Team</a></li>
+        <li class="nav__item--dd">
+          <button type="button" class="nav__link nav__dd-toggle" aria-expanded="false" aria-haspopup="true">About <span class="nav__chev" aria-hidden="true">▾</span></button>
+          <div class="nav__dd">
+            <a class="nav__dd-link" href="/faq">FAQ</a>
+            <a class="nav__dd-link" href="/team">Team</a>
+          </div>
+        </li>
       </ul>
       <div class="nav__sp" aria-hidden="true"></div>
       <a href="https://x.com/sovereignmiami" target="_blank" rel="noopener" class="nav__social" aria-label="Follow The Sovereign Summit on X">
@@ -82,10 +91,9 @@
       <li><a class="mobile-menu__link" href="/speakers">Speakers <span aria-hidden="true">→</span></a></li>
       <li><a class="mobile-menu__link" href="/sponsors">Sponsors <span aria-hidden="true">→</span></a></li>
       <li><a class="mobile-menu__link" href="/partners">Partners <span aria-hidden="true">→</span></a></li>
-      <li><a class="mobile-menu__link" href="/agenda">Agenda <span aria-hidden="true">→</span></a></li>
+      <li><a class="mobile-menu__link" href="/agenda">Summit Agenda <span aria-hidden="true">→</span></a></li>
       <li><a class="mobile-menu__link" href="/side-events">Side Events <span aria-hidden="true">→</span></a></li>
       <li><a class="mobile-menu__link" href="/venue">Venue <span aria-hidden="true">→</span></a></li>
-      <li><a class="mobile-menu__link" href="/map">Map <span aria-hidden="true">→</span></a></li>
       <li><a class="mobile-menu__link" href="/faq">FAQ <span aria-hidden="true">→</span></a></li>
       <li><a class="mobile-menu__link" href="/team">Team <span aria-hidden="true">→</span></a></li>
     </ul>

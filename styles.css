@@ -3112,3 +3112,13 @@ body.menu-open{overflow:hidden}
   #content .speaker--more .speaker__more-label{font-size:.82rem;letter-spacing:.06em}
   #content .speaker--more .speaker__more-sub{font-size:.58rem;letter-spacing:.16em}
 }
+
+/* ===== Nav dropdowns (Schedule / About) ===== */
+.nav__item--dd{position:relative}
+.nav__dd-toggle{background:none;border:none;cursor:pointer;display:inline-flex;align-items:center;gap:6px;padding:.35rem 0}
+.nav__chev{font-size:.7em;transition:transform .2s;display:inline-block}
+.nav__item--dd:hover .nav__chev,.nav__item--dd:focus-within .nav__chev{transform:rotate(180deg)}
+.nav__dd{position:absolute;top:100%;left:50%;transform:translateX(-50%);display:none;flex-direction:column;min-width:200px;background:var(--ink-2);border:1px solid var(--line);border-radius:14px;padding:.5rem;box-shadow:0 18px 40px rgba(0,8,20,.5);z-index:120}
+.nav__item--dd:hover .nav__dd,.nav__item--dd:focus-within .nav__dd{display:flex}
+.nav__dd-link{font-family:var(--fb);font-size:.95rem;font-weight:600;color:rgba(244,236,224,.88);padding:.65rem .9rem;border-radius:9px;transition:background .15s,color .15s;white-space:nowrap}
+.nav__dd-link:hover{background:rgba(244,236,224,.08);color:var(--cream)}
