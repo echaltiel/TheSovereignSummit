@@ -2751,7 +2751,7 @@ body.menu-open{overflow:hidden}
 #content .mobile-menu__link{color:var(--dk-c);border-bottom:1px solid var(--dk-rule)}
 #content .mobile-menu__cta{background:var(--dk-deep);border:1px solid var(--dk-rule-str)}
 #content .hero__fact dt{color:var(--dk-c72)}
-#content .sec-hd__num{color:var(--dk-c);border-top:none}
+#content .sec-hd__num{color:var(--dk-c);border-top:1px solid var(--dk-rule-str);padding-top:1rem}
 #content .program{background:var(--dk-deep)}
 #content .speakers__grid{border-top:1px solid var(--dk-rule-str);border-left:1px solid var(--dk-rule-str);border-right:1px solid var(--dk-rule-str)}
 #content .speaker{border-right:1px solid var(--dk-rule-str);border-bottom:1px solid var(--dk-rule-str);background:var(--dk-card)}
@@ -3140,3 +3140,6 @@ body.menu-open{overflow:hidden}
 
 /* Tighter seam between the marquee and the first section */
 #content > section[class]:first-child{padding-top:1.6rem !important}
+
+/* No divider above the first section (it sits right under the marquee/nav) */
+#content > section[class]:first-child .sec-hd__num{border-top:none;padding-top:0}
