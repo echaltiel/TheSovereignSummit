@@ -75,8 +75,8 @@ section{padding:clamp(4rem,8vw,6.5rem) 0;position:relative}
 }
 .nav__brand{display:flex;align-items:center;min-width:0}
 .nav__brand img{height:70px;width:auto;max-width:min(40vw,480px);object-fit:contain}
-.nav__links{display:flex;gap:clamp(.9rem,1.6vw,1.5rem);list-style:none;margin:0;padding:0;align-items:center}
-.nav__link{font-family:var(--fb);font-size:1rem;font-weight:600;letter-spacing:.015em;color:rgba(244,236,224,.88);transition:color .2s;padding:.35rem 0}
+.nav__links{display:flex;gap:clamp(.9rem,1.6vw,1.5rem);list-style:none;margin:5px 0 0;padding:0;align-items:center}
+.nav__link{font-family:var(--fb);font-size:1.12rem;font-weight:600;letter-spacing:.015em;color:rgba(244,236,224,.88);transition:color .2s;padding:.35rem 0}
 .nav__link:hover{color:var(--cream)}
 .nav__actions{display:flex;align-items:center;gap:.9rem}
 .nav__social{color:var(--cream-72);transition:color .2s;display:flex;padding:.4rem}
@@ -3066,7 +3066,7 @@ body.menu-open{overflow:hidden}
 .btn--room .btn__arrow{margin-left:4px}
 
 /* ===== Single CTA tile for sponsors/partners ===== */
-#content .partners__grid--single{display:grid;grid-template-columns:minmax(0,440px);justify-content:start;border-right:none}
+#content .partners__grid--single{display:grid;grid-template-columns:minmax(0,440px);justify-content:center;border-right:none}
 #content .partners__grid--single .partner{border-right:none !important;text-decoration:none;color:inherit;transition:transform .2s ease;align-items:center;text-align:center}
 #content .partners__grid--single .partner__name{text-align:center;width:100%}
 #content .partners__grid--single .partner__role{text-align:center;width:100%}
@@ -3118,7 +3118,7 @@ body.menu-open{overflow:hidden}
 /* ===== Nav dropdowns (Schedule / About) ===== */
 .nav__item--dd{position:relative}
 .nav__dd-toggle{background:none;border:none;cursor:pointer;display:inline-flex;align-items:center;gap:6px;padding:.35rem 0}
-.nav__chev{font-size:.7em;transition:transform .2s;display:inline-block}
+.nav__chev{font-size:.9em;transition:transform .2s;display:inline-block}
 .nav__item--dd:hover .nav__chev,.nav__item--dd:focus-within .nav__chev{transform:rotate(180deg)}
 .nav__dd{position:absolute;top:100%;left:50%;transform:translateX(-50%);display:none;flex-direction:column;min-width:200px;background:var(--ink-2);border:1px solid var(--line);border-radius:14px;padding:.5rem;box-shadow:0 18px 40px rgba(0,8,20,.5);z-index:120}
 .nav__item--dd:hover .nav__dd,.nav__item--dd:focus-within .nav__dd{display:flex}
@@ -3128,7 +3128,7 @@ body.menu-open{overflow:hidden}
 /* Nav alignment: dropdown toggles sit on the same baseline as links */
 .nav__links{align-items:center}
 .nav__links > li{display:flex;align-items:center}
-.nav__dd-toggle{font:inherit;font-family:var(--fb);font-size:1rem;font-weight:600;color:rgba(244,236,224,.88);letter-spacing:.015em;line-height:1.2;margin:0}
+.nav__dd-toggle{font:inherit;font-family:var(--fb);font-size:1.12rem;font-weight:600;color:rgba(244,236,224,.88);letter-spacing:.015em;line-height:1.2;margin:0}
 .nav__dd-toggle:hover{color:var(--cream)}
 
 /* Desktop: center section category headers; mobile stays left-aligned */
