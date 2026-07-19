@@ -75,7 +75,7 @@ section{padding:clamp(4rem,8vw,6.5rem) 0;position:relative}
 }
 .nav__brand{display:flex;align-items:center;min-width:0}
 .nav__brand img{height:70px;width:auto;max-width:min(40vw,480px);object-fit:contain}
-.nav__links{display:flex;gap:clamp(.9rem,1.6vw,1.5rem);list-style:none}
+.nav__links{display:flex;gap:clamp(.9rem,1.6vw,1.5rem);list-style:none;margin:0;padding:0;align-items:center}
 .nav__link{font-family:var(--fb);font-size:1rem;font-weight:600;letter-spacing:.015em;color:rgba(244,236,224,.88);transition:color .2s;padding:.35rem 0}
 .nav__link:hover{color:var(--cream)}
 .nav__actions{display:flex;align-items:center;gap:.9rem}
