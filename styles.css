@@ -3269,3 +3269,15 @@ body.menu-open{overflow:hidden}
   #content .floor-detail__zone-meta{font-size:.68rem !important;letter-spacing:.12em !important}
   #content .floor-detail__zone-list li{font-size:.96rem !important;line-height:1.55}
 }
+
+/* Venue mobile: full-bleed photo, clean frame, tightened card rhythm */
+@media (max-width:600px){
+  #content .venue__illus{max-height:none !important;aspect-ratio:16/10;width:100%;border-radius:14px}
+  #content .venue__illus::before{display:none}
+  #content .venue__media{gap:1rem}
+  #content .venue__brand-link{align-self:stretch}
+  #content .rb-row{gap:1rem !important}
+  #content .rb-right{padding-top:1rem}
+  #content .room-block-btn > div:last-child{margin-top:1rem !important}
+  #content .venue .sec-hd{margin-bottom:1.5rem}
+}
