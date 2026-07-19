@@ -3223,3 +3223,9 @@ body.menu-open{overflow:hidden}
 #content .venue__brand-card .venue__brand{max-width:280px;width:100%;height:auto;margin:0}
 /* Room-block card: more presence */
 #content .room-block-btn{padding:1.5rem 1.6rem}
+
+/* Venue right column: distribute content so its bottom meets the logo card's bottom */
+@media (min-width:901px){
+  #content .venue__grid{align-items:stretch}
+  #content .venue__content{display:flex;flex-direction:column;justify-content:space-between}
+}
