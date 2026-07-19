@@ -124,7 +124,7 @@ body.menu-open{overflow:hidden}
 .hero__in{position:relative;z-index:2;width:100%}
 .hero__kicker{display:flex;flex-wrap:wrap;gap:10px 22px;align-items:center;margin-bottom:22px}
 .hero__kicker .mono{
-  font-family:var(--fm);font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;
+  font-family:var(--fm);font-size:1.4rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;
   color:rgba(244,236,224,.86);text-shadow:0 1px 8px rgba(19,30,51,.8);
 }
 .hero h1{
@@ -3057,11 +3057,13 @@ body.menu-open{overflow:hidden}
 /* Space beneath the newsletter form (padding keeps the section background) */
 #content .news__inner{padding-bottom:2rem}
 
-/* Two-line room booking button: stacked text, arrow centered to the pill */
-.btn--room{flex-direction:row;align-items:center;gap:10px;line-height:1.2;text-align:center}
-.btn--room .btn--room-text{display:flex;flex-direction:column;gap:2px;align-items:center}
+/* Two-line room booking button: bed icon, stacked left-aligned text, centered arrow */
+.btn--room{flex-direction:row;align-items:center;gap:14px;line-height:1.2;text-align:left;border:2px solid var(--gold)}
+.btn--room .btn--room-icon{width:34px;height:26px;color:var(--gold);flex-shrink:0}
+.btn--room .btn--room-text{display:flex;flex-direction:column;gap:2px;align-items:flex-start}
 .btn--room .btn--room-main{font-size:1em}
 .btn--room .btn--room-sub{font-size:.72em;font-weight:700;color:var(--gold);letter-spacing:.03em}
+.btn--room .btn__arrow{margin-left:4px}
 
 /* ===== Single CTA tile for sponsors/partners ===== */
 #content .partners__grid--single{display:grid;grid-template-columns:minmax(0,440px);justify-content:start;border-right:none}
@@ -3122,3 +3124,9 @@ body.menu-open{overflow:hidden}
 .nav__item--dd:hover .nav__dd,.nav__item--dd:focus-within .nav__dd{display:flex}
 .nav__dd-link{font-family:var(--fb);font-size:.95rem;font-weight:600;color:rgba(244,236,224,.88);padding:.65rem .9rem;border-radius:9px;transition:background .15s,color .15s;white-space:nowrap}
 .nav__dd-link:hover{background:rgba(244,236,224,.08);color:var(--cream)}
+
+/* Nav alignment: dropdown toggles sit on the same baseline as links */
+.nav__links{align-items:center}
+.nav__links > li{display:flex;align-items:center}
+.nav__dd-toggle{font:inherit;font-family:var(--fb);font-size:1rem;font-weight:600;color:rgba(244,236,224,.88);letter-spacing:.015em;line-height:1.2;margin:0}
+.nav__dd-toggle:hover{color:var(--cream)}
