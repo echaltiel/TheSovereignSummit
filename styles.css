@@ -3130,3 +3130,10 @@ body.menu-open{overflow:hidden}
 .nav__links > li{display:flex;align-items:center}
 .nav__dd-toggle{font:inherit;font-family:var(--fb);font-size:1rem;font-weight:600;color:rgba(244,236,224,.88);letter-spacing:.015em;line-height:1.2;margin:0}
 .nav__dd-toggle:hover{color:var(--cream)}
+
+/* Desktop: center section category headers; mobile stays left-aligned */
+@media (min-width:601px){
+  #content .sec-hd{align-items:center;text-align:center}
+  #content .sec-hd__num{text-align:center}
+  #content .sec-hd__title{text-align:center}
+}
