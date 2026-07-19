@@ -3169,7 +3169,8 @@ body.menu-open{overflow:hidden}
   #content .footer__top--3col .footer__col ul{min-width:150px}
 }
 @media (max-width:860px){
-  #content .footer__top--3col{display:flex !important;flex-direction:column;gap:2.25rem;align-items:stretch}
+  #content .footer__top--3col{display:grid !important;grid-template-columns:1fr 1fr !important;gap:2rem 1.5rem;align-items:start;justify-content:stretch !important}
+  #content .footer__top--3col .footer__news{grid-column:1 / -1}
 }
 @media (max-width:860px){#content .footer__top--3col{grid-template-columns:1fr;gap:2.25rem}}
 #content .footer__news .footer__brand-mark--nav{max-width:340px;width:100%;height:auto;margin:0 0 1.5rem;display:block}
@@ -3193,12 +3194,5 @@ body.menu-open{overflow:hidden}
 .hero__blurb{font-family:var(--fb);font-weight:400;font-size:clamp(1.1rem,1.3vw,1.25rem);line-height:1.6;letter-spacing:.005em;color:rgba(244,236,224,.75);max-width:1100px;margin:1.25rem 0 0;text-wrap:balance}
 @media (max-width:600px){.hero__blurb{font-size:1.02rem;margin-top:1rem}}
 
-/* Mobile CTA tiles: image above centered text */
-@media (max-width:600px){
-  #content .partners__grid--single .partner{display:flex !important;flex-direction:column !important;align-items:center !important;text-align:center}
-  #content .partners__grid--single .partner__portrait{width:100% !important;margin:0 0 .9rem !important}
-  #content .partners__grid--single .partner__name{margin:0 0 .3rem !important;width:100%}
-  #content .partners__grid--single .partner__role{width:100%}
-}
 /* Space beneath the price-increase note */
 #content .tickets__trust{padding-bottom:2.25rem}
