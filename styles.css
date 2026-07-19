@@ -3166,7 +3166,8 @@ body.menu-open{overflow:hidden}
 /* ===== Footer: 3-column layout with integrated newsletter ===== */
 #content .footer__top--3col{display:grid !important;grid-template-columns:1.4fr 1fr 1fr;gap:clamp(2rem,4vw,4rem);align-items:start}
 @media (max-width:860px){#content .footer__top--3col{grid-template-columns:1fr;gap:2.25rem}}
-#content .footer__news .footer__brand-mark{max-width:230px;width:100%;height:auto;margin:0 0 1.1rem;display:block}
+#content .footer__news .footer__brand-mark--nav{max-width:340px;width:100%;height:auto;margin:0 0 1.5rem;display:block}
+#content .footer__news-copy{margin-bottom:1.25rem !important}
 #content .footer__news .footer__col-label{margin-bottom:.5rem}
 #content .footer__news-copy{font-family:var(--fd);font-size:1.02rem;line-height:1.5;color:var(--dk-c72);margin:0 0 1rem}
 #content .footer__news .news__form{margin:0;max-width:100%}
