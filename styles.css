@@ -3281,3 +3281,15 @@ body.menu-open{overflow:hidden}
   #content .room-block-btn > div:last-child{margin-top:1rem !important}
   #content .venue .sec-hd{margin-bottom:1.5rem}
 }
+
+/* Venue mobile: hide the long intro, unify remaining text at one readable size */
+@media (max-width:600px){
+  #content .venue__content > .eyebrow,
+  #content .venue__content > h3,
+  #content .venue__content > p{display:none}
+  #content .venue__detail-label{font-size:.74rem;letter-spacing:.2em}
+  #content .venue__detail-value,
+  #content .venue__link,
+  #content .venue__amenities li{font-size:1.1rem !important;line-height:1.6 !important}
+  #content .venue__details{gap:1.35rem !important}
+}
