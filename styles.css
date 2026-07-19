@@ -3143,3 +3143,14 @@ body.menu-open{overflow:hidden}
 
 /* No divider above the first section (it sits right under the marquee/nav) */
 #content > section[class]:first-child .sec-hd__num{border-top:none;padding-top:0}
+
+/* ===== VIP page ===== */
+#content .vip-intro{font-family:var(--fd);font-size:clamp(1.15rem,1.6vw,1.4rem);line-height:1.5;color:var(--dk-c72);max-width:720px;margin:0 auto 2.5rem;text-align:center}
+#content .vip-perks{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin-bottom:3rem}
+@media (max-width:1000px){#content .vip-perks{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:620px){#content .vip-perks{grid-template-columns:1fr}}
+#content .vip-perk{background:#0A2B55;border:0.5px solid rgba(244,236,224,.14);border-radius:14px;padding:1.6rem 1.5rem}
+#content .vip-perk__eyebrow{font-family:var(--fm);font-size:.7rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:#E8C46A;margin-bottom:.6rem}
+#content .vip-perk__title{font-family:var(--fd);font-size:1.6rem;line-height:1.1;color:var(--cream);margin:0 0 .55rem}
+#content .vip-perk__desc{font-family:var(--fb);font-size:.95rem;line-height:1.55;color:var(--dk-c72);margin:0}
+#content .vip-buy{display:grid;grid-template-columns:minmax(0,560px);justify-content:center}
