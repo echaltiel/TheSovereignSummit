@@ -3172,3 +3172,14 @@ body.menu-open{overflow:hidden}
 #content .footer__news .footer__col-label{margin-bottom:.5rem}
 #content .footer__news-copy{font-family:var(--fd);font-size:1.02rem;line-height:1.5;color:var(--dk-c72);margin:0 0 1rem}
 #content .footer__news .news__form{margin:0;max-width:100%}
+
+/* Mobile: pricing cards fit the viewport */
+#content .pricing__grid > *{min-width:0}
+@media (max-width:600px){
+  #content .pricing__grid{grid-template-columns:1fr !important;gap:1rem}
+  #content .pcard{padding:1.25rem 1rem 1.1rem}
+  #content .pcard__tier{font-size:1.05rem;letter-spacing:.1em}
+  #content .pcard__price{font-size:2.1rem}
+  #content .pcard__features li{font-size:.88rem;line-height:1.4}
+  #content .pcard__cta{font-size:.76rem;letter-spacing:.08em;padding:.8rem .75rem;white-space:normal}
+}
