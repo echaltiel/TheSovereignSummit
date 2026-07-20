@@ -34,7 +34,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Instrument+Serif&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=78">
+<link rel="stylesheet" href="styles.css?v=79">
 <style>#content{padding-top:calc(var(--header-h) + clamp(1rem,2.5vw,2rem))}</style>
 </head>
 <body>
@@ -353,7 +353,8 @@
     var closeMenu = function(){
       navToggle.setAttribute('aria-expanded','false');
       mobileMenu.setAttribute('aria-hidden','true');
-      document.body.style.overflow='';
+      mobileMenu.classList.remove('is-open');
+      document.body.classList.remove('menu-open');
     };
     navToggle.addEventListener('click', function(){
       var open = navToggle.getAttribute('aria-expanded') === 'true';
@@ -361,7 +362,8 @@
       else{
         navToggle.setAttribute('aria-expanded','true');
         mobileMenu.setAttribute('aria-hidden','false');
-        document.body.style.overflow='hidden';
+        mobileMenu.classList.add('is-open');
+        document.body.classList.add('menu-open');
       }
     });
     mobileMenu.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', closeMenu); });

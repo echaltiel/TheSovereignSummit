@@ -132,8 +132,9 @@ body.menu-open{overflow:hidden}
   text-transform:uppercase;text-shadow:0 2px 24px rgba(19,30,51,.85), 0 1px 3px rgba(19,30,51,.6);
   text-wrap:balance;
 }
+.hero h1 .hero__line2{position:relative;left:-.055em}
 .hero h1 .serif{
-  text-transform:none;color:var(--gold);font-size:.94em;display:inline-block;
+  text-transform:none;color:var(--gold);font-size:.94em;display:inline-block;margin-left:-.01em;
 }
 .hero__ctas{display:flex;flex-wrap:wrap;gap:16px;margin-top:34px}
 .hero__ctas .btn{font-size:1.15rem;padding:1.1rem 2.2rem;min-height:60px}
