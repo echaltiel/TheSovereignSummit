@@ -3384,20 +3384,81 @@ body.menu-open{overflow:hidden}
   .news-pop__list{margin:1.1rem auto 1.25rem}
 }
 
-/* ===== Agenda: three-tier intro + digestible block interiors ===== */
-#content .program__intro{text-align:center;max-width:860px;margin:0 auto clamp(2rem,4vw,3rem)}
-#content .program__intro-lead{font-family:var(--fb);font-weight:700;font-size:clamp(1.05rem,1.4vw,1.3rem);line-height:1.4;letter-spacing:-.01em;color:var(--dk-c72,rgba(244,236,224,.72));margin:0 0 .25rem}
-#content .program__intro-sub{font-family:var(--fd);font-style:normal;font-size:clamp(1.05rem,1.3vw,1.25rem);line-height:1.4;color:var(--accent);margin:0 0 .6rem}
-#content .program__intro-pillars{font-family:var(--fd);font-style:normal;font-size:clamp(1.45rem,2vw,1.85rem);line-height:1.15;letter-spacing:-.01em;color:var(--accent);margin:0}
+/* ===== Agenda v2 (see end of file) ===== */
 #content .program__block-hook{font-family:var(--fd);font-style:normal;font-size:clamp(.98rem,1.05vw,1.08rem);line-height:1.45;color:var(--paper);opacity:.85;margin:0 0 .7rem}
 #content .program__block-list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:.4rem;flex:1}
 #content .program__block-list li{font-family:var(--fd);font-style:normal;font-size:clamp(.95rem,1vw,1.02rem);line-height:1.35;color:var(--paper);display:flex;gap:.55rem;align-items:baseline}
 #content .program__block-list li::before{content:"\25C6";color:var(--accent);font-size:.42rem;flex-shrink:0;position:relative;top:-.12em}
-@media (max-width:720px){
-  #content .program__intro{margin-bottom:1.75rem}
-  #content .program__intro-lead{font-size:1rem}
-  #content .program__intro-sub{font-size:.98rem}
-  #content .program__intro-pillars{font-size:1.3rem}
-  #content .program__block-hook{font-size:.92rem;margin-bottom:.55rem}
-  #content .program__block-list li{font-size:.88rem}
+
+
+/* ===== Agenda v2: editorial intro, legible cards, spec'd hierarchy ===== */
+#content .program .sec-hd{align-items:center;text-align:center;margin-bottom:0;gap:.5rem}
+#content .program .agn-eyebrow{font-family:var(--fm);font-size:.75rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--accent)}
+#content .program .sec-hd__num{font-size:clamp(3.5rem,5vw,4.25rem);line-height:.98;padding-top:0}
+#content .program__intro{text-align:center;margin:1rem auto 0}
+#content .agn-desc{font-family:var(--fb);font-weight:500;font-size:clamp(1.15rem,1.4vw,1.3rem);line-height:1.45;color:rgba(244,236,224,.82);max-width:720px;margin:0 auto .9rem}
+#content .agn-themes{font-family:var(--fm);font-weight:600;font-size:1rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:.55rem}
+#content .agn-progression{font-family:var(--fb);font-weight:500;font-size:1rem;line-height:1.5;color:rgba(244,236,224,.72)}
+#content .agn-progression span{color:var(--accent);padding:0 .15rem}
+
+/* Space above the grid + day labels */
+#content .program__timeline{margin:3.5rem 0 1.15rem}
+#content .program__tl-day-label{font-size:.72rem;letter-spacing:.24em;opacity:.75;margin-bottom:.3rem}
+#content .program__tl-day-date{font-size:clamp(1.3rem,1.7vw,1.5rem);color:#F4ECE0}
+
+/* Grid */
+#content .program__blocks{gap:1.15rem}
+#content .program__mday{display:none}
+
+/* Cards */
+#content .program__block{
+  background:rgba(255,255,255,.05);
+  border:1px solid rgba(244,236,224,.16);
+  border-top:2px solid var(--accent);
+  border-left:4px solid rgba(244,128,13,.25);
+  border-radius:16px;
+  box-shadow:0 4px 14px rgba(0,0,0,.22);
+  padding:1.6rem 1.9rem 1.4rem;
+  min-height:290px;
+  display:flex;flex-direction:column;gap:0;
+  transition:border-left-color .2s ease,background .2s ease;
+}
+#content .program__block:hover{transform:none;box-shadow:0 4px 14px rgba(0,0,0,.22);border-left-color:var(--accent);background:rgba(255,255,255,.07)}
+#content .program__block--01,#content .program__block--02,#content .program__block--03,#content .program__block--04{border-top-color:var(--accent);border-top-width:2px;border-left-color:rgba(244,128,13,.25)}
+#content .program__block-header{margin-bottom:.8rem}
+#content .program__block-step{font-size:1.6rem;opacity:.3}
+#content .program__block-theme{font-size:.64rem;letter-spacing:.18em;margin-top:.15rem}
+#content .program__block-title{font-size:clamp(1.7rem,2vw,1.9rem);line-height:1.08;margin:0 0 .55rem}
+#content .program__block-hook{font-family:var(--fb);font-weight:400;font-size:1.06rem;line-height:1.45;color:rgba(244,236,224,.82);opacity:1;margin:0}
+#content .program__block-list{margin-top:1.25rem;gap:.55rem;flex:0 0 auto}
+#content .program__block-list li{font-family:var(--fb);font-weight:400;font-size:1rem;line-height:1.55;color:rgba(244,236,224,.9)}
+#content .program__block-list li::before{font-size:.4rem;top:-.14em}
+#content .program__block-coming{margin-top:auto;font-size:.64rem;letter-spacing:.2em;opacity:.6;padding-top:.75rem;border-top:1px solid rgba(244,128,13,.18)}
+#content .program__block-list + .program__block-coming,#content .program__block-hook + .program__block-coming{margin-top:auto}
+#content .program__block > .program__block-list{margin-bottom:1.1rem}
+
+/* Responsive: single column below 900px, Day 1 then 01-02, Day 2 then 03-04 */
+@media (max-width:900px){
+  #content .program .sec-hd__num{font-size:2.6rem}
+  #content .agn-desc{font-size:1.05rem}
+  #content .agn-themes,#content .agn-progression{font-size:.9rem}
+  #content .program__timeline{display:none}
+  #content .program__blocks{grid-template-columns:1fr;gap:1rem}
+  #content .program__blocks::after{display:none}
+  #content .program__mday{display:block;font-family:var(--fm);font-size:.78rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);padding:.35rem 0 0}
+  #content .program__mday--1{order:1}
+  #content .program__block--01{order:2}
+  #content .program__block--02{order:3}
+  #content .program__mday--2{order:4;margin-top:.75rem}
+  #content .program__block--03{order:5}
+  #content .program__block--04{order:6}
+  #content .program__block{padding:1.35rem 1.25rem 1.2rem;min-height:0;border-left-width:4px}
+  #content .program__block-header{flex-direction:row;align-items:flex-start;margin-bottom:.7rem}
+  #content .program__block-step{font-size:1.4rem}
+  #content .program__block-theme{font-size:.6rem;padding:.2rem .5rem;letter-spacing:.16em}
+  #content .program__block-title{font-size:1.5rem}
+  #content .program__block-hook{font-size:1rem}
+  #content .program__block-list{margin-top:1.05rem;gap:.5rem}
+  #content .program__block-list li{font-size:1rem}
+  #content .program__block-coming{font-size:.6rem;margin-top:1rem;padding-top:.6rem}
 }
