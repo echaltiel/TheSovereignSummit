@@ -3563,3 +3563,11 @@ body.menu-open{overflow:hidden}
   #content .program__block-title{font-size:1.65rem;max-width:100%}
   #content .program__block-hook{font-size:.95rem}
 }
+
+/* ===== Agenda v6: centered tile content, two-column points ===== */
+#content .program__block-title{text-align:center;margin-left:auto;margin-right:auto}
+#content .program__block-hook{text-align:center;margin-left:auto;margin-right:auto}
+#content .program__block-list{display:grid;grid-template-columns:auto auto;justify-content:center;column-gap:2.25rem;row-gap:.45rem;text-align:left}
+@media (max-width:480px){
+  #content .program__block-list{grid-template-columns:auto;row-gap:.4rem}
+}
