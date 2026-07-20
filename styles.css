@@ -3308,3 +3308,15 @@ body.menu-open{overflow:hidden}
 /* Future-proof the compact md grid if/when it goes live */
 #content .speaker--md .speaker__role,#content .speakers__grid--md .speaker__role{font-size:.82rem;letter-spacing:.01em;text-transform:none}
 #content .speaker--md .speaker__company,#content .speakers__grid--md .speaker__company{font-size:.82rem;letter-spacing:.01em;text-transform:none}
+
+/* ===== Speaker card size bump ===== */
+@media (min-width:1081px){
+  #content .speakers__grid:not(.speakers__grid--md) .speaker__name{font-size:1.85rem}
+}
+#content .speaker__role{font-size:1.32rem}
+#content .speaker__company{font-size:1.32rem}
+@media (max-width:520px){
+  #content .speakers__grid:not(.speakers__grid--md) .speaker__name{font-size:1.55rem}
+  #content .speakers__grid:not(.speakers__grid--md) .speaker__role{font-size:1.12rem}
+  #content .speakers__grid:not(.speakers__grid--md) .speaker__company{font-size:1.12rem}
+}
