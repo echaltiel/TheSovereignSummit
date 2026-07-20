@@ -3294,3 +3294,17 @@ body.menu-open{overflow:hidden}
   #content .venue__amenities li{font-size:1.1rem !important;line-height:1.6 !important}
   #content .venue__details{gap:1.35rem !important}
 }
+
+/* ===== Speaker card type refresh: Archivo names, serif role, bold serif company ===== */
+#content .speaker__name{font-family:var(--fb);font-weight:800;letter-spacing:-.015em;color:var(--dk-c,#F4ECE0)}
+#content .speaker__name em{font-family:var(--fb);font-weight:800;font-style:normal;color:inherit}
+#content .speaker__role{font-family:var(--fd);font-weight:400;text-transform:none;letter-spacing:.01em;font-size:1.15rem;line-height:1.35;color:var(--dk-c72,rgba(244,236,224,.72));margin-bottom:.1rem}
+#content .speaker__company{font-family:var(--fd);font-weight:700;text-transform:none;letter-spacing:.01em;font-size:1.15rem;line-height:1.35;color:var(--accent,#FF6941)}
+/* Size compensation where earlier higher-specificity rules set mono sizes */
+@media (max-width:520px){
+  #content .speakers__grid:not(.speakers__grid--md) .speaker__role{font-size:.98rem;line-height:1.35;text-transform:none;letter-spacing:.01em}
+  #content .speakers__grid:not(.speakers__grid--md) .speaker__company{font-size:.98rem;line-height:1.35;text-transform:none;letter-spacing:.01em}
+}
+/* Future-proof the compact md grid if/when it goes live */
+#content .speaker--md .speaker__role,#content .speakers__grid--md .speaker__role{font-size:.82rem;letter-spacing:.01em;text-transform:none}
+#content .speaker--md .speaker__company,#content .speakers__grid--md .speaker__company{font-size:.82rem;letter-spacing:.01em;text-transform:none}
