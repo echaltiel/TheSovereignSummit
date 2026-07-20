@@ -3339,3 +3339,11 @@ body.menu-open{overflow:hidden}
   #content .inq-explainer__list li{font-size:1.05rem}
   #content .inq-explainer__press{text-align:left;font-size:1.02rem}
 }
+
+/* ===== Uniform breathing room between the last section and the footer on every page ===== */
+#content section:last-of-type{padding-bottom:clamp(3rem,6vw,4.5rem)}
+#content .inq-form__submit{margin-top:.35rem}
+
+/* ===== Uniform spacing between the last section and the footer, every page ===== */
+#content section:last-of-type{padding-bottom:1.5rem !important}
+@media (max-width:520px){#content section:last-of-type{padding-bottom:1.75rem !important}}
