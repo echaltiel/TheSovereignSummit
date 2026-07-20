@@ -3571,3 +3571,4 @@ body.menu-open{overflow:hidden}
 @media (max-width:480px){
   #content .program__block-list{grid-template-columns:auto;row-gap:.4rem}
 }
+#content .program__block-title{color:var(--accent)}
