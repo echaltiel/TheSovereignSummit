@@ -34,7 +34,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Instrument+Serif&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=86">
+<link rel="stylesheet" href="styles.css?v=87">
 <style>#content{padding-top:calc(var(--header-h) + clamp(1rem,2.5vw,2rem))}</style>
 </head>
 <body>
@@ -422,6 +422,59 @@
   dlg.addEventListener('click', function(e){
     if (e.target === dlg) dlg.close();
   });
+})();
+</script>
+
+<div class="news-pop" id="newsPop" role="dialog" aria-modal="true" aria-label="Newsletter signup" aria-hidden="true">
+  <div class="news-pop__card">
+    <button type="button" class="news-pop__close" id="newsPopClose" aria-label="Close">&times;</button>
+    <div class="news-pop__eyebrow">Newsletter</div>
+    <div class="news-pop__title">Stay in the loop</div>
+    <p class="news-pop__copy">Speaker announcements, program updates, and more. Unsubscribe any time you like.</p>
+    <form class="news-pop__form" id="newsPopForm">
+      <input class="news-pop__input" id="newsPopEmail" type="email" placeholder="your@email.com" required autocomplete="email">
+      <button type="submit" class="news-pop__submit" id="newsPopSubmit">Subscribe &rarr;</button>
+    </form>
+    <div class="news-pop__thanks">You&rsquo;re in! Talk soon.</div>
+  </div>
+</div>
+<script>
+(function(){
+  var DONE='tss_news_done', SNOOZE='tss_news_session';
+  try{
+    if(localStorage.getItem(DONE)) return;
+    if(sessionStorage.getItem(SNOOZE)) return;
+  }catch(e){}
+  var pop=document.getElementById('newsPop');
+  if(!pop) return;
+  var form=document.getElementById('newsPopForm');
+  var closeBtn=document.getElementById('newsPopClose');
+  function open(){ pop.classList.add('is-open'); pop.setAttribute('aria-hidden','false'); }
+  function close(){
+    pop.classList.remove('is-open'); pop.setAttribute('aria-hidden','true');
+    try{ sessionStorage.setItem(SNOOZE,'1'); }catch(e){}
+  }
+  closeBtn.addEventListener('click', close);
+  pop.addEventListener('click', function(e){ if(e.target===pop) close(); });
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape' && pop.classList.contains('is-open')) close(); });
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var email=document.getElementById('newsPopEmail').value.trim();
+    if(!email) return;
+    var btn=document.getElementById('newsPopSubmit');
+    btn.disabled=true; btn.textContent='One sec\u2026';
+    fetch('https://formsubmit.co/ajax/info@thesovereignsummit.com',{
+      method:'POST',
+      headers:{'Content-Type':'application/json','Accept':'application/json'},
+      body:JSON.stringify({email:email,_subject:'New newsletter signup - thesovereignsummit.com'})
+    }).then(function(){ finish(); }).catch(function(){ finish(); });
+    function finish(){
+      pop.classList.add('is-done');
+      try{ localStorage.setItem(DONE,'1'); }catch(e){}
+      setTimeout(close, 2200);
+    }
+  });
+  window.addEventListener('load', function(){ setTimeout(open, 7000); });
 })();
 </script>
 </body>
