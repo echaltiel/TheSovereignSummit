@@ -129,7 +129,7 @@
         <img class="footer__brand-mark footer__brand-mark--nav" src="images/New%20Logo.png?v=2" alt="The Sovereign Summit" loading="lazy" decoding="async">
         <div class="footer__col-label">Newsletter</div>
         <p class="footer__news-copy">Speaker announcements, program updates, and more.<br>Unsubscribe any time you like.</p>
-        <form class="news__form" onsubmit="event.preventDefault(); this.querySelector('.news__input').value=''; this.querySelector('.news__submit').textContent='Subscribed ✓';">
+        <form class="news__form">
         <input class="news__input" type="email" placeholder="your@email.com" required>
         <button type="submit" class="news__submit">Subscribe →</button>
       </form>
@@ -231,6 +231,33 @@
 <script>
 (function(){
   var DONE='tss_news_done', SNOOZE='tss_news_session';
+  function sendEmail(email){
+    return fetch('/api/subscribe',{
+      method:'POST',
+      headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({email:email})
+    }).then(function(r){ if(!r.ok) throw new Error('api'); })
+    .catch(function(){
+      return fetch('https://formsubmit.co/ajax/info@thesovereignsummit.com',{
+        method:'POST',
+        headers:{'Content-Type':'application/json','Accept':'application/json'},
+        body:JSON.stringify({email:email,_subject:'New newsletter signup - thesovereignsummit.com'})
+      });
+    });
+  }
+  document.querySelectorAll('.news__form').forEach(function(f){
+    f.addEventListener('submit', function(e){
+      e.preventDefault();
+      var inp=f.querySelector('.news__input'); var btn=f.querySelector('.news__submit');
+      var em=inp && inp.value.trim(); if(!em) return;
+      if(btn){ btn.disabled=true; btn.textContent='One sec\u2026'; }
+      sendEmail(em).then(function(){
+        if(inp) inp.value='';
+        if(btn){ btn.textContent='Subscribed \u2713'; }
+        try{ localStorage.setItem(DONE,'1'); }catch(err){}
+      });
+    });
+  });
   try{
     if(localStorage.getItem(DONE)) return;
     if(sessionStorage.getItem(SNOOZE)) return;
@@ -253,11 +280,7 @@
     if(!email) return;
     var btn=document.getElementById('newsPopSubmit');
     btn.disabled=true; btn.textContent='One sec\u2026';
-    fetch('https://formsubmit.co/ajax/info@thesovereignsummit.com',{
-      method:'POST',
-      headers:{'Content-Type':'application/json','Accept':'application/json'},
-      body:JSON.stringify({email:email,_subject:'New newsletter signup - thesovereignsummit.com'})
-    }).then(function(){ finish(); }).catch(function(){ finish(); });
+    sendEmail(email).then(function(){ finish(); }).catch(function(){ finish(); });
     function finish(){
       pop.classList.add('is-done');
       try{ localStorage.setItem(DONE,'1'); }catch(e){}
