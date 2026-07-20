@@ -3384,14 +3384,20 @@ body.menu-open{overflow:hidden}
   .news-pop__list{margin:1.1rem auto 1.25rem}
 }
 
-/* ===== Agenda: pillar line + digestible block interiors ===== */
-#content .program__pillars{font-family:var(--fd);font-size:clamp(1.5rem,2.4vw,2.1rem);line-height:1.1;color:var(--accent);letter-spacing:-.01em;margin-top:.5rem;text-align:inherit}
+/* ===== Agenda: three-tier intro + digestible block interiors ===== */
+#content .program__intro{text-align:center;max-width:860px;margin:0 auto clamp(2rem,4vw,3rem)}
+#content .program__intro-lead{font-family:var(--fb);font-weight:700;font-size:clamp(1.05rem,1.4vw,1.3rem);line-height:1.4;letter-spacing:-.01em;color:var(--dk-c72,rgba(244,236,224,.72));margin:0 0 .25rem}
+#content .program__intro-sub{font-family:var(--fd);font-style:normal;font-size:clamp(1.05rem,1.3vw,1.25rem);line-height:1.4;color:var(--accent);margin:0 0 .6rem}
+#content .program__intro-pillars{font-family:var(--fd);font-style:normal;font-size:clamp(1.45rem,2vw,1.85rem);line-height:1.15;letter-spacing:-.01em;color:var(--accent);margin:0}
 #content .program__block-hook{font-family:var(--fd);font-style:normal;font-size:clamp(.98rem,1.05vw,1.08rem);line-height:1.45;color:var(--paper);opacity:.85;margin:0 0 .7rem}
 #content .program__block-list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:.4rem;flex:1}
 #content .program__block-list li{font-family:var(--fd);font-style:normal;font-size:clamp(.95rem,1vw,1.02rem);line-height:1.35;color:var(--paper);display:flex;gap:.55rem;align-items:baseline}
 #content .program__block-list li::before{content:"\25C6";color:var(--accent);font-size:.42rem;flex-shrink:0;position:relative;top:-.12em}
 @media (max-width:720px){
-  #content .program__pillars{font-size:1.3rem;margin-top:.4rem}
+  #content .program__intro{margin-bottom:1.75rem}
+  #content .program__intro-lead{font-size:1rem}
+  #content .program__intro-sub{font-size:.98rem}
+  #content .program__intro-pillars{font-size:1.3rem}
   #content .program__block-hook{font-size:.92rem;margin-bottom:.55rem}
   #content .program__block-list li{font-size:.88rem}
 }
