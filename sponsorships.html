@@ -34,7 +34,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Instrument+Serif&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=87">
+<link rel="stylesheet" href="styles.css?v=88">
 <style>#content{padding-top:calc(var(--header-h) + clamp(1rem,2.5vw,2rem))}</style>
 </head>
 <body>
@@ -556,9 +556,14 @@ if (new URLSearchParams(location.search).get('sent') === '1') {
 <div class="news-pop" id="newsPop" role="dialog" aria-modal="true" aria-label="Newsletter signup" aria-hidden="true">
   <div class="news-pop__card">
     <button type="button" class="news-pop__close" id="newsPopClose" aria-label="Close">&times;</button>
-    <div class="news-pop__eyebrow">Newsletter</div>
-    <div class="news-pop__title">Stay in the loop</div>
-    <p class="news-pop__copy">Speaker announcements, program updates, and more. Unsubscribe any time you like.</p>
+    <img class="news-pop__logo" src="images/New%20Logo.png?v=2" alt="The Sovereign Summit">
+    <div class="news-pop__title">Stay Updated</div>
+    <p class="news-pop__copy">Be the first to know about</p>
+    <ul class="news-pop__list">
+      <li>Speaker announcements</li>
+      <li>Early bird tickets</li>
+      <li>Exclusive content and more.</li>
+    </ul>
     <form class="news-pop__form" id="newsPopForm">
       <input class="news-pop__input" id="newsPopEmail" type="email" placeholder="your@email.com" required autocomplete="email">
       <button type="submit" class="news-pop__submit" id="newsPopSubmit">Subscribe &rarr;</button>
