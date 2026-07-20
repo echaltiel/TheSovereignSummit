@@ -3527,3 +3527,39 @@ body.menu-open{overflow:hidden}
   #content .program__block-hook{font-size:.95rem;max-width:100%}
   #content .program__block-list li{font-size:.9rem}
 }
+
+/* ===== Agenda v5: real-weight titles, quieter metadata, neutral left edge ===== */
+#content .program .sec-hd__num{font-size:clamp(3.15rem,3.6vw,3.4rem)}
+#content .program__intro{margin-top:.8rem}
+#content .agn-desc{font-size:1.05rem;margin:0 auto .9rem}
+#content .agn-themes{font-size:.78rem}
+#content .program__timeline{margin:2rem 0 .7rem}
+#content .program__tl-day-label{font-size:.6rem}
+#content .program__tl-line{background:rgba(244,128,13,.18)}
+#content .program__tl-arrow{opacity:.45}
+
+#content .program__block{
+  padding:1.4rem 1.45rem 1.3rem;
+  background:rgba(255,255,255,.06);
+  border:1px solid rgba(244,236,224,.14);
+  border-top:2px solid var(--accent);
+  border-left:1px solid rgba(244,236,224,.14);
+  transition:background .18s ease,border-color .18s ease;
+}
+#content .program__block--01,#content .program__block--02,#content .program__block--03,#content .program__block--04{border-left:1px solid rgba(244,236,224,.14);border-top:2px solid var(--accent)}
+#content .program__block:hover{background:rgba(255,255,255,.08);border-left-color:rgba(244,236,224,.14);border-color:rgba(244,236,224,.2);border-top-color:var(--accent)}
+#content .program__block-header{margin-bottom:.5rem}
+#content .program__block-step{font-size:1.1rem;font-weight:500;color:rgba(244,236,224,.38)}
+#content .program__block-theme{font-size:.56rem;letter-spacing:.12em;padding:.14rem .4rem;border:1px solid rgba(244,128,13,.18);background:rgba(244,128,13,.05);color:rgba(255,138,80,.75)}
+#content .program__block-title{font-family:var(--fb);font-weight:700;font-size:clamp(2rem,2.3vw,2.2rem);line-height:1.08;letter-spacing:-.02em;color:#F4ECE0;margin:0 0 .6rem;max-width:85%;text-transform:none}
+#content .program__block-hook{font-size:.96rem;line-height:1.35;color:rgba(244,236,224,.78)}
+#content .program__block-list{margin-top:.95rem;gap:.35rem}
+#content .program__block-list li{font-size:.9rem;line-height:1.35;color:rgba(244,236,224,.7)}
+
+@media (max-width:1200px){
+  #content .program__block-title{font-size:1.85rem}
+}
+@media (max-width:900px){
+  #content .program__block-title{font-size:1.65rem;max-width:100%}
+  #content .program__block-hook{font-size:.95rem}
+}
