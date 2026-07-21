@@ -3607,3 +3607,16 @@ body.menu-open{overflow:hidden}
   #content .program__block-list{grid-template-columns:minmax(0,1fr) minmax(0,1fr);column-gap:.9rem}
   #content .program__block-list li{font-size:.86rem}
 }
+
+/* ===== Agenda mobile: desktop-style day headers, centered point columns ===== */
+@media (max-width:900px){
+  #content .program__mday{font-family:var(--fm);display:block;border-bottom:1px solid rgba(244,128,13,.18);padding-bottom:.65rem}
+  #content .program__mday-label{display:block;font-family:var(--fm);font-size:.62rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:rgba(244,236,224,.6);margin-bottom:.25rem}
+  #content .program__mday-date{display:block;font-family:var(--fd);font-size:1.4rem;line-height:1;letter-spacing:0;text-transform:none;color:#F4ECE0}
+  #content .program__mday--1{margin-top:1.7rem}
+  #content .program__mday--2{margin-top:1.4rem}
+  #content .program__block-list{grid-template-columns:fit-content(48%) fit-content(48%);justify-content:center;column-gap:1.5rem;row-gap:.5rem}
+}
+@media (max-width:480px){
+  #content .program__block-list{grid-template-columns:fit-content(48%) fit-content(48%);column-gap:1.2rem}
+}
