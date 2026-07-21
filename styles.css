@@ -3953,3 +3953,9 @@ body.menu-open{overflow:hidden}
 @media (max-width:720px){
   #content .side-event__photo{right:auto;-webkit-mask-image:none;mask-image:none}
 }
+
+/* ===== Side events: final photo position ===== */
+#content .side-event__photo{width:46%;right:150px}
+@media (max-width:720px){
+  #content .side-event__photo{width:100%;right:auto}
+}
