@@ -3799,3 +3799,7 @@ body.menu-open{overflow:hidden}
   #content .side-event__when{width:100%;padding:.65rem 1rem;border-radius:12px}
   #content .side-event__sponsor{align-self:flex-start !important;width:auto !important;margin:1.05rem 0 0 0 !important}
 }
+
+/* ===== Agenda subtitle: exact match to site subtitle component ===== */
+#content .agn-desc{font-weight:800;letter-spacing:-.022em}
+#content .agn-desc em{font-family:var(--fd);font-style:normal;font-weight:400;color:var(--accent);font-size:1.04em;letter-spacing:0}
