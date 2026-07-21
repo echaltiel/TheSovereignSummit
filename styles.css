@@ -3875,3 +3875,25 @@ body.menu-open{overflow:hidden}
   #content .side-event__badges{flex-direction:row !important;flex-wrap:wrap}
   #content .side-event__photo{width:100%;right:auto;-webkit-mask-image:none;mask-image:none}
 }
+
+/* ===== Side events v4.3: precision pass toward mock ===== */
+#content .side-event{min-height:140px;max-height:160px;padding:.9rem 1.4rem !important;border-radius:12px !important}
+#content .side-event__when{min-width:138px;padding:.1rem 1.1rem .1rem 0 !important}
+#content .side-event__date{font-size:.95rem !important}
+#content .side-event__time{font-size:.78rem !important}
+#content .side-event__main{max-width:44%}
+#content .side-event__title{font-size:1.6rem !important;margin:0 0 .45rem !important}
+#content .side-event__exclusive{font-size:.58rem !important;padding:.22rem .5rem !important}
+#content .side-event__photo{
+  width:36%;right:172px;
+  filter:saturate(.95) brightness(.72);
+  -webkit-mask-image:linear-gradient(90deg,transparent 0,#000 14%,#000 88%,transparent 100%);
+  mask-image:linear-gradient(90deg,transparent 0,#000 14%,#000 88%,transparent 100%);
+}
+#content .side-event__sponsor{top:.9rem;right:1.4rem;font-size:.6rem !important}
+#content .side-event__view{bottom:.9rem;right:1.4rem;font-size:.9rem}
+@media (max-width:720px){
+  #content .side-event{max-height:none;border-radius:14px !important}
+  #content .side-event__main{max-width:100%}
+  #content .side-event__photo{width:100%;right:auto;filter:saturate(.92) brightness(.8);-webkit-mask-image:none;mask-image:none}
+}
