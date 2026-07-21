@@ -3734,3 +3734,18 @@ body.menu-open{overflow:hidden}
   #content .side-event__sponsor{order:4;align-self:stretch;margin-top:1.05rem;margin-right:2.9rem;justify-content:flex-start;font-size:.72rem}
   #content .side-event::after{right:1rem;bottom:1.15rem;font-size:1.6rem}
 }
+
+/* ===== Side events mobile FIX: dismantle the legacy 100px grid, enforce the mockup layout ===== */
+@media (max-width:720px){
+  #content .side-event{display:flex !important;flex-direction:column !important;grid-template-columns:none !important;column-gap:0 !important;padding:1.5rem 1.3rem 1.6rem !important;gap:0 !important;align-items:stretch !important}
+  #content .side-event__top{display:contents !important}
+  #content .side-event__when{display:flex !important;grid-column:auto !important;grid-row:auto !important;order:1;width:100%;flex-direction:row;justify-content:space-between;align-items:baseline;gap:.6rem}
+  #content .side-event__date{grid-column:auto !important;grid-row:auto !important;font-size:1.25rem !important;letter-spacing:.16em !important;line-height:1.2 !important;margin:0 !important;white-space:nowrap}
+  #content .side-event__time{grid-column:auto !important;grid-row:auto !important;font-size:1rem !important;letter-spacing:.1em !important;margin:0 !important;white-space:nowrap}
+  #content .side-event__title{grid-column:auto !important;grid-row:auto !important;order:2;text-align:center;font-size:clamp(1.95rem,8vw,2.35rem) !important;line-height:1.05 !important;margin:1.05rem auto .95rem !important;max-width:100%}
+  #content .side-event__badges{grid-column:auto !important;grid-row:auto !important;order:3;display:flex !important;flex-direction:column !important;gap:.5rem !important;width:100% !important}
+  #content .side-event__badges .side-event__exclusive,#content .side-event__exclusive{grid-column:auto !important;grid-row:auto !important;width:100% !important;text-align:center !important;font-size:.78rem !important;letter-spacing:.14em !important;padding:.55rem .7rem !important;border-radius:4px !important;margin:0 !important}
+  #content .side-event__sponsor{grid-column:auto !important;grid-row:auto !important;order:4;align-self:stretch !important;justify-content:flex-start !important;margin:1.05rem 2.9rem 0 0 !important;font-size:.72rem !important}
+  #content .side-event__venue{display:none !important}
+  #content .side-event::after{right:1rem;bottom:1.15rem;font-size:1.6rem}
+}
