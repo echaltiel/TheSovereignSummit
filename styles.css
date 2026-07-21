@@ -3788,3 +3788,6 @@ body.menu-open{overflow:hidden}
 #content .vip-hero__img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 40%;filter:saturate(.92) brightness(.92);opacity:0;transition:opacity 1.1s ease}
 #content .vip-hero__img.is-active{opacity:1}
 @media (max-width:620px){#content .vip-hero{height:190px}}
+
+/* ===== Agenda subtitle: serif coral emphasis to match site headings ===== */
+#content .agn-desc em{font-family:var(--fd);font-style:normal;color:var(--accent);font-size:1.06em;letter-spacing:0}
