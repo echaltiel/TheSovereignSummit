@@ -3692,3 +3692,30 @@ body.menu-open{overflow:hidden}
   .sev-modal .side-event__desc{font-size:1.02rem}
   .sev-modal .sev-modal__cta{width:100%;justify-content:center}
 }
+
+/* ===== Side events v2: bigger dates, centered titles, mobile cleanup, modal points ===== */
+#content .side-event__date{font-size:1.05rem}
+#content .side-event__time{font-size:.85rem}
+#content .side-event__title{text-align:center;margin:.45rem auto .35rem;max-width:100%}
+#content .side-event__badges{justify-content:center}
+.sev-modal .side-event__title{text-align:left}
+.sev-modal .side-event__badges{justify-content:flex-start}
+.sev-modal__points{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:.45rem}
+.sev-modal__points li{font-family:var(--fd);font-size:1.05rem;line-height:1.35;color:#F4ECE0;display:flex;gap:.55rem;align-items:baseline}
+.sev-modal__points li::before{content:"\25C6";color:var(--accent,#FF6941);font-size:.45rem;flex-shrink:0;position:relative;top:-.12em}
+.sev-modal .sev-modal__cta--vip{background:#E8C46A;color:#001227}
+.sev-modal .sev-modal__cta--vip:hover{filter:none;box-shadow:0 10px 32px rgba(232,196,106,.3)}
+
+@media (max-width:720px){
+  #content .side-event{padding:1.25rem 1.1rem 1.6rem;gap:.5rem}
+  #content .side-event__top{flex-wrap:wrap;gap:.4rem;align-items:baseline}
+  #content .side-event__when{flex-direction:row;align-items:baseline;gap:.6rem;flex-wrap:wrap}
+  #content .side-event__date{font-size:.95rem;letter-spacing:.14em}
+  #content .side-event__time{font-size:.78rem}
+  #content .side-event__sponsor{font-size:.62rem}
+  #content .side-event__title{font-size:clamp(1.6rem,7vw,1.95rem);line-height:1.05;margin:.4rem auto .3rem}
+  #content .side-event__badges{flex-wrap:wrap;gap:.4rem;justify-content:center}
+  #content .side-event__exclusive{font-size:.62rem;padding:.24rem .6rem;text-align:center}
+  #content .side-event::after{right:.9rem;bottom:.7rem;font-size:1.2rem}
+  .sev-modal__points li{font-size:1rem}
+}
