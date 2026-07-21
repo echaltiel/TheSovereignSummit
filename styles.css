@@ -3720,3 +3720,17 @@ body.menu-open{overflow:hidden}
   .sev-modal__points li{font-size:1rem}
 }
 .sev-modal .sev-modal__cta{align-self:center}
+
+/* ===== Side events mobile v3: date row spread, full-width badge bars, sponsor at bottom ===== */
+@media (max-width:720px){
+  #content .side-event{padding:1.5rem 1.3rem 1.6rem;gap:0}
+  #content .side-event__top{display:contents}
+  #content .side-event__when{order:1;width:100%;display:flex;flex-direction:row;justify-content:space-between;align-items:baseline;gap:.6rem}
+  #content .side-event__date{font-size:1.3rem;letter-spacing:.18em}
+  #content .side-event__time{font-size:1.02rem;letter-spacing:.12em}
+  #content .side-event__title{order:2;font-size:clamp(2rem,8.5vw,2.4rem);margin:1.1rem auto .95rem}
+  #content .side-event__badges{order:3;display:flex;flex-direction:column;gap:.5rem;width:100%}
+  #content .side-event__exclusive{width:100%;text-align:center;font-size:.78rem;letter-spacing:.14em;padding:.55rem .7rem;border-radius:4px}
+  #content .side-event__sponsor{order:4;align-self:stretch;margin-top:1.05rem;margin-right:2.9rem;justify-content:flex-start;font-size:.72rem}
+  #content .side-event::after{right:1rem;bottom:1.15rem;font-size:1.6rem}
+}
