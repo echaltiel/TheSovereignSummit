@@ -3719,3 +3719,4 @@ body.menu-open{overflow:hidden}
   #content .side-event::after{right:.9rem;bottom:.7rem;font-size:1.2rem}
   .sev-modal__points li{font-size:1rem}
 }
+.sev-modal .sev-modal__cta{align-self:center}
