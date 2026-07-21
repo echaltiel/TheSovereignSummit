@@ -3907,3 +3907,11 @@ body.menu-open{overflow:hidden}
 @media (max-width:720px){
   #content .side-event__photo{width:100%;right:auto;-webkit-mask-image:none;mask-image:none}
 }
+
+/* ===== Badge icons ===== */
+.badge-ico{display:inline-block;margin-right:.3em;font-size:1.05em;line-height:1;position:relative;top:.02em}
+
+/* ===== Inline icons: gem + clock ===== */
+.ico-svg{width:1.05em;height:1.05em;stroke:currentColor;fill:none;stroke-width:2;stroke-linejoin:round;stroke-linecap:round;display:inline-block;vertical-align:-.14em;margin-right:.3em;flex-shrink:0}
+#content .side-event__time{display:inline-flex;align-items:center}
+#content .side-event__time .ico-svg{margin-right:.35em}
