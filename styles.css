@@ -3641,3 +3641,11 @@ body.menu-open{overflow:hidden}
   #content .program__block-hook{font-size:1rem}
   #content .program__block-theme{font-size:.66rem}
 }
+
+/* ===== Agenda intro: larger subtitle + theme line ===== */
+#content .agn-desc{font-size:clamp(1.2rem,1.5vw,1.35rem);max-width:780px;margin:0 auto 1rem}
+#content .agn-themes{font-size:1.02rem;letter-spacing:.16em}
+@media (max-width:900px){
+  #content .agn-desc{font-size:1.12rem}
+  #content .agn-themes{font-size:.92rem}
+}
