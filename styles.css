@@ -3791,3 +3791,11 @@ body.menu-open{overflow:hidden}
 
 /* ===== Agenda subtitle: serif coral emphasis to match site headings ===== */
 #content .agn-desc em{font-family:var(--fd);font-style:normal;color:var(--accent);font-size:1.06em;letter-spacing:0}
+
+/* ===== Side events: framed date/time, fitted sponsor pill on mobile ===== */
+#content .side-event__when{border:1px solid rgba(244,236,224,.28);border-radius:12px;padding:.55rem .95rem;align-self:flex-start;box-sizing:border-box}
+.sev-modal .side-event__when{border:none;border-radius:0;padding:0;align-self:auto}
+@media (max-width:720px){
+  #content .side-event__when{width:100%;padding:.65rem 1rem;border-radius:12px}
+  #content .side-event__sponsor{align-self:flex-start !important;width:auto !important;margin:1.05rem 0 0 0 !important}
+}
