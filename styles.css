@@ -4114,3 +4114,17 @@ body.menu-open{overflow:hidden}
   #content .side-event__sponsor{order:4 !important;position:static !important;align-self:flex-start !important;width:auto !important;margin:0 7.5rem 0 0 !important;padding:0 !important;font-size:.62rem !important;background:none !important;border:none !important}
   #content .side-event__view{position:absolute !important;bottom:1.3rem;right:1.2rem;font-size:.9rem}
 }
+
+/* ===== Venue mobile: banner surfaces above the fold ===== */
+@media (max-width:720px){
+  #content .venue .container{display:flex;flex-direction:column}
+  #content .venue .sec-hd{order:1;margin-bottom:1.1rem}
+  #content .vn2-intro{display:contents}
+  #content .vn2-intro__media{order:2;margin-bottom:1.15rem}
+  #content .vn2-intro__media img{height:175px;object-fit:cover;object-position:center 45%;border-radius:12px}
+  #content .vn2-block{order:3;margin:0 0 1.5rem}
+  #content .vn2-block__left{padding:1.35rem 1.2rem;gap:.5rem}
+  #content .vn2-block__title{font-size:1.85rem}
+  #content .vn2-intro__text{order:4}
+  #content .vn2-sec-title,#content .vn2-plan,#content .vn2-props,#content .vn2-brand{order:5}
+}
