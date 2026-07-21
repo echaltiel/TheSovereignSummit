@@ -4047,3 +4047,14 @@ body.menu-open{overflow:hidden}
   #content .vn2-intro__media picture{position:static}
   #content .vn2-intro__media img{position:static;height:auto;object-fit:initial}
 }
+
+/* ===== Venue: first-viewport balance ===== */
+#content .vn2-intro{margin-bottom:1.9rem}
+#content .vn2-block__left{padding:2.4rem 1.5rem}
+#content .vn2-block__right{justify-content:space-evenly;padding:2rem 2.4rem}
+#content .vn2-sec-title{margin-top:4.25rem}
+@media (max-width:720px){
+  #content .vn2-block__left{padding:1.6rem 1.25rem}
+  #content .vn2-block__right{padding:1.5rem 1.25rem}
+  #content .vn2-sec-title{margin-top:2.4rem}
+}
