@@ -3915,3 +3915,11 @@ body.menu-open{overflow:hidden}
 .ico-svg{width:1.05em;height:1.05em;stroke:currentColor;fill:none;stroke-width:2;stroke-linejoin:round;stroke-linecap:round;display:inline-block;vertical-align:-.14em;margin-right:.3em;flex-shrink:0}
 #content .side-event__time{display:inline-flex;align-items:center}
 #content .side-event__time .ico-svg{margin-right:.35em}
+
+/* ===== Badge icon alignment + sizing ===== */
+#content .side-event__exclusive{display:inline-flex !important;align-items:center;justify-content:center;gap:.4em}
+#content .side-event__exclusive .badge-ico{margin:0;top:0;font-size:1.35em;line-height:0}
+#content .side-event__exclusive .ico-svg{margin:0;vertical-align:0;width:1.25em;height:1.25em}
+.sev-modal .side-event__exclusive{display:inline-flex;align-items:center;gap:.4em}
+.sev-modal .side-event__exclusive .badge-ico{margin:0;top:0;font-size:1.35em;line-height:0}
+.sev-modal .side-event__exclusive .ico-svg{margin:0;vertical-align:0;width:1.25em;height:1.25em}
