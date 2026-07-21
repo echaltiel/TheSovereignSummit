@@ -3649,3 +3649,46 @@ body.menu-open{overflow:hidden}
   #content .agn-desc{font-size:1.12rem}
   #content .agn-themes{font-size:.92rem}
 }
+
+/* ===== Side events: compact clickable tiles + detail modal ===== */
+#content .side-event{cursor:pointer;padding:1.5rem 1.5rem 1.6rem;gap:.55rem;min-height:172px}
+#content .side-event::after{content:"+";position:absolute;right:1.15rem;bottom:.8rem;font-family:var(--fb);font-weight:700;font-size:1.35rem;line-height:1;color:var(--accent);opacity:.65;transition:opacity .2s ease}
+#content .side-event:hover::after{opacity:1}
+#content .side-event:focus-visible{outline:2px solid var(--accent);outline-offset:-2px}
+#content .side-event__date{font-size:.92rem}
+#content .side-event__time{font-size:.8rem}
+#content .side-event__title{font-size:clamp(2.1rem,2.5vw,2.6rem);margin:.35rem 0 .3rem}
+#content .side-event__exclusive{font-size:.7rem;padding:.28rem .7rem}
+#content .side-event .side-event__details{display:none}
+
+.sev-modal{position:fixed;inset:0;z-index:240;display:flex;align-items:center;justify-content:center;padding:1.25rem;background:rgba(10,18,36,.78);opacity:0;visibility:hidden;transition:opacity .25s ease,visibility 0s linear .25s}
+.sev-modal.is-open{opacity:1;visibility:visible;transition:opacity .25s ease}
+.sev-modal__card{position:relative;width:100%;max-width:560px;max-height:86vh;overflow:auto;background:linear-gradient(180deg,#1E2E4E 0%,#101A30 100%);border:1px solid rgba(244,236,224,.18);border-radius:16px;padding:2rem 1.9rem 1.9rem;box-shadow:0 24px 60px rgba(0,0,0,.5)}
+.sev-modal__close{position:absolute;top:.55rem;right:.55rem;width:44px;height:44px;display:flex;align-items:center;justify-content:center;background:none;border:none;color:rgba(244,236,224,.65);font-size:1.6rem;line-height:1;cursor:pointer;font-family:var(--fb)}
+.sev-modal__close:hover{color:#F4ECE0}
+.sev-modal .side-event__when{display:flex;flex-direction:row;align-items:baseline;gap:.7rem;margin-bottom:.55rem}
+.sev-modal .side-event__date{font-family:var(--fm);font-size:.85rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--accent,#FF6941)}
+.sev-modal .side-event__time{font-family:var(--fm);font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(244,236,224,.65)}
+.sev-modal .side-event__title{font-family:var(--fd);font-weight:400;font-size:clamp(1.9rem,5vw,2.3rem);line-height:1.05;letter-spacing:-.01em;color:#F4ECE0;margin:0 0 .7rem}
+.sev-modal .side-event__title em{font-style:normal;color:var(--accent,#FF6941)}
+.sev-modal .side-event__badges{display:flex;flex-wrap:wrap;gap:.45rem;margin-bottom:.4rem}
+.sev-modal .side-event__exclusive{font-family:var(--fm);font-size:.66rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:.3rem .7rem;border-radius:100px}
+.sev-modal .side-event__details{display:flex;flex-direction:column;gap:.85rem;margin-top:.7rem;border-top:1px solid rgba(244,236,224,.15);padding-top:1rem}
+.sev-modal .side-event__venue{font-family:var(--fm);font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(244,236,224,.6);display:flex;gap:.5rem;align-items:baseline}
+.sev-modal .side-event__venue-name{color:#F4ECE0;font-weight:700}
+.sev-modal .side-event__desc{font-family:var(--fd);font-size:1.1rem;line-height:1.55;color:rgba(244,236,224,.85);margin:0}
+.sev-modal .side-event__desc em{font-style:normal;color:#E8C46A}
+.sev-modal .side-event__meta{font-family:var(--fm);font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:rgba(244,236,224,.6)}
+.sev-modal .sev-modal__cta{align-self:flex-start;display:inline-flex;align-items:center;gap:.5rem;background:var(--accent,#FF6941);color:#131E33;border:none;border-radius:100px;padding:.85rem 1.6rem;font-family:var(--fm);font-weight:700;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;margin-top:.3rem}
+.sev-modal .sev-modal__cta:hover{filter:brightness(1.06)}
+
+@media (max-width:720px){
+  #content .side-event{padding:1.3rem 1.2rem 1.5rem;min-height:0}
+  #content .side-event__title{font-size:1.85rem}
+  #content .side-event__date{font-size:.85rem}
+  .sev-modal{padding:1rem}
+  .sev-modal__card{padding:1.6rem 1.25rem 1.4rem;max-height:88vh}
+  .sev-modal .side-event__title{font-size:1.7rem}
+  .sev-modal .side-event__desc{font-size:1.02rem}
+  .sev-modal .sev-modal__cta{width:100%;justify-content:center}
+}
