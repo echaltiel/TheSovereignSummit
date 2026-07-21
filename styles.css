@@ -3773,3 +3773,12 @@ body.menu-open{overflow:hidden}
   #content .rb-fine-2{display:block}
   #content .venue__detail-label{font-size:.92rem !important;letter-spacing:.18em !important}
 }
+
+/* ===== Room block: highlight box on desktop too ===== */
+#content .rb-right{
+  border:1.5px solid rgba(74,50,8,.42) !important;
+  border-radius:14px;
+  background:rgba(255,255,255,.3);
+  box-shadow:0 3px 14px rgba(74,50,8,.2), inset 0 1px 0 rgba(255,255,255,.4);
+  padding:1.15rem 1.35rem 1.25rem !important;
+}
