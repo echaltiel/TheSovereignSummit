@@ -3923,3 +3923,7 @@ body.menu-open{overflow:hidden}
 .sev-modal .side-event__exclusive{display:inline-flex;align-items:center;gap:.4em}
 .sev-modal .side-event__exclusive .badge-ico{margin:0;top:0;font-size:1.35em;line-height:0}
 .sev-modal .side-event__exclusive .ico-svg{margin:0;vertical-align:0;width:1.25em;height:1.25em}
+
+/* ===== Badge icons: absolute sizing, true centering ===== */
+#content .side-event__exclusive .ico-svg,.sev-modal .side-event__exclusive .ico-svg{width:.95rem;height:.95rem;flex-shrink:0}
+.ico-star{fill:currentColor;stroke:none}
