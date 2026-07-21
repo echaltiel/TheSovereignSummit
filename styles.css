@@ -3620,3 +3620,14 @@ body.menu-open{overflow:hidden}
 @media (max-width:480px){
   #content .program__block-list{grid-template-columns:fit-content(48%) fit-content(48%);column-gap:1.2rem}
 }
+
+/* ===== Agenda v7: no bullets, larger type, centered balance ===== */
+#content .program__block{min-height:212px;padding:1.5rem 1.5rem;justify-content:flex-start}
+#content .program__block-header{margin-bottom:0}
+#content .program__block-title{font-size:clamp(2.3rem,2.7vw,2.6rem);margin:auto auto .6rem;max-width:92%}
+#content .program__block-hook{font-size:1.15rem;line-height:1.45;max-width:88%;margin:0 auto auto}
+@media (max-width:900px){
+  #content .program__block{min-height:0;padding:1.4rem 1.3rem 1.5rem}
+  #content .program__block-title{font-size:1.9rem;max-width:100%;margin-top:1rem}
+  #content .program__block-hook{font-size:1.05rem;max-width:94%;margin-bottom:.4rem}
+}
