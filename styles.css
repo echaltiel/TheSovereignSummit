@@ -3931,3 +3931,15 @@ body.menu-open{overflow:hidden}
 /* ===== Badges: larger type, true vertical centering ===== */
 #content .side-event__exclusive,.sev-modal .side-event__exclusive{font-size:.68rem !important;line-height:1 !important;padding:.32rem .65rem !important;align-items:center !important}
 #content .side-event__exclusive .ico-svg,.sev-modal .side-event__exclusive .ico-svg{width:1rem;height:1rem;vertical-align:middle;position:relative;top:0}
+
+/* ===== Side events: bigger titles, image shifted right ===== */
+#content .side-event__title{font-size:clamp(1.7rem,2vw,1.95rem) !important}
+#content .side-event__photo{
+  right:90px;
+  -webkit-mask-image:linear-gradient(90deg,transparent 0,#000 18%,#000 84%,transparent 100%);
+  mask-image:linear-gradient(90deg,transparent 0,#000 18%,#000 84%,transparent 100%);
+}
+@media (max-width:720px){
+  #content .side-event__title{font-size:1.7rem !important}
+  #content .side-event__photo{right:auto;-webkit-mask-image:none;mask-image:none}
+}
