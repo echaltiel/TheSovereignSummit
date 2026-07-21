@@ -4098,3 +4098,19 @@ body.menu-open{overflow:hidden}
 @media (max-width:600px){
   section{padding:3.4rem 0}
 }
+
+/* ===== Side events mobile FINAL: locked order, zero overlap ===== */
+@media (max-width:720px){
+  #content .side-event{display:flex !important;flex-direction:column !important;align-items:stretch !important;gap:0 !important;padding:1.3rem 1.2rem 1.35rem !important;min-height:0 !important;max-height:none !important}
+  #content .side-event__top{display:contents !important}
+  #content .side-event__when{order:1 !important;position:static !important;width:100% !important;min-width:0 !important;display:flex !important;flex-direction:row !important;justify-content:space-between !important;align-items:baseline !important;border:none !important;border-radius:0 !important;padding:0 !important;margin:0 0 .85rem !important;gap:.6rem !important}
+  #content .side-event__date{font-size:1.05rem !important;letter-spacing:.14em !important}
+  #content .side-event__time{font-size:.85rem !important}
+  #content .side-event__main{order:2 !important;position:static !important;max-width:100% !important;margin:0 !important}
+  #content .side-event__title{text-align:left !important;font-size:1.7rem !important;line-height:1.08 !important;margin:0 0 .65rem !important}
+  #content .side-event__badges{order:0;display:flex !important;flex-direction:column !important;align-items:stretch !important;gap:.5rem !important;width:100% !important}
+  #content .side-event__exclusive{width:100% !important;text-align:center !important;justify-content:center !important;border-radius:6px !important}
+  #content .side-event__photo{order:3 !important;position:relative !important;inset:auto !important;right:auto !important;width:100% !important;height:150px !important;object-fit:cover;border-radius:12px !important;margin:.9rem 0 1rem !important;-webkit-mask-image:none !important;mask-image:none !important;filter:saturate(.95) brightness(.85) !important}
+  #content .side-event__sponsor{order:4 !important;position:static !important;align-self:flex-start !important;width:auto !important;margin:0 7.5rem 0 0 !important;padding:0 !important;font-size:.62rem !important;background:none !important;border:none !important}
+  #content .side-event__view{position:absolute !important;bottom:1.3rem;right:1.2rem;font-size:.9rem}
+}
