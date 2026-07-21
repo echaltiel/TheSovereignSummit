@@ -3595,3 +3595,15 @@ body.menu-open{overflow:hidden}
   #content .vip-hero__cap{left:1rem;bottom:.8rem;font-size:.6rem}
   #content .vip-perk{padding:1.15rem 1.15rem 1.05rem}
 }
+
+/* ===== Agenda mobile: day-label restyle, spacing, two-column points ===== */
+@media (max-width:900px){
+  #content .program__mday{font-family:var(--fb);font-weight:500;font-size:1.02rem;letter-spacing:0;text-transform:none;color:rgba(244,236,224,.82);padding:0}
+  #content .program__mday--1{order:1;margin-top:1.7rem}
+  #content .program__mday--2{order:4;margin-top:1.15rem}
+  #content .program__block-list{grid-template-columns:minmax(0,1fr) minmax(0,1fr);column-gap:1.1rem;row-gap:.45rem;justify-content:stretch}
+}
+@media (max-width:480px){
+  #content .program__block-list{grid-template-columns:minmax(0,1fr) minmax(0,1fr);column-gap:.9rem}
+  #content .program__block-list li{font-size:.86rem}
+}
