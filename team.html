@@ -34,7 +34,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Instrument+Serif&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=140">
+<link rel="stylesheet" href="styles.css?v=142">
 <style>#content{padding-top:calc(var(--header-h) + clamp(1rem,2.5vw,2rem))}</style>
 </head>
 <body>
@@ -330,6 +330,19 @@
     }
   });
   window.addEventListener('load', function(){ setTimeout(open, 7000); });
+})();
+</script>
+<script>
+(function(){
+  function go(){
+    if(location.hash!=='#leadership')return;
+    var el=document.getElementById('leadership'); if(!el)return;
+    var h=document.querySelector('.header');
+    var off=h?h.getBoundingClientRect().bottom:120;
+    window.scrollTo(0, el.getBoundingClientRect().top + window.scrollY - off - 8);
+  }
+  window.addEventListener('load', function(){ setTimeout(go, 60); });
+  window.addEventListener('hashchange', go);
 })();
 </script>
 </body>

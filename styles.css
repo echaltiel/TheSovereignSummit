@@ -4079,3 +4079,22 @@ body.menu-open{overflow:hidden}
 
 /* ===== Leadership anchor: clear the sticky header ===== */
 #leadership{scroll-margin-top:calc(var(--header-h,120px) + 16px)}
+#leadership{scroll-margin-top:var(--header-h,120px)}
+
+/* ===== Mobile hero: guaranteed breathing room (replaces auto-margin squeeze) ===== */
+@media (max-width:600px){
+  .hero__in{justify-content:center;padding-top:1.25rem;padding-bottom:.5rem}
+  .hero__kicker{margin-top:0 !important;margin-bottom:1.2rem !important}
+  .hero h1{margin-top:0;margin-bottom:1.05rem;line-height:1.08}
+  .hero__blurb{margin-top:0;margin-bottom:1.9rem;line-height:1.6}
+  .hero__ctas{margin-top:0 !important;margin-bottom:0 !important;gap:.95rem}
+  .hero__ctas .btn{min-height:56px}
+}
+/* ===== General mobile rhythm ===== */
+@media (max-width:720px){
+  #content section{padding-top:3.4rem;padding-bottom:3.4rem}
+  #content p{line-height:1.6}
+}
+@media (max-width:600px){
+  section{padding:3.4rem 0}
+}
