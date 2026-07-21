@@ -4032,3 +4032,18 @@ body.menu-open{overflow:hidden}
   #content .vn2-intro__media{position:static;min-height:0}
   #content .vn2-intro__media img{position:static;height:auto;object-fit:initial}
 }
+
+/* ===== Venue intro v3: compact, hard-aligned bottoms, banner in first viewport ===== */
+#content .venue .sec-hd{margin-bottom:1.6rem}
+#content .vn2-intro{grid-template-columns:minmax(0,42%) 1fr;gap:2.25rem;align-items:stretch;margin-bottom:1.4rem}
+#content .vn2-intro__media{position:relative;min-height:0;height:auto}
+#content .vn2-intro__media picture{position:absolute;inset:0;display:block}
+#content .vn2-intro__media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 45%}
+#content .vn2-intro__title{font-size:1.7rem;margin-bottom:.7rem}
+#content .vn2-intro__text p{font-size:.98rem;line-height:1.55;margin-bottom:.85rem}
+@media (max-width:720px){
+  #content .vn2-intro{grid-template-columns:1fr}
+  #content .vn2-intro__media{min-height:0}
+  #content .vn2-intro__media picture{position:static}
+  #content .vn2-intro__media img{position:static;height:auto;object-fit:initial}
+}
