@@ -3897,3 +3897,13 @@ body.menu-open{overflow:hidden}
   #content .side-event__main{max-width:100%}
   #content .side-event__photo{width:100%;right:auto;filter:saturate(.92) brightness(.8);-webkit-mask-image:none;mask-image:none}
 }
+
+/* ===== Side events v4.4: photo reaches further left ===== */
+#content .side-event__photo{
+  width:48%;right:172px;
+  -webkit-mask-image:linear-gradient(90deg,transparent 0,#000 18%,#000 88%,transparent 100%);
+  mask-image:linear-gradient(90deg,transparent 0,#000 18%,#000 88%,transparent 100%);
+}
+@media (max-width:720px){
+  #content .side-event__photo{width:100%;right:auto;-webkit-mask-image:none;mask-image:none}
+}
