@@ -4062,3 +4062,20 @@ body.menu-open{overflow:hidden}
 /* ===== Venue: larger reserve button ===== */
 #content .vn2-block__cta{font-size:1.1rem;padding:1.05rem 2rem;border-radius:12px}
 @media (max-width:720px){#content .vn2-block__cta{font-size:1rem;padding:.95rem 1.5rem}}
+
+/* ===== Room block banner: centered columns, larger CTA, header breathing room ===== */
+#content .venue .sec-hd{margin-bottom:2.1rem}
+#content .vn2-intro{margin-bottom:1.7rem}
+#content .vn2-block__right{gap:0;justify-content:center}
+#content .vn2-block__rate{flex:1;display:flex;flex-direction:column;align-items:center;text-align:center}
+#content .vn2-block__note{max-width:280px;margin-left:auto;margin-right:auto}
+#content .vn2-block__cta-col{flex:1;display:flex;flex-direction:column;align-items:center;text-align:center}
+#content .vn2-block__fine{max-width:260px;margin-left:auto;margin-right:auto}
+#content .vn2-block__cta{font-size:1.2rem;padding:1.15rem 2.3rem;border-radius:12px}
+@media (max-width:720px){
+  #content .venue .sec-hd{margin-bottom:1.5rem}
+  #content .vn2-block__cta{font-size:1.05rem;padding:1rem 1.6rem;width:100%;justify-content:center}
+}
+
+/* ===== Leadership anchor: clear the sticky header ===== */
+#leadership{scroll-margin-top:calc(var(--header-h,120px) + 16px)}
