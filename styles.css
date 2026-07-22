@@ -4248,8 +4248,8 @@ body.menu-open{overflow:hidden}
 #content .fp2-dir{max-width:660px}
 #content .fp2-media .floor-plan__figure{width:100% !important;max-width:none !important;margin:0 !important}
 #content .fp2-media .floor-plan__expand-btn{width:100% !important;max-width:none !important;display:block !important;padding:0 !important}
-#content .fp2-media .floor-plan__expand-btn img{width:100% !important;max-width:none !important;height:auto !important;display:block;border-radius:14px}
-#content .fp2-media .floor-plan__expand-hint{left:50%;transform:translateX(-50%)}
+#content .fp2-media .floor-plan__expand-btn img{width:100% !important;max-width:none !important;height:auto !important;max-height:none !important;display:block;border-radius:14px}
+#content .fp2-media .floor-plan__expand-hint{left:auto;transform:none;text-align:center}
 @media (max-width:1000px){
   #content .fp2-dir{max-width:none}
   #content .fp2-media{max-width:520px;margin:0 auto}
