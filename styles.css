@@ -4189,3 +4189,11 @@ body.menu-open{overflow:hidden}
   #content .program .sec-hd__num::after{margin-top:.8rem}
   #content .program__block{padding:1.6rem 1.25rem 1.5rem !important}
 }
+
+/* ===== Agenda v9.1: site-standard header, card order fix, theme consistency ===== */
+#content .program .sec-hd__num{font-family:var(--fb);font-weight:800;letter-spacing:-.02em;font-size:clamp(3.4rem,6vw,5rem)}
+#content .program .sec-hd__num::after{content:none}
+#content .agn-desc{font-weight:800 !important;letter-spacing:-.022em !important;color:rgba(244,236,224,.72)}
+#content .agn-desc em{font-family:var(--fd) !important;font-style:normal;font-weight:400 !important;color:var(--accent) !important;font-size:1.04em !important;letter-spacing:0 !important}
+#content .program__block{grid-area:auto !important;grid-column:auto !important;grid-row:auto !important}
+#content .agn-ico{stroke-width:1.7}
