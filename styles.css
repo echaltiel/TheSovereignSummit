@@ -4197,3 +4197,11 @@ body.menu-open{overflow:hidden}
 #content .agn-desc em{font-family:var(--fd) !important;font-style:normal;font-weight:400 !important;color:var(--accent) !important;font-size:1.04em !important;letter-spacing:0 !important}
 #content .program__block{grid-area:auto !important;grid-column:auto !important;grid-row:auto !important}
 #content .agn-ico{stroke-width:1.7}
+
+/* ===== Agenda header: exact site-wide sizes ===== */
+#content .program .sec-hd__num{font-size:clamp(2.2rem,4.2vw,3.4rem)}
+#content .agn-desc{font-size:clamp(1.15rem,1.8vw,1.6rem) !important;max-width:none}
+@media (max-width:720px){
+  #content .program .sec-hd__num{font-size:2.75rem !important}
+  #content .agn-desc{font-size:1.3rem !important}
+}
