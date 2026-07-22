@@ -4134,3 +4134,16 @@ body.menu-open{overflow:hidden}
   #content .vn2-block{order:2;margin:0 0 1.15rem}
   #content .vn2-intro__media{order:3;margin-bottom:1.5rem}
 }
+
+/* ===== Room block banner mobile: internal rhythm ===== */
+@media (max-width:720px){
+  #content .vn2-block__right{gap:0 !important;padding:1.6rem 1.3rem 1.5rem !important}
+  #content .vn2-block__rate{width:100%}
+  #content .vn2-block__rate-eyebrow{margin-bottom:.65rem}
+  #content .vn2-block__price{margin-bottom:.55rem}
+  #content .vn2-block__note{margin:0 auto .95rem}
+  #content .vn2-block__divider{margin:0 0 1.05rem;background:rgba(244,236,224,.14)}
+  #content .vn2-block__cta-col{width:100%}
+  #content .vn2-block__cta{margin-bottom:.9rem}
+  #content .vn2-block__fine{margin:0}
+}
