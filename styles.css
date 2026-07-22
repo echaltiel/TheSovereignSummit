@@ -4161,3 +4161,31 @@ body.menu-open{overflow:hidden}
 @media (max-width:900px){
   #content .program__block{min-height:0}
 }
+
+/* ===== Agenda v9: cream cards per mock ===== */
+#content .program .sec-hd__num{font-family:var(--fd);font-weight:400;letter-spacing:.02em;font-size:clamp(3.2rem,5.5vw,4.4rem)}
+#content .program .sec-hd__num::after{content:"";display:block;width:64px;height:3px;background:var(--accent);margin:1.05rem auto 0;border-radius:2px}
+#content .agn-desc{font-weight:500 !important;letter-spacing:0 !important;color:rgba(244,236,224,.88);font-size:clamp(1.05rem,1.3vw,1.2rem)}
+#content .agn-desc em{font-family:inherit !important;font-style:normal;font-weight:inherit;color:inherit !important;font-size:1em !important}
+#content .program__timeline{display:none !important}
+#content .program__blocks{grid-template-columns:repeat(4,1fr) !important;gap:1.15rem !important;margin-top:1.9rem}
+#content .program__block{background:#F4ECE0 !important;border:none !important;border-radius:16px !important;padding:1.8rem 1.35rem 1.7rem !important;min-height:0 !important;display:flex !important;flex-direction:column !important;align-items:center !important;text-align:center !important;justify-content:flex-start !important}
+#content .program__block-header{position:static !important;display:flex !important;flex-direction:column !important;align-items:center !important;gap:.6rem !important;margin:0 0 1.15rem !important;width:auto !important}
+#content .program__block-step{font-family:var(--fb);font-weight:700;font-size:1.5rem;color:var(--accent);opacity:1 !important;position:static !important}
+#content .program__block-theme{border:1.5px solid var(--accent) !important;color:var(--accent) !important;background:transparent !important;border-radius:8px !important;font-size:.7rem !important;font-weight:700 !important;letter-spacing:.12em !important;padding:.3rem .7rem !important}
+#content .agn-ico{width:46px;height:46px;stroke:#16233E;fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;margin-bottom:1.05rem}
+#content .program__block-title{font-family:var(--fd) !important;font-weight:400 !important;color:#16233E !important;font-size:clamp(1.6rem,1.9vw,1.85rem) !important;line-height:1.12 !important;letter-spacing:-.01em;margin:0 !important;max-width:100% !important}
+#content .program__block-title::after{content:"";display:block;width:36px;height:2px;background:var(--accent);margin:.9rem auto .85rem}
+#content .program__block-hook{font-family:var(--fb) !important;color:rgba(22,35,62,.78) !important;font-size:.96rem !important;line-height:1.5 !important;margin:0 !important;max-width:100% !important}
+@media (max-width:1080px){
+  #content .program__blocks{grid-template-columns:repeat(2,1fr) !important}
+}
+@media (max-width:900px){
+  #content .program__mday{display:none !important}
+  #content .program__blocks{margin-top:1.4rem}
+}
+@media (max-width:620px){
+  #content .program__blocks{grid-template-columns:1fr !important;gap:1rem !important}
+  #content .program .sec-hd__num::after{margin-top:.8rem}
+  #content .program__block{padding:1.6rem 1.25rem 1.5rem !important}
+}
