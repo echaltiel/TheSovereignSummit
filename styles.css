@@ -4115,11 +4115,22 @@ body.menu-open{overflow:hidden}
 
 /* ===== Venue mobile ===== */
 @media (max-width:720px){
-  #content .venue .sec-hd{margin-bottom:1.1rem}
-  #content .vn2-hero-photo{margin-bottom:1.15rem}
-  #content .vn2-block{margin:0 0 1.15rem}
-  #content .vn2-block__left{padding:1.35rem 1.2rem;gap:.5rem}
-  #content .vn2-block__title{font-size:1.85rem}
+  #content .venue .sec-hd{margin-bottom:.85rem;gap:.35rem}
+  #content .venue .sec-hd__num{font-size:clamp(2.5rem,10.5vw,3.1rem)}
+  #content .venue .sec-hd__title{font-size:1.12rem}
+  #content .vn2-hero-photo{margin-bottom:.9rem}
+  #content .vn2-hero-photo img{height:clamp(140px,19vh,185px)}
+  #content .venue .vn2-block{margin:0 0 1rem}
+  #content .venue .vn2-block__left{padding:1.05rem 1.1rem;gap:.4rem}
+  #content .venue .vn2-block__eyebrow{font-size:.58rem}
+  #content .venue .vn2-block__title{font-size:1.5rem}
+  #content .venue .vn2-block__right{padding:1.1rem 1.1rem 1rem !important}
+  #content .venue .vn2-block__rate-eyebrow{margin-bottom:.45rem;font-size:.6rem}
+  #content .venue .vn2-block__price{font-size:2.1rem;margin-bottom:.4rem}
+  #content .venue .vn2-block__note{font-size:.84rem;margin:0 auto .7rem}
+  #content .venue .vn2-block__divider{margin:0 0 .75rem}
+  #content .venue .vn2-block__cta{margin-bottom:.65rem;padding:.85rem 1.4rem;font-size:.98rem}
+  #content .venue .vn2-block__fine{font-size:.75rem;margin:0}
 }
 
 /* ===== Room block banner mobile: internal rhythm ===== */
