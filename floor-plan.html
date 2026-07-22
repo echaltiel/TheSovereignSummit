@@ -34,7 +34,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Instrument+Serif&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=152">
+<link rel="stylesheet" href="styles.css?v=153">
 <style>#content{padding-top:calc(var(--header-h) + clamp(1rem,2.5vw,2rem))}</style>
 </head>
 <body>
@@ -116,132 +116,79 @@
       <div class="sec-hd__num">The Floor Plan</div>
       <h2 class="section-title sec-hd__title">The Summit, <em>mapped.</em></h2>
     </header>
-    <!-- Getting Here — one wide tile with 3 internal columns -->
-    <div class="floor-detail__floor floor-plan__getting-here">
-      <div class="floor-detail__label floor-detail__label--alt" style="margin-bottom:.65rem">Getting Here</div>
-      <div class="floor-plan__getting-here-cols">
-        <div class="floor-plan__entry-card">
-          <strong class="floor-plan__entry-name"><a href="https://maps.app.goo.gl/bTpqhgUcmu2nDwZN7" target="_blank" rel="noopener" class="floor-plan__entry-map-link">Arrivals Drive @ Fontainebleau ↗</a></strong>
-          <p class="floor-plan__entry-body">Follow signs for the Coastal Convention Center, in the same direction as the Trésor Tower. Near the Trésor Tower, take the elevator labeled "Coastal Convention Center." Select the Skybridge Level. Walk across the skybridge, which will bring you directly to the third floor of the Coastal Convention Center.</p>
+
+    <div class="fp2-split">
+      <div class="fp2-dir">
+        <div class="fp2-dir__label">Where Everything Happens</div>
+        <div class="fp2-row">
+          <div class="fp2-row__main"><div class="fp2-row__what">Check-In</div><p class="fp2-row__desc">Show your QR code, get your badge and lanyard.</p></div>
+          <div class="fp2-row__where"><span class="fp2-row__room">Cove Gallerie</span><span class="fp2-row__floor">Floor 3</span></div>
         </div>
-        <div class="floor-plan__entry-card floor-plan__entry-card--mid">
-          <strong class="floor-plan__entry-name"><a href="https://maps.app.goo.gl/5YkczQygMQBGN16r9" target="_blank" rel="noopener" class="floor-plan__entry-map-link">Departures Drive @ Fontainebleau ↗</a></strong>
-          <p class="floor-plan__entry-body">As you pull into the area, look for the Coastal Convention Center sign on the building that's on the right-hand side. Walk through the doors toward the Trésor Tower area. Take the elevator labeled "Coastal Convention Center." Select the Skybridge Level. Walk across the skybridge, which will bring you directly to the third floor of the Coastal Convention Center.</p>
+        <div class="fp2-row">
+          <div class="fp2-row__main"><div class="fp2-row__what">Main Stage</div><p class="fp2-row__desc">Keynotes, panels, and headliners.</p></div>
+          <div class="fp2-row__where"><span class="fp2-row__room">Pearl Ballroom</span><span class="fp2-row__floor">Floor 4</span></div>
         </div>
-        <div class="floor-plan__entry-card">
-          <strong class="floor-plan__entry-name"><a href="https://maps.app.goo.gl/fKQqf2RDcDq8r1k99" target="_blank" rel="noopener" class="floor-plan__entry-map-link">Collins Avenue Walk-Up ↗</a></strong>
-          <p class="floor-plan__entry-body">On Collins Avenue, directly across from Soho Beach House, look for the pedestrian entrance to the Coastal Convention Center. Walk through the doors and take the elevator or stairs up. <span style="color:var(--accent)"><strong>Note:</strong> you'll be denied entry without your credentials. If you don't have them yet, use another entrance.</span></p>
+        <div class="fp2-row">
+          <div class="fp2-row__main"><div class="fp2-row__what">Main Expo Hall</div><p class="fp2-row__desc">Sponsor booths, exhibits, coffee and drinks.</p></div>
+          <div class="fp2-row__where"><span class="fp2-row__room">Coral</span><span class="fp2-row__floor">Floor 2</span></div>
+        </div>
+        <div class="fp2-row">
+          <div class="fp2-row__main"><div class="fp2-row__what">Workshops</div><p class="fp2-row__desc">Breakouts, roundtables, and masterclasses.</p></div>
+          <div class="fp2-row__where"><span class="fp2-row__room">Dune</span><span class="fp2-row__floor">Floor 2</span></div>
+        </div>
+        <div class="fp2-row">
+          <div class="fp2-row__main"><div class="fp2-row__what">Open Source Area</div><p class="fp2-row__desc">Nonprofits, community builders, small business.</p></div>
+          <div class="fp2-row__where"><span class="fp2-row__room">Shore</span><span class="fp2-row__floor">Floor 2</span></div>
+        </div>
+        <div class="fp2-row">
+          <div class="fp2-row__main"><div class="fp2-row__what fp2-row__what--vip">VIP Lounge &amp; Check-In</div><p class="fp2-row__desc">Sovereign Lounge, speaker green room, VIP check-in.</p></div>
+          <div class="fp2-row__where"><span class="fp2-row__room">Anchor</span><span class="fp2-row__floor">Floor 3</span></div>
+        </div>
+        <div class="fp2-row">
+          <div class="fp2-row__main"><div class="fp2-row__what">Rooftop Terrace</div><p class="fp2-row__desc">Programming to be announced.</p></div>
+          <div class="fp2-row__where"><span class="fp2-row__room">Tides</span><span class="fp2-row__floor">Floor 5</span></div>
         </div>
       </div>
-    </div>
-
-    <div class="floor-plan__split">
-      <!-- Column 1: Floor diagram only -->
-      <div class="floor-plan__col floor-plan__col--media">
+      <div class="fp2-media">
         <figure class="floor-plan__figure">
           <button type="button" class="floor-plan__expand-btn" aria-label="Expand floor plan to full size">
-            <img src="images/floor-plan.jpg" alt="Coastal Convention Center floor plan: an isometric diagram of the four event floors of the venue, showing ballrooms, meeting rooms, junior ballrooms, the rooftop terrace, galleries, and back-of-house areas, with a color-coded legend." loading="lazy" decoding="async">
+            <img src="images/floor-plan.jpg" alt="Coastal Convention Center floor plan: an isometric diagram of the four event floors of the venue." loading="lazy" decoding="async">
             <span class="floor-plan__expand-hint">Tap to expand</span>
           </button>
         </figure>
       </div>
-
-      <!-- Columns 2+3: 2×2 floor grid — 5F|4F top row, 3F|2F bottom row -->
-      <div class="floor-plan__floors-grid">
-        <div class="floor-detail__floor">
-          <div class="floor-detail__label">5 &middot; Fifth Floor</div>
-          <div class="floor-detail__zones">
-            <article class="floor-detail__zone">
-              <h3 class="floor-detail__zone-name">Tides Rooftop Terrace</h3>
-              <p class="floor-detail__zone-function"><em>TBA</em></p>
-              <p class="floor-detail__zone-meta">7,001 sq ft · Up to 500 reception · 480 banquet</p>
-              <ul class="floor-detail__zone-list">
-                <li>TBA</li>
-              </ul>
-            </article>
-          </div>
-        </div>
-        <div class="floor-detail__floor">
-          <div class="floor-detail__label">4 &middot; Fourth Floor</div>
-          <div class="floor-detail__zones">
-            <article class="floor-detail__zone">
-              <h3 class="floor-detail__zone-name">Pearl Ballroom</h3>
-              <p class="floor-detail__zone-function"><em>Mainstage + VIP Area</em></p>
-              <p class="floor-detail__zone-meta">16,500 sq ft · Up to 1,200 theater · 1,100 reception</p>
-              <ul class="floor-detail__zone-list">
-                <li>Keynotes, panels, headliners</li>
-                <li>VIP Area</li>
-                <li>More TBA</li>
-              </ul>
-            </article>
-          </div>
-        </div>
-        <div class="floor-detail__floor">
-          <div class="floor-detail__label">3 &middot; Third Floor</div>
-          <div class="floor-detail__zones floor-detail__zones--two">
-            <article class="floor-detail__zone">
-              <h3 class="floor-detail__zone-name">Cove Gallerie</h3>
-              <p class="floor-detail__zone-function"><em>Summit Pass Check-In</em></p>
-              <ul class="floor-detail__zone-list">
-                <li>Present your QR code to receive your badge and lanyard &mdash; your credentials for the full summit experience</li>
-              </ul>
-            </article>
-            <article class="floor-detail__zone">
-              <h3 class="floor-detail__zone-name">Anchor</h3>
-              <p class="floor-detail__zone-function"><em>VIP Area &amp; VIP Summit Pass Check-In</em></p>
-              <p class="floor-detail__zone-meta">2,728 sq ft · Up to 245 reception · 200 theater</p>
-              <ul class="floor-detail__zone-list">
-                <li>VIP Summit Pass Check-In</li>
-                <li>Sovereign Lounge for VIPs</li>
-                <li>Speaker Green Room Area</li>
-                <li>More TBA</li>
-              </ul>
-            </article>
-          </div>
-        </div>
-        <div class="floor-detail__floor">
-          <div class="floor-detail__label">2 &middot; Second Floor</div>
-          <div class="floor-detail__zones floor-detail__zones--three">
-            <article class="floor-detail__zone">
-              <h3 class="floor-detail__zone-name">Coral</h3>
-              <p class="floor-detail__zone-function"><em>Main Expo Hall</em></p>
-              <p class="floor-detail__zone-meta">9,500 sq ft · Up to 800 reception · 800 theater</p>
-              <ul class="floor-detail__zone-list">
-                <li>Sponsor booths &amp; exhibits</li>
-                <li>Coffee &amp; Drinks</li>
-                <li>More TBA</li>
-              </ul>
-            </article>
-            <article class="floor-detail__zone">
-              <h3 class="floor-detail__zone-name">Dune</h3>
-              <p class="floor-detail__zone-function"><em>Workshops</em></p>
-              <p class="floor-detail__zone-meta">1,748 sq ft · Up to 145 reception · 140 theater</p>
-              <ul class="floor-detail__zone-list">
-                <li>Breakout sessions</li>
-                <li>Hands-on workshops</li>
-                <li>Roundtables &amp; masterclasses</li>
-              </ul>
-            </article>
-            <article class="floor-detail__zone">
-              <h3 class="floor-detail__zone-name">Shore</h3>
-              <p class="floor-detail__zone-function"><em>Open Source Area</em></p>
-              <p class="floor-detail__zone-meta">1,709 sq ft · Up to 140 reception · 140 theater</p>
-              <ul class="floor-detail__zone-list">
-                <li>Nonprofits</li>
-                <li>Community Builders</li>
-                <li>Small Business</li>
-              </ul>
-            </article>
-          </div>
-        </div>
-      </div>
     </div>
 
-    <p class="floor-plan__caption floor-plan__caption--footnote">Floor plan reflects current planning. Final wayfinding shared with attendees ahead of the event.</p>
-    <dialog class="floor-plan__dialog" aria-label="Floor plan, expanded view">
-      <button type="button" class="floor-plan__dialog-close" aria-label="Close expanded floor plan">×</button>
-      <img class="floor-plan__dialog-img" alt="">
-    </dialog>
+    <div class="fp2-dir__label fp2-dir__label--entrances">Getting In</div>
+    <div class="fp2-entries">
+      <div class="fp2-entry">
+        <div class="fp2-entry__name">Arrivals Drive</div>
+        <ol class="fp2-entry__steps">
+          <li>Elevator by the Tr&eacute;sor Tower</li>
+          <li>Select Skybridge Level</li>
+          <li>Cross the skybridge to Floor 3</li>
+        </ol>
+        <a class="fp2-entry__map" href="https://maps.app.goo.gl/bTpqhgUcmu2nDwZN7" target="_blank" rel="noopener">Open in Maps <span class="vn2-arrow">&rarr;</span></a>
+      </div>
+      <div class="fp2-entry">
+        <div class="fp2-entry__name">Departures Drive</div>
+        <ol class="fp2-entry__steps">
+          <li>Enter under the Coastal Convention Center sign</li>
+          <li>Elevator to Skybridge Level</li>
+          <li>Cross the skybridge to Floor 3</li>
+        </ol>
+        <a class="fp2-entry__map" href="https://maps.app.goo.gl/5YkczQygMQBGN16r9" target="_blank" rel="noopener">Open in Maps <span class="vn2-arrow">&rarr;</span></a>
+      </div>
+      <div class="fp2-entry">
+        <div class="fp2-entry__name">Collins Avenue Walk-Up</div>
+        <ol class="fp2-entry__steps">
+          <li>Across from Soho Beach House</li>
+          <li>Elevator or stairs up</li>
+        </ol>
+        <p class="fp2-entry__note">Credentials required at this entrance. No badge yet? Use another entrance.</p>
+        <a class="fp2-entry__map" href="https://maps.app.goo.gl/fKQqf2RDcDq8r1k99" target="_blank" rel="noopener">Open in Maps <span class="vn2-arrow">&rarr;</span></a>
+      </div>
+    </div>
   </div>
 </section>
 
