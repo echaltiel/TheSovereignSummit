@@ -4258,4 +4258,5 @@ body.menu-open{overflow:hidden}
 /* ===== Floor plan solo layout: big centered map, no directory ===== */
 #content .fp2-media.fp2-media--solo{position:static;max-width:min(940px,100%);margin:0 auto clamp(2.25rem,4vw,3.25rem);text-align:center}
 #content .fp2-media.fp2-media--solo .floor-plan__figure{width:100%}
+#content .fp2-media.fp2-media--solo .floor-plan__expand-btn img{width:auto !important;max-width:100% !important;max-height:min(56vh,620px) !important;max-height:min(56svh,620px) !important;margin:0 auto}
 #content .floor-plan .fp2-dir__label--entrances{margin-top:0}
