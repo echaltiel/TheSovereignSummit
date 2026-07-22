@@ -2312,7 +2312,7 @@ body.menu-open{overflow:hidden}
   margin:auto;
   position:absolute;
   inset:0;
-  border-radius:2px;
+  border-radius:0;
   cursor:zoom-in;
   transition:max-width .2s ease, max-height .2s ease;
 }
@@ -2927,8 +2927,6 @@ body.menu-open{overflow:hidden}
 #content .btn,#content button.btn,#content input[type="submit"],#content form button{border-radius:999px}
 /* Small chips/tags: the ref used 2px corners; pill them like the top bar. */
 #content .floor-detail__floor,
-#content .floor-plan__dialog-img,
-#content .floor-plan__expand-btn img,
 #content .program__block,
 #content .program__block-theme{border-radius:999px}
 /* Cards: soften to the hero's 16px rounding; media inside follows. */
@@ -4256,3 +4254,8 @@ body.menu-open{overflow:hidden}
   #content .fp2-dir{max-width:none}
   #content .fp2-media{max-width:520px;margin:0 auto}
 }
+
+/* ===== Floor plan solo layout: big centered map, no directory ===== */
+#content .fp2-media.fp2-media--solo{position:static;max-width:min(940px,100%);margin:0 auto clamp(2.25rem,4vw,3.25rem);text-align:center}
+#content .fp2-media.fp2-media--solo .floor-plan__figure{width:100%}
+#content .floor-plan .fp2-dir__label--entrances{margin-top:0}
