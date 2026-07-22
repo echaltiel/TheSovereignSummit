@@ -4264,15 +4264,17 @@ body.menu-open{overflow:hidden}
 /* ===== Venue: stat tiles (replaces intro paragraphs) ===== */
 #content .vn2-intro__text{display:flex;flex-direction:column;justify-content:center}
 #content .vn2-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:.8rem;margin-top:0}
-#content .vn2-stat{border:1px solid rgba(244,236,224,.16);border-radius:12px;padding:.9rem 1rem .85rem;background:rgba(255,255,255,.03)}
-#content .vn2-stat .vn2-ico{width:20px;height:20px;margin-bottom:.5rem;display:block}
+#content .vn2-stat{border:1px solid rgba(244,236,224,.16);border-radius:12px;padding:.95rem 1.05rem;background:rgba(255,255,255,.03);display:flex;align-items:center;gap:.95rem}
+#content .vn2-stat .vn2-ico{width:32px;height:32px;margin:0;display:block;flex-shrink:0}
+#content .vn2-stat__info{min-width:0}
 #content .vn2-stat__num{font-family:var(--fb);font-weight:800;font-size:clamp(1.45rem,1.9vw,1.85rem);line-height:1;letter-spacing:-.02em;color:#F4ECE0}
-#content .vn2-stat__label{font-family:var(--fm);font-size:.6rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:rgba(244,236,224,.6);margin-top:.45rem}
+#content .vn2-stat__label{font-family:var(--fm);font-size:.6rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:rgba(244,236,224,.6);margin-top:.4rem;line-height:1.4}
 #content .venue .sec-hd{margin-bottom:clamp(1.1rem,2vw,1.6rem)}
 #content .venue .vn2-intro{margin-bottom:1.2rem}
 @media (max-width:720px){
   #content .vn2-stats{grid-template-columns:1fr 1fr;gap:.7rem}
-  #content .vn2-stat{padding:.85rem .9rem .8rem}
+  #content .vn2-stat{padding:.85rem .9rem;gap:.75rem}
+  #content .vn2-stat .vn2-ico{width:26px;height:26px}
 }
 @media (max-width:520px){
   #content .vn2-stats{gap:.65rem}
