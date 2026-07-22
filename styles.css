@@ -4248,8 +4248,10 @@ body.menu-open{overflow:hidden}
 #content .fp2-dir{max-width:660px}
 #content .fp2-media .floor-plan__figure{width:100% !important;max-width:none !important;margin:0 !important}
 #content .fp2-media .floor-plan__expand-btn{width:100% !important;max-width:none !important;display:block !important;padding:0 !important}
-#content .fp2-media .floor-plan__expand-btn img{width:100% !important;max-width:none !important;height:auto !important;max-height:none !important;display:block;border-radius:14px}
-#content .fp2-media .floor-plan__expand-hint{left:auto;transform:none;text-align:center}
+#content .fp2-media .floor-plan__expand-btn img{width:100% !important;max-width:none !important;height:auto !important;max-height:none !important;display:block;border-radius:14px;border:1px solid rgba(244,236,224,.16);box-shadow:0 10px 34px rgba(0,0,0,.35)}
+#content .fp2-media .floor-plan__expand-hint{left:auto;transform:none;display:inline-block;opacity:1;color:rgba(244,236,224,.78);border:1px solid rgba(244,236,224,.3);border-radius:100px;padding:.34rem .85rem;margin-top:.9rem;font-size:.62rem;letter-spacing:.18em;transition:color .2s ease,border-color .2s ease}
+#content .fp2-media .floor-plan__expand-btn:hover .floor-plan__expand-hint{color:#F4ECE0;border-color:rgba(244,236,224,.55)}
+#content .floor-plan .sec-hd{margin-bottom:clamp(1.25rem,2.5vw,2rem)}
 @media (max-width:1000px){
   #content .fp2-dir{max-width:none}
   #content .fp2-media{max-width:520px;margin:0 auto}
