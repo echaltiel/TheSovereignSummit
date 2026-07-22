@@ -4265,6 +4265,7 @@ body.menu-open{overflow:hidden}
 #content .vn2-intro__text{display:flex;flex-direction:column;justify-content:center}
 #content .vn2-stats{display:grid;grid-template-columns:1fr 1fr;gap:.85rem;margin-top:0}
 #content .vn2-stat{border:1px solid rgba(244,236,224,.16);border-radius:12px;padding:1rem 1.1rem .95rem;background:rgba(255,255,255,.03)}
+#content .vn2-stat .vn2-ico{width:24px;height:24px;margin-bottom:.6rem;display:block}
 #content .vn2-stat__num{font-family:var(--fb);font-weight:800;font-size:clamp(1.7rem,2.4vw,2.2rem);line-height:1;letter-spacing:-.02em;color:#F4ECE0}
 #content .vn2-stat__label{font-family:var(--fm);font-size:.66rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(244,236,224,.6);margin-top:.55rem}
 @media (max-width:520px){
