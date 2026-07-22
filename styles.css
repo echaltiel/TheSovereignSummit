@@ -4147,3 +4147,6 @@ body.menu-open{overflow:hidden}
   #content .vn2-block__cta{margin-bottom:.9rem}
   #content .vn2-block__fine{margin:0}
 }
+
+/* ===== Floor plan anchor offset ===== */
+#floor-plan{scroll-margin-top:calc(var(--header-h,120px) + 8px)}
