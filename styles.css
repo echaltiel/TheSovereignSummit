@@ -4121,16 +4121,17 @@ body.menu-open{overflow:hidden}
   #content .vn2-hero-photo{margin-bottom:.9rem}
   #content .vn2-hero-photo img{height:clamp(140px,19vh,185px)}
   #content .venue .vn2-block{margin:0 0 1rem}
-  #content .venue .vn2-block__left{padding:1.15rem 1.1rem 1.05rem;gap:.45rem;background:rgba(255,255,255,.03);border-bottom:1px solid rgba(244,236,224,.14)}
-  #content .venue .vn2-block__eyebrow{font-size:.58rem;order:2;color:var(--accent)}
+  #content .venue .vn2-block{background:linear-gradient(170deg,#E4702B 0%,#D9651F 45%,#C4571A 100%);border-color:rgba(255,255,255,.28)}
+  #content .venue .vn2-block__left{padding:1.15rem 1.1rem 1.05rem;gap:.45rem;background:transparent;border-bottom:1px solid rgba(255,255,255,.28)}
+  #content .venue .vn2-block__eyebrow{font-size:.58rem;order:2;color:rgba(255,255,255,.92)}
   #content .venue .vn2-block__title{font-size:1.5rem;order:1}
-  #content .venue .vn2-block__right{padding:1.1rem 1.1rem 1rem !important}
-  #content .venue .vn2-block__rate-eyebrow{margin-bottom:.45rem;font-size:.6rem}
-  #content .venue .vn2-block__price{font-size:2.1rem;margin-bottom:.4rem}
-  #content .venue .vn2-block__note{font-size:.84rem;margin:0 auto .7rem}
-  #content .venue .vn2-block__divider{margin:0 0 .75rem}
-  #content .venue .vn2-block__cta{margin-bottom:.65rem;padding:.85rem 1.4rem;font-size:.98rem}
-  #content .venue .vn2-block__fine{font-size:.75rem;margin:0}
+  #content .venue .vn2-block__right{padding:1.1rem 1.1rem 1rem !important;background:transparent}
+  #content .venue .vn2-block__rate-eyebrow{margin-bottom:.45rem;font-size:.6rem;color:rgba(255,255,255,.92)}
+  #content .venue .vn2-block__price{font-size:2.1rem;margin-bottom:.4rem;color:#FDF6EA}
+  #content .venue .vn2-block__note{font-size:.84rem;margin:0 auto .7rem;color:rgba(255,255,255,.9)}
+  #content .venue .vn2-block__divider{margin:0 0 .75rem;background:rgba(255,255,255,.3)}
+  #content .venue .vn2-block__cta{margin-bottom:.65rem;padding:.85rem 1.4rem;font-size:.98rem;background:#131E33;color:#F4ECE0}
+  #content .venue .vn2-block__fine{font-size:.75rem;margin:0;color:rgba(255,255,255,.78)}
 }
 
 /* ===== Room block banner mobile: internal rhythm ===== */
