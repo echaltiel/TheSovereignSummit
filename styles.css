@@ -4150,3 +4150,14 @@ body.menu-open{overflow:hidden}
 
 /* ===== Floor plan anchor offset ===== */
 #floor-plan{scroll-margin-top:calc(var(--header-h,120px) + 8px)}
+
+/* ===== Agenda: compact first viewport, all four tiles above the fold ===== */
+#content .program .sec-hd{margin-bottom:.4rem}
+#content .agn-desc{margin-bottom:.9rem}
+#content .program__timeline{margin:1.2rem 0 1rem}
+#content .program__blocks{gap:1rem}
+#content .program__block{min-height:188px;padding:1.25rem 1.5rem}
+#content .program__block-title{margin-bottom:.45rem}
+@media (max-width:900px){
+  #content .program__block{min-height:0}
+}
