@@ -4121,9 +4121,9 @@ body.menu-open{overflow:hidden}
   #content .vn2-hero-photo{margin-bottom:.9rem}
   #content .vn2-hero-photo img{height:clamp(140px,19vh,185px)}
   #content .venue .vn2-block{margin:0 0 1rem}
-  #content .venue .vn2-block__left{padding:1.05rem 1.1rem;gap:.4rem}
-  #content .venue .vn2-block__eyebrow{font-size:.58rem}
-  #content .venue .vn2-block__title{font-size:1.5rem}
+  #content .venue .vn2-block__left{padding:1.15rem 1.1rem 1.05rem;gap:.45rem;background:rgba(255,255,255,.03);border-bottom:1px solid rgba(244,236,224,.14)}
+  #content .venue .vn2-block__eyebrow{font-size:.58rem;order:2;color:var(--accent)}
+  #content .venue .vn2-block__title{font-size:1.5rem;order:1}
   #content .venue .vn2-block__right{padding:1.1rem 1.1rem 1rem !important}
   #content .venue .vn2-block__rate-eyebrow{margin-bottom:.45rem;font-size:.6rem}
   #content .venue .vn2-block__price{font-size:2.1rem;margin-bottom:.4rem}
