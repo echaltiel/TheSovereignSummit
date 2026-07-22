@@ -4260,3 +4260,13 @@ body.menu-open{overflow:hidden}
 #content .fp2-media.fp2-media--solo .floor-plan__figure{width:100%}
 #content .fp2-media.fp2-media--solo .floor-plan__expand-btn img{width:auto !important;max-width:100% !important;max-height:min(56vh,620px) !important;max-height:min(56svh,620px) !important;margin:0 auto}
 #content .floor-plan .fp2-dir__label--entrances{margin-top:0}
+
+/* ===== Venue: stat tiles (replaces intro paragraphs) ===== */
+#content .vn2-stats{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:1.4rem}
+#content .vn2-stat{border:1px solid rgba(244,236,224,.16);border-radius:12px;padding:1.15rem 1.2rem 1.05rem;background:rgba(255,255,255,.03)}
+#content .vn2-stat__num{font-family:var(--fb);font-weight:800;font-size:clamp(2rem,3.2vw,2.7rem);line-height:1;letter-spacing:-.02em;color:#F4ECE0}
+#content .vn2-stat__label{font-family:var(--fm);font-size:.66rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(244,236,224,.6);margin-top:.55rem}
+@media (max-width:520px){
+  #content .vn2-stats{gap:.75rem}
+  #content .vn2-stat{padding:.95rem 1rem .9rem}
+}
