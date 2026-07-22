@@ -1,6 +1,7 @@
 {
   "cleanUrls": true,
   "redirects": [
-    { "source": "/map", "destination": "/venue#floor-plan", "permanent": true }
+    { "source": "/map", "destination": "/venue#floor-plan", "permanent": true },
+    { "source": "/team", "destination": "/leadership", "permanent": true }
   ]
 }
