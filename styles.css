@@ -3978,7 +3978,7 @@ body.menu-open{overflow:hidden}
 #content .vn2-block__divider{width:1px;align-self:stretch;background:rgba(244,236,224,.18);flex-shrink:0}
 #content .vn2-block__cta{display:inline-flex;align-items:center;gap:.5rem;background:var(--accent);color:#fff;font-family:var(--fb);font-weight:600;font-size:.98rem;padding:.85rem 1.5rem;border-radius:10px;text-decoration:none;white-space:nowrap;transition:filter .18s ease}
 #content .vn2-block__cta:hover{filter:brightness(1.07)}
-#content .vn2-block__fine{font-family:var(--fb);font-size:.82rem;line-height:1.45;color:rgba(244,236,224,.6);margin:.8rem 0 0;max-width:240px}
+#content .vn2-block__fine{font-family:var(--fb);font-size:.82rem;line-height:1.45;color:rgba(244,236,224,.6);margin:.8rem 0 0;max-width:none}
 
 #content .vn2-sec-title{display:flex;align-items:center;gap:1.25rem;margin:2.6rem 0 1.3rem}
 #content .vn2-sec-title::before,#content .vn2-sec-title::after{content:"";flex:1;height:1px;background:rgba(244,236,224,.18)}
@@ -4068,9 +4068,9 @@ body.menu-open{overflow:hidden}
 #content .vn2-block__rate{flex:1;display:flex;flex-direction:column;align-items:center;text-align:center}
 #content .vn2-block__note{max-width:280px;margin-left:auto;margin-right:auto}
 #content .vn2-block__cta-col{flex:1;display:flex;flex-direction:column;align-items:center;text-align:center}
-#content .vn2-block__fine{max-width:260px;margin-left:auto;margin-right:auto}
+#content .vn2-block__fine{max-width:none;margin-left:auto;margin-right:auto}
 #content .vn2-block__rate .vn2-block__fine{margin-top:.65rem;font-size:.78rem}
-#content .vn2-block__urgency{font-family:var(--fm);font-size:.62rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);margin:.7rem 0 0;text-align:center}
+#content .vn2-block__urgency{font-family:var(--fm);font-size:.62rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(244,236,224,.6);margin:.7rem 0 0;text-align:center}
 #content .vn2-block__cta{font-size:1.2rem;padding:1.15rem 2.3rem;border-radius:12px}
 @media (max-width:720px){
   #content .venue .sec-hd{margin-bottom:1.5rem}
@@ -4131,7 +4131,7 @@ body.menu-open{overflow:hidden}
   #content .venue .vn2-block__price{font-size:2.9rem;margin-bottom:.7rem}
   #content .venue .vn2-block__divider{margin:0 0 .75rem}
   #content .venue .vn2-block__cta{margin-bottom:0;padding:.85rem 1.4rem;font-size:.98rem}
-  #content .venue .vn2-block__fine{font-size:.74rem;margin:.5rem auto 0;max-width:250px}
+  #content .venue .vn2-block__fine{font-size:.68rem;margin:.5rem auto 0;max-width:none}
   #content .venue .vn2-block__urgency{font-size:.58rem;margin:.6rem 0 0}
 }
 
