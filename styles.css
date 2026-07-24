@@ -4069,6 +4069,8 @@ body.menu-open{overflow:hidden}
 #content .vn2-block__note{max-width:280px;margin-left:auto;margin-right:auto}
 #content .vn2-block__cta-col{flex:1;display:flex;flex-direction:column;align-items:center;text-align:center}
 #content .vn2-block__fine{max-width:260px;margin-left:auto;margin-right:auto}
+#content .vn2-block__rate .vn2-block__fine{margin-top:.65rem;font-size:.78rem}
+#content .vn2-block__urgency{font-family:var(--fm);font-size:.62rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);margin:.7rem 0 0;text-align:center}
 #content .vn2-block__cta{font-size:1.2rem;padding:1.15rem 2.3rem;border-radius:12px}
 @media (max-width:720px){
   #content .venue .sec-hd{margin-bottom:1.5rem}
@@ -4128,8 +4130,9 @@ body.menu-open{overflow:hidden}
   #content .venue .vn2-block__rate-eyebrow{margin-bottom:.55rem;font-size:.74rem}
   #content .venue .vn2-block__price{font-size:2.9rem;margin-bottom:.7rem}
   #content .venue .vn2-block__divider{margin:0 0 .75rem}
-  #content .venue .vn2-block__cta{margin-bottom:.65rem;padding:.85rem 1.4rem;font-size:.98rem}
-  #content .venue .vn2-block__fine{font-size:.75rem;margin:0}
+  #content .venue .vn2-block__cta{margin-bottom:0;padding:.85rem 1.4rem;font-size:.98rem}
+  #content .venue .vn2-block__fine{font-size:.74rem;margin:.5rem auto 0;max-width:250px}
+  #content .venue .vn2-block__urgency{font-size:.58rem;margin:.6rem 0 0}
 }
 
 /* ===== Room block banner mobile: internal rhythm ===== */
