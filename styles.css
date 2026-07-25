@@ -4327,3 +4327,49 @@ body.menu-open{overflow:hidden}
 @media (max-width:600px){
   .hero__kicker--below{margin-top:0 !important;margin-bottom:1.4rem !important}
 }
+
+/* ===== VIP page: gold register ===== */
+#content .vip-page{background:radial-gradient(1100px 520px at 50% -120px,rgba(212,169,60,.09),transparent 62%),#0A1224}
+#content .vip-page .sec-hd__num{color:#E8C46A}
+#content .vip-page .sec-hd__title em{color:#E8C46A}
+#content .vip-page .vip-hero{border:1px solid rgba(212,169,60,.3)}
+#content .vip-page .vip-perk{border:1px solid rgba(212,169,60,.26);background:rgba(212,169,60,.05);transition:border-color .25s ease,transform .25s ease}
+#content .vip-page .vip-perk:hover{border-color:rgba(232,196,106,.55);transform:translateY(-2px)}
+#content .vip-page .vip-perk__eyebrow{color:#E8C46A}
+
+/* Gold 200 statement */
+#content .vip-200{text-align:center;margin:clamp(2.4rem,5vw,3.8rem) 0 clamp(2rem,4vw,3rem)}
+#content .vip-200__num{font-family:var(--fd);font-weight:400;font-size:clamp(6rem,15vw,10.5rem);line-height:.9;background:linear-gradient(180deg,#E8C46A 0%,#D4A93C 70%,#A87F24 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+#content .vip-200__label{font-family:var(--fm);font-size:.72rem;font-weight:700;letter-spacing:.26em;text-transform:uppercase;color:rgba(232,196,106,.75);margin-top:.7rem}
+
+/* Three nights timeline */
+#content .vip-nights{margin:0 0 clamp(2.4rem,5vw,3.6rem)}
+#content .vip-nights__label{display:flex;align-items:center;gap:1rem;margin-bottom:1.4rem;font-family:var(--fm);font-size:.68rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:#E8C46A}
+#content .vip-nights__label::before,#content .vip-nights__label::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,transparent,rgba(212,169,60,.45),transparent)}
+#content .vip-nights__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem}
+#content .vip-night{border:1px solid rgba(212,169,60,.26);background:rgba(212,169,60,.05);border-radius:14px;overflow:hidden;transition:border-color .25s ease,transform .25s ease}
+#content .vip-night:hover{border-color:rgba(232,196,106,.55);transform:translateY(-3px)}
+#content .vip-night__media{aspect-ratio:16/10;background:#0A1224}
+#content .vip-night__media img{width:100%;height:100%;object-fit:cover;display:block;border-radius:0}
+#content .vip-night__day{font-family:var(--fm);font-size:.62rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#E8C46A;margin:1rem 1.15rem .4rem}
+#content .vip-night__name{font-family:var(--fb);font-weight:800;font-size:1.12rem;letter-spacing:-.01em;color:#F4ECE0;margin:0 1.15rem .45rem}
+#content .vip-night__desc{font-family:var(--fb);font-weight:400;font-size:.9rem;line-height:1.55;color:rgba(244,236,224,.78);margin:0 1.15rem 1.15rem}
+
+/* Ticket showcase */
+#content .vip-ticket{display:flex;align-items:center;gap:clamp(1.6rem,4vw,3rem);margin:0 auto clamp(2.4rem,5vw,3.4rem);max-width:900px}
+#content .vip-ticket__img{width:min(400px,46%);transform:rotate(-4deg);border-radius:12px;filter:drop-shadow(0 18px 34px rgba(0,0,0,.5));transition:transform .3s ease}
+#content .vip-ticket:hover .vip-ticket__img{transform:rotate(-2deg) scale(1.02)}
+#content .vip-ticket__eyebrow{font-family:var(--fm);font-size:.66rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:#E8C46A;margin-bottom:.5rem}
+#content .vip-ticket__title{font-family:var(--fb);font-weight:800;font-size:clamp(1.5rem,2.4vw,2rem);letter-spacing:-.015em;color:#F4ECE0;margin:0 0 .55rem}
+#content .vip-ticket__desc{font-family:var(--fb);font-weight:400;font-size:.98rem;line-height:1.6;color:rgba(244,236,224,.8);margin:0}
+
+/* CTA gold sheen sweep */
+#content .vip-cta{position:relative;overflow:hidden}
+#content .vip-cta::after{content:"";position:absolute;top:0;left:-80%;width:45%;height:100%;background:linear-gradient(105deg,transparent,rgba(255,255,255,.45),transparent);transform:skewX(-20deg);pointer-events:none;transition:left .65s ease}
+#content .vip-cta:hover::after{left:130%}
+
+@media (max-width:900px){
+  #content .vip-nights__grid{grid-template-columns:1fr;gap:.9rem}
+  #content .vip-ticket{flex-direction:column;text-align:center}
+  #content .vip-ticket__img{width:min(340px,82%)}
+}
