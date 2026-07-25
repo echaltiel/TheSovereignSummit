@@ -4387,3 +4387,8 @@ body.menu-open{overflow:hidden}
 @media (max-width:720px){
   #content .vip-all__list{grid-template-columns:1fr;gap:.85rem}
 }
+
+/* FAQ: larger question text on mobile */
+@media (max-width:600px){
+  #content .faq__q-text{font-size:1.35rem;line-height:1.3}
+}
