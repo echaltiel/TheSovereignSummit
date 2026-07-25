@@ -35,7 +35,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Instrument+Serif&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css?v=180">
-<style>#content{padding-top:calc(var(--header-h) + clamp(1rem,2.5vw,2rem))}</style>
+<style>#content{padding-top:calc(var(--header-h) + clamp(.6rem,1.5vw,1rem))}#content .sec-hd{margin-bottom:clamp(1rem,2vw,1.5rem)}</style>
 </head>
 <body>
 <div class="header" id="siteHeader">
@@ -116,7 +116,7 @@
       <div class="sec-hd__num">Tickets</div>
       <h2 class="section-title sec-hd__title">Secure your <em>spot.</em></h2>
     </header>
-    <div id="zaprite_checkout" style="width:960px;max-width:92vw;height:clamp(540px,72vh,760px);margin:0 auto;border-radius:16px;overflow:hidden;">
+    <div id="zaprite_checkout" style="width:1200px;max-width:94vw;height:1500px;margin:0 auto;border-radius:16px;overflow:hidden;">
       <iframe
         src="https://pay.zaprite.com/pl_wIAImtY5wz?embed=1"
         width="100%"
@@ -127,6 +127,7 @@
         allow="payment *; clipboard-write"
       ></iframe>
     </div>
+    <p style="text-align:center;margin:1rem 0 0;font-family:var(--fm);font-size:.66rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(244,236,224,.6);">Paying with Apple Pay or Google Pay? <a href="https://pay.zaprite.com/pl_wIAImtY5wz" target="_blank" rel="noopener" style="color:var(--accent);text-decoration:none;border-bottom:1px solid currentColor">Open full-screen checkout</a></p>
   </div>
 </section>
 <script>
