@@ -4379,9 +4379,10 @@ body.menu-open{overflow:hidden}
 #content .vip-all{border:1px solid rgba(212,169,60,.3);background:rgba(212,169,60,.05);border-radius:16px;padding:clamp(1.6rem,3.5vw,2.6rem);max-width:1060px;margin:0 auto clamp(2.2rem,4.5vw,3.2rem)}
 #content .vip-all__eyebrow{font-family:var(--fm);font-size:.66rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:#E8C46A;margin-bottom:.55rem}
 #content .vip-all__title{font-family:var(--fb);font-weight:800;font-size:clamp(1.5rem,2.4vw,2rem);letter-spacing:-.015em;color:#F4ECE0;margin:0 0 1.2rem}
-#content .vip-all__list{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:1rem 2rem}
-#content .vip-all__list li{position:relative;padding-left:1.5rem;font-family:var(--fb);font-weight:400;font-size:.97rem;line-height:1.6;color:rgba(244,236,224,.85)}
-#content .vip-all__list li::before{content:"";position:absolute;left:0;top:.52em;width:.85rem;height:2px;background:#D4A93C}
+#content .vip-all__list{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:1.4rem 2.5rem}
+#content .vip-all__list li{border-left:2px solid rgba(212,169,60,.55);padding-left:1.1rem}
+#content .vip-all__item-title{font-family:var(--fb);font-weight:900;font-size:1.08rem;letter-spacing:-.01em;color:var(--accent);margin:0 0 .3rem}
+#content .vip-all__item-desc{font-family:var(--fb);font-weight:400;font-size:.92rem;line-height:1.55;color:rgba(244,236,224,.72);margin:0}
 #content .vip-buy__note{text-align:center;font-family:var(--fm);font-size:.66rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:rgba(232,196,106,.7);margin-top:.9rem}
 @media (max-width:720px){
   #content .vip-all__list{grid-template-columns:1fr;gap:.85rem}
