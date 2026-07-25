@@ -3143,7 +3143,7 @@ body.menu-open{overflow:hidden}
 
 /* ===== VIP page ===== */
 #content .vip-intro{font-family:var(--fd);font-size:clamp(1.15rem,1.6vw,1.4rem);line-height:1.5;color:var(--dk-c72);max-width:720px;margin:0 auto 2.5rem;text-align:center}
-#content .vip-perks{display:grid;grid-template-columns:repeat(3,1fr);gap:.9rem;margin-bottom:0}
+#content .vip-perks{display:grid;grid-template-columns:repeat(2,1fr);gap:.9rem;margin-bottom:0;max-width:1060px;margin-left:auto;margin-right:auto}
 @media (max-width:1000px){#content .vip-perks{grid-template-columns:repeat(2,1fr)}}
 @media (max-width:620px){#content .vip-perks{grid-template-columns:1fr}}
 #content .vip-perk{background:#0A2B55;border:0.5px solid rgba(244,236,224,.14);border-radius:14px;padding:1.05rem 1.15rem}
@@ -4338,7 +4338,7 @@ body.menu-open{overflow:hidden}
 #content .vip-page .vip-perk__eyebrow{color:#E8C46A}
 
 /* Gold 200 statement */
-#content .vip-200{text-align:center;margin:clamp(2.4rem,5vw,3.8rem) 0 clamp(2rem,4vw,3rem)}
+#content .vip-200{text-align:center;margin:clamp(.8rem,2vw,1.6rem) 0 clamp(2rem,4vw,3rem)}
 #content .vip-200__num{font-family:var(--fd);font-weight:400;font-size:clamp(6rem,15vw,10.5rem);line-height:.9;background:linear-gradient(180deg,#E8C46A 0%,#D4A93C 70%,#A87F24 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
 #content .vip-200__label{font-family:var(--fm);font-size:.72rem;font-weight:700;letter-spacing:.26em;text-transform:uppercase;color:rgba(232,196,106,.75);margin-top:.7rem}
 
