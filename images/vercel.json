@@ -1,6 +1,0 @@
-{
-  "cleanUrls": true,
-  "redirects": [
-    { "source": "/map", "destination": "/venue#floor-plan", "permanent": true }
-  ]
-}
