@@ -138,7 +138,7 @@ body.menu-open{overflow:hidden}
 }
 .hero__ctas{display:flex;flex-wrap:wrap;gap:16px;margin-top:34px}
 .hero__ctas .btn{font-size:1.15rem;padding:1.1rem 2.2rem;min-height:60px}
-.marquee{overflow:hidden;background:var(--ink);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.marquee{overflow:hidden;background:var(--ink);border-top:1px solid var(--line);border-bottom:1px solid var(--line);-webkit-text-size-adjust:100%;text-size-adjust:100%}
 .marquee__track{display:flex;width:max-content;animation:marquee 36s linear infinite;padding:15px 0}
 .marquee__track:hover{animation-play-state:paused}
 .marquee span{
