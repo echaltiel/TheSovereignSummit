@@ -142,7 +142,7 @@ body.menu-open{overflow:hidden}
 .marquee__track{display:flex;width:max-content;animation:marquee 36s linear infinite;padding:15px 0}
 .marquee__track:hover{animation-play-state:paused}
 .marquee span{
-  font-family:var(--fm);font-size:1rem;letter-spacing:.14em;text-transform:uppercase;
+  font-family:var(--fm);font-size:1.12rem;letter-spacing:.14em;text-transform:uppercase;
   color:var(--cream-50);font-weight:500;padding:0 32px;white-space:nowrap;
 }
 .marquee span::after{content:"◆";color:var(--cream-50);opacity:.55;margin-left:62px;font-size:.75rem}
