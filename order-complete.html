@@ -43,9 +43,8 @@
 #content .order-complete .sec-hd__num{font-size:clamp(2.6rem,5vw,3.6rem)}
 #content .oc-order{text-align:center;font-family:var(--fm);font-size:.62rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(244,236,224,.5);margin:.2rem 0 1.3rem}
 /* Room tile: centered, jewel-box framing */
-#content .oc-room{text-align:center;background:linear-gradient(170deg,#E4702B 0%,#D9651F 55%,#C4571A 100%);border-radius:18px;padding:1.9rem 2rem 1.7rem;max-width:880px;margin:0 auto 1.1rem;box-shadow:inset 0 0 0 1px rgba(255,255,255,.28),0 18px 44px rgba(0,0,0,.38)}
-#content .oc-room__title{font-family:var(--fd);font-weight:400;font-size:clamp(1.9rem,3vw,2.5rem);line-height:1.04;color:#FDF6EA;margin:0 0 .5rem}
-#content .oc-room__text{font-family:var(--fb);font-weight:400;font-size:1rem;line-height:1.5;color:rgba(255,255,255,.94);margin:0 0 1.15rem}
+#content .oc-room{text-align:center;background:#D9651F;border-radius:18px;padding:1.8rem 2rem 1.6rem;max-width:880px;margin:0 auto 1.1rem;box-shadow:inset 0 0 0 1px rgba(255,255,255,.28),0 18px 44px rgba(0,0,0,.38)}
+#content .oc-room__title{font-family:var(--fb);font-weight:900;font-size:clamp(2.2rem,3.6vw,3.1rem);line-height:1;letter-spacing:-.02em;text-transform:uppercase;color:#FDF6EA;margin:0 0 1.1rem}
 #content .oc-room__cta{position:relative;overflow:hidden;display:inline-block;background:linear-gradient(180deg,#EDCB78 0%,#D4A93C 100%);color:#131E33;font-family:var(--fm);font-weight:700;font-size:1rem;letter-spacing:.08em;text-transform:uppercase;padding:1rem 2.4rem;border-radius:999px;text-decoration:none;white-space:nowrap;box-shadow:0 8px 22px rgba(0,0,0,.28);transition:transform .2s ease,box-shadow .2s ease}
 #content .oc-room__cta:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(0,0,0,.34)}
 #content .oc-room__cta::after{content:"";position:absolute;top:0;left:-80%;width:45%;height:100%;background:linear-gradient(105deg,transparent,rgba(255,255,255,.55),transparent);transform:skewX(-20deg);pointer-events:none;transition:left .65s ease}
@@ -148,13 +147,12 @@
   <div class="container">
     <header class="sec-hd" id="order-complete">
       <div class="sec-hd__num">Order Complete</div>
-      <h2 class="section-title sec-hd__title">See you in <em>Miami Beach.</em> February 5&ndash;6, 2027.</h2>
+      <h2 class="section-title sec-hd__title">See you in <em>Miami Beach</em> in <em>February</em></h2>
     </header>
     <div class="oc-order" id="oc-order" hidden>Order ID: <span id="oc-order-id"></span></div>
 
     <div class="oc-room">
       <h3 class="oc-room__title">Book your room.</h3>
-      <p class="oc-room__text">The stage, the pool, and the parties are all under one roof. Stay where it happens.</p>
       <a class="oc-room__cta" href="https://book.passkey.com/go/sovereign2027" target="_blank" rel="noopener">Reserve Your Room &rarr;</a>
       <div class="oc-room__rate">Exclusive Summit Rate &middot; $399/Night</div>
     </div>
