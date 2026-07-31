@@ -7,8 +7,15 @@ DTSTAMP:20260730T000000Z
 DTSTART;VALUE=DATE:20270205
 DTEND;VALUE=DATE:20270207
 SUMMARY:The Sovereign Summit
-LOCATION:Fontainebleau Miami Beach\, 4441 Collins Ave\, Miami Beach\, FL
-DESCRIPTION:AI. Freedom. Energy. Bitcoin. Details: https://thesovereignsummit.com
+LOCATION:Fontainebleau Miami Beach\, 4441 Collins Ave\, Miami Beach\, FL 33140
+GEO:25.8172;-80.1214
+DESCRIPTION:AI. Freedom. Energy. Bitcoin.\n\nBook your room at the Summit rate: https://book.passkey.com/go/sovereign2027\n\nDetails: https://thesovereignsummit.com
 URL:https://thesovereignsummit.com
+CATEGORIES:CONFERENCE
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:The Sovereign Summit is one week away
+TRIGGER:-P7D
+END:VALARM
 END:VEVENT
 END:VCALENDAR
