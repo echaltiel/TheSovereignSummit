@@ -43,17 +43,18 @@
 #content .order-complete .sec-hd__num{font-size:clamp(2.6rem,5vw,3.6rem)}
 #content .oc-order{text-align:center;font-family:var(--fm);font-size:.62rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(244,236,224,.5);margin:.2rem 0 1.3rem}
 /* Room tile: centered, jewel-box framing */
-#content .oc-room{text-align:center;background:var(--accent);border-radius:18px;padding:1.6rem 2rem 1.45rem;max-width:880px;margin:1.5rem auto 1.1rem;box-shadow:inset 0 0 0 1px rgba(255,255,255,.28),0 18px 44px rgba(0,0,0,.38)}
+#content a.oc-room{display:block;text-align:center;text-decoration:none;background:var(--accent);border-radius:16px;padding:1.6rem 2rem 1.45rem;max-width:720px;margin:1.5rem auto 1.1rem;box-shadow:inset 0 0 0 1px rgba(255,255,255,.28),0 18px 44px rgba(0,0,0,.38);transition:transform .2s ease,box-shadow .2s ease}
+#content a.oc-room:hover{transform:translateY(-2px);box-shadow:inset 0 0 0 1px rgba(255,255,255,.34),0 22px 52px rgba(0,0,0,.44)}
 #content .oc-room__title{font-family:var(--fb);font-weight:900;font-size:clamp(2rem,3.2vw,2.7rem);line-height:1;letter-spacing:-.02em;text-transform:uppercase;color:#131E33;margin:0 0 .55rem}
-#content .oc-room__urgency{font-family:var(--fb);font-weight:600;font-size:1rem;line-height:1.5;color:rgba(19,30,51,.88);margin:0 0 1rem}
-#content .oc-room__cta{position:relative;overflow:hidden;display:inline-block;background:linear-gradient(180deg,#EDCB78 0%,#D4A93C 100%);color:#131E33;font-family:var(--fm);font-weight:700;font-size:1rem;letter-spacing:.08em;text-transform:uppercase;padding:1rem 2.4rem;border-radius:999px;text-decoration:none;white-space:nowrap;box-shadow:0 8px 22px rgba(0,0,0,.28);transition:transform .2s ease,box-shadow .2s ease}
-#content .oc-room__cta:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(0,0,0,.34)}
+#content .oc-room__urgency{font-family:var(--fb);font-weight:600;font-size:1rem;line-height:1.5;color:#131E33;margin:0 0 1rem}
+#content .oc-room__cta{position:relative;overflow:hidden;display:inline-block;background:#131E33;color:#F4ECE0;font-family:var(--fm);font-weight:700;font-size:1rem;letter-spacing:.08em;text-transform:uppercase;padding:1rem 2.4rem;border-radius:999px;text-decoration:none;white-space:nowrap;box-shadow:0 8px 22px rgba(0,0,0,.28);transition:transform .2s ease,box-shadow .2s ease}
+#content a.oc-room:hover .oc-room__cta{transform:translateY(-2px);box-shadow:0 12px 28px rgba(0,0,0,.34)}
 #content .oc-room__cta::after{content:"";position:absolute;top:0;left:-80%;width:45%;height:100%;background:linear-gradient(105deg,transparent,rgba(255,255,255,.55),transparent);transform:skewX(-20deg);pointer-events:none;transition:left .65s ease}
-#content .oc-room__cta:hover::after{left:130%}
-#content .oc-room__rate{font-family:var(--fm);font-size:.66rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:rgba(19,30,51,.85);margin-top:.75rem}
+#content a.oc-room:hover .oc-room__cta::after{left:130%}
+#content .oc-room__rate{font-family:var(--fm);font-size:.66rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#131E33;margin-top:.75rem}
 /* Support cards */
 #content .oc-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:1rem;max-width:1060px;margin:0 auto}
-#content .oc-card{border:1px solid rgba(244,236,224,.18);background:rgba(255,255,255,.03);border-radius:14px;padding:1.15rem 1.35rem;transition:border-color .25s ease}
+#content .oc-card{border:1px solid rgba(244,236,224,.18);background:rgba(255,255,255,.03);border-radius:16px;padding:1.15rem 1.35rem;transition:border-color .25s ease}
 #content .oc-card:hover{border-color:rgba(244,236,224,.34)}
 #content .oc-card__eyebrow{font-family:var(--fm);font-size:.6rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin-bottom:.6rem;padding-bottom:.5rem;border-bottom:1px solid rgba(244,236,224,.12)}
 #content .oc-card__text{font-family:var(--fb);font-weight:400;font-size:.93rem;line-height:1.6;color:rgba(244,236,224,.82);margin:0}
@@ -63,7 +64,7 @@
 #content .oc-list strong{color:#F4ECE0;font-weight:800}
 #content .oc-link{color:var(--accent);text-decoration:none;border-bottom:1px solid currentColor}
 @media (max-width:900px){
-  #content .oc-room{padding:1.5rem 1.2rem 1.4rem}
+  #content a.oc-room{padding:1.5rem 1.2rem 1.4rem}
   #content .oc-grid{grid-template-columns:1fr;gap:.8rem;max-width:560px}
 }
 .oc-confetti{position:fixed;top:-14px;pointer-events:none;z-index:999;border-radius:2px;animation:oc-fall linear forwards}
@@ -152,12 +153,12 @@
     </header>
     <div class="oc-order" id="oc-order" hidden>Order ID: <span id="oc-order-id"></span></div>
 
-    <div class="oc-room">
-      <h3 class="oc-room__title">Book your room.</h3>
-      <p class="oc-room__urgency">Rooms at the Summit rate are limited. When the block fills, the rate is gone.</p>
-      <a class="oc-room__cta" href="https://book.passkey.com/go/sovereign2027" target="_blank" rel="noopener">Reserve Your Room &rarr;</a>
-      <div class="oc-room__rate">Exclusive Summit Rate &middot; $399/Night &middot; Limited Rooms</div>
-    </div>
+    <a class="oc-room" href="https://book.passkey.com/go/sovereign2027" target="_blank" rel="noopener">
+      <h3 class="oc-room__title">Book Your Room</h3>
+      <p class="oc-room__urgency">When the block fills, the rate is gone.</p>
+      <span class="oc-room__cta">Reserve Your Room &rarr;</span>
+      <div class="oc-room__rate">Exclusive Summit Rate &middot; $399/Night</div>
+    </a>
 
     <div class="oc-grid">
       <article class="oc-card">
@@ -169,8 +170,11 @@
         </ul>
       </article>
       <article class="oc-card">
-        <div class="oc-card__eyebrow">Stay in the Loop</div>
-        <p class="oc-card__text">Speaker news lands first on <a class="oc-link" href="https://x.com/sovereignmiami" target="_blank" rel="noopener">@sovereignmiami</a>. The lineup only gets better from here.</p>
+        <div class="oc-card__eyebrow">Save the Date</div>
+        <ul class="oc-list">
+          <li><strong><a class="oc-link" href="/sovereign-summit.ics" download>Add it to your calendar</a></strong>, February 5&ndash;6, 2027.</li>
+          <li>Speaker news lands first on <a class="oc-link" href="https://x.com/sovereignmiami" target="_blank" rel="noopener">@sovereignmiami</a>.</li>
+        </ul>
       </article>
     </div>
   </div>

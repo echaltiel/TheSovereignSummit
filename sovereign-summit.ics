@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//The Sovereign Summit//EN
+BEGIN:VEVENT
+UID:sovereign-summit-2027@thesovereignsummit.com
+DTSTAMP:20260730T000000Z
+DTSTART;VALUE=DATE:20270205
+DTEND;VALUE=DATE:20270207
+SUMMARY:The Sovereign Summit
+LOCATION:Fontainebleau Miami Beach\, 4441 Collins Ave\, Miami Beach\, FL
+DESCRIPTION:AI. Freedom. Energy. Bitcoin. Details: https://thesovereignsummit.com
+URL:https://thesovereignsummit.com
+END:VEVENT
+END:VCALENDAR
