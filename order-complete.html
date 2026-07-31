@@ -110,11 +110,24 @@
   #content .ocx-main{grid-template-columns:1fr}
   #content .ocx-hotel{min-height:340px;order:-1}
 }
+@media (max-width:700px){
+  #content .ocx-hero__date{display:block;margin-top:.2rem}
+  #content .ocx-hero__dot{display:none}
+}
 @media (max-width:560px){
-  .ocx-header__brand img{height:52px}
-  #content .ocx-panel__actions{flex-direction:column}
+  .ocx-header__in{padding-top:.4rem;padding-bottom:.4rem}
+  .ocx-header__brand img{height:34px}
+  .ocx-header__back{font-size:.66rem;padding:.4rem .9rem;letter-spacing:.06em}
+  #content .ocx-hero__title{font-size:2.2rem}
+  #content .ocx-panel{padding:1.1rem 1.15rem}
+  #content .ocx-panel__actions{flex-direction:column;align-items:stretch;gap:.7rem}
   #content .ocx-panel__actions .ocx-btn{width:100%}
-  #content .ocx-plan{flex-direction:column}
+  #content .ocx-panel__supportwrap{justify-content:center;min-height:40px}
+  #content .ocx-hotel__in{padding:1.15rem 1.1rem 1.25rem}
+  #content .ocx-hotel__scrim{background:linear-gradient(180deg,rgba(19,30,51,.48) 0%,rgba(19,30,51,.8) 45%,rgba(19,30,51,.93) 100%)}
+  #content .ocx-plan{flex-direction:column;align-items:stretch;gap:.6rem}
+  #content .ocx-plan__label{text-align:center;margin-bottom:.1rem}
+  .ocx-footer__in{flex-direction:column;text-align:center;justify-content:center;gap:.45rem}
 }
 </style>
 </head>
@@ -138,7 +151,7 @@
       <div class="ocx-hero__badge">Purchase Confirmed</div>
       <h1 class="ocx-hero__title">You&rsquo;re In.</h1>
       <p class="ocx-hero__confirmline">Your Summit Pass is confirmed.</p>
-      <p class="ocx-hero__event"><em>Fontainebleau Miami Beach</em> <span class="ocx-hero__date">&middot; February 5&ndash;6, 2027</span></p>
+      <p class="ocx-hero__event"><em>Fontainebleau Miami Beach</em><span class="ocx-hero__date"><span class="ocx-hero__dot"> &middot; </span>February 5&ndash;6, 2027</span></p>
       <div class="ocx-order" id="oc-order" hidden>Order <span id="oc-order-id"></span></div>
     </div>
 
