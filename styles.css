@@ -4394,28 +4394,79 @@ body.menu-open{overflow:hidden}
 }
 
 
-/* --- Speakers rail (homepage) + five-across speakers page --- v190 --- */
+/* --- Speakers rail (homepage) + five-across speakers page --- v191 --- */
 #content .speakers__rail{position:relative}
-#content .speakers__grid--rail{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none;-ms-overflow-style:none;border-right:1px solid var(--ink)}
+
+/* The base grid sets gap:.6rem. Flex basis must subtract it or the last card
+   overflows the rail: 4 x 25% + 3 gaps > 100%. */
+#content .speakers__grid--rail{
+  --rail-gap:.6rem;
+  --rail-cols:4;
+  display:flex;
+  gap:var(--rail-gap);
+  align-items:stretch;
+  overflow-x:auto;
+  scroll-snap-type:x mandatory;
+  scroll-behavior:smooth;
+  scrollbar-width:none;
+  -ms-overflow-style:none;
+  padding:0;
+}
 #content .speakers__grid--rail::-webkit-scrollbar{display:none}
-#content .speakers__grid--rail .speaker{flex:0 0 25%;min-width:0;scroll-snap-align:start}
-#content .speakers__grid--rail .speaker:nth-child(4n){border-right:1px solid var(--ink)}
-#content .speakers__grid--rail .speaker:last-child{border-right:none}
-#content .speakers__arrow{position:absolute;top:50%;transform:translateY(-50%);width:46px;height:46px;border-radius:50%;border:1px solid var(--ink);background:var(--accent);color:var(--paper);font-family:var(--fu);font-size:1.15rem;line-height:1;display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:5;padding:0;transition:opacity .25s ease,visibility .25s ease}
-#content .speakers__arrow--next{right:-15px}
-#content .speakers__arrow--prev{left:-15px}
-#content .speakers__arrow:hover{background:var(--ink);color:var(--paper)}
+#content .speakers__grid--rail .speaker{
+  flex:0 0 calc((100% - (var(--rail-cols) - 1) * var(--rail-gap)) / var(--rail-cols));
+  min-width:0;
+  scroll-snap-align:start;
+  align-self:stretch;
+}
+/* .speaker--more carries height:100%, which does not resolve against a flex
+   container of auto height, so it collapses. Let stretch do the work. */
+#content .speakers__rail .speakers__grid--rail .speaker.speaker--more{height:auto}
+/* .reveal slides in from translateY(18px). overflow-x:auto also scrolls Y, so
+   that offset makes the rail vertically scrollable. Keep the fade, drop the slide. */
+#content .speakers__grid--rail .speaker.reveal{transform:none}
+
+#content .speakers__arrow{
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  width:56px;height:56px;
+  border:none;
+  border-radius:50%;
+  background:var(--accent);
+  color:#0A1224;
+  display:flex;align-items:center;justify-content:center;
+  padding:0;
+  cursor:pointer;
+  z-index:5;
+  box-shadow:0 2px 6px rgba(0,0,0,.28),0 10px 24px rgba(0,0,0,.34);
+  transition:background .2s ease,transform .2s ease,box-shadow .2s ease,opacity .25s ease,visibility .25s ease;
+}
+#content .speakers__arrow svg{width:20px;height:20px;display:block}
+#content .speakers__arrow--next{right:-26px}
+#content .speakers__arrow--prev{left:-26px}
+#content .speakers__arrow:hover{
+  background:#FF8258;
+  transform:translateY(-50%) scale(1.06);
+  box-shadow:0 3px 8px rgba(0,0,0,.3),0 14px 30px rgba(0,0,0,.4);
+}
+#content .speakers__arrow:active{transform:translateY(-50%) scale(.97)}
+#content .speakers__arrow:focus-visible{outline:2px solid var(--paper);outline-offset:3px}
 #content .speakers__arrow[hidden]{display:flex;opacity:0;visibility:hidden;pointer-events:none}
+
 #content .speakers__grid--5{grid-template-columns:repeat(5,1fr)}
-#content .speakers__grid--5 .speaker:nth-child(4n){border-right:1px solid var(--ink)}
-#content .speakers__grid--5 .speaker:nth-child(5n){border-right:none}
+
 @media (max-width:1080px){
-  #content .speakers__grid--rail .speaker{flex:0 0 50%}
-  #content .speakers__grid--rail .speaker:nth-child(2n){border-right:1px solid var(--ink)}
-  #content .speakers__grid--rail .speaker:last-child{border-right:none}
-  #content .speakers__arrow{width:40px;height:40px}
+  #content .speakers__grid--rail{--rail-cols:2}
+  #content .speakers__arrow{width:48px;height:48px}
+  #content .speakers__arrow svg{width:17px;height:17px}
+  #content .speakers__arrow--next{right:-16px}
+  #content .speakers__arrow--prev{left:-16px}
+  #content .speakers__grid--5{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:520px){
+  #content .speakers__grid--rail{--rail-cols:1.35}
+  #content .speakers__arrow{width:44px;height:44px}
   #content .speakers__arrow--next{right:-8px}
   #content .speakers__arrow--prev{left:-8px}
-  #content .speakers__grid--5{grid-template-columns:repeat(2,1fr)}
-  #content .speakers__grid--5 .speaker:nth-child(5n){border-right:1px solid var(--ink)}
 }

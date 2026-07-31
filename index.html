@@ -34,7 +34,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Instrument+Serif&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=190">
+<link rel="stylesheet" href="styles.css?v=191">
 <script>if(location.hash==='#leadership')location.replace('/team#leadership');</script>
 </head>
 <body>
@@ -201,8 +201,8 @@
         <div class="speaker__more-sub">To Be Announced</div>
       </a>
       </div>
-      <button class="speakers__arrow speakers__arrow--prev" type="button" aria-label="Previous speakers" hidden>&#8592;</button>
-      <button class="speakers__arrow speakers__arrow--next" type="button" aria-label="More speakers">&#8594;</button>
+      <button class="speakers__arrow speakers__arrow--prev" type="button" aria-label="Previous speakers" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+      <button class="speakers__arrow speakers__arrow--next" type="button" aria-label="More speakers"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
     </div>
   </div>
 </section>
@@ -653,7 +653,11 @@
   var prev = document.querySelector('.speakers__arrow--prev');
   var next = document.querySelector('.speakers__arrow--next');
   if (!prev || !next) return;
-  function step(){ var c = rail.querySelector('.speaker'); return c ? c.getBoundingClientRect().width : rail.clientWidth/4; }
+  function step(){
+    var c = rail.querySelector('.speaker');
+    var gap = parseFloat(getComputedStyle(rail).columnGap) || 0;
+    return c ? c.getBoundingClientRect().width + gap : rail.clientWidth/4;
+  }
   function update(){
     var max = rail.scrollWidth - rail.clientWidth - 2;
     prev.hidden = rail.scrollLeft <= 2;
