@@ -39,39 +39,39 @@
 <style>
 /* ===== Order Complete: self-contained utility page ===== */
 .ocx-header{background:var(--dk-page,#131E33);border-bottom:1px solid rgba(244,236,224,.12)}
-.ocx-header__in{max-width:1160px;margin:0 auto;padding:.55rem var(--gut,clamp(1.25rem,3vw,2.5rem));display:flex;align-items:center;justify-content:space-between;gap:1rem}
-.ocx-header__brand img{height:48px;width:auto;display:block}
+.ocx-header__in{max-width:1160px;margin:0 auto;padding:.45rem var(--gut,clamp(1.25rem,3vw,2.5rem));display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.ocx-header__brand img{height:44px;width:auto;display:block}
 .ocx-header__back{display:inline-flex;align-items:center;min-height:44px;padding:.55rem 1.3rem;border:1px solid rgba(244,236,224,.35);border-radius:999px;font-family:var(--fm);font-size:.78rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#F4ECE0;text-decoration:none;transition:border-color .2s ease,background .2s ease}
 .ocx-header__back:hover{border-color:#F4ECE0;background:rgba(244,236,224,.06)}
 #content{padding-top:0}
-#content .ocx{padding:clamp(.8rem,1.6vw,1.2rem) 0 clamp(.9rem,1.6vw,1.2rem)}
+#content .ocx{padding:clamp(.6rem,1.2vw,.9rem) 0 1.2rem}
 #content .ocx .container{max-width:1160px}
 /* Hero */
-#content .ocx-hero{text-align:center;margin-bottom:clamp(1.1rem,2vw,1.6rem)}
-#content .ocx-hero__check{width:38px;height:38px;margin:0 auto .45rem;border-radius:50%;border:2px solid var(--accent);display:flex;align-items:center;justify-content:center}
+#content .ocx-hero{text-align:center;margin-bottom:clamp(.8rem,1.5vw,1rem)}
+#content .ocx-hero__check{width:34px;height:34px;margin:0 auto .35rem;border-radius:50%;border:2px solid var(--accent);display:flex;align-items:center;justify-content:center}
 #content .ocx-hero__check svg{width:18px;height:18px;stroke:var(--accent);stroke-width:3;fill:none;stroke-linecap:round;stroke-linejoin:round}
-#content .ocx-hero__badge{font-family:var(--fm);font-size:.68rem;font-weight:700;letter-spacing:.26em;text-transform:uppercase;color:var(--accent);margin-bottom:.4rem}
-#content .ocx-hero__title{font-family:var(--fb);font-weight:900;font-size:clamp(2.1rem,4vw,2.9rem);line-height:.95;letter-spacing:-.02em;color:#F4ECE0;margin:0 0 .45rem;text-transform:uppercase}
-#content .ocx-hero__confirmline{font-family:var(--fb);font-weight:700;font-size:clamp(1.05rem,1.6vw,1.2rem);color:#F4ECE0;margin:0 0 .2rem}
+#content .ocx-hero__badge{font-family:var(--fm);font-size:.68rem;font-weight:700;letter-spacing:.26em;text-transform:uppercase;color:var(--accent);margin-bottom:.3rem}
+#content .ocx-hero__title{font-family:var(--fb);font-weight:900;font-size:clamp(2rem,3.6vw,2.6rem);line-height:.95;letter-spacing:-.02em;color:#F4ECE0;margin:0 0 .35rem;text-transform:uppercase}
+#content .ocx-hero__confirmline{font-family:var(--fb);font-weight:700;font-size:clamp(1rem,1.5vw,1.1rem);color:#F4ECE0;margin:0 0 .15rem}
 #content .ocx-hero__event{font-family:var(--fb);font-size:clamp(1rem,1.5vw,1.12rem);line-height:1.5;color:rgba(244,236,224,.88);margin:0}
 #content .ocx-hero__date{font-family:var(--fm);font-size:.85em;letter-spacing:.06em;color:rgba(244,236,224,.85)}
 #content .ocx-hero__event em{font-family:var(--fd);font-style:normal;color:var(--accent);font-size:1.08em}
 #content .ocx-order{font-family:var(--fm);font-size:.68rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(244,236,224,.62);margin-top:.8rem}
 /* Ticket panel */
-#content .ocx-main{display:grid;grid-template-columns:1.15fr 1fr;gap:1rem;max-width:1160px;margin:0 auto clamp(.7rem,1.4vw,.95rem)}
-#content .ocx-panel{border:1px solid rgba(244,236,224,.18);background:rgba(255,255,255,.03);border-radius:16px;padding:clamp(1.1rem,2vw,1.35rem)}
+#content .ocx-main{display:grid;grid-template-columns:1.15fr 1fr;gap:1rem;max-width:1160px;margin:0 auto .7rem}
+#content .ocx-panel{border:1px solid rgba(244,236,224,.18);background:rgba(255,255,255,.03);border-radius:16px;padding:clamp(1rem,1.8vw,1.2rem)}
 #content .ocx-panel__eyebrow{font-family:var(--fm);font-size:.66rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);margin-bottom:.55rem}
 #content .ocx-panel__title{font-family:var(--fb);font-weight:800;font-size:clamp(1.3rem,2vw,1.5rem);letter-spacing:-.01em;color:#F4ECE0;margin:0 0 .45rem}
-#content .ocx-panel__lede{font-family:var(--fb);font-size:1rem;line-height:1.5;color:rgba(244,236,224,.88);margin:0 0 .8rem}
+#content .ocx-panel__lede{font-family:var(--fb);font-size:1rem;line-height:1.5;color:rgba(244,236,224,.88);margin:0 0 .6rem}
 #content .ocx-rows{display:flex;flex-direction:column;border-top:1px solid rgba(244,236,224,.12)}
-#content .ocx-row{display:flex;gap:.8rem;align-items:center;padding:.55rem 0;border-bottom:1px solid rgba(244,236,224,.12)}
+#content .ocx-row{display:flex;gap:.8rem;align-items:center;padding:.45rem 0;border-bottom:1px solid rgba(244,236,224,.12)}
 #content .ocx-row__ico{flex-shrink:0;width:34px;height:34px;border-radius:9px;border:1px solid rgba(255,105,65,.5);display:flex;align-items:center;justify-content:center;margin-top:.1rem}
 #content .ocx-row__ico svg{width:17px;height:17px;stroke:var(--accent);stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round}
 #content .ocx-row__body{font-family:var(--fb);font-size:1rem;line-height:1.55;color:rgba(244,236,224,.88)}
 #content .ocx-row__body strong{color:#F4ECE0;font-weight:800}
-#content .ocx-panel__actions{display:flex;flex-wrap:wrap;align-items:center;gap:1rem;margin-top:1rem}
-#content .ocx-panel__support{font-family:var(--fb);font-size:.95rem;color:rgba(244,236,224,.75);text-decoration:none;border-bottom:1px solid rgba(244,236,224,.35);min-height:44px;display:inline-flex;align-items:center}
-#content .ocx-panel__support:hover{color:#F4ECE0;border-color:#F4ECE0}
+#content .ocx-panel__actions{display:flex;flex-wrap:wrap;align-items:center;gap:1rem;margin-top:.75rem}
+#content .ocx-panel__support{font-family:var(--fb);font-size:.95rem;color:rgba(244,236,224,.78);text-decoration:underline;text-decoration-color:rgba(244,236,224,.25);text-underline-offset:3px;min-height:44px;display:inline-flex;align-items:center;transition:color .2s ease,text-decoration-color .2s ease}
+#content .ocx-panel__support:hover{color:#F4ECE0;text-decoration-color:#F4ECE0}
 #content .ocx-btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;min-height:44px;padding:.7rem 1.5rem;border-radius:999px;font-family:var(--fm);font-size:.82rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;text-decoration:none;transition:transform .18s ease,background .2s ease,border-color .2s ease;cursor:pointer}
 #content .ocx-btn--primary{background:var(--accent);color:#131E33}
 #content .ocx-btn--primary:hover{transform:translateY(-2px)}
@@ -80,17 +80,17 @@
 /* Hotel card */
 #content .ocx-hotel{position:relative;border-radius:16px;overflow:hidden;box-shadow:0 16px 40px rgba(0,0,0,.35);border:1px solid rgba(244,236,224,.14);display:flex}
 #content .ocx-hotel__img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 55%}
-#content .ocx-hotel__scrim{position:absolute;inset:0;background:linear-gradient(180deg,rgba(19,30,51,.42) 0%,rgba(19,30,51,.84) 48%,rgba(19,30,51,.94) 100%)}
-#content .ocx-hotel__in{position:relative;display:flex;flex-direction:column;justify-content:flex-end;text-align:center;gap:.15rem;padding:clamp(1.3rem,2.4vw,1.8rem);width:100%;min-height:100%;text-shadow:0 1px 14px rgba(19,30,51,.65)}
+#content .ocx-hotel__scrim{position:absolute;inset:0;background:linear-gradient(180deg,rgba(19,30,51,.36) 0%,rgba(19,30,51,.78) 48%,rgba(19,30,51,.92) 100%)}
+#content .ocx-hotel__in{position:relative;display:flex;flex-direction:column;justify-content:flex-end;text-align:center;gap:.15rem;padding:clamp(1.2rem,2vw,1.5rem);width:100%;min-height:100%;text-shadow:0 1px 14px rgba(19,30,51,.65)}
 #content .ocx-hotel__eyebrow{font-family:var(--fm);font-size:.66rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--accent);margin-bottom:.55rem}
 #content .ocx-hotel__title{font-family:var(--fd);font-weight:400;font-size:clamp(1.7rem,2.6vw,2.2rem);line-height:1.05;color:#F4ECE0;margin:0 0 .3rem}
-#content .ocx-hotel__text{font-family:var(--fb);font-size:.96rem;line-height:1.5;color:rgba(244,236,224,.92);margin:0 auto .6rem;max-width:34ch}
+#content .ocx-hotel__text{font-family:var(--fb);font-size:.95rem;line-height:1.5;color:rgba(244,236,224,.92);margin:0 auto .5rem;max-width:34ch}
 #content .ocx-hotel__cta-col{display:flex;flex-direction:column;align-items:center;gap:.5rem}
 #content .ocx-hotel__rate{font-family:var(--fb);font-weight:900;font-size:clamp(2rem,3vw,2.6rem);letter-spacing:-.01em;color:#F4ECE0}
-#content .ocx-hotel__rate span{font-family:var(--fm);font-size:.66rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(244,236,224,.85);vertical-align:middle;margin-left:.2rem}
+#content .ocx-hotel__rate span{font-family:var(--fm);font-size:.78rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(244,236,224,.9);vertical-align:middle;margin-left:.25rem}
 #content .ocx-hotel__fine{font-family:var(--fb);font-size:.88rem;color:rgba(244,236,224,.78)}
 /* Plan your trip action grid */
-#content .ocx-plan{max-width:1160px;margin:0 auto;display:flex;align-items:center;justify-content:center;gap:.8rem;flex-wrap:wrap}
+#content .ocx-plan{max-width:1160px;margin:0 auto;display:flex;align-items:center;justify-content:center;gap:.8rem;flex-wrap:wrap;padding-bottom:4px}
 #content .ocx-plan__label{font-family:var(--fm);font-size:.66rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:rgba(244,236,224,.72)}
 /* Support footer */
 .ocx-footer{border-top:1px solid rgba(244,236,224,.12);background:var(--dk-page,#131E33)}
@@ -135,7 +135,7 @@
     <div class="ocx-hero">
       <div class="ocx-hero__check" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4.5 12.5l5 5 10-11"/></svg></div>
       <div class="ocx-hero__badge">Purchase Confirmed</div>
-      <h1 class="ocx-hero__title">You&rsquo;re In</h1>
+      <h1 class="ocx-hero__title">You&rsquo;re In.</h1>
       <p class="ocx-hero__confirmline">Your Summit Pass is confirmed.</p>
       <p class="ocx-hero__event"><em>Fontainebleau Miami Beach</em> <span class="ocx-hero__date">&middot; February 5&ndash;6, 2027</span></p>
       <div class="ocx-order" id="oc-order" hidden>Order <span id="oc-order-id"></span></div>
