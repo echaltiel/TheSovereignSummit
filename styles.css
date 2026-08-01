@@ -4394,7 +4394,7 @@ body.menu-open{overflow:hidden}
 }
 
 
-/* --- Speakers rail (homepage) + five-across speakers page --- v191 --- */
+/* --- Speakers rail (homepage) + five-across speakers page --- v192 --- */
 #content .speakers__rail{position:relative}
 
 /* The base grid sets gap:.6rem. Flex basis must subtract it or the last card
@@ -4454,7 +4454,9 @@ body.menu-open{overflow:hidden}
 #content .speakers__arrow:focus-visible{outline:2px solid var(--paper);outline-offset:3px}
 #content .speakers__arrow[hidden]{display:flex;opacity:0;visibility:hidden;pointer-events:none}
 
-#content .speakers__grid--5{grid-template-columns:repeat(5,1fr)}
+/* Six cards wrap to 3x2. grid-auto-rows:1fr keeps both rows the same height;
+   without it each row sizes to its own tallest card and they disagree. */
+#content .speakers__grid--wrap{grid-template-columns:repeat(3,1fr);grid-auto-rows:1fr}
 
 @media (max-width:1080px){
   #content .speakers__grid--rail{--rail-cols:2}
@@ -4462,7 +4464,7 @@ body.menu-open{overflow:hidden}
   #content .speakers__arrow svg{width:17px;height:17px}
   #content .speakers__arrow--next{right:-16px}
   #content .speakers__arrow--prev{left:-16px}
-  #content .speakers__grid--5{grid-template-columns:repeat(2,1fr)}
+  #content .speakers__grid--wrap{grid-template-columns:repeat(2,1fr)}
 }
 @media (max-width:520px){
   #content .speakers__grid--rail{--rail-cols:1.35}
