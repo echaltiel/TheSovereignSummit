@@ -116,18 +116,14 @@
 #content .spx-lede{color:var(--dk-c72);max-width:none;font-size:1.08rem;margin-top:-.75rem}
 #content .spx-lede em{color:var(--accent)}
 
-/* How it works */
-#content .spx-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:.4rem}
-@media (max-width:760px){#content .spx-steps{grid-template-columns:1fr}}
-#content .spx-step{background:var(--dk-card);border:1px solid var(--dk-rule);border-radius:var(--radius);padding:1.4rem}
-#content .spx-step__n{font-family:var(--fm);font-size:.66rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);margin-bottom:.6rem}
-#content .spx-step__t{font-family:var(--fd);font-size:1.3rem;line-height:1.15;color:var(--dk-c)}
-#content .spx-step__c{font-size:.92rem;line-height:1.55;color:var(--dk-c72);margin-top:.5rem}
-
-/* Bracket grid */
+/* Package grid */
 #content .spx-tiers{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;align-items:stretch;margin-top:.4rem}
 @media (max-width:960px){#content .spx-tiers{grid-template-columns:1fr}}
 #content .pcard__avail{font-family:var(--fm);font-size:.66rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin-bottom:.5rem}
+#content .pcard--featured .pcard__avail{color:#E8C46A}
+#content .spx-tiers .pcard__cta.btn{border:none}
+#content .pcard__lead{font-family:var(--fd);font-size:1.06rem;line-height:1.3;color:var(--dk-c);margin:.85rem 0 -.1rem;padding-bottom:.85rem;border-bottom:1px solid var(--dk-rule)}
+#content .pcard--featured .pcard__lead{color:#E8C46A}
 #content .spx-tiernote{margin-top:1.25rem;font-family:var(--fd);font-size:.98rem;color:var(--dk-c72);text-align:center}
 #content .spx-tiernote em{color:var(--accent)}
 
@@ -147,9 +143,9 @@
 #content .ocard__cta{margin-top:auto;font-family:var(--fm);font-size:.72rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);border-top:1px solid var(--dk-rule);padding-top:.9rem;transition:color .2s}
 #content .ocard__cta:hover{color:var(--dk-c)}
 
-/* Category headers inside the menu */
+/* Category headers */
 #content .spx-cat{display:flex;align-items:baseline;gap:1rem;margin:2.4rem 0 1rem}
-#content .spx-cat:first-of-type{margin-top:1.2rem}
+#content .spx-cat:first-of-type{margin-top:1.4rem}
 #content .spx-cat__t{font-family:var(--fd);font-size:1.6rem;line-height:1;color:var(--dk-c);white-space:nowrap}
 #content .spx-cat__r{flex:1;height:1px;background:var(--dk-rule)}
 #content .spx-cat__n{font-family:var(--fm);font-size:.64rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--dk-c72);white-space:nowrap}
@@ -158,7 +154,7 @@
 #content .spx-oss{background:var(--dk-deep);border:1px dashed var(--dk-rule-str);border-radius:var(--radius);padding:clamp(1.3rem,2.5vw,1.75rem);display:flex;align-items:center;justify-content:space-between;gap:1.5rem;flex-wrap:wrap;margin-top:1.6rem}
 #content .spx-oss__title{font-family:var(--fd);font-size:1.35rem;color:var(--dk-c)}
 #content .spx-oss__copy{color:var(--dk-c72);font-size:.95rem;max-width:620px;margin-top:.4rem}
-#content .spx-oss--solid{background:var(--dk-band);border-style:solid;border-color:var(--dk-rule);display:block}
+#content .spx-oss--solid{background:var(--dk-band);border-style:solid;border-color:var(--dk-rule);display:block;margin-top:0}
 #content .spx-inclist{list-style:none;padding:0;margin:.85rem 0 0;display:grid;grid-template-columns:repeat(3,1fr);gap:.5rem 1.5rem}
 @media (max-width:760px){#content .spx-inclist{grid-template-columns:1fr}}
 #content .spx-inclist li{position:relative;padding-left:1.3rem;font-size:.9rem;line-height:1.45;color:var(--dk-c72)}
@@ -178,90 +174,89 @@
   </div>
 </section>
 
-<section class="spx-section" id="how">
+<section class="spx-section" id="tiers">
   <div class="container">
     <header class="sec-hd">
-      <div class="sec-hd__num">How It Works</div>
-      <h2 class="section-title sec-hd__title">Build the package. <em>The level follows.</em></h2>
-    </header>
-    <div class="spx-steps">
-      <div class="spx-step"><div class="spx-step__n">Step 1</div><div class="spx-step__t">Tell us your goal</div><p class="spx-step__c">Leads, pipeline or brand awareness. We will tell you honestly which parts of the Summit serve it and which do not.</p></div>
-      <div class="spx-step"><div class="spx-step__n">Step 2</div><div class="spx-step__t">Build your package</div><p class="spx-step__c">Choose from the inventory below. Floor space, stage, side events and branding are all priced individually.</p></div>
-      <div class="spx-step"><div class="spx-step__n">Step 3</div><div class="spx-step__t">Your total sets your level</div><p class="spx-step__c">Whatever your package adds up to places you in one of the three levels below. Nothing to negotiate around.</p></div>
-    </div>
-  </div>
-</section>
-
-<section class="spx-section" id="levels">
-  <div class="container">
-    <header class="sec-hd">
-      <div class="sec-hd__num">Sponsor Levels</div>
-      <h2 class="section-title sec-hd__title">Your total spend sets your level. <em>Nothing is bundled.</em></h2>
+      <div class="sec-hd__num">Sponsorship</div>
+      <h2 class="section-title sec-hd__title">Three levels. <em>Stage, panel, floor.</em></h2>
     </header>
     <div class="spx-tiers">
-      <article class="pcard pcard--blue">
-        <div class="pcard__avail">From $7,500</div>
-        <div class="pcard__row"><div class="pcard__tier">Silver</div></div>
-        <div class="pcard__price">$7,500+<span class="pcard__unit">Total Spend</span></div>
-        <ul class="pcard__features">
-          <li>2 VIP + 4 GA passes</li>
-          <li>Logo on the website, on-site signage and event emails</li>
-          <li>Included in sponsor announcement posts</li>
-          <li>Listing in the event guide</li>
-        </ul>
-        <a class="btn pcard__cta" href="#inventory">See what builds it <span class="btn__arrow">&rarr;</span></a>
-      </article>
-      <article class="pcard pcard--blue">
-        <div class="pcard__avail">From $35,000</div>
-        <div class="pcard__row"><div class="pcard__tier">Gold</div></div>
-        <div class="pcard__price">$35,000+<span class="pcard__unit">Total Spend</span></div>
-        <ul class="pcard__features">
-          <li>4 VIP + 8 GA passes</li>
-          <li>Enlarged logo on stage screens, signage, website and emails</li>
-          <li>Dedicated sponsor spotlight on Summit channels</li>
-          <li>Company profile in the event guide</li>
-          <li>Coordinated announcement timing with our comms</li>
-        </ul>
-        <a class="btn pcard__cta" href="#inventory">See what builds it <span class="btn__arrow">&rarr;</span></a>
-      </article>
       <article class="pcard pcard--featured">
-        <div class="pcard__avail">From $100,000</div>
-        <div class="pcard__row"><div class="pcard__tier">Platinum</div></div>
-        <div class="pcard__price">$100,000+<span class="pcard__unit">Total Spend</span></div>
+        <div class="pcard__avail">2 Available</div>
+        <div class="pcard__row"><div class="pcard__tier">Title Sponsor</div></div>
+        <div class="pcard__price">$100,000<span class="pcard__unit">USD</span></div>
+        <div class="pcard__lead">Presenting lockup and a Main Stage keynote</div>
         <ul class="pcard__features">
-          <li>10 VIP + 15 GA passes</li>
-          <li>Top logo placement across every branded surface</li>
-          <li>Press and media introductions around your announcement</li>
-          <li>Priority selection on any inventory released later</li>
+          <li>&quot;The Sovereign Summit, presented by [You]&quot; across event branding, stage, website and media</li>
+          <li>Main Stage keynote, Day 1 or Day 2, plus fireside participation</li>
+          <li>20&#39;&times;20&#39; island booth, open on all four sides at the center of the hall</li>
+          <li>Private meeting suite for the full event</li>
+          <li>10 VIP + 10 GA passes</li>
+          <li>Full attendee list and on-site lead scanning</li>
+          <li>Top billing in all press, email and social campaigns</li>
           <li>First right of renewal for 2028 at this year&#39;s rate</li>
         </ul>
-        <a class="btn pcard__cta" href="#inventory">See what builds it <span class="btn__arrow">&rarr;</span></a>
+        <a class="btn pcard__cta" href="#inquire">Inquire &mdash; Title <span class="btn__arrow">&rarr;</span></a>
+      </article>
+      <article class="pcard pcard--blue">
+        <div class="pcard__avail">4 Available</div>
+        <div class="pcard__row"><div class="pcard__tier">Gold Sponsor</div></div>
+        <div class="pcard__price">$50,000<span class="pcard__unit">USD</span></div>
+        <div class="pcard__lead">A Main Stage panel seat</div>
+        <ul class="pcard__features">
+          <li>Main Stage panel seat within your pillar</li>
+          <li>10&#39;&times;20&#39; booth with double-width frontage</li>
+          <li>Branding moment in the Sovereign Lounge</li>
+          <li>6 VIP + 6 GA passes</li>
+          <li>Attendee list and on-site lead scanning</li>
+          <li>Logo on stage screens, signage, website and emails</li>
+          <li>Dedicated sponsor spotlight on Summit channels</li>
+        </ul>
+        <a class="btn pcard__cta" href="#inquire">Inquire &mdash; Gold <span class="btn__arrow">&rarr;</span></a>
+      </article>
+      <article class="pcard pcard--blue">
+        <div class="pcard__avail">Limited</div>
+        <div class="pcard__row"><div class="pcard__tier">Silver Sponsor</div></div>
+        <div class="pcard__price">$10,000<span class="pcard__unit">USD</span></div>
+        <div class="pcard__lead">A place on the floor</div>
+        <ul class="pcard__features">
+          <li>10&#39;&times;10&#39; booth in the Main Expo Hall</li>
+          <li>2 VIP + 4 GA passes</li>
+          <li>Attendee list and on-site lead scanning</li>
+          <li>Logo on website, signage and event emails</li>
+          <li>Inclusion in sponsor announcement posts</li>
+        </ul>
+        <a class="btn pcard__cta" href="#inquire">Inquire &mdash; Silver <span class="btn__arrow">&rarr;</span></a>
       </article>
     </div>
-    <p class="spx-tiernote">Levels are recognition, not inventory. <em>Everything you actually receive on site is chosen below.</em></p>
+    <div class="spx-oss spx-oss--solid" style="margin-top:1.6rem">
+      <div class="spx-oss__title">Included at every level</div>
+      <ul class="spx-inclist">
+        <li>Power and hardwired WiFi at your booth</li>
+        <li>Listing on the website and in the event guide</li>
+        <li>Backwall branding and furniture</li>
+        <li>Move-in the afternoon before doors</li>
+        <li>Two exhibitor passes per 10&#39;&times;10&#39; of space</li>
+        <li>Corner placement on request</li>
+      </ul>
+    </div>
   </div>
 </section>
 
-<section class="spx-section" id="inventory">
+<section class="spx-section" id="add-ons">
   <div class="container">
     <header class="sec-hd">
-      <div class="sec-hd__num">Sponsorable Inventory</div>
-      <h2 class="section-title sec-hd__title">Everything on offer. <em>Priced individually.</em></h2>
+      <div class="sec-hd__num">Add-Ons</div>
+      <h2 class="section-title sec-hd__title">Build on top of your level. <em>Every item is exclusive.</em></h2>
     </header>
+    <p class="spx-lede">Everything below is an add-on for confirmed sponsors at any level. One host or one brand per item, and the counts are real.</p>
     <div class="spx-cat"><div class="spx-cat__t">Stage &amp; Program</div><div class="spx-cat__r"></div><div class="spx-cat__n">One main stage &middot; both days</div></div>
     <div class="spx-grid">
       <article class="ocard">
-        <div class="ocard__tag ocard__tag--hot">Both Days</div>
-        <h3 class="ocard__name">Presenting Partner</h3>
-        <div class="ocard__price">$75,000<span class="ocard__unit ocard__unit--few">2 Available</span></div>
-        <p class="ocard__desc">Your mark in the "presented by" lockup on every branded surface, on stage, on the website and in all media. Opening welcome remarks on your chosen day.</p>
-        <a class="ocard__cta" href="#inquire">Add to your package &rarr;</a>
-      </article>
-      <article class="ocard">
-        <div class="ocard__tag">Day 1 or Day 2</div>
-        <h3 class="ocard__name">Main Stage Keynote</h3>
+        <div class="ocard__tag ocard__tag--hot">Day 1 or Day 2</div>
+        <h3 class="ocard__name">Main Stage Session</h3>
         <div class="ocard__price">$40,000<span class="ocard__unit ocard__unit--few">2 Available</span></div>
-        <p class="ocard__desc">A twenty minute keynote in the opening block, one per day. Programmed with us so it earns the room rather than empties it.</p>
+        <p class="ocard__desc">A twenty minute solo talk or fireside in the afternoon block. Programmed with us rather than handed over, so it earns the room instead of emptying it.</p>
         <a class="ocard__cta" href="#inquire">Add to your package &rarr;</a>
       </article>
       <article class="ocard">
@@ -275,44 +270,9 @@
         <div class="ocard__tag">Shore 1 &amp; 2</div>
         <h3 class="ocard__name">Workshop Track</h3>
         <div class="ocard__price">$10,000<span class="ocard__unit ocard__unit--few">2 Available</span></div>
-        <p class="ocard__desc">Name a full workshop track. Hands-on sessions across both days with your branding throughout the room.</p>
+        <p class="ocard__desc">Name a full workshop track across both days. Hands-on sessions in your room, your branding throughout, and input on the curriculum.</p>
         <a class="ocard__cta" href="#inquire">Add to your package &rarr;</a>
       </article>
-    </div>
-    <div class="spx-cat"><div class="spx-cat__t">The Floor</div><div class="spx-cat__r"></div><div class="spx-cat__n">Coral 1, 2 &amp; 3 &middot; 29 spaces total</div></div>
-    <div class="spx-grid">
-      <article class="ocard">
-        <div class="ocard__tag ocard__tag--hot">Center Of The Hall</div>
-        <h3 class="ocard__name">20&#39;&times;20&#39; Island</h3>
-        <div class="ocard__price">$35,000<span class="ocard__unit ocard__unit--few">2 Available</span></div>
-        <p class="ocard__desc">Open on all four sides at the center of the room. The largest build on the floor and the only footprint with space for a real activation.</p>
-        <a class="ocard__cta" href="#inquire">Reserve an island &rarr;</a>
-      </article>
-      <article class="ocard">
-        <div class="ocard__tag">Premium Frontage</div>
-        <h3 class="ocard__name">10&#39;&times;20&#39; Booth</h3>
-        <div class="ocard__price">$15,000<span class="ocard__unit ocard__unit--few">4 Available</span></div>
-        <p class="ocard__desc">Double-width frontage with backwall branding. Room for a demo station and somewhere to actually sit down with someone.</p>
-        <a class="ocard__cta" href="#inquire">Reserve a booth &rarr;</a>
-      </article>
-      <article class="ocard">
-        <div class="ocard__tag">Standard Unit</div>
-        <h3 class="ocard__name">10&#39;&times;10&#39; Booth</h3>
-        <div class="ocard__price">$7,500<span class="ocard__unit">23 Total</span></div>
-        <p class="ocard__desc">Backwall branding, a demo surface and room for two people to work the floor. Corner placement adds $1,500.</p>
-        <a class="ocard__cta" href="#inquire">Reserve a booth &rarr;</a>
-      </article>
-    </div>
-    <div class="spx-oss spx-oss--solid">
-      <div class="spx-oss__title">Included with every booth</div>
-      <ul class="spx-inclist">
-        <li>Attendee list and on-site lead scanning</li>
-        <li>Power and hardwired WiFi</li>
-        <li>Listing on the website and event guide</li>
-        <li>Backwall branding and furniture</li>
-        <li>Move-in the afternoon before doors</li>
-        <li>Two exhibitor passes per 10&#39;&times;10&#39;</li>
-      </ul>
     </div>
     <div class="spx-cat"><div class="spx-cat__t">Side Events</div><div class="spx-cat__r"></div><div class="spx-cat__n">One host per event</div></div>
     <div class="spx-grid">
@@ -341,14 +301,14 @@
         <div class="ocard__tag">Thursday</div>
         <h3 class="ocard__name">Bitcoin Fundamentals Workshop</h3>
         <div class="ocard__price">$12,500<span class="ocard__unit">Exclusive Host</span></div>
-        <p class="ocard__desc">The on-ramp session for newcomers. Naming rights, opening remarks and collaboration on the curriculum.</p>
+        <p class="ocard__desc">The on-ramp session for newcomers and the curious. Naming rights, opening remarks and collaboration on the curriculum.</p>
         <a class="ocard__cta" href="#inquire">Host this event &rarr;</a>
       </article>
       <article class="ocard">
         <div class="ocard__tag">Sunday Morning</div>
         <h3 class="ocard__name">Satoshi Farewell Brunch</h3>
         <div class="ocard__price">$12,500<span class="ocard__unit">Exclusive Host</span></div>
-        <p class="ocard__desc">The last conversation of the weekend. Invite-only, relaxed, branded table settings and menu.</p>
+        <p class="ocard__desc">The last conversation of the weekend. Invite-only and relaxed, with branded table settings and menu.</p>
         <a class="ocard__cta" href="#inquire">Host this event &rarr;</a>
       </article>
     </div>
@@ -372,7 +332,7 @@
         <div class="ocard__tag">Where People Linger</div>
         <h3 class="ocard__name">Sovereign Lounge</h3>
         <div class="ocard__price">$15,000<span class="ocard__unit">Exclusive</span></div>
-        <p class="ocard__desc">The gathering point in the middle of the expo hall. Branded seating, signage and the longest dwell time on the floor.</p>
+        <p class="ocard__desc">The gathering point in the middle of the expo hall. Branded seating and signage, and the longest dwell time on the floor.</p>
         <a class="ocard__cta" href="#inquire">Claim it &rarr;</a>
       </article>
       <article class="ocard">
@@ -407,7 +367,7 @@
         <div class="ocard__tag">In Every Bag</div>
         <h3 class="ocard__name">Promo Insert</h3>
         <div class="ocard__price">$3,000<span class="ocard__unit">Limited Slots</span></div>
-        <p class="ocard__desc">One printed piece or product sample in the Summit tote. The lowest-cost way onto the floor.</p>
+        <p class="ocard__desc">One printed piece or product sample in the Summit tote. The lightest way to reach every attendee.</p>
         <a class="ocard__cta" href="#inquire">Claim it &rarr;</a>
       </article>
     </div>
@@ -437,18 +397,18 @@
       </div>
       <div class="inq-form__row">
         <label class="inq-form__field"><span>Company / Organization</span><input type="text" name="company" autocomplete="organization"></label>
-        <label class="inq-form__field"><span>What are you optimizing for</span>
+        <label class="inq-form__field"><span>Level you have in mind</span>
           <select name="interest" required>
             <option value="" disabled selected>Select one</option>
-            <option>Leads &mdash; floor presence and lead capture</option>
-            <option>Pipeline &mdash; stage time and hosted events</option>
-            <option>Brand &mdash; presenting rights and on-site branding</option>
+            <option>Title Sponsor</option>
+            <option>Gold Sponsor</option>
+            <option>Silver Sponsor</option>
             <option>Open Source Area (by application)</option>
             <option>Not sure yet</option>
           </select>
         </label>
       </div>
-      <label class="inq-form__field"><span>Rough budget and anything specific you already have in mind</span><textarea name="message" rows="5"></textarea></label>
+      <label class="inq-form__field"><span>Any add-ons you already have in mind, and what you are optimizing for</span><textarea name="message" rows="5"></textarea></label>
       <button type="submit" class="btn inq-form__submit">Send Inquiry <span class="btn__arrow">&rarr;</span></button>
       <div class="inq-form__thanks" id="inqThanks" hidden>Thank you! We received your inquiry &amp; will get back to you shortly.</div>
     </form>
