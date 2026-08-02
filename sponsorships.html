@@ -351,6 +351,28 @@
   #content .sp-fact:last-child{border-bottom:none}
   #content .sp-fact svg{grid-row:1 / span 2;margin:0}
 }
+
+/* ===== Refinements: hierarchy, exact booth scale, three-column activations ===== */
+#content .sp-package__tier{font-size:clamp(2rem,3vw,2.65rem);font-weight:400;letter-spacing:-.025em}
+#content .sp-package__head{align-items:flex-end}
+#content .sp-package__price{font-size:clamp(1.75rem,2.3vw,2.2rem)}
+#content .sp-package__visual{height:230px;flex-direction:column;gap:.75rem;padding:1rem .75rem .85rem}
+#content .sp-booth-map{position:relative;width:190px;height:145px;display:flex;align-items:center;justify-content:center;padding:18px 20px 16px 28px;flex:0 0 auto}
+#content .sp-booth{border-radius:13px;font-size:.58rem;letter-spacing:.06em;box-shadow:0 14px 28px rgba(0,0,0,.24)}
+#content .sp-booth--title{width:120px;height:120px;border-radius:18px;background:var(--sp-orange)}
+#content .sp-booth--gold{width:120px;height:60px;border-radius:14px;background:var(--sp-gold)}
+#content .sp-booth--silver{width:60px;height:60px;border-radius:12px;background:var(--sp-silver)}
+#content .sp-booth-dim{font-size:.5rem}
+#content .sp-booth-caption{text-align:center;line-height:1.2;min-height:38px}
+#content .sp-booth-caption strong{display:block;font-family:var(--fb);font-size:.82rem;color:var(--sp-cream)}
+#content .sp-booth-caption span{display:block;font-family:var(--fm);font-size:.5rem;letter-spacing:.08em;text-transform:uppercase;color:var(--sp-muted);margin-top:.25rem}
+#content .sp-activation-groups{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem;align-items:start}
+#content .sp-activation-group{min-width:0;padding:1rem;border:1px solid var(--sp-rule);border-radius:18px;background:rgba(255,255,255,.018)}
+#content .sp-activation-group h3{margin-bottom:.65rem;padding-bottom:.65rem;border-bottom:1px solid var(--sp-rule);font-size:1.35rem}
+#content .sp-activation-grid{display:grid;grid-template-columns:1fr;gap:.6rem}
+#content .sp-activation{padding:.78rem .82rem}
+@media(max-width:980px){#content .sp-activation-groups{grid-template-columns:1fr}}
+@media(max-width:650px){#content .sp-package__visual{height:220px}#content .sp-package__tier{font-size:2.15rem}}
 </style>
 
 <section class="sp-hero" id="sponsorships">
@@ -365,8 +387,8 @@
     <div class="sp-hero__top">
       <div class="sp-hero__copy">
         <div class="sp-kicker">Founding Sponsorships</div>
-        <h1>Get in on the ground floor.</h1>
-        <p class="sp-hero__sub">Three core packages from $10K to $100K, plus standalone activations for different goals and budgets.</p>
+        <h1>Be there from day one.</h1>
+        <p class="sp-hero__sub">Flexible options from $7.5K to $100K.</p>
         <div class="sp-hero__actions">
           <a class="sp-btn sp-btn--primary" href="#packages">Explore Sponsorships <span aria-hidden="true">↓</span></a>
           <a class="sp-btn sp-btn--ghost" href="#inquire">Request Availability <span aria-hidden="true">→</span></a>
@@ -395,21 +417,22 @@
 
     <div class="sp-package-grid">
       <article class="sp-package sp-package--title" id="title-package">
-        <div class="sp-package__head"><div><div class="sp-package__tier">Founding Title</div><div class="sp-package__availability">2 available</div></div><div class="sp-package__price">$100,000</div></div>
+        <div class="sp-package__head"><div><div class="sp-package__tier">Title</div><div class="sp-package__availability">2 available</div></div><div class="sp-package__price">$100,000</div></div>
         <div class="sp-package__visual">
           <div class="sp-booth-map sp-booth-map--title" aria-label="20 foot by 20 foot booth, 400 square feet">
             <span class="sp-booth-dim sp-booth-dim--width">20 ft</span>
             <span class="sp-booth-dim sp-booth-dim--height">20 ft</span>
             <div class="sp-booth sp-booth--title"><span>400 sq ft</span></div>
           </div>
+          <div class="sp-booth-caption"><strong>Largest footprint</strong><span>Premier placement on the expo floor</span></div>
         </div>
         <div class="sp-package__facts">
-          <div class="sp-fact"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M4 18V7l8-4 8 4v11"/><path d="M8 21v-8h8v8M2 21h20"/></svg><strong>1 Main + 1 VIP</strong><span>Guaranteed sessions</span></div>
+          <div class="sp-fact"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M4 18V7l8-4 8 4v11"/><path d="M8 21v-8h8v8M2 21h20"/></svg><strong>2 Stage Sessions</strong><span>1 Main Stage + 1 VIP Stage</span></div>
           <div class="sp-fact"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M2 12s3.5-6 10-6 10 6 10 6-3.5 6-10 6S2 12 2 12Z"/><circle cx="12" cy="12" r="2.5"/></svg><strong>Top Billing</strong><span>Event-wide</span></div>
           <div class="sp-fact"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M3 8h18v10H3z"/><path d="M7 8V5h10v3M8 13h8"/></svg><strong>20 Passes</strong><span>10 VIP + 10 Summit</span></div>
         </div>
-        <details><summary>Full benefits</summary><ul class="sp-package__full"><li>Equal top billing as one of two Founding Title Sponsors</li><li>Branding across registration, credentials, stage, website, email, and media</li><li>First selection between the two Title footprint locations</li><li>Programming format and content developed with Summit approval</li></ul></details>
-        <div class="sp-package__actions"><a class="sp-btn sp-btn--primary sp-select" href="#inquire" data-interest="Founding Title Sponsor" data-item="Founding Title Sponsor — $100,000">Request Availability</a></div>
+        <details><summary>Full benefits</summary><ul class="sp-package__full"><li>Equal top billing as one of two Title Sponsors</li><li>Branding across registration, credentials, stage, website, email, and media</li><li>First selection between the two Title footprint locations</li><li>Programming format and content developed with Summit approval</li></ul></details>
+        <div class="sp-package__actions"><a class="sp-btn sp-btn--primary sp-select" href="#inquire" data-interest="Title Sponsor" data-item="Title Sponsor — $100,000">Request Availability</a></div>
       </article>
 
       <article class="sp-package sp-package--gold" id="gold-package">
@@ -420,9 +443,10 @@
             <span class="sp-booth-dim sp-booth-dim--height">10 ft</span>
             <div class="sp-booth sp-booth--gold"><span>200 sq ft</span></div>
           </div>
+          <div class="sp-booth-caption"><strong>Double-width presence</strong><span>Premium placement with room to activate</span></div>
         </div>
         <div class="sp-package__facts">
-          <div class="sp-fact"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M4 18V7l8-4 8 4v11"/><path d="M8 21v-8h8v8M2 21h20"/></svg><strong>1 Main + 1 VIP</strong><span>Panel/interview + session</span></div>
+          <div class="sp-fact"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M4 18V7l8-4 8 4v11"/><path d="M8 21v-8h8v8M2 21h20"/></svg><strong>2 Stage Sessions</strong><span>Main panel/interview + VIP session</span></div>
           <div class="sp-fact"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M2 12s3.5-6 10-6 10 6 10 6-3.5 6-10 6S2 12 2 12Z"/><circle cx="12" cy="12" r="2.5"/></svg><strong>Prominent</strong><span>Brand visibility</span></div>
           <div class="sp-fact"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M3 8h18v10H3z"/><path d="M7 8V5h10v3M8 13h8"/></svg><strong>12 Passes</strong><span>6 VIP + 6 Summit</span></div>
         </div>
@@ -438,6 +462,7 @@
             <span class="sp-booth-dim sp-booth-dim--height">10 ft</span>
             <div class="sp-booth sp-booth--silver"><span>100 sq ft</span></div>
           </div>
+          <div class="sp-booth-caption"><strong>Turnkey expo presence</strong><span>Everything needed to meet attendees</span></div>
         </div>
         <div class="sp-package__facts">
           <div class="sp-fact"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M8 4v16M16 4v16"/></svg><strong>Turnkey Booth</strong><span>Backwall + furniture</span></div>
@@ -559,7 +584,7 @@
         <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
         <div class="sp-selected" id="inqSelections" hidden><div class="sp-selected__label">Selected opportunities</div><div class="sp-selected__chips" id="inqSelectionChips"></div></div>
         <div class="sp-form__row"><label class="sp-field"><span>Name</span><input type="text" name="name" required autocomplete="name"></label><label class="sp-field"><span>Work Email</span><input type="email" name="email" required autocomplete="email"></label></div>
-        <div class="sp-form__row"><label class="sp-field"><span>Company</span><input type="text" name="company" required autocomplete="organization"></label><label class="sp-field"><span>Interested In</span><select name="interest" id="interestSelect" required><option value="" disabled selected>Select one</option><option>Founding Title Sponsor</option><option>Gold Sponsor</option><option>Silver Sponsor</option><option>Featured Partnership Only</option><option>Open Source Area (by application)</option><option>Not sure yet</option></select></label></div>
+        <div class="sp-form__row"><label class="sp-field"><span>Company</span><input type="text" name="company" required autocomplete="organization"></label><label class="sp-field"><span>Interested In</span><select name="interest" id="interestSelect" required><option value="" disabled selected>Select one</option><option>Title Sponsor</option><option>Gold Sponsor</option><option>Silver Sponsor</option><option>Featured Partnership Only</option><option>Open Source Area (by application)</option><option>Not sure yet</option></select></label></div>
         <label class="sp-field"><span>Anything else?</span><textarea name="message" rows="4" placeholder="Your goals, preferred opportunity, or questions."></textarea></label>
         <div class="sp-form__foot"><p class="sp-form__note">We’ll reply within two business days. Nothing is committed until the final scope is agreed.</p><button type="submit" class="sp-btn sp-btn--primary">Request Availability <span aria-hidden="true">→</span></button></div>
         <div class="sp-form__thanks" id="inqThanks" hidden aria-live="polite">Thank you. We received your inquiry and will get back to you shortly.</div>
