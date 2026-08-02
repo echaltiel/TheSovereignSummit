@@ -811,6 +811,15 @@ body{overflow-x:clip}
 @media(min-width:861px){#content .sp-fact strong,#content .sp-fact > span{align-self:center}}
 @media(max-width:1160px) and (min-width:961px){#content .sp-fact strong{font-size:.88rem}#content .sp-fact > span{font-size:.76rem}}
 @media(min-width:861px){#content .sp-fact > span{white-space:nowrap}#content .sp-fact > span br{white-space:normal}}
+
+/* All three emblems were given different box sizes (64x72 / 60x69 / 58x68),
+   so the bolts rendered at different scales with tops 2px apart. */
+#content .sp-package__emblem,
+#content .sp-package__emblem--title,
+#content .sp-package__emblem--gold,
+#content .sp-package__emblem--silver{width:64px;height:72px}
+@media(max-width:1160px){#content .sp-package__emblem{width:58px;height:65px}}
+@media(max-width:960px){#content .sp-package__emblem{width:54px;height:61px}}
 </style>
 </head>
 <body>
