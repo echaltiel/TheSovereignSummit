@@ -32,7 +32,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Instrument+Serif&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=189">
+<link rel="stylesheet" href="styles.css?v=192">
 
 <style>
 /* ================================================================
@@ -94,8 +94,8 @@ body{overflow-x:clip}
 #content .sp-hero{position:relative;display:flex;align-items:center;min-height:clamp(430px,58svh,560px);padding:clamp(3.1rem,5vw,4.7rem) 0;isolation:isolate;overflow:hidden}
 #content .sp-hero__bg{position:absolute;inset:0;z-index:-3}
 #content .sp-hero__bg img{width:100%;height:100%;object-fit:cover;object-position:center 42%;filter:saturate(.82) contrast(1.02)}
-#content .sp-hero__scrim{position:absolute;inset:0;z-index:-2;background:linear-gradient(90deg,rgba(0,18,39,.98) 0%,rgba(0,24,57,.9) 44%,rgba(0,24,57,.43) 78%,rgba(0,24,57,.22) 100%),linear-gradient(180deg,rgba(0,18,39,.28),rgba(0,18,39,.12) 50%,rgba(0,18,39,.92))}
-#content .sp-hero__scrim::after{content:"";position:absolute;inset:auto 0 0;height:1px;background:linear-gradient(90deg,transparent,rgba(244,236,224,.22),transparent)}
+#content .sp-hero__scrim{position:absolute;inset:0;z-index:-2;background:linear-gradient(90deg,rgba(0,18,39,.98) 0%,rgba(0,24,57,.9) 44%,rgba(0,24,57,.43) 78%,rgba(0,24,57,.22) 100%),linear-gradient(180deg,rgba(0,18,39,.24) 0%,rgba(0,18,39,.08) 44%,rgba(0,18,39,.48) 70%,var(--sp-bg-deep) 100%)}
+#content .sp-hero__scrim::after{content:"";position:absolute;inset:auto 0 -1px;height:clamp(88px,17vw,170px);background:linear-gradient(180deg,transparent 0%,rgba(0,18,39,.22) 30%,rgba(0,18,39,.7) 68%,var(--sp-bg-deep) 100%);pointer-events:none}
 #content .sp-hero__inner{position:relative;width:100%}
 #content .sp-hero__top{display:grid;grid-template-columns:minmax(0,1fr) minmax(280px,330px);align-items:end;gap:clamp(2rem,5vw,5rem)}
 #content .sp-hero__copy{max-width:710px}
@@ -113,7 +113,7 @@ body{overflow-x:clip}
 #content .sp-speakers__arrow{margin-left:auto;font-family:var(--fm);font-size:.88rem;color:var(--sp-orange)}
 
 /* Core packages */
-#content .sp-packages{padding:1.35rem 0 2.2rem;background:var(--sp-bg-deep);scroll-margin-top:var(--header-h,80px)}
+#content .sp-packages{position:relative;margin-top:-1px;padding:1.35rem 0 2.2rem;background:var(--sp-bg-deep);scroll-margin-top:var(--header-h,80px)}
 #content .sp-packages .sp-section-head{margin-bottom:1rem}
 #content .sp-packages .sp-kicker{margin-bottom:.35rem}
 #content .sp-packages .sp-section-title{font-size:clamp(1.7rem,2.45vw,2.5rem)}
@@ -316,10 +316,15 @@ body{overflow-x:clip}
 
 <!-- ===== SITE HEADER ===== -->
 <div class="header" id="siteHeader">
+  <a class="ticker" href="/tickets" aria-label="View Summit passes">
+    <div class="ticker__inner">
+      <span class="ticker__btc" id="btcTicker">₿itcoin</span>
+    </div>
+  </a>
   <div class="nav-wrap" id="navWrap">
     <nav class="nav">
       <a class="nav__brand" href="/#top" aria-label="The Sovereign Summit">
-        <img src="images/nav-bar-header-withdate.png?v=1" alt="The Sovereign Summit &middot; February 5-6, 2027" fetchpriority="high">
+        <img src="images/nav-bar-header-withdate.png" alt="The Sovereign Summit, February 5-6 2027" fetchpriority="high">
       </a>
       <div class="nav__sp nav__sp--2" aria-hidden="true"></div>
       <ul class="nav__links">
@@ -351,7 +356,7 @@ body{overflow-x:clip}
       <div class="nav__sp" aria-hidden="true"></div>
       <div class="nav__sp" aria-hidden="true"></div>
       <div class="nav__actions">
-        <a href="#inquire" class="btn nav__cta">Become a Sponsor <span class="btn__arrow">→</span></a>
+        <a href="/tickets" class="btn nav__cta">Buy Tickets <span class="btn__arrow">→</span></a>
         <button class="nav__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
           <span></span><span></span><span></span>
         </button>
@@ -374,7 +379,7 @@ body{overflow-x:clip}
       <li><a class="mobile-menu__link" href="/faq">FAQ <span aria-hidden="true">→</span></a></li>
       <li><a class="mobile-menu__link" href="/leadership">Leadership <span aria-hidden="true">→</span></a></li>
     </ul>
-    <a href="#inquire" class="btn mobile-menu__cta">Become a Sponsor <span class="btn__arrow">→</span></a>
+    <a href="/tickets" class="btn mobile-menu__cta">Buy Tickets <span class="btn__arrow">→</span></a>
     <a href="https://x.com/sovereignmiami" target="_blank" rel="noopener" class="mobile-menu__social" aria-label="Follow The Sovereign Summit on X">
       <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
       <span>Follow on X</span>
@@ -893,6 +898,24 @@ body{overflow-x:clip}
 
 <script>
 (function(){
+  var btcEl = document.getElementById('btcTicker');
+  if(btcEl && window.fetch){
+    var showPrice = function(usd){
+      var n = Math.round(Number(usd));
+      if(!isFinite(n) || n <= 0) return;
+      btcEl.textContent = '$' + n.toLocaleString('en-US') + ' USD per ₿itcoin';
+    };
+    fetch('https://api.coinbase.com/v2/prices/BTC-USD/spot')
+      .then(function(r){ return r.json(); })
+      .then(function(j){ showPrice(j && j.data && j.data.amount); })
+      .catch(function(){
+        fetch('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd')
+          .then(function(r){ return r.json(); })
+          .then(function(j){ showPrice(j && j.bitcoin && j.bitcoin.usd); })
+          .catch(function(){ /* keep fallback text */ });
+      });
+  }
+
   var header = document.getElementById('siteHeader');
   var setH = function(){
     if(!header) return;
