@@ -884,6 +884,22 @@ body{overflow-x:clip}
 }
 #content .sp-open-source .sp-btn > span{font-size:1.2em}
 @media(max-width:700px){#content .sp-open-source .sp-btn{min-width:0;width:100%}}
+
+/* 1) Booth boxes sit on a shared floor line with a consistent gap to their
+      dimension label, so the spacing reads the same on all three cards. */
+#content .sp-booth-scale{
+  display:flex!important;flex-direction:column;align-items:center;
+  justify-content:flex-end!important;
+  gap:.6rem!important;padding:0 0 .55rem!important;position:static;
+}
+#content .sp-booth-label{
+  position:static!important;transform:none!important;
+  left:auto;bottom:auto;top:auto;white-space:nowrap;
+}
+
+/* 2) Drop the +/- marker on the benefits toggle and rebalance the row. */
+#content .sp-package details summary::after{content:""!important;display:none!important}
+#content .sp-package details summary{justify-content:flex-start!important}
 </style>
 </head>
 <body>
