@@ -828,6 +828,13 @@ body{overflow-x:clip}
   #content .sp-fact strong{font-size:clamp(.76rem,1.02vw,.93rem)!important}
   #content .sp-fact > span{font-size:clamp(.68rem,.86vw,.8rem)!important}
 }
+
+/* The cell had one implicit auto-sized column (86.8px) left-aligned inside a
+   97.8px content box, so everything centred in the track, not the cell. */
+@media(min-width:861px){
+  #content .sp-fact{grid-template-columns:minmax(0,1fr)!important;justify-items:center;justify-content:stretch}
+  #content .sp-fact > *{grid-column:1!important;justify-self:center;max-width:100%}
+}
 </style>
 </head>
 <body>
