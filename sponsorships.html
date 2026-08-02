@@ -35,7 +35,46 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Instrument+Serif&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css?v=189">
-<style>#content{padding-top:calc(var(--header-h) + clamp(1rem,2.5vw,2rem))}</style>
+<style>#content{padding-top:calc(var(--header-h) + clamp(1rem,2.5vw,2rem))}
+/* Requested refinements */
+#content .sp-booth-map{position:relative;width:170px;height:125px;display:flex;align-items:center;justify-content:center;padding:20px 22px 18px 28px}
+#content .sp-booth{box-shadow:0 14px 28px rgba(0,0,0,.24);font-size:.56rem;letter-spacing:.06em;border-radius:13px}
+#content .sp-booth span{position:relative;z-index:2}
+#content .sp-booth--title{width:100px;height:100px;background:var(--sp-orange)}
+#content .sp-booth--gold{width:100px;height:50px;background:var(--sp-gold)}
+#content .sp-booth--silver{width:50px;height:50px;background:var(--sp-silver)}
+#content .sp-booth-dim{position:absolute;font-family:var(--fm);font-size:.5rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--sp-muted)}
+#content .sp-booth-dim::before,#content .sp-booth-dim::after{content:"";position:absolute;background:var(--sp-rule-strong)}
+#content .sp-booth-dim--width{top:3px;left:50%;transform:translateX(-50%);padding:0 .35rem}
+#content .sp-booth-dim--width::before{height:1px;width:34px;right:100%;top:50%}
+#content .sp-booth-dim--width::after{height:1px;width:34px;left:100%;top:50%}
+#content .sp-booth-dim--height{left:3px;top:50%;transform:translateY(-50%) rotate(-90deg);padding:0 .35rem}
+#content .sp-booth-dim--height::before{height:1px;width:25px;right:100%;top:50%}
+#content .sp-booth-dim--height::after{height:1px;width:25px;left:100%;top:50%}
+#content .sp-package__visual{height:165px}
+#content .sp-disclaimer{text-align:center;margin-top:1rem}
+#content .sp-activation-groups{display:flex;flex-direction:column;gap:1.7rem}
+#content .sp-activation-group h3{font-family:var(--fd);font-size:1.25rem;font-weight:400;color:var(--sp-cream);margin-bottom:.7rem}
+#content .sp-activation-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:.75rem}
+#content .sp-activation{display:grid;grid-template-columns:auto 1fr auto;gap:.7rem;align-items:center;min-width:0;padding:.85rem .9rem;border:1px solid var(--sp-rule);border-radius:15px;background:rgba(255,255,255,.025);transition:transform .16s ease,border-color .16s ease,background .16s ease}
+#content .sp-activation:hover{transform:translateY(-2px);border-color:var(--sp-rule-strong);background:rgba(255,255,255,.045)}
+#content .sp-activation__icon{width:39px;height:39px;border-radius:11px;display:grid;place-items:center;background:rgba(255,105,65,.13);border:1px solid rgba(255,105,65,.34);color:var(--sp-orange);flex-shrink:0}
+#content .sp-activation__icon--gold{background:rgba(232,196,106,.11);border-color:rgba(232,196,106,.3);color:var(--sp-gold)}
+#content .sp-activation__icon--silver{background:rgba(198,206,217,.09);border-color:rgba(198,206,217,.25);color:var(--sp-silver)}
+#content .sp-activation__icon svg{width:21px;height:21px;stroke:currentColor}
+#content .sp-activation__body{min-width:0}
+#content .sp-activation__body strong{display:block;font-size:.82rem;line-height:1.25;color:var(--sp-cream);font-weight:650}
+#content .sp-activation__body small{display:block;font-size:.67rem;line-height:1.25;color:var(--sp-muted);margin-top:.18rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+#content .sp-activation__price{font-family:var(--fm);font-size:.6rem;font-weight:700;color:var(--sp-orange);white-space:nowrap}
+#content .sp-open-source{display:grid;grid-template-columns:auto 1fr auto;gap:1rem;align-items:center;margin-top:1.2rem;padding:1rem 1.1rem;border:1px dashed var(--sp-rule-strong);border-radius:16px;background:rgba(255,255,255,.018)}
+#content .sp-open-source__icon{width:48px;height:48px;border-radius:14px;display:grid;place-items:center;background:rgba(255,105,65,.12);border:1px solid rgba(255,105,65,.3);color:var(--sp-orange)}
+#content .sp-open-source__icon svg{width:24px;height:24px;stroke:currentColor}
+#content .sp-open-source strong{display:block;font-family:var(--fd);font-size:1.15rem;font-weight:400;color:var(--sp-cream)}
+#content .sp-open-source span{display:block;font-size:.78rem;line-height:1.42;color:var(--sp-muted);margin-top:.2rem}
+@media(max-width:1080px){#content .sp-activation-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:650px){#content .sp-activation-grid{grid-template-columns:1fr}#content .sp-open-source{grid-template-columns:auto 1fr}#content .sp-open-source .sp-btn{grid-column:1 / -1;width:100%}}
+
+</style>
 </head>
 <body>
 <div class="header" id="siteHeader">
@@ -325,9 +364,9 @@
   <div class="sp-container sp-hero__inner">
     <div class="sp-hero__top">
       <div class="sp-hero__copy">
-        <div class="sp-kicker">Sponsorships</div>
-        <h1>Choose your presence.</h1>
-        <p class="sp-hero__sub">Expo, stage, media, VIP, and hospitality partnerships at The Sovereign Summit.</p>
+        <div class="sp-kicker">Founding Sponsorships</div>
+        <h1>Get in on the ground floor.</h1>
+        <p class="sp-hero__sub">Three core packages from $10K to $100K, plus standalone activations for different goals and budgets.</p>
         <div class="sp-hero__actions">
           <a class="sp-btn sp-btn--primary" href="#packages">Explore Sponsorships <span aria-hidden="true">↓</span></a>
           <a class="sp-btn sp-btn--ghost" href="#inquire">Request Availability <span aria-hidden="true">→</span></a>
@@ -357,9 +396,15 @@
     <div class="sp-package-grid">
       <article class="sp-package sp-package--title" id="title-package">
         <div class="sp-package__head"><div><div class="sp-package__tier">Founding Title</div><div class="sp-package__availability">2 available</div></div><div class="sp-package__price">$100,000</div></div>
-        <div class="sp-package__visual"><div class="sp-booth sp-booth--title">20×20</div></div>
+        <div class="sp-package__visual">
+          <div class="sp-booth-map sp-booth-map--title" aria-label="20 foot by 20 foot booth, 400 square feet">
+            <span class="sp-booth-dim sp-booth-dim--width">20 ft</span>
+            <span class="sp-booth-dim sp-booth-dim--height">20 ft</span>
+            <div class="sp-booth sp-booth--title"><span>400 sq ft</span></div>
+          </div>
+        </div>
         <div class="sp-package__facts">
-          <div class="sp-fact"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M4 18V7l8-4 8 4v11"/><path d="M8 21v-8h8v8M2 21h20"/></svg><strong>Main + VIP</strong><span>Stage sessions</span></div>
+          <div class="sp-fact"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M4 18V7l8-4 8 4v11"/><path d="M8 21v-8h8v8M2 21h20"/></svg><strong>1 Main + 1 VIP</strong><span>Guaranteed sessions</span></div>
           <div class="sp-fact"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M2 12s3.5-6 10-6 10 6 10 6-3.5 6-10 6S2 12 2 12Z"/><circle cx="12" cy="12" r="2.5"/></svg><strong>Top Billing</strong><span>Event-wide</span></div>
           <div class="sp-fact"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M3 8h18v10H3z"/><path d="M7 8V5h10v3M8 13h8"/></svg><strong>20 Passes</strong><span>10 VIP + 10 Summit</span></div>
         </div>
@@ -369,9 +414,15 @@
 
       <article class="sp-package sp-package--gold" id="gold-package">
         <div class="sp-package__head"><div><div class="sp-package__tier">Gold</div><div class="sp-package__availability">4 available</div></div><div class="sp-package__price">$50,000</div></div>
-        <div class="sp-package__visual"><div class="sp-booth sp-booth--gold">10×20</div></div>
+        <div class="sp-package__visual">
+          <div class="sp-booth-map sp-booth-map--gold" aria-label="10 foot by 20 foot booth, 200 square feet">
+            <span class="sp-booth-dim sp-booth-dim--width">20 ft</span>
+            <span class="sp-booth-dim sp-booth-dim--height">10 ft</span>
+            <div class="sp-booth sp-booth--gold"><span>200 sq ft</span></div>
+          </div>
+        </div>
         <div class="sp-package__facts">
-          <div class="sp-fact"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M4 18V7l8-4 8 4v11"/><path d="M8 21v-8h8v8M2 21h20"/></svg><strong>Main + VIP</strong><span>Stage sessions</span></div>
+          <div class="sp-fact"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M4 18V7l8-4 8 4v11"/><path d="M8 21v-8h8v8M2 21h20"/></svg><strong>1 Main + 1 VIP</strong><span>Panel/interview + session</span></div>
           <div class="sp-fact"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M2 12s3.5-6 10-6 10 6 10 6-3.5 6-10 6S2 12 2 12Z"/><circle cx="12" cy="12" r="2.5"/></svg><strong>Prominent</strong><span>Brand visibility</span></div>
           <div class="sp-fact"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M3 8h18v10H3z"/><path d="M7 8V5h10v3M8 13h8"/></svg><strong>12 Passes</strong><span>6 VIP + 6 Summit</span></div>
         </div>
@@ -381,7 +432,13 @@
 
       <article class="sp-package sp-package--silver" id="silver-package">
         <div class="sp-package__head"><div><div class="sp-package__tier">Silver</div><div class="sp-package__availability">23 available</div></div><div class="sp-package__price">$10,000</div></div>
-        <div class="sp-package__visual"><div class="sp-booth sp-booth--silver">10×10</div></div>
+        <div class="sp-package__visual">
+          <div class="sp-booth-map sp-booth-map--silver" aria-label="10 foot by 10 foot booth, 100 square feet">
+            <span class="sp-booth-dim sp-booth-dim--width">10 ft</span>
+            <span class="sp-booth-dim sp-booth-dim--height">10 ft</span>
+            <div class="sp-booth sp-booth--silver"><span>100 sq ft</span></div>
+          </div>
+        </div>
         <div class="sp-package__facts">
           <div class="sp-fact"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M8 4v16M16 4v16"/></svg><strong>Turnkey Booth</strong><span>Backwall + furniture</span></div>
           <div class="sp-fact"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M2 12s3.5-6 10-6 10 6 10 6-3.5 6-10 6S2 12 2 12Z"/><circle cx="12" cy="12" r="2.5"/></svg><strong>Visibility</strong><span>Web + signage</span></div>
@@ -392,46 +449,98 @@
       </article>
     </div>
 
-    <div class="sp-included" aria-label="Included with expo sponsorships">
-      <div class="sp-included__item"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M8 4v16M16 4v16"/></svg><span>Standard booth setup</span></div>
-      <div class="sp-included__item"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M13 2 5 14h7l-1 8 8-12h-7l1-8Z"/></svg><span>Power</span></div>
-      <div class="sp-included__item"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M5 12.5a10 10 0 0 1 14 0M8.5 16a5 5 0 0 1 7 0M12 20h.01"/></svg><span>Hardwired internet</span></div>
-      <div class="sp-included__item"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M4 4h16v16H4z"/><path d="M8 8h8M8 12h8M8 16h5"/></svg><span>Website + event listing</span></div>
-    </div>
-    <p class="sp-disclaimer">Custom construction, specialty furniture, freight, drayage, venue labor, additional AV, and sponsor-requested upgrades are quoted separately. Sponsorships do not include category exclusivity.</p>
+    <p class="sp-disclaimer">Custom builds, freight, venue labor, and specialty production are quoted separately.</p>
   </div>
 </section>
 
 <section class="sp-partnerships" id="partnerships">
   <div class="sp-container">
     <div class="sp-section-head">
-      <div><div class="sp-kicker">Featured Partnerships</div><h2 class="sp-section-title">Own a moment.</h2></div>
-      <p class="sp-section-note">Available on their own or paired with an expo package. Open a category to see the opportunities.</p>
+      <div><div class="sp-kicker">Brand Activations</div><h2 class="sp-section-title">Go beyond the booth.</h2></div>
+      <p class="sp-section-note">Available alone or paired with a core sponsorship.</p>
     </div>
 
-    <div class="sp-partnership-grid">
-      <details class="sp-partner-group">
-        <summary><span class="sp-partner-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M12 3v18M8 7a4 4 0 1 1 8 0v5a4 4 0 1 1-8 0V7Z"/><path d="M5 11v1a7 7 0 0 0 14 0v-1"/></svg></span><span><span class="sp-partner-title">Stage &amp; Media</span><span class="sp-partner-meta">3 opportunities · $10K–$15K</span></span><span class="sp-partner-chevron">+</span></summary>
-        <ul class="sp-partner-list"><li><a class="sp-select" href="#inquire" data-interest="Featured Partnership Only" data-item="Livestream &amp; Media — $15,000"><strong>Livestream &amp; Media</strong><span>$15,000</span></a></li><li><a class="sp-select" href="#inquire" data-interest="Featured Partnership Only" data-item="Bitcoin Fundamentals — $12,500"><strong>Bitcoin Fundamentals</strong><span>$12,500</span></a></li><li><a class="sp-select" href="#inquire" data-interest="Featured Partnership Only" data-item="Workshop Track — $10,000"><strong>Workshop Track · 2 available</strong><span>$10,000</span></a></li></ul>
-      </details>
+    <div class="sp-activation-groups">
+      <section class="sp-activation-group" aria-labelledby="activation-stage-media">
+        <h3 id="activation-stage-media">Stage &amp; Media</h3>
+        <div class="sp-activation-grid">
+          <a class="sp-activation sp-select" href="#inquire" data-interest="Featured Partnership Only" data-item="Livestream &amp; Media — $15,000">
+            <span class="sp-activation__icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><rect x="3" y="5" width="14" height="14" rx="2"/><path d="m17 10 4-2v8l-4-2z"/></svg></span>
+            <span class="sp-activation__body"><strong>Livestream &amp; Media</strong><small>Every Main Stage broadcast</small></span><span class="sp-activation__price">$15,000</span>
+          </a>
+          <a class="sp-activation sp-select" href="#inquire" data-interest="Featured Partnership Only" data-item="Bitcoin Fundamentals — $12,500">
+            <span class="sp-activation__icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M4 4h7a3 3 0 0 1 3 3v13a3 3 0 0 0-3-3H4z"/><path d="M20 4h-3a3 3 0 0 0-3 3v13a3 3 0 0 1 3-3h3z"/></svg></span>
+            <span class="sp-activation__body"><strong>Bitcoin Fundamentals</strong><small>Thursday newcomer session</small></span><span class="sp-activation__price">$12,500</span>
+          </a>
+          <a class="sp-activation sp-select" href="#inquire" data-interest="Featured Partnership Only" data-item="Workshop Track — $10,000">
+            <span class="sp-activation__icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M4 5h16v11H4z"/><path d="M8 20h8M12 16v4"/><path d="M8 9h8M8 12h5"/></svg></span>
+            <span class="sp-activation__body"><strong>Workshop Track</strong><small>2 tracks available</small></span><span class="sp-activation__price">$10,000</span>
+          </a>
+        </div>
+      </section>
 
-      <details class="sp-partner-group">
-        <summary><span class="sp-partner-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M7 3h10l-1 7a4 4 0 0 1-8 0L7 3Z"/><path d="M12 14v7M8 21h8"/></svg></span><span><span class="sp-partner-title">VIP &amp; Hospitality</span><span class="sp-partner-meta">4 opportunities · $12.5K–$25K+</span></span><span class="sp-partner-chevron">+</span></summary>
-        <ul class="sp-partner-list"><li><a class="sp-select" href="#inquire" data-interest="Featured Partnership Only" data-item="Summit After Party — $25,000 + costs"><strong>Summit After Party</strong><span>$25,000+</span></a></li><li><a class="sp-select" href="#inquire" data-interest="Featured Partnership Only" data-item="VIP Oceanfront Soiree — $25,000 + costs"><strong>VIP Oceanfront Soiree</strong><span>$25,000+</span></a></li><li><a class="sp-select" href="#inquire" data-interest="Featured Partnership Only" data-item="VIP Welcome Reception — $20,000 + costs"><strong>VIP Welcome Reception</strong><span>$20,000+</span></a></li><li><a class="sp-select" href="#inquire" data-interest="Featured Partnership Only" data-item="Satoshi Farewell Brunch — $12,500 + costs"><strong>Satoshi Farewell Brunch</strong><span>$12,500+</span></a></li></ul>
-      </details>
+      <section class="sp-activation-group" aria-labelledby="activation-vip">
+        <h3 id="activation-vip">VIP &amp; Hospitality</h3>
+        <div class="sp-activation-grid">
+          <a class="sp-activation sp-select" href="#inquire" data-interest="Featured Partnership Only" data-item="Summit After Party — $25,000 + costs">
+            <span class="sp-activation__icon sp-activation__icon--gold"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M9 18V5l10-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="16" cy="16" r="3"/></svg></span>
+            <span class="sp-activation__body"><strong>Summit After Party</strong><small>Saturday closing night</small></span><span class="sp-activation__price">$25,000+</span>
+          </a>
+          <a class="sp-activation sp-select" href="#inquire" data-interest="Featured Partnership Only" data-item="VIP Oceanfront Soiree — $25,000 + costs">
+            <span class="sp-activation__icon sp-activation__icon--gold"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M3 15c2-2 4-2 6 0s4 2 6 0 4-2 6 0"/><path d="M3 19c2-2 4-2 6 0s4 2 6 0 4-2 6 0"/><circle cx="12" cy="7" r="3"/></svg></span>
+            <span class="sp-activation__body"><strong>VIP Oceanfront Soiree</strong><small>Friday evening</small></span><span class="sp-activation__price">$25,000+</span>
+          </a>
+          <a class="sp-activation sp-select" href="#inquire" data-interest="Featured Partnership Only" data-item="VIP Welcome Reception — $20,000 + costs">
+            <span class="sp-activation__icon sp-activation__icon--gold"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M7 3h10l-1 7a4 4 0 0 1-8 0L7 3Z"/><path d="M12 14v7M8 21h8"/></svg></span>
+            <span class="sp-activation__body"><strong>VIP Welcome Reception</strong><small>Thursday evening</small></span><span class="sp-activation__price">$20,000+</span>
+          </a>
+          <a class="sp-activation sp-select" href="#inquire" data-interest="Featured Partnership Only" data-item="Satoshi Farewell Brunch — $12,500 + costs">
+            <span class="sp-activation__icon sp-activation__icon--gold"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M4 9h12v5a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5V9Z"/><path d="M16 11h2a3 3 0 0 1 0 6h-3M7 4v2M11 4v2"/></svg></span>
+            <span class="sp-activation__body"><strong>Satoshi Farewell Brunch</strong><small>Sunday morning</small></span><span class="sp-activation__price">$12,500+</span>
+          </a>
+        </div>
+      </section>
 
-      <details class="sp-partner-group">
-        <summary><span class="sp-partner-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M4 5h16v14H4z"/><path d="M8 9h8M8 13h5"/><circle cx="17" cy="15" r="2"/></svg></span><span><span class="sp-partner-title">Brand &amp; Utility</span><span class="sp-partner-meta">6 opportunities · $7.5K–$20K+</span></span><span class="sp-partner-chevron">+</span></summary>
-        <ul class="sp-partner-list"><li><a class="sp-select" href="#inquire" data-interest="Featured Partnership Only" data-item="Official Lanyard — $20,000 + production"><strong>Official Lanyard</strong><span>$20,000+</span></a></li><li><a class="sp-select" href="#inquire" data-interest="Featured Partnership Only" data-item="Sovereign Lounge — $15,000 + build"><strong>Sovereign Lounge</strong><span>$15,000+</span></a></li><li><a class="sp-select" href="#inquire" data-interest="Featured Partnership Only" data-item="Official Tote Bag — $12,500 + production"><strong>Official Tote Bag</strong><span>$12,500+</span></a></li><li><a class="sp-select" href="#inquire" data-interest="Featured Partnership Only" data-item="Official WiFi — $10,000"><strong>Official WiFi</strong><span>$10,000</span></a></li><li><a class="sp-select" href="#inquire" data-interest="Featured Partnership Only" data-item="Coffee &amp; Water Stations — $7,500 + costs"><strong>Coffee &amp; Water Stations</strong><span>$7,500+</span></a></li><li><a class="sp-select" href="#inquire" data-interest="Featured Partnership Only" data-item="Charging Lounge — $7,500 + build"><strong>Charging Lounge</strong><span>$7,500+</span></a></li></ul>
-      </details>
-
-      <details class="sp-partner-group">
-        <summary><span class="sp-partner-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M8 12a4 4 0 0 1 4-4h4a4 4 0 0 1 0 8h-4"/><path d="M16 12a4 4 0 0 1-4 4H8a4 4 0 0 1 0-8h4"/></svg></span><span><span class="sp-partner-title">Community</span><span class="sp-partner-meta">Open source + sponsor add-on</span></span><span class="sp-partner-chevron">+</span></summary>
-        <ul class="sp-partner-list"><li><a class="sp-select" href="#inquire" data-interest="Open Source Area (by application)" data-item="Open Source Area — application"><strong>Open Source Area · by application</strong><span>Apply</span></a></li><li><a class="sp-select" href="#inquire" data-interest="Featured Partnership Only" data-item="Promo Insert — $3,000"><strong>Promo Insert · confirmed sponsors only</strong><span>$3,000</span></a></li></ul>
-      </details>
+      <section class="sp-activation-group" aria-labelledby="activation-brand">
+        <h3 id="activation-brand">Brand &amp; Utility</h3>
+        <div class="sp-activation-grid">
+          <a class="sp-activation sp-select" href="#inquire" data-interest="Featured Partnership Only" data-item="Official Lanyard — $20,000 + production">
+            <span class="sp-activation__icon sp-activation__icon--silver"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M8 3v5l4 3 4-3V3"/><rect x="7" y="11" width="10" height="10" rx="2"/><path d="M10 15h4M10 18h3"/></svg></span>
+            <span class="sp-activation__body"><strong>Official Lanyard</strong><small>Every attendee, both days</small></span><span class="sp-activation__price">$20,000+</span>
+          </a>
+          <a class="sp-activation sp-select" href="#inquire" data-interest="Featured Partnership Only" data-item="Sovereign Lounge — $15,000 + build">
+            <span class="sp-activation__icon sp-activation__icon--silver"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M5 11V8a3 3 0 0 1 3-3h8a3 3 0 0 1 3 3v3"/><path d="M4 11h16v7H4zM7 18v2M17 18v2"/></svg></span>
+            <span class="sp-activation__body"><strong>Sovereign Lounge</strong><small>High-dwell expo space</small></span><span class="sp-activation__price">$15,000+</span>
+          </a>
+          <a class="sp-activation sp-select" href="#inquire" data-interest="Featured Partnership Only" data-item="Official Tote Bag — $12,500 + production">
+            <span class="sp-activation__icon sp-activation__icon--silver"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M5 8h14l-1 13H6L5 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg></span>
+            <span class="sp-activation__body"><strong>Official Tote Bag</strong><small>Carried throughout the event</small></span><span class="sp-activation__price">$12,500+</span>
+          </a>
+          <a class="sp-activation sp-select" href="#inquire" data-interest="Featured Partnership Only" data-item="Official WiFi — $10,000">
+            <span class="sp-activation__icon sp-activation__icon--silver"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M5 12.5a10 10 0 0 1 14 0M8.5 16a5 5 0 0 1 7 0M12 20h.01"/></svg></span>
+            <span class="sp-activation__body"><strong>Official WiFi</strong><small>Network name + splash page</small></span><span class="sp-activation__price">$10,000</span>
+          </a>
+          <a class="sp-activation sp-select" href="#inquire" data-interest="Featured Partnership Only" data-item="Coffee &amp; Water Stations — $7,500 + costs">
+            <span class="sp-activation__icon sp-activation__icon--silver"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M4 10h12v5a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5v-5Z"/><path d="M16 12h2a3 3 0 0 1 0 6h-3M8 4v3M12 4v3"/></svg></span>
+            <span class="sp-activation__body"><strong>Coffee &amp; Water Stations</strong><small>Daily attendee ritual</small></span><span class="sp-activation__price">$7,500+</span>
+          </a>
+          <a class="sp-activation sp-select" href="#inquire" data-interest="Featured Partnership Only" data-item="Charging Lounge — $7,500 + build">
+            <span class="sp-activation__icon sp-activation__icon--silver"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><rect x="5" y="4" width="14" height="16" rx="2"/><path d="M9 4V2M15 4V2M13 8l-3 5h3l-2 4 5-6h-3z"/></svg></span>
+            <span class="sp-activation__body"><strong>Charging Lounge</strong><small>Branded recharge zone</small></span><span class="sp-activation__price">$7,500+</span>
+          </a>
+          <a class="sp-activation sp-select" href="#inquire" data-interest="Featured Partnership Only" data-item="Promo Insert — $3,000">
+            <span class="sp-activation__icon sp-activation__icon--silver"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M6 3h9l3 3v15H6z"/><path d="M14 3v4h4M9 11h6M9 15h6"/></svg></span>
+            <span class="sp-activation__body"><strong>Promo Insert</strong><small>Confirmed sponsors only</small></span><span class="sp-activation__price">$3,000</span>
+          </a>
+        </div>
+      </section>
     </div>
 
-    <div class="sp-partner-foot"><div><strong>Not sure where you fit?</strong><span>Tell us your objective and we’ll recommend the cleanest package.</span></div><a class="sp-btn sp-btn--ghost" href="#inquire">Start a Conversation <span aria-hidden="true">→</span></a></div>
+    <div class="sp-open-source">
+      <span class="sp-open-source__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M8 12a4 4 0 0 1 4-4h4a4 4 0 0 1 0 8h-4"/><path d="M16 12a4 4 0 0 1-4 4H8a4 4 0 0 1 0-8h4"/></svg></span>
+      <div><strong>Open Source Area — by application</strong><span>Subsidized space for open-source projects, nonprofits, community organizations, and small builders. Tell us what you are building.</span></div>
+      <a class="sp-btn sp-btn--ghost sp-select" href="#inquire" data-interest="Open Source Area (by application)" data-item="Open Source Area — application">Apply <span aria-hidden="true">→</span></a>
+    </div>
   </div>
 </section>
 
