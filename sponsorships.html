@@ -756,6 +756,60 @@ body{overflow-x:clip}
 #content .sp-booth--silver{font-size:.42rem;letter-spacing:0}
 #content .sp-booth--silver span{white-space:nowrap}
 @media(min-width:861px){#content .sp-package__actions{padding-top:.55rem}}
+
+/* ---- Fact rows share one row track across all three columns (subgrid) ----
+   Previously each cell was its own grid, so a one-line label sat 9px below a
+   two-line label in the next column. Now icon / label / sub-line share tracks. */
+@media(min-width:861px){
+  #content .sp-package__facts{grid-template-rows:auto auto auto}
+  #content .sp-fact{
+    grid-row:span 3;
+    grid-template-rows:subgrid!important;
+    align-content:stretch!important;
+    align-items:center;
+    row-gap:.38rem;
+    padding:1.05rem .62rem 1rem;
+    min-height:0!important;
+  }
+}
+
+/* ---- Booth boxes now sit on a shared baseline just above their labels ----
+   Title's box was 3px above its label while Gold and Silver floated 24px above
+   theirs, which is what made the three panels look unaligned. */
+#content .sp-booth-scale{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:flex-end;
+  padding-bottom:1.15rem;
+}
+#content .sp-booth{margin-bottom:0}
+
+/* ---- Open Source tile ---- */
+#content .sp-open-source{
+  align-items:center;
+  gap:1.15rem;
+  margin-top:1.6rem;
+  padding:1.35rem 1.5rem;
+  border:1px solid rgba(255,105,65,.34);
+  border-radius:18px;
+  background:linear-gradient(180deg,rgba(255,105,65,.075),rgba(255,105,65,.02));
+}
+#content .sp-open-source__icon{
+  width:50px;height:50px;
+  border-color:rgba(255,105,65,.42);
+  background:rgba(255,105,65,.16);
+}
+#content .sp-open-source__icon svg{width:25px;height:25px}
+#content .sp-open-source strong{font-size:1.24rem;line-height:1.2}
+#content .sp-open-source span{margin-top:.4rem;font-size:.88rem;line-height:1.5;max-width:66ch}
+#content .sp-open-source .sp-btn{white-space:nowrap}
+@media(max-width:860px){
+  #content .sp-open-source{gap:.85rem;padding:1.1rem}
+  #content .sp-open-source span{max-width:none}
+}
+@media(min-width:861px){#content .sp-fact strong,#content .sp-fact > span{align-self:start}}
+@media(max-width:1160px) and (min-width:961px){#content .sp-fact strong{font-size:.88rem}#content .sp-fact > span{font-size:.76rem}}
 </style>
 </head>
 <body>
@@ -1207,7 +1261,7 @@ body{overflow-x:clip}
       </span>
       <div>
         <strong>Open Source Area — by application</strong>
-        <span>Space for open-source projects, nonprofits, community organizations, and small builders. Accepted applicants are offered a compact kiosk at our cost. Tell us what you are building.</span>
+        <span>For open-source projects, nonprofits, community organizations, and small builders. Accepted applicants get a compact kiosk, smaller than the paid booths, at the production company&rsquo;s price with nothing added by us.</span>
       </div>
       <a class="sp-btn sp-btn--ghost sp-select" href="#inquire" data-interest="Open Source Area (by application)" data-item="Open Source Area — application">Apply <span aria-hidden="true">→</span></a>
     </div>
