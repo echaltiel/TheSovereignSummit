@@ -35,126 +35,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Instrument+Serif&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css?v=189">
-<style>#content{padding-top:calc(var(--header-h) + clamp(1rem,2.5vw,2rem))}
-/* ===== Above-the-fold redesign ===== */
-#content .spx-section--hero{padding-top:clamp(.7rem,1.4vw,1rem);padding-bottom:clamp(1.1rem,2vw,1.5rem)}
-#content .spx-hero-shell{display:flex;flex-direction:column;gap:1rem}
-#content .spx-hero-top{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(320px,.95fr);gap:1rem;align-items:start}
-#content .spx-copy{max-width:none}
-#content .spx-title{max-width:12ch;font-size:clamp(2.1rem,4.3vw,3.7rem);line-height:.95}
-#content .spx-desc{max-width:56ch;font-size:1.02rem;line-height:1.5;color:var(--dk-c72);margin-top:.85rem}
-#content .spx-actions{margin-top:1.1rem}
-#content .spx-actions .btn{min-width:0}
-#content .spx-actions .btn--ghost{border-color:var(--dk-rule-str);color:var(--dk-c)}
-#content .spx-actions .btn--ghost::before{background:var(--accent)}
-#content .spx-actions .btn--ghost:hover{color:#001227;border-color:var(--accent)}
-#content .spx-context{display:grid;grid-template-columns:repeat(4,1fr);gap:.75rem}
-#content .spx-context__item{padding:.9rem 1rem;border:1px solid var(--dk-rule);border-radius:14px;background:rgba(255,255,255,.02)}
-#content .spx-context__k{font-family:var(--fm);font-size:.58rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:.35rem}
-#content .spx-context__v{font-family:var(--fb);font-size:1.05rem;font-weight:700;line-height:1.15;color:var(--dk-c)}
-#content .spx-helper{padding:1rem 1.05rem;border:1px solid var(--dk-rule);border-radius:18px;background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.02));box-shadow:inset 0 1px 0 rgba(255,255,255,.04)}
-#content .spx-helper__label{font-family:var(--fm);font-size:.62rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin-bottom:.6rem}
-#content .spx-helper__title{font-family:var(--fd);font-size:1.35rem;line-height:1.08;color:var(--dk-c);margin-bottom:.65rem}
-#content .spx-helper__list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:.55rem}
-#content .spx-helper__list li{position:relative;padding-left:1rem;font-size:.87rem;line-height:1.45;color:var(--dk-c72)}
-#content .spx-helper__list li::before{content:'';position:absolute;left:0;top:.62em;width:.42rem;height:2px;background:var(--accent)}
-#content .spx-helper__meta{margin-top:.8rem;padding-top:.8rem;border-top:1px solid var(--dk-rule);font-family:var(--fm);font-size:.6rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--dk-c72);display:flex;flex-wrap:wrap;gap:.4rem .75rem}
-#content .spx-level-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
-#content .spx-level-card{display:flex;flex-direction:column;gap:.6rem;padding:1rem 1.05rem 1.05rem;border:1px solid var(--dk-rule);border-radius:16px;background:rgba(255,255,255,.02)}
-#content .spx-level-card--title{border-color:var(--accent)}
-#content .spx-level-card--gold{border-color:rgba(232,196,106,.45)}
-#content .spx-level-card--silver{border-color:rgba(198,206,217,.35)}
-#content .spx-level-card__top{display:flex;align-items:flex-start;justify-content:space-between;gap:.8rem}
-#content .spx-level-card__name{font-family:var(--fd);font-size:1.38rem;line-height:1.05;color:var(--dk-c)}
-#content .spx-level-card__avail{font-family:var(--fm);font-size:.56rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--dk-c72);margin-top:.25rem}
-#content .spx-level-card__price{font-family:var(--fb);font-size:1.9rem;font-weight:900;line-height:1;color:var(--dk-c);letter-spacing:-.03em;white-space:nowrap}
-#content .spx-level-card__meta{font-family:var(--fm);font-size:.58rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--dk-c72);padding:.62rem 0;border-top:1px solid var(--dk-rule);border-bottom:1px solid var(--dk-rule)}
-#content .spx-level-card__list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:.4rem;flex:1}
-#content .spx-level-card__list li{position:relative;padding-left:.95rem;font-size:.84rem;line-height:1.42;color:var(--dk-c72)}
-#content .spx-level-card__list li::before{content:'';position:absolute;left:0;top:.62em;width:.38rem;height:2px;background:var(--accent)}
-#content .spx-level-card--gold .spx-level-card__list li::before{background:#E8C46A}
-#content .spx-level-card--silver .spx-level-card__list li::before{background:#C6CED9}
-#content .spx-level-card__cta{display:inline-flex;align-items:center;gap:.45rem;margin-top:.15rem;font-family:var(--fm);font-size:.66rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
-#content .spx-level-card--gold .spx-level-card__cta{color:#E8C46A}
-#content .spx-level-card--silver .spx-level-card__cta{color:#C6CED9}
-@media(max-width:1050px){#content .spx-context{grid-template-columns:repeat(2,1fr)}#content .spx-level-grid{grid-template-columns:1fr}#content .spx-title{max-width:11ch}}
-@media(max-width:960px){#content .spx-hero-top{grid-template-columns:1fr}}
-@media(max-width:700px){#content .spx-context{grid-template-columns:1fr}#content .spx-level-card__top{align-items:flex-end}#content .spx-level-card__price{font-size:1.6rem}}
-
-
-/* ===== ultra-minimal sponsorship redesign ===== */
-#content .s10-hero{padding-top:clamp(.75rem,1.4vw,1rem);padding-bottom:clamp(1rem,2vw,1.5rem)}
-#content .s10-hero__in{display:grid;grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr);gap:1rem;align-items:start}
-#content .s10-kicker{font-family:var(--fm);font-size:.66rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);margin-bottom:.55rem}
-#content .s10-title{font-family:var(--fb);font-size:clamp(2.15rem,4.8vw,4.4rem);font-weight:900;line-height:.94;letter-spacing:-.04em;text-transform:uppercase;color:var(--dk-c);max-width:7ch}
-#content .s10-sub{margin-top:.85rem;font-size:1rem;line-height:1.45;color:var(--dk-c72);max-width:32ch}
-#content .s10-pills{display:flex;flex-wrap:wrap;gap:.55rem;margin-top:1rem}
-#content .s10-pill{display:inline-flex;align-items:center;justify-content:center;padding:.5rem .78rem;border:1px solid var(--dk-rule);border-radius:999px;font-family:var(--fm);font-size:.6rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--dk-c72);white-space:nowrap}
-#content .s10-actions{display:flex;gap:.75rem;flex-wrap:wrap;margin-top:1rem}
-#content .s10-actions .btn{min-width:0}
-#content .s10-actions .btn--ghost{border-color:var(--dk-rule-str);color:var(--dk-c)}
-#content .s10-actions .btn--ghost::before{background:var(--accent)}
-#content .s10-actions .btn--ghost:hover{color:#001227;border-color:var(--accent)}
-#content .s10-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.85rem}
-#content .s10-card{display:flex;flex-direction:column;gap:.6rem;padding:1rem;border:1px solid var(--dk-rule);border-radius:18px;background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.02));box-shadow:inset 0 1px 0 rgba(255,255,255,.03);transition:transform .18s ease,border-color .18s ease,background .18s ease}
-#content .s10-card:hover{transform:translateY(-2px);background:rgba(255,255,255,.04)}
-#content .s10-card--title{border-color:var(--accent)}
-#content .s10-card--gold{border-color:rgba(232,196,106,.45)}
-#content .s10-card--silver{border-color:rgba(198,206,217,.35)}
-#content .s10-card__top{display:flex;align-items:flex-start;justify-content:space-between;gap:.7rem}
-#content .s10-chip{width:38px;height:38px;border-radius:10px;flex-shrink:0}
-#content .s10-chip--title{background:var(--accent)}
-#content .s10-chip--gold{background:#E8C46A;width:48px;height:28px;border-radius:8px;margin-top:.3rem}
-#content .s10-chip--silver{background:#C6CED9;width:30px;height:30px;border-radius:8px;margin-top:.1rem}
-#content .s10-name{font-family:var(--fd);font-size:1.25rem;line-height:1.05;color:var(--dk-c)}
-#content .s10-meta{font-family:var(--fm);font-size:.56rem;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--dk-c72);margin-top:.25rem}
-#content .s10-price{font-family:var(--fb);font-size:1.85rem;font-weight:900;line-height:1;color:var(--dk-c);letter-spacing:-.03em;white-space:nowrap}
-#content .s10-card__rule{height:1px;background:var(--dk-rule)}
-#content .s10-list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:.4rem;flex:1}
-#content .s10-list li{display:flex;align-items:flex-start;gap:.55rem;font-size:.83rem;line-height:1.38;color:var(--dk-c72)}
-#content .s10-dot{width:7px;height:7px;border-radius:999px;background:var(--accent);margin-top:.43rem;flex-shrink:0}
-#content .s10-card--gold .s10-dot{background:#E8C46A}
-#content .s10-card--silver .s10-dot{background:#C6CED9}
-#content .s10-link{display:inline-flex;align-items:center;gap:.45rem;margin-top:.1rem;font-family:var(--fm);font-size:.64rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
-#content .s10-card--gold .s10-link{color:#E8C46A}
-#content .s10-card--silver .s10-link{color:#C6CED9}
-#content .s10-section{padding-top:1.2rem;padding-bottom:1.2rem}
-#content .s10-head{display:flex;align-items:flex-end;justify-content:space-between;gap:1rem;margin-bottom:1rem}
-#content .s10-head__title{font-family:var(--fb);font-size:clamp(1.9rem,3.8vw,3.1rem);font-weight:900;line-height:.96;letter-spacing:-.03em;text-transform:uppercase;color:var(--dk-c)}
-#content .s10-head__sub{font-size:.86rem;line-height:1.4;color:var(--dk-c72);max-width:30ch}
-#content .s10-compare{display:grid;grid-template-columns:1.05fr repeat(3,1fr);border:1px solid var(--dk-rule);border-radius:18px;overflow:hidden;background:rgba(255,255,255,.02)}
-#content .s10-compare__cell{padding:.95rem 1rem;border-right:1px solid var(--dk-rule);border-bottom:1px solid var(--dk-rule);font-size:.84rem;line-height:1.35;color:var(--dk-c72)}
-#content .s10-compare__cell:nth-child(4n){border-right:none}
-#content .s10-compare__head{background:rgba(255,255,255,.03);font-family:var(--fb);font-size:1.05rem;font-weight:800;color:var(--dk-c)}
-#content .s10-compare__head small{display:block;font-family:var(--fm);font-size:.54rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--dk-c72);margin-top:.28rem}
-#content .s10-compare__label{font-family:var(--fm);font-size:.58rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);background:rgba(255,255,255,.03)}
-#content .s10-compare__cta{padding:.75rem 1rem;background:rgba(255,255,255,.03)}
-#content .s10-compare__cta .btn{width:100%;justify-content:center;border:none}
-#content .s10-compare__cta--title .btn{background:var(--accent);color:#001227}
-#content .s10-compare__cta--gold .btn{background:#E8C46A;color:#001227}
-#content .s10-compare__cta--silver .btn{background:#C6CED9;color:#001227}
-#content .s10-note{margin-top:.8rem;font-size:.76rem;line-height:1.45;color:var(--dk-c72)}
-#content .s10-partners{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
-#content .s10-panel{padding:1rem 1rem .9rem;border:1px solid var(--dk-rule);border-radius:18px;background:rgba(255,255,255,.02)}
-#content .s10-panel__head{display:flex;align-items:center;gap:.7rem;margin-bottom:.65rem}
-#content .s10-icon{width:34px;height:34px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-family:var(--fm);font-size:.72rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#001227;background:var(--accent)}
-#content .s10-icon--vip{background:#E8C46A}
-#content .s10-icon--brand{background:#C6CED9}
-#content .s10-panel h3{font-family:var(--fd);font-size:1.2rem;line-height:1.05;color:var(--dk-c);font-weight:400}
-#content .s10-rows{list-style:none;margin:0;padding:0}
-#content .s10-rows li{border-top:1px solid var(--dk-rule)}
-#content .s10-rows a{display:grid;grid-template-columns:1fr auto;gap:.6rem;align-items:center;padding:.65rem 0;color:var(--dk-c72);transition:color .2s}
-#content .s10-rows a:hover{color:var(--dk-c)}
-#content .s10-rows strong{font-size:.84rem;line-height:1.28;font-weight:600}
-#content .s10-rows span{font-family:var(--fm);font-size:.62rem;font-weight:700;letter-spacing:.04em;color:var(--accent);white-space:nowrap}
-#content .s10-open{margin-top:1rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1rem;border:1px dashed var(--dk-rule-str);border-radius:18px}
-#content .s10-open strong{display:block;font-family:var(--fd);font-size:1.15rem;color:var(--dk-c);font-weight:400}
-#content .s10-open small{display:block;font-size:.8rem;line-height:1.4;color:var(--dk-c72);margin-top:.18rem}
-@media(max-width:1050px){#content .s10-hero__in{grid-template-columns:1fr}#content .s10-grid,#content .s10-partners{grid-template-columns:1fr}#content .s10-title{max-width:8ch}}
-@media(max-width:900px){#content .s10-compare{grid-template-columns:.8fr repeat(3,1fr)}#content .s10-head{align-items:flex-start;flex-direction:column}}
-@media(max-width:700px){#content .s10-actions .btn{width:100%;justify-content:center}#content .s10-pills{gap:.45rem}#content .s10-pill{font-size:.55rem;padding:.45rem .65rem}#content .s10-compare{display:block;border:none;background:transparent}#content .s10-compare__cell{display:grid;grid-template-columns:110px 1fr 1fr 1fr;border-right:none;padding:.7rem .85rem}#content .s10-compare__head{display:none}#content .s10-compare__label{padding:.8rem .85rem;border:1px solid var(--dk-rule);border-bottom:none;border-radius:14px 14px 0 0;margin-top:.65rem}#content .s10-compare__cta{display:grid;grid-template-columns:repeat(3,1fr);gap:.6rem;padding:.85rem;border:1px solid var(--dk-rule);border-top:none;border-radius:0 0 14px 14px}#content .s10-compare__cta .btn{font-size:.58rem;padding:.8rem .5rem}#content .s10-open{align-items:flex-start;flex-direction:column}#content .s10-open .btn{width:100%;justify-content:center}}
-
-</style>
+<style>#content{padding-top:calc(var(--header-h) + clamp(1rem,2.5vw,2rem))}</style>
 </head>
 <body>
 <div class="header" id="siteHeader">
@@ -193,7 +74,7 @@
       <div class="nav__sp" aria-hidden="true"></div>
       <div class="nav__sp" aria-hidden="true"></div>
       <div class="nav__actions">
-        <a href="#inquire" class="btn nav__cta">Request Availability <span class="btn__arrow">→</span></a>
+        <a href="#inquire" class="btn nav__cta">Become a Sponsor <span class="btn__arrow">→</span></a>
         <button class="nav__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
           <span></span><span></span><span></span>
         </button>
@@ -215,7 +96,7 @@
       <li><a class="mobile-menu__link" href="/faq">FAQ <span aria-hidden="true">→</span></a></li>
       <li><a class="mobile-menu__link" href="/leadership">Leadership <span aria-hidden="true">→</span></a></li>
     </ul>
-    <a href="#inquire" class="btn mobile-menu__cta">Request Availability <span class="btn__arrow">→</span></a>
+    <a href="#inquire" class="btn mobile-menu__cta">Become a Sponsor <span class="btn__arrow">→</span></a>
     <a href="https://x.com/sovereignmiami" target="_blank" rel="noopener" class="mobile-menu__social" aria-label="Follow The Sovereign Summit on X">
       <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
       <span>Follow on X</span>
@@ -224,322 +105,375 @@
 </div>
 
 <main id="content">
-
 <style>
-/* ===== Sponsorships page — simplified ===== */
-#content .spx-section{padding:clamp(2.5rem,5vw,4rem) 0}
-#content #tiers{padding-top:clamp(.8rem,1.8vw,1.35rem)}
-#content .spx-section--hero{padding-top:clamp(.45rem,1vw,.8rem);padding-bottom:clamp(.9rem,1.8vw,1.25rem)}
-#content .spx-hero-grid{display:grid;grid-template-columns:minmax(0,1.02fr) minmax(320px,.98fr);gap:1.4rem;align-items:center}
-#content .spx-copy{max-width:600px}
-#content .spx-eyebrow{font-family:var(--fm);font-size:.66rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin-bottom:.5rem}
-#content .spx-title{font-family:var(--fb);font-size:clamp(2.25rem,5.1vw,4.2rem);font-weight:900;line-height:.95;letter-spacing:-.04em;text-transform:uppercase;color:var(--dk-c);max-width:10ch}
-#content .spx-desc{font-size:1rem;line-height:1.48;color:var(--dk-c72);margin-top:.85rem;max-width:42ch}
-#content .spx-quick{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:.95rem}
-#content .spx-pill{display:inline-flex;align-items:center;justify-content:center;border:1px solid var(--dk-rule-str);border-radius:999px;padding:.5rem .8rem;font-family:var(--fm);font-size:.62rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--dk-c72);white-space:nowrap}
-#content .spx-actions{display:flex;gap:.8rem;flex-wrap:wrap;margin-top:1rem}
-#content .spx-actions .btn--accent{background:var(--accent);border-color:var(--accent);color:#001839;font-weight:800}
-#content .spx-actions .btn--accent::before{background:var(--dk-c)}
-#content .spx-actions .btn--accent:hover{color:#001839;border-color:var(--dk-c);background:var(--dk-c)}
-#content .spx-hero-note{font-size:.82rem;line-height:1.45;color:var(--dk-c72);margin-top:.8rem}
-#content .spx-hero-visual{background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.02));border:1px solid var(--dk-rule);border-radius:18px;padding:1rem 1rem .9rem;box-shadow:inset 0 1px 0 rgba(255,255,255,.04)}
-#content .spx-mini-list{display:flex;flex-direction:column;gap:.7rem}
-#content .spx-mini{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:.85rem;padding:.9rem .95rem;border:1px solid var(--dk-rule);border-radius:14px;background:rgba(255,255,255,.02);transition:transform .18s ease,border-color .18s ease,background .18s ease}
-#content .spx-mini:hover{transform:translateY(-2px);border-color:var(--dk-rule-str);background:rgba(255,255,255,.045)}
-#content .spx-mini__shape{display:block;border-radius:10px;flex-shrink:0}
-#content .spx-mini__shape--title{width:42px;height:42px;background:var(--accent)}
-#content .spx-mini__shape--gold{width:56px;height:32px;border-radius:8px;background:#E8C46A}
-#content .spx-mini__shape--silver{width:34px;height:34px;background:#C6CED9}
-#content .spx-mini__label{font-family:var(--fd);font-size:1.15rem;line-height:1.05;color:var(--dk-c)}
-#content .spx-mini__sub{font-family:var(--fm);font-size:.6rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--dk-c72);margin-top:.25rem}
-#content .spx-mini__price{font-family:var(--fb);font-size:1.45rem;font-weight:900;line-height:1;color:var(--dk-c);letter-spacing:-.03em;white-space:nowrap}
-#content .spx-mini__price small{display:block;font-family:var(--fm);font-size:.56rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--dk-c72);margin-top:.25rem}
-#content .spx-mini-cap{display:flex;align-items:center;justify-content:space-between;gap:1rem;margin-top:.85rem;padding-top:.85rem;border-top:1px solid var(--dk-rule);font-family:var(--fm);font-size:.58rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--dk-c72)}
-#content .spx-speakers{font-size:.85rem;line-height:1.45;color:var(--dk-c72);margin-top:.75rem}
-#content .spx-speakers strong{color:var(--dk-c)}
-#content .spx-proof{border-top:1px solid var(--dk-rule);border-bottom:1px solid var(--dk-rule);background:rgba(255,255,255,.02)}
-#content .spx-proof__in{display:flex;align-items:center;justify-content:center;gap:1rem;padding:.75rem 0;min-width:0}
-#content .spx-proof__label{font-family:var(--fm);font-size:.6rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);white-space:nowrap}
-#content .spx-proof__names{font-size:.82rem;line-height:1.35;color:var(--dk-c72);text-align:center}
-
-#content .spx-tiers{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;align-items:stretch}
-#content .spx-card{display:flex;flex-direction:column;background:var(--dk-card);border:1px solid var(--dk-rule);border-radius:var(--radius);padding:1.4rem}
-#content .spx-card--title{border-color:var(--accent)}
-#content .spx-card--gold{border-color:rgba(232,196,106,.45)}
-#content .spx-card--silver{border-color:rgba(198,206,217,.35)}
-#content .spx-card__avail{font-family:var(--fm);font-size:.62rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin-bottom:.55rem}
-#content .spx-card--gold .spx-card__avail{color:#E8C46A}
-#content .spx-card--silver .spx-card__avail{color:#C6CED9}
-#content .spx-card__name{font-family:var(--fd);font-size:1.55rem;line-height:1.1;color:var(--dk-c);font-weight:400}
-#content .spx-card__price{font-family:var(--fb);font-size:2.15rem;font-weight:900;line-height:1;letter-spacing:-.03em;color:var(--dk-c);margin:.75rem 0 .3rem}
-#content .spx-card__footprint{font-family:var(--fm);font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;color:var(--dk-c72);padding-bottom:.85rem;border-bottom:1px solid var(--dk-rule)}
-#content .spx-card__features{list-style:none;margin:1rem 0 1.25rem;padding:0;display:flex;flex-direction:column;gap:.65rem;flex:1}
-#content .spx-card__features li{position:relative;padding-left:1rem;font-size:.88rem;line-height:1.45;color:var(--dk-c72)}
-#content .spx-card__features li::before{content:"";position:absolute;left:0;top:.6em;width:.4rem;height:2px;background:var(--accent)}
-#content .spx-card--gold .spx-card__features li::before{background:#E8C46A}
-#content .spx-card--silver .spx-card__features li::before{background:#C6CED9}
-#content .spx-card .btn{width:100%;justify-content:center;border:none}
-#content .spx-card--title .btn{background:var(--accent);color:#001227}
-#content .spx-card--gold .btn{background:#E8C46A;color:#001227}
-#content .spx-card--silver .btn{background:#C6CED9;color:#001227}
-#content .spx-included{margin-top:1.1rem;padding:.95rem 1.15rem;background:var(--dk-band);border:1px solid var(--dk-rule);border-radius:var(--radius);display:flex;align-items:center;gap:1rem}
-#content .spx-included__title{font-family:var(--fd);font-size:1.08rem;color:var(--dk-c);white-space:nowrap}
-#content .spx-included__rail{display:flex;align-items:center;flex-wrap:wrap;gap:.35rem .85rem;min-width:0}
-#content .spx-included__rail span{display:inline-flex;align-items:center;gap:.75rem;font-size:.8rem;line-height:1.35;color:var(--dk-c72)}
-#content .spx-included__rail span:not(:last-child)::after{content:"◆";font-size:.35rem;color:var(--accent);opacity:.7}
-@media(max-width:760px){#content .spx-included{align-items:flex-start;flex-direction:column}.spx-included__rail{display:grid!important;grid-template-columns:1fr 1fr}.spx-included__rail span::after{display:none}}
-#content .spx-note{margin-top:.75rem;padding:.8rem 1rem;border-left:3px solid var(--accent);background:rgba(255,255,255,.035);font-size:.78rem;line-height:1.5;color:var(--dk-c72)}
-
-#content .spx-addon-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
-#content .spx-addon-col{background:var(--dk-card);border:1px solid var(--dk-rule);border-radius:var(--radius);padding:1.25rem}
-#content .spx-addon-col h3{font-family:var(--fd);font-size:1.35rem;color:var(--dk-c);font-weight:400;margin-bottom:.55rem}
-#content .spx-addon-list{list-style:none;margin:0;padding:0}
-#content .spx-addon-list li{border-top:1px solid var(--dk-rule)}
-#content .spx-addon-list a{display:grid;grid-template-columns:1fr auto;gap:.8rem;align-items:center;padding:.7rem 0;color:var(--dk-c72);transition:color .2s}
-#content .spx-addon-list a:hover{color:var(--dk-c)}
-#content .spx-addon-name{font-size:.86rem;line-height:1.3}
-#content .spx-addon-price{font-family:var(--fm);font-size:.66rem;font-weight:700;letter-spacing:.04em;color:var(--accent);white-space:nowrap}
-#content .spx-addon-note{margin-top:.85rem;font-size:.78rem;line-height:1.45;color:var(--dk-c72)}
-#content .spx-sponsor-addon{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:1rem;margin-top:.75rem;padding:.75rem 1rem;border:1px solid var(--dk-rule);border-radius:var(--radius);background:rgba(255,255,255,.025)}
-#content .spx-sponsor-addon__tag{font-family:var(--fm);font-size:.58rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
-#content .spx-sponsor-addon__name{font-size:.84rem;color:var(--dk-c72)}
-#content .spx-sponsor-addon__price{font-family:var(--fm);font-size:.68rem;font-weight:700;color:var(--accent);white-space:nowrap}
-#content .spx-open-source{display:flex;align-items:center;justify-content:space-between;gap:1rem;margin-top:1rem;padding:1rem 1.15rem;border:1px dashed var(--dk-rule-str);border-radius:var(--radius)}
-#content .spx-open-source strong{display:block;font-family:var(--fd);font-size:1.15rem;color:var(--dk-c);font-weight:400}
-#content .spx-open-source span{display:block;font-size:.82rem;color:var(--dk-c72);margin-top:.2rem}
-
-#content .inq-form{max-width:920px}
-#content .inq-form__submit{margin-top:.25rem}
-#content .inq-selections{margin-bottom:1rem}
-#content .inq-selections__label{font-family:var(--fm);font-size:.62rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--dk-c72);margin-bottom:.45rem}
-#content .inq-selections__chips{display:flex;flex-wrap:wrap;gap:.45rem}
-#content .inq-chip{display:inline-flex;align-items:center;gap:.4rem;border:1px solid var(--dk-rule-str);border-radius:999px;padding:.35rem .55rem;font-size:.74rem;color:var(--dk-c)}
-#content .inq-chip button{font-size:1rem;line-height:1;color:var(--accent)}
-#content .spx-mobile-cta{display:none}
-
-@media(max-width:960px){
-  #content .spx-hero-grid,#content .spx-tiers,#content .spx-addon-grid{grid-template-columns:1fr}
-  #content .spx-copy{max-width:none}
+/* =========================================================
+   Sponsorships — first-principles architecture
+   Hero → Core packages → Featured partnerships → Inquiry
+   ========================================================= */
+#content{
+  --sp-bg:#001839;
+  --sp-bg-deep:#001227;
+  --sp-card:#0A2445;
+  --sp-card-2:#0D2A50;
+  --sp-cream:#F4ECE0;
+  --sp-muted:rgba(244,236,224,.70);
+  --sp-rule:rgba(244,236,224,.15);
+  --sp-rule-strong:rgba(244,236,224,.28);
+  --sp-orange:#FF6941;
+  --sp-gold:#E8C46A;
+  --sp-silver:#C6CED9;
+  background:var(--sp-bg);
+  color:var(--sp-cream);
+  padding-top:var(--header-h);
 }
-@media(max-width:700px){
-  #content .spx-title{max-width:8ch}
-  #content .spx-actions .btn{width:100%;justify-content:center}
-  #content .spx-open-source{align-items:flex-start;flex-direction:column}
-  #content .spx-open-source .btn{width:100%;justify-content:center}
-  #content .spx-proof__in{align-items:flex-start;flex-direction:column;gap:.25rem}
-  #content .spx-proof__names{text-align:left}
-  #content .spx-mini-list{display:grid;grid-template-columns:repeat(3,1fr);gap:.45rem}
-  #content .spx-mini{display:flex;flex-direction:column;align-items:flex-start;gap:.35rem;padding:.7rem}
-  #content .spx-mini__shape{width:24px;height:24px;border-radius:6px}
-  #content .spx-mini__shape--gold{width:34px;height:20px}
-  #content .spx-mini__label{font-size:1rem}
-  #content .spx-mini__sub{font-size:.46rem;letter-spacing:.08em}
-  #content .spx-mini__price{font-size:1.2rem}
-  #content .spx-mini__price small{font-size:.44rem}
-  #content .spx-mini-cap{display:none}
-  #content .spx-sponsor-addon{grid-template-columns:1fr auto}
-  #content .spx-sponsor-addon__tag{grid-column:1 / -1}
-  #content .spx-mobile-cta{display:block;position:fixed;left:1rem;right:1rem;bottom:calc(1rem + env(safe-area-inset-bottom));z-index:70;background:var(--accent);color:#001227;text-align:center;border-radius:999px;padding:.85rem 1rem;font-family:var(--fm);font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;box-shadow:0 8px 30px rgba(0,0,0,.35);opacity:0;pointer-events:none;transform:translateY(18px);transition:opacity .2s ease,transform .2s ease}
-  #content .spx-mobile-cta.is-visible{opacity:1;pointer-events:auto;transform:translateY(0)}
+#content section{padding:clamp(3.25rem,6vw,5.25rem) 0}
+#content .sp-container{width:100%;max-width:1320px;margin:0 auto;padding:0 clamp(1.2rem,3vw,2.4rem)}
+#content .sp-kicker{font-family:var(--fm);font-size:.66rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--sp-orange)}
+#content .sp-section-head{display:flex;align-items:flex-end;justify-content:space-between;gap:2rem;margin-bottom:1.5rem}
+#content .sp-section-title{font-family:var(--fb);font-size:clamp(2.15rem,4.3vw,3.7rem);font-weight:900;line-height:.94;letter-spacing:-.035em;text-transform:uppercase;color:var(--sp-cream)}
+#content .sp-section-note{max-width:34ch;font-size:.94rem;line-height:1.5;color:var(--sp-muted)}
+
+/* Hero */
+#content .sp-hero{
+  position:relative;
+  min-height:calc(100svh - var(--header-h));
+  display:flex;
+  align-items:flex-end;
+  overflow:hidden;
+  padding:clamp(2.5rem,5vw,4.5rem) 0 0;
+}
+#content .sp-hero__bg{position:absolute;inset:0;z-index:0}
+#content .sp-hero__bg img{width:100%;height:100%;object-fit:cover;object-position:center 45%}
+#content .sp-hero__scrim{position:absolute;inset:0;z-index:1;background:
+  linear-gradient(90deg,rgba(0,18,39,.98) 0%,rgba(0,24,57,.92) 43%,rgba(0,24,57,.42) 78%,rgba(0,24,57,.28) 100%),
+  linear-gradient(180deg,rgba(0,18,39,.35) 0%,rgba(0,18,39,.12) 45%,rgba(0,18,39,.96) 100%)}
+#content .sp-hero__inner{position:relative;z-index:2;width:100%}
+#content .sp-hero__top{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:2rem;align-items:end;padding-bottom:clamp(2rem,4vw,3.5rem)}
+#content .sp-hero__copy{max-width:760px}
+#content .sp-hero h1{font-family:var(--fb);font-size:clamp(3.2rem,8vw,7.3rem);font-weight:900;line-height:.86;letter-spacing:-.055em;text-transform:uppercase;color:var(--sp-cream);max-width:8ch;text-shadow:0 6px 34px rgba(0,0,0,.35)}
+#content .sp-hero__sub{max-width:50ch;margin-top:1.15rem;font-size:clamp(1rem,1.6vw,1.2rem);line-height:1.5;color:rgba(244,236,224,.84)}
+#content .sp-hero__actions{display:flex;gap:.75rem;flex-wrap:wrap;margin-top:1.3rem}
+#content .sp-btn{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;min-height:50px;padding:.88rem 1.3rem;border-radius:999px;font-family:var(--fm);font-size:.7rem;font-weight:700;letter-spacing:.13em;text-transform:uppercase;transition:transform .18s ease,background .18s ease,border-color .18s ease,color .18s ease}
+#content .sp-btn:hover{transform:translateY(-2px)}
+#content .sp-btn--primary{background:var(--sp-orange);color:#001227;border:1px solid var(--sp-orange)}
+#content .sp-btn--ghost{border:1px solid rgba(244,236,224,.42);color:var(--sp-cream);background:rgba(0,18,39,.18);backdrop-filter:blur(8px)}
+#content .sp-btn--ghost:hover{border-color:var(--sp-cream);background:rgba(244,236,224,.07)}
+#content .sp-speakers{display:flex;align-items:center;gap:.8rem;padding:1rem 1.1rem;border:1px solid rgba(244,236,224,.2);border-radius:18px;background:rgba(0,18,39,.58);backdrop-filter:blur(12px);min-width:300px}
+#content .sp-speakers__faces{display:flex;padding-left:.55rem}
+#content .sp-speakers__faces img{width:43px;height:43px;border-radius:50%;object-fit:cover;border:2px solid var(--sp-bg-deep);margin-left:-.55rem;background:var(--sp-card)}
+#content .sp-speakers__copy strong{display:block;font-size:.86rem;color:var(--sp-cream)}
+#content .sp-speakers__copy span{display:block;font-size:.72rem;line-height:1.35;color:var(--sp-muted);margin-top:.12rem}
+
+/* Hero package rail */
+#content .sp-package-rail{display:grid;grid-template-columns:repeat(3,1fr);background:rgba(0,18,39,.9);border:1px solid rgba(244,236,224,.18);border-bottom:none;border-radius:20px 20px 0 0;overflow:hidden;backdrop-filter:blur(14px)}
+#content .sp-rail-card{position:relative;display:grid;grid-template-columns:auto 1fr auto;gap:1rem;align-items:center;padding:1.2rem 1.3rem;border-right:1px solid rgba(244,236,224,.16);transition:background .18s ease}
+#content .sp-rail-card:last-child{border-right:none}
+#content .sp-rail-card:hover{background:rgba(244,236,224,.055)}
+#content .sp-rail-card__mark{width:44px;height:44px;border-radius:11px;background:var(--sp-orange);box-shadow:0 0 0 1px rgba(255,255,255,.14) inset}
+#content .sp-rail-card--gold .sp-rail-card__mark{width:56px;height:34px;border-radius:9px;background:var(--sp-gold)}
+#content .sp-rail-card--silver .sp-rail-card__mark{width:36px;height:36px;border-radius:9px;background:var(--sp-silver)}
+#content .sp-rail-card__name{font-family:var(--fd);font-size:1.35rem;line-height:1;color:var(--sp-cream)}
+#content .sp-rail-card__meta{font-family:var(--fm);font-size:.56rem;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--sp-muted);margin-top:.28rem}
+#content .sp-rail-card__price{font-family:var(--fb);font-size:1.8rem;font-weight:900;line-height:1;color:var(--sp-cream);letter-spacing:-.03em;text-align:right}
+#content .sp-rail-card__price small{display:block;font-family:var(--fm);font-size:.52rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--sp-muted);margin-top:.3rem}
+
+/* Package cards */
+#content .sp-packages{background:var(--sp-bg-deep)}
+#content .sp-package-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+#content .sp-package{display:flex;flex-direction:column;min-width:0;border:1px solid var(--sp-rule);border-radius:20px;background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.018));overflow:hidden;box-shadow:inset 0 1px 0 rgba(255,255,255,.04)}
+#content .sp-package--title{border-color:rgba(255,105,65,.72)}
+#content .sp-package--gold{border-color:rgba(232,196,106,.5)}
+#content .sp-package--silver{border-color:rgba(198,206,217,.38)}
+#content .sp-package__head{padding:1.25rem 1.25rem 1rem;display:flex;align-items:flex-start;justify-content:space-between;gap:1rem}
+#content .sp-package__tier{font-family:var(--fd);font-size:1.55rem;line-height:1;color:var(--sp-cream)}
+#content .sp-package__availability{font-family:var(--fm);font-size:.56rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--sp-orange);margin-top:.4rem}
+#content .sp-package--gold .sp-package__availability{color:var(--sp-gold)}
+#content .sp-package--silver .sp-package__availability{color:var(--sp-silver)}
+#content .sp-package__price{font-family:var(--fb);font-size:2.05rem;font-weight:900;line-height:1;color:var(--sp-cream);letter-spacing:-.035em;white-space:nowrap}
+#content .sp-package__visual{height:150px;margin:0 1.25rem;border-radius:15px;background:rgba(244,236,224,.035);border:1px solid var(--sp-rule);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+#content .sp-booth{position:relative;display:grid;place-items:center;color:#001227;font-family:var(--fm);font-size:.64rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;box-shadow:0 16px 32px rgba(0,0,0,.25)}
+#content .sp-booth--title{width:112px;height:112px;border-radius:20px;background:var(--sp-orange)}
+#content .sp-booth--gold{width:148px;height:78px;border-radius:17px;background:var(--sp-gold)}
+#content .sp-booth--silver{width:86px;height:86px;border-radius:17px;background:var(--sp-silver)}
+#content .sp-package__visual::before,#content .sp-package__visual::after{content:"";position:absolute;background:rgba(244,236,224,.07)}
+#content .sp-package__visual::before{width:70%;height:1px;left:15%;top:50%}
+#content .sp-package__visual::after{height:70%;width:1px;top:15%;left:50%}
+#content .sp-package__facts{display:grid;grid-template-columns:repeat(3,1fr);margin:1rem 1.25rem 0;border:1px solid var(--sp-rule);border-radius:14px;overflow:hidden}
+#content .sp-fact{padding:.8rem .65rem;text-align:center;border-right:1px solid var(--sp-rule)}
+#content .sp-fact:last-child{border-right:none}
+#content .sp-fact svg{width:22px;height:22px;margin:0 auto .45rem;stroke:currentColor;color:var(--sp-orange)}
+#content .sp-package--gold .sp-fact svg{color:var(--sp-gold)}
+#content .sp-package--silver .sp-fact svg{color:var(--sp-silver)}
+#content .sp-fact strong{display:block;font-size:.8rem;line-height:1.25;color:var(--sp-cream)}
+#content .sp-fact span{display:block;font-family:var(--fm);font-size:.5rem;line-height:1.35;letter-spacing:.08em;text-transform:uppercase;color:var(--sp-muted);margin-top:.25rem}
+#content .sp-package__actions{margin-top:auto;padding:1rem 1.25rem 1.25rem;display:flex;gap:.6rem}
+#content .sp-package__actions .sp-btn{flex:1;padding:.78rem .7rem;min-height:46px;font-size:.62rem}
+#content .sp-package details{border-top:1px solid var(--sp-rule);margin:0 1.25rem}
+#content .sp-package summary{list-style:none;cursor:pointer;padding:.85rem 0;font-family:var(--fm);font-size:.58rem;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--sp-muted);display:flex;align-items:center;justify-content:space-between}
+#content .sp-package summary::-webkit-details-marker{display:none}
+#content .sp-package summary::after{content:"+";font-size:1rem;color:var(--sp-orange)}
+#content .sp-package details[open] summary::after{content:"−"}
+#content .sp-package__full{list-style:none;padding:0 0 .95rem;margin:0;display:flex;flex-direction:column;gap:.45rem}
+#content .sp-package__full li{position:relative;padding-left:.9rem;font-size:.8rem;line-height:1.42;color:var(--sp-muted)}
+#content .sp-package__full li::before{content:"";position:absolute;left:0;top:.63em;width:.38rem;height:2px;background:var(--sp-orange)}
+#content .sp-package--gold .sp-package__full li::before{background:var(--sp-gold)}
+#content .sp-package--silver .sp-package__full li::before{background:var(--sp-silver)}
+#content .sp-included{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;margin-top:1rem;border:1px solid var(--sp-rule);border-radius:16px;overflow:hidden;background:var(--sp-rule)}
+#content .sp-included__item{background:var(--sp-card);padding:.9rem 1rem;display:flex;align-items:center;gap:.65rem;font-size:.78rem;color:var(--sp-muted)}
+#content .sp-included__item svg{width:20px;height:20px;stroke:var(--sp-orange);flex-shrink:0}
+#content .sp-disclaimer{margin-top:.75rem;font-size:.72rem;line-height:1.45;color:rgba(244,236,224,.52)}
+
+/* Featured partnerships */
+#content .sp-partnerships{background:var(--sp-bg)}
+#content .sp-partnership-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
+#content .sp-partner-group{border:1px solid var(--sp-rule);border-radius:18px;background:rgba(255,255,255,.025);overflow:hidden}
+#content .sp-partner-group[open]{background:rgba(255,255,255,.04)}
+#content .sp-partner-group summary{list-style:none;cursor:pointer;padding:1.15rem;display:flex;align-items:center;gap:.85rem}
+#content .sp-partner-group summary::-webkit-details-marker{display:none}
+#content .sp-partner-icon{width:48px;height:48px;border-radius:14px;display:grid;place-items:center;background:rgba(255,105,65,.14);border:1px solid rgba(255,105,65,.35);color:var(--sp-orange);flex-shrink:0}
+#content .sp-partner-icon svg{width:25px;height:25px;stroke:currentColor}
+#content .sp-partner-group:nth-child(2) .sp-partner-icon{color:var(--sp-gold);background:rgba(232,196,106,.12);border-color:rgba(232,196,106,.32)}
+#content .sp-partner-group:nth-child(3) .sp-partner-icon{color:var(--sp-silver);background:rgba(198,206,217,.1);border-color:rgba(198,206,217,.28)}
+#content .sp-partner-title{font-family:var(--fd);font-size:1.2rem;line-height:1.05;color:var(--sp-cream)}
+#content .sp-partner-meta{font-family:var(--fm);font-size:.52rem;font-weight:700;letter-spacing:.11em;text-transform:uppercase;color:var(--sp-muted);margin-top:.28rem}
+#content .sp-partner-chevron{margin-left:auto;font-family:var(--fm);font-size:1rem;color:var(--sp-muted)}
+#content .sp-partner-group[open] .sp-partner-chevron{transform:rotate(45deg)}
+#content .sp-partner-list{list-style:none;margin:0;padding:0 1.15rem 1rem}
+#content .sp-partner-list li{border-top:1px solid var(--sp-rule)}
+#content .sp-partner-list a{display:grid;grid-template-columns:1fr auto;gap:.8rem;align-items:center;padding:.7rem 0;color:var(--sp-muted);transition:color .15s ease}
+#content .sp-partner-list a:hover{color:var(--sp-cream)}
+#content .sp-partner-list strong{font-size:.82rem;line-height:1.25;font-weight:600}
+#content .sp-partner-list span{font-family:var(--fm);font-size:.6rem;font-weight:700;color:var(--sp-orange);white-space:nowrap}
+#content .sp-partner-foot{display:flex;align-items:center;justify-content:space-between;gap:1rem;margin-top:1rem;padding:1rem 1.1rem;border:1px dashed var(--sp-rule-strong);border-radius:16px}
+#content .sp-partner-foot strong{font-family:var(--fd);font-size:1.1rem;color:var(--sp-cream);font-weight:400}
+#content .sp-partner-foot span{font-size:.78rem;color:var(--sp-muted);margin-left:.45rem}
+
+/* Inquiry */
+#content .sp-inquiry{background:var(--sp-bg-deep);padding-bottom:clamp(3.5rem,6vw,5rem)}
+#content .sp-inquiry__panel{display:grid;grid-template-columns:.72fr 1.28fr;border:1px solid var(--sp-rule);border-radius:22px;overflow:hidden;background:linear-gradient(135deg,rgba(255,255,255,.045),rgba(255,255,255,.018))}
+#content .sp-inquiry__intro{padding:clamp(1.5rem,3vw,2.4rem);border-right:1px solid var(--sp-rule);display:flex;flex-direction:column;justify-content:space-between;gap:2rem}
+#content .sp-inquiry__intro h2{font-family:var(--fb);font-size:clamp(2.1rem,4vw,3.6rem);font-weight:900;line-height:.93;letter-spacing:-.035em;text-transform:uppercase;color:var(--sp-cream)}
+#content .sp-inquiry__intro p{font-size:.92rem;line-height:1.5;color:var(--sp-muted);max-width:30ch;margin-top:.8rem}
+#content .sp-inquiry__steps{display:flex;flex-direction:column;gap:.65rem}
+#content .sp-inquiry__step{display:flex;align-items:center;gap:.65rem;font-size:.78rem;color:var(--sp-muted)}
+#content .sp-inquiry__step span{width:24px;height:24px;border-radius:50%;display:grid;place-items:center;background:rgba(255,105,65,.14);border:1px solid rgba(255,105,65,.32);font-family:var(--fm);font-size:.58rem;color:var(--sp-orange);flex-shrink:0}
+#content .sp-form{padding:clamp(1.5rem,3vw,2.4rem)}
+#content .sp-form__row{display:grid;grid-template-columns:1fr 1fr;gap:.85rem}
+#content .sp-field{display:flex;flex-direction:column;gap:.38rem;margin-bottom:.85rem}
+#content .sp-field > span{font-family:var(--fm);font-size:.58rem;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--sp-muted)}
+#content .sp-field input,#content .sp-field select,#content .sp-field textarea{width:100%;border:1px solid var(--sp-rule-strong);border-radius:11px;background:rgba(0,18,39,.45);color:var(--sp-cream);padding:.85rem .9rem;font-family:var(--fb);font-size:.9rem;outline:none;transition:border-color .15s ease,background .15s ease}
+#content .sp-field input:focus,#content .sp-field select:focus,#content .sp-field textarea:focus{border-color:var(--sp-orange);background:rgba(0,18,39,.72)}
+#content .sp-field textarea{resize:vertical;min-height:110px}
+#content .sp-field select option{background:var(--sp-bg-deep);color:var(--sp-cream)}
+#content .sp-selected{margin-bottom:.85rem}
+#content .sp-selected__label{font-family:var(--fm);font-size:.56rem;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--sp-muted);margin-bottom:.4rem}
+#content .sp-selected__chips{display:flex;flex-wrap:wrap;gap:.4rem}
+#content .sp-chip{display:inline-flex;align-items:center;gap:.4rem;border:1px solid var(--sp-rule-strong);border-radius:999px;padding:.35rem .55rem;font-size:.7rem;color:var(--sp-cream)}
+#content .sp-chip button{font-size:1rem;line-height:1;color:var(--sp-orange)}
+#content .sp-form__foot{display:flex;align-items:center;justify-content:space-between;gap:1rem;margin-top:.25rem}
+#content .sp-form__note{font-size:.72rem;line-height:1.4;color:rgba(244,236,224,.54);max-width:36ch}
+#content .sp-form__thanks{margin-top:.8rem;padding:.8rem 1rem;border:1px solid rgba(255,105,65,.45);border-radius:11px;color:var(--sp-cream);background:rgba(255,105,65,.08)}
+
+@media(max-width:1050px){
+  #content .sp-hero{min-height:auto}
+  #content .sp-hero__top{grid-template-columns:1fr}
+  #content .sp-speakers{width:max-content;min-width:0}
+  #content .sp-package-grid{grid-template-columns:1fr}
+  #content .sp-partnership-grid{grid-template-columns:1fr 1fr}
+  #content .sp-inquiry__panel{grid-template-columns:1fr}
+  #content .sp-inquiry__intro{border-right:none;border-bottom:1px solid var(--sp-rule)}
+}
+@media(max-width:760px){
+  #content{padding-top:var(--header-h)}
+  #content section{padding:3rem 0}
+  #content .sp-section-head{align-items:flex-start;flex-direction:column;gap:.6rem}
+  #content .sp-hero{padding-top:1.75rem}
+  #content .sp-hero h1{font-size:clamp(3rem,18vw,5.2rem);max-width:7ch}
+  #content .sp-hero__sub{max-width:32ch}
+  #content .sp-hero__actions .sp-btn{width:100%}
+  #content .sp-speakers{display:none}
+  #content .sp-package-rail{grid-template-columns:1fr;border-radius:18px 18px 0 0}
+  #content .sp-rail-card{border-right:none;border-bottom:1px solid var(--sp-rule)}
+  #content .sp-rail-card:last-child{border-bottom:none}
+  #content .sp-included{grid-template-columns:1fr 1fr}
+  #content .sp-partnership-grid{grid-template-columns:1fr}
+  #content .sp-partner-foot{align-items:flex-start;flex-direction:column}
+  #content .sp-partner-foot .sp-btn{width:100%}
+  #content .sp-form__row{grid-template-columns:1fr}
+  #content .sp-form__foot{align-items:flex-start;flex-direction:column}
+  #content .sp-form__foot .sp-btn{width:100%}
+}
+@media(max-width:480px){
+  #content .sp-included{grid-template-columns:1fr}
+  #content .sp-package__facts{grid-template-columns:1fr}
+  #content .sp-fact{border-right:none;border-bottom:1px solid var(--sp-rule);display:grid;grid-template-columns:32px 1fr;column-gap:.55rem;text-align:left;align-items:center}
+  #content .sp-fact:last-child{border-bottom:none}
+  #content .sp-fact svg{grid-row:1 / span 2;margin:0}
 }
 </style>
 
-<section class="spx-section s10-hero" id="sponsorships">
-  <div class="container">
-    <div class="s10-hero__in">
-      <div>
-        <div class="s10-kicker">Sponsorships</div>
-        <h1 class="s10-title">29 limited footprints.</h1>
-        <p class="s10-sub">2 Title · 4 Gold · 23 Silver. Title and Gold include stage time. Media, VIP, and hospitality partnerships are also available.</p>
-        <div class="s10-pills">
-          <span class="s10-pill">1,000 Attendees</span>
-          <span class="s10-pill">200 VIP Passes</span>
-          <span class="s10-pill">Fontainebleau · Feb 5–6</span>
-          <span class="s10-pill">Saylor · Booth · Brunell + more</span>
+<section class="sp-hero" id="sponsorships">
+  <div class="sp-hero__bg" aria-hidden="true">
+    <picture>
+      <source srcset="images/fontainebleau.webp" type="image/webp">
+      <img src="images/fontainebleau.jpg" alt="" fetchpriority="high" decoding="async">
+    </picture>
+  </div>
+  <div class="sp-hero__scrim" aria-hidden="true"></div>
+  <div class="sp-container sp-hero__inner">
+    <div class="sp-hero__top">
+      <div class="sp-hero__copy">
+        <div class="sp-kicker">Founding Sponsorships · February 5–6, 2027</div>
+        <h1>Own the room.</h1>
+        <p class="sp-hero__sub">29 limited expo footprints, plus select stage, media, VIP, and hospitality partnerships.</p>
+        <div class="sp-hero__actions">
+          <a class="sp-btn sp-btn--primary" href="#packages">View Packages <span aria-hidden="true">↓</span></a>
+          <a class="sp-btn sp-btn--ghost" href="#inquire">Request Availability <span aria-hidden="true">→</span></a>
         </div>
-        <div class="s10-actions">
-          <a class="btn btn--accent" href="#tiers">View Packages <span class="btn__arrow">↓</span></a>
-          <a class="btn btn--ghost" href="#inquire">Request Availability <span class="btn__arrow">→</span></a>
+      </div>
+      <div class="sp-speakers" aria-label="Confirmed speakers">
+        <div class="sp-speakers__faces" aria-hidden="true">
+          <img src="images/speakers/saylor.webp" alt="">
+          <img src="images/speakers/booth.webp" alt="">
+          <img src="images/speakers/Brunell.webp" alt="">
+          <img src="images/speakers/Sessions.webp" alt="">
+          <img src="images/speakers/callahan.webp" alt="">
         </div>
+        <div class="sp-speakers__copy"><strong>Confirmed speakers</strong><span>Saylor · Booth · Brunell · BTC Sessions · Callahan · more to come</span></div>
       </div>
-      <div class="s10-grid" aria-label="Sponsorship overview">
-        <a class="s10-card s10-card--title" href="#title-package">
-          <div class="s10-card__top">
-            <div style="display:flex;gap:.7rem;align-items:flex-start"><span class="s10-chip s10-chip--title" aria-hidden="true"></span><div><div class="s10-name">Title</div><div class="s10-meta">2 Available · 20×20 island</div></div></div>
-            <div class="s10-price">$100K</div>
-          </div>
-          <div class="s10-card__rule"></div>
-          <ul class="s10-list">
-            <li><span class="s10-dot"></span><span>Main Stage + VIP Stage</span></li>
-            <li><span class="s10-dot"></span><span>Top event-wide visibility</span></li>
-            <li><span class="s10-dot"></span><span>10 VIP + 10 Summit passes</span></li>
-          </ul>
-          <span class="s10-link">View details <span aria-hidden="true">→</span></span>
-        </a>
-        <a class="s10-card s10-card--gold" href="#gold-package">
-          <div class="s10-card__top">
-            <div style="display:flex;gap:.7rem;align-items:flex-start"><span class="s10-chip s10-chip--gold" aria-hidden="true"></span><div><div class="s10-name">Gold</div><div class="s10-meta">4 Available · 10×20 footprint</div></div></div>
-            <div class="s10-price">$50K</div>
-          </div>
-          <div class="s10-card__rule"></div>
-          <ul class="s10-list">
-            <li><span class="s10-dot"></span><span>Main Stage + VIP Stage</span></li>
-            <li><span class="s10-dot"></span><span>Prominent sponsor branding</span></li>
-            <li><span class="s10-dot"></span><span>6 VIP + 6 Summit passes</span></li>
-          </ul>
-          <span class="s10-link">View details <span aria-hidden="true">→</span></span>
-        </a>
-        <a class="s10-card s10-card--silver" href="#silver-package">
-          <div class="s10-card__top">
-            <div style="display:flex;gap:.7rem;align-items:flex-start"><span class="s10-chip s10-chip--silver" aria-hidden="true"></span><div><div class="s10-name">Silver</div><div class="s10-meta">23 Available · 10×10 footprint</div></div></div>
-            <div class="s10-price">$10K</div>
-          </div>
-          <div class="s10-card__rule"></div>
-          <ul class="s10-list">
-            <li><span class="s10-dot"></span><span>Turnkey expo booth</span></li>
-            <li><span class="s10-dot"></span><span>Website + signage visibility</span></li>
-            <li><span class="s10-dot"></span><span>1 VIP + 4 Summit passes</span></li>
-          </ul>
-          <span class="s10-link">View details <span aria-hidden="true">→</span></span>
-        </a>
-      </div>
+    </div>
+
+    <div class="sp-package-rail" aria-label="Sponsorship levels">
+      <a class="sp-rail-card" href="#title-package">
+        <span class="sp-rail-card__mark" aria-hidden="true"></span>
+        <div><div class="sp-rail-card__name">Title</div><div class="sp-rail-card__meta">2 available · 20×20 island · Main + VIP Stage</div></div>
+        <div class="sp-rail-card__price">$100K<small>View package</small></div>
+      </a>
+      <a class="sp-rail-card sp-rail-card--gold" href="#gold-package">
+        <span class="sp-rail-card__mark" aria-hidden="true"></span>
+        <div><div class="sp-rail-card__name">Gold</div><div class="sp-rail-card__meta">4 available · 10×20 · Main + VIP Stage</div></div>
+        <div class="sp-rail-card__price">$50K<small>View package</small></div>
+      </a>
+      <a class="sp-rail-card sp-rail-card--silver" href="#silver-package">
+        <span class="sp-rail-card__mark" aria-hidden="true"></span>
+        <div><div class="sp-rail-card__name">Silver</div><div class="sp-rail-card__meta">23 available · 10×10 turnkey footprint</div></div>
+        <div class="sp-rail-card__price">$10K<small>View package</small></div>
+      </a>
     </div>
   </div>
 </section>
 
-<section class="spx-section s10-section" id="tiers">
-  <div class="container">
-    <div class="s10-head">
-      <div class="s10-head__title">Compare</div>
-      <div class="s10-head__sub">Everything below is intentionally short and easy to scan.</div>
+<section class="sp-packages" id="packages">
+  <div class="sp-container">
+    <div class="sp-section-head">
+      <div><div class="sp-kicker">Core Sponsorships</div><h2 class="sp-section-title">Choose your presence.</h2></div>
+      <p class="sp-section-note">Every level includes a physical expo footprint. Title and Gold also include guaranteed stage programming.</p>
     </div>
-    <div class="s10-compare">
-      <div class="s10-compare__cell s10-compare__label"></div>
-      <div class="s10-compare__cell s10-compare__head" id="title-package">Title<small>$100,000</small></div>
-      <div class="s10-compare__cell s10-compare__head" id="gold-package">Gold<small>$50,000</small></div>
-      <div class="s10-compare__cell s10-compare__head" id="silver-package">Silver<small>$10,000</small></div>
 
-      <div class="s10-compare__cell s10-compare__label">Availability</div>
-      <div class="s10-compare__cell">2</div>
-      <div class="s10-compare__cell">4</div>
-      <div class="s10-compare__cell">23</div>
+    <div class="sp-package-grid">
+      <article class="sp-package sp-package--title" id="title-package">
+        <div class="sp-package__head"><div><div class="sp-package__tier">Founding Title</div><div class="sp-package__availability">2 available</div></div><div class="sp-package__price">$100,000</div></div>
+        <div class="sp-package__visual"><div class="sp-booth sp-booth--title">20×20</div></div>
+        <div class="sp-package__facts">
+          <div class="sp-fact"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M4 18V7l8-4 8 4v11"/><path d="M8 21v-8h8v8M2 21h20"/></svg><strong>Main + VIP</strong><span>Stage sessions</span></div>
+          <div class="sp-fact"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M2 12s3.5-6 10-6 10 6 10 6-3.5 6-10 6S2 12 2 12Z"/><circle cx="12" cy="12" r="2.5"/></svg><strong>Top Billing</strong><span>Event-wide</span></div>
+          <div class="sp-fact"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M3 8h18v10H3z"/><path d="M7 8V5h10v3M8 13h8"/></svg><strong>20 Passes</strong><span>10 VIP + 10 Summit</span></div>
+        </div>
+        <details><summary>Full benefits</summary><ul class="sp-package__full"><li>Equal top billing as one of two Founding Title Sponsors</li><li>Branding across registration, credentials, stage, website, email, and media</li><li>First selection between the two Title footprint locations</li><li>Programming format and content developed with Summit approval</li></ul></details>
+        <div class="sp-package__actions"><a class="sp-btn sp-btn--primary sp-select" href="#inquire" data-interest="Founding Title Sponsor" data-item="Founding Title Sponsor — $100,000">Request Availability</a></div>
+      </article>
 
-      <div class="s10-compare__cell s10-compare__label">Footprint</div>
-      <div class="s10-compare__cell">20×20 island</div>
-      <div class="s10-compare__cell">10×20 premium</div>
-      <div class="s10-compare__cell">10×10 turnkey</div>
+      <article class="sp-package sp-package--gold" id="gold-package">
+        <div class="sp-package__head"><div><div class="sp-package__tier">Gold</div><div class="sp-package__availability">4 available</div></div><div class="sp-package__price">$50,000</div></div>
+        <div class="sp-package__visual"><div class="sp-booth sp-booth--gold">10×20</div></div>
+        <div class="sp-package__facts">
+          <div class="sp-fact"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M4 18V7l8-4 8 4v11"/><path d="M8 21v-8h8v8M2 21h20"/></svg><strong>Main + VIP</strong><span>Stage sessions</span></div>
+          <div class="sp-fact"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M2 12s3.5-6 10-6 10 6 10 6-3.5 6-10 6S2 12 2 12Z"/><circle cx="12" cy="12" r="2.5"/></svg><strong>Prominent</strong><span>Brand visibility</span></div>
+          <div class="sp-fact"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M3 8h18v10H3z"/><path d="M7 8V5h10v3M8 13h8"/></svg><strong>12 Passes</strong><span>6 VIP + 6 Summit</span></div>
+        </div>
+        <details><summary>Full benefits</summary><ul class="sp-package__full"><li>Main Stage panel or moderated interview plus VIP Stage session</li><li>Branding across stage screens, signage, website, and sponsor emails</li><li>Location selection within the Gold level by commitment date</li><li>Programming format and content developed with Summit approval</li></ul></details>
+        <div class="sp-package__actions"><a class="sp-btn sp-btn--primary sp-select" href="#inquire" data-interest="Gold Sponsor" data-item="Gold Sponsor — $50,000">Request Availability</a></div>
+      </article>
 
-      <div class="s10-compare__cell s10-compare__label">Stage</div>
-      <div class="s10-compare__cell">Main Stage + VIP Stage</div>
-      <div class="s10-compare__cell">Main Stage + VIP Stage</div>
-      <div class="s10-compare__cell">—</div>
-
-      <div class="s10-compare__cell s10-compare__label">Passes</div>
-      <div class="s10-compare__cell">10 VIP + 10 Summit</div>
-      <div class="s10-compare__cell">6 VIP + 6 Summit</div>
-      <div class="s10-compare__cell">1 VIP + 4 Summit</div>
-
-      <div class="s10-compare__cell s10-compare__label">Visibility</div>
-      <div class="s10-compare__cell">Top billing</div>
-      <div class="s10-compare__cell">Prominent branding</div>
-      <div class="s10-compare__cell">Standard sponsor visibility</div>
-
-      <div class="s10-compare__cell s10-compare__label">Includes</div>
-      <div class="s10-compare__cell">Expo booth, power, internet</div>
-      <div class="s10-compare__cell">Expo booth, power, internet</div>
-      <div class="s10-compare__cell">Expo booth, power, internet</div>
-
-      <div class="s10-compare__cell s10-compare__label">Select</div>
-      <div class="s10-compare__cell s10-compare__cta s10-compare__cta--title"><a class="btn spx-select" href="#inquire" data-interest="Founding Title Sponsor" data-item="Founding Title Sponsor — $100,000">Inquire</a></div>
-      <div class="s10-compare__cell s10-compare__cta s10-compare__cta--gold"><a class="btn spx-select" href="#inquire" data-interest="Gold Sponsor" data-item="Gold Sponsor — $50,000">Inquire</a></div>
-      <div class="s10-compare__cell s10-compare__cta s10-compare__cta--silver"><a class="btn spx-select" href="#inquire" data-interest="Silver Sponsor" data-item="Silver Sponsor — $10,000">Inquire</a></div>
+      <article class="sp-package sp-package--silver" id="silver-package">
+        <div class="sp-package__head"><div><div class="sp-package__tier">Silver</div><div class="sp-package__availability">23 available</div></div><div class="sp-package__price">$10,000</div></div>
+        <div class="sp-package__visual"><div class="sp-booth sp-booth--silver">10×10</div></div>
+        <div class="sp-package__facts">
+          <div class="sp-fact"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M8 4v16M16 4v16"/></svg><strong>Turnkey Booth</strong><span>Backwall + furniture</span></div>
+          <div class="sp-fact"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M2 12s3.5-6 10-6 10 6 10 6-3.5 6-10 6S2 12 2 12Z"/><circle cx="12" cy="12" r="2.5"/></svg><strong>Visibility</strong><span>Web + signage</span></div>
+          <div class="sp-fact"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M3 8h18v10H3z"/><path d="M7 8V5h10v3M8 13h8"/></svg><strong>5 Passes</strong><span>1 VIP + 4 Summit</span></div>
+        </div>
+        <details><summary>Full benefits</summary><ul class="sp-package__full"><li>Turnkey 10×10 booth with branded backwall and package furniture</li><li>Standard power and hardwired internet</li><li>Website, sponsor signage, and selected event-email recognition</li><li>Inclusion in sponsor-announcement communications</li></ul></details>
+        <div class="sp-package__actions"><a class="sp-btn sp-btn--primary sp-select" href="#inquire" data-interest="Silver Sponsor" data-item="Silver Sponsor — $10,000">Request Availability</a></div>
+      </article>
     </div>
-    <p class="s10-note">Custom builds, freight, drayage, venue labor, and specialty AV are additional.</p>
+
+    <div class="sp-included" aria-label="Included with expo sponsorships">
+      <div class="sp-included__item"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M8 4v16M16 4v16"/></svg><span>Standard booth setup</span></div>
+      <div class="sp-included__item"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M13 2 5 14h7l-1 8 8-12h-7l1-8Z"/></svg><span>Power</span></div>
+      <div class="sp-included__item"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M5 12.5a10 10 0 0 1 14 0M8.5 16a5 5 0 0 1 7 0M12 20h.01"/></svg><span>Hardwired internet</span></div>
+      <div class="sp-included__item"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M4 4h16v16H4z"/><path d="M8 8h8M8 12h8M8 16h5"/></svg><span>Website + event listing</span></div>
+    </div>
+    <p class="sp-disclaimer">Custom construction, specialty furniture, freight, drayage, venue labor, additional AV, and sponsor-requested upgrades are quoted separately. Sponsorships do not include category exclusivity.</p>
   </div>
 </section>
 
-<section class="spx-section s10-section" id="add-ons">
-  <div class="container">
-    <div class="s10-head">
-      <div class="s10-head__title">Featured Partnerships</div>
-      <div class="s10-head__sub">Can be booked with or without an expo booth. “+” means direct execution costs are additional.</div>
+<section class="sp-partnerships" id="partnerships">
+  <div class="sp-container">
+    <div class="sp-section-head">
+      <div><div class="sp-kicker">Featured Partnerships</div><h2 class="sp-section-title">Own a moment.</h2></div>
+      <p class="sp-section-note">Available on their own or paired with an expo package. Open a category to see the opportunities.</p>
     </div>
-    <div class="s10-partners">
-      <div class="s10-panel">
-        <div class="s10-panel__head"><span class="s10-icon">ST</span><h3>Stage & Media</h3></div>
-        <ul class="s10-rows">
-          <li><a class="spx-select" href="#inquire" data-interest="Featured Partnership Only" data-item="Livestream &amp; Media — $15,000"><strong>Livestream &amp; Media</strong><span>$15,000</span></a></li>
-          <li><a class="spx-select" href="#inquire" data-interest="Featured Partnership Only" data-item="Workshop Track — $10,000"><strong>Workshop Track</strong><span>$10,000</span></a></li>
-          <li><a class="spx-select" href="#inquire" data-interest="Featured Partnership Only" data-item="Bitcoin Fundamentals — $12,500"><strong>Bitcoin Fundamentals</strong><span>$12,500</span></a></li>
-        </ul>
-      </div>
-      <div class="s10-panel">
-        <div class="s10-panel__head"><span class="s10-icon s10-icon--vip">VIP</span><h3>VIP & Hospitality</h3></div>
-        <ul class="s10-rows">
-          <li><a class="spx-select" href="#inquire" data-interest="Featured Partnership Only" data-item="Summit After Party — $25,000+"><strong>Summit After Party</strong><span>$25,000+</span></a></li>
-          <li><a class="spx-select" href="#inquire" data-interest="Featured Partnership Only" data-item="VIP Oceanfront Soiree — $25,000+"><strong>VIP Oceanfront Soiree</strong><span>$25,000+</span></a></li>
-          <li><a class="spx-select" href="#inquire" data-interest="Featured Partnership Only" data-item="VIP Welcome Reception — $20,000+"><strong>VIP Welcome Reception</strong><span>$20,000+</span></a></li>
-          <li><a class="spx-select" href="#inquire" data-interest="Featured Partnership Only" data-item="Satoshi Farewell Brunch — $12,500+"><strong>Farewell Brunch</strong><span>$12,500+</span></a></li>
-        </ul>
-      </div>
-      <div class="s10-panel">
-        <div class="s10-panel__head"><span class="s10-icon s10-icon--brand">BR</span><h3>Brand & Utility</h3></div>
-        <ul class="s10-rows">
-          <li><a class="spx-select" href="#inquire" data-interest="Featured Partnership Only" data-item="Official Lanyard — $20,000+"><strong>Official Lanyard</strong><span>$20,000+</span></a></li>
-          <li><a class="spx-select" href="#inquire" data-interest="Featured Partnership Only" data-item="Sovereign Lounge — $15,000+"><strong>Sovereign Lounge</strong><span>$15,000+</span></a></li>
-          <li><a class="spx-select" href="#inquire" data-interest="Featured Partnership Only" data-item="Official Tote Bag — $12,500+"><strong>Official Tote Bag</strong><span>$12,500+</span></a></li>
-          <li><a class="spx-select" href="#inquire" data-interest="Featured Partnership Only" data-item="Official WiFi — $10,000"><strong>Official WiFi</strong><span>$10,000</span></a></li>
-          <li><a class="spx-select" href="#inquire" data-interest="Featured Partnership Only" data-item="Coffee &amp; Water Stations — $7,500+"><strong>Coffee &amp; Water</strong><span>$7,500+</span></a></li>
-          <li><a class="spx-select" href="#inquire" data-interest="Featured Partnership Only" data-item="Charging Lounge — $7,500+"><strong>Charging Lounge</strong><span>$7,500+</span></a></li>
-        </ul>
-      </div>
+
+    <div class="sp-partnership-grid">
+      <details class="sp-partner-group">
+        <summary><span class="sp-partner-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M12 3v18M8 7a4 4 0 1 1 8 0v5a4 4 0 1 1-8 0V7Z"/><path d="M5 11v1a7 7 0 0 0 14 0v-1"/></svg></span><span><span class="sp-partner-title">Stage &amp; Media</span><span class="sp-partner-meta">3 opportunities · $10K–$15K</span></span><span class="sp-partner-chevron">+</span></summary>
+        <ul class="sp-partner-list"><li><a class="sp-select" href="#inquire" data-interest="Featured Partnership Only" data-item="Livestream &amp; Media — $15,000"><strong>Livestream &amp; Media</strong><span>$15,000</span></a></li><li><a class="sp-select" href="#inquire" data-interest="Featured Partnership Only" data-item="Bitcoin Fundamentals — $12,500"><strong>Bitcoin Fundamentals</strong><span>$12,500</span></a></li><li><a class="sp-select" href="#inquire" data-interest="Featured Partnership Only" data-item="Workshop Track — $10,000"><strong>Workshop Track · 2 available</strong><span>$10,000</span></a></li></ul>
+      </details>
+
+      <details class="sp-partner-group">
+        <summary><span class="sp-partner-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M7 3h10l-1 7a4 4 0 0 1-8 0L7 3Z"/><path d="M12 14v7M8 21h8"/></svg></span><span><span class="sp-partner-title">VIP &amp; Hospitality</span><span class="sp-partner-meta">4 opportunities · $12.5K–$25K+</span></span><span class="sp-partner-chevron">+</span></summary>
+        <ul class="sp-partner-list"><li><a class="sp-select" href="#inquire" data-interest="Featured Partnership Only" data-item="Summit After Party — $25,000 + costs"><strong>Summit After Party</strong><span>$25,000+</span></a></li><li><a class="sp-select" href="#inquire" data-interest="Featured Partnership Only" data-item="VIP Oceanfront Soiree — $25,000 + costs"><strong>VIP Oceanfront Soiree</strong><span>$25,000+</span></a></li><li><a class="sp-select" href="#inquire" data-interest="Featured Partnership Only" data-item="VIP Welcome Reception — $20,000 + costs"><strong>VIP Welcome Reception</strong><span>$20,000+</span></a></li><li><a class="sp-select" href="#inquire" data-interest="Featured Partnership Only" data-item="Satoshi Farewell Brunch — $12,500 + costs"><strong>Satoshi Farewell Brunch</strong><span>$12,500+</span></a></li></ul>
+      </details>
+
+      <details class="sp-partner-group">
+        <summary><span class="sp-partner-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M4 5h16v14H4z"/><path d="M8 9h8M8 13h5"/><circle cx="17" cy="15" r="2"/></svg></span><span><span class="sp-partner-title">Brand &amp; Utility</span><span class="sp-partner-meta">6 opportunities · $7.5K–$20K+</span></span><span class="sp-partner-chevron">+</span></summary>
+        <ul class="sp-partner-list"><li><a class="sp-select" href="#inquire" data-interest="Featured Partnership Only" data-item="Official Lanyard — $20,000 + production"><strong>Official Lanyard</strong><span>$20,000+</span></a></li><li><a class="sp-select" href="#inquire" data-interest="Featured Partnership Only" data-item="Sovereign Lounge — $15,000 + build"><strong>Sovereign Lounge</strong><span>$15,000+</span></a></li><li><a class="sp-select" href="#inquire" data-interest="Featured Partnership Only" data-item="Official Tote Bag — $12,500 + production"><strong>Official Tote Bag</strong><span>$12,500+</span></a></li><li><a class="sp-select" href="#inquire" data-interest="Featured Partnership Only" data-item="Official WiFi — $10,000"><strong>Official WiFi</strong><span>$10,000</span></a></li><li><a class="sp-select" href="#inquire" data-interest="Featured Partnership Only" data-item="Coffee &amp; Water Stations — $7,500 + costs"><strong>Coffee &amp; Water Stations</strong><span>$7,500+</span></a></li><li><a class="sp-select" href="#inquire" data-interest="Featured Partnership Only" data-item="Charging Lounge — $7,500 + build"><strong>Charging Lounge</strong><span>$7,500+</span></a></li></ul>
+      </details>
+
+      <details class="sp-partner-group">
+        <summary><span class="sp-partner-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M8 12a4 4 0 0 1 4-4h4a4 4 0 0 1 0 8h-4"/><path d="M16 12a4 4 0 0 1-4 4H8a4 4 0 0 1 0-8h4"/></svg></span><span><span class="sp-partner-title">Community</span><span class="sp-partner-meta">Open source + sponsor add-on</span></span><span class="sp-partner-chevron">+</span></summary>
+        <ul class="sp-partner-list"><li><a class="sp-select" href="#inquire" data-interest="Open Source Area (by application)" data-item="Open Source Area — application"><strong>Open Source Area · by application</strong><span>Apply</span></a></li><li><a class="sp-select" href="#inquire" data-interest="Featured Partnership Only" data-item="Promo Insert — $3,000"><strong>Promo Insert · confirmed sponsors only</strong><span>$3,000</span></a></li></ul>
+      </details>
     </div>
-    <div class="s10-open">
-      <div><strong>Open Source Area</strong><small>Application-based subsidized space for open-source projects, nonprofits, and community builders.</small></div>
-      <a class="btn btn--ghost spx-select" href="#inquire" data-interest="Open Source Area (by application)" data-item="Open Source Area — application">Apply <span class="btn__arrow">→</span></a>
-    </div>
+
+    <div class="sp-partner-foot"><div><strong>Not sure where you fit?</strong><span>Tell us your objective and we’ll recommend the cleanest package.</span></div><a class="sp-btn sp-btn--ghost" href="#inquire">Start a Conversation <span aria-hidden="true">→</span></a></div>
   </div>
 </section>
 
-<section class="spx-section" id="inquire">
-  <div class="container">
-    <header class="sec-hd">
-      <div class="sec-hd__num">Start the Conversation</div>
-      <h2 class="section-title sec-hd__title">Tell us what you are considering. <em>We’ll take it from there.</em></h2>
-    </header>
-    <form class="inq-form" action="https://formsubmit.co/info@thesovereignsummit.com" method="POST">
-      <input type="hidden" name="_subject" value="New sponsorship inquiry - thesovereignsummit.com">
-      <input type="hidden" name="_next" value="https://thesovereignsummit.com/sponsorships?sent=1#inquire">
-      <input type="hidden" name="selected_items" id="selectedItemsInput" value="">
-      <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
-      <div class="inq-selections" id="inqSelections" hidden><div class="inq-selections__label">Selected opportunities</div><div class="inq-selections__chips" id="inqSelectionChips"></div></div>
-      <div class="inq-form__row">
-        <label class="inq-form__field"><span>Name</span><input type="text" name="name" required autocomplete="name"></label>
-        <label class="inq-form__field"><span>Work Email</span><input type="email" name="email" required autocomplete="email"></label>
+<section class="sp-inquiry" id="inquire">
+  <div class="sp-container">
+    <div class="sp-inquiry__panel">
+      <div class="sp-inquiry__intro">
+        <div><div class="sp-kicker">Start the Conversation</div><h2>Build the right presence.</h2><p>Tell us what you are considering. We’ll respond with current availability and a few times to talk.</p></div>
+        <div class="sp-inquiry__steps"><div class="sp-inquiry__step"><span>01</span>Current inventory</div><div class="sp-inquiry__step"><span>02</span>Best-fit package</div><div class="sp-inquiry__step"><span>03</span>Short intro call</div></div>
       </div>
-      <div class="inq-form__row">
-        <label class="inq-form__field"><span>Company / Organization</span><input type="text" name="company" required autocomplete="organization"></label>
-        <label class="inq-form__field"><span>What are you considering?</span>
-          <select name="interest" id="interestSelect" required>
-            <option value="" disabled selected>Select one</option>
-            <option>Founding Title Sponsor</option>
-            <option>Gold Sponsor</option>
-            <option>Silver Sponsor</option>
-            <option>Featured Partnership Only</option>
-            <option>Open Source Area (by application)</option>
-            <option>Not sure yet</option>
-          </select>
-        </label>
-      </div>
-      <label class="inq-form__field"><span>What would you like to accomplish?</span><textarea name="message" rows="4" placeholder="Share your goals or the opportunities you are considering."></textarea></label>
-      <button type="submit" class="btn inq-form__submit">Request Current Availability <span class="btn__arrow">→</span></button>
-      <p class="spx-speakers">We’ll reply within two business days with current availability and a few times to talk.</p>
-      <div class="inq-form__thanks" id="inqThanks" hidden aria-live="polite">Thank you. We received your inquiry and will get back to you shortly.</div>
-    </form>
+
+      <form class="sp-form" action="https://formsubmit.co/info@thesovereignsummit.com" method="POST">
+        <input type="hidden" name="_subject" value="New sponsorship inquiry - thesovereignsummit.com">
+        <input type="hidden" name="_next" value="https://thesovereignsummit.com/sponsorships?sent=1#inquire">
+        <input type="hidden" name="selected_items" id="selectedItemsInput" value="">
+        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+        <div class="sp-selected" id="inqSelections" hidden><div class="sp-selected__label">Selected opportunities</div><div class="sp-selected__chips" id="inqSelectionChips"></div></div>
+        <div class="sp-form__row"><label class="sp-field"><span>Name</span><input type="text" name="name" required autocomplete="name"></label><label class="sp-field"><span>Work Email</span><input type="email" name="email" required autocomplete="email"></label></div>
+        <div class="sp-form__row"><label class="sp-field"><span>Company</span><input type="text" name="company" required autocomplete="organization"></label><label class="sp-field"><span>Interested In</span><select name="interest" id="interestSelect" required><option value="" disabled selected>Select one</option><option>Founding Title Sponsor</option><option>Gold Sponsor</option><option>Silver Sponsor</option><option>Featured Partnership Only</option><option>Open Source Area (by application)</option><option>Not sure yet</option></select></label></div>
+        <label class="sp-field"><span>Anything else?</span><textarea name="message" rows="4" placeholder="Your goals, preferred opportunity, or questions."></textarea></label>
+        <div class="sp-form__foot"><p class="sp-form__note">We’ll reply within two business days. Nothing is committed until the final scope is agreed.</p><button type="submit" class="sp-btn sp-btn--primary">Request Availability <span aria-hidden="true">→</span></button></div>
+        <div class="sp-form__thanks" id="inqThanks" hidden aria-live="polite">Thank you. We received your inquiry and will get back to you shortly.</div>
+      </form>
+    </div>
   </div>
 </section>
-
-<a class="spx-mobile-cta" href="#inquire">Request Availability →</a>
 
 <script>
 (function(){
@@ -552,34 +486,27 @@
     if(!wrap||!chips||!hidden)return;
     chips.innerHTML='';
     selected.forEach(function(item,index){
-      var chip=document.createElement('span');chip.className='inq-chip';chip.appendChild(document.createTextNode(item));
+      var chip=document.createElement('span');chip.className='sp-chip';chip.appendChild(document.createTextNode(item));
       var remove=document.createElement('button');remove.type='button';remove.setAttribute('aria-label','Remove '+item);remove.textContent='×';
       remove.addEventListener('click',function(){selected.splice(index,1);render();});chip.appendChild(remove);chips.appendChild(chip);
     });
     hidden.value=selected.join(' | ');wrap.hidden=selected.length===0;
   }
-  document.querySelectorAll('.spx-select').forEach(function(link){
+  document.querySelectorAll('.sp-select').forEach(function(link){
     link.addEventListener('click',function(){
       var item=link.getAttribute('data-item');var level=link.getAttribute('data-interest');
       if(item&&selected.indexOf(item)===-1)selected.push(item);
-      if(level&&interest){var cur=interest.value;var isAddon=level==='Featured Partnership Only';var curIsTier=cur&&cur!==''&&cur!=='Featured Partnership Only';if(!(isAddon&&curIsTier)){Array.prototype.forEach.call(interest.options,function(option){if(option.value===level||option.text===level)interest.value=option.value||option.text;});}}
+      if(level&&interest){
+        var cur=interest.value;var isPartnership=level==='Featured Partnership Only';var curIsTier=cur&&cur!==''&&cur!=='Featured Partnership Only';
+        if(!(isPartnership&&curIsTier)){Array.prototype.forEach.call(interest.options,function(option){if(option.value===level||option.text===level)interest.value=option.value||option.text;});}
+      }
       render();
     });
   });
   if(new URLSearchParams(location.search).get('sent')==='1'){
-    var form=document.querySelector('.inq-form');var thanks=document.getElementById('inqThanks');
+    var form=document.querySelector('.sp-form');var thanks=document.getElementById('inqThanks');
     if(form&&thanks){Array.prototype.forEach.call(form.elements,function(el){el.disabled=true;});thanks.hidden=false;}
   }
-  var mobileCta=document.querySelector('.spx-mobile-cta');
-  var hero=document.getElementById('sponsorships');
-  function updateMobileCta(){
-    if(!mobileCta||!hero)return;
-    var show=window.innerWidth<=700&&window.scrollY>hero.offsetTop+(hero.offsetHeight*.72);
-    mobileCta.classList.toggle('is-visible',show);
-  }
-  updateMobileCta();
-  window.addEventListener('scroll',updateMobileCta,{passive:true});
-  window.addEventListener('resize',updateMobileCta);
 })();
 </script>
 
