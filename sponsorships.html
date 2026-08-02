@@ -865,6 +865,24 @@ body{overflow-x:clip}
   #content .sp-open-source{grid-template-columns:auto minmax(0,1fr);gap:.9rem;padding:1.15rem}
   #content .sp-open-source .sp-btn{grid-column:1 / -1;width:100%;margin-top:.3rem}
 }
+
+/* Open Source tile: bigger heading, standout Apply, two-line lead copy */
+#content .sp-open-source strong{font-size:1.62rem;line-height:1.15;letter-spacing:-.01em}
+#content .sp-open-source .sp-os-body > span{margin-top:.5rem;font-size:.94rem;line-height:1.55}
+#content .sp-open-source__icon{width:58px;height:58px;border-radius:15px}
+#content .sp-open-source__icon svg{width:29px;height:29px}
+#content .sp-open-source .sp-btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:.55rem;
+  min-width:186px;padding:1rem 1.6rem;border:none;border-radius:999px;
+  background:var(--sp-orange);color:#001227;
+  font-size:.8rem;font-weight:700;letter-spacing:.13em;text-transform:uppercase;
+  box-shadow:0 8px 26px rgba(255,105,65,.26);transition:box-shadow .2s,transform .2s;
+}
+#content .sp-open-source .sp-btn:hover{transform:translateY(-1px);box-shadow:0 12px 32px rgba(255,105,65,.34)}
+#content .sp-open-source .sp-btn > span{display:flex;align-items:center;justify-content:center;line-height:1;font-size:1.15em;transform:translateY(-3.4px)}
+@media(max-width:1100px){#content .sp-open-source strong{font-size:1.45rem}}
+@media(max-width:700px){#content .sp-open-source strong{font-size:1.32rem}
+  #content .sp-open-source .sp-btn{min-width:0;width:100%}}
 </style>
 </head>
 <body>
@@ -1312,14 +1330,13 @@ body{overflow-x:clip}
     <!-- Open Source -->
     <div class="sp-open-source">
       <span class="sp-open-source__icon" aria-hidden="true">
-        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 12a4 4 0 0 1 4-4h4a4 4 0 0 1 0 8h-4"/><path d="M16 12a4 4 0 0 1-4 4H8a4 4 0 0 1 0-8h4"/></svg>
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="m8 7-5 5 5 5"/><path d="m16 7 5 5-5 5"/><path d="M14 4 10 20"/></svg>
       </span>
       <div class="sp-os-body">
         <strong>Open Source Area</strong>
-        <span>For open-source projects, nonprofits, and small builders. Every booth here is sold at our production company&rsquo;s cost with nothing added, and a smaller kiosk size is available that paid sponsors cannot buy.</span>
+        <span>For open-source projects, nonprofits, and small builders.<br>Every booth here is sold at our production company&rsquo;s cost with nothing added, and a smaller kiosk size is available that paid sponsors cannot buy.</span>
         <div class="sp-os-tags">
           <span>By application</span>
-          <span>Extra kiosk size</span>
           <span>At cost, no markup</span>
         </div>
       </div>
