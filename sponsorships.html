@@ -904,6 +904,18 @@ body{overflow-x:clip}
 }
 #content .sp-open-source .sp-btn > span{font-size:1.2em}
 @media(max-width:700px){#content .sp-open-source .sp-btn{min-width:0;width:100%}}
+
+/* Centre the booth box itself in the cell; the dimension label hangs below it
+   without shifting the box, so all three boxes share a true centre. */
+#content .sp-booth-scale{
+  display:flex!important;align-items:center;justify-content:center;
+  padding:0!important;gap:0!important;
+}
+#content .sp-booth{position:relative;overflow:visible}
+#content .sp-booth-label{
+  position:absolute!important;top:calc(100% + .55rem);left:50%;
+  transform:translateX(-50%)!important;bottom:auto;white-space:nowrap;
+}
 </style>
 </head>
 <body>
@@ -1046,8 +1058,9 @@ body{overflow-x:clip}
 
         <div class="sp-package__visual">
           <div class="sp-booth-scale" aria-label="20 foot by 20 foot expo booth, 400 square feet">
-            <div class="sp-booth sp-booth--title"><span>400 sq ft</span></div>
-            <span class="sp-booth-label">20 × 20 ft</span>
+            <div class="sp-booth sp-booth--title"><span>400 sq ft</span>
+              <span class="sp-booth-label">20 × 20 ft</span>
+            </div>
           </div>
           <div class="sp-booth-caption">
             <span class="sp-booth-tag">Expo Booth</span>
@@ -1107,8 +1120,9 @@ body{overflow-x:clip}
 
         <div class="sp-package__visual">
           <div class="sp-booth-scale" aria-label="10 foot by 20 foot expo booth, 200 square feet">
-            <div class="sp-booth sp-booth--gold"><span>200 sq ft</span></div>
-            <span class="sp-booth-label">20 × 10 ft</span>
+            <div class="sp-booth sp-booth--gold"><span>200 sq ft</span>
+              <span class="sp-booth-label">20 × 10 ft</span>
+            </div>
           </div>
           <div class="sp-booth-caption">
             <span class="sp-booth-tag">Expo Booth</span>
@@ -1167,8 +1181,9 @@ body{overflow-x:clip}
 
         <div class="sp-package__visual">
           <div class="sp-booth-scale" aria-label="10 foot by 10 foot expo booth, 100 square feet">
-            <div class="sp-booth sp-booth--silver"><span>100 sq ft</span></div>
-            <span class="sp-booth-label">10 × 10 ft</span>
+            <div class="sp-booth sp-booth--silver"><span>100 sq ft</span>
+              <span class="sp-booth-label">10 × 10 ft</span>
+            </div>
           </div>
           <div class="sp-booth-caption">
             <span class="sp-booth-tag">Expo Booth</span>
