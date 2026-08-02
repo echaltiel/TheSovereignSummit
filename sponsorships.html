@@ -155,6 +155,12 @@
 #content .spx-card--title .btn{background:var(--accent);color:#001227}
 #content .spx-card--gold .btn{background:#E8C46A;color:#001227}
 #content .spx-card--silver .btn{background:#C6CED9;color:#001227}
+#content .spx-included{margin-top:1.25rem;padding:1.15rem 1.3rem;background:var(--dk-band);border:1px solid var(--dk-rule);border-radius:var(--radius)}
+#content .spx-included__title{font-family:var(--fd);font-size:1.2rem;color:var(--dk-c)}
+#content .spx-included__list{list-style:none;padding:0;margin:.75rem 0 0;display:grid;grid-template-columns:repeat(3,1fr);gap:.5rem 1.5rem}
+@media(max-width:760px){#content .spx-included__list{grid-template-columns:1fr}}
+#content .spx-included__list li{position:relative;padding-left:1.1rem;font-size:.86rem;line-height:1.45;color:var(--dk-c72)}
+#content .spx-included__list li::before{content:"";position:absolute;left:0;top:.6em;width:.55rem;height:2px;background:var(--accent)}
 #content .spx-note{margin-top:1rem;padding:1rem 1.15rem;border-left:3px solid var(--accent);background:rgba(255,255,255,.035);font-size:.84rem;line-height:1.55;color:var(--dk-c72)}
 
 #content .spx-addon-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
@@ -202,7 +208,7 @@
       <div class="spx-copy">
         <div class="spx-eyebrow">Sponsorships</div>
         <h1 class="spx-title">Put your brand in the room.</h1>
-        <p class="spx-desc">Three sponsorship levels: <strong>2 Title</strong> at $100K, <strong>4 Gold</strong> at $50K, and <strong>23 Silver</strong> at $10K.</p>
+        <p class="spx-desc">Two days where AI, Freedom, Energy, and Bitcoin converge at the Fontainebleau Miami Beach.</p>
         <div class="spx-quick">
           <span class="spx-pill">1,000 Attendees</span>
           <span class="spx-pill">200 VIP Passes</span>
@@ -211,6 +217,7 @@
         <div class="spx-actions">
           <a class="btn btn--accent" href="#inquire">Start a Conversation <span class="btn__arrow">→</span></a>
         </div>
+        <p class="spx-speakers" style="margin-top:.9rem"><strong>Confirmed speakers include:</strong> Michael Saylor · Jeff Booth · Natalie Brunell · BTC Sessions · Sam Callahan</p>
         <p class="spx-hero-note">Programming, hospitality, and media partnerships are also available.</p>
       </div>
       <div class="spx-hero-visual" aria-label="Sponsorship levels overview">
@@ -255,7 +262,6 @@
       <div class="sec-hd__num">Sponsorship Levels</div>
       <h2 class="section-title sec-hd__title">Three levels. <em>Limited by the physical floor plan.</em></h2>
     </header>
-    <p class="spx-speakers"><strong>Confirmed speakers include:</strong> Michael Saylor · Jeff Booth · Natalie Brunell · BTC Sessions · Sam Callahan · more to be announced.</p>
     <div class="spx-tiers">
       <article class="spx-card spx-card--title">
         <div class="spx-card__avail">2 Available</div>
@@ -264,7 +270,7 @@
         <div class="spx-card__footprint">20×20 island footprint</div>
         <ul class="spx-card__features">
           <li>Primetime Main Stage session and VIP Stage session</li>
-          <li>Top billing across event branding, registration, website, and media</li>
+          <li>&ldquo;The Sovereign Summit, presented by [You]&rdquo; across event branding, stage, registration, website, and media</li>
           <li>10 VIP Summit Passes and 10 Summit Passes</li>
           <li>First selection between the two Title locations</li>
           <li>Final programming subject to Summit approval</li>
@@ -293,7 +299,7 @@
         <div class="spx-card__price">$10,000</div>
         <div class="spx-card__footprint">10×10 turnkey footprint</div>
         <ul class="spx-card__features">
-          <li>Branded backwall, package furniture, standard power, and hardwired internet</li>
+          <li>Booth location assigned in order of commitment</li>
           <li>1 VIP Summit Pass and 4 Summit Passes</li>
           <li>Logo on the website, sponsor signage, and selected event emails</li>
           <li>Inclusion in sponsor-announcement communications</li>
@@ -301,6 +307,17 @@
         </ul>
         <a class="btn spx-select" href="#inquire" data-interest="Silver Sponsor" data-item="Silver Sponsor — $10,000">Inquire — Silver <span class="btn__arrow">→</span></a>
       </article>
+    </div>
+    <div class="spx-included">
+      <div class="spx-included__title">Included at every level</div>
+      <ul class="spx-included__list">
+        <li>Branded backwall, package furniture, and standard power</li>
+        <li>Hardwired internet at your booth</li>
+        <li>Listing on the website and in the event guide</li>
+        <li>Our production partners, to build exactly what you want</li>
+        <li>Shipping, drayage, and on-site setup coordinated for you</li>
+        <li>Move-in the afternoon before doors</li>
+      </ul>
     </div>
     <p class="spx-note"><strong>Standard booth elements are included.</strong> Custom construction, specialty furniture, freight, drayage, venue labor, added AV or technology, and sponsor-requested upgrades are quoted separately. Sponsorships do not include category exclusivity.</p>
   </div>
@@ -412,7 +429,7 @@
     link.addEventListener('click',function(){
       var item=link.getAttribute('data-item');var level=link.getAttribute('data-interest');
       if(item&&selected.indexOf(item)===-1)selected.push(item);
-      if(level&&interest){Array.prototype.forEach.call(interest.options,function(option){if(option.value===level||option.text===level)interest.value=option.value||option.text;});}
+      if(level&&interest){var cur=interest.value;var isAddon=level==='Featured Partnership Only';var curIsTier=cur&&cur!==''&&cur!=='Featured Partnership Only';if(!(isAddon&&curIsTier)){Array.prototype.forEach.call(interest.options,function(option){if(option.value===level||option.text===level)interest.value=option.value||option.text;});}}
       render();
     });
   });
