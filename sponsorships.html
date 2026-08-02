@@ -136,11 +136,11 @@
 /* Hero */
 #content .sp-hero{
   position:relative;
-  min-height:calc(100svh - var(--header-h));
+  min-height:auto;
   display:flex;
-  align-items:flex-end;
+  align-items:center;
   overflow:hidden;
-  padding:clamp(2.5rem,5vw,4.5rem) 0 0;
+  padding:clamp(3rem,6vw,5.25rem) 0;
 }
 #content .sp-hero__bg{position:absolute;inset:0;z-index:0}
 #content .sp-hero__bg img{width:100%;height:100%;object-fit:cover;object-position:center 45%}
@@ -148,9 +148,9 @@
   linear-gradient(90deg,rgba(0,18,39,.98) 0%,rgba(0,24,57,.92) 43%,rgba(0,24,57,.42) 78%,rgba(0,24,57,.28) 100%),
   linear-gradient(180deg,rgba(0,18,39,.35) 0%,rgba(0,18,39,.12) 45%,rgba(0,18,39,.96) 100%)}
 #content .sp-hero__inner{position:relative;z-index:2;width:100%}
-#content .sp-hero__top{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:2rem;align-items:end;padding-bottom:clamp(2rem,4vw,3.5rem)}
+#content .sp-hero__top{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:2rem;align-items:end;padding-bottom:0}
 #content .sp-hero__copy{max-width:760px}
-#content .sp-hero h1{font-family:var(--fb);font-size:clamp(3.2rem,8vw,7.3rem);font-weight:900;line-height:.86;letter-spacing:-.055em;text-transform:uppercase;color:var(--sp-cream);max-width:8ch;text-shadow:0 6px 34px rgba(0,0,0,.35)}
+#content .sp-hero h1{font-family:var(--fb);font-size:clamp(3rem,7vw,6.4rem);font-weight:900;line-height:.9;letter-spacing:-.05em;text-transform:uppercase;color:var(--sp-cream);max-width:10ch;text-shadow:0 6px 34px rgba(0,0,0,.35)}
 #content .sp-hero__sub{max-width:50ch;margin-top:1.15rem;font-size:clamp(1rem,1.6vw,1.2rem);line-height:1.5;color:rgba(244,236,224,.84)}
 #content .sp-hero__actions{display:flex;gap:.75rem;flex-wrap:wrap;margin-top:1.3rem}
 #content .sp-btn{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;min-height:50px;padding:.88rem 1.3rem;border-radius:999px;font-family:var(--fm);font-size:.7rem;font-weight:700;letter-spacing:.13em;text-transform:uppercase;transition:transform .18s ease,background .18s ease,border-color .18s ease,color .18s ease}
@@ -158,11 +158,13 @@
 #content .sp-btn--primary{background:var(--sp-orange);color:#001227;border:1px solid var(--sp-orange)}
 #content .sp-btn--ghost{border:1px solid rgba(244,236,224,.42);color:var(--sp-cream);background:rgba(0,18,39,.18);backdrop-filter:blur(8px)}
 #content .sp-btn--ghost:hover{border-color:var(--sp-cream);background:rgba(244,236,224,.07)}
-#content .sp-speakers{display:flex;align-items:center;gap:.8rem;padding:1rem 1.1rem;border:1px solid rgba(244,236,224,.2);border-radius:18px;background:rgba(0,18,39,.58);backdrop-filter:blur(12px);min-width:300px}
+#content .sp-speakers{display:flex;align-items:center;gap:.8rem;padding:1rem 1.1rem;border:1px solid rgba(244,236,224,.2);border-radius:18px;background:rgba(0,18,39,.58);backdrop-filter:blur(12px);min-width:300px;transition:transform .18s ease,border-color .18s ease,background .18s ease}
 #content .sp-speakers__faces{display:flex;padding-left:.55rem}
 #content .sp-speakers__faces img{width:43px;height:43px;border-radius:50%;object-fit:cover;border:2px solid var(--sp-bg-deep);margin-left:-.55rem;background:var(--sp-card)}
 #content .sp-speakers__copy strong{display:block;font-size:.86rem;color:var(--sp-cream)}
 #content .sp-speakers__copy span{display:block;font-size:.72rem;line-height:1.35;color:var(--sp-muted);margin-top:.12rem}
+#content .sp-speakers:hover{transform:translateY(-2px);border-color:rgba(244,236,224,.42);background:rgba(0,18,39,.72)}
+#content .sp-speakers__arrow{margin-left:auto;font-family:var(--fm);font-size:.8rem;color:var(--sp-orange)}
 
 /* Hero package rail */
 #content .sp-package-rail{display:grid;grid-template-columns:repeat(3,1fr);background:rgba(0,18,39,.9);border:1px solid rgba(244,236,224,.18);border-bottom:none;border-radius:20px 20px 0 0;overflow:hidden;backdrop-filter:blur(14px)}
@@ -323,41 +325,24 @@
   <div class="sp-container sp-hero__inner">
     <div class="sp-hero__top">
       <div class="sp-hero__copy">
-        <div class="sp-kicker">Founding Sponsorships · February 5–6, 2027</div>
-        <h1>Own the room.</h1>
-        <p class="sp-hero__sub">29 limited expo footprints, plus select stage, media, VIP, and hospitality partnerships.</p>
+        <div class="sp-kicker">Sponsorships</div>
+        <h1>Choose your presence.</h1>
+        <p class="sp-hero__sub">Expo, stage, media, VIP, and hospitality partnerships at The Sovereign Summit.</p>
         <div class="sp-hero__actions">
-          <a class="sp-btn sp-btn--primary" href="#packages">View Packages <span aria-hidden="true">↓</span></a>
+          <a class="sp-btn sp-btn--primary" href="#packages">Explore Sponsorships <span aria-hidden="true">↓</span></a>
           <a class="sp-btn sp-btn--ghost" href="#inquire">Request Availability <span aria-hidden="true">→</span></a>
         </div>
       </div>
-      <div class="sp-speakers" aria-label="Confirmed speakers">
+      <a class="sp-speakers" href="/speakers" aria-label="View confirmed speakers">
         <div class="sp-speakers__faces" aria-hidden="true">
-          <img src="images/speakers/saylor.webp" alt="">
-          <img src="images/speakers/booth.webp" alt="">
-          <img src="images/speakers/Brunell.webp" alt="">
-          <img src="images/speakers/Sessions.webp" alt="">
-          <img src="images/speakers/callahan.webp" alt="">
+          <img src="images/speakers/saylor.webp?v=20260801" alt="">
+          <img src="images/speakers/Brunell.webp?v=20260801" alt="">
+          <img src="images/speakers/booth.webp?v=20260801" alt="">
+          <img src="images/speakers/Sessions.webp?v=20260801" alt="">
+          <img src="images/speakers/callahan.webp?v=20260801" alt="">
         </div>
-        <div class="sp-speakers__copy"><strong>Confirmed speakers</strong><span>Saylor · Booth · Brunell · BTC Sessions · Callahan · more to come</span></div>
-      </div>
-    </div>
-
-    <div class="sp-package-rail" aria-label="Sponsorship levels">
-      <a class="sp-rail-card" href="#title-package">
-        <span class="sp-rail-card__mark" aria-hidden="true"></span>
-        <div><div class="sp-rail-card__name">Title</div><div class="sp-rail-card__meta">2 available · 20×20 island · Main + VIP Stage</div></div>
-        <div class="sp-rail-card__price">$100K<small>View package</small></div>
-      </a>
-      <a class="sp-rail-card sp-rail-card--gold" href="#gold-package">
-        <span class="sp-rail-card__mark" aria-hidden="true"></span>
-        <div><div class="sp-rail-card__name">Gold</div><div class="sp-rail-card__meta">4 available · 10×20 · Main + VIP Stage</div></div>
-        <div class="sp-rail-card__price">$50K<small>View package</small></div>
-      </a>
-      <a class="sp-rail-card sp-rail-card--silver" href="#silver-package">
-        <span class="sp-rail-card__mark" aria-hidden="true"></span>
-        <div><div class="sp-rail-card__name">Silver</div><div class="sp-rail-card__meta">23 available · 10×10 turnkey footprint</div></div>
-        <div class="sp-rail-card__price">$10K<small>View package</small></div>
+        <div class="sp-speakers__copy"><strong>Confirmed speakers</strong><span>Saylor · Brunell · Booth · BTC Sessions · Callahan</span></div>
+        <span class="sp-speakers__arrow" aria-hidden="true">→</span>
       </a>
     </div>
   </div>
@@ -366,8 +351,7 @@
 <section class="sp-packages" id="packages">
   <div class="sp-container">
     <div class="sp-section-head">
-      <div><div class="sp-kicker">Core Sponsorships</div><h2 class="sp-section-title">Choose your presence.</h2></div>
-      <p class="sp-section-note">Every level includes a physical expo footprint. Title and Gold also include guaranteed stage programming.</p>
+      <div><div class="sp-kicker">Core Sponsorships</div><h2 class="sp-section-title">Choose your package.</h2></div>
     </div>
 
     <div class="sp-package-grid">
