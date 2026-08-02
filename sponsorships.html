@@ -905,16 +905,17 @@ body{overflow-x:clip}
 #content .sp-open-source .sp-btn > span{font-size:1.2em}
 @media(max-width:700px){#content .sp-open-source .sp-btn{min-width:0;width:100%}}
 
-/* Centre the booth box itself in the cell; the dimension label hangs below it
-   without shifting the box, so all three boxes share a true centre. */
+/* Boxes share one centre line, labels share one baseline. Both are therefore
+   in the same place on all three cards regardless of box size. */
 #content .sp-booth-scale{
+  position:relative;
   display:flex!important;align-items:center;justify-content:center;
-  padding:0!important;gap:0!important;
+  padding:0 0 1.35rem!important;gap:0!important;
 }
-#content .sp-booth{position:relative;overflow:visible}
+#content .sp-booth{position:static}
 #content .sp-booth-label{
-  position:absolute!important;top:calc(100% + .55rem);left:50%;
-  transform:translateX(-50%)!important;bottom:auto;white-space:nowrap;
+  position:absolute!important;bottom:0;top:auto;left:50%;
+  transform:translateX(-50%)!important;white-space:nowrap;
 }
 </style>
 </head>
