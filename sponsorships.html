@@ -725,35 +725,21 @@ body{overflow-x:clip}
 
 
 
-/* ===== Package tile: alignment + legibility ===== */
+/* ===== Package tile: legibility only. Centering left intact. ===== */
 @media(min-width:861px){
-  #content .sp-package__visual{height:154px;min-height:154px}
-  #content .sp-booth-caption{justify-content:flex-start}
-  #content .sp-booth-caption strong{min-height:2.45em;font-size:1.06rem;line-height:1.22}
+  #content .sp-booth-caption strong{font-size:1.06rem;line-height:1.22}
   #content .sp-booth-caption span:last-child{font-size:.85rem;line-height:1.4;max-width:30ch}
   #content .sp-booth-caption .sp-booth-tag{font-size:.62rem}
   #content .sp-booth-label{font-size:.66rem}
-
-  #content .sp-package__facts{height:198px;min-height:198px}
-  #content .sp-fact{align-content:start}
-  #content .sp-fact strong{
-    align-items:flex-start;
-    min-height:2.6em;
-    font-size:.95rem;
-    line-height:1.3;
-  }
-  #content .sp-fact > span{
-    display:block;
-    min-height:2.8em;
-    font-size:.8rem;
-    line-height:1.4;
-  }
+  #content .sp-fact strong{font-size:.95rem;line-height:1.3}
+  #content .sp-fact > span{font-size:.8rem;line-height:1.4}
   #content .sp-package__availability{font-size:.74rem}
 }
 #content #package-grid{scroll-margin-top:calc(var(--header-h,120px) + 16px)}
 
 #content .sp-partnerships .sp-section-title{max-width:none;white-space:nowrap;font-size:clamp(1.65rem,4.1vw,3.1rem)}
 @media(max-width:420px){#content .sp-partnerships .sp-section-title{font-size:clamp(1.35rem,7.2vw,1.75rem)}}
+@media(max-width:1160px) and (min-width:961px){#content .sp-booth-caption strong{font-size:.97rem}}
 </style>
 </head>
 <body>
@@ -962,7 +948,7 @@ body{overflow-x:clip}
           </div>
           <div class="sp-booth-caption">
             <span class="sp-booth-tag">Expo Booth</span>
-            <strong>Double-width presence</strong>
+            <strong>Double footprint</strong>
             <span>Premium placement with room to activate</span>
           </div>
         </div>
