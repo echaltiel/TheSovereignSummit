@@ -347,6 +347,382 @@ body{overflow-x:clip}
   #content *,#content *::before,#content *::after{scroll-behavior:auto!important;transition-duration:.01ms!important;animation-duration:.01ms!important;animation-iteration-count:1!important}
 }
 
+/* ================================================================
+   Package comparison audit — v9
+   ================================================================ */
+#content .sp-packages{
+  padding:1.55rem 0 2.45rem;
+  scroll-margin-top:calc(var(--header-h,80px) + 10px);
+}
+#content .sp-packages .sp-section-head{margin-bottom:1.25rem}
+#content .sp-packages .sp-section-title{
+  font-size:clamp(1.9rem,2.45vw,2.55rem);
+  line-height:1;
+  letter-spacing:-.045em;
+}
+#content .sp-package-grid{
+  gap:1.15rem;
+  scroll-margin-top:calc(var(--header-h,80px) + 10px);
+}
+#content .sp-package{
+  border-radius:21px;
+  background:
+    radial-gradient(circle at 50% 0%,rgba(255,255,255,.045),transparent 34%),
+    linear-gradient(180deg,rgba(255,255,255,.048),rgba(255,255,255,.014));
+}
+#content .sp-package::before{height:3px}
+
+/* Header: identity / emblem / price */
+#content .sp-package__head{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) 68px minmax(132px,auto);
+  align-items:center;
+  gap:.9rem;
+  min-height:110px;
+  padding:1.35rem 1.38rem 1.05rem;
+}
+#content .sp-package__identity{align-self:center;min-width:0}
+#content .sp-package__tier{
+  font-size:2.14rem;
+  line-height:.96;
+  letter-spacing:-.025em;
+}
+#content .sp-package__availability{
+  margin-top:.48rem;
+  font-size:.68rem;
+  line-height:1.25;
+  letter-spacing:.1em;
+}
+#content .sp-package__emblem{
+  justify-self:center;
+  align-self:center;
+  width:62px;
+  height:70px;
+  object-fit:contain;
+  object-position:center;
+  filter:drop-shadow(0 7px 12px rgba(0,0,0,.22));
+}
+#content .sp-package__emblem--title{width:64px;height:72px}
+#content .sp-package__emblem--gold{width:60px;height:69px}
+#content .sp-package__emblem--silver{width:58px;height:68px}
+#content .sp-package__price{
+  align-self:center;
+  font-size:clamp(1.76rem,1.9vw,2rem);
+  line-height:.98;
+  letter-spacing:-.035em;
+}
+#content .sp-package__price small{
+  margin-top:.48rem;
+  font-size:.61rem;
+  line-height:1.25;
+  letter-spacing:.08em;
+}
+
+/* Booth block */
+#content .sp-package__visual{
+  grid-template-columns:116px minmax(0,1fr);
+  align-items:stretch;
+  gap:1rem;
+  height:146px;
+  min-height:146px;
+  margin:0 1.38rem;
+  padding:.9rem 1rem;
+  border-color:rgba(244,236,224,.155);
+  border-radius:16px;
+  background:linear-gradient(135deg,rgba(244,236,224,.045),rgba(244,236,224,.014));
+}
+#content .sp-booth-scale{
+  align-self:center;
+  width:108px;
+  height:116px;
+}
+#content .sp-booth--title{width:84px;height:84px;border-radius:13px}
+#content .sp-booth--gold{width:84px;height:42px;border-radius:10px}
+#content .sp-booth--silver{width:42px;height:42px;border-radius:9px}
+#content .sp-booth-label{bottom:1px;font-size:.6rem;letter-spacing:.055em}
+#content .sp-booth-caption{
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  justify-content:center;
+  min-width:0;
+  padding:.05rem 0;
+}
+#content .sp-booth-caption .sp-booth-tag{
+  margin-bottom:.5rem;
+  padding:.25rem .52rem;
+  font-size:.6rem;
+  letter-spacing:.075em;
+}
+#content .sp-booth-caption strong{
+  margin-bottom:.28rem;
+  font-size:1rem;
+  line-height:1.22;
+}
+#content .sp-booth-caption span:last-child{
+  max-width:28ch;
+  font-size:.78rem;
+  line-height:1.42;
+}
+
+/* Benefit comparison: identical vertical rhythm across every card */
+#content .sp-package__facts{
+  height:176px;
+  min-height:176px;
+  margin:.95rem 1.38rem 0;
+  border-radius:15px;
+  border-color:rgba(244,236,224,.155);
+  background:rgba(0,18,39,.2);
+}
+#content .sp-fact{
+  display:grid;
+  grid-template-rows:24px minmax(3.05rem,auto) minmax(2.7rem,auto);
+  align-content:center;
+  justify-items:center;
+  min-height:174px;
+  padding:.92rem .62rem .85rem;
+}
+#content .sp-fact svg{width:22px;height:22px}
+#content .sp-fact strong{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  min-height:0;
+  margin:.48rem 0 0;
+  font-size:.87rem;
+  font-weight:750;
+  line-height:1.28;
+  text-align:center;
+  text-wrap:balance;
+}
+#content .sp-fact>span{
+  align-self:start;
+  min-height:0;
+  margin:.34rem 0 0;
+  font-size:.72rem;
+  font-weight:500;
+  line-height:1.38;
+  text-align:center;
+  color:rgba(244,236,224,.67);
+}
+
+/* Details and action */
+#content .sp-package details{margin:0 1.38rem}
+#content .sp-package summary{
+  min-height:52px;
+  padding:.9rem 0;
+  font-size:.69rem;
+  letter-spacing:.09em;
+}
+#content .sp-package__actions{
+  padding:.95rem 1.38rem 1.35rem;
+}
+#content .sp-package__actions .sp-btn{
+  min-height:56px;
+  font-size:.72rem;
+  letter-spacing:.095em;
+}
+#content .sp-disclaimer{margin-top:1.15rem}
+
+/* Slightly tighter three-column desktop without sacrificing legibility */
+@media(max-width:1260px) and (min-width:1081px){
+  #content .sp-package-grid{gap:.82rem}
+  #content .sp-package__head{
+    grid-template-columns:minmax(0,1fr) 56px minmax(118px,auto);
+    gap:.55rem;
+    padding-inline:1rem;
+  }
+  #content .sp-package__emblem{width:52px;height:60px}
+  #content .sp-package__emblem--title{width:54px;height:62px}
+  #content .sp-package__price{font-size:1.66rem}
+  #content .sp-package__visual{
+    grid-template-columns:100px minmax(0,1fr);
+    gap:.7rem;
+    margin-inline:1rem;
+    padding-inline:.72rem;
+  }
+  #content .sp-booth-scale{width:94px}
+  #content .sp-package__facts,#content .sp-package details{margin-inline:1rem}
+  #content .sp-package__actions{padding-inline:1rem}
+  #content .sp-fact{padding-inline:.42rem}
+  #content .sp-fact strong{font-size:.82rem}
+  #content .sp-fact>span{font-size:.68rem}
+}
+
+/* Tablet: one-card-at-a-time comparison rail */
+@media(max-width:1080px){
+  #content .sp-package-grid{
+    grid-template-columns:none;
+    grid-auto-flow:column;
+    grid-auto-columns:min(390px,calc(100vw - 52px));
+    gap:1rem;
+    margin-inline:calc(clamp(1.1rem,3vw,2.5rem) * -1);
+    padding:0 clamp(1.1rem,3vw,2.5rem) 1rem;
+    overflow-x:auto;
+    overscroll-behavior-inline:contain;
+    scroll-snap-type:inline mandatory;
+    scroll-padding-inline:clamp(1.1rem,3vw,2.5rem);
+    scrollbar-width:none;
+  }
+  #content .sp-package-grid::-webkit-scrollbar{display:none}
+  #content .sp-package{scroll-snap-align:start}
+  #content .sp-swipe-hint{display:block;margin:-.25rem 0 .8rem}
+}
+
+/* Mobile */
+@media(max-width:680px){
+  #content .sp-packages{padding:1.25rem 0 2rem}
+  #content .sp-packages .sp-section-head{margin-bottom:.9rem}
+  #content .sp-packages .sp-section-title{
+    font-size:clamp(1.45rem,7vw,1.82rem);
+    line-height:1;
+  }
+  #content .sp-swipe-hint{margin:-.2rem 0 .72rem;font-size:.62rem}
+  #content .sp-package-grid{
+    grid-auto-columns:min(390px,calc(100vw - 30px));
+    gap:.85rem;
+    margin-inline:-1rem;
+    padding-inline:1rem;
+    scroll-padding-inline:1rem;
+  }
+  #content .sp-package{border-radius:19px}
+  #content .sp-package__head{
+    grid-template-columns:minmax(0,1fr) 54px minmax(112px,auto);
+    gap:.55rem;
+    min-height:102px;
+    padding:1.18rem 1rem .94rem;
+  }
+  #content .sp-package__tier{font-size:1.94rem}
+  #content .sp-package__availability{font-size:.66rem}
+  #content .sp-package__emblem{width:49px;height:57px}
+  #content .sp-package__emblem--title{width:51px;height:59px}
+  #content .sp-package__price{font-size:1.52rem}
+  #content .sp-package__price small{font-size:.58rem}
+  #content .sp-package__visual{
+    grid-template-columns:94px minmax(0,1fr);
+    gap:.75rem;
+    height:auto;
+    min-height:132px;
+    margin-inline:1rem;
+    padding:.78rem .8rem;
+  }
+  #content .sp-booth-scale{width:88px;height:104px}
+  #content .sp-booth--title{width:74px;height:74px}
+  #content .sp-booth--gold{width:74px;height:37px}
+  #content .sp-booth--silver{width:37px;height:37px}
+  #content .sp-booth-caption .sp-booth-tag{font-size:.58rem}
+  #content .sp-booth-caption strong{font-size:.96rem}
+  #content .sp-booth-caption span:last-child{font-size:.76rem}
+  #content .sp-package__facts{
+    grid-template-columns:1fr;
+    height:auto;
+    min-height:0;
+    margin:.85rem 1rem 0;
+    border-radius:14px;
+  }
+  #content .sp-fact{
+    display:grid;
+    grid-template-columns:27px minmax(0,1fr);
+    grid-template-rows:auto auto;
+    align-content:center;
+    align-items:start;
+    justify-items:start;
+    column-gap:.72rem;
+    row-gap:.16rem;
+    min-height:76px;
+    padding:.78rem .84rem;
+    text-align:left;
+    border-right:0;
+    border-bottom:1px solid var(--sp-rule);
+  }
+  #content .sp-fact:last-child{border-bottom:0}
+  #content .sp-fact svg{grid-row:1 / span 2;width:20px;height:20px;margin-top:.08rem}
+  #content .sp-fact strong{
+    display:block;
+    min-height:0;
+    margin:0;
+    font-size:.89rem;
+    line-height:1.3;
+    text-align:left;
+  }
+  #content .sp-fact>span{
+    grid-column:2;
+    align-self:auto;
+    min-height:0;
+    margin:0;
+    font-size:.75rem;
+    line-height:1.4;
+    text-align:left;
+  }
+  #content .sp-package details{margin-inline:1rem}
+  #content .sp-package summary{min-height:50px;font-size:.67rem}
+  #content .sp-package__actions{padding:.84rem 1rem 1.08rem}
+  #content .sp-package__actions .sp-btn{min-height:54px;font-size:.7rem}
+}
+
+@media(max-width:360px){
+  #content .sp-package-grid{
+    grid-auto-columns:calc(100vw - 24px);
+    margin-inline:-1rem;
+    padding-inline:.75rem;
+    scroll-padding-inline:.75rem;
+  }
+  #content .sp-package__head{
+    grid-template-columns:minmax(0,1fr) 44px minmax(100px,auto);
+    gap:.38rem;
+    padding-inline:.82rem;
+  }
+  #content .sp-package__tier{font-size:1.78rem}
+  #content .sp-package__availability{font-size:.62rem}
+  #content .sp-package__emblem{width:41px;height:49px}
+  #content .sp-package__emblem--title{width:43px;height:51px}
+  #content .sp-package__price{font-size:1.36rem}
+  #content .sp-package__price small{font-size:.54rem}
+  #content .sp-package__visual{
+    grid-template-columns:82px minmax(0,1fr);
+    gap:.62rem;
+    margin-inline:.75rem;
+    padding-inline:.65rem;
+  }
+  #content .sp-booth-scale{width:76px}
+  #content .sp-package__facts,#content .sp-package details{margin-inline:.75rem}
+  #content .sp-package__actions{padding-inline:.75rem}
+}
+
+
+@media(max-width:1160px) and (min-width:1081px){
+  #content .sp-package-grid{
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    grid-auto-flow:row;
+    grid-auto-columns:auto;
+    gap:.82rem;
+    margin-inline:0;
+    padding:0;
+    overflow:visible;
+    scroll-snap-type:none;
+    scroll-padding-inline:0;
+  }
+  #content .sp-package{scroll-snap-align:none}
+  #content .sp-swipe-hint{display:none}
+}
+
+
+@media(max-width:680px){
+  #content .sp-fact{min-height:85px}
+}
+
+
+@media(max-width:680px){
+  #content .sp-package__facts{grid-auto-rows:1fr;min-height:271px}
+  #content .sp-fact{min-height:0}
+}
+
+
+@media(max-width:680px){
+  #content .sp-package__facts{height:auto;min-height:0;grid-auto-rows:auto}
+  #content .sp-fact{height:99px;min-height:99px}
+}
+
 </style>
 </head>
 <body>
@@ -443,7 +819,7 @@ body{overflow-x:clip}
         <h1>Be a founding Sponsor.</h1>
         <p class="sp-hero__sub">Packages and activations for all budgets.<br>Flexible for the right partner.</p>
         <div class="sp-hero__actions">
-          <a class="sp-btn sp-btn--primary" href="#package-grid">Explore Sponsorships <span aria-hidden="true">↓</span></a>
+          <a class="sp-btn sp-btn--primary" href="#packages">Explore Sponsorships <span aria-hidden="true">↓</span></a>
           <a class="sp-btn sp-btn--ghost" href="#inquire">Request Availability <span aria-hidden="true">→</span></a>
         </div>
       </div>
