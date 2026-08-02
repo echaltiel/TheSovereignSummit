@@ -740,6 +740,22 @@ body{overflow-x:clip}
 #content .sp-partnerships .sp-section-title{max-width:none;white-space:nowrap;font-size:clamp(1.65rem,4.1vw,3.1rem)}
 @media(max-width:420px){#content .sp-partnerships .sp-section-title{font-size:clamp(1.35rem,7.2vw,1.75rem)}}
 @media(max-width:1160px) and (min-width:961px){#content .sp-booth-caption strong{font-size:.97rem}}
+
+/* Fact cells were locked to 174px with reserved row space, leaving ~32px dead
+   at the bottom of every panel. Let the rows size to their content. */
+@media(min-width:861px){
+  #content .sp-package__facts{height:auto!important;min-height:0!important}
+  #content .sp-fact{
+    grid-template-rows:24px auto auto!important;
+    min-height:0!important;
+    row-gap:.38rem;
+    padding:1.05rem .62rem 1rem;
+  }
+}
+/* Silver's sq-ft label was the only one wrapping inside its box. */
+#content .sp-booth--silver{font-size:.42rem;letter-spacing:0}
+#content .sp-booth--silver span{white-space:nowrap}
+@media(min-width:861px){#content .sp-package__actions{padding-top:.55rem}}
 </style>
 </head>
 <body>
