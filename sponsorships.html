@@ -373,6 +373,36 @@
 #content .sp-activation{padding:.78rem .82rem}
 @media(max-width:980px){#content .sp-activation-groups{grid-template-columns:1fr}}
 @media(max-width:650px){#content .sp-package__visual{height:220px}#content .sp-package__tier{font-size:2.15rem}}
+
+/* v5 refinements */
+#content #package-grid{scroll-margin-top:calc(var(--header-h) + 12px)}
+#content .sp-packages{padding:1rem 0 1.75rem}
+#content .sp-packages .sp-section-head{margin-bottom:.85rem}
+#content .sp-package__head{padding:1rem 1.1rem .75rem}
+#content .sp-package__visual{height:186px;margin:0 1.1rem;padding:.7rem .65rem .65rem;gap:.5rem}
+#content .sp-package__visual::before,#content .sp-package__visual::after{display:none}
+#content .sp-booth-map{width:165px;height:130px;padding:0;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;gap:.42rem}
+#content .sp-booth--title{width:108px;height:108px}
+#content .sp-booth--gold{width:108px;height:54px}
+#content .sp-booth--silver{width:54px;height:54px}
+#content .sp-booth-size{font-family:var(--fm);font-size:.52rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--sp-muted);line-height:1}
+#content .sp-booth-dim{display:none!important}
+#content .sp-booth-caption{min-height:31px}
+#content .sp-booth-caption strong{font-size:.78rem}
+#content .sp-booth-caption span{font-size:.46rem;margin-top:.18rem}
+#content .sp-package__facts{margin:.75rem 1.1rem 0}
+#content .sp-fact{padding:.62rem .5rem}
+#content .sp-fact svg{width:19px;height:19px;margin-bottom:.35rem}
+#content .sp-fact strong{font-size:.74rem}
+#content .sp-fact span{font-size:.46rem}
+#content .sp-package details{margin:0 1.1rem}
+#content .sp-package summary{padding:.62rem 0}
+#content .sp-package__actions{padding:.72rem 1.1rem 1rem}
+#content .sp-package__actions .sp-btn{min-height:42px;padding:.66rem .6rem}
+@media(min-width:1051px){
+  #content .sp-package-grid{align-items:start}
+  #content .sp-package{min-height:0}
+}
 </style>
 
 <section class="sp-hero" id="sponsorships">
@@ -387,10 +417,10 @@
     <div class="sp-hero__top">
       <div class="sp-hero__copy">
         <div class="sp-kicker">Founding Sponsorships</div>
-        <h1>Be there from day one.</h1>
-        <p class="sp-hero__sub">Flexible options from $7.5K to $100K.</p>
+        <h1>Be a founding partner.</h1>
+        <p class="sp-hero__sub">Packages from $7.5K to $100K. Flexible for the right partner.</p>
         <div class="sp-hero__actions">
-          <a class="sp-btn sp-btn--primary" href="#packages">Explore Sponsorships <span aria-hidden="true">↓</span></a>
+          <a class="sp-btn sp-btn--primary" href="#package-grid">Explore Sponsorships <span aria-hidden="true">↓</span></a>
           <a class="sp-btn sp-btn--ghost" href="#inquire">Request Availability <span aria-hidden="true">→</span></a>
         </div>
       </div>
@@ -415,23 +445,32 @@
       <div><div class="sp-kicker">Core Sponsorships</div><h2 class="sp-section-title">Choose your package.</h2></div>
     </div>
 
-    <div class="sp-package-grid">
+    <div class="sp-package-grid" id="package-grid">
       <article class="sp-package sp-package--title" id="title-package">
         <div class="sp-package__head"><div><div class="sp-package__tier">Title</div><div class="sp-package__availability">2 available</div></div><div class="sp-package__price">$100,000</div></div>
         <div class="sp-package__visual">
           <div class="sp-booth-map sp-booth-map--title" aria-label="20 foot by 20 foot booth, 400 square feet">
-            <span class="sp-booth-dim sp-booth-dim--width">20 ft</span>
-            <span class="sp-booth-dim sp-booth-dim--height">20 ft</span>
             <div class="sp-booth sp-booth--title"><span>400 sq ft</span></div>
+            <div class="sp-booth-size">20 × 20 ft</div>
           </div>
           <div class="sp-booth-caption"><strong>Largest footprint</strong><span>Premier placement on the expo floor</span></div>
         </div>
         <div class="sp-package__facts">
-          <div class="sp-fact"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M4 18V7l8-4 8 4v11"/><path d="M8 21v-8h8v8M2 21h20"/></svg><strong>2 Stage Sessions</strong><span>1 Main Stage + 1 VIP Stage</span></div>
+          <div class="sp-fact"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M4 18V7l8-4 8 4v11"/><path d="M8 21v-8h8v8M2 21h20"/></svg><strong>2 Premium Stage Sessions</strong></div>
           <div class="sp-fact"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M2 12s3.5-6 10-6 10 6 10 6-3.5 6-10 6S2 12 2 12Z"/><circle cx="12" cy="12" r="2.5"/></svg><strong>Top Billing</strong><span>Event-wide</span></div>
           <div class="sp-fact"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M3 8h18v10H3z"/><path d="M7 8V5h10v3M8 13h8"/></svg><strong>20 Passes</strong><span>10 VIP + 10 Summit</span></div>
         </div>
-        <details><summary>Full benefits</summary><ul class="sp-package__full"><li>Equal top billing as one of two Title Sponsors</li><li>Branding across registration, credentials, stage, website, email, and media</li><li>First selection between the two Title footprint locations</li><li>Programming format and content developed with Summit approval</li></ul></details>
+        <details><summary>View all benefits</summary><ul class="sp-package__full">
+          <li>20×20 island footprint in one of the two premier Title locations</li>
+          <li>One primetime Main Stage keynote, fireside conversation, or approved partner presentation</li>
+          <li>One primetime VIP Stage session</li>
+          <li>Equal top billing as one of two Title Sponsors</li>
+          <li>Branding across registration, attendee credentials, stage screens, website, email, and media</li>
+          <li>10 VIP Summit Passes and 10 Summit Passes</li>
+          <li>First selection between the two Title footprint locations, based on commitment date</li>
+          <li>Standard branded booth elements, package furniture, power, and hardwired internet</li>
+          <li>Programming format, participants, and final content developed with Summit approval</li>
+        </ul></details>
         <div class="sp-package__actions"><a class="sp-btn sp-btn--primary sp-select" href="#inquire" data-interest="Title Sponsor" data-item="Title Sponsor — $100,000">Request Availability</a></div>
       </article>
 
@@ -439,18 +478,26 @@
         <div class="sp-package__head"><div><div class="sp-package__tier">Gold</div><div class="sp-package__availability">4 available</div></div><div class="sp-package__price">$50,000</div></div>
         <div class="sp-package__visual">
           <div class="sp-booth-map sp-booth-map--gold" aria-label="10 foot by 20 foot booth, 200 square feet">
-            <span class="sp-booth-dim sp-booth-dim--width">20 ft</span>
-            <span class="sp-booth-dim sp-booth-dim--height">10 ft</span>
             <div class="sp-booth sp-booth--gold"><span>200 sq ft</span></div>
+            <div class="sp-booth-size">20 × 10 ft</div>
           </div>
           <div class="sp-booth-caption"><strong>Double-width presence</strong><span>Premium placement with room to activate</span></div>
         </div>
         <div class="sp-package__facts">
-          <div class="sp-fact"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M4 18V7l8-4 8 4v11"/><path d="M8 21v-8h8v8M2 21h20"/></svg><strong>2 Stage Sessions</strong><span>Main panel/interview + VIP session</span></div>
+          <div class="sp-fact"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M4 18V7l8-4 8 4v11"/><path d="M8 21v-8h8v8M2 21h20"/></svg><strong>2 Stage Sessions</strong></div>
           <div class="sp-fact"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M2 12s3.5-6 10-6 10 6 10 6-3.5 6-10 6S2 12 2 12Z"/><circle cx="12" cy="12" r="2.5"/></svg><strong>Prominent</strong><span>Brand visibility</span></div>
           <div class="sp-fact"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M3 8h18v10H3z"/><path d="M7 8V5h10v3M8 13h8"/></svg><strong>12 Passes</strong><span>6 VIP + 6 Summit</span></div>
         </div>
-        <details><summary>Full benefits</summary><ul class="sp-package__full"><li>Main Stage panel or moderated interview plus VIP Stage session</li><li>Branding across stage screens, signage, website, and sponsor emails</li><li>Location selection within the Gold level by commitment date</li><li>Programming format and content developed with Summit approval</li></ul></details>
+        <details><summary>View all benefits</summary><ul class="sp-package__full">
+          <li>10×20 premium expo footprint</li>
+          <li>One Main Stage panel seat or moderated interview</li>
+          <li>One VIP Stage partner session</li>
+          <li>Prominent branding across stage screens, event signage, website, and sponsor emails</li>
+          <li>6 VIP Summit Passes and 6 Summit Passes</li>
+          <li>Location selection within the Gold level, based on commitment date</li>
+          <li>Standard branded booth elements, package furniture, power, and hardwired internet</li>
+          <li>Programming format, participants, and final content developed with Summit approval</li>
+        </ul></details>
         <div class="sp-package__actions"><a class="sp-btn sp-btn--primary sp-select" href="#inquire" data-interest="Gold Sponsor" data-item="Gold Sponsor — $50,000">Request Availability</a></div>
       </article>
 
@@ -458,9 +505,8 @@
         <div class="sp-package__head"><div><div class="sp-package__tier">Silver</div><div class="sp-package__availability">23 available</div></div><div class="sp-package__price">$10,000</div></div>
         <div class="sp-package__visual">
           <div class="sp-booth-map sp-booth-map--silver" aria-label="10 foot by 10 foot booth, 100 square feet">
-            <span class="sp-booth-dim sp-booth-dim--width">10 ft</span>
-            <span class="sp-booth-dim sp-booth-dim--height">10 ft</span>
             <div class="sp-booth sp-booth--silver"><span>100 sq ft</span></div>
+            <div class="sp-booth-size">10 × 10 ft</div>
           </div>
           <div class="sp-booth-caption"><strong>Turnkey expo presence</strong><span>Everything needed to meet attendees</span></div>
         </div>
@@ -469,7 +515,14 @@
           <div class="sp-fact"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M2 12s3.5-6 10-6 10 6 10 6-3.5 6-10 6S2 12 2 12Z"/><circle cx="12" cy="12" r="2.5"/></svg><strong>Visibility</strong><span>Web + signage</span></div>
           <div class="sp-fact"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M3 8h18v10H3z"/><path d="M7 8V5h10v3M8 13h8"/></svg><strong>5 Passes</strong><span>1 VIP + 4 Summit</span></div>
         </div>
-        <details><summary>Full benefits</summary><ul class="sp-package__full"><li>Turnkey 10×10 booth with branded backwall and package furniture</li><li>Standard power and hardwired internet</li><li>Website, sponsor signage, and selected event-email recognition</li><li>Inclusion in sponsor-announcement communications</li></ul></details>
+        <details><summary>View all benefits</summary><ul class="sp-package__full">
+          <li>Turnkey 10×10 expo footprint</li>
+          <li>Standard branded backwall and package furniture</li>
+          <li>Standard power and hardwired internet</li>
+          <li>1 VIP Summit Pass and 4 Summit Passes</li>
+          <li>Logo on the Summit website, sponsor signage, and selected event emails</li>
+          <li>Inclusion in sponsor-announcement communications</li>
+        </ul></details>
         <div class="sp-package__actions"><a class="sp-btn sp-btn--primary sp-select" href="#inquire" data-interest="Silver Sponsor" data-item="Silver Sponsor — $10,000">Request Availability</a></div>
       </article>
     </div>
@@ -697,6 +750,22 @@
         document.querySelectorAll('.faq__item').forEach(function(other){ if (other !== item) other.open = false; });
       }
     });
+  });
+})();
+</script>
+
+<script>
+(function(){
+  var explore=document.querySelector('.sp-hero__actions a[href="#package-grid"]');
+  var grid=document.getElementById('package-grid');
+  if(!explore||!grid)return;
+  explore.addEventListener('click',function(e){
+    e.preventDefault();
+    var header=document.getElementById('siteHeader');
+    var offset=(header?header.getBoundingClientRect().height:0)+12;
+    var top=grid.getBoundingClientRect().top+window.pageYOffset-offset;
+    window.scrollTo({top:top,behavior:'smooth'});
+    if(history.replaceState)history.replaceState(null,'','#package-grid');
   });
 })();
 </script>
