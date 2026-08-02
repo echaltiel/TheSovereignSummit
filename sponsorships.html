@@ -883,6 +883,27 @@ body{overflow-x:clip}
 @media(max-width:1100px){#content .sp-open-source strong{font-size:1.45rem}}
 @media(max-width:700px){#content .sp-open-source strong{font-size:1.32rem}
   #content .sp-open-source .sp-btn{min-width:0;width:100%}}
+
+/* 1) Centre the booth box + its dimension label as one group in the column,
+      instead of pinning the label to the bottom and stacking boxes above it. */
+#content .sp-booth-scale{
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  padding-bottom:0;gap:.55rem;
+}
+#content .sp-booth-label{position:static!important;transform:none!important;left:auto;bottom:auto}
+
+/* 2a) The icon wrapper had fallen back to display:block, so the glyph sat high. */
+#content .sp-open-source__icon{display:grid!important;place-items:center!important;
+  align-self:center;justify-self:center}
+#content .sp-open-source__icon svg{display:block}
+
+/* 2c) Bigger, heavier Apply that fills the space the trimmed copy freed up. */
+#content .sp-open-source .sp-btn{
+  min-width:224px;padding:1.15rem 2rem;
+  font-size:.86rem;font-weight:800;letter-spacing:.15em;
+}
+#content .sp-open-source .sp-btn > span{font-size:1.2em}
+@media(max-width:700px){#content .sp-open-source .sp-btn{min-width:0;width:100%}}
 </style>
 </head>
 <body>
@@ -1334,7 +1355,7 @@ body{overflow-x:clip}
       </span>
       <div class="sp-os-body">
         <strong>Open Source Area</strong>
-        <span>For open-source projects, nonprofits, and small builders.<br>Every booth here is sold at our production company&rsquo;s cost with nothing added, and a smaller kiosk size is available that paid sponsors cannot buy.</span>
+        <span>For open-source projects, nonprofits, and small builders.<br>Every booth here is sold at our production company&rsquo;s cost with nothing added, and a smaller kiosk size is available here.</span>
         <div class="sp-os-tags">
           <span>By application</span>
           <span>At cost, no markup</span>
