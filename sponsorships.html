@@ -773,18 +773,6 @@ body{overflow-x:clip}
   }
 }
 
-/* ---- Booth boxes now sit on a shared baseline just above their labels ----
-   Title's box was 3px above its label while Gold and Silver floated 24px above
-   theirs, which is what made the three panels look unaligned. */
-#content .sp-booth-scale{
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:flex-end;
-  padding-bottom:1.15rem;
-}
-#content .sp-booth{margin-bottom:0}
-
 /* ---- Open Source tile ---- */
 #content .sp-open-source{
   align-items:center;
@@ -884,14 +872,6 @@ body{overflow-x:clip}
 @media(max-width:700px){#content .sp-open-source strong{font-size:1.32rem}
   #content .sp-open-source .sp-btn{min-width:0;width:100%}}
 
-/* 1) Centre the booth box + its dimension label as one group in the column,
-      instead of pinning the label to the bottom and stacking boxes above it. */
-#content .sp-booth-scale{
-  display:flex;flex-direction:column;align-items:center;justify-content:center;
-  padding-bottom:0;gap:.55rem;
-}
-#content .sp-booth-label{position:static!important;transform:none!important;left:auto;bottom:auto}
-
 /* 2a) The icon wrapper had fallen back to display:block, so the glyph sat high. */
 #content .sp-open-source__icon{display:grid!important;place-items:center!important;
   align-self:center;justify-self:center}
@@ -904,19 +884,6 @@ body{overflow-x:clip}
 }
 #content .sp-open-source .sp-btn > span{font-size:1.2em}
 @media(max-width:700px){#content .sp-open-source .sp-btn{min-width:0;width:100%}}
-
-/* Boxes share one centre line, labels share one baseline. Both are therefore
-   in the same place on all three cards regardless of box size. */
-#content .sp-booth-scale{
-  position:relative;
-  display:flex!important;align-items:center;justify-content:center;
-  padding:0 0 1.35rem!important;gap:0!important;
-}
-#content .sp-booth{position:static}
-#content .sp-booth-label{
-  position:absolute!important;bottom:0;top:auto;left:50%;
-  transform:translateX(-50%)!important;white-space:nowrap;
-}
 </style>
 </head>
 <body>
@@ -1059,9 +1026,8 @@ body{overflow-x:clip}
 
         <div class="sp-package__visual">
           <div class="sp-booth-scale" aria-label="20 foot by 20 foot expo booth, 400 square feet">
-            <div class="sp-booth sp-booth--title"><span>400 sq ft</span>
-              <span class="sp-booth-label">20 × 20 ft</span>
-            </div>
+            <div class="sp-booth sp-booth--title"><span>400 sq ft</span></div>
+            <span class="sp-booth-label">20 × 20 ft</span>
           </div>
           <div class="sp-booth-caption">
             <span class="sp-booth-tag">Expo Booth</span>
@@ -1121,9 +1087,8 @@ body{overflow-x:clip}
 
         <div class="sp-package__visual">
           <div class="sp-booth-scale" aria-label="10 foot by 20 foot expo booth, 200 square feet">
-            <div class="sp-booth sp-booth--gold"><span>200 sq ft</span>
-              <span class="sp-booth-label">20 × 10 ft</span>
-            </div>
+            <div class="sp-booth sp-booth--gold"><span>200 sq ft</span></div>
+            <span class="sp-booth-label">20 × 10 ft</span>
           </div>
           <div class="sp-booth-caption">
             <span class="sp-booth-tag">Expo Booth</span>
@@ -1182,9 +1147,8 @@ body{overflow-x:clip}
 
         <div class="sp-package__visual">
           <div class="sp-booth-scale" aria-label="10 foot by 10 foot expo booth, 100 square feet">
-            <div class="sp-booth sp-booth--silver"><span>100 sq ft</span>
-              <span class="sp-booth-label">10 × 10 ft</span>
-            </div>
+            <div class="sp-booth sp-booth--silver"><span>100 sq ft</span></div>
+            <span class="sp-booth-label">10 × 10 ft</span>
           </div>
           <div class="sp-booth-caption">
             <span class="sp-booth-tag">Expo Booth</span>
