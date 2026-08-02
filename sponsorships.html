@@ -723,6 +723,37 @@ body{overflow-x:clip}
   #content .sp-fact{height:99px;min-height:99px}
 }
 
+
+
+/* ===== Package tile: alignment + legibility ===== */
+@media(min-width:861px){
+  #content .sp-package__visual{height:154px;min-height:154px}
+  #content .sp-booth-caption{justify-content:flex-start}
+  #content .sp-booth-caption strong{min-height:2.45em;font-size:1.06rem;line-height:1.22}
+  #content .sp-booth-caption span:last-child{font-size:.85rem;line-height:1.4;max-width:30ch}
+  #content .sp-booth-caption .sp-booth-tag{font-size:.62rem}
+  #content .sp-booth-label{font-size:.66rem}
+
+  #content .sp-package__facts{height:198px;min-height:198px}
+  #content .sp-fact{align-content:start}
+  #content .sp-fact strong{
+    align-items:flex-start;
+    min-height:2.6em;
+    font-size:.95rem;
+    line-height:1.3;
+  }
+  #content .sp-fact > span{
+    display:block;
+    min-height:2.8em;
+    font-size:.8rem;
+    line-height:1.4;
+  }
+  #content .sp-package__availability{font-size:.74rem}
+}
+#content #package-grid{scroll-margin-top:calc(var(--header-h,120px) + 16px)}
+
+#content .sp-partnerships .sp-section-title{max-width:none;white-space:nowrap;font-size:clamp(1.65rem,4.1vw,3.1rem)}
+@media(max-width:420px){#content .sp-partnerships .sp-section-title{font-size:clamp(1.35rem,7.2vw,1.75rem)}}
 </style>
 </head>
 <body>
@@ -812,11 +843,11 @@ body{overflow-x:clip}
   <div class="sp-container sp-hero__inner">
     <div class="sp-hero__top">
       <div class="sp-hero__copy">
-        <div class="sp-kicker">Founding Sponsorships</div>
+        <div class="sp-kicker">Sponsorships</div>
         <h1>Be a founding Sponsor.</h1>
         <p class="sp-hero__sub">Packages and activations for all budgets.<br>Flexible for the right partner.</p>
         <div class="sp-hero__actions">
-          <a class="sp-btn sp-btn--primary" href="#packages">Explore Sponsorships <span aria-hidden="true">↓</span></a>
+          <a class="sp-btn sp-btn--primary" href="#package-grid">Explore Sponsorships <span aria-hidden="true">↓</span></a>
           <a class="sp-btn sp-btn--ghost" href="#inquire">Request Availability <span aria-hidden="true">→</span></a>
         </div>
       </div>
@@ -883,7 +914,7 @@ body{overflow-x:clip}
           </div>
           <div class="sp-fact">
             <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-6 10-6 10 6 10 6-3.5 6-10 6S2 12 2 12Z"/><circle cx="12" cy="12" r="2.5"/></svg>
-            <strong>Top Event-wide Billing</strong>
+            <strong>Top Event Billing</strong>
             <span>Maximum visibility</span>
           </div>
           <div class="sp-fact">
@@ -1042,7 +1073,7 @@ body{overflow-x:clip}
     <div class="sp-section-head">
       <div>
         <div class="sp-kicker">Brand Activations</div>
-        <h2 class="sp-section-title">Go Beyond<br>The Booth.</h2>
+        <h2 class="sp-section-title">Go beyond the booth.</h2>
       </div>
     </div>
 
@@ -1167,8 +1198,6 @@ body{overflow-x:clip}
       </section>
     </div>
 
-    <p class="sp-disclaimer">One presenting brand per opportunity unless noted. Activations do not include a physical booth unless combined with a package. Event, production, and build costs are scoped separately. Promo Insert is available to confirmed sponsors only.</p>
-
     <!-- Open Source -->
     <div class="sp-open-source">
       <span class="sp-open-source__icon" aria-hidden="true">
@@ -1176,7 +1205,7 @@ body{overflow-x:clip}
       </span>
       <div>
         <strong>Open Source Area — by application</strong>
-        <span>Subsidized space for open-source projects, nonprofits, community organizations, and small builders. Tell us what you are building.</span>
+        <span>Space for open-source projects, nonprofits, community organizations, and small builders. Accepted applicants are offered a compact kiosk at our cost. Tell us what you are building.</span>
       </div>
       <a class="sp-btn sp-btn--ghost sp-select" href="#inquire" data-interest="Open Source Area (by application)" data-item="Open Source Area — application">Apply <span aria-hidden="true">→</span></a>
     </div>
