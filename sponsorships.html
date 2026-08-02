@@ -8,7 +8,6 @@
 <title>Sponsorship Opportunities · The Sovereign Summit · February 5 &amp; 6, 2027</title>
 <meta name="description" content="Explore founding sponsorships, limited expo footprints, programming, hospitality and brand activations for The Sovereign Summit at Fontainebleau Miami Beach, February 5 &amp; 6, 2027." />
 
-<!-- Open Graph (iMessage, Facebook, LinkedIn, Slack, Discord) -->
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="The Sovereign Summit" />
 <meta property="og:url" content="https://thesovereignsummit.com/sponsorships" />
@@ -21,7 +20,6 @@
 <meta property="og:image:height" content="630" />
 <meta property="og:image:alt" content="Sponsorships. The Sovereign Summit, February 5-6, 2027 at the Fontainebleau, Miami Beach." />
 
-<!-- Twitter / X -->
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="Sponsorship Opportunities · The Sovereign Summit" />
 <meta name="twitter:description" content="Limited founding sponsorships, expo footprints, programming, hospitality and brand activations at Fontainebleau Miami Beach." />
@@ -35,59 +33,257 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Instrument+Serif&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css?v=189">
-<style>#content{padding-top:calc(var(--header-h) + clamp(1rem,2.5vw,2rem))}
-/* Requested refinements */
-#content .sp-booth-map{position:relative;width:170px;height:125px;display:flex;align-items:center;justify-content:center;padding:20px 22px 18px 28px}
-#content .sp-booth{box-shadow:0 14px 28px rgba(0,0,0,.24);font-size:.56rem;letter-spacing:.06em;border-radius:13px}
-#content .sp-booth span{position:relative;z-index:2}
-#content .sp-booth--title{width:100px;height:100px;background:var(--sp-orange)}
-#content .sp-booth--gold{width:100px;height:50px;background:var(--sp-gold)}
-#content .sp-booth--silver{width:50px;height:50px;background:var(--sp-silver)}
-#content .sp-booth-dim{position:absolute;font-family:var(--fm);font-size:.5rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--sp-muted)}
-#content .sp-booth-dim::before,#content .sp-booth-dim::after{content:"";position:absolute;background:var(--sp-rule-strong)}
-#content .sp-booth-dim--width{top:3px;left:50%;transform:translateX(-50%);padding:0 .35rem}
-#content .sp-booth-dim--width::before{height:1px;width:34px;right:100%;top:50%}
-#content .sp-booth-dim--width::after{height:1px;width:34px;left:100%;top:50%}
-#content .sp-booth-dim--height{left:3px;top:50%;transform:translateY(-50%) rotate(-90deg);padding:0 .35rem}
-#content .sp-booth-dim--height::before{height:1px;width:25px;right:100%;top:50%}
-#content .sp-booth-dim--height::after{height:1px;width:25px;left:100%;top:50%}
-#content .sp-package__visual{height:165px}
-#content .sp-disclaimer{text-align:center;margin-top:1rem}
-#content .sp-activation-groups{display:flex;flex-direction:column;gap:1.7rem}
-#content .sp-activation-group h3{font-family:var(--fd);font-size:1.25rem;font-weight:400;color:var(--sp-cream);margin-bottom:.7rem}
-#content .sp-activation-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:.75rem}
-#content .sp-activation{display:grid;grid-template-columns:auto 1fr auto;gap:.7rem;align-items:center;min-width:0;padding:.85rem .9rem;border:1px solid var(--sp-rule);border-radius:15px;background:rgba(255,255,255,.025);transition:transform .16s ease,border-color .16s ease,background .16s ease}
+
+<style>
+/* ================================================================
+   Sponsorships — consolidated, premium editorial architecture
+   ================================================================ */
+
+/* Base variables */
+#content{
+  --sp-bg:#001839;
+  --sp-bg-deep:#001227;
+  --sp-card:#0A2445;
+  --sp-card-2:#0D2A50;
+  --sp-cream:#F4ECE0;
+  --sp-muted:rgba(244,236,224,.68);
+  --sp-rule:rgba(244,236,224,.14);
+  --sp-rule-strong:rgba(244,236,224,.26);
+  --sp-orange:#FF6941;
+  --sp-gold:#E8C46A;
+  --sp-silver:#C6CED9;
+  --sp-gold-dim:rgba(232,196,106,.15);
+  --sp-silver-dim:rgba(198,206,217,.12);
+  --fb:'Archivo',system-ui,sans-serif;
+  --fd:'Instrument Serif',Georgia,serif;
+  --fm:'JetBrains Mono',monospace;
+  background:var(--sp-bg);
+  color:var(--sp-cream);
+  padding-top:var(--header-h);
+}
+
+#content section{padding:clamp(3.5rem,7vw,6rem) 0}
+#content .sp-container{width:100%;max-width:1280px;margin:0 auto;padding:0 clamp(1.25rem,3.2vw,2.5rem)}
+
+/* Typography primitives */
+#content .sp-kicker{font-family:var(--fm);font-size:.62rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--sp-orange);margin-bottom:.9rem}
+#content .sp-section-head{display:flex;align-items:flex-end;justify-content:space-between;gap:2rem;margin-bottom:clamp(1.5rem,3vw,2.25rem);flex-wrap:wrap}
+#content .sp-section-title{font-family:var(--fb);font-size:clamp(2.2rem,4.5vw,3.8rem);font-weight:900;line-height:.94;letter-spacing:-.035em;text-transform:uppercase;color:var(--sp-cream);max-width:18ch}
+#content .sp-section-note{max-width:32ch;font-size:.92rem;line-height:1.5;color:var(--sp-muted)}
+
+/* ================================================================
+   HERO
+   ================================================================ */
+#content .sp-hero{position:relative;display:flex;align-items:center;overflow:hidden;padding:clamp(3.5rem,8vw,7rem) 0}
+#content .sp-hero__bg{position:absolute;inset:0;z-index:0}
+#content .sp-hero__bg img{width:100%;height:100%;object-fit:cover;object-position:center 40%}
+#content .sp-hero__scrim{position:absolute;inset:0;z-index:1;background:
+  linear-gradient(90deg,rgba(0,18,39,.97) 0%,rgba(0,24,57,.88) 45%,rgba(0,24,57,.35) 80%,rgba(0,24,57,.2) 100%),
+  linear-gradient(180deg,rgba(0,18,39,.4) 0%,rgba(0,18,39,.08) 50%,rgba(0,18,39,.95) 100%)}
+#content .sp-hero__inner{position:relative;z-index:2;width:100%}
+#content .sp-hero__top{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:3rem;align-items:end}
+#content .sp-hero__copy{max-width:720px}
+#content .sp-hero h1{font-family:var(--fb);font-size:clamp(3.2rem,7.5vw,6.8rem);font-weight:900;line-height:.88;letter-spacing:-.055em;text-transform:uppercase;color:var(--sp-cream);max-width:11ch}
+#content .sp-hero__sub{max-width:46ch;margin-top:1.1rem;font-size:clamp(1.02rem,1.5vw,1.18rem);line-height:1.55;color:rgba(244,236,224,.82)}
+#content .sp-hero__actions{display:flex;gap:.75rem;flex-wrap:wrap;margin-top:1.6rem}
+#content .sp-btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;min-height:52px;padding:.9rem 1.5rem;border-radius:999px;font-family:var(--fm);font-size:.68rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;transition:transform .18s ease,background .18s ease,border-color .18s ease,box-shadow .18s ease;cursor:pointer;border:none;text-decoration:none}
+#content .sp-btn:hover{transform:translateY(-2px)}
+#content .sp-btn:focus-visible{outline:2px solid var(--sp-orange);outline-offset:3px}
+#content .sp-btn--primary{background:var(--sp-orange);color:#001227;border:1px solid var(--sp-orange);box-shadow:0 4px 20px rgba(255,105,65,.25)}
+#content .sp-btn--primary:hover{box-shadow:0 6px 28px rgba(255,105,65,.35)}
+#content .sp-btn--ghost{border:1px solid rgba(244,236,224,.35);color:var(--sp-cream);background:rgba(0,18,39,.2);backdrop-filter:blur(10px)}
+#content .sp-btn--ghost:hover{border-color:rgba(244,236,224,.65);background:rgba(244,236,224,.06)}
+#content .sp-btn--gold{background:var(--sp-gold);color:#1a1508;border:1px solid var(--sp-gold);box-shadow:0 4px 20px rgba(232,196,106,.2)}
+#content .sp-btn--gold:hover{box-shadow:0 6px 28px rgba(232,196,106,.3)}
+#content .sp-btn--silver{background:var(--sp-silver);color:#0f141c;border:1px solid var(--sp-silver);box-shadow:0 4px 20px rgba(198,206,217,.15)}
+#content .sp-btn--silver:hover{box-shadow:0 6px 28px rgba(198,206,217,.25)}
+
+#content .sp-speakers{display:flex;align-items:center;gap:1rem;padding:1.1rem 1.2rem;border:1px solid rgba(244,236,224,.18);border-radius:18px;background:rgba(0,18,39,.5);backdrop-filter:blur(14px);min-width:280px;transition:transform .2s ease,border-color .2s ease,background .2s ease;text-decoration:none}
+#content .sp-speakers__faces{display:flex;padding-left:.5rem}
+#content .sp-speakers__faces img{width:40px;height:40px;border-radius:50%;object-fit:cover;border:2px solid var(--sp-bg-deep);margin-left:-.5rem;background:var(--sp-card)}
+#content .sp-speakers__copy strong{display:block;font-size:.84rem;color:var(--sp-cream);font-weight:600}
+#content .sp-speakers__copy span{display:block;font-size:.7rem;line-height:1.35;color:var(--sp-muted);margin-top:.1rem}
+#content .sp-speakers:hover{transform:translateY(-2px);border-color:rgba(244,236,224,.4);background:rgba(0,18,39,.65)}
+#content .sp-speakers__arrow{margin-left:auto;font-family:var(--fm);font-size:.85rem;color:var(--sp-orange)}
+
+/* ================================================================
+   PACKAGES
+   ================================================================ */
+#content .sp-packages{background:var(--sp-bg-deep)}
+#content .sp-package-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem;align-items:start}
+#content .sp-package{display:flex;flex-direction:column;min-width:0;border:1px solid var(--sp-rule);border-radius:22px;background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.015));overflow:hidden;transition:border-color .2s ease,box-shadow .2s ease}
+#content .sp-package:hover{box-shadow:0 20px 60px rgba(0,0,0,.25)}
+#content .sp-package--title{border-color:rgba(255,105,65,.55)}
+#content .sp-package--title:hover{border-color:rgba(255,105,65,.85);box-shadow:0 20px 60px rgba(255,105,65,.1)}
+#content .sp-package--gold{border-color:rgba(232,196,106,.4)}
+#content .sp-package--gold:hover{border-color:rgba(232,196,106,.7);box-shadow:0 20px 60px rgba(232,196,106,.08)}
+#content .sp-package--silver{border-color:rgba(198,206,217,.3)}
+#content .sp-package--silver:hover{border-color:rgba(198,206,217,.55);box-shadow:0 20px 60px rgba(198,206,217,.06)}
+
+#content .sp-package__head{padding:1.4rem 1.4rem 1rem;display:flex;align-items:flex-start;justify-content:space-between;gap:1rem}
+#content .sp-package__tier{font-family:var(--fd);font-size:clamp(1.8rem,2.8vw,2.4rem);font-weight:400;line-height:1;color:var(--sp-cream);letter-spacing:-.02em}
+#content .sp-package__availability{font-family:var(--fm);font-size:.56rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--sp-orange);margin-top:.35rem}
+#content .sp-package--gold .sp-package__availability{color:var(--sp-gold)}
+#content .sp-package--silver .sp-package__availability{color:var(--sp-silver)}
+#content .sp-package__price{font-family:var(--fb);font-size:clamp(1.6rem,2.2vw,2.1rem);font-weight:900;line-height:1;color:var(--sp-cream);letter-spacing:-.03em;white-space:nowrap;text-align:right}
+#content .sp-package__price small{display:block;font-family:var(--fm);font-size:.5rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--sp-muted);margin-top:.35rem}
+
+/* Booth visual */
+#content .sp-package__visual{height:210px;margin:0 1.4rem;border-radius:18px;background:rgba(244,236,224,.025);border:1px solid var(--sp-rule);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.6rem;position:relative;overflow:hidden}
+#content .sp-booth-scale{position:relative;width:150px;height:150px;display:flex;align-items:center;justify-content:center}
+#content .sp-booth{position:relative;display:flex;align-items:center;justify-content:center;color:#001227;font-family:var(--fm);font-size:.58rem;font-weight:800;letter-spacing:.07em;text-transform:uppercase;box-shadow:0 14px 32px rgba(0,0,0,.28)}
+#content .sp-booth--title{width:120px;height:120px;border-radius:16px;background:var(--sp-orange)}
+#content .sp-booth--gold{width:120px;height:60px;border-radius:14px;background:var(--sp-gold)}
+#content .sp-booth--silver{width:60px;height:60px;border-radius:12px;background:var(--sp-silver)}
+#content .sp-booth-label{position:absolute;bottom:-22px;left:50%;transform:translateX(-50%);font-family:var(--fm);font-size:.5rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--sp-muted);white-space:nowrap}
+#content .sp-booth-caption{text-align:center;line-height:1.25;max-width:90%}
+#content .sp-booth-caption strong{display:block;font-family:var(--fb);font-size:.82rem;color:var(--sp-cream);font-weight:700}
+#content .sp-booth-caption span{display:block;font-family:var(--fm);font-size:.48rem;letter-spacing:.08em;text-transform:uppercase;color:var(--sp-muted);margin-top:.2rem}
+
+/* Package facts */
+#content .sp-package__facts{display:grid;grid-template-columns:repeat(3,1fr);margin:1.1rem 1.4rem 0;border:1px solid var(--sp-rule);border-radius:14px;overflow:hidden}
+#content .sp-fact{padding:.75rem .5rem;text-align:center;border-right:1px solid var(--sp-rule)}
+#content .sp-fact:last-child{border-right:none}
+#content .sp-fact svg{width:20px;height:20px;margin:0 auto .4rem;stroke:currentColor}
+#content .sp-package--title .sp-fact svg{color:var(--sp-orange)}
+#content .sp-package--gold .sp-fact svg{color:var(--sp-gold)}
+#content .sp-package--silver .sp-fact svg{color:var(--sp-silver)}
+#content .sp-fact strong{display:block;font-size:.76rem;line-height:1.25;color:var(--sp-cream);font-weight:600}
+#content .sp-fact span{display:block;font-family:var(--fm);font-size:.46rem;line-height:1.35;letter-spacing:.08em;text-transform:uppercase;color:var(--sp-muted);margin-top:.22rem}
+
+/* Expandable details */
+#content .sp-package details{border-top:1px solid var(--sp-rule);margin:0 1.4rem}
+#content .sp-package summary{list-style:none;cursor:pointer;padding:.85rem 0;font-family:var(--fm);font-size:.56rem;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--sp-muted);display:flex;align-items:center;justify-content:space-between;transition:color .15s ease}
+#content .sp-package summary::-webkit-details-marker{display:none}
+#content .sp-package summary::after{content:"+";font-size:1.1rem;color:var(--sp-orange);transition:transform .2s ease}
+#content .sp-package--gold summary::after{color:var(--sp-gold)}
+#content .sp-package--silver summary::after{color:var(--sp-silver)}
+#content .sp-package details[open] summary::after{content:"−"}
+#content .sp-package summary:hover{color:var(--sp-cream)}
+#content .sp-package__full{list-style:none;padding:0 0 1rem;margin:0;display:flex;flex-direction:column;gap:.5rem}
+#content .sp-package__full li{position:relative;padding-left:1rem;font-size:.8rem;line-height:1.45;color:var(--sp-muted)}
+#content .sp-package__full li::before{content:"";position:absolute;left:0;top:.65em;width:.4rem;height:2px;background:var(--sp-orange);border-radius:1px}
+#content .sp-package--gold .sp-package__full li::before{background:var(--sp-gold)}
+#content .sp-package--silver .sp-package__full li::before{background:var(--sp-silver)}
+
+/* Package CTA */
+#content .sp-package__actions{margin-top:auto;padding:1rem 1.4rem 1.4rem;display:flex;gap:.6rem}
+#content .sp-package__actions .sp-btn{flex:1;padding:.75rem .6rem;min-height:46px;font-size:.6rem}
+
+#content .sp-disclaimer{text-align:center;margin-top:1.25rem;font-size:.72rem;line-height:1.5;color:rgba(244,236,224,.48)}
+
+/* ================================================================
+   ACTIVATIONS
+   ================================================================ */
+#content .sp-activation-groups{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.1rem;align-items:start}
+#content .sp-activation-group{min-width:0;padding:1.1rem;border:1px solid var(--sp-rule);border-radius:20px;background:rgba(255,255,255,.02)}
+#content .sp-activation-group h3{margin-bottom:.9rem;padding-bottom:.75rem;border-bottom:1px solid var(--sp-rule);font-family:var(--fd);font-size:1.3rem;font-weight:400;color:var(--sp-cream);line-height:1.1}
+#content .sp-activation-grid{display:grid;grid-template-columns:1fr;gap:.55rem}
+#content .sp-activation{display:grid;grid-template-columns:auto 1fr auto;gap:.7rem;align-items:center;min-width:0;padding:.8rem .9rem;border:1px solid var(--sp-rule);border-radius:14px;background:rgba(255,255,255,.025);transition:transform .16s ease,border-color .16s ease,background .16s ease;text-decoration:none}
 #content .sp-activation:hover{transform:translateY(-2px);border-color:var(--sp-rule-strong);background:rgba(255,255,255,.045)}
-#content .sp-activation__icon{width:39px;height:39px;border-radius:11px;display:grid;place-items:center;background:rgba(255,105,65,.13);border:1px solid rgba(255,105,65,.34);color:var(--sp-orange);flex-shrink:0}
-#content .sp-activation__icon--gold{background:rgba(232,196,106,.11);border-color:rgba(232,196,106,.3);color:var(--sp-gold)}
-#content .sp-activation__icon--silver{background:rgba(198,206,217,.09);border-color:rgba(198,206,217,.25);color:var(--sp-silver)}
-#content .sp-activation__icon svg{width:21px;height:21px;stroke:currentColor}
+#content .sp-activation:focus-visible{outline:2px solid var(--sp-orange);outline-offset:2px}
+#content .sp-activation__icon{width:38px;height:38px;border-radius:10px;display:grid;place-items:center;background:rgba(255,105,65,.12);border:1px solid rgba(255,105,65,.3);color:var(--sp-orange);flex-shrink:0}
+#content .sp-activation__icon--gold{background:var(--sp-gold-dim);border-color:rgba(232,196,106,.28);color:var(--sp-gold)}
+#content .sp-activation__icon--silver{background:var(--sp-silver-dim);border-color:rgba(198,206,217,.22);color:var(--sp-silver)}
+#content .sp-activation__icon svg{width:20px;height:20px;stroke:currentColor;stroke-width:1.8}
 #content .sp-activation__body{min-width:0}
-#content .sp-activation__body strong{display:block;font-size:.82rem;line-height:1.25;color:var(--sp-cream);font-weight:650}
-#content .sp-activation__body small{display:block;font-size:.67rem;line-height:1.25;color:var(--sp-muted);margin-top:.18rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-#content .sp-activation__price{font-family:var(--fm);font-size:.6rem;font-weight:700;color:var(--sp-orange);white-space:nowrap}
-#content .sp-open-source{display:grid;grid-template-columns:auto 1fr auto;gap:1rem;align-items:center;margin-top:1.2rem;padding:1rem 1.1rem;border:1px dashed var(--sp-rule-strong);border-radius:16px;background:rgba(255,255,255,.018)}
-#content .sp-open-source__icon{width:48px;height:48px;border-radius:14px;display:grid;place-items:center;background:rgba(255,105,65,.12);border:1px solid rgba(255,105,65,.3);color:var(--sp-orange)}
-#content .sp-open-source__icon svg{width:24px;height:24px;stroke:currentColor}
-#content .sp-open-source strong{display:block;font-family:var(--fd);font-size:1.15rem;font-weight:400;color:var(--sp-cream)}
-#content .sp-open-source span{display:block;font-size:.78rem;line-height:1.42;color:var(--sp-muted);margin-top:.2rem}
-@media(max-width:1080px){#content .sp-activation-grid{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:650px){#content .sp-activation-grid{grid-template-columns:1fr}#content .sp-open-source{grid-template-columns:auto 1fr}#content .sp-open-source .sp-btn{grid-column:1 / -1;width:100%}}
+#content .sp-activation__body strong{display:block;font-size:.8rem;line-height:1.25;color:var(--sp-cream);font-weight:600}
+#content .sp-activation__body small{display:block;font-size:.65rem;line-height:1.3;color:var(--sp-muted);margin-top:.15rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+#content .sp-activation__price{font-family:var(--fm);font-size:.62rem;font-weight:700;color:var(--sp-orange);white-space:nowrap;letter-spacing:.02em}
 
+/* Open Source */
+#content .sp-open-source{display:grid;grid-template-columns:auto 1fr auto;gap:1.1rem;align-items:center;margin-top:1.5rem;padding:1.1rem 1.25rem;border:1px dashed var(--sp-rule-strong);border-radius:18px;background:rgba(255,255,255,.018)}
+#content .sp-open-source__icon{width:46px;height:46px;border-radius:14px;display:grid;place-items:center;background:rgba(255,105,65,.11);border:1px solid rgba(255,105,65,.28);color:var(--sp-orange);flex-shrink:0}
+#content .sp-open-source__icon svg{width:22px;height:22px;stroke:currentColor;stroke-width:1.8}
+#content .sp-open-source strong{display:block;font-family:var(--fd);font-size:1.15rem;font-weight:400;color:var(--sp-cream);line-height:1.2}
+#content .sp-open-source span{display:block;font-size:.78rem;line-height:1.45;color:var(--sp-muted);margin-top:.2rem}
 
-/* v6 refinements */
-#content .sp-booth span{display:block;width:100%;text-align:center;line-height:1.05;white-space:nowrap}
-#content .sp-booth--silver span{font-size:.43rem;letter-spacing:.02em}
-#content .sp-booth-caption strong{white-space:nowrap}
-@media(max-width:420px){#content .sp-booth-caption strong{white-space:normal}}
+/* ================================================================
+   INQUIRY
+   ================================================================ */
+#content .sp-inquiry{background:var(--sp-bg-deep);padding-bottom:clamp(3.5rem,7vw,6rem)}
+#content .sp-inquiry__panel{display:grid;grid-template-columns:.7fr 1.3fr;border:1px solid var(--sp-rule);border-radius:24px;overflow:hidden;background:linear-gradient(135deg,rgba(255,255,255,.04),rgba(255,255,255,.01))}
+#content .sp-inquiry__intro{padding:clamp(1.8rem,3.5vw,2.8rem);border-right:1px solid var(--sp-rule);display:flex;flex-direction:column;justify-content:space-between;gap:2.5rem}
+#content .sp-inquiry__intro h2{font-family:var(--fb);font-size:clamp(2.2rem,4.2vw,3.6rem);font-weight:900;line-height:.93;letter-spacing:-.035em;text-transform:uppercase;color:var(--sp-cream);max-width:14ch}
+#content .sp-inquiry__intro p{font-size:.92rem;line-height:1.55;color:var(--sp-muted);max-width:30ch;margin-top:.7rem}
+#content .sp-inquiry__steps{display:flex;flex-direction:column;gap:.7rem}
+#content .sp-inquiry__step{display:flex;align-items:center;gap:.7rem;font-size:.8rem;color:var(--sp-muted)}
+#content .sp-inquiry__step span{width:26px;height:26px;border-radius:50%;display:grid;place-items:center;background:rgba(255,105,65,.12);border:1px solid rgba(255,105,65,.3);font-family:var(--fm);font-size:.58rem;font-weight:700;color:var(--sp-orange);flex-shrink:0}
+
+#content .sp-form{padding:clamp(1.8rem,3.5vw,2.8rem)}
+#content .sp-form__row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+#content .sp-field{display:flex;flex-direction:column;gap:.4rem;margin-bottom:1rem}
+#content .sp-field > span{font-family:var(--fm);font-size:.56rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--sp-muted)}
+#content .sp-field input,#content .sp-field select,#content .sp-field textarea{width:100%;border:1px solid var(--sp-rule-strong);border-radius:12px;background:rgba(0,18,39,.5);color:var(--sp-cream);padding:.9rem 1rem;font-family:var(--fb);font-size:.9rem;outline:none;transition:border-color .18s ease,background .18s ease,box-shadow .18s ease}
+#content .sp-field input:focus,#content .sp-field select:focus,#content .sp-field textarea:focus{border-color:var(--sp-orange);background:rgba(0,18,39,.75);box-shadow:0 0 0 3px rgba(255,105,65,.12)}
+#content .sp-field textarea{resize:vertical;min-height:100px}
+#content .sp-field select option{background:var(--sp-bg-deep);color:var(--sp-cream)}
+#content .sp-field select{cursor:pointer;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23F4ECE0' stroke-width='2'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 1rem center;padding-right:2.5rem}
+
+#content .sp-selected{margin-bottom:1rem}
+#content .sp-selected__label{font-family:var(--fm);font-size:.54rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--sp-muted);margin-bottom:.45rem}
+#content .sp-selected__chips{display:flex;flex-wrap:wrap;gap:.45rem}
+#content .sp-chip{display:inline-flex;align-items:center;gap:.4rem;border:1px solid var(--sp-rule-strong);border-radius:999px;padding:.38rem .6rem;font-size:.72rem;color:var(--sp-cream);background:rgba(255,255,255,.04)}
+#content .sp-chip button{font-size:1.05rem;line-height:1;color:var(--sp-orange);background:none;border:none;cursor:pointer;padding:0 .1rem}
+#content .sp-chip button:hover{color:#ff8a6a}
+#content .sp-chip button:focus-visible{outline:2px solid var(--sp-orange);outline-offset:2px;border-radius:2px}
+
+#content .sp-form__foot{display:flex;align-items:center;justify-content:space-between;gap:1.5rem;margin-top:.2rem}
+#content .sp-form__note{font-size:.72rem;line-height:1.45;color:rgba(244,236,224,.5);max-width:34ch}
+#content .sp-form__thanks{margin-top:1rem;padding:.9rem 1.1rem;border:1px solid rgba(255,105,65,.4);border-radius:12px;color:var(--sp-cream);background:rgba(255,105,65,.08);font-size:.85rem}
+
+/* ================================================================
+   RESPONSIVE
+   ================================================================ */
+@media(max-width:1050px){
+  #content .sp-hero__top{grid-template-columns:1fr}
+  #content .sp-speakers{width:max-content;min-width:0}
+  #content .sp-package-grid{grid-template-columns:1fr}
+  #content .sp-activation-groups{grid-template-columns:1fr}
+  #content .sp-inquiry__panel{grid-template-columns:1fr}
+  #content .sp-inquiry__intro{border-right:none;border-bottom:1px solid var(--sp-rule)}
+}
+@media(max-width:760px){
+  #content section{padding:2.8rem 0}
+  #content .sp-section-head{flex-direction:column;align-items:flex-start;gap:.5rem}
+  #content .sp-hero{padding-top:2.2rem}
+  #content .sp-hero h1{font-size:clamp(3rem,16vw,5rem);max-width:9ch}
+  #content .sp-hero__sub{max-width:34ch}
+  #content .sp-hero__actions .sp-btn{flex:1}
+  #content .sp-speakers{display:none}
+  #content .sp-package__visual{height:190px}
+  #content .sp-package__facts{grid-template-columns:1fr}
+  #content .sp-fact{border-right:none;border-bottom:1px solid var(--sp-rule);display:grid;grid-template-columns:28px 1fr;gap:.5rem;text-align:left;align-items:center;padding:.6rem .8rem}
+  #content .sp-fact:last-child{border-bottom:none}
+  #content .sp-fact svg{margin:0}
+  #content .sp-fact strong{grid-column:2}
+  #content .sp-fact span{grid-column:2;margin-top:0}
+  #content .sp-form__row{grid-template-columns:1fr}
+  #content .sp-form__foot{flex-direction:column;align-items:flex-start;gap:1rem}
+  #content .sp-form__foot .sp-btn{width:100%}
+  #content .sp-open-source{grid-template-columns:auto 1fr}
+  #content .sp-open-source .sp-btn{grid-column:1 / -1;width:100%}
+}
+@media(max-width:480px){
+  #content .sp-package__visual{height:180px}
+  #content .sp-booth-scale{width:130px;height:130px}
+  #content .sp-booth--title{width:100px;height:100px}
+  #content .sp-booth--gold{width:100px;height:50px}
+  #content .sp-booth--silver{width:50px;height:50px}
+}
+
+/* Scroll offset for fixed header */
+#package-grid{scroll-margin-top:calc(var(--header-h) + 16px)}
 </style>
 </head>
 <body>
+
+<!-- ===== SITE HEADER ===== -->
 <div class="header" id="siteHeader">
   <div class="nav-wrap" id="navWrap">
     <nav class="nav">
       <a class="nav__brand" href="/#top" aria-label="The Sovereign Summit">
-        <img src="images/nav-bar-header-withdate.png?v=1" alt="The Sovereign Summit &middot; February 5-6, 2027" fetchpriority="high">
+        <img src="images/nav-bar-header-withdate.png?v=1" alt="The Sovereign Summit · February 5-6, 2027" fetchpriority="high">
       </a>
       <div class="nav__sp nav__sp--2" aria-hidden="true"></div>
       <ul class="nav__links">
@@ -128,6 +324,7 @@
   </div>
 </div>
 
+<!-- ===== MOBILE MENU ===== -->
 <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
   <div class="mobile-menu__inner">
     <ul class="mobile-menu__links">
@@ -149,268 +346,10 @@
   </div>
 </div>
 
+<!-- ===== MAIN CONTENT ===== -->
 <main id="content">
-<style>
-/* =========================================================
-   Sponsorships — first-principles architecture
-   Hero → Core packages → Featured partnerships → Inquiry
-   ========================================================= */
-#content{
-  --sp-bg:#001839;
-  --sp-bg-deep:#001227;
-  --sp-card:#0A2445;
-  --sp-card-2:#0D2A50;
-  --sp-cream:#F4ECE0;
-  --sp-muted:rgba(244,236,224,.70);
-  --sp-rule:rgba(244,236,224,.15);
-  --sp-rule-strong:rgba(244,236,224,.28);
-  --sp-orange:#FF6941;
-  --sp-gold:#E8C46A;
-  --sp-silver:#C6CED9;
-  background:var(--sp-bg);
-  color:var(--sp-cream);
-  padding-top:var(--header-h);
-}
-#content section{padding:clamp(3.25rem,6vw,5.25rem) 0}
-#content .sp-container{width:100%;max-width:1320px;margin:0 auto;padding:0 clamp(1.2rem,3vw,2.4rem)}
-#content .sp-kicker{font-family:var(--fm);font-size:.66rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--sp-orange)}
-#content .sp-section-head{display:flex;align-items:flex-end;justify-content:space-between;gap:2rem;margin-bottom:1.5rem}
-#content .sp-section-title{font-family:var(--fb);font-size:clamp(2.15rem,4.3vw,3.7rem);font-weight:900;line-height:.94;letter-spacing:-.035em;text-transform:uppercase;color:var(--sp-cream)}
-#content .sp-section-note{max-width:34ch;font-size:.94rem;line-height:1.5;color:var(--sp-muted)}
 
-/* Hero */
-#content .sp-hero{
-  position:relative;
-  min-height:auto;
-  display:flex;
-  align-items:center;
-  overflow:hidden;
-  padding:clamp(3rem,6vw,5.25rem) 0;
-}
-#content .sp-hero__bg{position:absolute;inset:0;z-index:0}
-#content .sp-hero__bg img{width:100%;height:100%;object-fit:cover;object-position:center 45%}
-#content .sp-hero__scrim{position:absolute;inset:0;z-index:1;background:
-  linear-gradient(90deg,rgba(0,18,39,.98) 0%,rgba(0,24,57,.92) 43%,rgba(0,24,57,.42) 78%,rgba(0,24,57,.28) 100%),
-  linear-gradient(180deg,rgba(0,18,39,.35) 0%,rgba(0,18,39,.12) 45%,rgba(0,18,39,.96) 100%)}
-#content .sp-hero__inner{position:relative;z-index:2;width:100%}
-#content .sp-hero__top{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:2rem;align-items:end;padding-bottom:0}
-#content .sp-hero__copy{max-width:760px}
-#content .sp-hero h1{font-family:var(--fb);font-size:clamp(3rem,7vw,6.4rem);font-weight:900;line-height:.9;letter-spacing:-.05em;text-transform:uppercase;color:var(--sp-cream);max-width:10ch;text-shadow:0 6px 34px rgba(0,0,0,.35)}
-#content .sp-hero__sub{max-width:50ch;margin-top:1.15rem;font-size:clamp(1rem,1.6vw,1.2rem);line-height:1.5;color:rgba(244,236,224,.84)}
-#content .sp-hero__actions{display:flex;gap:.75rem;flex-wrap:wrap;margin-top:1.3rem}
-#content .sp-btn{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;min-height:50px;padding:.88rem 1.3rem;border-radius:999px;font-family:var(--fm);font-size:.7rem;font-weight:700;letter-spacing:.13em;text-transform:uppercase;transition:transform .18s ease,background .18s ease,border-color .18s ease,color .18s ease}
-#content .sp-btn:hover{transform:translateY(-2px)}
-#content .sp-btn--primary{background:var(--sp-orange);color:#001227;border:1px solid var(--sp-orange)}
-#content .sp-btn--ghost{border:1px solid rgba(244,236,224,.42);color:var(--sp-cream);background:rgba(0,18,39,.18);backdrop-filter:blur(8px)}
-#content .sp-btn--ghost:hover{border-color:var(--sp-cream);background:rgba(244,236,224,.07)}
-#content .sp-speakers{display:flex;align-items:center;gap:.8rem;padding:1rem 1.1rem;border:1px solid rgba(244,236,224,.2);border-radius:18px;background:rgba(0,18,39,.58);backdrop-filter:blur(12px);min-width:300px;transition:transform .18s ease,border-color .18s ease,background .18s ease}
-#content .sp-speakers__faces{display:flex;padding-left:.55rem}
-#content .sp-speakers__faces img{width:43px;height:43px;border-radius:50%;object-fit:cover;border:2px solid var(--sp-bg-deep);margin-left:-.55rem;background:var(--sp-card)}
-#content .sp-speakers__copy strong{display:block;font-size:.86rem;color:var(--sp-cream)}
-#content .sp-speakers__copy span{display:block;font-size:.72rem;line-height:1.35;color:var(--sp-muted);margin-top:.12rem}
-#content .sp-speakers:hover{transform:translateY(-2px);border-color:rgba(244,236,224,.42);background:rgba(0,18,39,.72)}
-#content .sp-speakers__arrow{margin-left:auto;font-family:var(--fm);font-size:.8rem;color:var(--sp-orange)}
-
-/* Hero package rail */
-#content .sp-package-rail{display:grid;grid-template-columns:repeat(3,1fr);background:rgba(0,18,39,.9);border:1px solid rgba(244,236,224,.18);border-bottom:none;border-radius:20px 20px 0 0;overflow:hidden;backdrop-filter:blur(14px)}
-#content .sp-rail-card{position:relative;display:grid;grid-template-columns:auto 1fr auto;gap:1rem;align-items:center;padding:1.2rem 1.3rem;border-right:1px solid rgba(244,236,224,.16);transition:background .18s ease}
-#content .sp-rail-card:last-child{border-right:none}
-#content .sp-rail-card:hover{background:rgba(244,236,224,.055)}
-#content .sp-rail-card__mark{width:44px;height:44px;border-radius:11px;background:var(--sp-orange);box-shadow:0 0 0 1px rgba(255,255,255,.14) inset}
-#content .sp-rail-card--gold .sp-rail-card__mark{width:56px;height:34px;border-radius:9px;background:var(--sp-gold)}
-#content .sp-rail-card--silver .sp-rail-card__mark{width:36px;height:36px;border-radius:9px;background:var(--sp-silver)}
-#content .sp-rail-card__name{font-family:var(--fd);font-size:1.35rem;line-height:1;color:var(--sp-cream)}
-#content .sp-rail-card__meta{font-family:var(--fm);font-size:.56rem;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--sp-muted);margin-top:.28rem}
-#content .sp-rail-card__price{font-family:var(--fb);font-size:1.8rem;font-weight:900;line-height:1;color:var(--sp-cream);letter-spacing:-.03em;text-align:right}
-#content .sp-rail-card__price small{display:block;font-family:var(--fm);font-size:.52rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--sp-muted);margin-top:.3rem}
-
-/* Package cards */
-#content .sp-packages{background:var(--sp-bg-deep)}
-#content .sp-package-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
-#content .sp-package{display:flex;flex-direction:column;min-width:0;border:1px solid var(--sp-rule);border-radius:20px;background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.018));overflow:hidden;box-shadow:inset 0 1px 0 rgba(255,255,255,.04)}
-#content .sp-package--title{border-color:rgba(255,105,65,.72)}
-#content .sp-package--gold{border-color:rgba(232,196,106,.5)}
-#content .sp-package--silver{border-color:rgba(198,206,217,.38)}
-#content .sp-package__head{padding:1.25rem 1.25rem 1rem;display:flex;align-items:flex-start;justify-content:space-between;gap:1rem}
-#content .sp-package__tier{font-family:var(--fd);font-size:1.55rem;line-height:1;color:var(--sp-cream)}
-#content .sp-package__availability{font-family:var(--fm);font-size:.56rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--sp-orange);margin-top:.4rem}
-#content .sp-package--gold .sp-package__availability{color:var(--sp-gold)}
-#content .sp-package--silver .sp-package__availability{color:var(--sp-silver)}
-#content .sp-package__price{font-family:var(--fb);font-size:2.05rem;font-weight:900;line-height:1;color:var(--sp-cream);letter-spacing:-.035em;white-space:nowrap}
-#content .sp-package__visual{height:150px;margin:0 1.25rem;border-radius:15px;background:rgba(244,236,224,.035);border:1px solid var(--sp-rule);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
-#content .sp-booth{position:relative;display:grid;place-items:center;color:#001227;font-family:var(--fm);font-size:.64rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;box-shadow:0 16px 32px rgba(0,0,0,.25)}
-#content .sp-booth--title{width:112px;height:112px;border-radius:20px;background:var(--sp-orange)}
-#content .sp-booth--gold{width:148px;height:78px;border-radius:17px;background:var(--sp-gold)}
-#content .sp-booth--silver{width:86px;height:86px;border-radius:17px;background:var(--sp-silver)}
-#content .sp-package__visual::before,#content .sp-package__visual::after{content:"";position:absolute;background:rgba(244,236,224,.07)}
-#content .sp-package__visual::before{width:70%;height:1px;left:15%;top:50%}
-#content .sp-package__visual::after{height:70%;width:1px;top:15%;left:50%}
-#content .sp-package__facts{display:grid;grid-template-columns:repeat(3,1fr);margin:1rem 1.25rem 0;border:1px solid var(--sp-rule);border-radius:14px;overflow:hidden}
-#content .sp-fact{padding:.8rem .65rem;text-align:center;border-right:1px solid var(--sp-rule)}
-#content .sp-fact:last-child{border-right:none}
-#content .sp-fact svg{width:22px;height:22px;margin:0 auto .45rem;stroke:currentColor;color:var(--sp-orange)}
-#content .sp-package--gold .sp-fact svg{color:var(--sp-gold)}
-#content .sp-package--silver .sp-fact svg{color:var(--sp-silver)}
-#content .sp-fact strong{display:block;font-size:.8rem;line-height:1.25;color:var(--sp-cream)}
-#content .sp-fact span{display:block;font-family:var(--fm);font-size:.5rem;line-height:1.35;letter-spacing:.08em;text-transform:uppercase;color:var(--sp-muted);margin-top:.25rem}
-#content .sp-package__actions{margin-top:auto;padding:1rem 1.25rem 1.25rem;display:flex;gap:.6rem}
-#content .sp-package__actions .sp-btn{flex:1;padding:.78rem .7rem;min-height:46px;font-size:.62rem}
-#content .sp-package details{border-top:1px solid var(--sp-rule);margin:0 1.25rem}
-#content .sp-package summary{list-style:none;cursor:pointer;padding:.85rem 0;font-family:var(--fm);font-size:.58rem;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--sp-muted);display:flex;align-items:center;justify-content:space-between}
-#content .sp-package summary::-webkit-details-marker{display:none}
-#content .sp-package summary::after{content:"+";font-size:1rem;color:var(--sp-orange)}
-#content .sp-package details[open] summary::after{content:"−"}
-#content .sp-package__full{list-style:none;padding:0 0 .95rem;margin:0;display:flex;flex-direction:column;gap:.45rem}
-#content .sp-package__full li{position:relative;padding-left:.9rem;font-size:.8rem;line-height:1.42;color:var(--sp-muted)}
-#content .sp-package__full li::before{content:"";position:absolute;left:0;top:.63em;width:.38rem;height:2px;background:var(--sp-orange)}
-#content .sp-package--gold .sp-package__full li::before{background:var(--sp-gold)}
-#content .sp-package--silver .sp-package__full li::before{background:var(--sp-silver)}
-#content .sp-included{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;margin-top:1rem;border:1px solid var(--sp-rule);border-radius:16px;overflow:hidden;background:var(--sp-rule)}
-#content .sp-included__item{background:var(--sp-card);padding:.9rem 1rem;display:flex;align-items:center;gap:.65rem;font-size:.78rem;color:var(--sp-muted)}
-#content .sp-included__item svg{width:20px;height:20px;stroke:var(--sp-orange);flex-shrink:0}
-#content .sp-disclaimer{margin-top:.75rem;font-size:.72rem;line-height:1.45;color:rgba(244,236,224,.52)}
-
-/* Featured partnerships */
-#content .sp-partnerships{background:var(--sp-bg)}
-#content .sp-partnership-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
-#content .sp-partner-group{border:1px solid var(--sp-rule);border-radius:18px;background:rgba(255,255,255,.025);overflow:hidden}
-#content .sp-partner-group[open]{background:rgba(255,255,255,.04)}
-#content .sp-partner-group summary{list-style:none;cursor:pointer;padding:1.15rem;display:flex;align-items:center;gap:.85rem}
-#content .sp-partner-group summary::-webkit-details-marker{display:none}
-#content .sp-partner-icon{width:48px;height:48px;border-radius:14px;display:grid;place-items:center;background:rgba(255,105,65,.14);border:1px solid rgba(255,105,65,.35);color:var(--sp-orange);flex-shrink:0}
-#content .sp-partner-icon svg{width:25px;height:25px;stroke:currentColor}
-#content .sp-partner-group:nth-child(2) .sp-partner-icon{color:var(--sp-gold);background:rgba(232,196,106,.12);border-color:rgba(232,196,106,.32)}
-#content .sp-partner-group:nth-child(3) .sp-partner-icon{color:var(--sp-silver);background:rgba(198,206,217,.1);border-color:rgba(198,206,217,.28)}
-#content .sp-partner-title{font-family:var(--fd);font-size:1.2rem;line-height:1.05;color:var(--sp-cream)}
-#content .sp-partner-meta{font-family:var(--fm);font-size:.52rem;font-weight:700;letter-spacing:.11em;text-transform:uppercase;color:var(--sp-muted);margin-top:.28rem}
-#content .sp-partner-chevron{margin-left:auto;font-family:var(--fm);font-size:1rem;color:var(--sp-muted)}
-#content .sp-partner-group[open] .sp-partner-chevron{transform:rotate(45deg)}
-#content .sp-partner-list{list-style:none;margin:0;padding:0 1.15rem 1rem}
-#content .sp-partner-list li{border-top:1px solid var(--sp-rule)}
-#content .sp-partner-list a{display:grid;grid-template-columns:1fr auto;gap:.8rem;align-items:center;padding:.7rem 0;color:var(--sp-muted);transition:color .15s ease}
-#content .sp-partner-list a:hover{color:var(--sp-cream)}
-#content .sp-partner-list strong{font-size:.82rem;line-height:1.25;font-weight:600}
-#content .sp-partner-list span{font-family:var(--fm);font-size:.6rem;font-weight:700;color:var(--sp-orange);white-space:nowrap}
-#content .sp-partner-foot{display:flex;align-items:center;justify-content:space-between;gap:1rem;margin-top:1rem;padding:1rem 1.1rem;border:1px dashed var(--sp-rule-strong);border-radius:16px}
-#content .sp-partner-foot strong{font-family:var(--fd);font-size:1.1rem;color:var(--sp-cream);font-weight:400}
-#content .sp-partner-foot span{font-size:.78rem;color:var(--sp-muted);margin-left:.45rem}
-
-/* Inquiry */
-#content .sp-inquiry{background:var(--sp-bg-deep);padding-bottom:clamp(3.5rem,6vw,5rem)}
-#content .sp-inquiry__panel{display:grid;grid-template-columns:.72fr 1.28fr;border:1px solid var(--sp-rule);border-radius:22px;overflow:hidden;background:linear-gradient(135deg,rgba(255,255,255,.045),rgba(255,255,255,.018))}
-#content .sp-inquiry__intro{padding:clamp(1.5rem,3vw,2.4rem);border-right:1px solid var(--sp-rule);display:flex;flex-direction:column;justify-content:space-between;gap:2rem}
-#content .sp-inquiry__intro h2{font-family:var(--fb);font-size:clamp(2.1rem,4vw,3.6rem);font-weight:900;line-height:.93;letter-spacing:-.035em;text-transform:uppercase;color:var(--sp-cream)}
-#content .sp-inquiry__intro p{font-size:.92rem;line-height:1.5;color:var(--sp-muted);max-width:30ch;margin-top:.8rem}
-#content .sp-inquiry__steps{display:flex;flex-direction:column;gap:.65rem}
-#content .sp-inquiry__step{display:flex;align-items:center;gap:.65rem;font-size:.78rem;color:var(--sp-muted)}
-#content .sp-inquiry__step span{width:24px;height:24px;border-radius:50%;display:grid;place-items:center;background:rgba(255,105,65,.14);border:1px solid rgba(255,105,65,.32);font-family:var(--fm);font-size:.58rem;color:var(--sp-orange);flex-shrink:0}
-#content .sp-form{padding:clamp(1.5rem,3vw,2.4rem)}
-#content .sp-form__row{display:grid;grid-template-columns:1fr 1fr;gap:.85rem}
-#content .sp-field{display:flex;flex-direction:column;gap:.38rem;margin-bottom:.85rem}
-#content .sp-field > span{font-family:var(--fm);font-size:.58rem;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--sp-muted)}
-#content .sp-field input,#content .sp-field select,#content .sp-field textarea{width:100%;border:1px solid var(--sp-rule-strong);border-radius:11px;background:rgba(0,18,39,.45);color:var(--sp-cream);padding:.85rem .9rem;font-family:var(--fb);font-size:.9rem;outline:none;transition:border-color .15s ease,background .15s ease}
-#content .sp-field input:focus,#content .sp-field select:focus,#content .sp-field textarea:focus{border-color:var(--sp-orange);background:rgba(0,18,39,.72)}
-#content .sp-field textarea{resize:vertical;min-height:110px}
-#content .sp-field select option{background:var(--sp-bg-deep);color:var(--sp-cream)}
-#content .sp-selected{margin-bottom:.85rem}
-#content .sp-selected__label{font-family:var(--fm);font-size:.56rem;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--sp-muted);margin-bottom:.4rem}
-#content .sp-selected__chips{display:flex;flex-wrap:wrap;gap:.4rem}
-#content .sp-chip{display:inline-flex;align-items:center;gap:.4rem;border:1px solid var(--sp-rule-strong);border-radius:999px;padding:.35rem .55rem;font-size:.7rem;color:var(--sp-cream)}
-#content .sp-chip button{font-size:1rem;line-height:1;color:var(--sp-orange)}
-#content .sp-form__foot{display:flex;align-items:center;justify-content:space-between;gap:1rem;margin-top:.25rem}
-#content .sp-form__note{font-size:.72rem;line-height:1.4;color:rgba(244,236,224,.54);max-width:36ch}
-#content .sp-form__thanks{margin-top:.8rem;padding:.8rem 1rem;border:1px solid rgba(255,105,65,.45);border-radius:11px;color:var(--sp-cream);background:rgba(255,105,65,.08)}
-
-@media(max-width:1050px){
-  #content .sp-hero{min-height:auto}
-  #content .sp-hero__top{grid-template-columns:1fr}
-  #content .sp-speakers{width:max-content;min-width:0}
-  #content .sp-package-grid{grid-template-columns:1fr}
-  #content .sp-partnership-grid{grid-template-columns:1fr 1fr}
-  #content .sp-inquiry__panel{grid-template-columns:1fr}
-  #content .sp-inquiry__intro{border-right:none;border-bottom:1px solid var(--sp-rule)}
-}
-@media(max-width:760px){
-  #content{padding-top:var(--header-h)}
-  #content section{padding:3rem 0}
-  #content .sp-section-head{align-items:flex-start;flex-direction:column;gap:.6rem}
-  #content .sp-hero{padding-top:1.75rem}
-  #content .sp-hero h1{font-size:clamp(3rem,18vw,5.2rem);max-width:7ch}
-  #content .sp-hero__sub{max-width:32ch}
-  #content .sp-hero__actions .sp-btn{width:100%}
-  #content .sp-speakers{display:none}
-  #content .sp-package-rail{grid-template-columns:1fr;border-radius:18px 18px 0 0}
-  #content .sp-rail-card{border-right:none;border-bottom:1px solid var(--sp-rule)}
-  #content .sp-rail-card:last-child{border-bottom:none}
-  #content .sp-included{grid-template-columns:1fr 1fr}
-  #content .sp-partnership-grid{grid-template-columns:1fr}
-  #content .sp-partner-foot{align-items:flex-start;flex-direction:column}
-  #content .sp-partner-foot .sp-btn{width:100%}
-  #content .sp-form__row{grid-template-columns:1fr}
-  #content .sp-form__foot{align-items:flex-start;flex-direction:column}
-  #content .sp-form__foot .sp-btn{width:100%}
-}
-@media(max-width:480px){
-  #content .sp-included{grid-template-columns:1fr}
-  #content .sp-package__facts{grid-template-columns:1fr}
-  #content .sp-fact{border-right:none;border-bottom:1px solid var(--sp-rule);display:grid;grid-template-columns:32px 1fr;column-gap:.55rem;text-align:left;align-items:center}
-  #content .sp-fact:last-child{border-bottom:none}
-  #content .sp-fact svg{grid-row:1 / span 2;margin:0}
-}
-
-/* ===== Refinements: hierarchy, exact booth scale, three-column activations ===== */
-#content .sp-package__tier{font-size:clamp(2rem,3vw,2.65rem);font-weight:400;letter-spacing:-.025em}
-#content .sp-package__head{align-items:flex-end}
-#content .sp-package__price{font-size:clamp(1.75rem,2.3vw,2.2rem)}
-#content .sp-package__visual{height:230px;flex-direction:column;gap:.75rem;padding:1rem .75rem .85rem}
-#content .sp-booth-map{position:relative;width:190px;height:145px;display:flex;align-items:center;justify-content:center;padding:18px 20px 16px 28px;flex:0 0 auto}
-#content .sp-booth{border-radius:13px;font-size:.58rem;letter-spacing:.06em;box-shadow:0 14px 28px rgba(0,0,0,.24)}
-#content .sp-booth--title{width:120px;height:120px;border-radius:18px;background:var(--sp-orange)}
-#content .sp-booth--gold{width:120px;height:60px;border-radius:14px;background:var(--sp-gold)}
-#content .sp-booth--silver{width:60px;height:60px;border-radius:12px;background:var(--sp-silver)}
-#content .sp-booth-dim{font-size:.5rem}
-#content .sp-booth-caption{text-align:center;line-height:1.2;min-height:38px}
-#content .sp-booth-caption strong{display:block;font-family:var(--fb);font-size:.82rem;color:var(--sp-cream)}
-#content .sp-booth-caption span{display:block;font-family:var(--fm);font-size:.5rem;letter-spacing:.08em;text-transform:uppercase;color:var(--sp-muted);margin-top:.25rem}
-#content .sp-activation-groups{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem;align-items:start}
-#content .sp-activation-group{min-width:0;padding:1rem;border:1px solid var(--sp-rule);border-radius:18px;background:rgba(255,255,255,.018)}
-#content .sp-activation-group h3{margin-bottom:.65rem;padding-bottom:.65rem;border-bottom:1px solid var(--sp-rule);font-size:1.35rem}
-#content .sp-activation-grid{display:grid;grid-template-columns:1fr;gap:.6rem}
-#content .sp-activation{padding:.78rem .82rem}
-@media(max-width:980px){#content .sp-activation-groups{grid-template-columns:1fr}}
-@media(max-width:650px){#content .sp-package__visual{height:220px}#content .sp-package__tier{font-size:2.15rem}}
-
-/* v5 refinements */
-#content #package-grid{scroll-margin-top:calc(var(--header-h) + 12px)}
-#content .sp-packages{padding:1rem 0 1.75rem}
-#content .sp-packages .sp-section-head{margin-bottom:.85rem}
-#content .sp-package__head{padding:1rem 1.1rem .75rem}
-#content .sp-package__visual{height:186px;margin:0 1.1rem;padding:.7rem .65rem .65rem;gap:.5rem}
-#content .sp-package__visual::before,#content .sp-package__visual::after{display:none}
-#content .sp-booth-map{width:165px;height:130px;padding:0;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;gap:.42rem}
-#content .sp-booth--title{width:108px;height:108px}
-#content .sp-booth--gold{width:108px;height:54px}
-#content .sp-booth--silver{width:54px;height:54px}
-#content .sp-booth-size{font-family:var(--fm);font-size:.52rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--sp-muted);line-height:1}
-#content .sp-booth-dim{display:none!important}
-#content .sp-booth-caption{min-height:31px}
-#content .sp-booth-caption strong{font-size:.78rem}
-#content .sp-booth-caption span{font-size:.46rem;margin-top:.18rem}
-#content .sp-package__facts{margin:.75rem 1.1rem 0}
-#content .sp-fact{padding:.62rem .5rem}
-#content .sp-fact svg{width:19px;height:19px;margin-bottom:.35rem}
-#content .sp-fact strong{font-size:.74rem}
-#content .sp-fact span{font-size:.46rem}
-#content .sp-package details{margin:0 1.1rem}
-#content .sp-package summary{padding:.62rem 0}
-#content .sp-package__actions{padding:.72rem 1.1rem 1rem}
-#content .sp-package__actions .sp-btn{min-height:42px;padding:.66rem .6rem}
-@media(min-width:1051px){
-  #content .sp-package-grid{align-items:start}
-  #content .sp-package{min-height:0}
-}
-</style>
-
+<!-- Hero -->
 <section class="sp-hero" id="sponsorships">
   <div class="sp-hero__bg" aria-hidden="true">
     <picture>
@@ -445,91 +384,188 @@
   </div>
 </section>
 
+<!-- Packages -->
 <section class="sp-packages" id="packages">
   <div class="sp-container">
     <div class="sp-section-head">
-      <div><div class="sp-kicker">Core Sponsorships</div><h2 class="sp-section-title">Choose your package.</h2></div>
+      <div>
+        <div class="sp-kicker">Core Sponsorships</div>
+        <h2 class="sp-section-title">Choose your package.</h2>
+      </div>
     </div>
 
     <div class="sp-package-grid" id="package-grid">
+      <!-- Title -->
       <article class="sp-package sp-package--title" id="title-package">
-        <div class="sp-package__head"><div><div class="sp-package__tier">Title</div><div class="sp-package__availability">2 available</div></div><div class="sp-package__price">$100,000</div></div>
+        <div class="sp-package__head">
+          <div>
+            <div class="sp-package__tier">Title</div>
+            <div class="sp-package__availability">2 available</div>
+          </div>
+          <div class="sp-package__price">$100,000<small>per package</small></div>
+        </div>
+
         <div class="sp-package__visual">
-          <div class="sp-booth-map sp-booth-map--title" aria-label="20 foot by 20 foot booth, 400 square feet">
+          <div class="sp-booth-scale" aria-label="20 foot by 20 foot expo booth, 400 square feet">
             <div class="sp-booth sp-booth--title"><span>400 sq ft</span></div>
-            <div class="sp-booth-size">20 × 20 ft</div>
+            <span class="sp-booth-label">20 × 20 ft</span>
           </div>
-          <div class="sp-booth-caption"><strong>Expo Booth · Largest footprint</strong><span>Premier placement on the expo floor</span></div>
+          <div class="sp-booth-caption">
+            <strong>Expo Booth · Largest footprint</strong>
+            <span>Premier placement on the expo floor</span>
+          </div>
         </div>
+
         <div class="sp-package__facts">
-          <div class="sp-fact"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M4 18V7l8-4 8 4v11"/><path d="M8 21v-8h8v8M2 21h20"/></svg><strong>2 Premium Stage Sessions</strong></div>
-          <div class="sp-fact"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M2 12s3.5-6 10-6 10 6 10 6-3.5 6-10 6S2 12 2 12Z"/><circle cx="12" cy="12" r="2.5"/></svg><strong>Top Billing</strong><span>Event-wide</span></div>
-          <div class="sp-fact"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M3 8h18v10H3z"/><path d="M7 8V5h10v3M8 13h8"/></svg><strong>20 Passes</strong><span>10 VIP + 10 Summit</span></div>
+          <div class="sp-fact">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 18V7l8-4 8 4v11"/><path d="M8 21v-8h8v8"/><path d="M2 21h20"/></svg>
+            <strong>2 Premium Stage Sessions</strong>
+            <span>Main Stage + VIP Stage</span>
+          </div>
+          <div class="sp-fact">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-6 10-6 10 6 10 6-3.5 6-10 6S2 12 2 12Z"/><circle cx="12" cy="12" r="2.5"/></svg>
+            <strong>Top Event-wide Billing</strong>
+            <span>Maximum visibility</span>
+          </div>
+          <div class="sp-fact">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h18v10H3z"/><path d="M7 8V5h10v3"/><path d="M8 13h8"/></svg>
+            <strong>20 Passes</strong>
+            <span>10 VIP + 10 Summit</span>
+          </div>
         </div>
-        <details><summary>View all benefits</summary><ul class="sp-package__full">
-          <li>20×20 island footprint in one of the two premier Title locations</li>
-          <li>One primetime Main Stage keynote, fireside conversation, or approved partner presentation</li>
-          <li>One primetime VIP Stage session</li>
-          <li>Equal top billing as one of two Title Sponsors</li>
-          <li>Branding across registration, attendee credentials, stage screens, website, email, and media</li>
-          <li>10 VIP Summit Passes and 10 Summit Passes</li>
-          <li>First selection between the two Title footprint locations, based on commitment date</li>
-          <li>Standard branded booth elements, package furniture, power, and hardwired internet</li>
-          <li>Programming format, participants, and final content developed with Summit approval</li>
-        </ul></details>
-        <div class="sp-package__actions"><a class="sp-btn sp-btn--primary sp-select" href="#inquire" data-interest="Title Sponsor" data-item="Title Sponsor — $100,000">Request Availability</a></div>
+
+        <details>
+          <summary>View all benefits</summary>
+          <ul class="sp-package__full">
+            <li>20×20 island footprint in one of the two premier Title locations</li>
+            <li>One primetime Main Stage keynote, fireside conversation, or approved partner presentation</li>
+            <li>One primetime VIP Stage session</li>
+            <li>Equal top billing as one of two Title Sponsors</li>
+            <li>Branding across registration, attendee credentials, stage screens, website, email, and media</li>
+            <li>10 VIP Summit Passes and 10 Summit Passes</li>
+            <li>First selection between the two Title footprint locations, based on commitment date</li>
+            <li>Standard branded booth elements, package furniture, power, and hardwired internet</li>
+            <li>Programming format, participants, and final content developed with Summit approval</li>
+          </ul>
+        </details>
+
+        <div class="sp-package__actions">
+          <a class="sp-btn sp-btn--primary sp-select" href="#inquire" data-interest="Title Sponsor" data-item="Title Sponsor — $100,000">Request Availability</a>
+        </div>
       </article>
 
+      <!-- Gold -->
       <article class="sp-package sp-package--gold" id="gold-package">
-        <div class="sp-package__head"><div><div class="sp-package__tier">Gold</div><div class="sp-package__availability">4 available</div></div><div class="sp-package__price">$50,000</div></div>
-        <div class="sp-package__visual">
-          <div class="sp-booth-map sp-booth-map--gold" aria-label="10 foot by 20 foot booth, 200 square feet">
-            <div class="sp-booth sp-booth--gold"><span>200 sq ft</span></div>
-            <div class="sp-booth-size">20 × 10 ft</div>
+        <div class="sp-package__head">
+          <div>
+            <div class="sp-package__tier">Gold</div>
+            <div class="sp-package__availability">4 available</div>
           </div>
-          <div class="sp-booth-caption"><strong>Expo Booth · Double-width presence</strong><span>Premium placement with room to activate</span></div>
+          <div class="sp-package__price">$50,000<small>per package</small></div>
         </div>
+
+        <div class="sp-package__visual">
+          <div class="sp-booth-scale" aria-label="10 foot by 20 foot expo booth, 200 square feet">
+            <div class="sp-booth sp-booth--gold"><span>200 sq ft</span></div>
+            <span class="sp-booth-label">20 × 10 ft</span>
+          </div>
+          <div class="sp-booth-caption">
+            <strong>Expo Booth · Double-width presence</strong>
+            <span>Premium placement with room to activate</span>
+          </div>
+        </div>
+
         <div class="sp-package__facts">
-          <div class="sp-fact"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M4 18V7l8-4 8 4v11"/><path d="M8 21v-8h8v8M2 21h20"/></svg><strong>2 Stage Sessions</strong></div>
-          <div class="sp-fact"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M2 12s3.5-6 10-6 10 6 10 6-3.5 6-10 6S2 12 2 12Z"/><circle cx="12" cy="12" r="2.5"/></svg><strong>Prominent</strong><span>Brand visibility</span></div>
-          <div class="sp-fact"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M3 8h18v10H3z"/><path d="M7 8V5h10v3M8 13h8"/></svg><strong>12 Passes</strong><span>6 VIP + 6 Summit</span></div>
+          <div class="sp-fact">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 18V7l8-4 8 4v11"/><path d="M8 21v-8h8v8"/><path d="M2 21h20"/></svg>
+            <strong>2 Stage Sessions</strong>
+            <span>Main Stage + VIP Stage</span>
+          </div>
+          <div class="sp-fact">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-6 10-6 10 6 10 6-3.5 6-10 6S2 12 2 12Z"/><circle cx="12" cy="12" r="2.5"/></svg>
+            <strong>Prominent Branding</strong>
+            <span>Stage, signage, web, email</span>
+          </div>
+          <div class="sp-fact">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h18v10H3z"/><path d="M7 8V5h10v3"/><path d="M8 13h8"/></svg>
+            <strong>12 Passes</strong>
+            <span>6 VIP + 6 Summit</span>
+          </div>
         </div>
-        <details><summary>View all benefits</summary><ul class="sp-package__full">
-          <li>10×20 premium expo footprint</li>
-          <li>One Main Stage panel seat or moderated interview</li>
-          <li>One VIP Stage partner session</li>
-          <li>Prominent branding across stage screens, event signage, website, and sponsor emails</li>
-          <li>6 VIP Summit Passes and 6 Summit Passes</li>
-          <li>Location selection within the Gold level, based on commitment date</li>
-          <li>Standard branded booth elements, package furniture, power, and hardwired internet</li>
-          <li>Programming format, participants, and final content developed with Summit approval</li>
-        </ul></details>
-        <div class="sp-package__actions"><a class="sp-btn sp-btn--primary sp-select" href="#inquire" data-interest="Gold Sponsor" data-item="Gold Sponsor — $50,000">Request Availability</a></div>
+
+        <details>
+          <summary>View all benefits</summary>
+          <ul class="sp-package__full">
+            <li>10×20 premium expo footprint</li>
+            <li>One Main Stage panel seat or moderated interview</li>
+            <li>One VIP Stage partner session</li>
+            <li>Prominent branding across stage screens, event signage, website, and sponsor emails</li>
+            <li>6 VIP Summit Passes and 6 Summit Passes</li>
+            <li>Location selection within the Gold level, based on commitment date</li>
+            <li>Standard branded booth elements, package furniture, power, and hardwired internet</li>
+            <li>Programming format, participants, and final content developed with Summit approval</li>
+          </ul>
+        </details>
+
+        <div class="sp-package__actions">
+          <a class="sp-btn sp-btn--gold sp-select" href="#inquire" data-interest="Gold Sponsor" data-item="Gold Sponsor — $50,000">Request Availability</a>
+        </div>
       </article>
 
+      <!-- Silver -->
       <article class="sp-package sp-package--silver" id="silver-package">
-        <div class="sp-package__head"><div><div class="sp-package__tier">Silver</div><div class="sp-package__availability">23 available</div></div><div class="sp-package__price">$10,000</div></div>
-        <div class="sp-package__visual">
-          <div class="sp-booth-map sp-booth-map--silver" aria-label="10 foot by 10 foot booth, 100 square feet">
-            <div class="sp-booth sp-booth--silver"><span>100 sq ft</span></div>
-            <div class="sp-booth-size">10 × 10 ft</div>
+        <div class="sp-package__head">
+          <div>
+            <div class="sp-package__tier">Silver</div>
+            <div class="sp-package__availability">23 available</div>
           </div>
-          <div class="sp-booth-caption"><strong>Expo Booth · Turnkey presence</strong><span>Everything needed to meet attendees</span></div>
+          <div class="sp-package__price">$10,000<small>per package</small></div>
         </div>
+
+        <div class="sp-package__visual">
+          <div class="sp-booth-scale" aria-label="10 foot by 10 foot expo booth, 100 square feet">
+            <div class="sp-booth sp-booth--silver"><span>100 sq ft</span></div>
+            <span class="sp-booth-label">10 × 10 ft</span>
+          </div>
+          <div class="sp-booth-caption">
+            <strong>Expo Booth · Turnkey presence</strong>
+            <span>Everything needed to meet attendees</span>
+          </div>
+        </div>
+
         <div class="sp-package__facts">
-          <div class="sp-fact"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M8 4v16M16 4v16"/></svg><strong>Turnkey Booth</strong><span>Backwall + furniture</span></div>
-          <div class="sp-fact"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M2 12s3.5-6 10-6 10 6 10 6-3.5 6-10 6S2 12 2 12Z"/><circle cx="12" cy="12" r="2.5"/></svg><strong>Visibility</strong><span>Web + signage</span></div>
-          <div class="sp-fact"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M3 8h18v10H3z"/><path d="M7 8V5h10v3M8 13h8"/></svg><strong>5 Passes</strong><span>1 VIP + 4 Summit</span></div>
+          <div class="sp-fact">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M8 4v16M16 4v16"/></svg>
+            <strong>Turnkey Booth</strong>
+            <span>Backwall + furniture</span>
+          </div>
+          <div class="sp-fact">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-6 10-6 10 6 10 6-3.5 6-10 6S2 12 2 12Z"/><circle cx="12" cy="12" r="2.5"/></svg>
+            <strong>Standard Visibility</strong>
+            <span>Web + signage</span>
+          </div>
+          <div class="sp-fact">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h18v10H3z"/><path d="M7 8V5h10v3"/><path d="M8 13h8"/></svg>
+            <strong>5 Passes</strong>
+            <span>1 VIP + 4 Summit</span>
+          </div>
         </div>
-        <details><summary>View all benefits</summary><ul class="sp-package__full">
-          <li>Turnkey 10×10 expo footprint</li>
-          <li>Standard branded backwall and package furniture</li>
-          <li>Standard power and hardwired internet</li>
-          <li>1 VIP Summit Pass and 4 Summit Passes</li>
-          <li>Logo on the Summit website, sponsor signage, and selected event emails</li>
-          <li>Inclusion in sponsor-announcement communications</li>
-        </ul></details>
-        <div class="sp-package__actions"><a class="sp-btn sp-btn--primary sp-select" href="#inquire" data-interest="Silver Sponsor" data-item="Silver Sponsor — $10,000">Request Availability</a></div>
+
+        <details>
+          <summary>View all benefits</summary>
+          <ul class="sp-package__full">
+            <li>Turnkey 10×10 expo footprint</li>
+            <li>Standard branded backwall and package furniture</li>
+            <li>Standard power and hardwired internet</li>
+            <li>1 VIP Summit Pass and 4 Summit Passes</li>
+            <li>Logo on the Summit website, sponsor signage, and selected event emails</li>
+            <li>Inclusion in sponsor-announcement communications</li>
+          </ul>
+        </details>
+
+        <div class="sp-package__actions">
+          <a class="sp-btn sp-btn--silver sp-select" href="#inquire" data-interest="Silver Sponsor" data-item="Silver Sponsor — $10,000">Request Availability</a>
+        </div>
       </article>
     </div>
 
@@ -537,103 +573,167 @@
   </div>
 </section>
 
+<!-- Activations -->
 <section class="sp-partnerships" id="partnerships">
   <div class="sp-container">
     <div class="sp-section-head">
-      <div><div class="sp-kicker">Brand Activations</div><h2 class="sp-section-title">Go beyond the booth.</h2></div>
+      <div>
+        <div class="sp-kicker">Brand Activations</div>
+        <h2 class="sp-section-title">Go beyond the booth.</h2>
+      </div>
       <p class="sp-section-note">Available alone or paired with a core sponsorship.</p>
     </div>
 
     <div class="sp-activation-groups">
+      <!-- Stage & Media -->
       <section class="sp-activation-group" aria-labelledby="activation-stage-media">
         <h3 id="activation-stage-media">Stage &amp; Media</h3>
         <div class="sp-activation-grid">
           <a class="sp-activation sp-select" href="#inquire" data-interest="Featured Partnership Only" data-item="Livestream &amp; Media — $15,000">
-            <span class="sp-activation__icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><rect x="3" y="5" width="14" height="14" rx="2"/><path d="m17 10 4-2v8l-4-2z"/></svg></span>
-            <span class="sp-activation__body"><strong>Livestream &amp; Media</strong><small>Every Main Stage broadcast</small></span><span class="sp-activation__price">$15,000</span>
+            <span class="sp-activation__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="14" height="14" rx="2"/><path d="m17 10 4-2v8l-4-2z"/></svg>
+            </span>
+            <span class="sp-activation__body"><strong>Livestream &amp; Media</strong><small>Every Main Stage broadcast</small></span>
+            <span class="sp-activation__price">$15,000</span>
           </a>
           <a class="sp-activation sp-select" href="#inquire" data-interest="Featured Partnership Only" data-item="Bitcoin Fundamentals — $12,500">
-            <span class="sp-activation__icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M4 4h7a3 3 0 0 1 3 3v13a3 3 0 0 0-3-3H4z"/><path d="M20 4h-3a3 3 0 0 0-3 3v13a3 3 0 0 1 3-3h3z"/></svg></span>
-            <span class="sp-activation__body"><strong>Bitcoin Fundamentals</strong><small>Thursday newcomer session</small></span><span class="sp-activation__price">$12,500</span>
+            <span class="sp-activation__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h7a3 3 0 0 1 3 3v13a3 3 0 0 0-3-3H4z"/><path d="M20 4h-3a3 3 0 0 0-3 3v13a3 3 0 0 1 3-3h3z"/></svg>
+            </span>
+            <span class="sp-activation__body"><strong>Bitcoin Fundamentals</strong><small>Thursday newcomer session</small></span>
+            <span class="sp-activation__price">$12,500</span>
           </a>
           <a class="sp-activation sp-select" href="#inquire" data-interest="Featured Partnership Only" data-item="Workshop Track — $10,000">
-            <span class="sp-activation__icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M4 5h16v11H4z"/><path d="M8 20h8M12 16v4"/><path d="M8 9h8M8 12h5"/></svg></span>
-            <span class="sp-activation__body"><strong>Workshop Track</strong><small>2 tracks available</small></span><span class="sp-activation__price">$10,000</span>
+            <span class="sp-activation__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H4z"/><path d="M8 20h8"/><path d="M12 16v4"/><path d="M8 9h8"/><path d="M8 12h5"/></svg>
+            </span>
+            <span class="sp-activation__body"><strong>Workshop Track</strong><small>2 tracks available</small></span>
+            <span class="sp-activation__price">$10,000</span>
           </a>
         </div>
       </section>
 
+      <!-- VIP & Hospitality -->
       <section class="sp-activation-group" aria-labelledby="activation-vip">
         <h3 id="activation-vip">VIP &amp; Hospitality</h3>
         <div class="sp-activation-grid">
           <a class="sp-activation sp-select" href="#inquire" data-interest="Featured Partnership Only" data-item="Summit After Party — $25,000">
-            <span class="sp-activation__icon sp-activation__icon--gold"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M9 18V5l10-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="16" cy="16" r="3"/></svg></span>
-            <span class="sp-activation__body"><strong>Summit After Party</strong><small>Saturday closing night</small></span><span class="sp-activation__price">$25,000</span>
+            <span class="sp-activation__icon sp-activation__icon--gold">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l10-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="16" cy="16" r="3"/></svg>
+            </span>
+            <span class="sp-activation__body"><strong>Summit After Party</strong><small>Saturday closing night</small></span>
+            <span class="sp-activation__price">$25,000</span>
           </a>
           <a class="sp-activation sp-select" href="#inquire" data-interest="Featured Partnership Only" data-item="VIP Oceanfront Soiree — $25,000">
-            <span class="sp-activation__icon sp-activation__icon--gold"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M3 15c2-2 4-2 6 0s4 2 6 0 4-2 6 0"/><path d="M3 19c2-2 4-2 6 0s4 2 6 0 4-2 6 0"/><circle cx="12" cy="7" r="3"/></svg></span>
-            <span class="sp-activation__body"><strong>VIP Oceanfront Soiree</strong><small>Friday evening</small></span><span class="sp-activation__price">$25,000</span>
+            <span class="sp-activation__icon sp-activation__icon--gold">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 15c2-2 4-2 6 0s4 2 6 0 4-2 6 0"/><path d="M3 19c2-2 4-2 6 0s4 2 6 0 4-2 6 0"/><circle cx="12" cy="7" r="3"/></svg>
+            </span>
+            <span class="sp-activation__body"><strong>VIP Oceanfront Soiree</strong><small>Friday evening</small></span>
+            <span class="sp-activation__price">$25,000</span>
           </a>
           <a class="sp-activation sp-select" href="#inquire" data-interest="Featured Partnership Only" data-item="VIP Welcome Reception — $20,000">
-            <span class="sp-activation__icon sp-activation__icon--gold"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M7 3h10l-1 7a4 4 0 0 1-8 0L7 3Z"/><path d="M12 14v7M8 21h8"/></svg></span>
-            <span class="sp-activation__body"><strong>VIP Welcome Reception</strong><small>Thursday evening</small></span><span class="sp-activation__price">$20,000</span>
+            <span class="sp-activation__icon sp-activation__icon--gold">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h10l-1 7a4 4 0 0 1-8 0L7 3Z"/><path d="M12 14v7"/><path d="M8 21h8"/></svg>
+            </span>
+            <span class="sp-activation__body"><strong>VIP Welcome Reception</strong><small>Thursday evening</small></span>
+            <span class="sp-activation__price">$20,000</span>
           </a>
           <a class="sp-activation sp-select" href="#inquire" data-interest="Featured Partnership Only" data-item="Satoshi Farewell Brunch — $12,500">
-            <span class="sp-activation__icon sp-activation__icon--gold"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M4 9h12v5a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5V9Z"/><path d="M16 11h2a3 3 0 0 1 0 6h-3M7 4v2M11 4v2"/></svg></span>
-            <span class="sp-activation__body"><strong>Satoshi Farewell Brunch</strong><small>Sunday morning</small></span><span class="sp-activation__price">$12,500</span>
+            <span class="sp-activation__icon sp-activation__icon--gold">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9h12v5a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5V9Z"/><path d="M16 11h2a3 3 0 0 1 0 6h-3"/><path d="M7 4v2"/><path d="M11 4v2"/></svg>
+            </span>
+            <span class="sp-activation__body"><strong>Satoshi Farewell Brunch</strong><small>Sunday morning</small></span>
+            <span class="sp-activation__price">$12,500</span>
           </a>
         </div>
       </section>
 
+      <!-- Brand & Utility -->
       <section class="sp-activation-group" aria-labelledby="activation-brand">
         <h3 id="activation-brand">Brand &amp; Utility</h3>
         <div class="sp-activation-grid">
           <a class="sp-activation sp-select" href="#inquire" data-interest="Featured Partnership Only" data-item="Official Lanyard — $20,000">
-            <span class="sp-activation__icon sp-activation__icon--silver"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M8 3v5l4 3 4-3V3"/><rect x="7" y="11" width="10" height="10" rx="2"/><path d="M10 15h4M10 18h3"/></svg></span>
-            <span class="sp-activation__body"><strong>Official Lanyard</strong><small>Every attendee, both days</small></span><span class="sp-activation__price">$20,000</span>
+            <span class="sp-activation__icon sp-activation__icon--silver">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3v5l4 3 4-3V3"/><rect x="7" y="11" width="10" height="10" rx="2"/><path d="M10 15h4"/><path d="M10 18h3"/></svg>
+            </span>
+            <span class="sp-activation__body"><strong>Official Lanyard</strong><small>Every attendee, both days</small></span>
+            <span class="sp-activation__price">$20,000</span>
           </a>
           <a class="sp-activation sp-select" href="#inquire" data-interest="Featured Partnership Only" data-item="Sovereign Lounge — $15,000">
-            <span class="sp-activation__icon sp-activation__icon--silver"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M5 11V8a3 3 0 0 1 3-3h8a3 3 0 0 1 3 3v3"/><path d="M4 11h16v7H4zM7 18v2M17 18v2"/></svg></span>
-            <span class="sp-activation__body"><strong>Sovereign Lounge</strong><small>High-dwell expo space</small></span><span class="sp-activation__price">$15,000</span>
+            <span class="sp-activation__icon sp-activation__icon--silver">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 11V8a3 3 0 0 1 3-3h8a3 3 0 0 1 3 3v3"/><path d="M4 11h16v7H4z"/><path d="M7 18v2"/><path d="M17 18v2"/></svg>
+            </span>
+            <span class="sp-activation__body"><strong>Sovereign Lounge</strong><small>High-dwell expo space</small></span>
+            <span class="sp-activation__price">$15,000</span>
           </a>
           <a class="sp-activation sp-select" href="#inquire" data-interest="Featured Partnership Only" data-item="Official Tote Bag — $12,500">
-            <span class="sp-activation__icon sp-activation__icon--silver"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M5 8h14l-1 13H6L5 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg></span>
-            <span class="sp-activation__body"><strong>Official Tote Bag</strong><small>Carried throughout the event</small></span><span class="sp-activation__price">$12,500</span>
+            <span class="sp-activation__icon sp-activation__icon--silver">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 8h14l-1 13H6L5 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+            </span>
+            <span class="sp-activation__body"><strong>Official Tote Bag</strong><small>Carried throughout the event</small></span>
+            <span class="sp-activation__price">$12,500</span>
           </a>
           <a class="sp-activation sp-select" href="#inquire" data-interest="Featured Partnership Only" data-item="Official WiFi — $10,000">
-            <span class="sp-activation__icon sp-activation__icon--silver"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M5 12.5a10 10 0 0 1 14 0M8.5 16a5 5 0 0 1 7 0M12 20h.01"/></svg></span>
-            <span class="sp-activation__body"><strong>Official WiFi</strong><small>Network name + splash page</small></span><span class="sp-activation__price">$10,000</span>
+            <span class="sp-activation__icon sp-activation__icon--silver">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5a10 10 0 0 1 14 0"/><path d="M8.5 16a5 5 0 0 1 7 0"/><path d="M12 20h.01"/></svg>
+            </span>
+            <span class="sp-activation__body"><strong>Official WiFi</strong><small>Network name + splash page</small></span>
+            <span class="sp-activation__price">$10,000</span>
           </a>
           <a class="sp-activation sp-select" href="#inquire" data-interest="Featured Partnership Only" data-item="Coffee &amp; Water Stations — $7,500">
-            <span class="sp-activation__icon sp-activation__icon--silver"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M4 10h12v5a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5v-5Z"/><path d="M16 12h2a3 3 0 0 1 0 6h-3M8 4v3M12 4v3"/></svg></span>
-            <span class="sp-activation__body"><strong>Coffee &amp; Water Stations</strong><small>Daily attendee ritual</small></span><span class="sp-activation__price">$7,500</span>
+            <span class="sp-activation__icon sp-activation__icon--silver">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10h12v5a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5v-5Z"/><path d="M16 12h2a3 3 0 0 1 0 6h-3"/><path d="M8 4v3"/><path d="M12 4v3"/></svg>
+            </span>
+            <span class="sp-activation__body"><strong>Coffee &amp; Water Stations</strong><small>Daily attendee ritual</small></span>
+            <span class="sp-activation__price">$7,500</span>
           </a>
           <a class="sp-activation sp-select" href="#inquire" data-interest="Featured Partnership Only" data-item="Charging Lounge — $7,500">
-            <span class="sp-activation__icon sp-activation__icon--silver"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><rect x="5" y="4" width="14" height="16" rx="2"/><path d="M9 4V2M15 4V2M13 8l-3 5h3l-2 4 5-6h-3z"/></svg></span>
-            <span class="sp-activation__body"><strong>Charging Lounge</strong><small>Branded recharge zone</small></span><span class="sp-activation__price">$7,500</span>
+            <span class="sp-activation__icon sp-activation__icon--silver">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="4" width="14" height="16" rx="2"/><path d="M9 4V2"/><path d="M15 4V2"/><path d="M13 8l-3 5h3l-2 4 5-6h-3z"/></svg>
+            </span>
+            <span class="sp-activation__body"><strong>Charging Lounge</strong><small>Branded recharge zone</small></span>
+            <span class="sp-activation__price">$7,500</span>
           </a>
           <a class="sp-activation sp-select" href="#inquire" data-interest="Featured Partnership Only" data-item="Promo Insert — $3,000">
-            <span class="sp-activation__icon sp-activation__icon--silver"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M6 3h9l3 3v15H6z"/><path d="M14 3v4h4M9 11h6M9 15h6"/></svg></span>
-            <span class="sp-activation__body"><strong>Promo Insert</strong><small>Confirmed sponsors only</small></span><span class="sp-activation__price">$3,000</span>
+            <span class="sp-activation__icon sp-activation__icon--silver">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h9l3 3v15H6z"/><path d="M14 3v4h4"/><path d="M9 11h6"/><path d="M9 15h6"/></svg>
+            </span>
+            <span class="sp-activation__body"><strong>Promo Insert</strong><small>Confirmed sponsors only</small></span>
+            <span class="sp-activation__price">$3,000</span>
           </a>
         </div>
       </section>
     </div>
 
+    <!-- Open Source -->
     <div class="sp-open-source">
-      <span class="sp-open-source__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M8 12a4 4 0 0 1 4-4h4a4 4 0 0 1 0 8h-4"/><path d="M16 12a4 4 0 0 1-4 4H8a4 4 0 0 1 0-8h4"/></svg></span>
-      <div><strong>Open Source Area — by application</strong><span>Subsidized space for open-source projects, nonprofits, community organizations, and small builders. Tell us what you are building.</span></div>
+      <span class="sp-open-source__icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 12a4 4 0 0 1 4-4h4a4 4 0 0 1 0 8h-4"/><path d="M16 12a4 4 0 0 1-4 4H8a4 4 0 0 1 0-8h4"/></svg>
+      </span>
+      <div>
+        <strong>Open Source Area — by application</strong>
+        <span>Subsidized space for open-source projects, nonprofits, community organizations, and small builders. Tell us what you are building.</span>
+      </div>
       <a class="sp-btn sp-btn--ghost sp-select" href="#inquire" data-interest="Open Source Area (by application)" data-item="Open Source Area — application">Apply <span aria-hidden="true">→</span></a>
     </div>
   </div>
 </section>
 
+<!-- Inquiry -->
 <section class="sp-inquiry" id="inquire">
   <div class="sp-container">
     <div class="sp-inquiry__panel">
       <div class="sp-inquiry__intro">
-        <div><div class="sp-kicker">Start the Conversation</div><h2>Build the right presence.</h2><p>Tell us what you are considering. We’ll respond with current availability and a few times to talk.</p></div>
-        <div class="sp-inquiry__steps"><div class="sp-inquiry__step"><span>01</span>Current inventory</div><div class="sp-inquiry__step"><span>02</span>Best-fit package</div><div class="sp-inquiry__step"><span>03</span>Short intro call</div></div>
+        <div>
+          <div class="sp-kicker">Start the Conversation</div>
+          <h2>Build the right presence.</h2>
+          <p>Tell us what you are considering. We’ll respond with current availability and a few times to talk.</p>
+        </div>
+        <div class="sp-inquiry__steps">
+          <div class="sp-inquiry__step"><span>01</span>Current inventory</div>
+          <div class="sp-inquiry__step"><span>02</span>Best-fit package</div>
+          <div class="sp-inquiry__step"><span>03</span>Short intro call</div>
+        </div>
       </div>
 
       <form class="sp-form" action="https://formsubmit.co/info@thesovereignsummit.com" method="POST">
@@ -641,16 +741,79 @@
         <input type="hidden" name="_next" value="https://thesovereignsummit.com/sponsorships?sent=1#inquire">
         <input type="hidden" name="selected_items" id="selectedItemsInput" value="">
         <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
-        <div class="sp-selected" id="inqSelections" hidden><div class="sp-selected__label">Selected opportunities</div><div class="sp-selected__chips" id="inqSelectionChips"></div></div>
-        <div class="sp-form__row"><label class="sp-field"><span>Name</span><input type="text" name="name" required autocomplete="name"></label><label class="sp-field"><span>Work Email</span><input type="email" name="email" required autocomplete="email"></label></div>
-        <div class="sp-form__row"><label class="sp-field"><span>Company</span><input type="text" name="company" required autocomplete="organization"></label><label class="sp-field"><span>Interested In</span><select name="interest" id="interestSelect" required><option value="" disabled selected>Select one</option><option>Title Sponsor</option><option>Gold Sponsor</option><option>Silver Sponsor</option><option>Featured Partnership Only</option><option>Open Source Area (by application)</option><option>Not sure yet</option></select></label></div>
-        <label class="sp-field"><span>Anything else?</span><textarea name="message" rows="4" placeholder="Your goals, preferred opportunity, or questions."></textarea></label>
-        <div class="sp-form__foot"><p class="sp-form__note">We’ll reply within two business days. Nothing is committed until the final scope is agreed.</p><button type="submit" class="sp-btn sp-btn--primary">Request Availability <span aria-hidden="true">→</span></button></div>
+
+        <div class="sp-selected" id="inqSelections" hidden>
+          <div class="sp-selected__label">Selected opportunities</div>
+          <div class="sp-selected__chips" id="inqSelectionChips"></div>
+        </div>
+
+        <div class="sp-form__row">
+          <label class="sp-field">
+            <span>Name</span>
+            <input type="text" name="name" required autocomplete="name">
+          </label>
+          <label class="sp-field">
+            <span>Work Email</span>
+            <input type="email" name="email" required autocomplete="email">
+          </label>
+        </div>
+
+        <div class="sp-form__row">
+          <label class="sp-field">
+            <span>Company</span>
+            <input type="text" name="company" required autocomplete="organization">
+          </label>
+          <label class="sp-field">
+            <span>Interested In</span>
+            <select name="interest" id="interestSelect" required>
+              <option value="" disabled selected>Select one</option>
+              <option>Title Sponsor</option>
+              <option>Gold Sponsor</option>
+              <option>Silver Sponsor</option>
+              <option>Featured Partnership Only</option>
+              <option>Open Source Area (by application)</option>
+              <option>Not sure yet</option>
+            </select>
+          </label>
+        </div>
+
+        <label class="sp-field">
+          <span>Anything else?</span>
+          <textarea name="message" rows="4" placeholder="Your goals, preferred opportunity, or questions."></textarea>
+        </label>
+
+        <div class="sp-form__foot">
+          <p class="sp-form__note">We’ll reply within two business days. Nothing is committed until the final scope is agreed.</p>
+          <button type="submit" class="sp-btn sp-btn--primary">Request Availability <span aria-hidden="true">→</span></button>
+        </div>
+
         <div class="sp-form__thanks" id="inqThanks" hidden aria-live="polite">Thank you. We received your inquiry and will get back to you shortly.</div>
       </form>
     </div>
   </div>
 </section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__top footer__top--3col" id="subscribe">
+      <div class="footer__col footer__news">
+        <img class="footer__brand-mark footer__brand-mark--nav" src="images/nav-bar-header.png?v=1" alt="The Sovereign Summit" loading="lazy" decoding="async">
+        <div class="footer__col-label">Newsletter</div>
+        <p class="footer__news-copy">Speaker announcements, program updates, and more.<br>Unsubscribe any time you like.</p>
+        <form class="news__form">
+        <input class="news__input" type="email" placeholder="your@email.com" required>
+        <button type="submit" class="news__submit">Subscribe →</button>
+      </form>
+      </div>
+      <div class="footer__col"><div class="footer__col-label">Event</div><ul><li><a href="/speakers">Speakers</a></li><li><a href="/agenda">Agenda</a></li><li><a href="/side-events">Side Events</a></li><li><a href="/hotel">Hotel</a></li><li><a href="/convention-center">Convention Center</a></li><li><a href="/faq">FAQ</a></li><li><a href="/leadership">Leadership</a></li></ul></div>
+      <div class="footer__col"><div class="footer__col-label">Engage</div><ul><li><a href="/press">Press</a></li><li><a href="/vip">VIP</a></li><li><a href="/sponsors">Sponsors</a></li><li><a href="/partners">Partners</a></li><li><a href="mailto:info@thesovereignsummit.com">Email Us</a></li><li><a class="footer__x" href="https://x.com/sovereignmiami" target="_blank" rel="noopener" aria-label="The Sovereign Summit on X"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a></li></ul></div>
+    </div>
+    <div class="footer__bottom">
+      <div>© 2027 The Sovereign Summit · Miami Beach, FL</div>
+    </div>
+  </div>
+</footer>
+</main>
 
 <script>
 (function(){
@@ -687,32 +850,8 @@
 })();
 </script>
 
-<footer class="footer">
-  <div class="container">
-    <div class="footer__top footer__top--3col" id="subscribe">
-      <div class="footer__col footer__news">
-        <img class="footer__brand-mark footer__brand-mark--nav" src="images/nav-bar-header.png?v=1" alt="The Sovereign Summit" loading="lazy" decoding="async">
-        <div class="footer__col-label">Newsletter</div>
-        <p class="footer__news-copy">Speaker announcements, program updates, and more.<br>Unsubscribe any time you like.</p>
-        <form class="news__form">
-        <input class="news__input" type="email" placeholder="your@email.com" required>
-        <button type="submit" class="news__submit">Subscribe →</button>
-      </form>
-      </div>
-      <div class="footer__col"><div class="footer__col-label">Event</div><ul><li><a href="/speakers">Speakers</a></li><li><a href="/agenda">Agenda</a></li><li><a href="/side-events">Side Events</a></li><li><a href="/hotel">Hotel</a></li><li><a href="/convention-center">Convention Center</a></li><li><a href="/faq">FAQ</a></li><li><a href="/leadership">Leadership</a></li></ul></div>
-      <div class="footer__col"><div class="footer__col-label">Engage</div><ul><li><a href="/press">Press</a></li><li><a href="/vip">VIP</a></li><li><a href="/sponsors">Sponsors</a></li><li><a href="/partners">Partners</a></li><li><a href="mailto:info@thesovereignsummit.com">Email Us</a></li><li><a class="footer__x" href="https://x.com/sovereignmiami" target="_blank" rel="noopener" aria-label="The Sovereign Summit on X"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a></li></ul></div>
-    </div>
-    <div class="footer__bottom">
-      <div>© 2027 The Sovereign Summit · Miami Beach, FL</div>
-    </div>
-  </div>
-</footer>
-</main>
-
-
 <script>
 (function(){
-  // Live header height for scroll offsets
   var header = document.getElementById('siteHeader');
   var setH = function(){
     if(!header) return;
@@ -721,7 +860,6 @@
   };
   setH();
   window.addEventListener('resize', setH);
-  // Mobile menu
   var navToggle = document.getElementById('navToggle');
   var mobileMenu = document.getElementById('mobileMenu');
   if(navToggle && mobileMenu){
@@ -748,17 +886,6 @@
   }
 })();
 </script>
-<script>
-(function(){
-  document.querySelectorAll('.faq__item').forEach(function(item){
-    item.addEventListener('toggle', function(){
-      if (item.open) {
-        document.querySelectorAll('.faq__item').forEach(function(other){ if (other !== item) other.open = false; });
-      }
-    });
-  });
-})();
-</script>
 
 <script>
 (function(){
@@ -768,7 +895,7 @@
   explore.addEventListener('click',function(e){
     e.preventDefault();
     var header=document.getElementById('siteHeader');
-    var offset=(header?header.getBoundingClientRect().height:0)+12;
+    var offset=(header?header.getBoundingClientRect().height:0)+16;
     var top=grid.getBoundingClientRect().top+window.pageYOffset-offset;
     window.scrollTo({top:top,behavior:'smooth'});
     if(history.replaceState)history.replaceState(null,'','#package-grid');
@@ -800,10 +927,10 @@
       var btn=f.querySelector('.news__submit');
       var em=inp && inp.value.trim();
       if(!em) return;
-      if(btn){ btn.disabled=true; btn.textContent='One sec\u2026'; }
+      if(btn){ btn.disabled=true; btn.textContent='One sec…'; }
       sendEmail(em).then(function(){
         if(inp) inp.value='';
-        if(btn) btn.textContent='Subscribed \u2713';
+        if(btn) btn.textContent='Subscribed ✓';
         try{ localStorage.setItem(DONE,'1'); }catch(err){}
       }).catch(function(){
         if(btn){ btn.disabled=false; btn.textContent='Try again'; }
@@ -812,5 +939,6 @@
   });
 })();
 </script>
+
 </body>
 </html>
