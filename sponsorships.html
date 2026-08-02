@@ -835,6 +835,36 @@ body{overflow-x:clip}
   #content .sp-fact{grid-template-columns:minmax(0,1fr)!important;justify-items:center;justify-content:stretch}
   #content .sp-fact > *{grid-column:1!important;justify-self:center;max-width:100%}
 }
+
+/* ---- Open Source tile: tighter copy, fills the row ---- */
+#content .sp-open-source{
+  display:grid!important;
+  grid-template-columns:auto minmax(0,1fr) auto;
+  align-items:center;
+  gap:1.4rem;
+  margin-top:1.6rem;
+  padding:1.5rem 1.6rem;
+  border:1px solid rgba(255,105,65,.34);
+  border-radius:18px;
+  background:linear-gradient(180deg,rgba(255,105,65,.08),rgba(255,105,65,.02));
+}
+#content .sp-open-source__icon{width:52px;height:52px;flex:0 0 auto;
+  border-color:rgba(255,105,65,.42);background:rgba(255,105,65,.16)}
+#content .sp-open-source__icon svg{width:26px;height:26px}
+#content .sp-os-body{min-width:0}
+#content .sp-open-source strong{display:block;font-size:1.28rem;line-height:1.2}
+#content .sp-open-source .sp-os-body > span{display:block;margin-top:.35rem;max-width:none;
+  font-size:.92rem;line-height:1.5;color:var(--sp-muted)}
+#content .sp-os-tags{display:flex;flex-wrap:wrap;gap:.45rem;margin-top:.8rem}
+#content .sp-os-tags span{display:inline-flex;align-items:center;padding:.32rem .7rem;
+  border:1px solid rgba(255,105,65,.3);border-radius:999px;background:rgba(255,105,65,.09);
+  font-family:var(--fm);font-size:.62rem;font-weight:700;letter-spacing:.09em;
+  text-transform:uppercase;color:var(--sp-orange);white-space:nowrap}
+#content .sp-open-source .sp-btn{white-space:nowrap;min-width:150px;justify-content:center}
+@media(max-width:860px){
+  #content .sp-open-source{grid-template-columns:auto minmax(0,1fr);gap:.9rem;padding:1.15rem}
+  #content .sp-open-source .sp-btn{grid-column:1 / -1;width:100%;margin-top:.3rem}
+}
 </style>
 </head>
 <body>
@@ -1284,10 +1314,17 @@ body{overflow-x:clip}
       <span class="sp-open-source__icon" aria-hidden="true">
         <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 12a4 4 0 0 1 4-4h4a4 4 0 0 1 0 8h-4"/><path d="M16 12a4 4 0 0 1-4 4H8a4 4 0 0 1 0-8h4"/></svg>
       </span>
-      <div>
-        <strong>Open Source Area — by application</strong>
-        <span>For open-source projects, nonprofits, community organizations, and small builders. Accepted applicants get a compact kiosk, smaller than the paid booths, at the production company&rsquo;s price with nothing added by us.</span>
+      <div class="sp-os-body">
+        <strong>Open Source Area</strong>
+        <span>Compact kiosks for open-source projects, nonprofits, and small builders. Priced at our production partner&rsquo;s cost, with no markup from us.</span>
+        <div class="sp-os-tags">
+          <span>By application</span>
+          <span>Smaller than paid booths</span>
+          <span>No markup</span>
+        </div>
       </div>
+      <a class="sp-btn sp-btn--ghost sp-select" href="#inquire" data-interest="Open Source Area (by application)" data-item="Open Source Area &mdash; application">Apply <span aria-hidden="true">&rarr;</span></a>
+    </div>
       <a class="sp-btn sp-btn--ghost sp-select" href="#inquire" data-interest="Open Source Area (by application)" data-item="Open Source Area — application">Apply <span aria-hidden="true">→</span></a>
     </div>
   </div>
