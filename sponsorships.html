@@ -109,17 +109,30 @@
 <style>
 /* ===== Sponsorships page — simplified ===== */
 #content .spx-section{padding:clamp(2.5rem,5vw,4rem) 0}
-#content #tiers{padding-top:clamp(1.2rem,2.5vw,1.8rem)}
-#content .spx-section--hero{padding-top:clamp(.85rem,1.8vw,1.25rem);padding-bottom:clamp(1.35rem,2.8vw,2rem)}
-#content .spx-hero{max-width:1080px}
-#content .spx-eyebrow{font-family:var(--fm);font-size:.66rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin-bottom:.55rem}
-#content .spx-title{font-family:var(--fb);font-size:clamp(2.15rem,4.8vw,4.15rem);font-weight:900;line-height:.96;letter-spacing:-.035em;text-transform:uppercase;color:var(--dk-c);max-width:14ch}
-#content .spx-tagline{font-family:var(--fd);font-size:clamp(1.25rem,2.3vw,1.9rem);line-height:1.12;color:var(--accent);margin-top:.55rem}
-#content .spx-meta{font-family:var(--fm);font-size:clamp(.62rem,.9vw,.72rem);font-weight:700;letter-spacing:.11em;text-transform:uppercase;color:var(--dk-c72);margin-top:1rem;display:flex;flex-wrap:wrap;gap:.35rem .75rem}
-#content .spx-meta span{display:inline-flex;align-items:center;gap:.75rem}
-#content .spx-meta span:not(:last-child)::after{content:"◆";font-size:.42rem;color:var(--accent);opacity:.72}
-#content .spx-actions{display:flex;gap:.8rem;flex-wrap:wrap;margin-top:1.1rem}
-#content .spx-speakers{font-size:.85rem;line-height:1.45;color:var(--dk-c72);margin-top:.85rem}
+#content #tiers{padding-top:clamp(.8rem,1.8vw,1.35rem)}
+#content .spx-section--hero{padding-top:clamp(.45rem,1vw,.8rem);padding-bottom:clamp(.9rem,1.8vw,1.25rem)}
+#content .spx-hero-grid{display:grid;grid-template-columns:minmax(0,1.02fr) minmax(320px,.98fr);gap:1.4rem;align-items:center}
+#content .spx-copy{max-width:600px}
+#content .spx-eyebrow{font-family:var(--fm);font-size:.66rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin-bottom:.5rem}
+#content .spx-title{font-family:var(--fb);font-size:clamp(2.25rem,5.1vw,4.2rem);font-weight:900;line-height:.95;letter-spacing:-.04em;text-transform:uppercase;color:var(--dk-c);max-width:10ch}
+#content .spx-desc{font-size:1rem;line-height:1.45;color:var(--dk-c72);margin-top:.85rem;max-width:35ch}
+#content .spx-quick{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:.95rem}
+#content .spx-pill{display:inline-flex;align-items:center;justify-content:center;border:1px solid var(--dk-rule-str);border-radius:999px;padding:.5rem .8rem;font-family:var(--fm);font-size:.62rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--dk-c72);white-space:nowrap}
+#content .spx-actions{display:flex;gap:.8rem;flex-wrap:wrap;margin-top:1rem}
+#content .spx-hero-note{font-size:.82rem;line-height:1.45;color:var(--dk-c72);margin-top:.8rem}
+#content .spx-hero-visual{background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.02));border:1px solid var(--dk-rule);border-radius:18px;padding:1rem 1rem .9rem;box-shadow:inset 0 1px 0 rgba(255,255,255,.04)}
+#content .spx-mini-list{display:flex;flex-direction:column;gap:.7rem}
+#content .spx-mini{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:.85rem;padding:.9rem .95rem;border:1px solid var(--dk-rule);border-radius:14px;background:rgba(255,255,255,.02)}
+#content .spx-mini__shape{display:block;border-radius:10px;flex-shrink:0}
+#content .spx-mini__shape--title{width:42px;height:42px;background:var(--accent)}
+#content .spx-mini__shape--gold{width:56px;height:32px;border-radius:8px;background:#E8C46A}
+#content .spx-mini__shape--silver{width:34px;height:34px;background:#C6CED9}
+#content .spx-mini__label{font-family:var(--fd);font-size:1.15rem;line-height:1.05;color:var(--dk-c)}
+#content .spx-mini__sub{font-family:var(--fm);font-size:.6rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--dk-c72);margin-top:.25rem}
+#content .spx-mini__price{font-family:var(--fb);font-size:1.45rem;font-weight:900;line-height:1;color:var(--dk-c);letter-spacing:-.03em;white-space:nowrap}
+#content .spx-mini__price small{display:block;font-family:var(--fm);font-size:.56rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--dk-c72);margin-top:.25rem}
+#content .spx-mini-cap{display:flex;align-items:center;justify-content:space-between;gap:1rem;margin-top:.85rem;padding-top:.85rem;border-top:1px solid var(--dk-rule);font-family:var(--fm);font-size:.58rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--dk-c72)}
+#content .spx-speakers{font-size:.85rem;line-height:1.45;color:var(--dk-c72);margin-top:.75rem}
 #content .spx-speakers strong{color:var(--dk-c)}
 
 #content .spx-tiers{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;align-items:stretch}
@@ -168,29 +181,70 @@
 #content .spx-mobile-cta{display:none}
 
 @media(max-width:960px){
-  #content .spx-tiers,#content .spx-addon-grid{grid-template-columns:1fr}
+  #content .spx-hero-grid,#content .spx-tiers,#content .spx-addon-grid{grid-template-columns:1fr}
+  #content .spx-copy{max-width:none}
 }
 @media(max-width:700px){
+  #content .spx-title{max-width:8ch}
   #content .spx-actions .btn{width:100%;justify-content:center}
   #content .spx-open-source{align-items:flex-start;flex-direction:column}
   #content .spx-open-source .btn{width:100%;justify-content:center}
+  #content .spx-mini{grid-template-columns:auto 1fr}
+  #content .spx-mini__price{grid-column:2;justify-self:start}
+  #content .spx-mini-cap{flex-direction:column;align-items:flex-start}
   #content .spx-mobile-cta{display:block;position:fixed;left:1rem;right:1rem;bottom:calc(1rem + env(safe-area-inset-bottom));z-index:70;background:var(--accent);color:#001227;text-align:center;border-radius:999px;padding:.85rem 1rem;font-family:var(--fm);font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;box-shadow:0 8px 30px rgba(0,0,0,.35)}
 }
 </style>
 
 <section class="spx-section spx-section--hero" id="sponsorships">
   <div class="container">
-    <div class="spx-hero">
-      <div class="spx-eyebrow">Sponsorships</div>
-      <h1 class="spx-title">Put your brand in the room.</h1>
-      <p class="spx-tagline">Where AI, Freedom, Energy, and Bitcoin converge.</p>
-      <div class="spx-meta">
-        <span>1,000 attendees</span><span>200 VIP passes</span><span>29 expo footprints</span><span>Fontainebleau Miami Beach</span><span>February 5–6, 2027</span>
+    <div class="spx-hero-grid">
+      <div class="spx-copy">
+        <div class="spx-eyebrow">Sponsorships</div>
+        <h1 class="spx-title">Put your brand in the room.</h1>
+        <p class="spx-desc">Three sponsorship levels: <strong>2 Title</strong> at $100K, <strong>4 Gold</strong> at $50K, and <strong>23 Silver</strong> at $10K.</p>
+        <div class="spx-quick">
+          <span class="spx-pill">1,000 Attendees</span>
+          <span class="spx-pill">200 VIP Passes</span>
+          <span class="spx-pill">Fontainebleau · Feb 5–6</span>
+        </div>
+        <div class="spx-actions">
+          <a class="btn btn--accent" href="#inquire">Start a Conversation <span class="btn__arrow">→</span></a>
+        </div>
+        <p class="spx-hero-note">Programming, hospitality, and media partnerships are also available.</p>
       </div>
-      <div class="spx-actions">
-        <a class="btn btn--accent" href="#inquire">Start a Conversation <span class="btn__arrow">→</span></a>
+      <div class="spx-hero-visual" aria-label="Sponsorship levels overview">
+        <div class="spx-mini-list">
+          <div class="spx-mini">
+            <span class="spx-mini__shape spx-mini__shape--title" aria-hidden="true"></span>
+            <div>
+              <div class="spx-mini__label">Title</div>
+              <div class="spx-mini__sub">2 Available · 20×20 island</div>
+            </div>
+            <div class="spx-mini__price">$100K<small>Founding Level</small></div>
+          </div>
+          <div class="spx-mini">
+            <span class="spx-mini__shape spx-mini__shape--gold" aria-hidden="true"></span>
+            <div>
+              <div class="spx-mini__label">Gold</div>
+              <div class="spx-mini__sub">4 Available · 10×20 footprint</div>
+            </div>
+            <div class="spx-mini__price">$50K<small>Premium Booth</small></div>
+          </div>
+          <div class="spx-mini">
+            <span class="spx-mini__shape spx-mini__shape--silver" aria-hidden="true"></span>
+            <div>
+              <div class="spx-mini__label">Silver</div>
+              <div class="spx-mini__sub">23 Available · 10×10 footprint</div>
+            </div>
+            <div class="spx-mini__price">$10K<small>Turnkey Booth</small></div>
+          </div>
+        </div>
+        <div class="spx-mini-cap">
+          <span>29 Total Expo Footprints</span>
+          <span>Main Stage · VIP · Expo Visibility</span>
+        </div>
       </div>
-      <p class="spx-speakers"><strong>Confirmed:</strong> Michael Saylor · Jeff Booth · Natalie Brunell · BTC Sessions · Sam Callahan · more to be announced.</p>
     </div>
   </div>
 </section>
@@ -201,6 +255,7 @@
       <div class="sec-hd__num">Sponsorship Levels</div>
       <h2 class="section-title sec-hd__title">Three levels. <em>Limited by the physical floor plan.</em></h2>
     </header>
+    <p class="spx-speakers"><strong>Confirmed speakers include:</strong> Michael Saylor · Jeff Booth · Natalie Brunell · BTC Sessions · Sam Callahan · more to be announced.</p>
     <div class="spx-tiers">
       <article class="spx-card spx-card--title">
         <div class="spx-card__avail">2 Available</div>
