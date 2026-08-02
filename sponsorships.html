@@ -821,6 +821,13 @@ body{overflow-x:clip}
 #content .sp-package__emblem--silver{width:64px;height:72px}
 @media(max-width:1160px){#content .sp-package__emblem{width:58px;height:65px}}
 @media(max-width:960px){#content .sp-package__emblem{width:54px;height:61px}}
+
+/* Labels are nowrap (to guarantee exactly two lines), so the type must scale
+   with the column or the longest token overflows into the next cell. */
+@media(min-width:861px){
+  #content .sp-fact strong{font-size:clamp(.76rem,1.02vw,.93rem)!important}
+  #content .sp-fact > span{font-size:clamp(.68rem,.86vw,.8rem)!important}
+}
 </style>
 </head>
 <body>
@@ -976,7 +983,7 @@ body{overflow-x:clip}
         <div class="sp-package__facts">
           <div class="sp-fact">
             <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 18V7l8-4 8 4v11"/><path d="M8 21v-8h8v8"/><path d="M2 21h20"/></svg>
-            <strong>2 Premium<br>Stage&nbsp;Sessions</strong>
+            <strong>2 Premium<br>Sessions</strong>
             <span>Main&nbsp;Stage<br>+ VIP&nbsp;Stage</span>
           </div>
           <div class="sp-fact">
@@ -1037,7 +1044,7 @@ body{overflow-x:clip}
         <div class="sp-package__facts">
           <div class="sp-fact">
             <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 18V7l8-4 8 4v11"/><path d="M8 21v-8h8v8"/><path d="M2 21h20"/></svg>
-            <strong>2 Standard<br>Stage&nbsp;Sessions</strong>
+            <strong>2 Standard<br>Sessions</strong>
             <span>Main&nbsp;Stage<br>+ VIP&nbsp;Stage</span>
           </div>
           <div class="sp-fact">
