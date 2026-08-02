@@ -81,6 +81,79 @@
 @media(max-width:960px){#content .spx-hero-top{grid-template-columns:1fr}}
 @media(max-width:700px){#content .spx-context{grid-template-columns:1fr}#content .spx-level-card__top{align-items:flex-end}#content .spx-level-card__price{font-size:1.6rem}}
 
+
+/* ===== ultra-minimal sponsorship redesign ===== */
+#content .s10-hero{padding-top:clamp(.75rem,1.4vw,1rem);padding-bottom:clamp(1rem,2vw,1.5rem)}
+#content .s10-hero__in{display:grid;grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr);gap:1rem;align-items:start}
+#content .s10-kicker{font-family:var(--fm);font-size:.66rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);margin-bottom:.55rem}
+#content .s10-title{font-family:var(--fb);font-size:clamp(2.15rem,4.8vw,4.4rem);font-weight:900;line-height:.94;letter-spacing:-.04em;text-transform:uppercase;color:var(--dk-c);max-width:7ch}
+#content .s10-sub{margin-top:.85rem;font-size:1rem;line-height:1.45;color:var(--dk-c72);max-width:32ch}
+#content .s10-pills{display:flex;flex-wrap:wrap;gap:.55rem;margin-top:1rem}
+#content .s10-pill{display:inline-flex;align-items:center;justify-content:center;padding:.5rem .78rem;border:1px solid var(--dk-rule);border-radius:999px;font-family:var(--fm);font-size:.6rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--dk-c72);white-space:nowrap}
+#content .s10-actions{display:flex;gap:.75rem;flex-wrap:wrap;margin-top:1rem}
+#content .s10-actions .btn{min-width:0}
+#content .s10-actions .btn--ghost{border-color:var(--dk-rule-str);color:var(--dk-c)}
+#content .s10-actions .btn--ghost::before{background:var(--accent)}
+#content .s10-actions .btn--ghost:hover{color:#001227;border-color:var(--accent)}
+#content .s10-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.85rem}
+#content .s10-card{display:flex;flex-direction:column;gap:.6rem;padding:1rem;border:1px solid var(--dk-rule);border-radius:18px;background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.02));box-shadow:inset 0 1px 0 rgba(255,255,255,.03);transition:transform .18s ease,border-color .18s ease,background .18s ease}
+#content .s10-card:hover{transform:translateY(-2px);background:rgba(255,255,255,.04)}
+#content .s10-card--title{border-color:var(--accent)}
+#content .s10-card--gold{border-color:rgba(232,196,106,.45)}
+#content .s10-card--silver{border-color:rgba(198,206,217,.35)}
+#content .s10-card__top{display:flex;align-items:flex-start;justify-content:space-between;gap:.7rem}
+#content .s10-chip{width:38px;height:38px;border-radius:10px;flex-shrink:0}
+#content .s10-chip--title{background:var(--accent)}
+#content .s10-chip--gold{background:#E8C46A;width:48px;height:28px;border-radius:8px;margin-top:.3rem}
+#content .s10-chip--silver{background:#C6CED9;width:30px;height:30px;border-radius:8px;margin-top:.1rem}
+#content .s10-name{font-family:var(--fd);font-size:1.25rem;line-height:1.05;color:var(--dk-c)}
+#content .s10-meta{font-family:var(--fm);font-size:.56rem;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--dk-c72);margin-top:.25rem}
+#content .s10-price{font-family:var(--fb);font-size:1.85rem;font-weight:900;line-height:1;color:var(--dk-c);letter-spacing:-.03em;white-space:nowrap}
+#content .s10-card__rule{height:1px;background:var(--dk-rule)}
+#content .s10-list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:.4rem;flex:1}
+#content .s10-list li{display:flex;align-items:flex-start;gap:.55rem;font-size:.83rem;line-height:1.38;color:var(--dk-c72)}
+#content .s10-dot{width:7px;height:7px;border-radius:999px;background:var(--accent);margin-top:.43rem;flex-shrink:0}
+#content .s10-card--gold .s10-dot{background:#E8C46A}
+#content .s10-card--silver .s10-dot{background:#C6CED9}
+#content .s10-link{display:inline-flex;align-items:center;gap:.45rem;margin-top:.1rem;font-family:var(--fm);font-size:.64rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
+#content .s10-card--gold .s10-link{color:#E8C46A}
+#content .s10-card--silver .s10-link{color:#C6CED9}
+#content .s10-section{padding-top:1.2rem;padding-bottom:1.2rem}
+#content .s10-head{display:flex;align-items:flex-end;justify-content:space-between;gap:1rem;margin-bottom:1rem}
+#content .s10-head__title{font-family:var(--fb);font-size:clamp(1.9rem,3.8vw,3.1rem);font-weight:900;line-height:.96;letter-spacing:-.03em;text-transform:uppercase;color:var(--dk-c)}
+#content .s10-head__sub{font-size:.86rem;line-height:1.4;color:var(--dk-c72);max-width:30ch}
+#content .s10-compare{display:grid;grid-template-columns:1.05fr repeat(3,1fr);border:1px solid var(--dk-rule);border-radius:18px;overflow:hidden;background:rgba(255,255,255,.02)}
+#content .s10-compare__cell{padding:.95rem 1rem;border-right:1px solid var(--dk-rule);border-bottom:1px solid var(--dk-rule);font-size:.84rem;line-height:1.35;color:var(--dk-c72)}
+#content .s10-compare__cell:nth-child(4n){border-right:none}
+#content .s10-compare__head{background:rgba(255,255,255,.03);font-family:var(--fb);font-size:1.05rem;font-weight:800;color:var(--dk-c)}
+#content .s10-compare__head small{display:block;font-family:var(--fm);font-size:.54rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--dk-c72);margin-top:.28rem}
+#content .s10-compare__label{font-family:var(--fm);font-size:.58rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);background:rgba(255,255,255,.03)}
+#content .s10-compare__cta{padding:.75rem 1rem;background:rgba(255,255,255,.03)}
+#content .s10-compare__cta .btn{width:100%;justify-content:center;border:none}
+#content .s10-compare__cta--title .btn{background:var(--accent);color:#001227}
+#content .s10-compare__cta--gold .btn{background:#E8C46A;color:#001227}
+#content .s10-compare__cta--silver .btn{background:#C6CED9;color:#001227}
+#content .s10-note{margin-top:.8rem;font-size:.76rem;line-height:1.45;color:var(--dk-c72)}
+#content .s10-partners{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+#content .s10-panel{padding:1rem 1rem .9rem;border:1px solid var(--dk-rule);border-radius:18px;background:rgba(255,255,255,.02)}
+#content .s10-panel__head{display:flex;align-items:center;gap:.7rem;margin-bottom:.65rem}
+#content .s10-icon{width:34px;height:34px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-family:var(--fm);font-size:.72rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#001227;background:var(--accent)}
+#content .s10-icon--vip{background:#E8C46A}
+#content .s10-icon--brand{background:#C6CED9}
+#content .s10-panel h3{font-family:var(--fd);font-size:1.2rem;line-height:1.05;color:var(--dk-c);font-weight:400}
+#content .s10-rows{list-style:none;margin:0;padding:0}
+#content .s10-rows li{border-top:1px solid var(--dk-rule)}
+#content .s10-rows a{display:grid;grid-template-columns:1fr auto;gap:.6rem;align-items:center;padding:.65rem 0;color:var(--dk-c72);transition:color .2s}
+#content .s10-rows a:hover{color:var(--dk-c)}
+#content .s10-rows strong{font-size:.84rem;line-height:1.28;font-weight:600}
+#content .s10-rows span{font-family:var(--fm);font-size:.62rem;font-weight:700;letter-spacing:.04em;color:var(--accent);white-space:nowrap}
+#content .s10-open{margin-top:1rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1rem;border:1px dashed var(--dk-rule-str);border-radius:18px}
+#content .s10-open strong{display:block;font-family:var(--fd);font-size:1.15rem;color:var(--dk-c);font-weight:400}
+#content .s10-open small{display:block;font-size:.8rem;line-height:1.4;color:var(--dk-c72);margin-top:.18rem}
+@media(max-width:1050px){#content .s10-hero__in{grid-template-columns:1fr}#content .s10-grid,#content .s10-partners{grid-template-columns:1fr}#content .s10-title{max-width:8ch}}
+@media(max-width:900px){#content .s10-compare{grid-template-columns:.8fr repeat(3,1fr)}#content .s10-head{align-items:flex-start;flex-direction:column}}
+@media(max-width:700px){#content .s10-actions .btn{width:100%;justify-content:center}#content .s10-pills{gap:.45rem}#content .s10-pill{font-size:.55rem;padding:.45rem .65rem}#content .s10-compare{display:block;border:none;background:transparent}#content .s10-compare__cell{display:grid;grid-template-columns:110px 1fr 1fr 1fr;border-right:none;padding:.7rem .85rem}#content .s10-compare__head{display:none}#content .s10-compare__label{padding:.8rem .85rem;border:1px solid var(--dk-rule);border-bottom:none;border-radius:14px 14px 0 0;margin-top:.65rem}#content .s10-compare__cta{display:grid;grid-template-columns:repeat(3,1fr);gap:.6rem;padding:.85rem;border:1px solid var(--dk-rule);border-top:none;border-radius:0 0 14px 14px}#content .s10-compare__cta .btn{font-size:.58rem;padding:.8rem .5rem}#content .s10-open{align-items:flex-start;flex-direction:column}#content .s10-open .btn{width:100%;justify-content:center}}
+
 </style>
 </head>
 <body>
@@ -271,224 +344,158 @@
 }
 </style>
 
-<section class="spx-section spx-section--hero" id="sponsorships">
+<section class="spx-section s10-hero" id="sponsorships">
   <div class="container">
-    <div class="spx-hero-shell">
-      <div class="spx-hero-top">
-        <div class="spx-copy">
-          <div class="spx-eyebrow">Sponsorships</div>
-          <h1 class="spx-title">3 sponsor levels. 29 limited footprints.</h1>
-          <p class="spx-desc">Choose from 2 Title, 4 Gold, or 23 Silver expo sponsorships at Fontainebleau Miami Beach. Title and Gold include guaranteed stage programming. Separate media, hospitality, and VIP partnerships are also available.</p>
-          <div class="spx-actions">
-            <a class="btn btn--accent" href="#tiers">View Packages <span class="btn__arrow">↓</span></a>
-            <a class="btn btn--ghost" href="#inquire">Request Availability <span class="btn__arrow">→</span></a>
-          </div>
+    <div class="s10-hero__in">
+      <div>
+        <div class="s10-kicker">Sponsorships</div>
+        <h1 class="s10-title">29 limited footprints.</h1>
+        <p class="s10-sub">2 Title · 4 Gold · 23 Silver. Title and Gold include stage time. Media, VIP, and hospitality partnerships are also available.</p>
+        <div class="s10-pills">
+          <span class="s10-pill">1,000 Attendees</span>
+          <span class="s10-pill">200 VIP Passes</span>
+          <span class="s10-pill">Fontainebleau · Feb 5–6</span>
+          <span class="s10-pill">Saylor · Booth · Brunell + more</span>
         </div>
-        <aside class="spx-helper" aria-label="How sponsorships work">
-          <div class="spx-helper__label">How it works</div>
-          <div class="spx-helper__title">A clear sponsorship structure.</div>
-          <ul class="spx-helper__list">
-            <li>Every expo sponsor receives a physical footprint on the show floor.</li>
-            <li>Title and Gold sponsors also receive guaranteed stage programming.</li>
-            <li>Media, hospitality, and VIP partnerships can be booked separately from expo levels.</li>
-          </ul>
-          <div class="spx-helper__meta">
-            <span>Fontainebleau</span>
-            <span>Feb 5–6, 2027</span>
-            <span>1,000 attendees</span>
-            <span>200 VIP passes</span>
-          </div>
-        </aside>
-      </div>
-
-      <div class="spx-context" aria-label="Event context">
-        <div class="spx-context__item">
-          <div class="spx-context__k">Expo Footprints</div>
-          <div class="spx-context__v">29 total opportunities</div>
-        </div>
-        <div class="spx-context__item">
-          <div class="spx-context__k">Confirmed Speakers</div>
-          <div class="spx-context__v">Saylor, Booth, Brunell, BTC Sessions, Callahan</div>
-        </div>
-        <div class="spx-context__item">
-          <div class="spx-context__k">Audience</div>
-          <div class="spx-context__v">Founders, investors, executives, builders, VIPs</div>
-        </div>
-        <div class="spx-context__item">
-          <div class="spx-context__k">Beyond Expo</div>
-          <div class="spx-context__v">Main Stage, VIP, media, hospitality partnerships</div>
+        <div class="s10-actions">
+          <a class="btn btn--accent" href="#tiers">View Packages <span class="btn__arrow">↓</span></a>
+          <a class="btn btn--ghost" href="#inquire">Request Availability <span class="btn__arrow">→</span></a>
         </div>
       </div>
-
-      <div class="spx-level-grid" aria-label="Sponsorship levels overview">
-        <a class="spx-level-card spx-level-card--title" href="#title-package">
-          <div class="spx-level-card__top">
-            <div>
-              <div class="spx-level-card__name">Title</div>
-              <div class="spx-level-card__avail">2 available</div>
-            </div>
-            <div class="spx-level-card__price">$100K</div>
+      <div class="s10-grid" aria-label="Sponsorship overview">
+        <a class="s10-card s10-card--title" href="#title-package">
+          <div class="s10-card__top">
+            <div style="display:flex;gap:.7rem;align-items:flex-start"><span class="s10-chip s10-chip--title" aria-hidden="true"></span><div><div class="s10-name">Title</div><div class="s10-meta">2 Available · 20×20 island</div></div></div>
+            <div class="s10-price">$100K</div>
           </div>
-          <div class="spx-level-card__meta">20×20 island footprint</div>
-          <ul class="spx-level-card__list">
-            <li>Guaranteed Main Stage session + VIP Stage session</li>
-            <li>Top billing across the event as one of two Founding Title Sponsors</li>
-            <li>10 VIP passes + 10 Summit passes</li>
+          <div class="s10-card__rule"></div>
+          <ul class="s10-list">
+            <li><span class="s10-dot"></span><span>Main Stage + VIP Stage</span></li>
+            <li><span class="s10-dot"></span><span>Top event-wide visibility</span></li>
+            <li><span class="s10-dot"></span><span>10 VIP + 10 Summit passes</span></li>
           </ul>
-          <span class="spx-level-card__cta">View Title details <span aria-hidden="true">→</span></span>
+          <span class="s10-link">View details <span aria-hidden="true">→</span></span>
         </a>
-
-        <a class="spx-level-card spx-level-card--gold" href="#gold-package">
-          <div class="spx-level-card__top">
-            <div>
-              <div class="spx-level-card__name">Gold</div>
-              <div class="spx-level-card__avail">4 available</div>
-            </div>
-            <div class="spx-level-card__price">$50K</div>
+        <a class="s10-card s10-card--gold" href="#gold-package">
+          <div class="s10-card__top">
+            <div style="display:flex;gap:.7rem;align-items:flex-start"><span class="s10-chip s10-chip--gold" aria-hidden="true"></span><div><div class="s10-name">Gold</div><div class="s10-meta">4 Available · 10×20 footprint</div></div></div>
+            <div class="s10-price">$50K</div>
           </div>
-          <div class="spx-level-card__meta">10×20 premium footprint</div>
-          <ul class="spx-level-card__list">
-            <li>Guaranteed Main Stage panel or interview + VIP Stage session</li>
-            <li>Prominent branding across stage screens, signage, website, and email</li>
-            <li>6 VIP passes + 6 Summit passes</li>
+          <div class="s10-card__rule"></div>
+          <ul class="s10-list">
+            <li><span class="s10-dot"></span><span>Main Stage + VIP Stage</span></li>
+            <li><span class="s10-dot"></span><span>Prominent sponsor branding</span></li>
+            <li><span class="s10-dot"></span><span>6 VIP + 6 Summit passes</span></li>
           </ul>
-          <span class="spx-level-card__cta">View Gold details <span aria-hidden="true">→</span></span>
+          <span class="s10-link">View details <span aria-hidden="true">→</span></span>
         </a>
-
-        <a class="spx-level-card spx-level-card--silver" href="#silver-package">
-          <div class="spx-level-card__top">
-            <div>
-              <div class="spx-level-card__name">Silver</div>
-              <div class="spx-level-card__avail">23 available</div>
-            </div>
-            <div class="spx-level-card__price">$10K</div>
+        <a class="s10-card s10-card--silver" href="#silver-package">
+          <div class="s10-card__top">
+            <div style="display:flex;gap:.7rem;align-items:flex-start"><span class="s10-chip s10-chip--silver" aria-hidden="true"></span><div><div class="s10-name">Silver</div><div class="s10-meta">23 Available · 10×10 footprint</div></div></div>
+            <div class="s10-price">$10K</div>
           </div>
-          <div class="spx-level-card__meta">10×10 turnkey footprint</div>
-          <ul class="spx-level-card__list">
-            <li>Turnkey booth with branded backwall, furniture, power, and internet</li>
-            <li>Website, sponsor signage, and sponsor communications inclusion</li>
-            <li>1 VIP pass + 4 Summit passes</li>
+          <div class="s10-card__rule"></div>
+          <ul class="s10-list">
+            <li><span class="s10-dot"></span><span>Turnkey expo booth</span></li>
+            <li><span class="s10-dot"></span><span>Website + signage visibility</span></li>
+            <li><span class="s10-dot"></span><span>1 VIP + 4 Summit passes</span></li>
           </ul>
-          <span class="spx-level-card__cta">View Silver details <span aria-hidden="true">→</span></span>
+          <span class="s10-link">View details <span aria-hidden="true">→</span></span>
         </a>
       </div>
     </div>
   </div>
 </section>
 
-<div class="spx-proof" aria-label="Confirmed speakers">
-  <div class="container spx-proof__in">
-    <span class="spx-proof__label">Confirmed Speakers</span>
-    <span class="spx-proof__names">Michael Saylor · Jeff Booth · Natalie Brunell · BTC Sessions · Sam Callahan · more to be announced</span>
-  </div>
-</div>
-
-<section class="spx-section" id="tiers">
+<section class="spx-section s10-section" id="tiers">
   <div class="container">
-    <header class="sec-hd">
-      <div class="sec-hd__num">Detailed Package Breakdown</div>
-      <h2 class="section-title sec-hd__title">Expand each option below for the full package details. <em>Title and Gold include guaranteed stage programming.</em></h2>
-    </header>
-    <div class="spx-tiers">
-      <article class="spx-card spx-card--title" id="title-package">
-        <div class="spx-card__avail">2 Available</div>
-        <h3 class="spx-card__name">Founding Title Sponsor</h3>
-        <div class="spx-card__price">$100,000</div>
-        <div class="spx-card__footprint">20×20 island footprint</div>
-        <ul class="spx-card__features">
-          <li>Primetime Main Stage session and VIP Stage session</li>
-          <li>Equal top billing as one of two Founding Title Sponsors across event branding, registration, website, and media</li>
-          <li>10 VIP Summit Passes and 10 Summit Passes</li>
-          <li>First selection between the two Title locations</li>
-        </ul>
-        <a class="btn spx-select" href="#inquire" data-interest="Founding Title Sponsor" data-item="Founding Title Sponsor — $100,000">Inquire — Title <span class="btn__arrow">→</span></a>
-      </article>
-
-      <article class="spx-card spx-card--gold" id="gold-package">
-        <div class="spx-card__avail">4 Available</div>
-        <h3 class="spx-card__name">Gold Sponsor</h3>
-        <div class="spx-card__price">$50,000</div>
-        <div class="spx-card__footprint">10×20 premium footprint</div>
-        <ul class="spx-card__features">
-          <li>Main Stage panel or interview and VIP Stage session</li>
-          <li>Prominent branding across stage screens, signage, website, and email</li>
-          <li>6 VIP Summit Passes and 6 Summit Passes</li>
-          <li>Location selection within the Gold level by commitment date</li>
-        </ul>
-        <a class="btn spx-select" href="#inquire" data-interest="Gold Sponsor" data-item="Gold Sponsor — $50,000">Inquire — Gold <span class="btn__arrow">→</span></a>
-      </article>
-
-      <article class="spx-card spx-card--silver" id="silver-package">
-        <div class="spx-card__avail">23 Available</div>
-        <h3 class="spx-card__name">Silver Sponsor</h3>
-        <div class="spx-card__price">$10,000</div>
-        <div class="spx-card__footprint">10×10 turnkey footprint</div>
-        <ul class="spx-card__features">
-          <li>Turnkey 10×10 booth with branded backwall, furniture, standard power, and hardwired internet</li>
-          <li>1 VIP Summit Pass and 4 Summit Passes</li>
-          <li>Logo on the website, sponsor signage, and selected event emails</li>
-          <li>Inclusion in sponsor-announcement communications</li>
-        </ul>
-        <a class="btn spx-select" href="#inquire" data-interest="Silver Sponsor" data-item="Silver Sponsor — $10,000">Inquire — Silver <span class="btn__arrow">→</span></a>
-      </article>
+    <div class="s10-head">
+      <div class="s10-head__title">Compare</div>
+      <div class="s10-head__sub">Everything below is intentionally short and easy to scan.</div>
     </div>
-    <div class="spx-included">
-      <div class="spx-included__title">Every expo level includes</div>
-      <div class="spx-included__rail">
-        <span>Turnkey booth setup</span>
-        <span>Power + hardwired internet</span>
-        <span>Website + event guide listing</span>
-        <span>Move-in and logistics coordination</span>
-      </div>
+    <div class="s10-compare">
+      <div class="s10-compare__cell s10-compare__label"></div>
+      <div class="s10-compare__cell s10-compare__head" id="title-package">Title<small>$100,000</small></div>
+      <div class="s10-compare__cell s10-compare__head" id="gold-package">Gold<small>$50,000</small></div>
+      <div class="s10-compare__cell s10-compare__head" id="silver-package">Silver<small>$10,000</small></div>
+
+      <div class="s10-compare__cell s10-compare__label">Availability</div>
+      <div class="s10-compare__cell">2</div>
+      <div class="s10-compare__cell">4</div>
+      <div class="s10-compare__cell">23</div>
+
+      <div class="s10-compare__cell s10-compare__label">Footprint</div>
+      <div class="s10-compare__cell">20×20 island</div>
+      <div class="s10-compare__cell">10×20 premium</div>
+      <div class="s10-compare__cell">10×10 turnkey</div>
+
+      <div class="s10-compare__cell s10-compare__label">Stage</div>
+      <div class="s10-compare__cell">Main Stage + VIP Stage</div>
+      <div class="s10-compare__cell">Main Stage + VIP Stage</div>
+      <div class="s10-compare__cell">—</div>
+
+      <div class="s10-compare__cell s10-compare__label">Passes</div>
+      <div class="s10-compare__cell">10 VIP + 10 Summit</div>
+      <div class="s10-compare__cell">6 VIP + 6 Summit</div>
+      <div class="s10-compare__cell">1 VIP + 4 Summit</div>
+
+      <div class="s10-compare__cell s10-compare__label">Visibility</div>
+      <div class="s10-compare__cell">Top billing</div>
+      <div class="s10-compare__cell">Prominent branding</div>
+      <div class="s10-compare__cell">Standard sponsor visibility</div>
+
+      <div class="s10-compare__cell s10-compare__label">Includes</div>
+      <div class="s10-compare__cell">Expo booth, power, internet</div>
+      <div class="s10-compare__cell">Expo booth, power, internet</div>
+      <div class="s10-compare__cell">Expo booth, power, internet</div>
+
+      <div class="s10-compare__cell s10-compare__label">Select</div>
+      <div class="s10-compare__cell s10-compare__cta s10-compare__cta--title"><a class="btn spx-select" href="#inquire" data-interest="Founding Title Sponsor" data-item="Founding Title Sponsor — $100,000">Inquire</a></div>
+      <div class="s10-compare__cell s10-compare__cta s10-compare__cta--gold"><a class="btn spx-select" href="#inquire" data-interest="Gold Sponsor" data-item="Gold Sponsor — $50,000">Inquire</a></div>
+      <div class="s10-compare__cell s10-compare__cta s10-compare__cta--silver"><a class="btn spx-select" href="#inquire" data-interest="Silver Sponsor" data-item="Silver Sponsor — $10,000">Inquire</a></div>
     </div>
-    <p class="spx-note">Title and Gold programming opportunities are guaranteed; final topic, format, participants, and content remain subject to Summit approval. Custom builds, freight, drayage, venue labor, AV, technology, and upgrades are quoted separately. The Summit does not offer category exclusivity.</p>
+    <p class="s10-note">Custom builds, freight, drayage, venue labor, and specialty AV are additional.</p>
   </div>
 </section>
 
-<section class="spx-section" id="add-ons">
+<section class="spx-section s10-section" id="add-ons">
   <div class="container">
-    <header class="sec-hd">
-      <div class="sec-hd__num">Featured Partnerships</div>
-      <h2 class="section-title sec-hd__title">Available standalone, <em>or paired with an expo sponsorship.</em></h2>
-    </header>
-    <div class="spx-addon-grid">
-      <div class="spx-addon-col">
-        <h3>Stage &amp; Program</h3>
-        <ul class="spx-addon-list">
-          <li><a class="spx-select" href="#inquire" data-interest="Featured Partnership Only" data-item="Livestream &amp; Media — $15,000"><span class="spx-addon-name">Livestream &amp; Media</span><span class="spx-addon-price">$15,000</span></a></li>
-          <li><a class="spx-select" href="#inquire" data-interest="Featured Partnership Only" data-item="Workshop Track — $10,000"><span class="spx-addon-name">Workshop Track · 2 available</span><span class="spx-addon-price">$10,000</span></a></li>
+    <div class="s10-head">
+      <div class="s10-head__title">Featured Partnerships</div>
+      <div class="s10-head__sub">Can be booked with or without an expo booth. “+” means direct execution costs are additional.</div>
+    </div>
+    <div class="s10-partners">
+      <div class="s10-panel">
+        <div class="s10-panel__head"><span class="s10-icon">ST</span><h3>Stage & Media</h3></div>
+        <ul class="s10-rows">
+          <li><a class="spx-select" href="#inquire" data-interest="Featured Partnership Only" data-item="Livestream &amp; Media — $15,000"><strong>Livestream &amp; Media</strong><span>$15,000</span></a></li>
+          <li><a class="spx-select" href="#inquire" data-interest="Featured Partnership Only" data-item="Workshop Track — $10,000"><strong>Workshop Track</strong><span>$10,000</span></a></li>
+          <li><a class="spx-select" href="#inquire" data-interest="Featured Partnership Only" data-item="Bitcoin Fundamentals — $12,500"><strong>Bitcoin Fundamentals</strong><span>$12,500</span></a></li>
         </ul>
       </div>
-      <div class="spx-addon-col">
-        <h3>Side Events</h3>
-        <ul class="spx-addon-list">
-          <li><a class="spx-select" href="#inquire" data-interest="Featured Partnership Only" data-item="Summit After Party — $25,000+"><span class="spx-addon-name">Summit After Party</span><span class="spx-addon-price">$25,000+</span></a></li>
-          <li><a class="spx-select" href="#inquire" data-interest="Featured Partnership Only" data-item="VIP Oceanfront Soiree — $25,000+"><span class="spx-addon-name">VIP Oceanfront Soiree</span><span class="spx-addon-price">$25,000+</span></a></li>
-          <li><a class="spx-select" href="#inquire" data-interest="Featured Partnership Only" data-item="VIP Welcome Reception — $20,000+"><span class="spx-addon-name">VIP Welcome Reception</span><span class="spx-addon-price">$20,000+</span></a></li>
-          <li><a class="spx-select" href="#inquire" data-interest="Featured Partnership Only" data-item="Bitcoin Fundamentals — $12,500"><span class="spx-addon-name">Bitcoin Fundamentals</span><span class="spx-addon-price">$12,500</span></a></li>
-          <li><a class="spx-select" href="#inquire" data-interest="Featured Partnership Only" data-item="Satoshi Farewell Brunch — $12,500+"><span class="spx-addon-name">Satoshi Farewell Brunch</span><span class="spx-addon-price">$12,500+</span></a></li>
+      <div class="s10-panel">
+        <div class="s10-panel__head"><span class="s10-icon s10-icon--vip">VIP</span><h3>VIP & Hospitality</h3></div>
+        <ul class="s10-rows">
+          <li><a class="spx-select" href="#inquire" data-interest="Featured Partnership Only" data-item="Summit After Party — $25,000+"><strong>Summit After Party</strong><span>$25,000+</span></a></li>
+          <li><a class="spx-select" href="#inquire" data-interest="Featured Partnership Only" data-item="VIP Oceanfront Soiree — $25,000+"><strong>VIP Oceanfront Soiree</strong><span>$25,000+</span></a></li>
+          <li><a class="spx-select" href="#inquire" data-interest="Featured Partnership Only" data-item="VIP Welcome Reception — $20,000+"><strong>VIP Welcome Reception</strong><span>$20,000+</span></a></li>
+          <li><a class="spx-select" href="#inquire" data-interest="Featured Partnership Only" data-item="Satoshi Farewell Brunch — $12,500+"><strong>Farewell Brunch</strong><span>$12,500+</span></a></li>
         </ul>
       </div>
-      <div class="spx-addon-col">
-        <h3>Branding &amp; Activations</h3>
-        <ul class="spx-addon-list">
-          <li><a class="spx-select" href="#inquire" data-interest="Featured Partnership Only" data-item="Official Lanyard — $20,000+"><span class="spx-addon-name">Official Lanyard</span><span class="spx-addon-price">$20,000+</span></a></li>
-          <li><a class="spx-select" href="#inquire" data-interest="Featured Partnership Only" data-item="Sovereign Lounge — $15,000+"><span class="spx-addon-name">Sovereign Lounge</span><span class="spx-addon-price">$15,000+</span></a></li>
-          <li><a class="spx-select" href="#inquire" data-interest="Featured Partnership Only" data-item="Official Tote Bag — $12,500+"><span class="spx-addon-name">Official Tote Bag</span><span class="spx-addon-price">$12,500+</span></a></li>
-          <li><a class="spx-select" href="#inquire" data-interest="Featured Partnership Only" data-item="Official WiFi — $10,000"><span class="spx-addon-name">Official WiFi</span><span class="spx-addon-price">$10,000</span></a></li>
-          <li><a class="spx-select" href="#inquire" data-interest="Featured Partnership Only" data-item="Coffee &amp; Water Stations — $7,500+"><span class="spx-addon-name">Coffee &amp; Water Stations</span><span class="spx-addon-price">$7,500+</span></a></li>
-          <li><a class="spx-select" href="#inquire" data-interest="Featured Partnership Only" data-item="Charging Lounge — $7,500+"><span class="spx-addon-name">Charging Lounge</span><span class="spx-addon-price">$7,500+</span></a></li>
+      <div class="s10-panel">
+        <div class="s10-panel__head"><span class="s10-icon s10-icon--brand">BR</span><h3>Brand & Utility</h3></div>
+        <ul class="s10-rows">
+          <li><a class="spx-select" href="#inquire" data-interest="Featured Partnership Only" data-item="Official Lanyard — $20,000+"><strong>Official Lanyard</strong><span>$20,000+</span></a></li>
+          <li><a class="spx-select" href="#inquire" data-interest="Featured Partnership Only" data-item="Sovereign Lounge — $15,000+"><strong>Sovereign Lounge</strong><span>$15,000+</span></a></li>
+          <li><a class="spx-select" href="#inquire" data-interest="Featured Partnership Only" data-item="Official Tote Bag — $12,500+"><strong>Official Tote Bag</strong><span>$12,500+</span></a></li>
+          <li><a class="spx-select" href="#inquire" data-interest="Featured Partnership Only" data-item="Official WiFi — $10,000"><strong>Official WiFi</strong><span>$10,000</span></a></li>
+          <li><a class="spx-select" href="#inquire" data-interest="Featured Partnership Only" data-item="Coffee &amp; Water Stations — $7,500+"><strong>Coffee &amp; Water</strong><span>$7,500+</span></a></li>
+          <li><a class="spx-select" href="#inquire" data-interest="Featured Partnership Only" data-item="Charging Lounge — $7,500+"><strong>Charging Lounge</strong><span>$7,500+</span></a></li>
         </ul>
       </div>
     </div>
-    <p class="spx-addon-note">Featured partnerships may be purchased without an expo booth. No physical footprint is included unless combined with Title, Gold, or Silver. Prices marked + exclude direct execution costs.</p>
-    <a class="spx-sponsor-addon spx-select" href="#inquire" data-interest="Featured Partnership Only" data-item="Promo Insert — $3,000">
-      <span class="spx-sponsor-addon__tag">Confirmed Sponsor Add-On</span>
-      <span class="spx-sponsor-addon__name">Promo Insert · one printed piece or approved product sample in the Summit tote</span>
-      <span class="spx-sponsor-addon__price">$3,000</span>
-    </a>
-    <div class="spx-open-source">
-      <div><strong>Open Source Area — by application</strong><span>Subsidized space for open-source projects, nonprofits, community organizations, and small builders.</span></div>
+    <div class="s10-open">
+      <div><strong>Open Source Area</strong><small>Application-based subsidized space for open-source projects, nonprofits, and community builders.</small></div>
       <a class="btn btn--ghost spx-select" href="#inquire" data-interest="Open Source Area (by application)" data-item="Open Source Area — application">Apply <span class="btn__arrow">→</span></a>
     </div>
   </div>
