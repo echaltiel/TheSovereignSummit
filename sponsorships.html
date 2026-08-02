@@ -934,7 +934,16 @@ body{overflow-x:clip}
   }
   #content .sp-booth-caption span:last-child{max-width:none}
 }
-}
+
+/* The header was a 3-column grid with unequal side columns, so the emblem
+   sat off-centre (up to 21px). Equal side tracks centre it in the card. */
+#content .sp-package__head{grid-template-columns:minmax(0,1fr) auto minmax(0,1fr)!important}
+#content .sp-package__identity{min-width:0}
+#content .sp-package__price{min-width:0}
+
+/* With equal side tracks the price column is narrower, so scale the figure to
+   fit it rather than letting $100,000 overflow. */
+#content .sp-package__price{font-size:clamp(1.24rem,1.72vw,1.84rem)!important;white-space:nowrap}
 </style>
 </head>
 <body>
