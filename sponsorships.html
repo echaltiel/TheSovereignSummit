@@ -109,7 +109,8 @@ body{overflow-x:clip}
 #content .sp-speakers__faces img{width:39px;height:39px;margin-left:-.46rem;border:2px solid var(--sp-bg-deep);border-radius:50%;object-fit:cover;background:var(--sp-card)}
 #content .sp-speakers__copy{min-width:0}
 #content .sp-speakers__copy strong{display:block;font-size:.88rem;font-weight:700;line-height:1.3;white-space:nowrap;color:var(--sp-cream)}
-#content .sp-speakers__copy span{display:block;max-width:25ch;margin-top:.16rem;font-size:.75rem;line-height:1.4;color:var(--sp-muted);white-space:normal;overflow:visible;text-overflow:clip}
+#content .sp-speakers__copy span{display:block;max-width:27ch;margin-top:.16rem;font-size:.75rem;line-height:1.4;color:var(--sp-muted);white-space:normal;overflow:visible;text-overflow:clip}
+#content .sp-speakers__copy em{display:block;margin-top:.12rem;font-family:var(--fm);font-size:.64rem;font-style:normal;font-weight:700;line-height:1.35;letter-spacing:.045em;text-transform:uppercase;color:rgba(244,236,224,.72)}
 #content .sp-speakers__arrow{margin-left:auto;font-family:var(--fm);font-size:.88rem;color:var(--sp-orange)}
 
 /* Core packages */
@@ -125,13 +126,13 @@ body{overflow-x:clip}
 #content .sp-package--title{--tier-color:var(--sp-orange);border-color:rgba(255,105,65,.48)}
 #content .sp-package--gold{--tier-color:var(--sp-gold);border-color:rgba(232,196,106,.36)}
 #content .sp-package--silver{--tier-color:var(--sp-silver);border-color:rgba(198,206,217,.28)}
-#content .sp-package__head{display:flex;align-items:flex-start;justify-content:space-between;gap:.75rem;padding:1.2rem 1.15rem .85rem}
+#content .sp-package__head{display:flex;align-items:flex-start;justify-content:space-between;gap:.75rem;min-height:90px;padding:1.2rem 1.15rem .85rem}
 #content .sp-package__tier{font-family:var(--fd);font-size:2rem;font-weight:400;line-height:1;letter-spacing:-.02em;color:var(--sp-cream)}
 #content .sp-package__availability{margin-top:.34rem;font-family:var(--fm);font-size:.68rem;font-weight:700;line-height:1.35;letter-spacing:.1em;text-transform:uppercase;color:var(--tier-color)}
 #content .sp-package__price{font-family:var(--fb);font-size:clamp(1.55rem,2vw,2rem);font-weight:900;line-height:1;letter-spacing:-.04em;text-align:right;white-space:nowrap;color:var(--sp-cream)}
 #content .sp-package__price small{display:block;margin-top:.36rem;font-family:var(--fm);font-size:.62rem;font-weight:700;line-height:1.3;letter-spacing:.09em;text-transform:uppercase;color:var(--sp-faint)}
 
-#content .sp-package__visual{display:grid;grid-template-columns:116px minmax(0,1fr);align-items:center;gap:.8rem;min-height:122px;margin:0 1.15rem;padding:.7rem .8rem;border:1px solid var(--sp-rule);border-radius:16px;background:rgba(244,236,224,.024);overflow:hidden}
+#content .sp-package__visual{display:grid;grid-template-columns:116px minmax(0,1fr);align-items:center;gap:.8rem;height:122px;min-height:122px;margin:0 1.15rem;padding:.7rem .8rem;border:1px solid var(--sp-rule);border-radius:16px;background:rgba(244,236,224,.024);overflow:hidden}
 #content .sp-booth-scale{position:relative;display:grid;place-items:center;width:104px;height:104px;margin:auto}
 #content .sp-booth{display:grid;place-items:center;flex:0 0 auto;font-family:var(--fm);font-size:.59rem;font-weight:800;line-height:1.1;letter-spacing:.025em;text-align:center;text-transform:uppercase;color:#001227;box-shadow:0 13px 28px rgba(0,0,0,.28)}
 #content .sp-booth span{display:block;max-width:100%;text-align:center}
@@ -144,12 +145,12 @@ body{overflow-x:clip}
 #content .sp-booth-caption strong{display:block;margin:0 0 .2rem;font-size:.98rem;font-weight:700;line-height:1.25;color:var(--sp-cream)}
 #content .sp-booth-caption span:last-child{display:block;font-size:.75rem;line-height:1.4;color:var(--sp-muted)}
 
-#content .sp-package__facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin:.8rem 1.15rem 0;border:1px solid var(--sp-rule);border-radius:14px;overflow:hidden}
-#content .sp-fact{display:flex;min-width:0;flex-direction:column;align-items:center;justify-content:flex-start;padding:.72rem .45rem;text-align:center;border-right:1px solid var(--sp-rule)}
+#content .sp-package__facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));height:126px;min-height:126px;margin:.8rem 1.15rem 0;border:1px solid var(--sp-rule);border-radius:14px;overflow:hidden}
+#content .sp-fact{display:flex;min-width:0;min-height:124px;flex-direction:column;align-items:center;justify-content:flex-start;padding:.72rem .45rem;text-align:center;border-right:1px solid var(--sp-rule)}
 #content .sp-fact:last-child{border-right:0}
 #content .sp-fact svg{width:18px;height:18px;margin:0 0 .38rem;color:var(--tier-color);stroke:currentColor;flex:0 0 auto}
-#content .sp-fact strong{display:block;font-size:.79rem;font-weight:700;line-height:1.3;color:var(--sp-cream)}
-#content .sp-fact span{display:block;margin-top:.24rem;font-family:var(--fm);font-size:.56rem;line-height:1.4;letter-spacing:.035em;text-transform:uppercase;color:var(--sp-faint)}
+#content .sp-fact strong{display:block;min-height:2.6em;font-size:.79rem;font-weight:700;line-height:1.3;color:var(--sp-cream)}
+#content .sp-fact>span{display:block;min-height:2.8em;margin-top:.24rem;font-family:var(--fm);font-size:.56rem;line-height:1.4;letter-spacing:.035em;text-transform:uppercase;color:var(--sp-faint)}
 
 #content .sp-package details{margin:0 1.15rem;border-top:1px solid var(--sp-rule)}
 #content .sp-package summary{display:flex;align-items:center;justify-content:space-between;min-height:44px;padding:.74rem 0;list-style:none;font-family:var(--fm);font-size:.64rem;font-weight:700;line-height:1.3;letter-spacing:.1em;text-transform:uppercase;color:var(--sp-muted);cursor:pointer;transition:color .15s ease}
@@ -248,22 +249,22 @@ body{overflow-x:clip}
   #content .sp-packages{padding:1.15rem 0 1.9rem}
   #content .sp-packages .sp-section-title{font-size:clamp(1.38rem,7vw,1.72rem);letter-spacing:-.05em}
   #content .sp-package-grid{grid-auto-columns:min(355px,calc(100vw - 34px));margin-inline:-1rem;padding-inline:1rem;scroll-padding-inline:1rem}
-  #content .sp-package__head{padding:1.15rem 1rem .8rem}
+  #content .sp-package__head{min-height:0;padding:1.15rem 1rem .8rem}
   #content .sp-package__tier{font-size:1.9rem}
   #content .sp-package__price{font-size:1.65rem}
-  #content .sp-package__visual{grid-template-columns:104px minmax(0,1fr);min-height:118px;margin-inline:1rem;padding:.65rem}
+  #content .sp-package__visual{grid-template-columns:104px minmax(0,1fr);height:auto;min-height:118px;margin-inline:1rem;padding:.65rem}
   #content .sp-booth-scale{width:94px;height:100px}
   #content .sp-booth--title{width:76px;height:76px}
   #content .sp-booth--gold{width:76px;height:38px}
   #content .sp-booth--silver{width:38px;height:38px;font-size:.43rem}
   #content .sp-booth-caption strong{font-size:.92rem}
   #content .sp-booth-caption span:last-child{font-size:.72rem}
-  #content .sp-package__facts{grid-template-columns:1fr;margin:.75rem 1rem 0}
-  #content .sp-fact{display:grid;grid-template-columns:25px minmax(0,1fr) auto;align-items:center;gap:.55rem;padding:.58rem .7rem;text-align:left;border-right:0;border-bottom:1px solid var(--sp-rule)}
+  #content .sp-package__facts{grid-template-columns:1fr;height:auto;min-height:0;margin:.75rem 1rem 0}
+  #content .sp-fact{display:grid;grid-template-columns:25px minmax(0,1fr) auto;align-items:center;gap:.55rem;min-height:0;padding:.58rem .7rem;text-align:left;border-right:0;border-bottom:1px solid var(--sp-rule)}
   #content .sp-fact:last-child{border-bottom:0}
   #content .sp-fact svg{grid-row:1 / span 2;margin:0;width:18px;height:18px}
-  #content .sp-fact strong{font-size:.78rem}
-  #content .sp-fact span{margin:0;font-size:.56rem;text-align:right}
+  #content .sp-fact strong{min-height:0;font-size:.78rem}
+  #content .sp-fact>span{min-height:0;margin:0;font-size:.56rem;text-align:right}
   #content .sp-package details{margin-inline:1rem}
   #content .sp-package__actions{padding:.75rem 1rem 1rem}
   #content .sp-package__actions .sp-btn{min-height:52px;font-size:.68rem}
@@ -302,7 +303,7 @@ body{overflow-x:clip}
   #content .sp-package__facts,#content .sp-package details{margin-inline:.85rem}
   #content .sp-package__actions{padding-inline:.85rem}
   #content .sp-fact{grid-template-columns:23px minmax(0,1fr)}
-  #content .sp-fact span{grid-column:2;text-align:left}
+  #content .sp-fact>span{grid-column:2;text-align:left}
 }
 
 @media(prefers-reduced-motion:reduce){
@@ -418,7 +419,7 @@ body{overflow-x:clip}
           <img src="images/speakers/Sessions.webp?v=20260801" alt="">
           <img src="images/speakers/callahan.webp?v=20260801" alt="">
         </div>
-        <div class="sp-speakers__copy"><strong>Confirmed speakers</strong><span>Saylor &middot; Brunell &middot; Booth &middot; BTC Sessions &middot; Callahan</span></div>
+        <div class="sp-speakers__copy"><strong>Confirmed speakers</strong><span>Saylor &middot; Brunell &middot; Booth &middot; BTC Sessions &middot; Callahan<em>More speakers to be announced.</em></span></div>
         <span class="sp-speakers__arrow" aria-hidden="true">→</span>
       </a>
     </div>
@@ -463,8 +464,8 @@ body{overflow-x:clip}
         <div class="sp-package__facts">
           <div class="sp-fact">
             <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 18V7l8-4 8 4v11"/><path d="M8 21v-8h8v8"/><path d="M2 21h20"/></svg>
-            <strong>2 Premium Stage Sessions</strong>
-            <span>Main Stage + VIP Stage</span>
+            <strong>2 Premium<br>Stage Sessions</strong>
+            <span>Main Stage<br>+ VIP Stage</span>
           </div>
           <div class="sp-fact">
             <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-6 10-6 10 6 10 6-3.5 6-10 6S2 12 2 12Z"/><circle cx="12" cy="12" r="2.5"/></svg>
@@ -474,7 +475,7 @@ body{overflow-x:clip}
           <div class="sp-fact">
             <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h18v10H3z"/><path d="M7 8V5h10v3"/><path d="M8 13h8"/></svg>
             <strong>20 Passes</strong>
-            <span>10 VIP + 10 Summit</span>
+            <span>10 VIP<br>+ 10 Summit</span>
           </div>
         </div>
 
@@ -523,8 +524,8 @@ body{overflow-x:clip}
         <div class="sp-package__facts">
           <div class="sp-fact">
             <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 18V7l8-4 8 4v11"/><path d="M8 21v-8h8v8"/><path d="M2 21h20"/></svg>
-            <strong>2 Stage Sessions</strong>
-            <span>Main Stage + VIP Stage</span>
+            <strong>2 Standard<br>Stage Sessions</strong>
+            <span>Main Stage<br>+ VIP Stage</span>
           </div>
           <div class="sp-fact">
             <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-6 10-6 10 6 10 6-3.5 6-10 6S2 12 2 12Z"/><circle cx="12" cy="12" r="2.5"/></svg>
@@ -534,7 +535,7 @@ body{overflow-x:clip}
           <div class="sp-fact">
             <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h18v10H3z"/><path d="M7 8V5h10v3"/><path d="M8 13h8"/></svg>
             <strong>12 Passes</strong>
-            <span>6 VIP + 6 Summit</span>
+            <span>6 VIP<br>+ 6 Summit</span>
           </div>
         </div>
 
@@ -593,7 +594,7 @@ body{overflow-x:clip}
           <div class="sp-fact">
             <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h18v10H3z"/><path d="M7 8V5h10v3"/><path d="M8 13h8"/></svg>
             <strong>5 Passes</strong>
-            <span>1 VIP + 4 Summit</span>
+            <span>1 VIP<br>+ 4 Summit</span>
           </div>
         </div>
 
