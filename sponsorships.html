@@ -944,6 +944,24 @@ body{overflow-x:clip}
 /* With equal side tracks the price column is narrower, so scale the figure to
    fit it rather than letting $100,000 overflow. */
 #content .sp-package__price{font-size:clamp(1.24rem,1.72vw,1.84rem)!important;white-space:nowrap}
+
+/* ---- Platinum: bright white. Silver: a clearly greyer tone. ---- */
+#content .sp-package--title{--tier-color:#FFFFFF;border-color:rgba(255,255,255,.55)!important}
+#content .sp-booth--title{background:#FFFFFF!important;box-shadow:0 13px 34px rgba(255,255,255,.18)!important}
+#content .sp-package--title .sp-booth-tag{border-color:rgba(255,255,255,.42)!important;background:rgba(255,255,255,.12)!important}
+#content .sp-package--title .sp-btn--primary{
+  background:#FFFFFF!important;border-color:#FFFFFF!important;color:#0A1224!important;
+  box-shadow:0 8px 26px rgba(255,255,255,.2)!important;
+}
+#content .sp-package--title .sp-btn--primary:hover{box-shadow:0 12px 32px rgba(255,255,255,.3)!important}
+
+#content .sp-package--silver{--tier-color:#98A3B2;border-color:rgba(152,163,178,.4)!important}
+#content .sp-booth--silver{background:#98A3B2!important}
+#content .sp-package--silver .sp-booth-tag{border-color:rgba(152,163,178,.4)!important;background:rgba(152,163,178,.13)!important}
+#content .sp-package--silver .sp-btn--primary{
+  background:#98A3B2!important;border-color:#98A3B2!important;color:#0A1224!important;
+  box-shadow:0 8px 26px rgba(152,163,178,.2)!important;
+}
 </style>
 </head>
 <body>
