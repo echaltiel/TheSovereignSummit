@@ -36,6 +36,18 @@
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Instrument+Serif&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css?v=192">
 <script>if(location.hash==='#leadership')location.replace('/team#leadership');</script>
+<style>
+/* Hero headline: the new lines are longer than the old ones, so size the type
+   to the longest line instead of letting "YOUR" orphan onto its own row. */
+.hero h1{font-size:clamp(2.5rem,5.7vw,4.6rem)}
+.hero h1 > br + span,
+.hero h1{white-space:nowrap}
+.hero h1 .serif{white-space:normal;display:inline-block}
+@media (max-width:699px){
+  .hero h1{font-size:clamp(1.35rem,7.9vw,2.5rem);white-space:normal}
+  .hero__line2{white-space:normal;left:0}
+}
+</style>
 </head>
 <body>
 <div class="header" id="siteHeader">
@@ -119,8 +131,8 @@
   <div class="hero__scrim" aria-hidden="true"></div>
   <div class="wrap hero__in">
     <h1>
-      AI. Freedom.<br>
-      <span class="hero__line2">Energy. Bitcoin.</span><br>
+      AI. Energy. Money.<br>
+      <span class="hero__line2">Your Future. Your Terms.</span><br>
       <span class="serif">Fontainebleau, Miami Beach</span>
     </h1>
     <div class="hero__kicker hero__kicker--below">
@@ -168,7 +180,7 @@
       <a class="speaker" data-speaker="02" href="https://x.com/natbrunell" target="_blank" rel="noopener noreferrer">
         <div class="speaker__index">02</div>
         <div class="speaker__portrait speaker__portrait--hasphoto">
-          <img class="speaker__photo" src="images/speakers/brunell.webp" alt="Natalie Brunell">
+          <img class="speaker__photo" src="images/speakers/Brunell.webp" alt="Natalie Brunell">
           <div class="speaker__placeholder"></div>
         </div>
         <h3 class="speaker__name">Natalie <em>Brunell</em></h3>
@@ -188,7 +200,7 @@
       <a class="speaker" data-speaker="04" href="https://x.com/BTCsessions" target="_blank" rel="noopener noreferrer">
         <div class="speaker__index">04</div>
         <div class="speaker__portrait speaker__portrait--hasphoto">
-          <img class="speaker__photo" src="images/speakers/sessions.webp" alt="Ben Sessions">
+          <img class="speaker__photo" src="images/speakers/Sessions.webp" alt="Ben Sessions">
           <div class="speaker__placeholder"></div>
         </div>
         <h3 class="speaker__name">Ben <em>Sessions</em></h3>
