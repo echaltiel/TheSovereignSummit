@@ -4618,4 +4618,34 @@ body.menu-open{overflow:hidden}
   #content .agn-thread{padding:.7rem 1.5rem .8rem}
   #content .agn-thread__stmt{font-size:1.14rem}
 }
-/* build: styles v194 */
+/* ===== Agenda v12: one voice in the bar, centred ===== */
+/* Whole statement now matches the Archivo half. Serif/coral split removed. */
+#content .agn-thread__stmt em{
+  font-family:var(--fb) !important;
+  font-style:normal !important;
+  font-weight:800 !important;
+  font-size:1em !important;
+  letter-spacing:inherit !important;
+  color:#16233E !important;
+}
+#content .agn-thread{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  min-height:76px;
+  padding:1.15rem 1.75rem !important;
+}
+#content .agn-thread__stmt{
+  font-size:clamp(1.2rem,1.9vw,1.75rem) !important;
+  line-height:1.22 !important;
+  width:100%;
+}
+@media (min-width:900px) and (max-height:720px){
+  #content .agn-thread{min-height:64px;padding:.95rem 1.5rem !important}
+  #content .agn-thread__stmt{font-size:1.42rem !important}
+}
+@media (max-width:620px){
+  #content .agn-thread{min-height:0;padding:1rem 1.1rem !important;border-radius:14px}
+  #content .agn-thread__stmt{font-size:1.15rem !important;line-height:1.3 !important}
+}
+/* build: styles v195 */
