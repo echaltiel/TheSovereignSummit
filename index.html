@@ -49,13 +49,13 @@
    default padding was 27px top vs 99px bottom, floating the block 36px high. */
 @media (min-width:700px){
   .hero{padding-bottom:clamp(1.4rem,2.9vh,2rem)!important}
-  .hero__blurb{font-size:clamp(1.25rem,1.6vw,1.5rem)!important;line-height:1.6;margin-top:1.6rem!important}
+  .hero__blurb{font-size:clamp(1.38rem,1.78vw,1.66rem)!important;line-height:1.6;margin-top:1.6rem!important}
   .hero__ctas{margin-top:2.4rem;gap:20px}
   .hero__ctas .btn{font-size:1.32rem;padding:1.3rem 2.7rem;min-height:70px;border-radius:999px}
 }
 /* Two-tone blurb, matching the section subtitle pattern used on /speakers */
 .hero__blurb .hb-a{font-family:var(--fb);font-weight:800;letter-spacing:-.022em;color:rgba(244,236,224,.72)}
-.hero__blurb .hb-b{font-family:var(--fd);font-style:normal;font-weight:400;color:#F4ECE0;font-size:1.05em}
+.hero__blurb .hb-b{font-family:var(--fd);font-style:normal;font-weight:400;color:#F4ECE0;font-size:1.05em;text-decoration:underline;text-decoration-thickness:1.5px;text-underline-offset:.16em;text-decoration-color:rgba(244,236,224,.65)}
 .hero__ctas .btn{box-shadow:0 10px 34px rgba(255,105,65,.32);transition:transform .18s ease,box-shadow .18s ease}
 .hero__ctas .btn:hover{transform:translateY(-2px);box-shadow:0 16px 44px rgba(255,105,65,.45)}
 .hero h1 > br + span,
@@ -92,7 +92,7 @@
   .hero__kicker .mono{font-size:.9rem;letter-spacing:.24em;color:rgba(244,236,224,.7)!important}
 
   /* Rhythm: one consistent beat between blocks. */
-  .hero__blurb{margin-top:1.35rem;font-size:1.16rem;line-height:1.55;max-width:34ch}
+  .hero__blurb{margin-top:1.35rem;font-size:1.26rem;line-height:1.55;max-width:34ch}
   .hero__ctas{margin-top:1.9rem;gap:16px}
   .hero__ctas .btn{font-size:1.16rem;padding:1.2rem 1.1rem;min-height:68px}
   /* the hotel button's icon+label+arrow row must scale with the pill or it
