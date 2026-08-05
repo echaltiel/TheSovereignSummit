@@ -4474,31 +4474,54 @@ body.menu-open{overflow:hidden}
   #content .speakers__arrow--prev{left:-8px}
 }
 
-/* ===== Agenda v10: through-line band under the four tiles ===== */
+/* ===== Agenda v10: brace gathering the four tiles into a slim cream bar ===== */
+/* Column geometry mirrors .program__blocks (4 cols, --g gap) so each stem lands
+   on a card centre. step = (100% + g)/4 ; first centre = (100% - 3g)/8. */
+#content .agn-brace{
+  --g:1.15rem;
+  --step:calc((100% + var(--g))/4);
+  --c1:calc((100% - 3*var(--g))/8);
+  --line:rgba(255,105,65,.55);
+  position:relative;
+  height:42px;
+  margin:0;
+}
+#content .agn-brace span{position:absolute;background:var(--line)}
+#content .agn-brace__stem{top:0;height:19px;width:1.5px;border-radius:1px}
+#content .agn-brace__stem--1{left:var(--c1)}
+#content .agn-brace__stem--2{left:calc(var(--c1) + var(--step))}
+#content .agn-brace__stem--3{left:calc(var(--c1) + 2*var(--step))}
+#content .agn-brace__stem--4{left:calc(var(--c1) + 3*var(--step))}
+#content .agn-brace__bar{
+  top:18px;height:1.5px;border-radius:1px;
+  left:var(--c1);
+  right:var(--c1);
+}
+#content .agn-brace__drop{top:18px;bottom:0;left:50%;width:1.5px;margin-left:-.75px;border-radius:1px}
+
+/* Slim cream bar */
 #content .agn-thread{
-  margin-top:1.15rem;
-  background:rgba(244,236,224,.05);
-  border:1px solid rgba(244,236,224,.14);
-  border-radius:16px;
-  padding:1.85rem 2.25rem 1.7rem;
+  background:#F4ECE0;
+  border-radius:14px;
+  padding:1rem 1.75rem 1.1rem;
   text-align:center;
 }
 #content .agn-thread__label{
   font-family:var(--fm);
-  font-size:.66rem;
+  font-size:.62rem;
   font-weight:700;
   letter-spacing:.24em;
   text-transform:uppercase;
   color:var(--accent);
-  margin-bottom:.95rem;
+  margin-bottom:.42rem;
 }
 #content .agn-thread__stmt{
   font-family:var(--fb);
   font-weight:800;
   letter-spacing:-.022em;
-  font-size:clamp(1.2rem,1.85vw,1.65rem);
-  line-height:1.28;
-  color:rgba(244,236,224,.72);
+  font-size:clamp(1.1rem,1.6vw,1.45rem);
+  line-height:1.25;
+  color:#16233E;
   margin:0;
   text-wrap:balance;
 }
@@ -4506,24 +4529,93 @@ body.menu-open{overflow:hidden}
   font-family:var(--fd);
   font-style:normal;
   font-weight:400;
-  font-size:1.04em;
+  font-size:1.06em;
   letter-spacing:0;
   color:var(--accent);
 }
-#content .agn-thread__sub{
-  font-family:var(--fb);
-  font-weight:400;
-  font-size:.98rem;
-  line-height:1.55;
-  color:rgba(244,236,224,.55);
-  max-width:62ch;
-  margin:.85rem auto 0;
-  text-wrap:balance;
+
+/* Grid drops to 2 columns then 1, so the four-stem brace no longer maps to it. */
+@media (max-width:1080px){
+  #content .agn-brace{height:26px}
+  #content .agn-brace__stem,#content .agn-brace__bar{display:none}
+  #content .agn-brace__drop{top:0}
 }
 @media (max-width:720px){
-  #content .agn-thread{padding:1.5rem 1.35rem 1.4rem;border-radius:14px;margin-top:1rem}
-  #content .agn-thread__label{font-size:.6rem;letter-spacing:.2em;margin-bottom:.8rem}
-  #content .agn-thread__stmt{font-size:1.18rem}
-  #content .agn-thread__sub{font-size:.92rem;margin-top:.7rem}
+  #content .agn-thread{padding:1rem 1.15rem 1.1rem;border-radius:12px}
+  #content .agn-thread__label{font-size:.58rem;letter-spacing:.2em;margin-bottom:.42rem}
+  #content .agn-thread__stmt{font-size:1.08rem}
+}
+
+/* ===== Agenda v11: fit the full arc above the fold; 2-up mobile ===== */
+
+/* Reclaim vertical space in the header stack */
+#content .program .sec-hd__num{font-size:clamp(2.1rem,3.6vw,3rem)}
+#content .agn-desc{font-size:clamp(1.1rem,1.55vw,1.4rem) !important;margin-bottom:.6rem}
+#content .program__blocks{margin-top:1.15rem !important}
+
+/* Tighter cards: same proportions, less air */
+#content .program__block{padding:1.3rem 1.15rem 1.25rem !important}
+#content .program__block-header{gap:.45rem !important;margin:0 0 .8rem !important}
+#content .program__block-step{font-size:1.35rem}
+#content .agn-ico,#content .agn-ico--fill{width:36px;height:36px;margin-bottom:.7rem}
+#content .program__block-title{font-size:clamp(1.45rem,1.75vw,1.7rem) !important}
+#content .program__block-title::after{margin:.62rem auto .58rem}
+#content .program__block-hook{font-size:.93rem !important;line-height:1.45 !important}
+
+/* Brace + bar */
+#content .agn-brace{height:32px}
+#content .agn-brace__stem{height:15px}
+#content .agn-brace__bar{top:14px}
+#content .agn-brace__drop{top:14px}
+#content .agn-thread{padding:.85rem 1.5rem .95rem}
+#content .agn-thread__label{margin-bottom:.35rem}
+#content .agn-thread__stmt{font-size:clamp(1.05rem,1.45vw,1.32rem)}
+
+/* ---- 2 columns: re-map the brace to two stems instead of four ---- */
+@media (max-width:1080px){
+  #content .agn-brace{
+    height:30px;
+    --step:calc((100% + var(--g))/2);
+    --c1:calc((100% - var(--g))/4);
+  }
+  #content .agn-brace__stem,#content .agn-brace__bar{display:block}
+  #content .agn-brace__stem--3,#content .agn-brace__stem--4{display:none}
+  #content .agn-brace__drop{top:14px}
+}
+
+/* ---- Mobile: keep the 2-up grid so the whole arc stays scannable ---- */
+@media (max-width:620px){
+  #content .program__blocks{grid-template-columns:repeat(2,1fr) !important;gap:.7rem !important;margin-top:1rem !important}
+  #content .agn-brace{--g:.7rem;height:26px}
+  #content .agn-brace__stem{height:12px}
+  #content .agn-brace__bar,#content .agn-brace__drop{top:11px}
+  #content .program__block{padding:1rem .7rem 1.05rem !important;border-radius:14px !important}
+  #content .program__block-header{gap:.35rem !important;margin:0 0 .6rem !important}
+  #content .program__block-step{font-size:1.15rem}
+  #content .program__block-theme{font-size:.5rem !important;letter-spacing:.08em !important;padding:.22rem .42rem !important;border-width:1px !important}
+  #content .agn-ico,#content .agn-ico--fill{width:29px;height:29px;margin-bottom:.55rem}
+  #content .program__block-title{font-size:1.05rem !important;line-height:1.2 !important}
+  #content .program__block-title::after{width:26px;margin:.5rem auto .48rem}
+  #content .program__block-hook{font-size:.79rem !important;line-height:1.4 !important}
+}
+/* Short desktop windows (e.g. 1280x800 or 1366x768 screens once browser chrome
+   is subtracted). Trade a little air for keeping the whole arc above the fold. */
+@media (min-width:900px) and (max-height:720px){
+  #content{padding-top:calc(var(--header-h) + .5rem) !important}
+  #content .program .sec-hd__num{font-size:2.35rem}
+  #content .agn-desc{font-size:1.15rem !important;margin-bottom:.45rem}
+  #content .program__blocks{margin-top:.85rem !important;gap:.85rem !important}
+  #content .program__block{padding:1.05rem 1rem 1rem !important}
+  #content .program__block-header{margin:0 0 .6rem !important}
+  #content .program__block-step{font-size:1.2rem}
+  #content .agn-ico,#content .agn-ico--fill{width:31px;height:31px;margin-bottom:.55rem}
+  #content .program__block-title{font-size:1.32rem !important}
+  #content .program__block-title::after{margin:.5rem auto .48rem}
+  #content .program__block-hook{font-size:.88rem !important;line-height:1.4 !important}
+  #content .agn-brace{height:26px}
+  #content .agn-brace__stem{height:12px}
+  #content .agn-brace__bar,#content .agn-brace__drop{top:11px}
+  #content .agn-thread{padding:.7rem 1.5rem .8rem}
+  #content .agn-thread__stmt{font-size:1.14rem}
 }
 /* build: styles v194 */
