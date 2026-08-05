@@ -4648,4 +4648,80 @@ body.menu-open{overflow:hidden}
   #content .agn-thread{min-height:0;padding:1rem 1.1rem !important;border-radius:14px}
   #content .agn-thread__stmt{font-size:1.15rem !important;line-height:1.3 !important}
 }
-/* build: styles v195 */
+/* ===== Agenda v13: underline the second half of the statement ===== */
+#content .agn-thread__stmt em{
+  text-decoration:underline;
+  text-decoration-thickness:2px;
+  text-underline-offset:6px;
+  text-decoration-skip-ink:auto;
+}
+@media (max-width:620px){
+  #content .agn-thread__stmt em{text-decoration-thickness:1.5px;text-underline-offset:4px}
+}
+/* ===== Agenda v14: fit the whole arc above the Safari toolbar on phones =====
+   Budget at 390x844: ~142px sticky header + ~85px browser toolbar overlay
+   leaves ~750px. Every rule below buys back part of that. */
+@media (max-width:620px){
+  /* Header stack */
+  #content{padding-top:calc(var(--header-h) + .35rem) !important}
+  #content .program .sec-hd{margin-bottom:.15rem !important}
+  #content .program .sec-hd__num{font-size:2rem !important}
+  #content .program__intro{margin-top:.45rem !important}
+  #content .agn-desc{font-size:1rem !important;line-height:1.32 !important;margin-bottom:.35rem !important}
+  #content .program__blocks{margin-top:.6rem !important;gap:.6rem !important}
+
+  /* Cards: number and label share a row, icon shrinks, air comes out */
+  #content .program__block{padding:.8rem .6rem .85rem !important}
+  #content .program__block-header{flex-direction:row !important;align-items:center !important;justify-content:center !important;gap:.45rem !important;margin:0 0 .45rem !important}
+  #content .program__block-step{font-size:1rem}
+  #content .program__block-theme{font-size:.46rem !important;letter-spacing:.06em !important;padding:.18rem .34rem !important}
+  #content .agn-ico,#content .agn-ico--fill{width:24px;height:24px;margin-bottom:.4rem}
+  #content .program__block-title{font-size:.95rem !important;line-height:1.18 !important}
+  #content .program__block-title::after{width:22px;margin:.38rem auto .36rem}
+  #content .program__block-hook{font-size:.72rem !important;line-height:1.35 !important}
+
+  /* Brace + bar */
+  #content .agn-brace{--g:.6rem;height:18px}
+  #content .agn-brace__stem{height:8px}
+  #content .agn-brace__bar,#content .agn-brace__drop{top:7px}
+  #content .agn-thread{padding:.75rem .9rem !important;border-radius:12px}
+  #content .agn-thread__stmt{font-size:1rem !important;line-height:1.3 !important}
+  #content .agn-thread__stmt em{text-decoration-thickness:1.5px;text-underline-offset:3px}
+}
+/* Narrower phones (375px and below) wrap titles and hooks onto extra lines,
+   which is what pushes the bar back under the toolbar. Trim a little more. */
+@media (max-width:400px){
+  #content .program .sec-hd__num{font-size:1.85rem !important}
+  #content .agn-desc{font-size:.94rem !important}
+  #content .program__blocks{gap:.5rem !important}
+  #content .agn-brace{--g:.5rem}
+  #content .program__block{padding:.7rem .5rem .75rem !important}
+  #content .agn-ico,#content .agn-ico--fill{width:22px;height:22px;margin-bottom:.32rem}
+  #content .program__block-title{font-size:.89rem !important;line-height:1.16 !important}
+  #content .program__block-title::after{margin:.32rem auto .3rem}
+  #content .program__block-hook{font-size:.68rem !important;line-height:1.32 !important}
+  #content .agn-thread{padding:.65rem .8rem !important}
+  #content .agn-thread__stmt{font-size:.94rem !important}
+}
+/* Short phones (iPhone SE and similar, ~667px tall). The sticky header alone
+   eats 142px here, so the icons come out to keep the bar clear of the toolbar. */
+@media (max-width:620px) and (max-height:700px){
+  #content{padding-top:calc(var(--header-h) + .2rem) !important}
+  #content .program .sec-hd__num{font-size:1.6rem !important}
+  #content .agn-desc{font-size:.85rem !important;line-height:1.28 !important;margin-bottom:.25rem !important}
+  #content .program__intro{margin-top:.3rem !important}
+  #content .program__blocks{margin-top:.45rem !important;gap:.45rem !important}
+  #content .agn-ico,#content .agn-ico--fill{display:none}
+  #content .program__block{padding:.6rem .5rem .65rem !important}
+  #content .program__block-header{margin:0 0 .35rem !important}
+  #content .program__block-step{font-size:.9rem}
+  #content .program__block-title{font-size:.84rem !important}
+  #content .program__block-title::after{margin:.28rem auto .26rem}
+  #content .program__block-hook{font-size:.65rem !important;line-height:1.3 !important}
+  #content .agn-brace{height:14px}
+  #content .agn-brace__stem{height:6px}
+  #content .agn-brace__bar,#content .agn-brace__drop{top:5px}
+  #content .agn-thread{padding:.55rem .7rem !important}
+  #content .agn-thread__stmt{font-size:.88rem !important}
+}
+/* build: styles v197 */
