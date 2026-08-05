@@ -45,8 +45,10 @@
 .hero__line1{text-shadow:0 3px 26px rgba(4,10,24,.55)}
 .hero h1 .serif{text-shadow:0 2px 18px rgba(4,10,24,.5)}
 .hero__kicker .mono{color:rgba(244,236,224,.92)!important}
-/* Desktop: larger blurb and CTAs to fill the space above the fold. */
+/* Desktop: centre the content between the nav bar and the marquee — the
+   default padding was 27px top vs 99px bottom, floating the block 36px high. */
 @media (min-width:700px){
+  .hero{padding-bottom:clamp(1.25rem,3vh,2.25rem)!important}
   .hero__blurb{font-size:clamp(1.25rem,1.6vw,1.5rem)!important;line-height:1.6;margin-top:1.6rem!important}
   .hero__ctas{margin-top:2.4rem;gap:20px}
   .hero__ctas .btn{font-size:1.32rem;padding:1.3rem 2.7rem;min-height:70px;border-radius:999px}
@@ -77,14 +79,14 @@
   .hero__kicker{margin-top:.9rem!important;margin-bottom:0!important}
 
   /* Hierarchy: venue is the #2 line; the date should whisper, not shout. */
-  .hero h1 .serif{font-size:1.72rem!important;margin-top:.3em}
-  .hero h1{margin-bottom:.4rem}
-  .hero__kicker .mono{font-size:.85rem;letter-spacing:.22em;color:rgba(244,236,224,.66)!important}
+  .hero h1 .serif{font-size:1.98rem!important;margin-top:.3em}
+  .hero h1{margin-bottom:.45rem}
+  .hero__kicker .mono{font-size:.9rem;letter-spacing:.24em;color:rgba(244,236,224,.7)!important}
 
   /* Rhythm: one consistent beat between blocks. */
-  .hero__blurb{margin-top:1rem;font-size:1.09rem;line-height:1.55;max-width:32ch}
-  .hero__ctas{margin-top:1.55rem;gap:14px}
-  .hero__ctas .btn{font-size:1.22rem;padding:1.15rem 1.4rem;min-height:64px}
+  .hero__blurb{margin-top:1.1rem;font-size:1.16rem;line-height:1.55;max-width:34ch}
+  .hero__ctas{margin-top:1.7rem;gap:15px}
+  .hero__ctas .btn{font-size:1.3rem;padding:1.25rem 1.4rem;min-height:70px}
 }
 @media (max-width:360px){
   .hero{padding-top:calc(var(--header-h) + .3rem)!important;padding-bottom:.8rem!important}
