@@ -4724,4 +4724,81 @@ body.menu-open{overflow:hidden}
   #content .agn-thread{padding:.55rem .7rem !important}
   #content .agn-thread__stmt{font-size:.88rem !important}
 }
-/* build: styles v197 */
+/* ===== Agenda v15: hold the statement to two lines on phones ===== */
+/* "Sovereignty at every scale" on line 1, the underlined half on line 2.
+   Both halves already fit their line at these sizes; this just forces
+   the break rather than letting "across" ride up to line 1. */
+@media (max-width:620px){
+  #content .agn-thread__stmt span,
+  #content .agn-thread__stmt em{display:block}
+  #content .agn-thread__stmt em{margin-top:.18em}
+}
+/* Line 2 must not wrap, and available width tracks viewport width, so size it
+   in vw with a cap rather than fixed per-breakpoint values. */
+@media (max-width:620px){
+  #content .agn-thread__stmt{font-size:min(3.8vw,1.05rem) !important}
+}
+@media (max-width:400px){
+  #content .agn-thread__stmt{font-size:min(3.85vw,1rem) !important}
+}
+@media (max-width:620px) and (max-height:700px){
+  #content .agn-thread__stmt{font-size:min(3.8vw,.95rem) !important}
+}
+/* ===== Agenda v16: mobile type scaled up into the available headroom ===== */
+@media (min-width:386px) and (max-width:620px){
+  #content{padding-top:calc(var(--header-h) + .3rem) !important}
+  #content .program__blocks{gap:.5rem !important}
+  #content .agn-brace{height:16px}
+  #content .agn-brace__stem{height:7px}
+  #content .agn-brace__bar,#content .agn-brace__drop{top:6px}
+  #content .program .sec-hd__num{font-size:2.06rem !important}
+  #content .agn-desc{font-size:1.03rem !important;line-height:1.32 !important}
+  #content .program__block{padding:0.824rem 0.618rem 0.875rem !important}
+  #content .program__block-header{gap:0.464rem !important;margin:0 0 0.464rem !important}
+  #content .program__block-step{font-size:1.03rem}
+  #content .program__block-theme{font-size:0.474rem !important;padding:0.185rem 0.35rem !important}
+  #content .agn-ico,#content .agn-ico--fill{width:25px;height:25px;margin-bottom:0.412rem}
+  #content .program__block-title{font-size:0.978rem !important}
+  #content .program__block-title::after{margin:0.391rem auto 0.371rem}
+  #content .program__block-hook{font-size:0.742rem !important}
+  #content .agn-thread{padding:0.772rem .45rem !important}
+  #content .agn-thread__stmt{font-size:min(3.97vw,1.236rem) !important}
+}
+@media (max-width:385px){
+  #content .program .sec-hd__num{font-size:1.887rem !important}
+  #content .agn-desc{font-size:0.959rem !important}
+  #content .program__block{padding:0.714rem 0.51rem 0.765rem !important}
+  #content .program__block-header{gap:0.428rem !important;margin:0 0 0.428rem !important}
+  #content .program__block-step{font-size:1.02rem}
+  #content .program__block-theme{font-size:0.469rem !important;padding:0.184rem 0.347rem !important}
+  #content .agn-ico,#content .agn-ico--fill{width:22px;height:22px;margin-bottom:0.326rem}
+  #content .program__block-title{font-size:0.908rem !important}
+  #content .program__block-title::after{margin:0.326rem auto 0.306rem}
+  #content .program__block-hook{font-size:0.694rem !important}
+  #content .agn-thread{padding:0.663rem .4rem !important}
+  #content .agn-thread__stmt{font-size:min(3.97vw,1.122rem) !important}
+}
+/* Short phones last so they win over the width tiers above. */
+@media (max-width:620px) and (max-height:700px){
+  #content{padding-top:calc(var(--header-h) + .2rem) !important}
+  #content .program .sec-hd__num{font-size:1.7rem !important}
+  #content .agn-desc{font-size:.88rem !important;line-height:1.28 !important}
+  #content .program__blocks{gap:.45rem !important}
+  #content .agn-ico,#content .agn-ico--fill{display:none}
+  #content .program__block{padding:.6rem .5rem .65rem !important}
+  #content .program__block-header{margin:0 0 .35rem !important}
+  #content .program__block-step{font-size:.92rem}
+  #content .program__block-title{font-size:.86rem !important}
+  #content .program__block-title::after{margin:.28rem auto .26rem}
+  #content .program__block-hook{font-size:.67rem !important;line-height:1.3 !important}
+  #content .agn-brace{height:14px}
+  #content .agn-brace__stem{height:6px}
+  #content .agn-brace__bar,#content .agn-brace__drop{top:5px}
+  #content .agn-thread{padding:.55rem .6rem !important}
+  #content .agn-thread__stmt{font-size:min(3.8vw,.9rem) !important}
+}
+/* 320px-class phones cannot fit line 2 at the sizes above. */
+@media (max-width:340px){
+  #content .agn-thread__stmt{font-size:min(3.55vw,.8rem) !important}
+}
+/* build: styles v200 */
