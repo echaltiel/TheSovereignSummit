@@ -38,8 +38,8 @@
 <script>if(location.hash==='#leadership')location.replace('/team#leadership');</script>
 <style>
 /* Hero headline: single line, sized to fit at every width. */
-.hero h1{font-size:clamp(2.9rem,7.6vw,6.2rem)}
-.hero__dot{color:#FF6941}
+.hero h1{font-size:clamp(3.4rem,9.2vw,7.6rem)}
+.hero__line1{display:inline-block;line-height:.98}
 /* Venue line rides at 0.94em of the headline by default; hold it just below
    the original balance so the headline stays on top. */
 .hero h1 .serif{font-size:.58em!important}
@@ -63,15 +63,18 @@
   @keyframes heroRise{to{opacity:1;transform:none}}
 }
 @media (max-width:699px){
-  .hero h1{font-size:min(calc((100vw - 44px)/11.4),3.1rem)}
+  .hero h1{font-size:min(calc((100vw - 44px)/5.9),4.1rem)}
   .hero__line2{left:0}
 }
-@media (max-width:360px) and (max-height:620px){
-  .hero{padding-top:calc(var(--header-h) + .4rem)!important;padding-bottom:.9rem!important}
-  .hero__kicker{margin-top:.55rem!important;margin-bottom:0!important}
-  .hero__blurb{margin-top:.55rem!important;font-size:.95rem}
-  .hero__ctas{margin-top:1rem}
-  .hero__ctas .btn{padding:.72rem 1.05rem;font-size:.94rem}
+@media (max-width:360px){
+  .hero{padding-top:calc(var(--header-h) + .3rem)!important;padding-bottom:.8rem!important}
+  .hero h1{font-size:min(calc((100vw - 44px)/5.9),2.6rem);margin-bottom:.5rem}
+  .hero h1 .serif{font-size:.62em!important}
+  .hero__kicker{margin-top:.45rem!important;margin-bottom:0!important}
+  .hero__kicker .mono{font-size:.95rem}
+  .hero__blurb{margin-top:.45rem!important;font-size:.92rem;line-height:1.45}
+  .hero__ctas{margin-top:.85rem}
+  .hero__ctas .btn{padding:.68rem 1rem;font-size:.92rem}
 }
 </style>
 
@@ -158,13 +161,13 @@
   <div class="hero__scrim" aria-hidden="true"></div>
   <div class="wrap hero__in">
     <h1>
-      <span class="hero__line1">Own Your Future<span class="hero__dot">.</span></span><br>
+      <span class="hero__line1">Own Your<br>Future.</span><br>
       <span class="serif">Fontainebleau, Miami Beach</span>
     </h1>
     <div class="hero__kicker hero__kicker--below">
       <span class="mono">February 4&ndash;7, 2027</span>
     </div>
-    <p class="hero__blurb">Sovereignty at every scale - across AI, energy, money, and beyond</p>
+    <p class="hero__blurb">Sovereignty at every scale &mdash; across AI, energy, money, and beyond</p>
     <div class="hero__ctas">
       <a class="btn" href="/tickets">Get Your Summit Pass <span class="btn__arrow">→</span></a>
       <a class="btn btn--room" href="https://book.passkey.com/gt/221585758?gtid=45ddbbd9fc5ddc12358c8218e7a87edc" target="_blank" rel="noopener">
