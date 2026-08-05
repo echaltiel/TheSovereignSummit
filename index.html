@@ -38,8 +38,7 @@
 <script>if(location.hash==='#leadership')location.replace('/team#leadership');</script>
 <style>
 /* Hero headline: single line, sized to fit at every width. */
-.hero h1{font-size:clamp(3.4rem,9.2vw,7.6rem)}
-.hero__line1{display:inline-block;line-height:.98}
+.hero h1{font-size:clamp(2.9rem,7.6vw,6.2rem)}
 /* Venue line rides at 0.94em of the headline by default; hold it just below
    the original balance so the headline stays on top. */
 .hero h1 .serif{font-size:.58em!important}
@@ -63,12 +62,11 @@
   @keyframes heroRise{to{opacity:1;transform:none}}
 }
 @media (max-width:699px){
-  .hero h1{font-size:min(calc((100vw - 44px)/5.9),4.1rem)}
+  .hero h1{font-size:min(calc((100vw - 44px)/11.4),3.1rem)}
   .hero__line2{left:0}
 }
 @media (max-width:360px){
   .hero{padding-top:calc(var(--header-h) + .3rem)!important;padding-bottom:.8rem!important}
-  .hero h1{font-size:min(calc((100vw - 44px)/5.9),2.6rem);margin-bottom:.5rem}
   .hero h1 .serif{font-size:.62em!important}
   .hero__kicker{margin-top:.45rem!important;margin-bottom:0!important}
   .hero__kicker .mono{font-size:.95rem}
@@ -161,7 +159,7 @@
   <div class="hero__scrim" aria-hidden="true"></div>
   <div class="wrap hero__in">
     <h1>
-      <span class="hero__line1">Own Your<br>Future.</span><br>
+      <span class="hero__line1">Own Your Future.</span><br>
       <span class="serif">Fontainebleau, Miami Beach</span>
     </h1>
     <div class="hero__kicker hero__kicker--below">
