@@ -37,88 +37,44 @@
 <link rel="stylesheet" href="styles.css?v=192">
 <script>if(location.hash==='#leadership')location.replace('/team#leadership');</script>
 <style>
-/* Hero headline: the new lines are longer than the old ones, so size the type
-   to the longest line instead of letting "YOUR" orphan onto its own row. */
-.hero h1{font-size:clamp(2.9rem,8.1vw,6.7rem)}
+/* Hero headline: single line, sized to fit at every width. */
+.hero h1{font-size:clamp(2.9rem,7.6vw,6.2rem)}
 .hero__dot{color:#FF6941}
-/* Venue line was 0.94em of the headline, so it scaled up with it and took over.
-   Decouple it: clearly subordinate, still coral serif. */
-.hero h1 .serif{font-size:clamp(1.55rem,3vw,2.7rem)!important;margin-top:.28em;display:block!important;letter-spacing:.005em}
-.hero__chip{
-  display:inline-flex;align-items:center;
-  padding:.5rem .95rem;border:1px solid rgba(244,236,224,.28);border-radius:999px;
-  font-size:.78rem!important;letter-spacing:.14em!important;color:rgba(244,236,224,.92);
-  background:rgba(10,18,36,.42);backdrop-filter:blur(6px);
-}
-.hero__proof{display:inline-flex;align-items:center;gap:.9rem;margin-top:1.4rem;text-decoration:none}
-.hero__faces{display:inline-flex;flex:0 0 auto}
-.hero__proof-text{min-width:0}
-.hero__faces img{
-  width:46px;height:46px;border-radius:50%;object-fit:cover;object-position:50% 18%;
-  border:2px solid #131E33;box-shadow:0 4px 14px rgba(0,0,0,.4);
-}
-.hero__faces img + img{margin-left:-13px}
-.hero__proof-text{font-family:var(--fb);font-size:.95rem;color:rgba(244,236,224,.78)}
-.hero__proof-text strong{color:#F4ECE0;font-weight:700}
-.hero__proof:hover .hero__proof-text{color:#F4ECE0}
+/* Venue line rides at 0.94em of the headline by default; hold it just below
+   the original balance so the headline stays on top. */
+.hero h1 .serif{font-size:.58em!important}
 .hero__line1{text-shadow:0 3px 26px rgba(4,10,24,.55)}
 .hero h1 .serif{text-shadow:0 2px 18px rgba(4,10,24,.5)}
 .hero__kicker .mono{color:rgba(244,236,224,.92)!important}
 .hero__ctas .btn{box-shadow:0 10px 34px rgba(255,105,65,.32);transition:transform .18s ease,box-shadow .18s ease}
 .hero__ctas .btn:hover{transform:translateY(-2px);box-shadow:0 16px 44px rgba(255,105,65,.45)}
+.hero h1 > br + span,
+.hero h1{white-space:nowrap}
+.hero h1 .serif{white-space:normal;display:inline-block}
 @media (prefers-reduced-motion: no-preference){
-  .hero__line1,.hero h1 .serif,.hero__kicker,.hero__blurb,.hero__proof,.hero__ctas{
+  .hero__line1,.hero h1 .serif,.hero__kicker,.hero__blurb,.hero__ctas{
     opacity:0;transform:translateY(16px);
     animation:heroRise .65s cubic-bezier(.22,.75,.3,1) forwards;
   }
   .hero h1 .serif{animation-delay:.12s}
   .hero__kicker{animation-delay:.22s}
   .hero__blurb{animation-delay:.3s}
-  .hero__proof{animation-delay:.38s}
-  .hero__ctas{animation-delay:.48s}
+  .hero__ctas{animation-delay:.4s}
   @keyframes heroRise{to{opacity:1;transform:none}}
 }
-.hero h1 > br + span,
-.hero h1{white-space:nowrap}
-.hero h1 .serif{white-space:normal;display:inline-block}
 @media (max-width:699px){
   .hero h1{font-size:min(calc((100vw - 44px)/11.4),3.1rem)}
   .hero__line2{left:0}
-  .hero h1 .serif{font-size:clamp(1.25rem,5.4vw,1.6rem)!important;margin-top:.34em}
-  .hero h1{margin-bottom:.65rem}
-  .hero__kicker{gap:7px 8px;margin-bottom:0}
-  .hero__chip{padding:.42rem .72rem;font-size:.66rem!important;letter-spacing:.11em!important}
-  .hero__blurb{font-size:1rem;line-height:1.5;margin-top:.85rem}
-  .hero__proof{margin-top:1.05rem;gap:.7rem}
-  .hero__faces img{width:37px;height:37px;border-width:2px}
-  .hero__faces img + img{margin-left:-11px}
-  .hero__proof-text{font-size:.85rem;line-height:1.35}
-  .hero__ctas{margin-top:1.1rem}
 }
-/* very small phones (SE): tighten further so both CTAs stay above the fold */
-@media (max-width:340px) and (max-height:600px){
-  .hero h1{font-size:1.55rem!important;margin-bottom:.4rem!important}
-  .hero h1 .serif{font-size:1.02rem!important}
-  .hero__blurb{display:none}
-  .hero__proof{margin-top:.6rem!important}
-  .hero__ctas{margin-top:.7rem!important}
-  .hero__ctas .btn{padding:.68rem 1rem;font-size:.92rem}
-}
-@media (max-width:440px) and (max-height:750px){
+@media (max-width:360px) and (max-height:620px){
   .hero{padding-top:calc(var(--header-h) + .4rem)!important;padding-bottom:.9rem!important}
   .hero__kicker{margin-top:.55rem!important;margin-bottom:0!important}
-  .hero__blurb{margin-top:.55rem!important}
-  .hero h1 .serif{font-size:1.15rem!important;margin-top:.28em}
-  .hero__blurb{font-size:.92rem;margin-top:.6rem}
-  .hero__chip{padding:.34rem .6rem;font-size:.6rem!important}
-  .hero__proof{margin-top:.8rem}
-  .hero__faces img{width:32px;height:32px}
-  .hero__faces img + img{margin-left:-10px}
-  .hero__proof-text{font-size:.78rem}
-  .hero__ctas{margin-top:.85rem}
-  .hero__ctas .btn{padding:.78rem 1.1rem}
+  .hero__blurb{margin-top:.55rem!important;font-size:.95rem}
+  .hero__ctas{margin-top:1rem}
+  .hero__ctas .btn{padding:.72rem 1.05rem;font-size:.94rem}
 }
 </style>
+
 </head>
 <body>
 <div class="header" id="siteHeader">
@@ -206,21 +162,9 @@
       <span class="serif">Fontainebleau, Miami Beach</span>
     </h1>
     <div class="hero__kicker hero__kicker--below">
-      <span class="mono hero__chip">February 4&ndash;7, 2027</span>
-      <span class="mono hero__chip">1,000 Attendees</span>
-      <span class="mono hero__chip">4 Days &middot; 1 Oceanfront Roof</span>
+      <span class="mono">February 4&ndash;7, 2027</span>
     </div>
     <p class="hero__blurb">Sovereignty at every scale - across AI, energy, money, and beyond</p>
-    <a class="hero__proof" href="/speakers">
-      <span class="hero__faces">
-        <img src="images/speakers/saylor.webp" alt="Michael Saylor" loading="eager">
-        <img src="images/speakers/brunell-confirmed.webp" alt="" aria-hidden="true">
-        <img src="images/speakers/booth-confirmed.webp" alt="" aria-hidden="true">
-        <img src="images/speakers/sessions-confirmed.webp" alt="" aria-hidden="true">
-        <img src="images/speakers/callahan-confirmed.webp" alt="" aria-hidden="true">
-      </span>
-      <span class="hero__proof-text"><strong>Michael Saylor</strong> is confirmed &mdash; more speakers announced soon &rarr;</span>
-    </a>
     <div class="hero__ctas">
       <a class="btn" href="/tickets">Get Your Summit Pass <span class="btn__arrow">→</span></a>
       <a class="btn btn--room" href="https://book.passkey.com/gt/221585758?gtid=45ddbbd9fc5ddc12358c8218e7a87edc" target="_blank" rel="noopener">
