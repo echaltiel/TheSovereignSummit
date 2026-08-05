@@ -45,6 +45,12 @@
 .hero__line1{text-shadow:0 3px 26px rgba(4,10,24,.55)}
 .hero h1 .serif{text-shadow:0 2px 18px rgba(4,10,24,.5)}
 .hero__kicker .mono{color:rgba(244,236,224,.92)!important}
+/* Desktop: larger blurb and CTAs to fill the space above the fold. */
+@media (min-width:700px){
+  .hero__blurb{font-size:clamp(1.25rem,1.6vw,1.5rem)!important;line-height:1.6;margin-top:1.6rem!important}
+  .hero__ctas{margin-top:2.4rem;gap:20px}
+  .hero__ctas .btn{font-size:1.32rem;padding:1.3rem 2.7rem;min-height:70px;border-radius:999px}
+}
 .hero__ctas .btn{box-shadow:0 10px 34px rgba(255,105,65,.32);transition:transform .18s ease,box-shadow .18s ease}
 .hero__ctas .btn:hover{transform:translateY(-2px);box-shadow:0 16px 44px rgba(255,105,65,.45)}
 .hero h1 > br + span,
@@ -64,15 +70,29 @@
 @media (max-width:699px){
   .hero h1{font-size:min(calc((100vw - 44px)/11.4),3.1rem)}
   .hero__line2{left:0}
+
+  /* Balance: centre the block in the viewport instead of top-stacking it
+     over a large empty band. */
+  .hero{align-items:center!important}
+  .hero__kicker{margin-top:.9rem!important;margin-bottom:0!important}
+
+  /* Hierarchy: venue is the #2 line; the date should whisper, not shout. */
+  .hero h1 .serif{font-size:1.72rem!important;margin-top:.3em}
+  .hero h1{margin-bottom:.4rem}
+  .hero__kicker .mono{font-size:.85rem;letter-spacing:.22em;color:rgba(244,236,224,.66)!important}
+
+  /* Rhythm: one consistent beat between blocks. */
+  .hero__blurb{margin-top:.95rem;font-size:1.02rem;line-height:1.55;max-width:30ch}
+  .hero__ctas{margin-top:1.45rem}
 }
 @media (max-width:360px){
   .hero{padding-top:calc(var(--header-h) + .3rem)!important;padding-bottom:.8rem!important}
-  .hero h1 .serif{font-size:.62em!important}
-  .hero__kicker{margin-top:.45rem!important;margin-bottom:0!important}
-  .hero__kicker .mono{font-size:.95rem}
-  .hero__blurb{margin-top:.45rem!important;font-size:.92rem;line-height:1.45}
-  .hero__ctas{margin-top:.85rem}
-  .hero__ctas .btn{padding:.68rem 1rem;font-size:.92rem}
+  .hero h1 .serif{font-size:1.42rem!important}
+  .hero__kicker{margin-top:.6rem!important;margin-bottom:0!important}
+  .hero__kicker .mono{font-size:.78rem;letter-spacing:.2em}
+  .hero__blurb{margin-top:.7rem!important;font-size:.94rem;line-height:1.5}
+  .hero__ctas{margin-top:1.05rem}
+  .hero__ctas .btn{padding:.7rem 1rem;font-size:.93rem}
 }
 </style>
 
