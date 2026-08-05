@@ -4801,4 +4801,97 @@ body.menu-open{overflow:hidden}
 @media (max-width:340px){
   #content .agn-thread__stmt{font-size:min(3.55vw,.8rem) !important}
 }
-/* build: styles v200 */
+/* ===== Agenda v17: Part 1 four-day strip + Part 2 header =====
+   Weighted 1fr / 1.6fr / 1fr so Fri+Sat reads as the anchor and Thu/Sun as
+   bookends. Equal thirds would overclaim a brunch as a conference day. */
+#content .days{
+  display:grid;
+  grid-template-columns:1fr 1.6fr 1fr;
+  gap:.9rem;
+  align-items:stretch;
+  margin-top:1.15rem;
+}
+#content .days__card{
+  border-radius:16px;
+  padding:1.35rem 1.2rem 1.3rem;
+  display:flex;
+  flex-direction:column;
+  text-align:center;
+}
+#content .days__card--edge{
+  background:rgba(244,236,224,.05);
+  border:1px solid rgba(244,236,224,.16);
+}
+#content .days__card--main{
+  background:#F4ECE0;
+  border:1px solid #F4ECE0;
+}
+#content .days__eyebrow{
+  font-family:var(--fm);font-size:.6rem;font-weight:700;
+  letter-spacing:.24em;text-transform:uppercase;
+  color:var(--accent);margin-bottom:.5rem;
+}
+#content .days__date{
+  font-family:var(--fm);font-size:.68rem;font-weight:700;
+  letter-spacing:.14em;text-transform:uppercase;
+  color:rgba(244,236,224,.62);margin-bottom:.6rem;
+}
+#content .days__card--main .days__date{color:rgba(19,30,51,.6)}
+#content .days__title{
+  font-family:var(--fd);font-weight:400;
+  font-size:clamp(1.15rem,1.55vw,1.45rem);
+  line-height:1.18;color:#F4ECE0;margin:0 0 .55rem;
+}
+#content .days__card--main .days__title{
+  font-family:var(--fb);font-weight:800;letter-spacing:-.02em;
+  font-size:clamp(1.3rem,1.85vw,1.7rem);color:#16233E;
+}
+#content .days__hook{
+  font-size:.9rem;line-height:1.45;
+  color:rgba(244,236,224,.6);margin:0 0 .85rem;
+}
+#content .days__card--main .days__hook{color:rgba(19,30,51,.68);font-size:.95rem}
+#content .days__link{
+  margin-top:auto;
+  font-family:var(--fm);font-size:.63rem;font-weight:700;
+  letter-spacing:.16em;text-transform:uppercase;
+  color:var(--accent);text-decoration:none;
+  border-top:1px solid rgba(244,236,224,.14);padding-top:.7rem;
+}
+#content .days__card--main .days__link{border-top-color:rgba(19,30,51,.16)}
+#content .days__link:hover{text-decoration:underline;text-underline-offset:3px}
+
+/* Part 2 header: signposts the drill-down from the two conference days */
+#content .agn-part2{text-align:center;margin-top:2.4rem}
+#content .agn-part2__eyebrow{
+  font-family:var(--fm);font-size:.63rem;font-weight:700;
+  letter-spacing:.24em;text-transform:uppercase;
+  color:var(--accent);margin-bottom:.55rem;
+}
+#content .agn-part2__title{
+  font-family:var(--fb);font-weight:800;letter-spacing:-.025em;
+  font-size:clamp(1.6rem,2.6vw,2.3rem);
+  color:#F4ECE0;margin:0 0 .6rem;
+}
+
+@media (max-width:900px){
+  #content .days{grid-template-columns:1fr;gap:.6rem;margin-top:1rem}
+  #content .days__card{padding:1rem 1rem 1.05rem}
+  #content .days__title{font-size:1.15rem}
+  #content .days__card--main .days__title{font-size:1.3rem}
+  #content .days__hook{font-size:.85rem;margin-bottom:.7rem}
+  #content .days__card--main .days__hook{font-size:.88rem}
+  #content .agn-part2{margin-top:1.9rem}
+}
+@media (max-width:620px){
+  #content .days__card{padding:.85rem .85rem .9rem;border-radius:14px}
+  #content .days__date{font-size:.6rem;margin-bottom:.45rem}
+  #content .days__title{font-size:1.05rem;margin-bottom:.4rem}
+  #content .days__card--main .days__title{font-size:1.18rem}
+  #content .days__hook{font-size:.8rem;line-height:1.4;margin-bottom:.6rem}
+  #content .days__card--main .days__hook{font-size:.82rem}
+  #content .days__link{font-size:.58rem;padding-top:.55rem}
+  #content .agn-part2{margin-top:1.5rem}
+  #content .agn-part2__title{font-size:1.5rem}
+}
+/* build: styles v201 */
