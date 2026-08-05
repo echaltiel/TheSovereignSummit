@@ -4473,3 +4473,57 @@ body.menu-open{overflow:hidden}
   #content .speakers__arrow--next{right:-8px}
   #content .speakers__arrow--prev{left:-8px}
 }
+
+/* ===== Agenda v10: through-line band under the four tiles ===== */
+#content .agn-thread{
+  margin-top:1.15rem;
+  background:rgba(244,236,224,.05);
+  border:1px solid rgba(244,236,224,.14);
+  border-radius:16px;
+  padding:1.85rem 2.25rem 1.7rem;
+  text-align:center;
+}
+#content .agn-thread__label{
+  font-family:var(--fm);
+  font-size:.66rem;
+  font-weight:700;
+  letter-spacing:.24em;
+  text-transform:uppercase;
+  color:var(--accent);
+  margin-bottom:.95rem;
+}
+#content .agn-thread__stmt{
+  font-family:var(--fb);
+  font-weight:800;
+  letter-spacing:-.022em;
+  font-size:clamp(1.2rem,1.85vw,1.65rem);
+  line-height:1.28;
+  color:rgba(244,236,224,.72);
+  margin:0;
+  text-wrap:balance;
+}
+#content .agn-thread__stmt em{
+  font-family:var(--fd);
+  font-style:normal;
+  font-weight:400;
+  font-size:1.04em;
+  letter-spacing:0;
+  color:var(--accent);
+}
+#content .agn-thread__sub{
+  font-family:var(--fb);
+  font-weight:400;
+  font-size:.98rem;
+  line-height:1.55;
+  color:rgba(244,236,224,.55);
+  max-width:62ch;
+  margin:.85rem auto 0;
+  text-wrap:balance;
+}
+@media (max-width:720px){
+  #content .agn-thread{padding:1.5rem 1.35rem 1.4rem;border-radius:14px;margin-top:1rem}
+  #content .agn-thread__label{font-size:.6rem;letter-spacing:.2em;margin-bottom:.8rem}
+  #content .agn-thread__stmt{font-size:1.18rem}
+  #content .agn-thread__sub{font-size:.92rem;margin-top:.7rem}
+}
+/* build: styles v194 */
