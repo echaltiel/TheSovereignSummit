@@ -39,12 +39,29 @@
 <style>
 /* Hero headline: the new lines are longer than the old ones, so size the type
    to the longest line instead of letting "YOUR" orphan onto its own row. */
-.hero h1{font-size:clamp(2.9rem,7vw,5.8rem)}
+.hero h1{font-size:clamp(2.9rem,8.1vw,6.7rem)}
+.hero__dot{color:#FF6941}
+.hero__line1{text-shadow:0 3px 26px rgba(4,10,24,.55)}
+.hero h1 .serif{text-shadow:0 2px 18px rgba(4,10,24,.5)}
+.hero__kicker .mono{color:rgba(244,236,224,.92)!important}
+.hero__ctas .btn{box-shadow:0 10px 34px rgba(255,105,65,.32);transition:transform .18s ease,box-shadow .18s ease}
+.hero__ctas .btn:hover{transform:translateY(-2px);box-shadow:0 16px 44px rgba(255,105,65,.45)}
+@media (prefers-reduced-motion: no-preference){
+  .hero__line1,.hero h1 .serif,.hero__kicker,.hero__blurb,.hero__ctas{
+    opacity:0;transform:translateY(16px);
+    animation:heroRise .65s cubic-bezier(.22,.75,.3,1) forwards;
+  }
+  .hero h1 .serif{animation-delay:.12s}
+  .hero__kicker{animation-delay:.22s}
+  .hero__blurb{animation-delay:.3s}
+  .hero__ctas{animation-delay:.4s}
+  @keyframes heroRise{to{opacity:1;transform:none}}
+}
 .hero h1 > br + span,
 .hero h1{white-space:nowrap}
 .hero h1 .serif{white-space:normal;display:inline-block}
 @media (max-width:699px){
-  .hero h1{font-size:min(calc((100vw - 44px)/11.4),2.9rem)}
+  .hero h1{font-size:min(calc((100vw - 44px)/11.4),3.1rem)}
   .hero__line2{left:0}
 }
 </style>
@@ -131,7 +148,7 @@
   <div class="hero__scrim" aria-hidden="true"></div>
   <div class="wrap hero__in">
     <h1>
-      <span class="hero__line1">Own Your Future.</span><br>
+      <span class="hero__line1">Own Your Future<span class="hero__dot">.</span></span><br>
       <span class="serif">Fontainebleau, Miami Beach</span>
     </h1>
     <div class="hero__kicker hero__kicker--below">
