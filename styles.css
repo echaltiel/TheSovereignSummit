@@ -4894,4 +4894,158 @@ body.menu-open{overflow:hidden}
   #content .agn-part2{margin-top:1.5rem}
   #content .agn-part2__title{font-size:1.5rem}
 }
-/* build: styles v201 */
+/* ===== Agenda v18: readability + balance pass =====
+   1. All three day cards now carry an eyebrow, so date/title baselines align.
+   2. Grid gap and the brace's --g are set together at every breakpoint; they had
+      drifted apart (gap .5rem vs --g .6rem), throwing the stems off their cards.
+   3. Act tiles relax: the fold constraint moved to Part 1, so the compaction
+      added to force them above the fold is no longer needed. */
+
+/* --- Section label above the day strip --- */
+#content .agn-seclabel{
+  font-family:var(--fm);font-size:.66rem;font-weight:700;
+  letter-spacing:.26em;text-transform:uppercase;
+  color:rgba(244,236,224,.42);
+  text-align:center;margin:1.5rem 0 .5rem;
+}
+
+/* --- Day card balance --- */
+#content .days{margin-top:.35rem}
+#content .days__eyebrow--edge{color:rgba(244,236,224,.45)}
+#content .days__card--edge .days__title{margin-top:0}
+
+/* --- Gap / brace sync. Both values must match or the stems miss the cards. --- */
+#content .program__blocks{gap:1.15rem !important}
+#content .agn-brace{--g:1.15rem}
+@media (max-width:1080px){
+  #content .program__blocks{gap:.9rem !important}
+  #content .agn-brace{--g:.9rem}
+}
+@media (max-width:620px){
+  #content .program__blocks{gap:.6rem !important}
+  #content .agn-brace{--g:.6rem}
+}
+@media (max-width:385px){
+  #content .program__blocks{gap:.5rem !important}
+  #content .agn-brace{--g:.5rem}
+}
+
+/* --- Act tiles: let them breathe again --- */
+#content .program__block{padding:1.5rem 1.3rem 1.45rem !important}
+#content .program__block-header{gap:.5rem !important;margin:0 0 .95rem !important}
+#content .program__block-step{font-size:1.5rem}
+#content .program__block-theme{font-size:.6rem !important;letter-spacing:.1em !important;padding:.26rem .58rem !important}
+#content .agn-ico,#content .agn-ico--fill{width:40px;height:40px;margin-bottom:.85rem}
+#content .program__block-title{font-size:clamp(1.5rem,1.85vw,1.8rem) !important}
+#content .program__block-title::after{width:32px;margin:.72rem auto .68rem}
+#content .program__block-hook{font-size:1rem !important;line-height:1.5 !important}
+
+/* Short desktop windows: Part 1 owns the fold now, so only a light trim. */
+@media (min-width:900px) and (max-height:720px){
+  #content .program__block{padding:1.25rem 1.15rem 1.2rem !important}
+  #content .program__block-header{margin:0 0 .8rem !important}
+  #content .program__block-step{font-size:1.35rem}
+  #content .agn-ico,#content .agn-ico--fill{width:35px;height:35px;margin-bottom:.7rem}
+  #content .program__block-title{font-size:1.5rem !important}
+  #content .program__block-title::after{margin:.6rem auto .56rem}
+  #content .program__block-hook{font-size:.95rem !important;line-height:1.45 !important}
+}
+
+/* --- Mobile act tiles: sized for reading, not for the fold --- */
+@media (min-width:386px) and (max-width:620px){
+  #content .program__block{padding:1.05rem .8rem 1.1rem !important}
+  #content .program__block-header{gap:.45rem !important;margin:0 0 .6rem !important}
+  #content .program__block-step{font-size:1.25rem}
+  #content .program__block-theme{font-size:.56rem !important;letter-spacing:.08em !important;padding:.2rem .44rem !important}
+  #content .agn-ico,#content .agn-ico--fill{width:31px;height:31px;margin-bottom:.55rem}
+  #content .program__block-title{font-size:1.16rem !important;line-height:1.2 !important}
+  #content .program__block-title::after{width:26px;margin:.5rem auto .46rem}
+  #content .program__block-hook{font-size:.86rem !important;line-height:1.45 !important}
+}
+@media (max-width:385px){
+  #content .program__block{padding:.9rem .62rem .95rem !important}
+  #content .program__block-header{margin:0 0 .52rem !important}
+  #content .program__block-step{font-size:1.12rem}
+  #content .agn-ico,#content .agn-ico--fill{width:27px;height:27px;margin-bottom:.45rem}
+  #content .program__block-title{font-size:1.03rem !important;line-height:1.18 !important}
+  #content .program__block-title::after{width:24px;margin:.4rem auto .38rem}
+  #content .program__block-hook{font-size:.78rem !important;line-height:1.42 !important}
+}
+
+/* --- Breathing room between the two parts --- */
+#content .agn-part2{margin-top:3rem !important;position:relative;padding-top:2.4rem}
+#content .agn-part2::before{
+  content:"";position:absolute;top:0;left:50%;transform:translateX(-50%);
+  width:64px;height:1px;background:rgba(244,236,224,.18);
+}
+@media (max-width:900px){
+  #content .agn-part2{margin-top:2.2rem !important;padding-top:1.8rem}
+  #content .agn-seclabel{margin:1.1rem 0 .45rem}
+}
+@media (max-width:620px){
+  #content .agn-part2{margin-top:1.8rem !important;padding-top:1.5rem}
+  #content .agn-seclabel{font-size:.6rem;letter-spacing:.22em;margin:.9rem 0 .4rem}
+}
+/* Stems are positioned by their left edge, so shift by half their width to put
+   the stroke centre exactly on the card centre. --drop already does this. */
+#content .agn-brace__stem{margin-left:-.75px}
+/* 1fr means minmax(auto,1fr), so a long unbreakable word can force one column
+   wider than its sibling. minmax(0,1fr) keeps the tracks genuinely equal. */
+#content .program__blocks{grid-template-columns:repeat(4,minmax(0,1fr)) !important}
+#content .days{grid-template-columns:minmax(0,1fr) minmax(0,1.6fr) minmax(0,1fr)}
+@media (max-width:1080px){
+  #content .program__blocks{grid-template-columns:repeat(2,minmax(0,1fr)) !important}
+}
+@media (max-width:900px){
+  #content .days{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:620px){
+  #content .program__blocks{grid-template-columns:repeat(2,minmax(0,1fr)) !important}
+}
+/* --- Mobile day cards: meta row + title + hook, link pinned top-right.
+   Three stacked cards plus a 142px sticky header otherwise push the strip
+   under the browser toolbar. --- */
+@media (max-width:900px){
+  #content .days__card{
+    padding:.85rem .95rem .9rem;
+    display:grid;
+    grid-template-columns:minmax(0,1fr) auto;
+    grid-template-areas:"meta link" "title title" "hook hook";
+    align-items:baseline;
+    text-align:left;
+    row-gap:.3rem;
+    column-gap:.85rem;
+  }
+  #content .days__meta{
+    grid-area:meta;display:flex;align-items:baseline;gap:.4rem;flex-wrap:nowrap;
+  }
+  #content .days__eyebrow,#content .days__date{margin:0;white-space:nowrap}
+  #content .days__eyebrow{font-size:.55rem;letter-spacing:.16em}
+  #content .days__date{font-size:.6rem;letter-spacing:.1em}
+  #content .days__date::before{content:"·";margin-right:.4rem;opacity:.5}
+  #content .days__title{grid-area:title;margin:0}
+  #content .days__hook{grid-area:hook;margin:0}
+  #content .days__link{
+    grid-area:link;margin:0;border-top:0;padding-top:0;
+    justify-self:end;white-space:nowrap;
+  }
+}
+/* Narrowest phones: the main card's meta cannot fit "The Summit · Fri & Sat ·
+   Feb 5-6" on one line. Stack it and drop the separator so no dot is stranded. */
+@media (max-width:408px){
+  #content .days__meta{flex-direction:column;align-items:flex-start;gap:.12rem}
+  #content .days__date::before{content:none}
+}
+/* Tablet widths sit between the mobile two-line rule and the desktop one-liner,
+   so the statement broke mid-phrase. Apply the same clean split up to 900px. */
+@media (min-width:621px) and (max-width:900px){
+  #content .agn-thread__stmt span,
+  #content .agn-thread__stmt em{display:block}
+  #content .agn-thread__stmt em{margin-top:.18em}
+}
+/* Card 01's title runs to two lines while its neighbours take one, which pushed
+   its divider and hook out of line. Two lines is the maximum at every tested
+   width, so reserve that height and the four dividers align. */
+#content .program__block-title{line-height:1.2 !important;min-height:0}
+#content .program__block-title span{display:block;min-height:2.4em}
+/* build: styles v202 */
