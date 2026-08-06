@@ -5523,4 +5523,19 @@ body.menu-open{overflow:hidden}
 #content .nav__link:focus-visible,
 #content .nav__dd-link:focus-visible,
 .nav__link:focus-visible{outline:2px solid var(--accent);outline-offset:4px;border-radius:3px}
-/* build: styles v215 */
+/* v215.1: the mission statement sits on a cream tile so the page's peak gets
+   the one moment of surface contrast. Rail stays on navy; text flips to navy
+   on the tile with the three phrases in deep coral. */
+#content.mission .msn-sec--mission .msn-body{
+  background:#F4ECE0;
+  border-radius:16px;
+  padding:clamp(1.6rem,2.6vw,2.4rem) clamp(1.5rem,2.8vw,2.6rem);
+}
+#content.mission .msn-sec--mission .msn-mission{color:#16233E}
+#content.mission .msn-sec--mission .msn-mission strong{color:var(--accent-deep,#C2521F)}
+@media (max-width:620px){
+  #content.mission .msn-sec--mission .msn-body{border-radius:14px;padding:1.3rem 1.2rem}
+  /* 24px floor keeps the deep-coral phrases at WCAG large-text size on cream */
+  #content.mission .msn-sec--mission .msn-mission{font-size:1.5rem;line-height:1.38}
+}
+/* build: styles v216 */
