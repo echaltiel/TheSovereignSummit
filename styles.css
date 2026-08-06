@@ -5280,4 +5280,118 @@ body.menu-open{overflow:hidden}
   #content .agn-thread{min-height:92px;padding:1.35rem 2rem !important}
   #content .agn-thread__stmt{font-size:clamp(1.5rem,2.15vw,2.05rem) !important}
 }
-/* build: styles v206 */
+
+/* ===== Agenda v23: dates lifted above the tiles, plus a scroll cue =====
+   The dates were the most scannable thing on the page and the smallest. They
+   now sit above each column as a display element, so the row reads as a date
+   line before it reads as three cards. Each column is a wrapper so the date
+   stays paired with its card when the grid stacks on mobile. */
+#content .days{align-items:stretch}
+#content .days__col{display:flex;flex-direction:column;min-width:0}
+#content .days__col .days__card{flex:1}
+
+#content .days__head{
+  text-align:center;
+  padding:0 0 .75rem;
+  margin:0 0 .9rem;
+  border-bottom:1px solid rgba(244,236,224,.16);
+}
+#content .days__col--main .days__head{border-bottom-color:var(--accent)}
+#content .days__day{
+  display:block;
+  font-family:var(--fm);font-size:.68rem;font-weight:700;
+  letter-spacing:.28em;text-transform:uppercase;
+  color:rgba(244,236,224,.5);
+  margin:0 0 .42rem;
+}
+#content .days__col--main .days__day{color:var(--accent);opacity:.95}
+#content .days__num{
+  display:block;
+  font-family:var(--fd);font-weight:400;
+  font-size:clamp(1.9rem,2.7vw,2.6rem);
+  line-height:1;letter-spacing:-.01em;
+  color:rgba(244,236,224,.74);
+}
+#content .days__col--main .days__num{
+  color:#F4ECE0;
+  font-size:clamp(2.2rem,3.2vw,3.1rem);
+}
+
+/* Scroll cue, sitting just under the day row so it lands above the fold. */
+#content .agn-more{
+  display:flex;flex-direction:column;align-items:center;gap:.55rem;
+  width:max-content;margin:1.9rem auto .2rem;
+  text-decoration:none;
+}
+#content .agn-more__label{
+  font-family:var(--fm);font-size:.62rem;font-weight:700;
+  letter-spacing:.26em;text-transform:uppercase;
+  color:rgba(244,236,224,.45);
+  transition:color .25s ease;
+}
+#content .agn-more__ring{
+  display:grid;place-items:center;
+  width:40px;height:40px;border-radius:50%;
+  border:1px solid rgba(244,236,224,.22);
+  color:var(--accent);
+  animation:agnNudge 2.6s ease-in-out infinite;
+  transition:border-color .25s ease,background .25s ease;
+}
+#content .agn-more__ring svg{width:17px;height:17px}
+#content .agn-more:hover .agn-more__label{color:rgba(244,236,224,.8)}
+#content .agn-more:hover .agn-more__ring{
+  border-color:var(--accent);background:rgba(255,105,65,.1);
+}
+@keyframes agnNudge{
+  0%,100%{transform:translateY(0)}
+  50%{transform:translateY(4px)}
+}
+@media (prefers-reduced-motion:reduce){
+  #content .agn-more__ring{animation:none}
+}
+
+@media (max-width:900px){
+  #content .days__head{padding-bottom:.55rem;margin-bottom:.65rem;text-align:left}
+  #content .days__day{margin-bottom:.3rem;font-size:.62rem;letter-spacing:.22em}
+  #content .days__num{font-size:1.85rem}
+  #content .days__col--main .days__num{font-size:2.1rem}
+  #content .agn-more{margin:1.4rem auto .1rem}
+}
+@media (max-width:620px){
+  #content .days__num{font-size:1.7rem}
+  #content .days__col--main .days__num{font-size:1.95rem}
+  #content .agn-more__ring{width:36px;height:36px}
+  #content .agn-more__ring svg{width:15px;height:15px}
+}
+/* Short desktop windows: the date row plus the cue needs ~90px it does not have
+   at 1366x768 once browser chrome is subtracted. Trim the stack, not the type. */
+@media (min-width:900px) and (max-height:720px){
+  #content{padding-top:calc(var(--header-h) + .4rem) !important}
+  #content .program .sec-hd__num{font-size:2.5rem}
+  #content .agn-desc{font-size:1.2rem !important;margin-bottom:.4rem}
+  #content .days{margin-top:.45rem}
+  #content .days__head{padding-bottom:.42rem;margin-bottom:.5rem}
+  #content .days__day{font-size:.62rem;margin-bottom:.3rem}
+  #content .days__num{font-size:2rem}
+  #content .days__col--main .days__num{font-size:2.3rem}
+  #content .days__card{padding:1.1rem 1.2rem 1.1rem}
+  #content .days__ico{width:24px;height:24px;margin-bottom:.5rem}
+  #content .days__card--main .days__ico{width:27px;height:27px}
+  #content .days__title{font-size:1.4rem}
+  #content .days__col--main .days__title{font-size:1.6rem}
+  #content .days__hook{font-size:.98rem;line-height:1.45}
+  #content .days__card--main .days__hook{font-size:1rem}
+  #content .days__link{padding-top:.6rem;font-size:.66rem}
+  #content .agn-more{margin:.55rem auto .1rem;gap:.35rem}
+  #content .agn-more__ring{width:34px;height:34px}
+  #content .agn-more__ring svg{width:15px;height:15px}
+}
+/* Mid-height windows (approx 721-800px): the cue lands right on the fold line.
+   Reclaim spacing only, so type sizes are untouched. */
+@media (min-width:900px) and (min-height:721px) and (max-height:800px){
+  #content{padding-top:calc(var(--header-h) + .55rem) !important}
+  #content .days{margin-top:.8rem}
+  #content .days__head{padding-bottom:.6rem;margin-bottom:.7rem}
+  #content .agn-more{margin:1.15rem auto .1rem}
+}
+/* build: styles v208 */
