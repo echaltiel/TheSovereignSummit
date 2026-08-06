@@ -5394,4 +5394,87 @@ body.menu-open{overflow:hidden}
   #content .days__head{padding-bottom:.6rem;margin-bottom:.7rem}
   #content .agn-more{margin:1.15rem auto .1rem}
 }
-/* build: styles v208 */
+
+/* ===== Mission page =====
+   The statement is the artifact, so it's set like one: three stanzas, one idea
+   each, at reading-aloud size. The third stanza is the mission sentence proper
+   and carries the only coral on the page outside the CTA. */
+#content.mission .msn-eyebrow{
+  font-family:var(--fm);font-size:.7rem;font-weight:700;
+  letter-spacing:.26em;text-transform:uppercase;
+  color:var(--accent);text-align:center;margin-bottom:.7rem;
+}
+#content.mission .msn-h1{margin-bottom:1rem}
+
+#content.mission .msn-stmt{max-width:760px;margin:2.2rem auto 0}
+#content.mission .msn-stmt__p{
+  font-family:var(--fd);font-weight:400;
+  font-size:clamp(1.45rem,2.2vw,1.95rem);
+  line-height:1.42;letter-spacing:.005em;
+  color:rgba(244,236,224,.78);
+  text-align:center;margin:0 0 1.6rem;
+  text-wrap:balance;
+}
+#content.mission .msn-stmt__p strong{font-weight:400;color:#F4ECE0}
+#content.mission .msn-stmt__p--core{
+  color:#F4ECE0;
+  padding-top:1.7rem;
+  border-top:1px solid rgba(244,236,224,.16);
+}
+#content.mission .msn-stmt__p--core em{font-style:italic;color:var(--accent)}
+
+#content.mission .msn-pillars{
+  display:grid;grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:1.15rem;max-width:1080px;margin:3rem auto 0;
+}
+#content.mission .msn-pillar{
+  background:rgba(244,236,224,.05);
+  border:1px solid rgba(244,236,224,.14);
+  border-radius:16px;
+  padding:1.7rem 1.5rem 1.6rem;
+  text-align:center;
+}
+#content.mission .msn-pillar__ico{
+  width:30px;height:30px;color:var(--accent);opacity:.9;
+  margin:0 auto .85rem;display:block;
+}
+#content.mission .msn-pillar__title{
+  font-family:var(--fb);font-weight:800;letter-spacing:-.015em;
+  font-size:1.28rem;line-height:1.2;
+  color:#F4ECE0;margin:0 0 .55rem;
+}
+#content.mission .msn-pillar__body{
+  font-size:1.02rem;line-height:1.5;
+  color:rgba(244,236,224,.62);margin:0;
+}
+
+#content.mission .msn-cta{text-align:center;margin:3.2rem auto 0}
+#content.mission .msn-cta__line{
+  font-family:var(--fd);font-size:clamp(1.2rem,1.7vw,1.5rem);
+  color:rgba(244,236,224,.72);margin:0 0 1.3rem;
+}
+#content.mission .msn-cta__line em{font-style:normal;color:#F4ECE0}
+#content.mission .msn-cta__row{
+  display:flex;align-items:center;justify-content:center;gap:1.4rem;flex-wrap:wrap;
+}
+#content.mission .msn-cta__alt{
+  font-family:var(--fm);font-size:.72rem;font-weight:700;
+  letter-spacing:.18em;text-transform:uppercase;
+  color:var(--accent);text-decoration:none;
+}
+#content.mission .msn-cta__alt:hover{text-decoration:underline;text-underline-offset:3px}
+
+@media (max-width:900px){
+  #content.mission .msn-pillars{grid-template-columns:minmax(0,1fr);max-width:560px;gap:.8rem;margin-top:2.3rem}
+  #content.mission .msn-pillar{padding:1.3rem 1.25rem 1.25rem;text-align:left}
+  #content.mission .msn-pillar__ico{margin:0 0 .6rem}
+}
+@media (max-width:620px){
+  #content.mission .msn-stmt{margin-top:1.6rem}
+  #content.mission .msn-stmt__p{font-size:1.22rem;line-height:1.45;margin-bottom:1.2rem}
+  #content.mission .msn-stmt__p--core{padding-top:1.25rem}
+  #content.mission .msn-pillar__title{font-size:1.12rem}
+  #content.mission .msn-pillar__body{font-size:.94rem}
+  #content.mission .msn-cta{margin-top:2.4rem}
+}
+/* build: styles v209 */
