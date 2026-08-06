@@ -5395,166 +5395,113 @@ body.menu-open{overflow:hidden}
   #content .agn-more{margin:1.15rem auto .1rem}
 }
 
-/* ===== Mission page (v213 redesign) =====
-   Editorial two-column composition on the nav grid: statement on the left in
-   labelled blocks, three numbered principle cards on cream to the right.
-   Brand geometry: a faint vertical grid + one bolt-angled coral rule. Reveal
-   animation is opt-in via JS (.msn-rev--init); without JS everything is
-   visible, which avoids the sitewide reveal trap. */
+/* ===== Mission page (v214: single editorial panel) =====
+   One cream manifesto panel under the nav. Hierarchy comes from three serif
+   sizes and spacing, not components: opening statement largest, supporting
+   line quieter, mission sentence set off by a single rule with its three
+   phrases in the deep coral (AA at this size on cream). No cards, no labels,
+   no background pattern, no animation. */
+#content.mission .container{max-width:1120px}
+#content.mission{padding-top:calc(var(--header-h) + .75rem) !important}
 
-#content.mission{position:relative}
-#content.mission .msn-wrap{max-width:1140px;position:relative}
-
-/* Faint structural grid, bolt-angle accent */
-#content.mission .msn-wrap::before{
-  content:"";position:absolute;inset:-2rem 0 0;pointer-events:none;
-  background:
-    repeating-linear-gradient(90deg,
-      rgba(244,236,224,.045) 0, rgba(244,236,224,.045) 1px,
-      transparent 1px, transparent calc((100% - 2px)/3));
-}
-@media (max-width:1023px){#content.mission .msn-wrap::before{content:none}}
-#content.mission .msn-hd{position:relative;max-width:46rem;padding-top:.4rem}
-#content.mission .msn-hd::before{
-  content:"";position:absolute;top:0;left:0;width:64px;height:3px;
-  background:var(--accent);
-  transform:skewX(-18deg);transform-origin:left bottom;
-}
-#content.mission .msn-eyebrow{
-  font-family:var(--fm);font-size:.7rem;font-weight:700;
-  letter-spacing:.26em;text-transform:uppercase;
-  color:var(--accent);margin:1.05rem 0 .8rem;
-}
-#content.mission .msn-title{
-  font-family:var(--fb);font-weight:800;letter-spacing:-.028em;
-  font-size:clamp(2.3rem,4.4vw,3.6rem);line-height:1.04;
-  color:#F4ECE0;margin:0 0 1rem;
-  text-wrap:balance;
-}
-#content.mission .msn-title em{
-  font-family:var(--fd);font-style:normal;font-weight:400;
-  font-size:1.05em;letter-spacing:0;color:var(--accent);
-}
-#content.mission .msn-lede{
-  font-size:clamp(1.06rem,1.5vw,1.24rem);line-height:1.55;
-  color:rgba(244,236,224,.72);margin:0;max-width:38rem;
-}
-
-/* Two-column body */
-#content.mission .msn-grid{
-  display:grid;
-  grid-template-columns:minmax(0,7fr) minmax(0,5fr);
-  column-gap:clamp(2rem,4.5vw,4rem);
-  align-items:start;
-  margin-top:clamp(2rem,3.6vw,3rem);
-}
-
-/* Left: labelled statement blocks */
-#content.mission .msn-block{
-  border-top:1px solid rgba(244,236,224,.16);
-  padding:1.3rem 0 1.7rem;
-}
-#content.mission .msn-block__label{
-  font-family:var(--fm);font-size:.64rem;font-weight:700;
-  letter-spacing:.24em;text-transform:uppercase;
-  color:rgba(244,236,224,.45);margin-bottom:.7rem;
-}
-#content.mission .msn-block__text{
-  font-family:var(--fd);font-weight:400;
-  font-size:clamp(1.32rem,1.9vw,1.66rem);line-height:1.44;
-  color:rgba(244,236,224,.74);margin:0;max-width:30em;
-}
-#content.mission .msn-block__text strong{font-weight:400;color:#F4ECE0}
-#content.mission .msn-block--mission{border-top-color:rgba(255,105,65,.55)}
-#content.mission .msn-block--mission .msn-block__label{color:var(--accent)}
-#content.mission .msn-block--mission .msn-block__text{color:#F4ECE0}
-#content.mission .msn-block--mission .msn-block__text strong{color:var(--accent)}
-
-/* Right: numbered principle cards on cream */
-#content.mission .msn-side{display:flex;flex-direction:column;gap:.9rem}
-#content.mission .msn-card{
-  position:relative;overflow:hidden;
+#content.mission .msn-panel{
   background:#F4ECE0;
-  border:1px solid rgba(19,30,51,.08);
-  border-radius:14px;
-  padding:1.25rem 1.3rem 1.2rem 1.35rem;
-  box-shadow:0 1px 2px rgba(4,9,20,.25);
-  transition:transform .22s ease,box-shadow .22s ease;
-}
-#content.mission .msn-card:hover{
-  transform:translateY(-2px);
-  box-shadow:0 6px 18px rgba(4,9,20,.35);
-}
-#content.mission .msn-card__num{
-  position:absolute;top:-.55rem;right:.35rem;
-  font-family:var(--fb);font-weight:800;
-  font-size:3.6rem;line-height:1;letter-spacing:-.03em;
-  color:rgba(19,30,51,.07);
-  user-select:none;
-}
-#content.mission .msn-card__title{
-  font-family:var(--fb);font-weight:800;letter-spacing:-.015em;
-  font-size:1.14rem;line-height:1.2;
-  color:#16233E;margin:0 0 .4rem;
-}
-#content.mission .msn-card__body{
-  font-size:.97rem;line-height:1.5;
-  color:rgba(19,30,51,.66);margin:0;max-width:34ch;
+  border-radius:20px;
+  border:1px solid rgba(19,30,51,.06);
+  padding:clamp(2rem,4.4vw,4rem) clamp(1.6rem,4.4vw,4rem);
 }
 
-/* Closing CTA */
-#content.mission .msn-close{
-  display:flex;align-items:center;justify-content:space-between;
-  gap:1.4rem;flex-wrap:wrap;
-  margin-top:clamp(2rem,3.4vw,3rem);
-  padding-top:1.6rem;
-  border-top:1px solid rgba(244,236,224,.16);
+/* 1 · header row: modest title with a thin coral rule above */
+#content.mission .msn-hd{margin:0 0 2rem}
+#content.mission .msn-title{
+  position:relative;
+  font-size:clamp(1.5rem,2vw,1.9rem);
+  line-height:1.1;letter-spacing:-.02em;
+  margin:0;padding-top:.85rem;
 }
-#content.mission .msn-close__line{
-  font-family:var(--fd);font-size:clamp(1.12rem,1.5vw,1.35rem);
-  color:rgba(244,236,224,.66);margin:0;
+#content.mission .msn-title::before{
+  content:"";position:absolute;top:0;left:0;
+  width:44px;height:3px;background:var(--accent);
 }
-#content.mission .msn-close__alt{
+#content.mission .msn-title__a{font-family:var(--fb);font-weight:800;color:#16233E}
+#content.mission .msn-title__b{font-family:var(--fd);font-weight:400;color:var(--accent-deep,#C2521F)}
+
+/* 2 · opening statement */
+#content.mission .msn-open{
+  font-family:var(--fd);font-weight:400;
+  font-size:clamp(1.85rem,2.9vw,2.5rem);
+  line-height:1.25;letter-spacing:.002em;
+  color:rgba(19,30,51,.66);
+  max-width:780px;margin:0 0 1.75rem;
+}
+#content.mission .msn-open strong{font-weight:400;color:#16233E}
+
+/* 3 · supporting paragraph */
+#content.mission .msn-support{
+  font-family:var(--fd);font-weight:400;
+  font-size:clamp(1.45rem,2vw,1.8rem);
+  line-height:1.4;
+  color:rgba(19,30,51,.55);
+  max-width:720px;margin:0 0 1.5rem;
+}
+
+/* 4 · mission statement behind one rule */
+#content.mission .msn-rule{
+  border:0;height:1px;background:rgba(19,30,51,.16);
+  margin:0 0 1.5rem;
+}
+#content.mission .msn-mission{
+  font-family:var(--fd);font-weight:400;
+  font-size:clamp(1.6rem,2.25vw,1.95rem);
+  line-height:1.36;
+  color:#16233E;
+  max-width:760px;margin:0 0 2rem;
+}
+#content.mission .msn-mission strong{font-weight:400;color:var(--accent-deep,#C2521F)}
+
+/* 5 · closing detail */
+#content.mission .msn-detail{
+  font-family:var(--fb);font-weight:500;
+  font-size:.98rem;line-height:1.5;
+  color:rgba(19,30,51,.7);
+  margin:0 0 1.25rem;
+}
+
+/* 6 · restrained CTA */
+#content.mission .msn-cta{display:flex;align-items:center;gap:1.4rem;flex-wrap:wrap}
+#content.mission .msn-cta__alt{
   display:inline-flex;align-items:center;min-height:44px;
   font-family:var(--fm);font-size:.7rem;font-weight:700;
-  letter-spacing:.18em;text-transform:uppercase;
-  color:var(--accent);text-decoration:none;
+  letter-spacing:.16em;text-transform:uppercase;
+  color:var(--accent-deep,#C2521F);text-decoration:none;
 }
-#content.mission .msn-close__alt:hover{text-decoration:underline;text-underline-offset:3px}
-#content.mission .msn-close__row{display:flex;align-items:center;gap:1.3rem;flex-wrap:wrap}
+#content.mission .msn-cta__alt:hover{text-decoration:underline;text-underline-offset:3px}
+#content.mission .msn-cta__alt:focus-visible{outline:2px solid var(--accent);outline-offset:4px;border-radius:3px}
 
-/* Reveal: only when JS opts in */
-#content.mission .msn-rev--init{opacity:0;transform:translateY(14px)}
-#content.mission .msn-rev--init.in{
-  opacity:1;transform:none;
-  transition:opacity .55s cubic-bezier(.2,.6,.2,1),transform .55s cubic-bezier(.2,.6,.2,1);
-}
-#content.mission .msn-side .msn-card.msn-rev--init.in:nth-child(2){transition-delay:.07s}
-#content.mission .msn-side .msn-card.msn-rev--init.in:nth-child(3){transition-delay:.14s}
-
-/* Tablet: single column, cards go 3-up then stack */
+/* Tablet */
 @media (max-width:1023px){
-  #content.mission .msn-grid{grid-template-columns:minmax(0,1fr);row-gap:1.6rem}
-  #content.mission .msn-side{
-    flex-direction:row;gap:.9rem;
-  }
-  #content.mission .msn-card{flex:1}
-  #content.mission .msn-card__body{max-width:none}
+  #content.mission .msn-panel{padding:2.6rem 2.8rem}
+  #content.mission .msn-hd{margin-bottom:2rem}
+  #content.mission .msn-open{margin-bottom:1.7rem}
+  #content.mission .msn-support{margin-bottom:2.3rem}
+  #content.mission .msn-rule{margin-bottom:2.3rem}
+  #content.mission .msn-mission{margin-bottom:2.1rem}
 }
-@media (max-width:719px){
-  #content.mission .msn-side{flex-direction:column}
-  #content.mission .msn-title{font-size:clamp(2rem,8.4vw,2.4rem)}
-  #content.mission .msn-block{padding:1.1rem 0 1.35rem}
-  #content.mission .msn-block__text{font-size:1.22rem;line-height:1.45}
-  #content.mission .msn-close{flex-direction:column;align-items:flex-start;gap:1rem}
+/* Mobile */
+@media (max-width:620px){
+  #content.mission .msn-panel{border-radius:16px;padding:1.7rem 1.5rem 1.8rem}
+  #content.mission .msn-hd{margin-bottom:1.5rem}
+  #content.mission .msn-open{font-size:clamp(1.65rem,7.8vw,1.95rem);line-height:1.28;margin-bottom:1.3rem}
+  #content.mission .msn-support{font-size:1.35rem;line-height:1.42;margin-bottom:1.7rem}
+  #content.mission .msn-rule{margin-bottom:1.7rem}
+  #content.mission .msn-mission{font-size:1.42rem;line-height:1.4;margin-bottom:1.6rem}
+  #content.mission .msn-detail{font-size:.92rem;margin-bottom:1.4rem}
+  #content.mission .msn-cta{flex-direction:column;align-items:flex-start;gap:.7rem}
+  #content.mission .msn-cta .btn{width:100%;justify-content:center}
 }
 
-/* ===== Header polish (sitewide-safe, CSS only) ===== */
-.ticker{opacity:.82}
-.ticker:hover{opacity:1}
-#content .ticker{opacity:.85}
-#content .nav__dd-link:hover{color:var(--accent)}
+/* ===== Header: focus visibility only (usability), appearance untouched ===== */
 #content .nav__link:focus-visible,
 #content .nav__dd-link:focus-visible,
 .nav__link:focus-visible{outline:2px solid var(--accent);outline-offset:4px;border-radius:3px}
-/* build: styles v213 */
+/* build: styles v214 */
