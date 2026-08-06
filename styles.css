@@ -5038,7 +5038,7 @@ body.menu-open{overflow:hidden}
 }
 /* Tablet widths sit between the mobile two-line rule and the desktop one-liner,
    so the statement broke mid-phrase. Apply the same clean split up to 900px. */
-@media (min-width:621px) and (max-width:900px){
+@media (min-width:621px) and (max-width:1023px){
   #content .agn-thread__stmt span,
   #content .agn-thread__stmt em{display:block}
   #content .agn-thread__stmt em{margin-top:.18em}
@@ -5195,4 +5195,89 @@ body.menu-open{overflow:hidden}
   #content .agn-spaces__list li + li::before{content:none}
   #content .agn-spaces__note{font-size:.92rem;margin-top:.65rem}
 }
-/* build: styles v205 */
+/* ===== Agenda v22: fewer columns, much bigger type =====
+   Four 306px columns capped how large the act copy could get. Two 630px columns
+   roughly double the line length available, so titles and hooks both fit on one
+   line at far larger sizes. Fewer, bigger blocks read calmer than four dense
+   ones. The brace now gathers two columns everywhere, so stems 3 and 4 retire. */
+
+/* --- Act grid: 2 up from 481px and above --- */
+@media (min-width:481px){
+  #content .program__blocks{
+    grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+    gap:1.15rem !important;
+  }
+  #content .agn-brace{
+    --g:1.15rem;
+    --step:calc((100% + var(--g))/2);
+    --c1:calc((100% - var(--g))/4);
+    height:34px;
+  }
+  #content .agn-brace__stem{height:15px}
+  #content .agn-brace__bar,#content .agn-brace__drop{top:14px}
+  #content .agn-brace__stem--3,#content .agn-brace__stem--4{display:none}
+
+  #content .program__block{padding:1.9rem 2rem 1.85rem !important}
+  #content .program__block-header{gap:.6rem !important;margin:0 0 1.05rem !important}
+  #content .program__block-step{font-size:1.7rem}
+  #content .program__block-theme{font-size:.66rem !important;letter-spacing:.12em !important;padding:.3rem .7rem !important}
+  #content .agn-ico,#content .agn-ico--fill{width:46px;height:46px;margin-bottom:1rem}
+  /* Titles fit one line at this width, so the reserved second line comes off. */
+  #content .program__block-title{font-size:clamp(1.9rem,2.5vw,2.45rem) !important;min-height:0}
+  #content .program__block-title span{min-height:0}
+  #content .program__block-title::after{width:38px;margin:.85rem auto .8rem}
+  #content .program__block-hook{font-size:1.22rem !important;line-height:1.45 !important}
+}
+
+/* --- Day strip: more room per card, larger copy --- */
+@media (min-width:901px){
+  #content .days{gap:1.1rem}
+  #content .days__card{padding:1.7rem 1.5rem 1.6rem}
+  #content .days__ico{width:30px;height:30px;margin-bottom:.85rem}
+  #content .days__card--main .days__ico{width:34px;height:34px}
+  #content .days__title{font-size:clamp(1.45rem,1.95vw,1.85rem)}
+  #content .days__card--main .days__title{font-size:clamp(1.7rem,2.4vw,2.2rem)}
+  #content .days__hook{font-size:1.1rem;line-height:1.5}
+  #content .days__card--main .days__hook{font-size:1.18rem}
+  #content .days__link{font-size:.72rem;padding-top:.85rem}
+}
+
+/* --- Supporting copy scaled to match --- */
+#content .agn-desc{font-size:clamp(1.25rem,1.85vw,1.7rem) !important}
+#content .agn-sec__title{font-size:clamp(1.9rem,3.1vw,2.85rem)}
+#content .agn-sec__eyebrow{font-size:.72rem}
+@media (min-width:621px){
+  #content .agn-spaces{margin:.35rem 0 1.9rem}
+  #content .agn-spaces__list li{font-size:.82rem;letter-spacing:.15em}
+  #content .agn-spaces__note{font-size:1.12rem;margin-top:.75rem}
+  #content .agn-callout{max-width:720px;padding:1.25rem 1.6rem;gap:1rem}
+  #content .agn-callout__ico{width:26px;height:26px}
+  #content .agn-callout__lead{font-size:1.15rem}
+  #content .agn-callout__note{font-size:1.05rem}
+}
+
+/* --- Phones: push the single-column sizes up too --- */
+@media (max-width:480px){
+  #content .program__block{padding:1.3rem 1.3rem 1.35rem !important}
+  #content .program__block-title{font-size:1.52rem !important}
+  #content .program__block-hook{font-size:1.1rem !important;line-height:1.5 !important}
+  #content .agn-ico,#content .agn-ico--fill{width:38px;height:38px;margin-bottom:.7rem}
+  #content .program__block-step{font-size:1.5rem}
+  #content .days__hook{font-size:1rem;line-height:1.5}
+  #content .days__card--main .days__hook{font-size:1.04rem}
+  #content .days__title{font-size:1.28rem}
+  #content .days__card--main .days__title{font-size:1.42rem}
+  #content .agn-sec__title{font-size:1.85rem}
+  #content .agn-desc{font-size:1.16rem !important}
+}
+/* Callout was narrow against the widened layout; the closing bar can carry more
+   weight now that the tiles above it are larger. */
+@media (min-width:621px){
+  #content .agn-callout{max-width:860px}
+  #content .agn-spaces__list li{font-size:.86rem}
+}
+@media (min-width:901px){
+  #content .agn-thread{min-height:92px;padding:1.35rem 2rem !important}
+  #content .agn-thread__stmt{font-size:clamp(1.5rem,2.15vw,2.05rem) !important}
+}
+/* build: styles v206 */
