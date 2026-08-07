@@ -5395,24 +5395,22 @@ body.menu-open{overflow:hidden}
   #content .agn-more{margin:1.15rem auto .1rem}
 }
 
-/* ===== Mission page (v226: the manifesto) =====
-   One centred column that unfolds as it scrolls: belief, definition, the
-   convergence diagram in pure linework and type, why we gather, and a
-   full-bleed ivory finale. No cards, no gradients; orange only where it
-   means something. Two families throughout. */
+/* ===== Mission page (v227: the manifesto, above the fold) =====
+   Same five movements, compressed into one desktop viewport. Vertical rhythm
+   is set in vh so the whitespace scales with the window; a single compact
+   layer handles short laptops. Mobile scrolls naturally. */
 #content.mission{overflow-x:clip}
 #content.mission .container{max-width:1160px}
-#content.mission{padding-top:calc(var(--header-h) + clamp(2rem,4.5vw,4rem)) !important;padding-bottom:0 !important}
+#content.mission{padding-top:calc(var(--header-h) + clamp(.9rem,2.2vh,2rem)) !important;padding-bottom:0 !important}
 
 #content.mission .mf{text-align:center}
 
-/* Shared voice */
 #content.mission .mf-eyebrow,
 #content.mission .mf-over{
   font-family:var(--fb);font-weight:700;
-  font-size:.7rem;letter-spacing:.26em;text-transform:uppercase;
+  font-size:.64rem;letter-spacing:.24em;text-transform:uppercase;
   color:rgba(244,236,224,.45);
-  margin:0 0 1.1rem;
+  margin:0 0 clamp(.35rem,.85vh,.75rem);
 }
 #content.mission .mf-eyebrow{color:var(--accent)}
 #content.mission .mf-over--dark{color:rgba(19,30,51,.5)}
@@ -5420,40 +5418,39 @@ body.menu-open{overflow:hidden}
 /* I · belief */
 #content.mission .mf-belief{
   font-family:var(--fd);font-weight:400;
-  font-size:clamp(2.5rem,4.8vw,4rem);
-  line-height:1.1;letter-spacing:-.005em;
+  font-size:clamp(1.7rem,2.5vw,2.15rem);
+  line-height:1.14;letter-spacing:-.004em;
   color:#F4ECE0;
-  max-width:17em;margin:0 auto 1.4rem;
+  max-width:24em;margin:0 auto clamp(.4rem,1vh,.85rem);
   text-wrap:balance;
 }
 #content.mission .mf-belief em{font-style:italic;color:var(--accent)}
 #content.mission .mf-deck{
   font-family:var(--fd);font-weight:400;
-  font-size:clamp(1.2rem,1.7vw,1.42rem);
-  line-height:1.5;
+  font-size:clamp(1rem,1.3vw,1.16rem);
+  line-height:1.45;
   color:rgba(244,236,224,.62);
-  max-width:34em;margin:0 auto;
+  margin:0 auto;
 }
 
-/* Movement rules */
+/* movement rules */
 #content.mission .mf-rule{
   border:0;width:64px;height:1px;
   background:rgba(244,236,224,.16);
-  margin:clamp(2.6rem,4.5vw,4rem) auto;
+  margin:clamp(.45rem,1.4vh,1.35rem) auto;
 }
-#content.mission .mf-move{margin:0}
 
 /* II & IV · single serif lines */
 #content.mission .mf-line{
   font-family:var(--fd);font-weight:400;
-  font-size:clamp(1.55rem,2.4vw,2.1rem);
+  font-size:clamp(1.24rem,1.8vw,1.56rem);
   line-height:1.32;
   color:rgba(244,236,224,.86);
-  max-width:26em;margin:0 auto;
+  margin:0 auto;
   text-wrap:balance;
 }
 
-/* III · diagram: type and linework only */
+/* III · diagram */
 #content.mission .mf-dia{max-width:1080px;margin:0 auto}
 #content.mission .mf-dia__row{
   list-style:none;margin:0;padding:0;
@@ -5462,70 +5459,84 @@ body.menu-open{overflow:hidden}
 }
 #content.mission .mf-dia__row li{
   font-family:var(--fb);font-weight:700;
-  font-size:.84rem;letter-spacing:.22em;text-transform:uppercase;
-  color:#F4ECE0;
-  white-space:nowrap;
+  font-size:.8rem;letter-spacing:.2em;text-transform:uppercase;
+  color:#F4ECE0;white-space:nowrap;
 }
 #content.mission .mf-dia__row--to li{color:rgba(244,236,224,.78)}
-#content.mission .mf-dia__mid{position:relative;height:clamp(96px,11vw,150px);margin:.9rem 0 .6rem}
+#content.mission .mf-dia__mid{position:relative;height:clamp(42px,7.2vh,78px);margin:clamp(.3rem,.8vh,.7rem) 0 clamp(.25rem,.6vh,.55rem)}
 #content.mission .mf-dia__band{position:absolute;inset:0;width:100%;height:100%}
 #content.mission .mf-dia__node{
   position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);
-  width:46px;height:46px;border-radius:50%;
+  width:clamp(36px,5vh,44px);height:clamp(36px,5vh,44px);border-radius:50%;
   display:grid;place-items:center;
   background:var(--ink,#001839);
   border:1px solid rgba(255,105,65,.5);
   color:var(--accent);
 }
-#content.mission .mf-dia__node svg{width:19px;height:19px}
+#content.mission .mf-dia__node svg{width:56%;height:56%}
 #content.mission .mf-dia__shift{
   font-family:var(--fb);font-weight:700;
-  font-size:.62rem;letter-spacing:.24em;text-transform:uppercase;
+  font-size:.58rem;letter-spacing:.22em;text-transform:uppercase;
   color:rgba(244,236,224,.4);
-  margin:0 0 .8rem;
+  margin:0 0 clamp(.3rem,.7vh,.6rem);
 }
 
-/* V · ivory finale, full-bleed */
+/* V · ivory finale, full-bleed to the fold */
 #content.mission .mf-final{
-  margin-top:clamp(2.8rem,5vw,4.5rem);
+  margin-top:clamp(.7rem,1.9vh,1.8rem);
   background:#F4ECE0;
   text-align:center;
-  padding:clamp(2.4rem,4.5vw,4rem) 0 clamp(2.6rem,4.8vw,4.2rem);
+  padding:clamp(.85rem,2vh,1.7rem) 0 clamp(.95rem,2.2vh,1.9rem);
 }
-#content.mission .mf-final .mf-over{margin-bottom:1.2rem}
+#content.mission .mf-final .mf-over{margin-bottom:clamp(.5rem,1.1vh,.9rem)}
 #content.mission .mf-mission{
   font-family:var(--fd);font-weight:400;
-  font-size:clamp(1.6rem,2.6vw,2.25rem);
+  font-size:clamp(1.24rem,1.85vw,1.58rem);
   line-height:1.34;
   color:#16233E;
-  max-width:27em;margin:0 auto 1.8rem;
+  max-width:34em;margin:0 auto clamp(.55rem,1.35vh,1.1rem);
   text-wrap:balance;
 }
 #content.mission .mf-mission strong{font-weight:400;color:var(--accent-deep,#C2521F)}
 #content.mission .mf-cta{
   font-family:var(--fb);font-weight:700;
-  letter-spacing:.06em;text-transform:none;font-size:1rem;
+  letter-spacing:.06em;text-transform:none;font-size:.95rem;
 }
 
-/* Tablet & mobile */
+/* Short laptops */
+@media (min-width:901px) and (max-height:700px){
+  #content.mission{padding-top:calc(var(--header-h) + .55rem) !important}
+  #content.mission .mf-eyebrow,#content.mission .mf-over{font-size:.58rem;margin-bottom:.28rem}
+  #content.mission .mf-belief{font-size:1.48rem;margin-bottom:.35rem}
+  #content.mission .mf-deck{font-size:.94rem}
+  #content.mission .mf-rule{margin:.42rem auto}
+  #content.mission .mf-line{font-size:1.12rem}
+  #content.mission .mf-dia__row li{font-size:.66rem}
+  #content.mission .mf-dia__mid{height:40px;margin:.28rem 0 .24rem}
+  #content.mission .mf-dia__node{width:32px;height:32px}
+  #content.mission .mf-dia__shift{font-size:.52rem;margin-bottom:.26rem}
+  #content.mission .mf-final{margin-top:.65rem;padding:.7rem 0 .8rem}
+  #content.mission .mf-final .mf-over{margin-bottom:.3rem}
+  #content.mission .mf-mission{font-size:1.1rem;margin-bottom:.5rem}
+  #content.mission .mf-cta{font-size:.84rem;padding:.55rem 1.25rem}
+}
+
+/* Tablet & mobile: the manifesto scrolls */
 @media (max-width:900px){
-  #content.mission .mf-rule{margin:2.1rem auto}
-  #content.mission .mf-belief{font-size:clamp(2rem,7vw,2.6rem)}
-  #content.mission .mf-line{font-size:clamp(1.35rem,4.4vw,1.7rem)}
+  #content.mission{padding-top:calc(var(--header-h) + 1.6rem) !important}
+  #content.mission .mf-belief{font-size:clamp(1.9rem,6.6vw,2.4rem);max-width:15em}
+  #content.mission .mf-deck{font-size:1.12rem;max-width:34em}
+  #content.mission .mf-rule{margin:1.8rem auto}
+  #content.mission .mf-line{font-size:clamp(1.3rem,4.2vw,1.6rem);max-width:26em}
+  #content.mission .mf-final{margin-top:2rem;padding:1.9rem 0 2.1rem}
+  #content.mission .mf-mission{font-size:1.34rem;max-width:28em;margin-bottom:1.3rem}
 }
 @media (max-width:620px){
-  #content.mission{padding-top:calc(var(--header-h) + 1.4rem) !important}
-  #content.mission .mf-eyebrow,#content.mission .mf-over{font-size:.62rem;letter-spacing:.22em;margin-bottom:.85rem}
-  #content.mission .mf-deck{font-size:1.15rem}
-  #content.mission .mf-rule{margin:1.8rem auto}
+  #content.mission .mf-eyebrow,#content.mission .mf-over{font-size:.6rem;letter-spacing:.2em}
   #content.mission .mf-dia__row{grid-template-columns:repeat(2,minmax(0,1fr));gap:.55rem 1rem}
   #content.mission .mf-dia__row li{font-size:.72rem;letter-spacing:.16em}
-  #content.mission .mf-dia__mid{height:74px;margin:.8rem 0 .5rem}
+  #content.mission .mf-dia__mid{height:70px}
   #content.mission .mf-dia__node{width:40px;height:40px}
-  #content.mission .mf-dia__node svg{width:16px;height:16px}
-  #content.mission .mf-dia__shift{margin-bottom:.6rem}
-  #content.mission .mf-final{padding:2rem 0 2.2rem}
-  #content.mission .mf-mission{font-size:1.42rem;margin-bottom:1.4rem}
   #content.mission .mf-cta{width:calc(100% - 2.5rem);justify-content:center}
 }
 
@@ -5533,4 +5544,4 @@ body.menu-open{overflow:hidden}
 #content .nav__link:focus-visible,
 #content .nav__dd-link:focus-visible,
 .nav__link:focus-visible{outline:2px solid var(--accent);outline-offset:4px;border-radius:3px}
-/* build: styles v226 */
+/* build: styles v227 */
