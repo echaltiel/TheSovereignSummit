@@ -5395,218 +5395,142 @@ body.menu-open{overflow:hidden}
   #content .agn-more{margin:1.15rem auto .1rem}
 }
 
-/* ===== Mission page (v219: two surfaces, no numbers, no dead space) =====
-   Linear flow down one left axis: statement on a deep-navy tile, context line,
-   a horizontal pillar strip, the mission on its cream band, closing strip.
-   Only one label on the page ("Our Mission"); surfaces do the sectioning. */
+/* ===== Mission page (v226: the manifesto) =====
+   One centred column that unfolds as it scrolls: belief, definition, the
+   convergence diagram in pure linework and type, why we gather, and a
+   full-bleed ivory finale. No cards, no gradients; orange only where it
+   means something. Two families throughout. */
+#content.mission{overflow-x:clip}
 #content.mission .container{max-width:1160px}
-#content.mission{padding-top:calc(var(--header-h) + .9rem) !important}
+#content.mission{padding-top:calc(var(--header-h) + clamp(2rem,4.5vw,4rem)) !important;padding-bottom:0 !important}
 
-#content.mission .visually-hidden-msn{
-  position:absolute;width:1px;height:1px;overflow:hidden;
-  clip:rect(0 0 0 0);white-space:nowrap;
+#content.mission .mf{text-align:center}
+
+/* Shared voice */
+#content.mission .mf-eyebrow,
+#content.mission .mf-over{
+  font-family:var(--fb);font-weight:700;
+  font-size:.7rem;letter-spacing:.26em;text-transform:uppercase;
+  color:rgba(244,236,224,.45);
+  margin:0 0 1.1rem;
 }
+#content.mission .mf-eyebrow{color:var(--accent)}
+#content.mission .mf-over--dark{color:rgba(19,30,51,.5)}
 
-/* Statement tile: deeper navy surface with a coral crown */
-#content.mission .msn-tile1{
-  background:#0A1224;
-  border:1px solid rgba(244,236,224,.12);
-  border-radius:16px;
-  padding:clamp(1.15rem,1.9vw,1.45rem) clamp(1.4rem,2.8vw,2.4rem);
-}
-
-#content.mission .msn-statement{
+/* I · belief */
+#content.mission .mf-belief{
   font-family:var(--fd);font-weight:400;
-  font-size:clamp(1.8rem,2.5vw,2.1rem);
-  line-height:1.22;
-  color:rgba(244,236,224,.88);
-  margin:0 auto;max-width:26em;
-  text-align:center;text-wrap:balance;
-}
-#content.mission .msn-statement strong{font-weight:400;color:var(--accent)}
-
-/* Definition tile: a quiet outlined surface between the dark opener and the
-   cream finale. Question, answer and footnote stack centred. */
-#content.mission .msn-def{
-  text-align:center;
-  background:rgba(244,236,224,.045);
-  border:1px solid rgba(244,236,224,.12);
-  border-radius:16px;
-  margin-top:clamp(.95rem,1.5vw,1.25rem);
-  padding:clamp(1rem,1.6vw,1.3rem) clamp(1.2rem,2.4vw,2.2rem) clamp(1.05rem,1.7vw,1.4rem);
-}
-#content.mission .msn-def__q{
-  font-family:var(--fb);font-weight:800;letter-spacing:-.02em;
-  font-size:clamp(1.22rem,1.65vw,1.42rem);line-height:1.18;
-  color:#F4ECE0;margin:0 0 .7rem;
-}
-#content.mission .msn-def__answer{
-  font-family:var(--fd);font-weight:400;
-  font-size:clamp(1.46rem,2vw,1.7rem);
-  line-height:1.3;
-  color:rgba(244,236,224,.9);
-  margin:0 auto;max-width:26em;
+  font-size:clamp(2.5rem,4.8vw,4rem);
+  line-height:1.1;letter-spacing:-.005em;
+  color:#F4ECE0;
+  max-width:17em;margin:0 auto 1.4rem;
   text-wrap:balance;
 }
-#content.mission .msn-def__answer strong{font-weight:400;color:var(--accent)}
-
-/* Flow: the convergence diagram. Two icon-card rows joined by connector
-   curves through the bolt node. Pure SVG and tokens, no imagery. */
-#content.mission .msn-flow{margin:clamp(1rem,1.6vw,1.35rem) 0 0}
-#content.mission .msn-flow__label{
-  font-family:var(--fb);font-weight:700;
-  font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;
-  color:rgba(244,236,224,.45);
-  text-align:center;margin:0 0 .6rem;
+#content.mission .mf-belief em{font-style:italic;color:var(--accent)}
+#content.mission .mf-deck{
+  font-family:var(--fd);font-weight:400;
+  font-size:clamp(1.2rem,1.7vw,1.42rem);
+  line-height:1.5;
+  color:rgba(244,236,224,.62);
+  max-width:34em;margin:0 auto;
 }
-#content.mission .msn-flow__row{
+
+/* Movement rules */
+#content.mission .mf-rule{
+  border:0;width:64px;height:1px;
+  background:rgba(244,236,224,.16);
+  margin:clamp(2.6rem,4.5vw,4rem) auto;
+}
+#content.mission .mf-move{margin:0}
+
+/* II & IV · single serif lines */
+#content.mission .mf-line{
+  font-family:var(--fd);font-weight:400;
+  font-size:clamp(1.55rem,2.4vw,2.1rem);
+  line-height:1.32;
+  color:rgba(244,236,224,.86);
+  max-width:26em;margin:0 auto;
+  text-wrap:balance;
+}
+
+/* III · diagram: type and linework only */
+#content.mission .mf-dia{max-width:1080px;margin:0 auto}
+#content.mission .mf-dia__row{
   list-style:none;margin:0;padding:0;
   display:grid;grid-template-columns:repeat(4,minmax(0,1fr));
-  gap:.8rem;
+  gap:1rem;
 }
-#content.mission .msn-flow__card{
-  display:flex;align-items:center;gap:.6rem;
-  background:rgba(244,236,224,.05);
-  border:1px solid rgba(244,236,224,.13);
-  border-radius:12px;
-  padding:.62rem .85rem;
+#content.mission .mf-dia__row li{
   font-family:var(--fb);font-weight:700;
-  font-size:.76rem;letter-spacing:.14em;text-transform:uppercase;
-  color:rgba(244,236,224,.9);
+  font-size:.84rem;letter-spacing:.22em;text-transform:uppercase;
+  color:#F4ECE0;
   white-space:nowrap;
 }
-#content.mission .msn-flow__ico{flex:0 0 auto;display:grid;place-items:center;color:var(--accent)}
-#content.mission .msn-flow__ico svg{width:19px;height:19px}
-#content.mission .msn-flow__mid{
-  position:relative;height:clamp(84px,10vw,116px);margin:.3rem 0;
-}
-#content.mission .msn-flow__band{position:absolute;inset:0;width:100%;height:100%}
-#content.mission .msn-flow__node{
+#content.mission .mf-dia__row--to li{color:rgba(244,236,224,.78)}
+#content.mission .mf-dia__mid{position:relative;height:clamp(96px,11vw,150px);margin:.9rem 0 .6rem}
+#content.mission .mf-dia__band{position:absolute;inset:0;width:100%;height:100%}
+#content.mission .mf-dia__node{
   position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);
-  width:52px;height:52px;border-radius:50%;
+  width:46px;height:46px;border-radius:50%;
   display:grid;place-items:center;
-  background:#0A1224;
-  border:1px solid rgba(255,105,65,.45);
-  box-shadow:0 0 0 6px rgba(255,105,65,.06);
+  background:var(--ink,#001839);
+  border:1px solid rgba(255,105,65,.5);
   color:var(--accent);
 }
-#content.mission .msn-flow__node svg{width:22px;height:22px}
-#content.mission .msn-flow__label + .msn-flow__row + .msn-flow__mid{margin-top:.15rem}
+#content.mission .mf-dia__node svg{width:19px;height:19px}
+#content.mission .mf-dia__shift{
+  font-family:var(--fb);font-weight:700;
+  font-size:.62rem;letter-spacing:.24em;text-transform:uppercase;
+  color:rgba(244,236,224,.4);
+  margin:0 0 .8rem;
+}
 
-/* Mission: cream band, single label, edge-pulled */
-#content.mission .msn-band--c{
-  text-align:center;
+/* V · ivory finale, full-bleed */
+#content.mission .mf-final{
+  margin-top:clamp(2.8rem,5vw,4.5rem);
   background:#F4ECE0;
-  border-radius:16px;
-  margin-top:clamp(1.05rem,1.7vw,1.35rem);
-  padding:clamp(1rem,1.6vw,1.25rem) 1.8rem clamp(1.1rem,1.8vw,1.4rem);
+  text-align:center;
+  padding:clamp(2.4rem,4.5vw,4rem) 0 clamp(2.6rem,4.8vw,4.2rem);
 }
-@media (min-width:1024px){
-  #content.mission .msn-band--c{margin-left:-1.8rem;margin-right:-1.8rem}
-}
-#content.mission .msn-label{
-  font-family:var(--fb);font-weight:700;
-  font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;
-  margin:0 0 .8rem;padding:0;
-}
-#content.mission .msn-label--dark{color:rgba(19,30,51,.55)}
-#content.mission .msn-mission{
+#content.mission .mf-final .mf-over{margin-bottom:1.2rem}
+#content.mission .mf-mission{
   font-family:var(--fd);font-weight:400;
-  font-size:clamp(1.34rem,1.8vw,1.5rem);
-  line-height:1.38;
+  font-size:clamp(1.6rem,2.6vw,2.25rem);
+  line-height:1.34;
   color:#16233E;
-  max-width:30em;margin:0 auto;
+  max-width:27em;margin:0 auto 1.8rem;
+  text-wrap:balance;
 }
-#content.mission .msn-mission strong{font-weight:400;color:#B54A1C}
-
-/* Closing strip */
-#content.mission .msn-foot{
-  display:flex;align-items:center;justify-content:center;
-  gap:1.4rem;flex-wrap:wrap;
-  margin-top:clamp(1.05rem,1.8vw,1.4rem);
-  padding-top:clamp(.8rem,1.3vw,1rem);
-  border-top:1px solid rgba(244,236,224,.16);
-}
-#content.mission .msn-foot__line{
-  font-family:var(--fd);font-size:clamp(1.05rem,1.4vw,1.22rem);
-  color:rgba(244,236,224,.68);margin:0;
-}
-#content.mission .msn-foot__row{display:flex;align-items:center;gap:1.4rem;flex-wrap:wrap}
-#content.mission .msn-foot .btn{
+#content.mission .mf-mission strong{font-weight:400;color:var(--accent-deep,#C2521F)}
+#content.mission .mf-cta{
   font-family:var(--fb);font-weight:700;
-  letter-spacing:.06em;text-transform:none;font-size:.96rem;
-}
-#content.mission .msn-foot__alt{
-  display:inline-flex;align-items:center;min-height:44px;
-  font-family:var(--fb);font-weight:700;
-  font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;
-  color:var(--accent);text-decoration:none;
-}
-#content.mission .msn-foot__alt:hover{text-decoration:underline;text-underline-offset:3px}
-#content.mission .msn-foot__alt:focus-visible{outline:2px solid var(--accent);outline-offset:4px;border-radius:3px}
-
-
-/* Mid-height desktop windows */
-@media (min-width:1024px) and (min-height:701px) and (max-height:820px){
-  #content.mission{padding-top:calc(var(--header-h) + .65rem) !important}
-  #content.mission .msn-tile1{padding:1.05rem 1.7rem}
-  #content.mission .msn-statement{font-size:1.92rem}
-  #content.mission .msn-def{margin-top:.7rem;padding:.72rem 1.3rem .82rem}
-  #content.mission .msn-def__q{font-size:1.14rem;margin-bottom:.42rem}
-  #content.mission .msn-def__answer{font-size:1.36rem}
-  #content.mission .msn-flow{margin-top:.85rem}
-  #content.mission .msn-flow__mid{height:72px}
-  #content.mission .msn-flow__card{padding:.5rem .75rem;font-size:.72rem}
-  #content.mission .msn-flow__ico svg{width:17px;height:17px}
-  #content.mission .msn-flow__node{width:46px;height:46px}
-  #content.mission .msn-flow__node svg{width:19px;height:19px}
-  #content.mission .msn-band--c{margin-top:.85rem;padding:.85rem 1.5rem .95rem;margin-left:-1.5rem;margin-right:-1.5rem}
-  #content.mission .msn-mission{font-size:1.3rem}
-  #content.mission .msn-foot{margin-top:.7rem;padding-top:.55rem}
-}
-/* Short desktop windows */
-@media (min-width:1024px) and (max-height:700px){
-  #content.mission{padding-top:calc(var(--header-h) + .5rem) !important}
-  #content.mission .msn-tile1{padding:.72rem 1.3rem;border-radius:14px}
-  #content.mission .msn-statement{font-size:1.48rem}
-  #content.mission .msn-def{margin-top:.5rem;padding:.55rem 1.05rem .6rem;border-radius:14px}
-  #content.mission .msn-def__q{font-size:1.06rem;margin-bottom:.4rem}
-  #content.mission .msn-def__answer{font-size:1.18rem}
-  #content.mission .msn-flow{margin-top:.6rem}
-  #content.mission .msn-flow__mid{display:none}
-  #content.mission .msn-flow__label{font-size:.56rem;margin-bottom:.4rem}
-  #content.mission .msn-flow__row + .msn-flow__label{margin-top:.6rem}
-  #content.mission .msn-flow__card{padding:.4rem .7rem;font-size:.66rem;border-radius:10px}
-  #content.mission .msn-flow__ico svg{width:15px;height:15px}
-  #content.mission .msn-band--c{margin-top:.58rem;padding:.62rem 1.2rem .7rem;margin-left:-1.2rem;margin-right:-1.2rem}
-  #content.mission .msn-mission{font-size:1.1rem}
-  #content.mission .msn-foot{margin-top:.4rem;padding-top:.32rem}
+  letter-spacing:.06em;text-transform:none;font-size:1rem;
 }
 
-/* Linearise below 1024 */
-@media (max-width:1023px){
-
+/* Tablet & mobile */
+@media (max-width:900px){
+  #content.mission .mf-rule{margin:2.1rem auto}
+  #content.mission .mf-belief{font-size:clamp(2rem,7vw,2.6rem)}
+  #content.mission .mf-line{font-size:clamp(1.35rem,4.4vw,1.7rem)}
 }
 @media (max-width:620px){
-  #content.mission{padding-top:calc(var(--header-h) + .8rem) !important}
-  #content.mission .msn-tile1{padding:1.3rem 1.2rem;border-radius:14px}
-  #content.mission .msn-statement{font-size:clamp(1.55rem,7vw,1.85rem);line-height:1.27}
-  #content.mission .msn-def__q{font-size:1.22rem}
-  #content.mission .msn-def__answer{font-size:1.42rem}
-  #content.mission .msn-flow__row{grid-template-columns:repeat(2,minmax(0,1fr));gap:.55rem}
-  #content.mission .msn-flow__card{padding:.55rem .7rem;font-size:.68rem;letter-spacing:.1em;gap:.5rem}
-  #content.mission .msn-flow__mid{height:64px}
-  #content.mission .msn-flow__node{width:44px;height:44px}
-  #content.mission .msn-flow__node svg{width:18px;height:18px}
-  #content.mission .msn-band--c{padding:1.2rem 1.2rem 1.3rem;border-radius:14px;margin-top:1.2rem}
-  #content.mission .msn-mission{font-size:1.5rem;line-height:1.38}
-  #content.mission .msn-mission strong{color:var(--accent-deep,#C2521F)}
-  #content.mission .msn-foot{flex-direction:column;align-items:flex-start;gap:1rem}
-  #content.mission .msn-foot .btn{width:100%;justify-content:center}
+  #content.mission{padding-top:calc(var(--header-h) + 1.4rem) !important}
+  #content.mission .mf-eyebrow,#content.mission .mf-over{font-size:.62rem;letter-spacing:.22em;margin-bottom:.85rem}
+  #content.mission .mf-deck{font-size:1.15rem}
+  #content.mission .mf-rule{margin:1.8rem auto}
+  #content.mission .mf-dia__row{grid-template-columns:repeat(2,minmax(0,1fr));gap:.55rem 1rem}
+  #content.mission .mf-dia__row li{font-size:.72rem;letter-spacing:.16em}
+  #content.mission .mf-dia__mid{height:74px;margin:.8rem 0 .5rem}
+  #content.mission .mf-dia__node{width:40px;height:40px}
+  #content.mission .mf-dia__node svg{width:16px;height:16px}
+  #content.mission .mf-dia__shift{margin-bottom:.6rem}
+  #content.mission .mf-final{padding:2rem 0 2.2rem}
+  #content.mission .mf-mission{font-size:1.42rem;margin-bottom:1.4rem}
+  #content.mission .mf-cta{width:calc(100% - 2.5rem);justify-content:center}
 }
 
 /* ===== Header: focus visibility only (usability), appearance untouched ===== */
 #content .nav__link:focus-visible,
 #content .nav__dd-link:focus-visible,
 .nav__link:focus-visible{outline:2px solid var(--accent);outline-offset:4px;border-radius:3px}
-/* build: styles v225 */
+/* build: styles v226 */
