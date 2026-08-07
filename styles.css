@@ -5395,212 +5395,226 @@ body.menu-open{overflow:hidden}
   #content .agn-more{margin:1.15rem auto .1rem}
 }
 
-/* ===== Mission page (v228: poster composition) =====
-   Fixed rhythm, fixed diagram geometry. The section is a 100vh poster: the
-   navy manifesto centres in whatever height remains and the ivory finale
-   closes the frame at the fold. Extra height on tall windows becomes air
-   around the composition, never voids inside it. */
-/* The main wrapper already clears the fixed header sitewide; it becomes the
-   100vh poster frame. The section just fills it. */
-#content:has(>section.about.mission){
-  padding-top:calc(var(--header-h) + .55rem) !important;
-  padding-bottom:0 !important;
-}
-#content>section.about.mission{
-  display:flex;flex-direction:column;
-  min-height:calc(100vh - var(--header-h) - .55rem);
-  box-sizing:border-box;overflow-x:clip;
-  padding-top:.2rem !important;
-  padding-bottom:0 !important;
-}
-#content .mission .msn{flex:1;display:flex;align-items:center;max-width:1160px;width:100%}
-#content .mission .mf{text-align:center;width:100%;padding:.1rem 0 .25rem}
+/* ===== Mission page (v229: builders manifesto, mockup direction) =====
+   Seven scrolling bands on the nav grid: hero split with skyline art, rail
+   headline + four icon columns, four focus art-cards, exist + pull-quote,
+   six principles, six audience cards, full-bleed invitation. Condensed
+   uppercase display voice throughout; art tiles are brand-gradient SVG
+   placeholders awaiting real photography. */
+#content:has(>section.about.mission){padding-top:calc(var(--header-h)) !important;padding-bottom:0 !important}
+#content>section.about.mission{display:block;min-height:0;padding:0 !important;overflow-x:clip}
 
-#content .mission .mf-eyebrow,
-#content .mission .mf-over{
-  font-family:var(--fb);font-weight:700;
-  font-size:.64rem;letter-spacing:.24em;text-transform:uppercase;
-  color:rgba(244,236,224,.45);
-  margin:0 0 .3rem;
-}
-#content .mission .mf-eyebrow{color:var(--accent)}
-#content .mission .mf-over--dark{color:rgba(19,30,51,.5)}
+#content .mission .msx-sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+#content .mission .container{max-width:1200px}
 
-#content .mission .mf-belief{
-  font-family:var(--fd);font-weight:400;
-  font-size:clamp(1.85rem,2.7vw,2.4rem);
-  line-height:1.12;letter-spacing:-.004em;
-  color:#F4ECE0;
-  max-width:26em;margin:0 auto .35rem;
+/* Bands */
+#content .mission .msx-band{padding:clamp(2.2rem,4.5vw,3.6rem) 0;border-top:1px solid rgba(244,236,224,.1)}
+#content .mission .msx-hero{border-top:0;padding:0}
+
+/* Voice */
+#content .mission .msx-eyebrow{
+  display:flex;align-items:center;gap:.6rem;
+  font-family:var(--fb);font-weight:800;
+  font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--accent);margin:0 0 1rem;
+}
+#content .mission .msx-eyebrow__dash{width:26px;height:2px;background:var(--accent)}
+#content .mission .msx-eyebrow--center{justify-content:center}
+#content .mission .msx-h{
+  font-family:var(--fb);font-weight:800;
+  text-transform:uppercase;letter-spacing:-.01em;
+  font-size:clamp(1.5rem,2.3vw,2.05rem);line-height:1.08;
+  color:#F4ECE0;margin:0;
   text-wrap:balance;
 }
-#content .mission .mf-belief em{font-style:italic;color:var(--accent)}
-#content .mission .mf-deck{
-  font-family:var(--fd);font-weight:400;
-  font-size:1.12rem;line-height:1.45;
-  color:rgba(244,236,224,.62);
-  margin:0 auto;
+#content .mission .msx-h strong{color:var(--accent)}
+#content .mission .msx-sub{
+  font-family:var(--fb);font-weight:400;
+  font-size:.98rem;line-height:1.6;
+  color:rgba(244,236,224,.66);
+  margin:.9rem 0 0;max-width:34em;
 }
 
-#content .mission .mf-rule{
-  border:0;width:56px;height:1px;
-  background:rgba(244,236,224,.18);
-  margin:.8rem auto;
+/* Section grid: rail + content */
+#content .mission .msx-grid{
+  display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);
+  column-gap:clamp(2rem,4vw,3.6rem);align-items:start;
 }
+#content .mission .msx-rail .msx-h{max-width:11em}
 
-#content .mission .mf-line{
-  font-family:var(--fd);font-weight:400;
-  font-size:clamp(1.3rem,1.75vw,1.5rem);
-  line-height:1.32;
-  color:rgba(244,236,224,.88);
-  margin:0 auto;
-  text-wrap:balance;
+/* 01 · hero */
+#content .mission .msx-grid--hero{grid-template-columns:minmax(0,6fr) minmax(0,6fr);align-items:stretch;column-gap:0}
+#content .mission .msx-grid--hero>div:first-child{padding:clamp(2.2rem,5vw,4rem) clamp(1.5rem,3vw,3rem) clamp(2.2rem,5vw,4rem) 0;align-self:center}
+#content .mission .msx-h--hero{font-size:clamp(2rem,3.6vw,3.15rem);line-height:1.05;max-width:12.5em}
+#content .mission .msx-hero__art{position:relative;min-height:320px;border-left:1px solid rgba(244,236,224,.1)}
+@media (min-width:1024px){
+  #content .mission .msx-hero__art{margin-right:calc(50% - 50vw)}
 }
+#content .mission .msx-hero__art svg{position:absolute;inset:0;width:100%;height:100%}
 
-/* diagram: fixed geometry, never stretches */
-#content .mission .mf-dia{max-width:640px;margin:0 auto}
-#content .mission .mf-dia__row{
-  list-style:none;margin:0;padding:0;
+/* 02 · icon columns */
+#content .mission .msx-cols{
   display:grid;grid-template-columns:repeat(4,minmax(0,1fr));
-  gap:.5rem;
 }
-#content .mission .mf-dia__row li{
-  font-family:var(--fb);font-weight:700;
-  font-size:.76rem;letter-spacing:.18em;text-transform:uppercase;
-  color:#F4ECE0;white-space:nowrap;
+#content .mission .msx-col{padding:0 1.15rem;border-left:1px solid rgba(244,236,224,.12)}
+#content .mission .msx-col:first-child{padding-left:0;border-left:0}
+#content .mission .msx-col__ico{display:block;width:30px;height:30px;color:var(--accent);margin:0 0 .8rem}
+#content .mission .msx-col__ico svg{width:100%;height:100%}
+#content .mission .msx-col__t{
+  font-family:var(--fb);font-weight:800;text-transform:uppercase;
+  font-size:.8rem;letter-spacing:.08em;line-height:1.3;
+  color:#F4ECE0;margin:0 0 .5rem;
 }
-#content .mission .mf-dia__row--to li{color:rgba(244,236,224,.8)}
-#content .mission .mf-dia__mid{position:relative;height:84px;margin:.4rem auto .34rem}
-#content .mission .mf-dia__band{position:absolute;inset:0;width:100%;height:100%}
-#content .mission .mf-dia__node{
-  position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);
-  width:40px;height:40px;border-radius:50%;
-  display:grid;place-items:center;
-  background:var(--ink,#001839);
-  border:1px solid rgba(255,105,65,.55);
-  box-shadow:0 0 0 5px var(--ink,#001839),0 0 0 6px rgba(255,105,65,.18);
+#content .mission .msx-col__d{font-size:.86rem;line-height:1.55;color:rgba(244,236,224,.6);margin:0}
+
+/* 03 · focus cards */
+#content .mission .msx-cards{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:.9rem}
+#content .mission .msx-card{
+  margin:0;border:1px solid rgba(244,236,224,.14);border-radius:10px;overflow:hidden;
+  background:linear-gradient(165deg,#16233E 0%,#0A1224 62%,#231320 100%);
+  display:flex;flex-direction:column;
+  transition:transform .22s ease,border-color .22s ease;
+}
+#content .mission .msx-card:hover{transform:translateY(-3px);border-color:rgba(255,105,65,.45)}
+#content .mission .msx-card__art{
+  height:150px;display:grid;place-items:center;color:var(--accent);
+  background:
+    radial-gradient(70% 90% at 78% 100%, rgba(255,105,65,.22), transparent 62%),
+    radial-gradient(60% 60% at 18% 8%, rgba(244,236,224,.05), transparent 60%);
+}
+#content .mission .msx-card__art svg{width:52px;height:52px;opacity:.95}
+#content .mission .msx-card figcaption{padding:.85rem .95rem 1rem;border-top:1px solid rgba(244,236,224,.1)}
+#content .mission .msx-card__t{
+  font-family:var(--fb);font-weight:800;text-transform:uppercase;
+  font-size:.92rem;letter-spacing:.06em;color:#F4ECE0;
+  padding-bottom:.4rem;margin-bottom:.5rem;position:relative;
+}
+#content .mission .msx-card__t::after{content:"";position:absolute;left:0;bottom:0;width:18px;height:2px;background:var(--accent)}
+#content .mission .msx-card__d{font-size:.84rem;line-height:1.5;color:rgba(244,236,224,.62);margin:0}
+
+/* 04 · exist + quote */
+#content .mission .msx-grid--exist{grid-template-columns:minmax(0,7fr) minmax(0,5fr)}
+#content .mission .msx-quote{
+  margin:0;padding:1.4rem 1.6rem 1.5rem;
+  border-left:3px solid var(--accent);
+  background:rgba(244,236,224,.04);
+  align-self:center;
+}
+#content .mission .msx-quote__mark{
+  display:block;font-family:var(--fd);font-size:2.6rem;line-height:.6;
+  color:var(--accent);margin-bottom:.55rem;
+}
+#content .mission .msx-quote__text{
+  font-family:var(--fd);font-weight:400;
+  font-size:clamp(1.3rem,1.8vw,1.6rem);line-height:1.35;
+  color:#F4ECE0;margin:0 0 .8rem;
+}
+#content .mission .msx-quote__cite{
+  font-style:normal;font-family:var(--fb);font-weight:800;
+  font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;
   color:var(--accent);
 }
-#content .mission .mf-dia__node svg{width:19px;height:19px}
-#content .mission .mf-dia__shift{
-  font-family:var(--fb);font-weight:700;
-  font-size:.58rem;letter-spacing:.22em;text-transform:uppercase;
-  color:rgba(244,236,224,.42);
-  margin:0 0 .3rem;
-}
-#content .mission .mf-dia__shift{
-  display:table;margin-left:auto;margin-right:auto;
-  background:var(--ink,#001839);
-  padding:.1rem .7rem;
-}
 
+/* 05 · principles */
+#content .mission .msx-prins{
+  display:grid;grid-template-columns:repeat(6,minmax(0,1fr));
+  margin-top:1.4rem;
+}
+#content .mission .msx-prin{text-align:center;padding:0 .9rem;border-left:1px solid rgba(244,236,224,.12)}
+#content .mission .msx-prin:first-child{border-left:0}
+#content .mission .msx-prin__ico{display:inline-grid;place-items:center;width:44px;height:44px;border:1px solid rgba(255,105,65,.5);border-radius:50%;color:var(--accent);margin-bottom:.7rem}
+#content .mission .msx-prin__ico svg{width:20px;height:20px}
+#content .mission .msx-prin__t{
+  font-family:var(--fb);font-weight:800;text-transform:uppercase;
+  font-size:.78rem;letter-spacing:.1em;color:#F4ECE0;margin:0 0 .4rem;
+}
+#content .mission .msx-prin__d{font-size:.8rem;line-height:1.5;color:rgba(244,236,224,.58);margin:0}
 
-/* ivory finale closes the frame */
-#content .mission .mf-final{
-  background:#F4ECE0;
+/* 06 · who */
+#content .mission .msx-whos{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.9rem}
+#content .mission .msx-who{
+  margin:0;border:1px solid rgba(244,236,224,.14);border-radius:10px;overflow:hidden;
+  background:linear-gradient(160deg,#131E33,#0A1224 70%);
+  transition:transform .22s ease,border-color .22s ease;
+}
+#content .mission .msx-who:hover{transform:translateY(-3px);border-color:rgba(255,105,65,.45)}
+#content .mission .msx-who__art{
+  height:86px;display:grid;place-items:center;color:var(--accent);
+  background:radial-gradient(80% 120% at 50% 120%, rgba(255,105,65,.16), transparent 65%);
+  border-bottom:1px solid rgba(244,236,224,.1);
+}
+#content .mission .msx-who__art svg{width:30px;height:30px}
+#content .mission .msx-who figcaption{padding:.7rem .85rem .85rem}
+#content .mission .msx-who__t{
+  font-family:var(--fb);font-weight:800;text-transform:uppercase;
+  font-size:.8rem;letter-spacing:.08em;color:#F4ECE0;margin-bottom:.3rem;
+}
+#content .mission .msx-who__d{font-size:.8rem;line-height:1.45;color:rgba(244,236,224,.6);margin:0}
+
+/* 07 · invitation */
+#content .mission .msx-invite{
   text-align:center;
-  padding:1rem 0 1.25rem;
+  padding:clamp(2.6rem,5.5vw,4.4rem) 0 clamp(2.2rem,4.5vw,3.4rem);
+  border-top:1px solid rgba(244,236,224,.1);
+  background:
+    radial-gradient(60% 70% at 50% 118%, rgba(255,105,65,.28), transparent 65%),
+    linear-gradient(180deg, #0E1830 0%, #0A1224 100%);
 }
-#content .mission .mf-final .mf-over{margin-bottom:.35rem}
-#content .mission .mf-mission{
-  font-family:var(--fd);font-weight:400;
-  font-size:clamp(1.3rem,1.85vw,1.52rem);
-  line-height:1.36;
-  color:#16233E;
-  max-width:34em;margin:0 auto .65rem;
-  text-wrap:balance;
+#content .mission .msx-invite .msx-eyebrow{margin-bottom:1.1rem}
+#content .mission .msx-h--invite{font-size:clamp(1.8rem,3vw,2.6rem);line-height:1.08;margin:0 auto;max-width:16em}
+#content .mission .msx-sub--invite{margin:.9rem auto 1.6rem;max-width:36em}
+#content .mission .msx-invite__row{display:flex;align-items:stretch;justify-content:center;gap:.9rem;flex-wrap:wrap}
+#content .mission .msx-btn{font-family:var(--fb);font-weight:800;letter-spacing:.04em;text-transform:none;font-size:.95rem}
+#content .mission .msx-btn2{
+  display:inline-flex;align-items:center;gap:.65rem;
+  padding:.6rem 1.25rem;border:1px solid rgba(255,105,65,.6);border-radius:999px;
+  font-family:var(--fb);font-weight:800;font-size:.9rem;
+  color:#F4ECE0;text-decoration:none;text-align:left;
+  transition:border-color .2s ease,background .2s ease;
 }
-#content .mission .mf-mission strong{font-weight:400;color:var(--accent-deep,#C2521F)}
-#content .mission .mf-cta{
-  font-family:var(--fb);font-weight:700;
-  letter-spacing:.06em;text-transform:none;font-size:.95rem;
-}
-
-/* tall desktops: scale the composition into the room */
-@media (min-width:901px) and (min-height:901px){
-  #content .mission .mf-eyebrow,#content .mission .mf-over{font-size:.7rem;margin-bottom:.55rem}
-  #content .mission .mf-belief{font-size:2.85rem;margin-bottom:.6rem}
-  #content .mission .mf-deck{font-size:1.24rem}
-  #content .mission .mf-rule{margin:1.2rem auto}
-  #content .mission .mf-line{font-size:1.7rem}
-  #content .mission .mf-dia{max-width:720px}
-  #content .mission .mf-dia__row li{font-size:.84rem}
-  #content .mission .mf-dia__mid{height:106px;margin:.5rem auto .42rem}
-  #content .mission .mf-dia__node{width:46px;height:46px}
-  #content .mission .mf-dia__node svg{width:20px;height:20px}
-  #content .mission .mf-dia__shift{font-size:.62rem;margin-bottom:.4rem}
-  #content .mission .mf-final{padding:1.35rem 0 1.6rem}
-  #content .mission .mf-final .mf-over{margin-bottom:.5rem}
-  #content .mission .mf-mission{font-size:1.72rem;margin-bottom:.85rem}
-  #content .mission .mf-cta{font-size:1rem}
+#content .mission .msx-btn2:hover{border-color:var(--accent);background:rgba(255,105,65,.08)}
+#content .mission .msx-btn2 svg{width:20px;height:20px;color:var(--accent);flex:0 0 auto}
+#content .mission .msx-btn2__sub{display:block;font-weight:400;font-size:.7rem;letter-spacing:.05em;color:var(--accent)}
+#content .mission .msx-invite__meta{
+  margin-top:1.6rem;
+  font-family:var(--fm);font-size:.66rem;font-weight:700;
+  letter-spacing:.22em;text-transform:uppercase;
+  color:rgba(244,236,224,.5);
 }
 
-/* mid laptops */
-@media (min-width:901px) and (min-height:701px) and (max-height:820px){
-  #content>section.about.mission{padding-top:.1rem !important}
-  #content .mission .mf-eyebrow,#content .mission .mf-over{margin-bottom:.24rem;font-size:.58rem}
-  #content .mission .mf-belief{font-size:2rem;margin-bottom:.35rem}
-  #content .mission .mf-deck{font-size:.96rem}
-  #content .mission .mf-rule{margin:.55rem auto}
-  #content .mission .mf-line{font-size:1.3rem}
-  #content .mission .mf-dia__mid{height:72px;margin:.3rem auto .26rem}
-  #content .mission .mf-dia__node{width:34px;height:34px}
-  #content .mission .mf-dia__shift{margin-bottom:.24rem}
-  #content .mission .mf-final{padding:.8rem 0 1rem}
-  #content .mission .mf-final .mf-over{margin-bottom:.25rem}
-  #content .mission .mf-mission{font-size:1.3rem;margin-bottom:.5rem}
+/* Tablet */
+@media (max-width:1023px){
+  #content .mission .msx-grid{grid-template-columns:minmax(0,1fr);row-gap:1.6rem}
+  #content .mission .msx-grid--hero{grid-template-columns:minmax(0,1fr)}
+  #content .mission .msx-grid--hero>div:first-child{padding-right:0}
+  #content .mission .msx-hero__art{min-height:250px;border-left:0;border-top:1px solid rgba(244,236,224,.1)}
+  #content .mission .msx-cols{grid-template-columns:repeat(2,minmax(0,1fr));gap:1.5rem 0}
+  #content .mission .msx-col:nth-child(3){padding-left:0;border-left:0}
+  #content .mission .msx-cards{grid-template-columns:repeat(2,minmax(0,1fr))}
+  #content .mission .msx-prins{grid-template-columns:repeat(3,minmax(0,1fr));gap:1.5rem 0}
+  #content .mission .msx-prin:nth-child(4){border-left:0}
+  #content .mission .msx-whos{grid-template-columns:repeat(2,minmax(0,1fr))}
 }
-
-/* short laptops */
-@media (min-width:901px) and (max-height:700px){
-  #content>section.about.mission{padding-top:0 !important}
-  #content .mission .mf{padding:.1rem 0 .2rem}
-  #content .mission .mf-eyebrow,#content .mission .mf-over{font-size:.54rem;margin-bottom:.26rem}
-  #content .mission .mf-belief{font-size:1.5rem;margin-bottom:.3rem}
-  #content .mission .mf-deck{font-size:.84rem}
-  #content .mission .mf-rule{margin:.4rem auto}
-  #content .mission .mf-line{font-size:1.1rem}
-  #content .mission .mf-dia__row li{font-size:.64rem}
-  #content .mission .mf-dia__mid{height:60px;margin:.26rem auto .22rem}
-  #content .mission .mf-dia__node{width:28px;height:28px}
-  #content .mission .mf-dia__node svg{width:12px;height:12px}
-  #content .mission .mf-dia__shift{font-size:.5rem;margin-bottom:.3rem}
-  #content .mission .mf-final{padding:.6rem 0 .78rem}
-  #content .mission .mf-final .mf-over{margin-bottom:.3rem}
-  #content .mission .mf-mission{font-size:1.1rem;margin-bottom:.4rem}
-  #content .mission .mf-cta{font-size:.8rem;padding:.45rem 1.1rem}
-}
-
-/* tablet & mobile: natural scroll, no poster lock */
-@media (max-width:900px){
-  #content>section.about.mission{min-height:0;display:block;padding-top:1rem !important}
-  #content .mission .msn{display:block}
-  #content .mission .mf{padding:0}
-  #content .mission .mf-belief{font-size:clamp(1.9rem,6.6vw,2.4rem);max-width:15em}
-  #content .mission .mf-deck{font-size:1.12rem;max-width:34em}
-  #content .mission .mf-rule{margin:1.7rem auto}
-  #content .mission .mf-line{font-size:clamp(1.3rem,4.2vw,1.6rem);max-width:26em}
-  #content .mission .mf-final{margin-top:1.9rem;padding:1.8rem 0 2rem}
-  #content .mission .mf-mission{font-size:1.34rem;max-width:28em;margin-bottom:1.2rem}
-}
+/* Mobile */
 @media (max-width:620px){
-  #content .mission .mf-eyebrow,#content .mission .mf-over{font-size:.6rem;letter-spacing:.2em}
-  #content .mission .mf-dia__row{grid-template-columns:repeat(2,minmax(0,1fr));gap:.55rem 1rem}
-  #content .mission .mf-dia__row li{font-size:.72rem;letter-spacing:.16em}
-  #content .mission .mf-dia__mid{height:84px}
-  #content .mission .mf-dia__band{display:none}
-  #content .mission .mf-dia__mid::before,
-  #content .mission .mf-dia__mid::after{
-    content:"";position:absolute;left:50%;transform:translateX(-.5px);
-    width:1px;background:rgba(255,105,65,.4);
-  }
-  #content .mission .mf-dia__mid::before{top:2px;height:calc(50% - 26px)}
-  #content .mission .mf-dia__mid::after{bottom:2px;height:calc(50% - 26px)}
-  #content .mission .mf-cta{width:calc(100% - 2.5rem);justify-content:center}
+  #content .mission .msx-band{padding:1.9rem 0}
+  #content .mission .msx-h--hero{font-size:clamp(1.7rem,7.6vw,2.1rem)}
+  #content .mission .msx-hero__art{min-height:200px}
+  #content .mission .msx-cols{grid-template-columns:minmax(0,1fr);gap:1.3rem 0}
+  #content .mission .msx-col{padding:0;border-left:0}
+  #content .mission .msx-cards{grid-template-columns:minmax(0,1fr);gap:.75rem}
+  #content .mission .msx-card__art{height:120px}
+  #content .mission .msx-prins{grid-template-columns:repeat(2,minmax(0,1fr));gap:1.4rem .8rem;margin-top:1.1rem}
+  #content .mission .msx-prin{padding:0;border-left:0}
+  #content .mission .msx-whos{grid-template-columns:minmax(0,1fr);gap:.75rem}
+  #content .mission .msx-invite__row{flex-direction:column;align-items:stretch}
+  #content .mission .msx-btn,#content .mission .msx-btn2{justify-content:center}
+  #content .mission .msx-btn2{text-align:center}
+  #content .mission .msx-btn2__sub{display:inline;margin-left:.4rem}
 }
 
 /* ===== Header: focus visibility only (usability), appearance untouched ===== */
 #content .nav__link:focus-visible,
 #content .nav__dd-link:focus-visible,
 .nav__link:focus-visible{outline:2px solid var(--accent);outline-offset:4px;border-radius:3px}
-/* build: styles v228 */
+/* build: styles v229 */
