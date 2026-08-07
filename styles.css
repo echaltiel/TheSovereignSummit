@@ -5672,25 +5672,35 @@ body.menu-open{overflow:hidden}
 }
 #content .mission .msx-hero__art img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 40%;filter:saturate(1.08) contrast(1.03)}
 
-/* mission lockup: one voice, one size, eight set lines */
+/* mission lockup: lead, three pillar tiles, sentence tail */
 #content .mission .msx-mlock{display:block}
-#content .mission .msx-mlock__line{
+#content .mission .msx-mlock__lead{
   display:block;font-family:var(--fb);font-weight:800;
-  font-size:clamp(.9rem,1.32vw,1.3rem);line-height:1.26;
-  letter-spacing:-.008em;text-transform:uppercase;
-  color:var(--msx-paper);
+  font-size:clamp(1rem,1.3vw,1.25rem);letter-spacing:.02em;text-transform:uppercase;
+  color:var(--msx-paper);margin:0 0 .8rem;
 }
-#content .mission .msx-mlock__line--c{
+#content .mission .msx-mlock__chip{
+  display:table;
+  font-family:var(--fb);font-weight:800;
+  font-size:clamp(1.3rem,1.75vw,1.7rem);line-height:1.05;
+  letter-spacing:-.01em;text-transform:uppercase;
   color:var(--msx-orange);
-  font-size:clamp(1.5rem,2.15vw,1.95rem);
-  line-height:1.14;letter-spacing:-.012em;
-  text-wrap:balance;
+  border:1px solid rgba(255,90,47,.55);
+  background:rgba(255,90,47,.07);
+  border-radius:10px;
+  padding:.55rem .95rem .6rem;
+  margin:0 0 .6rem;
+}
+#content .mission .msx-mlock__tail{
+  font-family:var(--fb);font-weight:400;
+  font-size:clamp(1rem,1.25vw,1.18rem);line-height:1.6;
+  color:rgba(244,236,224,.82);
+  max-width:27em;margin:.9rem 0 0;
 }
 @media (max-width:900px){
-  #content .mission .msx-mlock__line{font-size:clamp(1rem,4.2vw,1.25rem)}
-  #content .mission .msx-mlock__line--c{font-size:clamp(1.4rem,5.8vw,1.75rem)}
+  #content .mission .msx-mlock__chip{font-size:clamp(1.15rem,5vw,1.45rem);padding:.5rem .8rem .55rem}
+  #content .mission .msx-mlock__tail{font-size:1rem}
 }
-
 /* why this matters */
 #content .mission .msx-cols{grid-template-columns:repeat(4,minmax(0,1fr));align-self:stretch}
 #content .mission .msx-col{padding:0 1rem;border-left:1px solid var(--msx-rule);text-align:center}
@@ -5821,6 +5831,5 @@ body.menu-open{overflow:hidden}
   #content .mission .msx-grid--hero{grid-template-columns:minmax(0,1fr);min-height:0}
   #content .mission .msx-grid--hero>div:first-child{padding-right:0}
   #content .mission .msx-hero__art{min-height:300px;border-top:1px solid var(--msx-rule)}
-  #content .mission .msx-mlock__line{font-size:1.3rem}
-  #content .mission .msx-mlock__line--c{font-size:1.85rem}
+  #content .mission .msx-mlock__chip{font-size:1.6rem}
 }
