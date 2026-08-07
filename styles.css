@@ -5445,33 +5445,37 @@ body.menu-open{overflow:hidden}
   font-size:clamp(1.46rem,2vw,1.7rem);
   line-height:1.3;
   color:rgba(244,236,224,.9);
-  margin:0 auto .6rem;max-width:26em;
+  margin:0 auto;max-width:26em;
   text-wrap:balance;
 }
 #content.mission .msn-def__answer strong{font-weight:400;color:var(--accent)}
-#content.mission .msn-def__ctx{
-  font-family:var(--fb);font-weight:400;
-  font-size:.95rem;line-height:1.5;
-  color:rgba(244,236,224,.55);
-  margin:0 auto;
-}
 
-/* Pillar strip: one ruled row, four cells */
-#content.mission .msn-pillars{
-  list-style:none;padding:0;
+/* Index: two labelled ruled rows replace all connective prose. */
+#content.mission .msn-index{
   margin:clamp(.95rem,1.5vw,1.25rem) 0 0;
-  display:grid;
-  grid-template-columns:repeat(4,minmax(0,1fr));
   border-top:1px solid rgba(244,236,224,.16);
   border-bottom:1px solid rgba(244,236,224,.16);
 }
-#content.mission .msn-pillars li{
-  font-family:var(--fb);font-weight:700;
-  font-size:.8rem;letter-spacing:.22em;text-transform:uppercase;
-  color:rgba(244,236,224,.85);
-  padding:.7rem 1.1rem;
+#content.mission .msn-index__row{
+  display:grid;
+  grid-template-columns:170px repeat(4,minmax(0,1fr));
+  align-items:center;
 }
-#content.mission .msn-pillars li + li{border-left:1px solid rgba(244,236,224,.14)}
+#content.mission .msn-index__row + .msn-index__row{border-top:1px solid rgba(244,236,224,.12)}
+#content.mission .msn-index__label{
+  font-family:var(--fb);font-weight:700;
+  font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;
+  color:rgba(244,236,224,.45);
+  padding:.6rem 1rem .6rem 0;
+}
+#content.mission .msn-index__cells{list-style:none;margin:0;padding:0;display:contents}
+#content.mission .msn-index__cells li{
+  font-family:var(--fb);font-weight:700;
+  font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;
+  color:rgba(244,236,224,.85);
+  padding:.6rem 1rem;
+  border-left:1px solid rgba(244,236,224,.12);
+}
 
 /* Mission: cream band, single label, edge-pulled */
 #content.mission .msn-band--c{
@@ -5533,11 +5537,10 @@ body.menu-open{overflow:hidden}
   #content.mission .msn-statement{font-size:1.92rem}
   #content.mission .msn-def{margin-top:.7rem;padding:.72rem 1.3rem .82rem}
   #content.mission .msn-def__q{font-size:1.14rem;margin-bottom:.42rem}
-  #content.mission .msn-def__answer{font-size:1.36rem;margin-bottom:.4rem}
-  #content.mission .msn-def__ctx{font-size:.9rem}
-  #content.mission .msn-def__ctx{font-size:.92rem}
-  #content.mission .msn-pillars{margin-top:.8rem}
-  #content.mission .msn-pillars li{padding:.5rem 1rem}
+  #content.mission .msn-def__answer{font-size:1.36rem}
+  #content.mission .msn-index{margin-top:.8rem}
+  #content.mission .msn-index__cells li{padding:.44rem 1rem}
+  #content.mission .msn-index__label{padding:.44rem 1rem .44rem 0}
   #content.mission .msn-band--c{margin-top:.85rem;padding:.85rem 1.5rem .95rem;margin-left:-1.5rem;margin-right:-1.5rem}
   #content.mission .msn-mission{font-size:1.3rem}
   #content.mission .msn-foot{margin-top:.7rem;padding-top:.55rem}
@@ -5549,10 +5552,10 @@ body.menu-open{overflow:hidden}
   #content.mission .msn-statement{font-size:1.48rem}
   #content.mission .msn-def{margin-top:.55rem;padding:.6rem 1.05rem .66rem;border-radius:14px}
   #content.mission .msn-def__q{font-size:1.06rem;margin-bottom:.4rem}
-  #content.mission .msn-def__answer{font-size:1.18rem;margin-bottom:.34rem}
-  #content.mission .msn-def__ctx{font-size:.83rem;line-height:1.42}
-  #content.mission .msn-pillars{margin-top:.6rem}
-  #content.mission .msn-pillars li{padding:.36rem .9rem;font-size:.68rem}
+  #content.mission .msn-def__answer{font-size:1.18rem}
+  #content.mission .msn-index{margin-top:.55rem}
+  #content.mission .msn-index__cells li{padding:.34rem .9rem;font-size:.68rem}
+  #content.mission .msn-index__label{padding:.34rem .9rem .34rem 0;font-size:.56rem}
   #content.mission .msn-band--c{margin-top:.65rem;padding:.68rem 1.2rem .78rem;margin-left:-1.2rem;margin-right:-1.2rem}
   #content.mission .msn-mission{font-size:1.1rem}
   #content.mission .msn-foot{margin-top:.46rem;padding-top:.38rem}
@@ -5560,9 +5563,10 @@ body.menu-open{overflow:hidden}
 
 /* Linearise below 1024 */
 @media (max-width:1023px){
-  #content.mission .msn-pillars{grid-template-columns:repeat(2,minmax(0,1fr))}
-  #content.mission .msn-pillars li:nth-child(2n+1){border-left:0}
-  #content.mission .msn-pillars li:nth-child(n+3){border-top:1px solid rgba(244,236,224,.14)}
+  #content.mission .msn-index__row{grid-template-columns:150px repeat(2,minmax(0,1fr));row-gap:0}
+  #content.mission .msn-index__cells li:nth-child(3),#content.mission .msn-index__cells li:nth-child(4){border-top:1px solid rgba(244,236,224,.1)}
+  #content.mission .msn-index__cells li:nth-child(3){border-left:0}
+  #content.mission .msn-index__label{grid-row:span 2}
 }
 @media (max-width:620px){
   #content.mission{padding-top:calc(var(--header-h) + .8rem) !important}
@@ -5570,7 +5574,10 @@ body.menu-open{overflow:hidden}
   #content.mission .msn-statement{font-size:clamp(1.55rem,7vw,1.85rem);line-height:1.27}
   #content.mission .msn-def__q{font-size:1.22rem}
   #content.mission .msn-def__answer{font-size:1.42rem}
-  #content.mission .msn-pillars li{font-size:.72rem;letter-spacing:.18em;padding:.6rem .8rem}
+  #content.mission .msn-index__row{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  #content.mission .msn-index__label{grid-column:1/-1;padding:.55rem 0 .15rem}
+  #content.mission .msn-index__cells li{font-size:.7rem;letter-spacing:.16em;padding:.5rem .7rem}
+  #content.mission .msn-index__cells li:nth-child(odd){border-left:0;padding-left:0}
   #content.mission .msn-band--c{padding:1.2rem 1.2rem 1.3rem;border-radius:14px;margin-top:1.2rem}
   #content.mission .msn-mission{font-size:1.5rem;line-height:1.38}
   #content.mission .msn-mission strong{color:var(--accent-deep,#C2521F)}
@@ -5582,4 +5589,4 @@ body.menu-open{overflow:hidden}
 #content .nav__link:focus-visible,
 #content .nav__dd-link:focus-visible,
 .nav__link:focus-visible{outline:2px solid var(--accent);outline-offset:4px;border-radius:3px}
-/* build: styles v222 */
+/* build: styles v223 */
