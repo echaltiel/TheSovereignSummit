@@ -34,7 +34,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Instrument+Serif&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=216">
+<link rel="stylesheet" href="styles.css?v=217">
 <style>#content{padding-top:calc(var(--header-h) + clamp(1rem,2.5vw,2rem))}</style>
 </head>
 <body>
@@ -116,47 +116,40 @@
   <section class="about mission" id="content">
     <div class="container msn">
 
-      <article>
+      <article class="msn-hero">
 
-        <div class="msn-sec msn-sec--open">
-          <div class="msn-rail">
-            <div class="msn-rail__label"><span class="msn-rail__num">01</span> / Mission</div>
-          </div>
-          <div class="msn-body">
+        <div class="msn-col msn-col--main">
+          <div class="msn-blk">
+            <div class="msn-label"><span class="msn-label__num">01</span> / Mission</div>
             <h1 class="msn-h">Why We Gather</h1>
             <p class="msn-statement">The Sovereign Summit brings together <strong>builders, technologists, and innovators</strong> exploring the future of sovereignty.</p>
           </div>
-        </div>
-
-        <div class="msn-sec">
-          <div class="msn-rail">
-            <div class="msn-rail__label"><span class="msn-rail__num">02</span> / Context</div>
-          </div>
-          <div class="msn-body msn-body--split">
+          <div class="msn-blk msn-blk--context">
+            <div class="msn-label"><span class="msn-label__num">02</span> / Context</div>
             <p class="msn-context">As AI, energy, money, and other foundational technologies converge, they are reshaping the systems that underpin society.</p>
-            <ul class="msn-list" aria-label="The four pillars">
-              <li>AI</li>
-              <li>Energy</li>
-              <li>Money</li>
-              <li>Open Systems</li>
-            </ul>
           </div>
         </div>
 
-        <div class="msn-sec msn-sec--mission">
-          <div class="msn-rail">
-            <div class="msn-rail__label"><span class="msn-rail__num">03</span> / Our Mission</div>
-          </div>
-          <div class="msn-body">
-            <p class="msn-mission">Our mission is to foster <strong>meaningful conversations</strong>, <strong>lasting collaboration</strong>, and <strong>bold ideas</strong> that expand individual agency, strengthen open systems, and help build a more sovereign future.</p>
+        <div class="msn-col msn-col--side">
+          <ul class="msn-list" aria-label="The four pillars">
+            <li>AI</li>
+            <li>Energy</li>
+            <li>Money</li>
+            <li>Open Systems</li>
+          </ul>
+          <div class="msn-blk msn-blk--mission">
+            <div class="msn-label"><span class="msn-label__num">03</span> / Our Mission</div>
+            <div class="msn-tile">
+              <p class="msn-mission">To foster <strong>meaningful conversations</strong>, <strong>lasting collaboration</strong>, and <strong>bold ideas</strong> that expand individual agency, strengthen open systems, and help build a more sovereign future.</p>
+            </div>
           </div>
         </div>
 
-        <div class="msn-close">
-          <p class="msn-close__line">AI, energy, money, and open systems, under one roof in Miami Beach.</p>
-          <div class="msn-close__row">
-            <a class="btn msn-close__btn" href="/tickets">Explore the Summit <span class="btn__arrow">&rarr;</span></a>
-            <a class="msn-close__alt" href="/agenda">View the Schedule</a>
+        <div class="msn-foot">
+          <p class="msn-foot__line">AI, energy, money, and open systems, under one roof in Miami Beach.</p>
+          <div class="msn-foot__row">
+            <a class="btn msn-foot__btn" href="/tickets">Explore the Summit <span class="btn__arrow">&rarr;</span></a>
+            <a class="msn-foot__alt" href="/agenda">View the Schedule</a>
           </div>
         </div>
 
@@ -164,6 +157,7 @@
 
     </div>
   </section>
+
 
 
 
