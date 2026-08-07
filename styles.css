@@ -5680,10 +5680,15 @@ body.menu-open{overflow:hidden}
   letter-spacing:-.008em;text-transform:uppercase;
   color:var(--msx-paper);
 }
-#content .mission .msx-mlock__line--c{color:var(--msx-orange)}
-#content .mission .msx-mlock__w{font-style:normal;color:var(--msx-paper)}
+#content .mission .msx-mlock__line--c{
+  color:var(--msx-orange);
+  font-size:clamp(1.5rem,2.15vw,1.95rem);
+  line-height:1.14;letter-spacing:-.012em;
+  text-wrap:balance;
+}
 @media (max-width:900px){
   #content .mission .msx-mlock__line{font-size:clamp(1rem,4.2vw,1.25rem)}
+  #content .mission .msx-mlock__line--c{font-size:clamp(1.4rem,5.8vw,1.75rem)}
 }
 
 /* why this matters */
@@ -5816,5 +5821,6 @@ body.menu-open{overflow:hidden}
   #content .mission .msx-grid--hero{grid-template-columns:minmax(0,1fr);min-height:0}
   #content .mission .msx-grid--hero>div:first-child{padding-right:0}
   #content .mission .msx-hero__art{min-height:300px;border-top:1px solid var(--msx-rule)}
-  #content .mission .msx-mlock__line{font-size:1.35rem}
+  #content .mission .msx-mlock__line{font-size:1.3rem}
+  #content .mission .msx-mlock__line--c{font-size:1.85rem}
 }
