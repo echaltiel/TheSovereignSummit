@@ -5395,153 +5395,212 @@ body.menu-open{overflow:hidden}
   #content .agn-more{margin:1.15rem auto .1rem}
 }
 
-/* ===== Mission page (v227: the manifesto, above the fold) =====
-   Same five movements, compressed into one desktop viewport. Vertical rhythm
-   is set in vh so the whitespace scales with the window; a single compact
-   layer handles short laptops. Mobile scrolls naturally. */
-#content.mission{overflow-x:clip}
-#content.mission .container{max-width:1160px}
-#content.mission{padding-top:calc(var(--header-h) + clamp(.9rem,2.2vh,2rem)) !important;padding-bottom:0 !important}
+/* ===== Mission page (v228: poster composition) =====
+   Fixed rhythm, fixed diagram geometry. The section is a 100vh poster: the
+   navy manifesto centres in whatever height remains and the ivory finale
+   closes the frame at the fold. Extra height on tall windows becomes air
+   around the composition, never voids inside it. */
+/* The main wrapper already clears the fixed header sitewide; it becomes the
+   100vh poster frame. The section just fills it. */
+#content:has(>section.about.mission){
+  padding-top:calc(var(--header-h) + .55rem) !important;
+  padding-bottom:0 !important;
+}
+#content>section.about.mission{
+  display:flex;flex-direction:column;
+  min-height:calc(100vh - var(--header-h) - .55rem);
+  box-sizing:border-box;overflow-x:clip;
+  padding-top:.2rem !important;
+  padding-bottom:0 !important;
+}
+#content .mission .msn{flex:1;display:flex;align-items:center;max-width:1160px;width:100%}
+#content .mission .mf{text-align:center;width:100%;padding:.1rem 0 .25rem}
 
-#content.mission .mf{text-align:center}
-
-#content.mission .mf-eyebrow,
-#content.mission .mf-over{
+#content .mission .mf-eyebrow,
+#content .mission .mf-over{
   font-family:var(--fb);font-weight:700;
   font-size:.64rem;letter-spacing:.24em;text-transform:uppercase;
   color:rgba(244,236,224,.45);
-  margin:0 0 clamp(.35rem,.85vh,.75rem);
+  margin:0 0 .3rem;
 }
-#content.mission .mf-eyebrow{color:var(--accent)}
-#content.mission .mf-over--dark{color:rgba(19,30,51,.5)}
+#content .mission .mf-eyebrow{color:var(--accent)}
+#content .mission .mf-over--dark{color:rgba(19,30,51,.5)}
 
-/* I · belief */
-#content.mission .mf-belief{
+#content .mission .mf-belief{
   font-family:var(--fd);font-weight:400;
-  font-size:clamp(1.7rem,2.5vw,2.15rem);
-  line-height:1.14;letter-spacing:-.004em;
+  font-size:clamp(1.85rem,2.7vw,2.4rem);
+  line-height:1.12;letter-spacing:-.004em;
   color:#F4ECE0;
-  max-width:24em;margin:0 auto clamp(.4rem,1vh,.85rem);
+  max-width:26em;margin:0 auto .35rem;
   text-wrap:balance;
 }
-#content.mission .mf-belief em{font-style:italic;color:var(--accent)}
-#content.mission .mf-deck{
+#content .mission .mf-belief em{font-style:italic;color:var(--accent)}
+#content .mission .mf-deck{
   font-family:var(--fd);font-weight:400;
-  font-size:clamp(1rem,1.3vw,1.16rem);
-  line-height:1.45;
+  font-size:1.12rem;line-height:1.45;
   color:rgba(244,236,224,.62);
   margin:0 auto;
 }
 
-/* movement rules */
-#content.mission .mf-rule{
-  border:0;width:64px;height:1px;
-  background:rgba(244,236,224,.16);
-  margin:clamp(.45rem,1.4vh,1.35rem) auto;
+#content .mission .mf-rule{
+  border:0;width:56px;height:1px;
+  background:rgba(244,236,224,.18);
+  margin:.8rem auto;
 }
 
-/* II & IV · single serif lines */
-#content.mission .mf-line{
+#content .mission .mf-line{
   font-family:var(--fd);font-weight:400;
-  font-size:clamp(1.24rem,1.8vw,1.56rem);
+  font-size:clamp(1.3rem,1.75vw,1.5rem);
   line-height:1.32;
-  color:rgba(244,236,224,.86);
+  color:rgba(244,236,224,.88);
   margin:0 auto;
   text-wrap:balance;
 }
 
-/* III · diagram */
-#content.mission .mf-dia{max-width:1080px;margin:0 auto}
-#content.mission .mf-dia__row{
+/* diagram: fixed geometry, never stretches */
+#content .mission .mf-dia{max-width:640px;margin:0 auto}
+#content .mission .mf-dia__row{
   list-style:none;margin:0;padding:0;
   display:grid;grid-template-columns:repeat(4,minmax(0,1fr));
-  gap:1rem;
+  gap:.5rem;
 }
-#content.mission .mf-dia__row li{
+#content .mission .mf-dia__row li{
   font-family:var(--fb);font-weight:700;
-  font-size:.8rem;letter-spacing:.2em;text-transform:uppercase;
+  font-size:.76rem;letter-spacing:.18em;text-transform:uppercase;
   color:#F4ECE0;white-space:nowrap;
 }
-#content.mission .mf-dia__row--to li{color:rgba(244,236,224,.78)}
-#content.mission .mf-dia__mid{position:relative;height:clamp(42px,7.2vh,78px);margin:clamp(.3rem,.8vh,.7rem) 0 clamp(.25rem,.6vh,.55rem)}
-#content.mission .mf-dia__band{position:absolute;inset:0;width:100%;height:100%}
-#content.mission .mf-dia__node{
+#content .mission .mf-dia__row--to li{color:rgba(244,236,224,.8)}
+#content .mission .mf-dia__mid{position:relative;height:84px;margin:.4rem auto .34rem}
+#content .mission .mf-dia__band{position:absolute;inset:0;width:100%;height:100%}
+#content .mission .mf-dia__node{
   position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);
-  width:clamp(36px,5vh,44px);height:clamp(36px,5vh,44px);border-radius:50%;
+  width:40px;height:40px;border-radius:50%;
   display:grid;place-items:center;
   background:var(--ink,#001839);
-  border:1px solid rgba(255,105,65,.5);
+  border:1px solid rgba(255,105,65,.55);
+  box-shadow:0 0 0 5px var(--ink,#001839),0 0 0 6px rgba(255,105,65,.18);
   color:var(--accent);
 }
-#content.mission .mf-dia__node svg{width:56%;height:56%}
-#content.mission .mf-dia__shift{
+#content .mission .mf-dia__node svg{width:19px;height:19px}
+#content .mission .mf-dia__shift{
   font-family:var(--fb);font-weight:700;
   font-size:.58rem;letter-spacing:.22em;text-transform:uppercase;
-  color:rgba(244,236,224,.4);
-  margin:0 0 clamp(.3rem,.7vh,.6rem);
+  color:rgba(244,236,224,.42);
+  margin:0 0 .3rem;
+}
+#content .mission .mf-dia__shift{
+  display:table;margin-left:auto;margin-right:auto;
+  background:var(--ink,#001839);
+  padding:.1rem .7rem;
 }
 
-/* V · ivory finale, full-bleed to the fold */
-#content.mission .mf-final{
-  margin-top:clamp(.7rem,1.9vh,1.8rem);
+
+/* ivory finale closes the frame */
+#content .mission .mf-final{
   background:#F4ECE0;
   text-align:center;
-  padding:clamp(.85rem,2vh,1.7rem) 0 clamp(.95rem,2.2vh,1.9rem);
+  padding:1rem 0 1.25rem;
 }
-#content.mission .mf-final .mf-over{margin-bottom:clamp(.5rem,1.1vh,.9rem)}
-#content.mission .mf-mission{
+#content .mission .mf-final .mf-over{margin-bottom:.35rem}
+#content .mission .mf-mission{
   font-family:var(--fd);font-weight:400;
-  font-size:clamp(1.24rem,1.85vw,1.58rem);
-  line-height:1.34;
+  font-size:clamp(1.3rem,1.85vw,1.52rem);
+  line-height:1.36;
   color:#16233E;
-  max-width:34em;margin:0 auto clamp(.55rem,1.35vh,1.1rem);
+  max-width:34em;margin:0 auto .65rem;
   text-wrap:balance;
 }
-#content.mission .mf-mission strong{font-weight:400;color:var(--accent-deep,#C2521F)}
-#content.mission .mf-cta{
+#content .mission .mf-mission strong{font-weight:400;color:var(--accent-deep,#C2521F)}
+#content .mission .mf-cta{
   font-family:var(--fb);font-weight:700;
   letter-spacing:.06em;text-transform:none;font-size:.95rem;
 }
 
-/* Short laptops */
-@media (min-width:901px) and (max-height:700px){
-  #content.mission{padding-top:calc(var(--header-h) + .55rem) !important}
-  #content.mission .mf-eyebrow,#content.mission .mf-over{font-size:.58rem;margin-bottom:.28rem}
-  #content.mission .mf-belief{font-size:1.48rem;margin-bottom:.35rem}
-  #content.mission .mf-deck{font-size:.94rem}
-  #content.mission .mf-rule{margin:.42rem auto}
-  #content.mission .mf-line{font-size:1.12rem}
-  #content.mission .mf-dia__row li{font-size:.66rem}
-  #content.mission .mf-dia__mid{height:40px;margin:.28rem 0 .24rem}
-  #content.mission .mf-dia__node{width:32px;height:32px}
-  #content.mission .mf-dia__shift{font-size:.52rem;margin-bottom:.26rem}
-  #content.mission .mf-final{margin-top:.65rem;padding:.7rem 0 .8rem}
-  #content.mission .mf-final .mf-over{margin-bottom:.3rem}
-  #content.mission .mf-mission{font-size:1.1rem;margin-bottom:.5rem}
-  #content.mission .mf-cta{font-size:.84rem;padding:.55rem 1.25rem}
+/* tall desktops: scale the composition into the room */
+@media (min-width:901px) and (min-height:901px){
+  #content .mission .mf-eyebrow,#content .mission .mf-over{font-size:.7rem;margin-bottom:.55rem}
+  #content .mission .mf-belief{font-size:2.85rem;margin-bottom:.6rem}
+  #content .mission .mf-deck{font-size:1.24rem}
+  #content .mission .mf-rule{margin:1.2rem auto}
+  #content .mission .mf-line{font-size:1.7rem}
+  #content .mission .mf-dia{max-width:720px}
+  #content .mission .mf-dia__row li{font-size:.84rem}
+  #content .mission .mf-dia__mid{height:106px;margin:.5rem auto .42rem}
+  #content .mission .mf-dia__node{width:46px;height:46px}
+  #content .mission .mf-dia__node svg{width:20px;height:20px}
+  #content .mission .mf-dia__shift{font-size:.62rem;margin-bottom:.4rem}
+  #content .mission .mf-final{padding:1.35rem 0 1.6rem}
+  #content .mission .mf-final .mf-over{margin-bottom:.5rem}
+  #content .mission .mf-mission{font-size:1.72rem;margin-bottom:.85rem}
+  #content .mission .mf-cta{font-size:1rem}
 }
 
-/* Tablet & mobile: the manifesto scrolls */
+/* mid laptops */
+@media (min-width:901px) and (min-height:701px) and (max-height:820px){
+  #content>section.about.mission{padding-top:.1rem !important}
+  #content .mission .mf-eyebrow,#content .mission .mf-over{margin-bottom:.24rem;font-size:.58rem}
+  #content .mission .mf-belief{font-size:2rem;margin-bottom:.35rem}
+  #content .mission .mf-deck{font-size:.96rem}
+  #content .mission .mf-rule{margin:.55rem auto}
+  #content .mission .mf-line{font-size:1.3rem}
+  #content .mission .mf-dia__mid{height:72px;margin:.3rem auto .26rem}
+  #content .mission .mf-dia__node{width:34px;height:34px}
+  #content .mission .mf-dia__shift{margin-bottom:.24rem}
+  #content .mission .mf-final{padding:.8rem 0 1rem}
+  #content .mission .mf-final .mf-over{margin-bottom:.25rem}
+  #content .mission .mf-mission{font-size:1.3rem;margin-bottom:.5rem}
+}
+
+/* short laptops */
+@media (min-width:901px) and (max-height:700px){
+  #content>section.about.mission{padding-top:0 !important}
+  #content .mission .mf{padding:.1rem 0 .2rem}
+  #content .mission .mf-eyebrow,#content .mission .mf-over{font-size:.54rem;margin-bottom:.26rem}
+  #content .mission .mf-belief{font-size:1.5rem;margin-bottom:.3rem}
+  #content .mission .mf-deck{font-size:.84rem}
+  #content .mission .mf-rule{margin:.4rem auto}
+  #content .mission .mf-line{font-size:1.1rem}
+  #content .mission .mf-dia__row li{font-size:.64rem}
+  #content .mission .mf-dia__mid{height:60px;margin:.26rem auto .22rem}
+  #content .mission .mf-dia__node{width:28px;height:28px}
+  #content .mission .mf-dia__node svg{width:12px;height:12px}
+  #content .mission .mf-dia__shift{font-size:.5rem;margin-bottom:.3rem}
+  #content .mission .mf-final{padding:.6rem 0 .78rem}
+  #content .mission .mf-final .mf-over{margin-bottom:.3rem}
+  #content .mission .mf-mission{font-size:1.1rem;margin-bottom:.4rem}
+  #content .mission .mf-cta{font-size:.8rem;padding:.45rem 1.1rem}
+}
+
+/* tablet & mobile: natural scroll, no poster lock */
 @media (max-width:900px){
-  #content.mission{padding-top:calc(var(--header-h) + 1.6rem) !important}
-  #content.mission .mf-belief{font-size:clamp(1.9rem,6.6vw,2.4rem);max-width:15em}
-  #content.mission .mf-deck{font-size:1.12rem;max-width:34em}
-  #content.mission .mf-rule{margin:1.8rem auto}
-  #content.mission .mf-line{font-size:clamp(1.3rem,4.2vw,1.6rem);max-width:26em}
-  #content.mission .mf-final{margin-top:2rem;padding:1.9rem 0 2.1rem}
-  #content.mission .mf-mission{font-size:1.34rem;max-width:28em;margin-bottom:1.3rem}
+  #content>section.about.mission{min-height:0;display:block;padding-top:1rem !important}
+  #content .mission .msn{display:block}
+  #content .mission .mf{padding:0}
+  #content .mission .mf-belief{font-size:clamp(1.9rem,6.6vw,2.4rem);max-width:15em}
+  #content .mission .mf-deck{font-size:1.12rem;max-width:34em}
+  #content .mission .mf-rule{margin:1.7rem auto}
+  #content .mission .mf-line{font-size:clamp(1.3rem,4.2vw,1.6rem);max-width:26em}
+  #content .mission .mf-final{margin-top:1.9rem;padding:1.8rem 0 2rem}
+  #content .mission .mf-mission{font-size:1.34rem;max-width:28em;margin-bottom:1.2rem}
 }
 @media (max-width:620px){
-  #content.mission .mf-eyebrow,#content.mission .mf-over{font-size:.6rem;letter-spacing:.2em}
-  #content.mission .mf-dia__row{grid-template-columns:repeat(2,minmax(0,1fr));gap:.55rem 1rem}
-  #content.mission .mf-dia__row li{font-size:.72rem;letter-spacing:.16em}
-  #content.mission .mf-dia__mid{height:70px}
-  #content.mission .mf-dia__node{width:40px;height:40px}
-  #content.mission .mf-cta{width:calc(100% - 2.5rem);justify-content:center}
+  #content .mission .mf-eyebrow,#content .mission .mf-over{font-size:.6rem;letter-spacing:.2em}
+  #content .mission .mf-dia__row{grid-template-columns:repeat(2,minmax(0,1fr));gap:.55rem 1rem}
+  #content .mission .mf-dia__row li{font-size:.72rem;letter-spacing:.16em}
+  #content .mission .mf-dia__mid{height:84px}
+  #content .mission .mf-dia__band{display:none}
+  #content .mission .mf-dia__mid::before,
+  #content .mission .mf-dia__mid::after{
+    content:"";position:absolute;left:50%;transform:translateX(-.5px);
+    width:1px;background:rgba(255,105,65,.4);
+  }
+  #content .mission .mf-dia__mid::before{top:2px;height:calc(50% - 26px)}
+  #content .mission .mf-dia__mid::after{bottom:2px;height:calc(50% - 26px)}
+  #content .mission .mf-cta{width:calc(100% - 2.5rem);justify-content:center}
 }
 
 /* ===== Header: focus visibility only (usability), appearance untouched ===== */
 #content .nav__link:focus-visible,
 #content .nav__dd-link:focus-visible,
 .nav__link:focus-visible{outline:2px solid var(--accent);outline-offset:4px;border-radius:3px}
-/* build: styles v227 */
+/* build: styles v228 */
