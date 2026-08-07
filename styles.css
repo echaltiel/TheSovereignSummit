@@ -5444,7 +5444,7 @@ body.menu-open{overflow:hidden}
 
 /* 01 · hero */
 #content .mission .msx-grid--hero{grid-template-columns:minmax(0,6fr) minmax(0,6fr);align-items:stretch;column-gap:0}
-#content .mission .msx-grid--hero>div:first-child{padding:clamp(2.2rem,5vw,4rem) clamp(1.5rem,3vw,3rem) clamp(2.2rem,5vw,4rem) 0;align-self:center}
+#content .mission .msx-grid--hero>div:first-child{padding:clamp(1.4rem,2.6vw,2rem) clamp(1.5rem,3vw,3rem) clamp(1.4rem,2.6vw,2rem) 0;align-self:center}
 #content .mission .msx-h--hero{font-size:clamp(2rem,3.6vw,3.15rem);line-height:1.05;max-width:12.5em}
 #content .mission .msx-hero__art{position:relative;min-height:320px;border-left:1px solid rgba(244,236,224,.1)}
 @media (min-width:1024px){
@@ -5660,16 +5660,40 @@ body.menu-open{overflow:hidden}
 #content .mission .msx-grid{grid-template-columns:minmax(230px,3.1fr) minmax(0,8.9fr);column-gap:clamp(1.8rem,3vw,3.3rem)}
 
 /* hero */
-#content .mission .msx-grid--hero{grid-template-columns:minmax(330px,4.1fr) minmax(0,7.9fr);column-gap:0;min-height:455px}
+#content .mission .msx-grid--hero{grid-template-columns:minmax(330px,4.1fr) minmax(0,7.9fr);column-gap:0;min-height:clamp(330px,42vh,410px)}
 #content .mission .msx-grid--hero>div:first-child{padding:clamp(2.6rem,4.8vw,4.3rem) clamp(2rem,4vw,4rem) clamp(2.5rem,4vw,3.8rem) 0;align-self:center}
 #content .mission .msx-h--hero{font-size:clamp(1.6rem,2.3vw,2.2rem);line-height:1.1;max-width:16.5em}
 #content .mission .msx-h--hero strong{font-size:1em;line-height:inherit;margin:0;display:inline}
-#content .mission .msx-hero__art{min-height:455px;overflow:hidden;border-left:0;background:#06172d}
+#content .mission .msx-hero__art{min-height:100%;overflow:hidden;border-left:0;background:#06172d}
 #content .mission .msx-hero__art::before{
   content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
   background:linear-gradient(90deg,var(--msx-bg) 0%,rgba(4,22,45,.6) 5%,rgba(4,22,45,.1) 17%,transparent 34%),linear-gradient(180deg,rgba(4,22,45,.08),rgba(4,22,45,.08));
 }
 #content .mission .msx-hero__art img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 40%;filter:saturate(1.08) contrast(1.03)}
+
+/* mission lockup: verb, three coral items, outcome */
+#content .mission .msx-mlock{display:block}
+#content .mission .msx-mlock__lead{
+  display:block;font-family:var(--fb);font-weight:700;
+  font-size:.92rem;letter-spacing:.1em;text-transform:uppercase;
+  color:rgba(244,236,224,.72);margin:0 0 .5rem;
+}
+#content .mission .msx-mlock__item{
+  display:block;font-family:var(--fb);font-weight:800;
+  font-size:clamp(1.45rem,1.95vw,1.9rem);line-height:1.16;
+  letter-spacing:-.012em;text-transform:uppercase;
+  color:var(--msx-orange);
+}
+#content .mission .msx-mlock__tail{
+  font-family:var(--fb);font-weight:400;
+  font-size:.98rem;line-height:1.6;
+  color:rgba(244,236,224,.78);
+  max-width:26em;margin:.75rem 0 0;
+}
+@media (max-width:900px){
+  #content .mission .msx-mlock__item{font-size:clamp(1.3rem,5.4vw,1.6rem)}
+  #content .mission .msx-mlock__tail{font-size:.94rem}
+}
 
 /* why this matters */
 #content .mission .msx-cols{grid-template-columns:repeat(4,minmax(0,1fr));align-self:stretch}
@@ -5723,7 +5747,7 @@ body.menu-open{overflow:hidden}
 #content .mission .msx-invite{
   min-height:245px;display:flex;align-items:center;
   padding:1.4rem 0 1.1rem;border-top:1px solid var(--msx-rule);
-  background-image:linear-gradient(90deg,rgba(2,15,32,.46),rgba(2,15,32,.25) 50%,rgba(2,15,32,.58)),linear-gradient(180deg,rgba(2,15,32,.15),rgba(2,15,32,.44)),url('mission-assets/invite-bg.webp');
+  background-image:linear-gradient(90deg,rgba(2,15,32,.46),rgba(2,15,32,.25) 50%,rgba(2,15,32,.58)),linear-gradient(180deg,rgba(2,15,32,.15),rgba(2,15,32,.44)),url('images/mission/invite-bg.webp');
   background-size:cover;background-position:center 60%;
 }
 #content .mission .msx-invite .container{width:100%}
