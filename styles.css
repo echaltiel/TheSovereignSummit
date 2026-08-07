@@ -5425,27 +5425,41 @@ body.menu-open{overflow:hidden}
 }
 #content.mission .msn-statement strong{font-weight:400;color:var(--accent)}
 
-/* Context: title + description */
-#content.mission .msn-ctx-h{
-  font-family:var(--fb);font-weight:800;letter-spacing:-.02em;
-  font-size:clamp(1.25rem,1.7vw,1.5rem);line-height:1.15;
-  color:#F4ECE0;
-  margin:clamp(1.15rem,1.9vw,1.5rem) 0 .55rem;
+/* Definition row: question left, answer right, context demoted to a footnote.
+   The answer is the display element; the setup is one small sans line. */
+#content.mission .msn-def{
+  display:grid;
+  grid-template-columns:minmax(0,5fr) minmax(0,7fr);
+  column-gap:clamp(2rem,4vw,4rem);
+  align-items:start;
+  border-top:1px solid rgba(244,236,224,.14);
+  margin-top:clamp(1.05rem,1.7vw,1.3rem);
+  padding-top:clamp(1rem,1.6vw,1.3rem);
 }
-
-#content.mission .msn-context{
+#content.mission .msn-def__q{
+  font-family:var(--fb);font-weight:800;letter-spacing:-.02em;
+  font-size:clamp(1.22rem,1.65vw,1.42rem);line-height:1.18;
+  color:#F4ECE0;margin:0;max-width:13em;
+}
+#content.mission .msn-def__answer{
   font-family:var(--fd);font-weight:400;
-  font-size:clamp(1.24rem,1.65vw,1.44rem);
-  line-height:1.42;
-  color:rgba(244,236,224,.72);
-  max-width:52em;
-  margin:0;
+  font-size:clamp(1.46rem,2.05vw,1.78rem);
+  line-height:1.3;
+  color:rgba(244,236,224,.9);
+  margin:0 0 .8rem;max-width:24em;
+}
+#content.mission .msn-def__answer strong{font-weight:400;color:var(--accent)}
+#content.mission .msn-def__ctx{
+  font-family:var(--fb);font-weight:400;
+  font-size:.98rem;line-height:1.55;
+  color:rgba(244,236,224,.55);
+  margin:0;max-width:46em;
 }
 
 /* Pillar strip: one ruled row, four cells */
 #content.mission .msn-pillars{
   list-style:none;padding:0;
-  margin:clamp(1.05rem,1.7vw,1.4rem) 0 0;
+  margin:clamp(.95rem,1.5vw,1.25rem) 0 0;
   display:grid;
   grid-template-columns:repeat(4,minmax(0,1fr));
   border-top:1px solid rgba(244,236,224,.16);
@@ -5464,8 +5478,8 @@ body.menu-open{overflow:hidden}
   text-align:center;
   background:#F4ECE0;
   border-radius:16px;
-  margin-top:clamp(1.15rem,1.9vw,1.5rem);
-  padding:clamp(1.15rem,1.9vw,1.5rem) 1.8rem clamp(1.25rem,2vw,1.6rem);
+  margin-top:clamp(1.05rem,1.7vw,1.35rem);
+  padding:clamp(1.1rem,1.8vw,1.4rem) 1.8rem clamp(1.25rem,2vw,1.6rem);
 }
 @media (min-width:1024px){
   #content.mission .msn-band--c{margin-left:-1.8rem;margin-right:-1.8rem}
@@ -5511,35 +5525,45 @@ body.menu-open{overflow:hidden}
 #content.mission .msn-foot__alt:hover{text-decoration:underline;text-underline-offset:3px}
 #content.mission .msn-foot__alt:focus-visible{outline:2px solid var(--accent);outline-offset:4px;border-radius:3px}
 
+/* Narrow desktops: give the answer more of the row */
+@media (min-width:1024px) and (max-width:1279px){
+  #content.mission .msn-def{grid-template-columns:minmax(0,4fr) minmax(0,8fr)}
+  #content.mission .msn-def__answer{font-size:1.5rem}
+}
+
 /* Mid-height desktop windows */
 @media (min-width:1024px) and (min-height:701px) and (max-height:820px){
   #content.mission{padding-top:calc(var(--header-h) + .65rem) !important}
   #content.mission .msn-tile1{padding:1.5rem 2rem}
   #content.mission .msn-statement{font-size:2.15rem}
-  #content.mission .msn-ctx-h{margin-top:1.2rem;font-size:1.4rem}
-  #content.mission .msn-context{font-size:1.32rem}
+  #content.mission .msn-def{margin-top:.9rem;padding-top:.85rem}
+  #content.mission .msn-def__answer{font-size:1.5rem}
+  #content.mission .msn-def__ctx{font-size:.92rem}
   #content.mission .msn-pillars{margin-top:1.1rem}
   #content.mission .msn-pillars li{padding:.68rem 1rem}
-  #content.mission .msn-band--c{margin-top:1.3rem;padding:1.1rem 1.5rem 1.2rem;margin-left:-1.5rem;margin-right:-1.5rem}
+  #content.mission .msn-band--c{margin-top:1.1rem;padding:1rem 1.5rem 1.1rem;margin-left:-1.5rem;margin-right:-1.5rem}
   #content.mission .msn-mission{font-size:1.42rem}
-  #content.mission .msn-foot{margin-top:1.1rem;padding-top:.85rem}
+  #content.mission .msn-foot{margin-top:.9rem;padding-top:.7rem}
 }
 /* Short desktop windows */
 @media (min-width:1024px) and (max-height:700px){
   #content.mission{padding-top:calc(var(--header-h) + .5rem) !important}
   #content.mission .msn-tile1{padding:.9rem 1.4rem;border-radius:14px}
   #content.mission .msn-statement{font-size:1.56rem}
-  #content.mission .msn-ctx-h{margin-top:.8rem;font-size:1.16rem;margin-bottom:.35rem}
-  #content.mission .msn-context{font-size:1.08rem}
-  #content.mission .msn-pillars{margin-top:.75rem}
+  #content.mission .msn-def{margin-top:.68rem;padding-top:.62rem}
+  #content.mission .msn-def__q{font-size:1.08rem}
+  #content.mission .msn-def__answer{font-size:1.26rem;margin-bottom:.42rem}
+  #content.mission .msn-def__ctx{font-size:.84rem;line-height:1.45}
+  #content.mission .msn-pillars{margin-top:.6rem}
   #content.mission .msn-pillars li{padding:.42rem .9rem;font-size:.7rem}
-  #content.mission .msn-band--c{margin-top:.75rem;padding:.75rem 1.2rem .85rem;margin-left:-1.2rem;margin-right:-1.2rem}
-  #content.mission .msn-mission{font-size:1.18rem}
-  #content.mission .msn-foot{margin-top:.62rem;padding-top:.52rem}
+  #content.mission .msn-band--c{margin-top:.65rem;padding:.68rem 1.2rem .78rem;margin-left:-1.2rem;margin-right:-1.2rem}
+  #content.mission .msn-mission{font-size:1.14rem}
+  #content.mission .msn-foot{margin-top:.52rem;padding-top:.44rem}
 }
 
 /* Linearise below 1024 */
 @media (max-width:1023px){
+  #content.mission .msn-def{grid-template-columns:minmax(0,1fr);row-gap:.8rem}
   #content.mission .msn-pillars{grid-template-columns:repeat(2,minmax(0,1fr))}
   #content.mission .msn-pillars li:nth-child(2n+1){border-left:0}
   #content.mission .msn-pillars li:nth-child(n+3){border-top:1px solid rgba(244,236,224,.14)}
@@ -5548,8 +5572,8 @@ body.menu-open{overflow:hidden}
   #content.mission{padding-top:calc(var(--header-h) + .8rem) !important}
   #content.mission .msn-tile1{padding:1.3rem 1.2rem;border-radius:14px}
   #content.mission .msn-statement{font-size:clamp(1.55rem,7vw,1.85rem);line-height:1.27}
-  #content.mission .msn-ctx-h{margin-top:1.15rem;font-size:1.3rem}
-  #content.mission .msn-context{font-size:1.24rem}
+  #content.mission .msn-def__q{font-size:1.22rem}
+  #content.mission .msn-def__answer{font-size:1.42rem}
   #content.mission .msn-pillars li{font-size:.72rem;letter-spacing:.18em;padding:.6rem .8rem}
   #content.mission .msn-band--c{padding:1.2rem 1.2rem 1.3rem;border-radius:14px;margin-top:1.2rem}
   #content.mission .msn-mission{font-size:1.5rem;line-height:1.38}
@@ -5562,4 +5586,4 @@ body.menu-open{overflow:hidden}
 #content .nav__link:focus-visible,
 #content .nav__dd-link:focus-visible,
 .nav__link:focus-visible{outline:2px solid var(--accent);outline-offset:4px;border-radius:3px}
-/* build: styles v220 */
+/* build: styles v221 */
