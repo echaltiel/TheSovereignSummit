@@ -5613,6 +5613,7 @@ body.menu-open{overflow:hidden}
   #content .mission .msx-btn2__sub{display:inline;margin-left:.4rem}
 }
 
+
 /* ===== Header: focus visibility only (usability), appearance untouched ===== */
 #content .nav__link:focus-visible,
 #content .nav__dd-link:focus-visible,
@@ -5660,7 +5661,7 @@ body.menu-open{overflow:hidden}
 #content .mission .msx-grid{grid-template-columns:minmax(230px,3.1fr) minmax(0,8.9fr);column-gap:clamp(1.8rem,3vw,3.3rem)}
 
 /* hero */
-#content .mission .msx-grid--hero{grid-template-columns:minmax(330px,4.1fr) minmax(0,7.9fr);column-gap:0;min-height:clamp(330px,42vh,410px)}
+#content .mission .msx-grid--hero{grid-template-columns:minmax(330px,5.1fr) minmax(0,6.9fr);column-gap:0;min-height:clamp(330px,42vh,410px)}
 #content .mission .msx-grid--hero>div:first-child{padding:clamp(2.6rem,4.8vw,4.3rem) clamp(2rem,4vw,4rem) clamp(2.5rem,4vw,3.8rem) 0;align-self:center}
 #content .mission .msx-h--hero{font-size:clamp(1.6rem,2.3vw,2.2rem);line-height:1.1;max-width:16.5em}
 #content .mission .msx-h--hero strong{font-size:1em;line-height:inherit;margin:0;display:inline}
@@ -5671,28 +5672,17 @@ body.menu-open{overflow:hidden}
 }
 #content .mission .msx-hero__art img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 40%;filter:saturate(1.08) contrast(1.03)}
 
-/* mission lockup: verb, three coral items, outcome */
+/* mission lockup: one voice, one size, eight set lines */
 #content .mission .msx-mlock{display:block}
-#content .mission .msx-mlock__lead{
-  display:block;font-family:var(--fb);font-weight:700;
-  font-size:.92rem;letter-spacing:.1em;text-transform:uppercase;
-  color:rgba(244,236,224,.72);margin:0 0 .5rem;
-}
-#content .mission .msx-mlock__item{
+#content .mission .msx-mlock__line{
   display:block;font-family:var(--fb);font-weight:800;
-  font-size:clamp(1.45rem,1.95vw,1.9rem);line-height:1.16;
-  letter-spacing:-.012em;text-transform:uppercase;
-  color:var(--msx-orange);
+  font-size:clamp(.78rem,1vw,1.06rem);line-height:1.28;
+  letter-spacing:-.008em;text-transform:uppercase;
+  color:var(--msx-paper);
 }
-#content .mission .msx-mlock__tail{
-  font-family:var(--fb);font-weight:400;
-  font-size:.98rem;line-height:1.6;
-  color:rgba(244,236,224,.78);
-  max-width:26em;margin:.75rem 0 0;
-}
+#content .mission .msx-mlock__line--c{color:var(--msx-orange)}
 @media (max-width:900px){
-  #content .mission .msx-mlock__item{font-size:clamp(1.3rem,5.4vw,1.6rem)}
-  #content .mission .msx-mlock__tail{font-size:.94rem}
+  #content .mission .msx-mlock__line{font-size:clamp(1rem,4.2vw,1.25rem)}
 }
 
 /* why this matters */
@@ -5818,4 +5808,12 @@ body.menu-open{overflow:hidden}
   #content .mission .msx-h--invite{font-size:2.65rem}
   #content .mission .msx-invite__row{max-width:360px;margin-inline:auto}
   #content .mission .msx-btn,#content .mission .msx-btn2{width:100%}
+}
+
+/* narrow desktops: stack the hero before the lockup runs out of room */
+@media (min-width:901px) and (max-width:1150px){
+  #content .mission .msx-grid--hero{grid-template-columns:minmax(0,1fr);min-height:0}
+  #content .mission .msx-grid--hero>div:first-child{padding-right:0}
+  #content .mission .msx-hero__art{min-height:300px;border-top:1px solid var(--msx-rule)}
+  #content .mission .msx-mlock__line{font-size:1.15rem}
 }
