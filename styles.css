@@ -5450,44 +5450,48 @@ body.menu-open{overflow:hidden}
 }
 #content.mission .msn-def__answer strong{font-weight:400;color:var(--accent)}
 
-/* Index: two quiet tiles, one per group. No internal rules; each term carries
-   a small coral marker. Matches the page's tile language. */
-#content.mission .msn-index{
-  margin:clamp(.95rem,1.5vw,1.25rem) 0 0;
-  display:grid;
-  grid-template-columns:repeat(2,minmax(0,1fr));
-  gap:clamp(.8rem,1.4vw,1.1rem);
-  align-items:stretch;
-}
-#content.mission .msn-idx{
-  background:rgba(244,236,224,.045);
-  border:1px solid rgba(244,236,224,.12);
-  border-radius:16px;
-  padding:clamp(.85rem,1.35vw,1.05rem) clamp(1.1rem,1.8vw,1.5rem) clamp(.9rem,1.45vw,1.15rem);
-}
-#content.mission .msn-idx__label{
+/* Flow: the convergence diagram. Two icon-card rows joined by connector
+   curves through the bolt node. Pure SVG and tokens, no imagery. */
+#content.mission .msn-flow{margin:clamp(1rem,1.6vw,1.35rem) 0 0}
+#content.mission .msn-flow__label{
   font-family:var(--fb);font-weight:700;
-  font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;
+  font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;
   color:rgba(244,236,224,.45);
-  margin:0 0 .55rem;
+  text-align:center;margin:0 0 .6rem;
 }
-#content.mission .msn-idx__list{
+#content.mission .msn-flow__row{
   list-style:none;margin:0;padding:0;
-  display:grid;grid-template-columns:repeat(2,minmax(0,1fr));
-  gap:.48rem 1.2rem;
+  display:grid;grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:.8rem;
 }
-#content.mission .msn-idx__list li{
+#content.mission .msn-flow__card{
+  display:flex;align-items:center;gap:.6rem;
+  background:rgba(244,236,224,.05);
+  border:1px solid rgba(244,236,224,.13);
+  border-radius:12px;
+  padding:.62rem .85rem;
   font-family:var(--fb);font-weight:700;
-  font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;
-  color:rgba(244,236,224,.88);
-  display:flex;align-items:center;gap:.55rem;
+  font-size:.76rem;letter-spacing:.14em;text-transform:uppercase;
+  color:rgba(244,236,224,.9);
   white-space:nowrap;
 }
-#content.mission .msn-idx__list li::before{
-  content:"";flex:0 0 auto;
-  width:5px;height:5px;border-radius:1.5px;
-  background:var(--accent);opacity:.9;
+#content.mission .msn-flow__ico{flex:0 0 auto;display:grid;place-items:center;color:var(--accent)}
+#content.mission .msn-flow__ico svg{width:19px;height:19px}
+#content.mission .msn-flow__mid{
+  position:relative;height:clamp(84px,10vw,116px);margin:.3rem 0;
 }
+#content.mission .msn-flow__band{position:absolute;inset:0;width:100%;height:100%}
+#content.mission .msn-flow__node{
+  position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);
+  width:52px;height:52px;border-radius:50%;
+  display:grid;place-items:center;
+  background:#0A1224;
+  border:1px solid rgba(255,105,65,.45);
+  box-shadow:0 0 0 6px rgba(255,105,65,.06);
+  color:var(--accent);
+}
+#content.mission .msn-flow__node svg{width:22px;height:22px}
+#content.mission .msn-flow__label + .msn-flow__row + .msn-flow__mid{margin-top:.15rem}
 
 /* Mission: cream band, single label, edge-pulled */
 #content.mission .msn-band--c{
@@ -5550,11 +5554,12 @@ body.menu-open{overflow:hidden}
   #content.mission .msn-def{margin-top:.7rem;padding:.72rem 1.3rem .82rem}
   #content.mission .msn-def__q{font-size:1.14rem;margin-bottom:.42rem}
   #content.mission .msn-def__answer{font-size:1.36rem}
-  #content.mission .msn-index{margin-top:.8rem}
-  #content.mission .msn-idx{padding:.8rem 1.2rem .85rem}
-  #content.mission .msn-idx__label{margin-bottom:.5rem}
-  #content.mission .msn-idx__list{gap:.42rem 1rem}
-  #content.mission .msn-idx__list li{font-size:.74rem}
+  #content.mission .msn-flow{margin-top:.85rem}
+  #content.mission .msn-flow__mid{height:72px}
+  #content.mission .msn-flow__card{padding:.5rem .75rem;font-size:.72rem}
+  #content.mission .msn-flow__ico svg{width:17px;height:17px}
+  #content.mission .msn-flow__node{width:46px;height:46px}
+  #content.mission .msn-flow__node svg{width:19px;height:19px}
   #content.mission .msn-band--c{margin-top:.85rem;padding:.85rem 1.5rem .95rem;margin-left:-1.5rem;margin-right:-1.5rem}
   #content.mission .msn-mission{font-size:1.3rem}
   #content.mission .msn-foot{margin-top:.7rem;padding-top:.55rem}
@@ -5567,11 +5572,12 @@ body.menu-open{overflow:hidden}
   #content.mission .msn-def{margin-top:.5rem;padding:.55rem 1.05rem .6rem;border-radius:14px}
   #content.mission .msn-def__q{font-size:1.06rem;margin-bottom:.4rem}
   #content.mission .msn-def__answer{font-size:1.18rem}
-  #content.mission .msn-index{margin-top:.55rem;gap:.7rem}
-  #content.mission .msn-idx{padding:.5rem .95rem .55rem;border-radius:14px}
-  #content.mission .msn-idx__label{margin-bottom:.38rem;font-size:.56rem}
-  #content.mission .msn-idx__list{gap:.24rem .9rem}
-  #content.mission .msn-idx__list li{font-size:.66rem;letter-spacing:.15em}
+  #content.mission .msn-flow{margin-top:.6rem}
+  #content.mission .msn-flow__mid{display:none}
+  #content.mission .msn-flow__label{font-size:.56rem;margin-bottom:.4rem}
+  #content.mission .msn-flow__row + .msn-flow__label{margin-top:.6rem}
+  #content.mission .msn-flow__card{padding:.4rem .7rem;font-size:.66rem;border-radius:10px}
+  #content.mission .msn-flow__ico svg{width:15px;height:15px}
   #content.mission .msn-band--c{margin-top:.58rem;padding:.62rem 1.2rem .7rem;margin-left:-1.2rem;margin-right:-1.2rem}
   #content.mission .msn-mission{font-size:1.1rem}
   #content.mission .msn-foot{margin-top:.4rem;padding-top:.32rem}
@@ -5587,9 +5593,11 @@ body.menu-open{overflow:hidden}
   #content.mission .msn-statement{font-size:clamp(1.55rem,7vw,1.85rem);line-height:1.27}
   #content.mission .msn-def__q{font-size:1.22rem}
   #content.mission .msn-def__answer{font-size:1.42rem}
-  #content.mission .msn-index{grid-template-columns:minmax(0,1fr);gap:.7rem}
-  #content.mission .msn-idx{padding:.95rem 1.1rem 1rem;border-radius:14px}
-  #content.mission .msn-idx__list li{font-size:.72rem;letter-spacing:.15em}
+  #content.mission .msn-flow__row{grid-template-columns:repeat(2,minmax(0,1fr));gap:.55rem}
+  #content.mission .msn-flow__card{padding:.55rem .7rem;font-size:.68rem;letter-spacing:.1em;gap:.5rem}
+  #content.mission .msn-flow__mid{height:64px}
+  #content.mission .msn-flow__node{width:44px;height:44px}
+  #content.mission .msn-flow__node svg{width:18px;height:18px}
   #content.mission .msn-band--c{padding:1.2rem 1.2rem 1.3rem;border-radius:14px;margin-top:1.2rem}
   #content.mission .msn-mission{font-size:1.5rem;line-height:1.38}
   #content.mission .msn-mission strong{color:var(--accent-deep,#C2521F)}
@@ -5601,4 +5609,4 @@ body.menu-open{overflow:hidden}
 #content .nav__link:focus-visible,
 #content .nav__dd-link:focus-visible,
 .nav__link:focus-visible{outline:2px solid var(--accent);outline-offset:4px;border-radius:3px}
-/* build: styles v224 */
+/* build: styles v225 */
