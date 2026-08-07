@@ -5618,3 +5618,184 @@ body.menu-open{overflow:hidden}
 #content .nav__dd-link:focus-visible,
 .nav__link:focus-visible{outline:2px solid var(--accent);outline-offset:4px;border-radius:3px}
 /* build: styles v229 */
+
+
+/* ===== Mission page v230 — reference screenshot fidelity pass =====
+   Keeps the existing content and header/footer system, but tightens the mission
+   page to the supplied reference: condensed manifesto type, denser bands,
+   photo-led cards, three-part "Why We Exist", six audience cards in one row,
+   and a full-bleed photographic invitation. */
+#content .mission{
+  --msx-bg:#04162d;
+  --msx-bg-deep:#020f20;
+  --msx-panel:#061a34;
+  --msx-paper:#f4ece0;
+  --msx-muted:rgba(244,236,224,.68);
+  --msx-rule:rgba(244,236,224,.16);
+  --msx-orange:#ff5a2f;
+  background:var(--msx-bg);
+  color:var(--msx-paper);
+}
+#content .mission .container{max-width:1280px;padding-inline:clamp(1.35rem,3vw,2.6rem)}
+#content .mission .msx-band{padding:clamp(1.9rem,3.3vw,3rem) 0;border-top:1px solid var(--msx-rule);background:var(--msx-bg)}
+#content .mission .msx-hero{padding:0;border-top:0}
+
+/* display language */
+#content .mission .msx-eyebrow{
+  gap:.75rem;margin:0 0 .85rem;
+  font-family:var(--fb);font-size:.72rem;font-weight:800;line-height:1;
+  letter-spacing:.055em;color:var(--msx-orange)
+}
+#content .mission .msx-eyebrow__dash{width:30px;height:2px;background:var(--msx-orange)}
+#content .mission .msx-h,
+#content .mission .msx-card__t,
+#content .mission .msx-who__t{
+  font-family:'Barlow Condensed','Arial Narrow',var(--fb);
+}
+#content .mission .msx-h{
+  font-weight:600;letter-spacing:-.018em;line-height:.99;
+  font-size:clamp(2.05rem,3vw,3.05rem);color:var(--msx-paper)
+}
+#content .mission .msx-h strong{display:block;color:var(--msx-orange);font-weight:700;margin-top:.22em}
+#content .mission .msx-sub{font-size:.88rem;line-height:1.62;color:var(--msx-muted);margin-top:1rem;max-width:31em}
+#content .mission .msx-rail .msx-h{max-width:8.6em}
+
+/* shared rail/content proportions */
+#content .mission .msx-grid{grid-template-columns:minmax(230px,3.1fr) minmax(0,8.9fr);column-gap:clamp(1.8rem,3vw,3.3rem)}
+
+/* hero */
+#content .mission .msx-grid--hero{grid-template-columns:minmax(330px,4.55fr) minmax(0,7.45fr);column-gap:0;min-height:455px}
+#content .mission .msx-grid--hero>div:first-child{padding:clamp(2.6rem,4.8vw,4.3rem) clamp(2rem,4vw,4rem) clamp(2.5rem,4vw,3.8rem) 0;align-self:center}
+#content .mission .msx-h--hero{font-size:clamp(3rem,4.6vw,4.7rem);line-height:.92;max-width:8.4em}
+#content .mission .msx-h--hero strong{font-size:1.08em;line-height:.94;margin-top:.22em}
+#content .mission .msx-hero__art{min-height:455px;overflow:hidden;border-left:0;background:#06172d}
+#content .mission .msx-hero__art::before{
+  content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
+  background:linear-gradient(90deg,var(--msx-bg) 0%,rgba(4,22,45,.78) 8%,rgba(4,22,45,.12) 32%,transparent 54%),linear-gradient(180deg,rgba(4,22,45,.08),rgba(4,22,45,.08));
+}
+#content .mission .msx-hero__art img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center center;filter:saturate(1.08) contrast(1.03)}
+
+/* why this matters */
+#content .mission .msx-cols{grid-template-columns:repeat(4,minmax(0,1fr));align-self:stretch}
+#content .mission .msx-col{padding:0 1.45rem;border-left:1px solid var(--msx-rule)}
+#content .mission .msx-col:first-child{padding-left:0}
+#content .mission .msx-col__ico{width:40px;height:40px;margin-bottom:1rem;color:var(--msx-orange)}
+#content .mission .msx-col__t{font-size:.78rem;letter-spacing:.015em;line-height:1.45;margin-bottom:1rem}
+#content .mission .msx-col__d{font-size:.77rem;line-height:1.7;color:rgba(244,236,224,.64)}
+
+/* focus cards */
+#content .mission .msx-cards{gap:.75rem}
+#content .mission .msx-card{min-height:325px;border:1px solid rgba(244,236,224,.25);border-radius:2px;background:#031329;position:relative}
+#content .mission .msx-card:hover{transform:translateY(-2px);border-color:rgba(255,90,47,.7)}
+#content .mission .msx-card__art{height:214px;display:block;position:relative;overflow:hidden;background:#06172d}
+#content .mission .msx-card__art::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(2,15,32,.05) 42%,rgba(2,15,32,.72) 100%);pointer-events:none}
+#content .mission .msx-card__art img{width:100%;height:100%;object-fit:cover;filter:saturate(1.07) contrast(1.03)}
+#content .mission .msx-card figcaption{padding:.85rem .85rem .95rem;border-top:0;background:linear-gradient(180deg,#04162d,#031227)}
+#content .mission .msx-card__t{position:absolute;z-index:2;top:.82rem;left:.9rem;font-size:1.7rem;font-weight:600;line-height:1;color:var(--msx-paper);padding-bottom:.62rem;margin:0;text-shadow:0 2px 8px rgba(0,0,0,.65)}
+#content .mission .msx-card__t::after{width:24px;height:2px;background:var(--msx-orange)}
+#content .mission .msx-card__d{font-size:.75rem;line-height:1.52;color:rgba(244,236,224,.78)}
+
+/* why we exist — copy / image / quote */
+#content .mission .msx-grid--exist{grid-template-columns:minmax(250px,3.2fr) minmax(330px,5.2fr) minmax(220px,3.6fr);column-gap:0;align-items:stretch}
+#content .mission .msx-grid--exist .msx-rail{padding-right:clamp(1.4rem,2.5vw,2.4rem);align-self:center}
+#content .mission .msx-grid--exist .msx-rail .msx-h{max-width:10em}
+#content .mission .msx-exist__art{min-height:260px;overflow:hidden;border-left:1px solid var(--msx-rule);border-right:1px solid var(--msx-rule)}
+#content .mission .msx-exist__art img{width:100%;height:100%;object-fit:cover;object-position:center;filter:saturate(1.04) contrast(1.02)}
+#content .mission .msx-quote{margin:0;padding:clamp(1.9rem,3vw,3rem);border-left:0;background:radial-gradient(circle at 8% 50%,rgba(12,49,84,.62),transparent 64%);display:flex;flex-direction:column;justify-content:center}
+#content .mission .msx-quote__mark{font-family:Georgia,serif;font-size:4.1rem;line-height:.55;margin:0 0 .85rem;color:var(--msx-orange)}
+#content .mission .msx-quote__text{font-family:var(--fb);font-size:clamp(1.2rem,1.8vw,1.65rem);line-height:1.5;max-width:12em}
+#content .mission .msx-quote__cite{font-size:.7rem;letter-spacing:.035em;color:var(--msx-orange)}
+
+/* principles */
+#content .mission .msx-prins{margin-top:1.2rem}
+#content .mission .msx-prin{padding:0 1.25rem;border-left:1px solid var(--msx-rule)}
+#content .mission .msx-prin__ico{width:46px;height:46px;border:0;border-radius:0;margin-bottom:.55rem;color:var(--msx-orange)}
+#content .mission .msx-prin__ico svg{width:36px;height:36px}
+#content .mission .msx-prin__t{font-size:.73rem;letter-spacing:.02em;margin-bottom:.45rem}
+#content .mission .msx-prin__d{font-size:.73rem;line-height:1.55;color:rgba(244,236,224,.68);max-width:12em;margin-inline:auto}
+
+/* audience — one rail + six compact cards */
+#content .mission .msx-whos{grid-template-columns:repeat(6,minmax(0,1fr));gap:.55rem}
+#content .mission .msx-who{border:1px solid rgba(244,236,224,.24);border-radius:2px;background:#031329;min-width:0}
+#content .mission .msx-who__art{height:95px;display:block;overflow:hidden;border-bottom:1px solid rgba(244,236,224,.18);background:#06172d}
+#content .mission .msx-who__art img{width:100%;height:100%;object-fit:cover;object-position:center;filter:saturate(.9) contrast(1.04)}
+#content .mission .msx-who figcaption{padding:.6rem .55rem .65rem;text-align:center}
+#content .mission .msx-who__t{font-size:.78rem;line-height:1;font-weight:600;letter-spacing:.025em;margin-bottom:.45rem}
+#content .mission .msx-who__d{font-size:.66rem;line-height:1.45;color:rgba(244,236,224,.72)}
+
+/* invitation */
+#content .mission .msx-invite{
+  min-height:245px;display:flex;align-items:center;
+  padding:1.4rem 0 1.1rem;border-top:1px solid var(--msx-rule);
+  background-image:linear-gradient(90deg,rgba(2,15,32,.46),rgba(2,15,32,.25) 50%,rgba(2,15,32,.58)),linear-gradient(180deg,rgba(2,15,32,.15),rgba(2,15,32,.44)),url('mission-assets/invite-bg.webp');
+  background-size:cover;background-position:center 60%;
+}
+#content .mission .msx-invite .container{width:100%}
+#content .mission .msx-invite .msx-eyebrow{margin-bottom:.65rem;text-shadow:0 2px 10px rgba(0,0,0,.55)}
+#content .mission .msx-h--invite{font-size:clamp(2.15rem,3.4vw,3.35rem);max-width:13em;line-height:.92;text-shadow:0 2px 14px rgba(0,0,0,.75)}
+#content .mission .msx-h--invite strong{display:inline;color:inherit;margin:0}
+#content .mission .msx-sub--invite{margin:.75rem auto 1rem;max-width:42em;font-size:.82rem;color:rgba(244,236,224,.9);text-shadow:0 2px 8px rgba(0,0,0,.7)}
+#content .mission .msx-invite__row{gap:.8rem}
+#content .mission .msx-btn{min-height:46px;padding:.72rem 1.55rem;border-radius:999px;background:var(--msx-orange)!important;color:#08152a!important;border-color:var(--msx-orange)!important;font-size:.82rem}
+#content .mission .msx-btn::before{display:none}
+#content .mission .msx-btn2{min-height:46px;padding:.5rem 1.15rem;border-radius:999px;background:rgba(2,15,32,.55);font-size:.78rem}
+#content .mission .msx-btn2__sub{font-size:.62rem}
+#content .mission .msx-invite__meta{margin-top:1rem;font-size:.58rem;letter-spacing:.19em;color:rgba(244,236,224,.82)}
+
+/* laptop compaction — keeps the full reference composition without crowding */
+@media (max-width:1180px) and (min-width:901px){
+  #content .mission .msx-grid{grid-template-columns:minmax(205px,3fr) minmax(0,9fr);column-gap:1.5rem}
+  #content .mission .msx-grid--hero{grid-template-columns:minmax(300px,4.5fr) minmax(0,7.5fr)}
+  #content .mission .msx-col{padding-inline:1rem}
+  #content .mission .msx-whos{gap:.4rem}
+  #content .mission .msx-who figcaption{padding-inline:.4rem}
+  #content .mission .msx-who__d{font-size:.62rem}
+}
+
+/* tablet */
+@media (max-width:1023px){
+  #content .mission .msx-grid--hero{grid-template-columns:1fr;min-height:0}
+  #content .mission .msx-grid--hero>div:first-child{padding:2.6rem 0 2.2rem}
+  #content .mission .msx-h--hero{max-width:9em}
+  #content .mission .msx-hero__art{min-height:330px;border-top:1px solid var(--msx-rule)}
+  #content .mission .msx-hero__art::before{background:linear-gradient(180deg,var(--msx-bg) 0%,rgba(4,22,45,.15) 24%,transparent 55%)}
+  #content .mission .msx-grid{grid-template-columns:1fr;row-gap:1.6rem}
+  #content .mission .msx-grid--exist{grid-template-columns:1fr 1.35fr;gap:0}
+  #content .mission .msx-grid--exist .msx-rail{grid-column:1/-1;padding:0 0 1.5rem}
+  #content .mission .msx-exist__art{border-left:0}
+  #content .mission .msx-whos{grid-template-columns:repeat(3,minmax(0,1fr))}
+}
+
+/* mobile */
+@media (max-width:620px){
+  #content .mission .container{padding-inline:1rem}
+  #content .mission .msx-band{padding:1.65rem 0}
+  #content .mission .msx-grid--hero>div:first-child{padding:2rem 0 1.7rem}
+  #content .mission .msx-h--hero{font-size:clamp(2.65rem,13vw,3.8rem);max-width:7.5em}
+  #content .mission .msx-sub{font-size:.82rem}
+  #content .mission .msx-hero__art{min-height:245px;margin-inline:-1rem}
+  #content .mission .msx-cols{grid-template-columns:1fr 1fr;gap:1.5rem 0}
+  #content .mission .msx-col{padding:0 1rem;border-left:1px solid var(--msx-rule)}
+  #content .mission .msx-col:nth-child(odd){padding-left:0;border-left:0}
+  #content .mission .msx-col:nth-child(even){padding-right:0}
+  #content .mission .msx-col__d{font-size:.72rem}
+  #content .mission .msx-cards{grid-template-columns:1fr 1fr;gap:.6rem}
+  #content .mission .msx-card{min-height:265px}
+  #content .mission .msx-card__art{height:165px}
+  #content .mission .msx-card__t{font-size:1.45rem}
+  #content .mission .msx-card__d{font-size:.7rem}
+  #content .mission .msx-grid--exist{grid-template-columns:1fr}
+  #content .mission .msx-grid--exist .msx-rail{grid-column:auto}
+  #content .mission .msx-exist__art{min-height:230px;border:1px solid var(--msx-rule);border-width:1px 0}
+  #content .mission .msx-quote{padding:1.8rem 0 .3rem;background:none}
+  #content .mission .msx-quote__text{max-width:14em}
+  #content .mission .msx-prins{grid-template-columns:repeat(2,1fr);gap:1.3rem 0}
+  #content .mission .msx-prin{padding:0 .8rem;border-left:1px solid var(--msx-rule)}
+  #content .mission .msx-prin:nth-child(odd){border-left:0}
+  #content .mission .msx-whos{grid-template-columns:repeat(2,minmax(0,1fr));gap:.6rem}
+  #content .mission .msx-who__art{height:105px}
+  #content .mission .msx-invite{min-height:285px;padding:1.7rem 0 1.25rem}
+  #content .mission .msx-h--invite{font-size:2.65rem}
+  #content .mission .msx-invite__row{max-width:360px;margin-inline:auto}
+  #content .mission .msx-btn,#content .mission .msx-btn2{width:100%}
+}
