@@ -5710,23 +5710,23 @@ body.menu-open{overflow:hidden}
 }
 /* why this matters */
 #content .mission .msx-cols{grid-template-columns:repeat(4,minmax(0,1fr));align-self:stretch}
-#content .mission .msx-col{padding:0 1rem;border-left:1px solid var(--msx-rule);text-align:center}
+#content .mission .msx-col{padding:0 .8rem;border-left:1px solid var(--msx-rule);text-align:center}
 #content .mission .msx-col:first-child{padding-left:0}
 #content .mission .msx-col__ico{width:40px;height:40px;margin:0 auto 1rem;color:var(--msx-orange)}
-#content .mission .msx-col__t{font-size:.76rem;letter-spacing:.02em;line-height:1.4;margin-bottom:.9rem;text-wrap:balance;min-height:4.2em;display:flex;flex-direction:column;justify-content:flex-start;align-items:center}
+#content .mission .msx-col__t{font-size:.78rem;font-stretch:80%;font-variation-settings:'wdth' 80;letter-spacing:.005em;line-height:1.4;margin-bottom:.9rem;text-wrap:balance;min-height:2.9em;display:flex;flex-direction:column;justify-content:flex-start;align-items:center}
 #content .mission .msx-col__d{font-size:.77rem;line-height:1.7;color:rgba(244,236,224,.64)}
 
 /* focus cards */
 #content .mission .msx-cards{gap:.75rem}
-#content .mission .msx-card{min-height:325px;border:1px solid rgba(244,236,224,.25);border-radius:2px;background:#031329;position:relative}
+#content .mission .msx-card{min-height:330px;border:1px solid rgba(244,236,224,.25);border-radius:2px;background:#020c1e;position:relative;display:flex;flex-direction:column}
 #content .mission .msx-card:hover{transform:translateY(-2px);border-color:rgba(255,90,47,.7)}
-#content .mission .msx-card__art{height:214px;display:block;position:relative;overflow:hidden;background:#06172d}
-#content .mission .msx-card__art::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(2,15,32,.05) 42%,rgba(2,15,32,.72) 100%);pointer-events:none}
+#content .mission .msx-card__art{flex:1;min-height:150px;display:block;position:relative;overflow:hidden;background:transparent;-webkit-mask-image:linear-gradient(180deg,transparent 0,#000 16%,#000 84%,transparent 100%);mask-image:linear-gradient(180deg,transparent 0,#000 16%,#000 84%,transparent 100%)}
+
 #content .mission .msx-card__art img{width:100%;height:100%;object-fit:cover;filter:saturate(1.07) contrast(1.03)}
-#content .mission .msx-card figcaption{padding:.85rem .85rem .95rem;border-top:0;background:linear-gradient(180deg,#04162d,#031227)}
-#content .mission .msx-card__t{position:absolute;z-index:2;top:.82rem;left:.9rem;font-size:1.22rem;font-weight:800;line-height:1;color:var(--msx-paper);padding-bottom:.62rem;margin:0;text-shadow:0 2px 8px rgba(0,0,0,.65)}
-#content .mission .msx-card__t::after{width:24px;height:2px;background:var(--msx-orange)}
-#content .mission .msx-card__d{font-size:.75rem;line-height:1.52;color:rgba(244,236,224,.78)}
+#content .mission .msx-card figcaption{padding:.2rem .9rem 1rem;border-top:0;background:transparent;text-align:center}
+#content .mission .msx-card__t{position:relative;z-index:2;font-size:1.28rem;font-weight:800;line-height:1;color:var(--msx-paper);padding:.9rem .95rem .6rem;margin:0}
+#content .mission .msx-card__t::after{left:.95rem;bottom:.1rem;width:24px;height:2px;background:var(--msx-orange)}
+#content .mission .msx-card__d{font-size:.95rem;line-height:1.5;color:rgba(244,236,224,.88);margin:0}
 
 /* why we exist — copy / image / quote */
 #content .mission .msx-grid--exist{grid-template-columns:minmax(250px,3.2fr) minmax(330px,5.2fr) minmax(220px,3.6fr);column-gap:0;align-items:stretch}
@@ -5813,8 +5813,9 @@ body.menu-open{overflow:hidden}
   #content .mission .msx-col:nth-child(even){padding-right:0}
   #content .mission .msx-col__d{font-size:.72rem}
   #content .mission .msx-cards{grid-template-columns:1fr 1fr;gap:.6rem}
-  #content .mission .msx-card{min-height:265px}
-  #content .mission .msx-card__art{height:165px}
+  #content .mission .msx-card{min-height:260px}
+  #content .mission .msx-card__art{min-height:120px}
+  #content .mission .msx-card__d{font-size:.88rem}
   #content .mission .msx-card__t{font-size:1.45rem}
   #content .mission .msx-card__d{font-size:.7rem}
   #content .mission .msx-grid--exist{grid-template-columns:1fr}
@@ -5839,4 +5840,19 @@ body.menu-open{overflow:hidden}
   #content .mission .msx-grid--hero>div:first-child{padding-right:0}
   #content .mission .msx-hero__art{min-height:300px;border-top:1px solid var(--msx-rule)}
   #content .mission .msx-mlock__chip{font-size:1.9rem}
+}
+
+/* column titles: width-axis ladder as the columns narrow */
+@media (min-width:621px) and (max-width:1279px){
+  #content .mission .msx-col{padding:0 .6rem}
+  #content .mission .msx-col__t{font-size:.72rem;font-stretch:72%;font-variation-settings:'wdth' 72;letter-spacing:0}
+}
+@media (max-width:620px){
+  #content .mission .msx-col__t{font-size:.7rem;font-stretch:72%;font-variation-settings:'wdth' 72;letter-spacing:0}
+}
+@media (max-width:380px){
+  #content .mission .msx-col__t{font-size:.64rem}
+}
+@media (max-width:340px){
+  #content .mission .msx-col__t{font-size:.6rem}
 }
