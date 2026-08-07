@@ -5661,7 +5661,7 @@ body.menu-open{overflow:hidden}
 #content .mission .msx-grid{grid-template-columns:minmax(230px,3.1fr) minmax(0,8.9fr);column-gap:clamp(1.8rem,3vw,3.3rem)}
 
 /* hero */
-#content .mission .msx-grid--hero{grid-template-columns:minmax(330px,5.1fr) minmax(0,6.9fr);column-gap:0;min-height:clamp(330px,42vh,410px)}
+#content .mission .msx-grid--hero{grid-template-columns:minmax(330px,6fr) minmax(0,6fr);column-gap:0;min-height:clamp(330px,42vh,410px)}
 #content .mission .msx-grid--hero>div:first-child{padding:clamp(2.6rem,4.8vw,4.3rem) clamp(2rem,4vw,4rem) clamp(2.5rem,4vw,3.8rem) 0;align-self:center}
 #content .mission .msx-h--hero{font-size:clamp(1.6rem,2.3vw,2.2rem);line-height:1.1;max-width:16.5em}
 #content .mission .msx-h--hero strong{font-size:1em;line-height:inherit;margin:0;display:inline}
@@ -5676,11 +5676,12 @@ body.menu-open{overflow:hidden}
 #content .mission .msx-mlock{display:block}
 #content .mission .msx-mlock__line{
   display:block;font-family:var(--fb);font-weight:800;
-  font-size:clamp(.78rem,1vw,1.06rem);line-height:1.28;
+  font-size:clamp(.9rem,1.32vw,1.3rem);line-height:1.26;
   letter-spacing:-.008em;text-transform:uppercase;
   color:var(--msx-paper);
 }
 #content .mission .msx-mlock__line--c{color:var(--msx-orange)}
+#content .mission .msx-mlock__w{font-style:normal;color:var(--msx-paper)}
 @media (max-width:900px){
   #content .mission .msx-mlock__line{font-size:clamp(1rem,4.2vw,1.25rem)}
 }
@@ -5811,9 +5812,9 @@ body.menu-open{overflow:hidden}
 }
 
 /* narrow desktops: stack the hero before the lockup runs out of room */
-@media (min-width:901px) and (max-width:1150px){
+@media (min-width:901px) and (max-width:1180px){
   #content .mission .msx-grid--hero{grid-template-columns:minmax(0,1fr);min-height:0}
   #content .mission .msx-grid--hero>div:first-child{padding-right:0}
   #content .mission .msx-hero__art{min-height:300px;border-top:1px solid var(--msx-rule)}
-  #content .mission .msx-mlock__line{font-size:1.15rem}
+  #content .mission .msx-mlock__line{font-size:1.35rem}
 }
