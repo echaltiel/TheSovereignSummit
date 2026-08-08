@@ -5871,3 +5871,6 @@ body.menu-open{overflow:hidden}
   #content .mission .msx-quote{padding:1.1rem 1.2rem 1.2rem}
   #content .mission .msx-quote__text{font-size:1.22rem}
 }
+
+/* principle icons come from images/mission as transparent art */
+#content .mission .msx-prin__ico img{width:100%;height:100%;object-fit:contain;display:block}
