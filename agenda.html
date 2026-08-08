@@ -34,8 +34,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Instrument+Serif&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=270">
-<style>#content{padding-top:calc(var(--header-h) + clamp(1rem,2.5vw,2rem))}</style>
+<link rel="stylesheet" href="styles.css?v=271">
+<style>#content{padding-top:calc(var(--header-h) + clamp(.75rem,1.2vw,1.1rem))}</style>
 </head>
 <body>
 <div class="header" id="siteHeader">
@@ -254,6 +254,19 @@
 </main>
 
 
+<script>
+(function(){
+  if(!location.hash) return;
+  var el = document.getElementById(location.hash.slice(1));
+  if(!el) return;
+  var again = function(){ el.scrollIntoView(); };
+  window.addEventListener('load', function(){
+    requestAnimationFrame(again);
+    setTimeout(again, 250);
+    if(document.fonts && document.fonts.ready){ document.fonts.ready.then(function(){ requestAnimationFrame(again); }); }
+  });
+})();
+</script>
 <script>
 (function(){
   // BTC price strip

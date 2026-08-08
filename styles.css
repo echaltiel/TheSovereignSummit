@@ -5954,7 +5954,7 @@ body.menu-open{overflow:hidden}
    the first segment wraps naturally since the card is never wide enough to
    hold it on one line at the current type size (needs ~630px, card gives
    ~490px inside the 1360px container cap). */
-#content .days{margin-top:clamp(1.4rem,2.6vw,2.4rem)}
+#content .days{margin-top:clamp(.9rem,1.4vw,1.3rem)}
 
 /* ===== Agenda v25: day card copy layouts, icon files, themes rename =====
    The three day-card hooks now carry authored line breaks. Type on each card
@@ -5993,10 +5993,10 @@ body.menu-open{overflow:hidden}
    still fits on one line. The divider line above the Themes header retires. */
 #content .agn-part2::before{content:none}
 @media (min-width:901px){
-  #content .days__head{min-height:5.4rem;display:flex;flex-direction:column;justify-content:flex-end}
+  #content .days__head{min-height:4.9rem;display:flex;flex-direction:column;justify-content:flex-end}
   #content .days__card{
     display:grid;
-    grid-template-rows:4.6rem 1.5rem minmax(calc(clamp(1.3rem,1.85vw,1.7rem)*1.6 + .6rem),auto) 1fr auto;
+    grid-template-rows:4.2rem 1.5rem minmax(calc(clamp(1.3rem,1.85vw,1.7rem)*1.6 + .6rem),auto) 1fr auto;
     align-items:start;justify-items:center;
   }
   #content .days__ico{align-self:center;margin:0 auto}
@@ -6041,3 +6041,10 @@ body.menu-open{overflow:hidden}
   #content .days__ico{height:46px;width:auto;max-width:96px}
   #content .days__card--main .days__ico{height:54px;width:auto}
 }
+
+/* ===== Agenda v31: fold economics =====
+   The hero stack (title, day strip, jump link) fits above the fold on
+   shorter laptop viewports with bookmarks bars. Top padding, strip offset,
+   head height and icon row each give back a little; the design hierarchy
+   stays intact. The jump link margin tightens to match. */
+#content .agn-more{margin:1.4rem auto .2rem}
