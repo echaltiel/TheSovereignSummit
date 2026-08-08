@@ -5996,7 +5996,7 @@ body.menu-open{overflow:hidden}
   #content .days__head{min-height:5.4rem;display:flex;flex-direction:column;justify-content:flex-end}
   #content .days__card{
     display:grid;
-    grid-template-rows:2.6rem 1.5rem minmax(calc(clamp(1.3rem,1.85vw,1.7rem)*1.6 + .6rem),auto) 1fr auto;
+    grid-template-rows:4.6rem 1.5rem minmax(calc(clamp(1.3rem,1.85vw,1.7rem)*1.6 + .6rem),auto) 1fr auto;
     align-items:start;justify-items:center;
   }
   #content .days__ico{align-self:center;margin:0 auto}
@@ -6016,4 +6016,28 @@ body.menu-open{overflow:hidden}
       font-size:clamp(.68rem,calc(1.36cqw - 3px),.95rem);
     }
   }
+}
+
+/* ===== Agenda v29: mobile polish =====
+   The authored hook line breaks are desktop typography; in the compact mobile
+   cards they strand single words on their own lines, so below 901px the text
+   flows naturally. Card links and the callout link grow to thumb-sized tap
+   targets without moving visually. */
+@media (max-width:900px){
+  #content .days__hook br{display:none}
+  #content .days__link{padding:.55rem 0 .55rem .75rem;margin:-.55rem 0}
+}
+#content .agn-callout__note{display:inline-block;padding:.35rem 0;margin:-.2rem 0}
+/* Tablet 2-up act tiles: reserve two title lines so dividers align across a
+   row when one title wraps and its neighbor does not. */
+@media (min-width:481px) and (max-width:1080px){
+  #content .program__block-title span{min-height:2.35em}
+}
+
+/* ===== Agenda v30: larger day-card icons =====
+   The illustrated icons carry more detail than the old line glyphs and were
+   unreadable at 26px. The shared icon row grew to hold them centered. */
+@media (min-width:901px){
+  #content .days__ico{height:46px;width:auto;max-width:96px}
+  #content .days__card--main .days__ico{height:54px;width:auto}
 }
