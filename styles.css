@@ -5894,6 +5894,8 @@ body.menu-open{overflow:hidden}
   .msx-brm{display:inline}
   #content .mission .msx-rail{text-align:center;margin-left:-18px;margin-right:-18px}
   #content .mission .msx-rail .msx-h{max-width:none;font-size:min(1.9rem,8.15vw);line-height:1.1}
+  #content .mission .msx-rail .msx-h--two{font-size:5.4vw;line-height:1.18}
+  #content .mission .msx-rail .msx-h--wide{font-size:6.5vw;line-height:1.18}
   #content .mission .msx-hero__art{display:none}
   #content .mission .msx-rail .msx-sub{margin-left:auto;margin-right:auto;max-width:none}
   #content .mission .msx-eyebrow{justify-content:center}
