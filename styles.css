@@ -5703,7 +5703,7 @@ body.menu-open{overflow:hidden}
   margin-top:.4em;
 }
 @media (max-width:900px){
-  #content .mission .msx-mlock__chip{font-size:clamp(1.3rem,5.6vw,1.65rem);padding:.55rem .85rem .6rem}
+  #content .mission .msx-mlock__chip{font-size:clamp(.9rem,6.3vw - 5px,1.45rem);padding:.5rem .8rem .55rem}
   #content .mission .msx-mlock__out{font-size:clamp(1.05rem,4.6vw,1.3rem)}
 }
 /* why this matters */
