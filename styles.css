@@ -5882,3 +5882,8 @@ body.menu-open{overflow:hidden}
 /* real photos: keep faces in frame at every card aspect */
 #content .mission .msx-whos .msx-who:nth-child(1) .msx-who__art img,
 #content .mission .msx-whos .msx-who:nth-child(2) .msx-who__art img{object-position:50% 25%}
+
+/* mobile: balance the hero band's air */
+@media (max-width:900px){
+  #content .mission .msx-grid--hero>div:first-child{padding-top:.5rem;padding-bottom:1.2rem}
+}
