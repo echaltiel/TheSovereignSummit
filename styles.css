@@ -5863,6 +5863,7 @@ body.menu-open{overflow:hidden}
 /* caption fit in the two narrow-card bands */
 @media (min-width:1024px) and (max-width:1180px){
   #content .mission .msx-card__d{font-size:.72rem}
+  #content .mission .msx-col__d{font-size:.8rem}
 }
 @media (min-width:381px) and (max-width:480px){
   #content .mission .msx-card__d{font-size:.72rem}
