@@ -123,7 +123,7 @@
           <span class="days__num">Feb 4</span>
         </div>
         <article class="days__card days__card--edge">
-          <img class="days__ico" src="images/agenda/icon-presummit.svg?v=2" alt="" decoding="async">
+          <img class="days__ico" src="images/agenda/icon-presummit.svg?v=2" alt="" width="797" height="612" decoding="async">
           <div class="days__eyebrow days__eyebrow--edge">Pre-Summit</div>
           <h3 class="days__title">Fundamentals Sessions</h3>
           <p class="days__hook">Extra content and time to <br><strong>build context, get up to speed</strong>, and <br>make the most of the Summit.</p>
@@ -136,7 +136,7 @@
           <span class="days__num">Feb 5 &ndash; 6</span>
         </div>
         <article class="days__card days__card--main">
-          <img class="days__ico" src="images/agenda/icon-summit.svg?v=2" alt="" decoding="async">
+          <img class="days__ico" src="images/agenda/icon-summit.svg?v=2" alt="" width="799" height="729" decoding="async">
           <div class="days__eyebrow">The Summit</div>
           <h3 class="days__title">Two Full Conference Days</h3>
           <p class="days__hook"><strong>Main stage, workshops, expo hall</strong> and the <strong>open source area</strong>, <br>all under one roof at the Coastal Convention Center.</p>
@@ -149,7 +149,7 @@
           <span class="days__num">Feb 7</span>
         </div>
         <article class="days__card days__card--edge">
-          <img class="days__ico" src="images/agenda/icon-sendoff.svg?v=2" alt="" decoding="async">
+          <img class="days__ico" src="images/agenda/icon-sendoff.svg?v=2" alt="" width="797" height="497" decoding="async">
           <div class="days__eyebrow days__eyebrow--edge">Send-Off</div>
           <h3 class="days__title">Satoshi Farewell Brunch</h3>
           <p class="days__hook"><strong>One last morning together</strong> <br>to reflect and connect after <br>the amazing event.</p>
@@ -256,15 +256,24 @@
 
 <script>
 (function(){
-  if(!location.hash) return;
-  var el = document.getElementById(location.hash.slice(1));
-  if(!el) return;
-  var again = function(){ el.scrollIntoView(); };
-  window.addEventListener('load', function(){
-    requestAnimationFrame(again);
-    setTimeout(again, 250);
-    if(document.fonts && document.fonts.ready){ document.fonts.ready.then(function(){ requestAnimationFrame(again); }); }
+  var cancelled = false;
+  ['wheel','touchstart','keydown'].forEach(function(ev){
+    window.addEventListener(ev, function(){ cancelled = true; }, {passive:true});
   });
+  function settle(){
+    if(!location.hash) return;
+    var el = document.getElementById(location.hash.slice(1));
+    if(!el) return;
+    cancelled = false;
+    [350, 800, 1400, 2200].forEach(function(ms, i, arr){
+      setTimeout(function(){
+        if(cancelled) return;
+        el.scrollIntoView({behavior: i === arr.length - 1 ? 'auto' : 'smooth'});
+      }, ms);
+    });
+  }
+  window.addEventListener('load', settle);
+  window.addEventListener('hashchange', settle);
 })();
 </script>
 <script>
