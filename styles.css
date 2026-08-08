@@ -5955,3 +5955,22 @@ body.menu-open{overflow:hidden}
    hold it on one line at the current type size (needs ~630px, card gives
    ~490px inside the 1360px container cap). */
 #content .days{margin-top:clamp(1.4rem,2.6vw,2.4rem)}
+
+/* ===== Agenda v25: day card copy layouts, icon files, themes rename =====
+   The three day-card hooks now carry authored line breaks. Type on each card
+   scales with its column width so the longest authored line always fits on
+   one line (measured em ratios: main 30.1, Thursday 18.9, Sunday 14.5, plus
+   3% cushion). Browsers without container queries fall back to the current
+   sizes and wrap naturally. Below 901px the cards use the compact mobile
+   layout and wrap naturally. The callout is centered now that the legend
+   above it is gone. */
+@media (min-width:901px){
+  #content .days__col{container-type:inline-size}
+  @supports (font-size:1cqw){
+    #content .days__col--main .days__hook{font-size:clamp(.68rem,calc((100cqw - 52px)/34.5),1.06rem)}
+    #content .days__col--edge:first-child .days__hook{font-size:clamp(.68rem,calc((100cqw - 52px)/20.3),1rem)}
+    #content .days__col--edge:last-child .days__hook{font-size:clamp(.68rem,calc((100cqw - 52px)/15.6),1rem)}
+  }
+}
+#content .agn-callout{justify-content:center}
+#content .agn-callout__body{text-align:center;align-items:center}
