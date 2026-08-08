@@ -5946,3 +5946,12 @@ body.menu-open{overflow:hidden}
   #content .agn-brace__bar{display:block;top:18px}
   #content .agn-brace__drop{top:18px}
 }
+
+/* ===== Agenda v24: copy edits fallout =====
+   Removing the intro line left the day strip crowding the page title, so the
+   strip gets its own breathing room. The main card hook carries a hard break
+   before "all under one roof." so the closing phrase always stands alone;
+   the first segment wraps naturally since the card is never wide enough to
+   hold it on one line at the current type size (needs ~630px, card gives
+   ~490px inside the 1360px container cap). */
+#content .days{margin-top:clamp(1.4rem,2.6vw,2.4rem)}
