@@ -5878,12 +5878,3 @@ body.menu-open{overflow:hidden}
 #content .mission .msx-prin__ico img,
 #content .mission .msx-col__ico img{width:100%;height:100%;object-fit:contain;display:block}
 
-/* hero flow line: sketched connector from the tiles to the outcomes */
-#content .mission .msx-mlock{position:relative}
-#content .mission .msx-mlock__flow{
-  position:absolute;left:-118px;top:3.2rem;bottom:.35rem;width:118px;
-  pointer-events:none;
-}
-@media (max-width:1279px){
-  #content .mission .msx-mlock__flow{display:none}
-}
