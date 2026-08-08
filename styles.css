@@ -5887,3 +5887,8 @@ body.menu-open{overflow:hidden}
 @media (max-width:900px){
   #content .mission .msx-grid--hero>div:first-child{padding-top:.5rem;padding-bottom:1.2rem}
 }
+
+/* mobile: rail headlines fill the width */
+@media (max-width:900px){
+  #content .mission .msx-rail .msx-h{max-width:none;font-size:clamp(1.8rem,8vw,2.4rem);line-height:1.08;text-wrap:balance}
+}
