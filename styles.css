@@ -5708,9 +5708,9 @@ body.menu-open{overflow:hidden}
 #content .mission .msx-cols{grid-template-columns:repeat(4,minmax(0,1fr));align-self:stretch}
 #content .mission .msx-col{padding:0 .8rem;border-left:1px solid var(--msx-rule);text-align:center}
 #content .mission .msx-col:first-child{padding-left:0}
-#content .mission .msx-col__ico{width:40px;height:40px;margin:0 auto 1rem;color:var(--msx-orange)}
+#content .mission .msx-col__ico{width:58px;height:58px;margin:0 auto 1.15rem;color:var(--msx-orange)}
 #content .mission .msx-col__t{font-size:.78rem;font-stretch:80%;font-variation-settings:'wdth' 80;letter-spacing:.005em;line-height:1.4;margin-bottom:.9rem;text-wrap:balance;min-height:2.9em;display:flex;flex-direction:column;justify-content:flex-start;align-items:center}
-#content .mission .msx-col__d{font-size:.77rem;line-height:1.7;color:rgba(244,236,224,.64)}
+#content .mission .msx-col__d{font-size:.95rem;line-height:1.65;color:rgba(244,236,224,.72)}
 
 /* focus cards */
 #content .mission .msx-cards{gap:.75rem}
@@ -5875,3 +5875,13 @@ body.menu-open{overflow:hidden}
 /* principle + matters icons come from images/mission as transparent art */
 #content .mission .msx-prin__ico img,
 #content .mission .msx-col__ico img{width:100%;height:100%;object-fit:contain;display:block}
+
+/* hero flow line: sketched connector from the tiles to the outcomes */
+#content .mission .msx-mlock{position:relative}
+#content .mission .msx-mlock__flow{
+  position:absolute;left:-40px;top:3.2rem;bottom:.3rem;width:36px;
+  pointer-events:none;
+}
+@media (max-width:1279px){
+  #content .mission .msx-mlock__flow{display:none}
+}
