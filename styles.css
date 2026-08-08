@@ -6048,3 +6048,42 @@ body.menu-open{overflow:hidden}
    head height and icon row each give back a little; the design hierarchy
    stays intact. The jump link margin tightens to match. */
 #content .agn-more{margin:1.4rem auto .2rem}
+
+/* ===== Agenda v32: mobile day strip redesign =====
+   The compact cards read as text bricks: icons hidden, dates floating away
+   from their cards, the link a small corner label. Now each date sits on one
+   line tight above its card, the illustrated icon anchors the card's top
+   right, and the link becomes a full width bottom row with a divider, the
+   same pattern as desktop and a real tap target. */
+@media (max-width:900px){
+  #content .days{gap:1.5rem}
+  #content .days__head{
+    display:flex;align-items:baseline;gap:.6rem;
+    padding:0 .1rem .4rem;margin:0 0 .65rem;text-align:left;
+    border-bottom:1px solid rgba(244,236,224,.16);
+  }
+  #content .days__day{margin:0;font-size:.6rem;letter-spacing:.22em}
+  #content .days__num{font-size:1.5rem;line-height:1}
+  #content .days__ico,
+  #content .days__card--main .days__ico{
+    display:block;grid-area:ico;height:46px;width:auto;
+    justify-self:end;align-self:start;margin:0;
+  }
+  #content .days__card{
+    padding:1.05rem 1.1rem .95rem;
+    display:grid;
+    grid-template-columns:minmax(0,1fr) auto;
+    grid-template-areas:"meta ico" "title ico" "hook hook" "link link";
+    column-gap:1rem;row-gap:.3rem;
+    align-items:start;text-align:left;
+  }
+  #content .days__eyebrow{grid-area:meta;margin:0;align-self:end}
+  #content .days__title{grid-area:title;margin:0}
+  #content .days__hook{grid-area:hook;margin:.3rem 0 0}
+  #content .days__link{
+    grid-area:link;justify-self:stretch;text-align:left;
+    margin:.85rem 0 0;padding:.7rem 0 .2rem;
+    border-top:1px solid rgba(244,236,224,.14);
+  }
+  #content .days__card--main .days__link{border-top-color:rgba(19,30,51,.16)}
+}
