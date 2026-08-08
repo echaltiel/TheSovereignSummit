@@ -37,6 +37,20 @@
 <link rel="stylesheet" href="styles.css?v=277">
 <style>#content{padding-top:calc(var(--header-h) + clamp(.6rem,1.5vw,1.1rem))}</style>
 <script>if(location.hash==='#floor-plan')location.replace('/floor-plan');</script>
+<style id="menu-compact">
+.mobile-menu__link{padding-top:clamp(.5rem,1.4vh,1rem) !important;padding-bottom:clamp(.5rem,1.4vh,1rem) !important;font-size:clamp(.88rem,2.2vh,1.05rem) !important}
+.mobile-menu__cta{margin-top:clamp(.6rem,1.5vh,1.5rem) !important;padding-top:clamp(.75rem,1.6vh,1rem) !important;padding-bottom:clamp(.75rem,1.6vh,1rem) !important}
+.mobile-menu__social{margin-top:clamp(.5rem,1.2vh,1rem) !important;padding-top:.7rem !important;padding-bottom:.7rem !important}
+@media (max-height:680px){
+.mobile-menu__link{padding-top:.42rem !important;padding-bottom:.42rem !important;font-size:.84rem !important}
+.mobile-menu__cta{margin-top:.5rem !important;padding-top:.65rem !important;padding-bottom:.65rem !important}
+.mobile-menu__social{margin-top:.4rem !important;padding-top:.5rem !important;padding-bottom:.5rem !important}
+}
+@media (max-height:580px){
+.mobile-menu__link{padding-top:.28rem !important;padding-bottom:.28rem !important;font-size:.78rem !important}
+.mobile-menu__cta{margin-top:.4rem !important;padding-top:.55rem !important;padding-bottom:.55rem !important}
+}
+</style>
 </head>
 <body>
 <div class="header" id="siteHeader">
