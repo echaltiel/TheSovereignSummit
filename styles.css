@@ -5915,23 +5915,11 @@ body.menu-open{overflow:hidden}
 }
 
 /* ===== Agenda v21: day schedule architecture =====
-   The four acts become section headers inside two day sections, each holding
-   session rows that fill in as the program is announced. Times stay as parts
-   of the day until real clock times exist. Day pills are plain anchors for
-   now; sticky behavior lands after the pattern is approved. Coral stays on
-   eyebrows and interactive edges only. */
-
-/* --- Legend: function over room --- */
-#content .agn-spaces__list li{display:flex;flex-direction:column;align-items:center;gap:.18rem}
-#content .agn-spaces__rm{
-  font-family:var(--fm);font-size:.6rem;font-weight:400;
-  letter-spacing:.1em;text-transform:none;
-  color:rgba(244,236,224,.45);
-}
-#content .agn-spaces__list li + li::before{top:.5em}
-@media (max-width:620px){
-  #content .agn-spaces__rm{font-size:.55rem}
-}
+   All copy is unchanged. The four acts become flat section headers inside two
+   day sections (01-02 Friday, 03-04 Saturday), ready to receive session rows
+   when the program is announced. Day pills are plain anchors for now; sticky
+   behavior lands after the pattern is approved. Coral stays on eyebrows and
+   interactive edges only. */
 
 /* --- Day pills --- */
 #content .agn-daynav{display:flex;justify-content:center;gap:.7rem;margin:1.7rem 0 2.3rem;flex-wrap:wrap}
@@ -5947,7 +5935,7 @@ body.menu-open{overflow:hidden}
 #content .agn-daynav__pill:hover{border-color:var(--accent);color:#F4ECE0}
 
 /* --- Day sections --- */
-#content .agn-day{margin:0 0 2.8rem;max-width:920px;margin-left:auto;margin-right:auto}
+#content .agn-day{padding:0;margin:0 0 2.4rem;max-width:920px;margin-left:auto;margin-right:auto}
 #content .agn-day__head{
   display:flex;align-items:baseline;gap:1rem;
   padding-bottom:.55rem;margin-bottom:.4rem;
@@ -5998,7 +5986,9 @@ body.menu-open{overflow:hidden}
 #content .agn-arc__hook strong{font-weight:600;color:rgba(244,236,224,.92)}
 #content .agn-arc__ico{width:30px;height:30px;color:var(--accent);opacity:.55;flex:0 0 auto}
 
-/* --- Session rows --- */
+/* --- Session rows: dormant until real sessions are announced. The day
+   sections above are the containers they will drop into, so populating the
+   schedule later is an HTML-only change. --- */
 #content .agn-sess{list-style:none;margin:0;padding:0}
 #content .agn-sess__row{
   display:grid;grid-template-columns:7.2rem minmax(0,1fr) auto;
