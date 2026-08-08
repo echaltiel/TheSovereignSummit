@@ -5981,7 +5981,7 @@ body.menu-open{overflow:hidden}
    the jump link above it leaves the viewport and the section frame starts
    clean at the title, mirroring the reference gap below the header. */
 #content .agn-part2 .agn-desc{margin-top:calc(2.2rem + 2px)}
-#content .agn-part2{scroll-margin-top:-10px}
+#content .agn-part2{scroll-margin-top:-22px}
 
 /* ===== Agenda v27: day card row alignment =====
    The three cards now share one internal grid: icon row, eyebrow row, title
