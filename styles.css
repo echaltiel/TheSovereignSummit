@@ -5982,3 +5982,36 @@ body.menu-open{overflow:hidden}
    clean at the title, mirroring the reference gap below the header. */
 #content .agn-part2 .agn-desc{margin-top:calc(2.2rem + 2px)}
 #content .agn-part2{scroll-margin-top:-10px}
+
+/* ===== Agenda v27: day card row alignment =====
+   The three cards now share one internal grid: icon row, eyebrow row, title
+   row, hook, then the divider link pinned to the bottom. Head heights are
+   equalized and bottom-anchored so all three card tops start level, which
+   cascades: icons align, eyebrows align, titles top-align, hooks top-align,
+   links bottom-align. All three hooks share one font and one size, computed
+   from the day-strip width so the longest authored line (the main card's)
+   still fits on one line. The divider line above the Themes header retires. */
+#content .agn-part2::before{content:none}
+@media (min-width:901px){
+  #content .days__head{min-height:5.4rem;display:flex;flex-direction:column;justify-content:flex-end}
+  #content .days__card{
+    display:grid;
+    grid-template-rows:2.6rem 1.5rem minmax(calc(clamp(1.3rem,1.85vw,1.7rem)*1.6),auto) 1fr auto;
+    align-items:start;justify-items:center;
+  }
+  #content .days__ico{align-self:start;margin:0 auto}
+  #content .days__eyebrow{align-self:center;margin:0}
+  #content .days__title{margin:0}
+  #content .days__hook{margin:0}
+  #content .days__link{margin-top:0;align-self:end;justify-self:stretch;text-align:center}
+  /* one hook size and font across all three cards */
+  #content .days{container-type:inline-size}
+  #content .days__col{container-type:normal}
+  @supports (font-size:1cqw){
+    #content .days__col--edge:first-child .days__hook,
+    #content .days__col--edge:last-child .days__hook,
+    #content .days__col--main .days__hook{
+      font-size:clamp(.68rem,calc(1.36cqw - 3px),.95rem);
+    }
+  }
+}
