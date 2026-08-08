@@ -5996,13 +5996,15 @@ body.menu-open{overflow:hidden}
   #content .days__head{min-height:5.4rem;display:flex;flex-direction:column;justify-content:flex-end}
   #content .days__card{
     display:grid;
-    grid-template-rows:2.6rem 1.5rem minmax(calc(clamp(1.3rem,1.85vw,1.7rem)*1.6),auto) 1fr auto;
+    grid-template-rows:2.6rem 1.5rem minmax(calc(clamp(1.3rem,1.85vw,1.7rem)*1.6 + .6rem),auto) 1fr auto;
     align-items:start;justify-items:center;
   }
-  #content .days__ico{align-self:start;margin:0 auto}
+  #content .days__ico{align-self:center;margin:0 auto}
   #content .days__eyebrow{align-self:center;margin:0}
-  #content .days__title{margin:0}
-  #content .days__hook{margin:0}
+  /* Baseline-align the mixed-size titles: bottom edges of single-line text
+     boxes sit within a fraction of a pixel of a shared baseline. */
+  #content .days__title{margin:0 0 .6rem;align-self:end}
+  #content .days__hook{margin:0 0 .9rem}
   #content .days__link{margin-top:0;align-self:end;justify-self:stretch;text-align:center}
   /* one hook size and font across all three cards */
   #content .days{container-type:inline-size}
