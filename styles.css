@@ -5913,3 +5913,142 @@ body.menu-open{overflow:hidden}
 @media (max-width:900px){
   #content .mission .msx-grid--exist .msx-rail .msx-h{text-align:center;margin-left:0;margin-right:0;max-width:none}
 }
+
+/* ===== Agenda v21: day schedule architecture =====
+   The four acts become section headers inside two day sections, each holding
+   session rows that fill in as the program is announced. Times stay as parts
+   of the day until real clock times exist. Day pills are plain anchors for
+   now; sticky behavior lands after the pattern is approved. Coral stays on
+   eyebrows and interactive edges only. */
+
+/* --- Legend: function over room --- */
+#content .agn-spaces__list li{display:flex;flex-direction:column;align-items:center;gap:.18rem}
+#content .agn-spaces__rm{
+  font-family:var(--fm);font-size:.6rem;font-weight:400;
+  letter-spacing:.1em;text-transform:none;
+  color:rgba(244,236,224,.45);
+}
+#content .agn-spaces__list li + li::before{top:.5em}
+@media (max-width:620px){
+  #content .agn-spaces__rm{font-size:.55rem}
+}
+
+/* --- Day pills --- */
+#content .agn-daynav{display:flex;justify-content:center;gap:.7rem;margin:1.7rem 0 2.3rem;flex-wrap:wrap}
+#content .agn-daynav__pill{
+  font-family:var(--fm);font-size:.68rem;font-weight:700;
+  letter-spacing:.16em;text-transform:uppercase;line-height:1;
+  color:rgba(244,236,224,.88);
+  border:1px solid rgba(244,236,224,.28);border-radius:999px;
+  padding:.6rem 1.15rem;
+  transition:border-color .15s ease,color .15s ease;
+}
+#content .agn-daynav__pill span{color:rgba(244,236,224,.5);letter-spacing:.1em;margin-left:.45rem;font-weight:400}
+#content .agn-daynav__pill:hover{border-color:var(--accent);color:#F4ECE0}
+
+/* --- Day sections --- */
+#content .agn-day{margin:0 0 2.8rem;max-width:920px;margin-left:auto;margin-right:auto}
+#content .agn-day__head{
+  display:flex;align-items:baseline;gap:1rem;
+  padding-bottom:.55rem;margin-bottom:.4rem;
+  border-bottom:2px solid rgba(244,236,224,.24);
+}
+#content .agn-day__label{
+  font-family:var(--fm);font-size:.66rem;font-weight:700;
+  letter-spacing:.26em;text-transform:uppercase;color:var(--accent);
+}
+#content .agn-day__date{
+  font-family:var(--fb);font-weight:800;letter-spacing:-.02em;
+  font-size:clamp(1.3rem,2.1vw,1.75rem);line-height:1.1;
+  color:#F4ECE0;margin:0;
+}
+
+/* --- Arc headers: same family as the old act tiles, laid flat --- */
+#content .agn-arc{
+  display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:center;
+  gap:1.05rem;
+  background:rgba(255,255,255,.045);
+  border:1px solid rgba(244,236,224,.13);
+  border-left:4px solid rgba(244,128,13,.4);
+  border-radius:2px;
+  padding:.8rem 1.15rem;
+  margin:1.9rem 0 0;
+}
+#content .agn-arc__step{
+  font-family:var(--fm);font-size:1.65rem;font-weight:400;line-height:1;
+  color:var(--accent);opacity:.26;letter-spacing:-.03em;
+}
+#content .agn-arc__theme{
+  display:inline-block;font-family:var(--fm);font-size:.52rem;font-weight:700;
+  letter-spacing:.18em;text-transform:uppercase;
+  color:var(--accent);background:rgba(244,128,13,.1);
+  border:1px solid rgba(244,128,13,.28);
+  padding:.2rem .5rem;border-radius:2px;line-height:1.5;
+  margin-bottom:.35rem;
+}
+#content .agn-arc__title{
+  font-family:var(--fd);font-weight:400;
+  font-size:clamp(1.2rem,1.7vw,1.5rem);line-height:1.1;letter-spacing:-.018em;
+  color:#F4ECE0;margin:0;
+}
+#content .agn-arc__hook{
+  font-size:.95rem;line-height:1.45;
+  color:rgba(244,236,224,.72);margin:.25rem 0 0;
+}
+#content .agn-arc__hook strong{font-weight:600;color:rgba(244,236,224,.92)}
+#content .agn-arc__ico{width:30px;height:30px;color:var(--accent);opacity:.55;flex:0 0 auto}
+
+/* --- Session rows --- */
+#content .agn-sess{list-style:none;margin:0;padding:0}
+#content .agn-sess__row{
+  display:grid;grid-template-columns:7.2rem minmax(0,1fr) auto;
+  align-items:baseline;gap:.4rem 1.1rem;
+  padding:.8rem .35rem;
+  border-bottom:1px solid rgba(244,236,224,.1);
+}
+#content .agn-sess__time{
+  font-family:var(--fm);font-size:.66rem;font-weight:700;
+  letter-spacing:.16em;text-transform:uppercase;
+  color:rgba(244,236,224,.55);white-space:nowrap;
+}
+#content .agn-sess__body{min-width:0}
+#content .agn-sess__title{
+  font-family:var(--fb);font-weight:600;font-size:1.02rem;line-height:1.35;
+  color:#F4ECE0;
+}
+#content .agn-sess__title a{
+  color:inherit;border-bottom:1px solid rgba(244,128,13,.5);
+  transition:border-color .15s ease,color .15s ease;
+}
+#content .agn-sess__title a:hover{color:var(--accent);border-bottom-color:var(--accent)}
+#content .agn-sess__who{
+  font-family:var(--fd);font-size:.94rem;line-height:1.4;
+  color:rgba(244,236,224,.5);margin-top:.1rem;
+}
+#content .agn-sess__tags{display:flex;gap:.4rem;flex-wrap:wrap;justify-content:flex-end}
+#content .agn-sess__tag{
+  font-family:var(--fm);font-size:.56rem;font-weight:700;
+  letter-spacing:.14em;text-transform:uppercase;line-height:1.5;
+  color:rgba(244,236,224,.6);
+  border:1px solid rgba(244,236,224,.18);
+  padding:.18rem .5rem;border-radius:2px;white-space:nowrap;
+}
+
+/* --- Mobile: time and tags collapse into a top meta line --- */
+@media (max-width:720px){
+  #content .agn-sess__row{
+    grid-template-columns:minmax(0,1fr) auto;
+    grid-template-areas:"time tags" "body body";
+    row-gap:.3rem;padding:.75rem .1rem;
+  }
+  #content .agn-sess__time{grid-area:time}
+  #content .agn-sess__tags{grid-area:tags}
+  #content .agn-sess__body{grid-area:body}
+  #content .agn-arc{gap:.8rem;padding:.7rem .85rem;margin-top:1.6rem}
+  #content .agn-arc__step{font-size:1.15rem}
+  #content .agn-arc__ico{width:22px;height:22px}
+  #content .agn-arc__hook{font-size:.86rem}
+  #content .agn-day{margin-bottom:2.2rem}
+  #content .agn-daynav{margin:1.3rem 0 1.8rem}
+  #content .agn-daynav__pill{font-size:.62rem;padding:.55rem .95rem}
+}
