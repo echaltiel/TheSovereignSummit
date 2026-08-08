@@ -5697,8 +5697,10 @@ body.menu-open{overflow:hidden}
   margin:0 0 .4rem;
 }
 #content .mission .msx-mlock__out::before{
-  content:"\2192";flex:0 0 auto;
-  color:var(--msx-orange);font-weight:800;
+  content:"";flex:0 0 auto;width:0;height:0;
+  border-left:9px solid var(--msx-orange);
+  border-top:5px solid transparent;border-bottom:5px solid transparent;
+  transform:translateY(1px);
 }
 @media (max-width:900px){
   #content .mission .msx-mlock__chip{font-size:clamp(1.3rem,5.6vw,1.65rem);padding:.55rem .85rem .6rem}
@@ -5879,7 +5881,7 @@ body.menu-open{overflow:hidden}
 /* hero flow line: sketched connector from the tiles to the outcomes */
 #content .mission .msx-mlock{position:relative}
 #content .mission .msx-mlock__flow{
-  position:absolute;left:-40px;top:3.2rem;bottom:.3rem;width:36px;
+  position:absolute;left:-118px;top:3.2rem;bottom:.35rem;width:118px;
   pointer-events:none;
 }
 @media (max-width:1279px){
