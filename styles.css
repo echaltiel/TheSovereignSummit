@@ -5504,11 +5504,7 @@ body.menu-open{overflow:hidden}
   display:block;font-family:var(--fd);font-size:2.6rem;line-height:.6;
   color:var(--accent);margin-bottom:.55rem;
 }
-#content .mission .msx-quote__text{
-  font-family:var(--fd);font-weight:400;
-  font-size:clamp(1.3rem,1.8vw,1.6rem);line-height:1.35;
-  color:#F4ECE0;margin:0 0 .8rem;
-}
+#content .mission .msx-quote__text{font-family:var(--fd);font-size:clamp(1.7rem,2.4vw,2.2rem);line-height:1.3;color:var(--msx-paper);margin:0;max-width:none}
 #content .mission .msx-quote__cite{
   font-style:normal;font-family:var(--fb);font-weight:800;
   font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;
@@ -5868,4 +5864,10 @@ body.menu-open{overflow:hidden}
 }
 @media (min-width:381px) and (max-width:480px){
   #content .mission .msx-card__d{font-size:.72rem}
+}
+
+/* quote fits its narrower column in the 1024-1180 band */
+@media (min-width:1024px) and (max-width:1180px){
+  #content .mission .msx-quote{padding:1.1rem 1.2rem 1.2rem}
+  #content .mission .msx-quote__text{font-size:1.22rem}
 }
