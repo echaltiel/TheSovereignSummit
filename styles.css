@@ -5974,3 +5974,11 @@ body.menu-open{overflow:hidden}
 }
 #content .agn-callout{justify-content:center}
 #content .agn-callout__body{text-align:center;align-items:center}
+
+/* ===== Agenda v26: themes framing =====
+   The gap between the Themes title and its lede now matches the 37px between
+   THE AGENDA and the day strip heads. The #inside anchor scrolls deeper so
+   the jump link above it leaves the viewport and the section frame starts
+   clean at the title, mirroring the reference gap below the header. */
+#content .agn-part2 .agn-desc{margin-top:calc(2.2rem + 2px)}
+#content .agn-part2{scroll-margin-top:-10px}
