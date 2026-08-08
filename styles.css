@@ -6087,3 +6087,6 @@ body.menu-open{overflow:hidden}
   }
   #content .days__card--main .days__link{border-top-color:rgba(19,30,51,.16)}
 }
+
+/* v275: flatten section-title em accents — match base title font/color (Archivo bold, no serif, no coral) */
+#content .section-title em,#content h2 em{font-family:inherit;font-weight:inherit;font-style:normal;color:inherit;letter-spacing:inherit;font-size:1em;line-height:inherit}
