@@ -5888,14 +5888,16 @@ body.menu-open{overflow:hidden}
   #content .mission .msx-grid--hero>div:first-child{padding-top:.5rem;padding-bottom:1.2rem}
 }
 
-/* mobile: section headers centred, headlines free of the desktop width cap */
+/* mobile: centred section headers, authored breaks sized to fill the width */
+.msx-brm{display:none}
 @media (max-width:900px){
+  .msx-brm{display:inline}
   #content .mission .msx-rail{text-align:center}
-  #content .mission .msx-rail .msx-h{max-width:none;text-wrap:balance;font-size:1.9rem}
+  #content .mission .msx-rail .msx-h{max-width:none;font-size:min(8.8vw,2.2rem);line-height:1.06}
+  #content .mission .msx-rail .msx-h--fit3{font-size:min(8.2vw,2.05rem)}
   #content .mission .msx-rail .msx-sub{margin-left:auto;margin-right:auto}
   #content .mission .msx-eyebrow{justify-content:center}
   #content .mission .msx-hero .msx-eyebrow{justify-content:flex-start}
-  #content .mission .msx-rail .msx-h{padding-left:.9rem;padding-right:.9rem}
   #content .mission .msx-quote{text-align:center}
   #content .mission .msx-quote__text{margin-left:auto;margin-right:auto}
 }
