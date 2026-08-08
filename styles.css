@@ -6090,3 +6090,6 @@ body.menu-open{overflow:hidden}
 
 /* v275: flatten section-title em accents — match base title font/color (Archivo bold, no serif, no coral) */
 #content .section-title em,#content h2 em{font-family:inherit;font-weight:inherit;font-style:normal;color:inherit;letter-spacing:inherit;font-size:1em;line-height:inherit}
+
+/* v276: flatten agn-desc em accents (Themes of the Summit subheader) — beat earlier !important serif/coral rule */
+#content .agn-desc em{font-family:inherit !important;font-style:normal !important;font-weight:inherit !important;color:inherit !important;font-size:1em !important;letter-spacing:inherit !important}
