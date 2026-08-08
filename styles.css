@@ -5892,10 +5892,12 @@ body.menu-open{overflow:hidden}
 .msx-brm{display:none}
 @media (max-width:900px){
   .msx-brm{display:inline}
-  #content .mission .msx-rail{text-align:left;margin-left:-13px;margin-right:-13px}
+  #content .mission .msx-rail{text-align:center;margin-left:-18px;margin-right:-18px}
   #content .mission .msx-rail .msx-h{max-width:none;font-size:min(1.9rem,8.15vw);line-height:1.1}
   #content .mission .msx-hero__art{display:none}
-  #content .mission .msx-rail .msx-sub{margin-left:0;margin-right:0;max-width:none}
+  #content .mission .msx-rail .msx-sub{margin-left:auto;margin-right:auto;max-width:none}
+  #content .mission .msx-eyebrow{justify-content:center}
+  #content .mission .msx-hero .msx-eyebrow{justify-content:flex-start}
   #content .mission .msx-quote{text-align:center}
   #content .mission .msx-quote__text{margin-left:auto;margin-right:auto}
 }
@@ -5906,7 +5908,7 @@ body.menu-open{overflow:hidden}
   #content .mission .msx-grid--exist .msx-h{max-width:none;margin-left:auto;margin-right:auto}
 }
 
-/* mobile: exist headline obeys the left alignment like its siblings */
+/* mobile: exist headline obeys the shared alignment */
 @media (max-width:900px){
-  #content .mission .msx-grid--exist .msx-h{text-align:left;margin-left:0;margin-right:0}
+  #content .mission .msx-grid--exist .msx-rail .msx-h{text-align:center;margin-left:0;margin-right:0;max-width:none}
 }
