@@ -6119,3 +6119,6 @@ body.menu-open{overflow:hidden}
   #content .program__block-title{font-size:clamp(1.9rem,2.25vw,2.2rem) !important;line-height:1.1 !important}
   #content .program__block-title::after{margin:.5rem auto .6rem !important}
 }
+
+/* v279b: #inside anchor lands with Themes title just under the fixed header */
+#content .agn-part2{scroll-margin-top:-31px !important} /* stacks with html scroll-padding-top (header-h + 12px) so the Themes title lands 16px under the nav */
