@@ -6107,3 +6107,15 @@ body.menu-open{overflow:hidden}
   .mobile-menu__link{padding-top:.28rem !important;padding-bottom:.28rem !important;font-size:.78rem !important}
   .mobile-menu__cta{margin-top:.4rem !important;padding-top:.55rem !important;padding-bottom:.55rem !important}
 }
+
+/* v278: match Themes title→subheader gap to THE AGENDA→Fri & Sat gap (20px) */
+#content .agn-desc{margin-top:1.25rem !important}
+
+/* v278b: agenda theme cards — bigger pills, icons, titles; tighter title→divider gap (desktop) */
+@media (min-width:900px){
+  #content .program__block-theme{font-size:.82rem !important;padding:.34rem .85rem !important;letter-spacing:.12em !important}
+  #content .agn-ico{width:58px !important;height:58px !important;margin-bottom:1rem !important}
+  #content .agn-ico--fill{width:56px !important;height:56px !important}
+  #content .program__block-title{font-size:clamp(1.9rem,2.25vw,2.2rem) !important;line-height:1.1 !important}
+  #content .program__block-title::after{margin:.5rem auto .6rem !important}
+}
