@@ -5504,7 +5504,7 @@ body.menu-open{overflow:hidden}
   display:block;font-family:var(--fd);font-size:2.6rem;line-height:.6;
   color:var(--accent);margin-bottom:.55rem;
 }
-#content .mission .msx-quote__text{font-family:var(--fd);font-size:clamp(1.7rem,2.4vw,2.2rem);line-height:1.3;color:var(--msx-paper);margin:0;max-width:none}
+#content .mission .msx-quote__text{font-family:var(--fd);font-size:clamp(2rem,3vw,2.8rem);line-height:1.32;color:var(--msx-paper);margin:0;max-width:none}
 #content .mission .msx-quote__cite{
   font-style:normal;font-family:var(--fb);font-weight:800;
   font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;
@@ -5732,9 +5732,9 @@ body.menu-open{overflow:hidden}
 #content .mission .msx-grid--exist .msx-rail .msx-h{max-width:10em}
 #content .mission .msx-exist__art{min-height:260px;overflow:hidden;border-left:1px solid var(--msx-rule);border-right:1px solid var(--msx-rule)}
 #content .mission .msx-exist__art img{width:100%;height:100%;object-fit:cover;object-position:center;filter:saturate(1.04) contrast(1.02)}
-#content .mission .msx-quote{margin:0;padding:clamp(1.9rem,3vw,3rem);border-left:0;background:radial-gradient(circle at 8% 50%,rgba(12,49,84,.62),transparent 64%);display:flex;flex-direction:column;justify-content:center}
+#content .mission .msx-quote{margin:0;padding:clamp(1.4rem,2.2vw,2rem);border-left:0;background:radial-gradient(circle at 8% 50%,rgba(12,49,84,.62),transparent 64%);display:flex;flex-direction:column;justify-content:center}
 #content .mission .msx-quote__mark{font-family:var(--fd);font-size:4.1rem;line-height:.55;margin:0 0 .85rem;color:var(--msx-orange)}
-#content .mission .msx-quote__text{font-family:var(--fd);font-size:clamp(1.4rem,2vw,1.8rem);line-height:1.42;max-width:13em}
+#content .mission .msx-quote__text{font-family:var(--fd);font-size:clamp(1.9rem,2.55vw,2.28rem);line-height:1.3;max-width:none}
 #content .mission .msx-quote__cite{font-size:.7rem;letter-spacing:.035em;color:var(--msx-orange)}
 
 /* principles */
@@ -5879,3 +5879,6 @@ body.menu-open{overflow:hidden}
 #content .mission .msx-prin__ico img,
 #content .mission .msx-col__ico img{width:100%;height:100%;object-fit:contain;display:block}
 
+/* real photos: keep faces in frame at every card aspect */
+#content .mission .msx-whos .msx-who:nth-child(1) .msx-who__art img,
+#content .mission .msx-whos .msx-who:nth-child(2) .msx-who__art img{object-position:50% 25%}
