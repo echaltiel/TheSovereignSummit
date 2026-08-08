@@ -55,6 +55,10 @@
 }
 /* Two-tone blurb, matching the section subtitle pattern used on /speakers */
 .hero__blurb .hb-a,.hero__blurb .hb-b{font-family:var(--fb);font-weight:800;letter-spacing:-.022em;color:rgba(244,236,224,.72)}
+/* The agenda pages pad #content by the header height at certain window sizes.
+   On the homepage the hero and marquee already sit above main, so that
+   padding is pure dead space between the marquee and Speakers. */
+#content{padding-top:0 !important}
 .hero__ctas .btn{box-shadow:0 10px 34px rgba(255,105,65,.32);transition:transform .18s ease,box-shadow .18s ease}
 .hero__ctas .btn:hover{transform:translateY(-2px);box-shadow:0 16px 44px rgba(255,105,65,.45)}
 .hero h1 > br + span,
