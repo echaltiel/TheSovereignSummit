@@ -180,6 +180,7 @@
         <img class="side-event__photo" src="images/side-event-2.webp" alt="" loading="lazy" decoding="async">
         <span class="side-event__view" aria-hidden="true">View Details <span class="btn__arrow">&rarr;</span></span>
         <div class="side-event__details" hidden>
+          <img class="sev-modal__photo" src="images/side-event-2-v2.webp" alt="The rooftop terrace overlooking the waterway" loading="lazy" decoding="async">
           <div class="side-event__venue"><span class="side-event__venue-name">TBD</span><span class="side-event__venue-label">TBD</span></div>
           <p class="side-event__desc">The evening before the Summit, an exclusive Welcome Reception. Speakers, partners, and <em>only VIP Summit Pass holders</em> come together for the first conversations of the week, setting the tone for the days ahead.</p>
           <ul class="sev-modal__points">
@@ -438,6 +439,10 @@
 })();
 </script>
 
+<style>
+/* Modal-only detail photo (scoped to modal body; hidden in cards) */
+#sevModalBody .sev-modal__photo{display:block;width:100%;height:210px;object-fit:cover;border-radius:12px;margin:.9rem 0 1rem;filter:saturate(.95) brightness(.9)}
+</style>
 <div class="sev-modal" id="sevModal" role="dialog" aria-modal="true" aria-label="Event details" aria-hidden="true">
   <div class="sev-modal__card">
     <button type="button" class="sev-modal__close" id="sevModalClose" aria-label="Close">&times;</button>
