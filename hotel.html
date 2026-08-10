@@ -51,6 +51,16 @@
 .mobile-menu__cta{margin-top:.4rem !important;padding-top:.55rem !important;padding-bottom:.55rem !important}
 }
 </style>
+<style>
+/* Mobile: Plan Your Stay cards - icon+label header row, compact fill */
+@media (max-width:720px){
+  #content .vn2-card{display:grid;grid-template-columns:auto 1fr;column-gap:.85rem;align-items:center;padding:1.05rem 1.15rem 1rem}
+  #content .vn2-card .vn2-ico{grid-column:1;grid-row:1;width:30px;height:30px}
+  #content .vn2-card__label{grid-column:2;grid-row:1;margin:0}
+  #content .vn2-card__text{grid-column:1/-1;grid-row:2;margin:.65rem 0 0}
+  #content .vn2-card__link{grid-column:1/-1;grid-row:3;margin-top:0;padding-top:.7rem}
+}
+</style>
 </head>
 <body>
 <div class="header" id="siteHeader">
