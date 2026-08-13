@@ -1,6 +1,7 @@
 {
   "cleanUrls": true,
   "redirects": [
+    { "source": "/side-events", "destination": "/events", "permanent": true },
     { "source": "/map", "destination": "/convention-center", "permanent": true },
     { "source": "/team", "destination": "/leadership", "permanent": true },
     { "source": "/venue", "destination": "/hotel", "permanent": true },
