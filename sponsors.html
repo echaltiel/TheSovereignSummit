@@ -34,6 +34,10 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Instrument+Serif&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://api.coinbase.com" crossorigin>
+<link rel="preconnect" href="https://api.coingecko.com" crossorigin>
+<link rel="preconnect" href="https://api.fiscaldata.treasury.gov" crossorigin>
+<link rel="preconnect" href="https://api.eia.gov" crossorigin>
 <link rel="stylesheet" href="styles.css?v=283">
 <style>#content{padding-top:calc(var(--header-h) + clamp(1rem,2.5vw,2rem))}</style>
 <style id="menu-compact">
@@ -183,23 +187,34 @@
       var line = seg('btc', '\u20BF BITCOIN', tVals.btc) + ' \u2022 ' + seg('debt', 'U.S. DEBT', tVals.debt) + ' \u2022 ' + seg('gold', 'GOLD', tVals.gold) + ' \u2022 ' + seg('grid', 'U.S. GRID LOAD', tVals.grid);
       for(var i = 0; i < tickerEls.length; i++){ tickerEls[i].innerHTML = line; }
     };
+    var saveTicker = function(){ try{ localStorage.setItem('sovTicker', JSON.stringify({t:Date.now(), v:tVals})); }catch(e){} };
+    try{
+      var sT = JSON.parse(localStorage.getItem('sovTicker') || 'null');
+      if(sT && sT.v && (Date.now() - sT.t) < 600000){
+        if(sT.v.btc) tVals.btc = sT.v.btc;
+        if(sT.v.debt) tVals.debt = sT.v.debt;
+        if(sT.v.gold) tVals.gold = sT.v.gold;
+        if(sT.v.grid) tVals.grid = sT.v.grid;
+        renderTicker();
+      }
+    }catch(e){}
     fetch('https://api.coinbase.com/v2/prices/BTC-USD/spot').then(function(r){return r.json();}).then(function(d){
       var p = fmtUSD(d && d.data && d.data.amount);
-      if(p){ tVals.btc = p; renderTicker(); }
+      if(p){ tVals.btc = p; renderTicker(); saveTicker(); }
     }).catch(function(){});
     fetch('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,pax-gold&vs_currencies=usd').then(function(r){return r.json();}).then(function(d){
       var g = fmtUSD(d && d['pax-gold'] && d['pax-gold'].usd);
-      if(g){ tVals.gold = g; renderTicker(); }
-      if(!tVals.btc){ var b = fmtUSD(d && d.bitcoin && d.bitcoin.usd); if(b){ tVals.btc = b; renderTicker(); } }
+      if(g){ tVals.gold = g; renderTicker(); saveTicker(); }
+      if(!tVals.btc){ var b = fmtUSD(d && d.bitcoin && d.bitcoin.usd); if(b){ tVals.btc = b; renderTicker(); saveTicker(); } }
     }).catch(function(){});
     fetch('https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v2/accounting/od/debt_to_penny?sort=-record_date&page%5Bsize%5D=1').then(function(r){return r.json();}).then(function(d){
       var v = d && d.data && d.data[0] && Number(d.data[0].tot_pub_debt_out_amt);
-      if(isFinite(v) && v > 1e12){ tVals.debt = '$' + (v/1e12).toFixed(1) + ' TRILLION'; renderTicker(); }
+      if(isFinite(v) && v > 1e12){ tVals.debt = '$' + (v/1e12).toFixed(1) + ' TRILLION'; renderTicker(); saveTicker(); }
     }).catch(function(){});
     fetch('https://api.eia.gov/v2/electricity/rto/region-data/data/?api_key=X0czfKzqty0xqYl3dsuaAUGGdgK2gNxX2xWD4QZX&frequency=hourly&data%5B0%5D=value&facets%5Brespondent%5D%5B%5D=US48&facets%5Btype%5D%5B%5D=D&sort%5B0%5D%5Bcolumn%5D=period&sort%5B0%5D%5Bdirection%5D=desc&length=1').then(function(r){return r.json();}).then(function(d){
       var row = d && d.response && d.response.data && d.response.data[0];
       var gw = row ? Math.round(Number(row.value) / 1000) : NaN;
-      if(isFinite(gw) && gw > 100 && gw < 1000){ tVals.grid = gw + ' GW'; renderTicker(); }
+      if(isFinite(gw) && gw > 100 && gw < 1000){ tVals.grid = gw + ' GW'; renderTicker(); saveTicker(); }
     }).catch(function(){});
   }
   // Live header height for scroll offsets
