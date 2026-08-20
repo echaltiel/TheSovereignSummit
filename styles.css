@@ -6152,14 +6152,7 @@ body.menu-open{overflow:hidden}
 .ticker__btc .tk--gold{color:#E8C46A}
 .ticker__btc .tk--grid{color:var(--cream-50, rgba(244,236,224,.5))}
 
-/* v284: mobile marquee retired. The ticker is static at all sizes; on narrow screens the line wraps to centered rows, with each metric kept intact via nowrap on the .tk spans. */
+/* v285: mobile marquee loop fix. The track is a flex item and was shrinking to the container width, so the -50% keyframe shift resolved against a collapsed box and the marquee wrapped early, before the later metrics were shown. Locking the track to its natural two-copy width makes the loop traverse the full line seamlessly. */
 @media (max-width:900px){
-  .ticker__inner{overflow:visible;justify-content:center}
-  .ticker__track{display:block;width:auto;text-align:center;animation:none}
-  .ticker__dup{display:none !important}
-  .ticker__btc{white-space:normal;line-height:1.6}
-  .ticker__btc .tk{white-space:nowrap}
-}
-@media (max-width:600px){
-  .ticker__btc{font-size:.7rem;letter-spacing:.09em}
+  .ticker__track{flex:0 0 auto;min-width:max-content}
 }
