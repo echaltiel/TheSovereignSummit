@@ -6145,3 +6145,9 @@ body.menu-open{overflow:hidden}
 @media (prefers-reduced-motion:reduce) and (max-width:900px){
   .ticker__btc{white-space:normal}
 }
+
+/* v282: per-item ticker colors. Bitcoin orange, red-ink debt, brand gold for gold, muted green for grid energy. Bullets stay cream via the base ticker color. */
+.ticker__btc .tk--btc{color:#F7931A}
+.ticker__btc .tk--debt{color:#E0685C}
+.ticker__btc .tk--gold{color:#E8C46A}
+.ticker__btc .tk--grid{color:#7FBFA4}
