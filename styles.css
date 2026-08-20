@@ -6122,3 +6122,8 @@ body.menu-open{overflow:hidden}
 
 /* v279b: #inside anchor lands with Themes title just under the fixed header */
 #content .agn-part2{scroll-margin-top:-31px !important} /* stacks with html scroll-padding-top (header-h + 12px) so the Themes title lands 16px under the nav */
+
+/* v280: sticky nav — header scrolls with the page until the ticker is off-screen, then the nav pins at top:0. Negative bottom margin keeps the overlay layout so all --header-h padding math on every page stays valid. --ticker-h is measured live by JS (setHeaderH). */
+.header{position:sticky;inset:auto;top:calc(-1 * var(--ticker-h, 37px));margin-bottom:calc(-1 * var(--header-h, 104px))}
+/* Mobile menu anchors to the viewport top and pads past the header, so no gap appears below the nav once the ticker has scrolled away. */
+.mobile-menu{top:0;padding-top:calc(var(--header-h, 104px) + 1.5rem)}
