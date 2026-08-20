@@ -6156,3 +6156,8 @@ body.menu-open{overflow:hidden}
 @media (max-width:900px){
   .ticker__track{flex:0 0 auto;min-width:max-content}
 }
+
+/* v286: smaller ticker type on mobile. Base mobile styles bumped it to .82rem; this brings it under the desktop .72rem for a quieter strip, with slightly tighter tracking to match. */
+@media (max-width:600px){
+  .ticker__btc{font-size:.66rem;letter-spacing:.09em}
+}
