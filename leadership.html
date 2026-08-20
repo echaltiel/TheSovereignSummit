@@ -34,7 +34,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Instrument+Serif&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=280">
+<link rel="stylesheet" href="styles.css?v=281">
 <style>#content{padding-top:calc(var(--header-h) + clamp(1rem,2.5vw,2rem))}</style>
 <style id="menu-compact">
 .mobile-menu__link{padding-top:clamp(.5rem,1.4vh,1rem) !important;padding-bottom:clamp(.5rem,1.4vh,1rem) !important;font-size:clamp(.88rem,2.2vh,1.05rem) !important}
@@ -55,7 +55,10 @@
 <div class="header" id="siteHeader">
   <a class="ticker" href="/#tickets">
     <div class="ticker__inner">
-      <span class="ticker__btc" id="btcTicker">₿itcoin</span>
+      <div class="ticker__track">
+        <span class="ticker__btc" id="btcTicker">₿ BITCOIN $69,145 • U.S. DEBT $39.7 TRILLION • GOLD $4,480 • U.S. GRID LOAD 480 GW</span>
+        <span class="ticker__btc ticker__dup" aria-hidden="true">₿ BITCOIN $69,145 • U.S. DEBT $39.7 TRILLION • GOLD $4,480 • U.S. GRID LOAD 480 GW</span>
+      </div>
     </div>
   </a>
   <div class="nav-wrap" id="navWrap">
@@ -215,20 +218,32 @@
 <script>
 (function(){
   // BTC price strip
-  var btcEl = document.getElementById('btcTicker');
-  if(btcEl && window.fetch){
-    var showPrice = function(usd){
-      var n = Math.round(Number(usd));
-      if(!isFinite(n) || n <= 0) return;
-      btcEl.textContent = '$' + n.toLocaleString('en-US') + ' USD per \u20BFitcoin';
+  var tickerEls = document.querySelectorAll('.ticker__btc');
+  if(tickerEls.length && window.fetch){
+    var tVals = { btc:'$69,145', debt:'$39.7 TRILLION', gold:'$4,480', grid:'480 GW' };
+    var fmtUSD = function(v){ var n = Math.round(Number(v)); return (isFinite(n) && n > 0) ? '$' + n.toLocaleString('en-US') : null; };
+    var renderTicker = function(){
+      var line = '\u20BF BITCOIN ' + tVals.btc + ' \u2022 U.S. DEBT ' + tVals.debt + ' \u2022 GOLD ' + tVals.gold + ' \u2022 U.S. GRID LOAD ' + tVals.grid;
+      for(var i = 0; i < tickerEls.length; i++){ tickerEls[i].textContent = line; }
     };
     fetch('https://api.coinbase.com/v2/prices/BTC-USD/spot').then(function(r){return r.json();}).then(function(d){
-      showPrice(d && d.data && d.data.amount);
-    }).catch(function(){
-      fetch('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd').then(function(r){return r.json();}).then(function(d){
-        showPrice(d && d.bitcoin && d.bitcoin.usd);
-      }).catch(function(){});
-    });
+      var p = fmtUSD(d && d.data && d.data.amount);
+      if(p){ tVals.btc = p; renderTicker(); }
+    }).catch(function(){});
+    fetch('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,pax-gold&vs_currencies=usd').then(function(r){return r.json();}).then(function(d){
+      var g = fmtUSD(d && d['pax-gold'] && d['pax-gold'].usd);
+      if(g){ tVals.gold = g; renderTicker(); }
+      if(tVals.btc === '$69,145'){ var b = fmtUSD(d && d.bitcoin && d.bitcoin.usd); if(b){ tVals.btc = b; renderTicker(); } }
+    }).catch(function(){});
+    fetch('https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v2/accounting/od/debt_to_penny?sort=-record_date&page%5Bsize%5D=1').then(function(r){return r.json();}).then(function(d){
+      var v = d && d.data && d.data[0] && Number(d.data[0].tot_pub_debt_out_amt);
+      if(isFinite(v) && v > 1e12){ tVals.debt = '$' + (v/1e12).toFixed(1) + ' TRILLION'; renderTicker(); }
+    }).catch(function(){});
+    fetch('https://api.eia.gov/v2/electricity/rto/region-data/data/?api_key=X0czfKzqty0xqYl3dsuaAUGGdgK2gNxX2xWD4QZX&frequency=hourly&data%5B0%5D=value&facets%5Brespondent%5D%5B%5D=US48&facets%5Btype%5D%5B%5D=D&sort%5B0%5D%5Bcolumn%5D=period&sort%5B0%5D%5Bdirection%5D=desc&length=1').then(function(r){return r.json();}).then(function(d){
+      var row = d && d.response && d.response.data && d.response.data[0];
+      var gw = row ? Math.round(Number(row.value) / 1000) : NaN;
+      if(isFinite(gw) && gw > 100 && gw < 1000){ tVals.grid = gw + ' GW'; renderTicker(); }
+    }).catch(function(){});
   }
   // Live header height for scroll offsets
   var header = document.getElementById('siteHeader');
