@@ -35,10 +35,16 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Instrument+Serif&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=279">
+<script>
+/* When Zaprite redirects here inside the embedded checkout on /tickets, the parent page already
+   carries the site header, so this page's own brand bar would duplicate it. Hide it when framed. */
+if (window.self !== window.top) { document.documentElement.className += ' is-embedded'; }
+</script>
+<link rel="stylesheet" href="styles.css?v=287">
 <style>
 /* ===== Order Complete: self-contained utility page ===== */
 .ocx-header{background:var(--dk-page,#131E33);border-bottom:1px solid rgba(244,236,224,.12)}
+.is-embedded .ocx-header{display:none}
 .ocx-header__in{max-width:1160px;margin:0 auto;padding:.45rem var(--gut,clamp(1.25rem,3vw,2.5rem));display:flex;align-items:center;justify-content:space-between;gap:1rem}
 .ocx-header__brand img{height:44px;width:auto;display:block}
 .ocx-header__back{display:inline-flex;align-items:center;min-height:44px;padding:.55rem 1.3rem;border:1px solid rgba(244,236,224,.35);border-radius:999px;font-family:var(--fm);font-size:.78rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#F4ECE0;text-decoration:none;transition:border-color .2s ease,background .2s ease}
@@ -150,7 +156,6 @@
       <div class="ocx-hero__check" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4.5 12.5l5 5 10-11"/></svg></div>
       <div class="ocx-hero__badge">Purchase Confirmed</div>
       <h1 class="ocx-hero__title">You&rsquo;re In.</h1>
-      <p class="ocx-hero__confirmline">Your Summit Pass is confirmed.</p>
       <p class="ocx-hero__event"><em>Fontainebleau Miami Beach</em><span class="ocx-hero__date"><span class="ocx-hero__dot"> &middot; </span>February 4&ndash;7, 2027</span></p>
       <div class="ocx-order" id="oc-order" hidden>Order <span id="oc-order-id"></span></div>
     </div>
