@@ -147,7 +147,12 @@
           <div class="speaker__placeholder"></div>
         </div>
         <h3 class="speaker__name">Michael <em>Saylor</em></h3>
-        <div class="speaker__role">Executive Leadership</div>
+        <div class="speaker__role">Founder &amp; Executive Chairman</div>
+        <div class="speaker__company">Strategy</div>
+        <div class="speaker__details" hidden>
+          <img class="sev-modal__photo" src="images/speakers/saylor.webp" alt="Michael Saylor" loading="lazy" decoding="async">
+          <p class="side-event__desc">Founder and Executive Chairman of Strategy (MSTR), the publicly traded business intelligence firm holding roughly 4% of the total Bitcoin supply. Also the founder of Alarm.com, named inventor on 48+ patents, author of The Mobile Wave, and founder of Saylor Academy, a nonprofit that has provided free education to over 2.8 million students. He holds dual degrees from MIT in Aerospace Engineering and History of Science.</p>
+        </div>
       </a>
       <a class="speaker" data-speaker="02" >
         <div class="speaker__index">02</div>
@@ -156,7 +161,12 @@
           <div class="speaker__placeholder"></div>
         </div>
         <h3 class="speaker__name">Natalie <em>Brunell</em></h3>
-        <div class="speaker__role">Media &amp; Journalism</div>
+        <div class="speaker__role">Author, Bitcoin is for Everyone</div>
+        <div class="speaker__company">Host of Coin Stories Podcast</div>
+        <div class="speaker__details" hidden>
+          <img class="sev-modal__photo" src="images/speakers/brunell.webp" alt="Natalie Brunell" loading="lazy" decoding="async">
+          <p class="side-event__desc">Host of Coin Stories, the No. 1 woman-hosted show in the Bitcoin genre, Top 10 in Apple Podcasts Business News, and averaging more than 1 million views and audio downloads monthly. Author of Bitcoin is For Everyone. Previously an award-winning television journalist and investigative reporter with a regional news Emmy, and an adjunct professor at the University of Southern California. She holds a Master of Science in Journalism from Northwestern University.</p>
+        </div>
       </a>
       <a class="speaker" data-speaker="03" >
         <div class="speaker__index">03</div>
@@ -165,7 +175,12 @@
           <div class="speaker__placeholder"></div>
         </div>
         <h3 class="speaker__name">Jeff <em>Booth</em></h3>
-        <div class="speaker__role">Venture Investing</div>
+        <div class="speaker__role">Author, The Price of Tomorrow &amp; General Partner</div>
+        <div class="speaker__company">Ego Death Capital</div>
+        <div class="speaker__details" hidden>
+          <img class="sev-modal__photo" src="images/speakers/booth.webp" alt="Jeff Booth" loading="lazy" decoding="async">
+          <p class="side-event__desc">Author of The Price of Tomorrow and general partner at Ego Death Capital. He spent two decades building technology companies and writes on deflation, technology and the future of money.</p>
+        </div>
       </a>
       <a class="speaker" data-speaker="04" >
         <div class="speaker__index">04</div>
@@ -183,7 +198,12 @@
           <div class="speaker__placeholder"></div>
         </div>
         <h3 class="speaker__name">Sam <em>Callahan</em></h3>
-        <div class="speaker__role">Research &amp; Analysis</div>
+        <div class="speaker__role">Director, Strategy &amp; Research</div>
+        <div class="speaker__company">OranjeBTC</div>
+        <div class="speaker__details" hidden>
+          <img class="sev-modal__photo" src="images/speakers/callahan.webp" alt="Sam Callahan" loading="lazy" decoding="async">
+          <p class="side-event__desc">Director of Strategy &amp; Research at OranjeBTC, where he oversees Bitcoin treasury operations and leads the company&rsquo;s research and education initiatives. Previously Vice President at Battery Finance and Lead Analyst at Swan Bitcoin. He serves on the advisory boards of MARA Digital Holdings, LQwD Technologies Group, and Cantilever Advisors, and was lead editor of The Treasury of Michael Saylor.</p>
+        </div>
       </a>
       <div class="speaker speaker--more" data-speaker="06">
         <div class="speaker__more-num">40+</div>
@@ -375,6 +395,59 @@
     }
   });
   window.addEventListener('load', function(){ setTimeout(open, 7000); });
+})();
+</script>
+
+<style>
+#spkModalBody .sev-modal__photo{display:block;width:100%;height:260px;object-fit:cover;object-position:top;border-radius:12px;margin:.9rem 0 1rem}
+#spkModalBody .side-event__title{margin-bottom:.2rem}
+</style>
+<div class="sev-modal" id="spkModal" role="dialog" aria-modal="true" aria-label="Speaker profile" aria-hidden="true">
+  <div class="sev-modal__card">
+    <button type="button" class="sev-modal__close" id="spkModalClose" aria-label="Close">&times;</button>
+    <div class="sev-modal__body" id="spkModalBody"></div>
+  </div>
+</div>
+<script>
+(function(){
+  var modal=document.getElementById('spkModal');
+  var body=document.getElementById('spkModalBody');
+  if(!modal) return;
+  var lastCard=null;
+  function close(){
+    modal.classList.remove('is-open'); modal.setAttribute('aria-hidden','true');
+    document.body.classList.remove('menu-open');
+    if(lastCard) lastCard.focus();
+  }
+  document.getElementById('spkModalClose').addEventListener('click', close);
+  modal.addEventListener('click', function(e){ if(e.target===modal) close(); });
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape' && modal.classList.contains('is-open')) close(); });
+  document.querySelectorAll('.speaker').forEach(function(card){
+    var det=card.querySelector('.speaker__details');
+    if(!det) return;
+    function open(){
+      lastCard=card;
+      var name=card.querySelector('.speaker__name');
+      var role=card.querySelector('.speaker__role');
+      var co=card.querySelector('.speaker__company');
+      body.innerHTML='';
+      var t=document.createElement('h3'); t.className='side-event__title'; t.innerHTML=name?name.innerHTML:'';
+      body.appendChild(t);
+      var v=document.createElement('div'); v.className='side-event__venue';
+      v.innerHTML='<span class="side-event__venue-name">'+(role?role.innerHTML:'')+'</span><span class="side-event__venue-label">'+(co?co.innerHTML:'')+'</span>';
+      body.appendChild(v);
+      var d=det.cloneNode(true); d.hidden=false; d.className='side-event__details';
+      body.appendChild(d);
+      modal.classList.add('is-open'); modal.setAttribute('aria-hidden','false');
+      document.body.classList.add('menu-open');
+      document.getElementById('spkModalClose').focus();
+    }
+    card.setAttribute('tabindex','0');
+    card.setAttribute('role','button');
+    card.setAttribute('aria-haspopup','dialog');
+    card.addEventListener('click', open);
+    card.addEventListener('keydown', function(e){ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); open(); } });
+  });
 })();
 </script>
 </body>
