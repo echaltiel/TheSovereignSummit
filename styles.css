@@ -6161,3 +6161,8 @@ body.menu-open{overflow:hidden}
 @media (max-width:600px){
   .ticker__btc{font-size:.66rem;letter-spacing:.09em}
 }
+
+/* v288: mobile speaker tiles keep the desktop portrait proportions (262:205, the desktop crop ratio) instead of a fixed 138px height, so headshots frame identically at every size. */
+@media (max-width:520px){
+#content .speakers__grid:not(.speakers__grid--md) .speaker__portrait{height:auto;aspect-ratio:262/205}
+}
