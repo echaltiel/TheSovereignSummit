@@ -38,7 +38,7 @@
 <link rel="preconnect" href="https://api.coingecko.com" crossorigin>
 <link rel="preconnect" href="https://api.fiscaldata.treasury.gov" crossorigin>
 <link rel="preconnect" href="https://api.eia.gov" crossorigin>
-<link rel="stylesheet" href="styles.css?v=290">
+<link rel="stylesheet" href="styles.css?v=291">
 <style>
 #content{padding-top:calc(var(--header-h) + clamp(.6rem,1.5vw,1rem))}
 #content .sec-hd{margin-bottom:clamp(1rem,2vw,1.5rem)}
@@ -62,7 +62,7 @@
 }
 </style>
 <script src="/js/promo.js?v=1" defer></script>
-<script src="/ticket-countdown.js?v=2" defer></script>
+<script src="/ticket-countdown.js?v=3" defer></script>
 </head>
 <body>
 <div class="header" id="siteHeader">
@@ -148,6 +148,7 @@
       <div class="sec-hd__num">Tickets</div>
       <h2 class="section-title sec-hd__title">Secure your <em>spot.</em></h2>
     </header>
+    <p class="ticket-price-cutoff" data-ticket-price-cutoff hidden>Current ticket pricing ends <time datetime="2026-09-14T00:00:00-04:00">Monday, September 14, 2026 at 12:00 a.m. ET (Miami time)</time>.</p>
     <div id="zaprite_checkout">
       <iframe
         src="https://pay.zaprite.com/pl_wIAImtY5wz?embed=1"
