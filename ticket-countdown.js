@@ -1,69 +1,67 @@
-/* Shared ticket-button countdown. Midnight at the start of Monday in Miami
-   is 04:00 UTC on September 14, 2026 (EDT). Change the deadline and its label
-   together when scheduling a future countdown. */
+/* Ticket-price increase notice shared across the site.
+   Midnight at the start of Monday, September 14, 2026 in Miami is 04:00 UTC.
+   Keep the deadline and customer-facing date below in sync for future changes. */
 (function () {
   'use strict';
 
   var deadline = Date.parse('2026-09-14T00:00:00-04:00');
-  var deadlineLabel = 'Countdown ends Monday, September 14, 2026 at 12:00 a.m. Miami time.';
 
   function init() {
-    if (Date.now() >= deadline) return;
+    var header = document.getElementById('siteHeader');
+    if (!header || Date.now() >= deadline || document.getElementById('ticketPriceNotice')) return;
 
-    var buttons = document.querySelectorAll('.nav__cta[href="/tickets"], .mobile-menu__cta[href="/tickets"]');
-    var entries = [];
-    var intervalId;
+    var notice = document.createElement('aside');
+    notice.id = 'ticketPriceNotice';
+    notice.className = 'ticket-price-notice';
+    notice.setAttribute('aria-labelledby', 'ticketPriceHeading');
+    notice.innerHTML =
+      '<div class="ticket-price-notice__inner">' +
+        '<div class="ticket-price-notice__message">' +
+          '<p class="ticket-price-notice__title" id="ticketPriceHeading">Ticket prices increase ' +
+            '<time datetime="2026-09-14T00:00:00-04:00">September 14</time></p>' +
+          '<p class="ticket-price-notice__detail">Monday at 12:00 a.m. ET</p>' +
+        '</div>' +
+        '<div class="ticket-price-notice__clock" role="timer" aria-live="off" aria-label="Time until ticket prices increase">' +
+          '<span class="ticket-price-notice__unit"><span class="ticket-price-notice__value" data-countdown="days"></span><span class="ticket-price-notice__unit-label">Days</span></span>' +
+          '<span class="ticket-price-notice__unit"><span class="ticket-price-notice__value" data-countdown="hours"></span><span class="ticket-price-notice__unit-label" aria-label="Hours">Hrs</span></span>' +
+          '<span class="ticket-price-notice__unit"><span class="ticket-price-notice__value" data-countdown="minutes"></span><span class="ticket-price-notice__unit-label" aria-label="Minutes">Min</span></span>' +
+          '<span class="ticket-price-notice__unit"><span class="ticket-price-notice__value" data-countdown="seconds"></span><span class="ticket-price-notice__unit-label" aria-label="Seconds">Sec</span></span>' +
+        '</div>' +
+        '<a class="ticket-price-notice__cta" href="/tickets">Lock in today\'s price <span aria-hidden="true">&rarr;</span></a>' +
+      '</div>';
 
-    buttons.forEach(function (button) {
-      if (button.classList.contains('ticket-countdown')) return;
+    // On the tickets page, keep visitors in the existing embedded checkout.
+    if (document.getElementById('zaprite_checkout')) {
+      notice.querySelector('.ticket-price-notice__cta').setAttribute('href', '#zaprite_checkout');
+    }
 
-      var label = document.createElement('span');
-      label.className = 'ticket-countdown__label';
-      while (button.firstChild) label.appendChild(button.firstChild);
-
-      var value = document.createElement('span');
-      value.className = 'ticket-countdown__value';
-      value.setAttribute('aria-hidden', 'true');
-      value.title = deadlineLabel;
-
-      // Keep the deadline accessible without announcing every passing second.
-      var description = document.createElement('span');
-      description.className = 'ticket-countdown__deadline';
-      description.textContent = ' ' + deadlineLabel;
-
-      button.appendChild(label);
-      button.appendChild(value);
-      button.appendChild(description);
-      button.classList.add('ticket-countdown');
-      entries.push({ button: button, label: label, value: value, description: description });
+    var fields = ['days', 'hours', 'minutes', 'seconds'].map(function (unit) {
+      return notice.querySelector('[data-countdown="' + unit + '"]');
     });
+    var intervalId;
+    var resizeObserver;
 
-    if (!entries.length) return;
-
-    function pad(value) {
-      return String(value).padStart(2, '0');
+    function syncHeaderHeight() {
+      document.documentElement.style.setProperty('--header-h', Math.ceil(header.getBoundingClientRect().height) + 'px');
     }
 
     function update() {
-      // Recalculate from the absolute deadline, including after a sleeping tab.
+      // Recalculate from the absolute deadline after background tabs or sleep.
       var seconds = Math.ceil((deadline - Date.now()) / 1000);
       if (seconds <= 0) {
         window.clearInterval(intervalId);
         document.removeEventListener('visibilitychange', onVisibilityChange);
-        entries.forEach(function (entry) {
-          entry.value.remove();
-          entry.description.remove();
-          while (entry.label.firstChild) entry.button.insertBefore(entry.label.firstChild, entry.label);
-          entry.label.remove();
-          entry.button.classList.remove('ticket-countdown');
-        });
+        window.removeEventListener('resize', syncHeaderHeight);
+        if (resizeObserver) resizeObserver.disconnect();
+        notice.remove();
+        syncHeaderHeight();
         return false;
       }
 
-      var text = pad(Math.floor(seconds / 86400)) + 'd ' +
-        pad(Math.floor(seconds % 86400 / 3600)) + 'h ' +
-        pad(Math.floor(seconds % 3600 / 60)) + 'm ' + pad(seconds % 60) + 's';
-      entries.forEach(function (entry) { entry.value.textContent = text; });
+      var values = [Math.floor(seconds / 86400), Math.floor(seconds % 86400 / 3600), Math.floor(seconds % 3600 / 60), seconds % 60];
+      fields.forEach(function (field, index) {
+        field.textContent = String(values[index]).padStart(2, '0');
+      });
       return true;
     }
 
@@ -72,8 +70,16 @@
     }
 
     if (update()) {
+      header.appendChild(notice);
+      syncHeaderHeight();
       intervalId = window.setInterval(update, 1000);
       document.addEventListener('visibilitychange', onVisibilityChange);
+      window.addEventListener('resize', syncHeaderHeight);
+      // Keep content and anchors clear when the banner wraps or fonts load.
+      if (window.ResizeObserver) {
+        resizeObserver = new window.ResizeObserver(syncHeaderHeight);
+        resizeObserver.observe(header);
+      }
     }
   }
 

@@ -6167,22 +6167,52 @@ body.menu-open{overflow:hidden}
 #content .speakers__grid:not(.speakers__grid--md) .speaker__portrait{height:auto;aspect-ratio:262/205}
 }
 
-/* v289: shared ticket countdown; retain the existing desktop/mobile visibility. */
-.btn.ticket-countdown{
-  flex-direction:column;gap:.25rem;line-height:1.2;
+/* v290: a clear price-increase notice beneath the sticky navigation. */
+.ticket-price-notice{
+  background:var(--cream);color:var(--ink);border-bottom:3px solid var(--gold);
 }
-.nav__cta.ticket-countdown{
-  min-height:64px;padding:.65rem 1.4rem;
+.ticket-price-notice__inner{
+  max-width:1380px;margin:0 auto;padding:.75rem clamp(1rem,2.5vw,2.5rem);
+  display:flex;align-items:center;justify-content:space-between;gap:clamp(1rem,3vw,2.5rem);
 }
-.ticket-countdown__label{
-  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+.ticket-price-notice__message{min-width:0;margin-right:auto}
+.ticket-price-notice__title{
+  font-family:var(--fb);font-size:1.125rem;font-weight:800;line-height:1.3;
+  letter-spacing:-.015em;text-wrap:balance;
 }
-.ticket-countdown__value{
-  font-family:var(--fm);font-size:.8125rem;font-weight:500;line-height:1.2;
-  font-variant-numeric:tabular-nums;letter-spacing:0;text-transform:none;
-  white-space:nowrap;
+.ticket-price-notice__title time{white-space:nowrap}
+.ticket-price-notice__detail{margin-top:.15rem;font-size:.875rem;line-height:1.35;color:#43516B}
+.ticket-price-notice__clock{display:flex;align-items:center;gap:.85rem;flex-shrink:0}
+.ticket-price-notice__unit{display:flex;flex-direction:column;align-items:center;gap:.15rem;min-width:2rem}
+.ticket-price-notice__value{
+  font-family:var(--fm);font-size:1.65rem;font-weight:700;line-height:1.05;
+  font-variant-numeric:tabular-nums;letter-spacing:-.04em;
 }
-.ticket-countdown__deadline{
-  position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;
-  clip:rect(0,0,0,0);clip-path:inset(50%);white-space:nowrap;border:0;
+.ticket-price-notice__unit-label{
+  font-family:var(--fm);font-size:.75rem;font-weight:500;line-height:1.2;
+  letter-spacing:.04em;text-transform:uppercase;color:#43516B;
+}
+.ticket-price-notice__cta{
+  display:inline-flex;align-items:center;justify-content:center;gap:.6rem;flex-shrink:0;
+  min-height:44px;padding:.75rem 1.2rem;border-radius:100px;
+  background:var(--gold);color:var(--ink);font-family:var(--fb);font-size:1rem;
+  font-weight:700;line-height:1.25;text-align:center;transition:background .2s;
+}
+.ticket-price-notice__cta:hover{background:#F85C34}
+.ticket-price-notice__cta:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+.ticket-price-notice__cta > span{flex-shrink:0}
+@media (max-width:900px){
+  .ticket-price-notice__inner{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:.65rem 1rem;max-width:580px;padding:.65rem 1rem}
+  .ticket-price-notice__message{grid-column:1/-1;margin:0;text-align:center}
+  .ticket-price-notice__title{font-size:1rem;line-height:1.25}
+  .ticket-price-notice__clock{justify-self:center;gap:.55rem}
+  .ticket-price-notice__unit{min-width:1.8rem}
+  .ticket-price-notice__value{font-size:1.3rem}
+  .ticket-price-notice__cta{font-size:.875rem;padding:.6rem .8rem;gap:.35rem}
+}
+@media (max-width:360px){
+  .ticket-price-notice__inner{column-gap:.65rem;padding-inline:.75rem}
+  .ticket-price-notice__clock{gap:.35rem}
+  .ticket-price-notice__unit{min-width:1.65rem}
+  .ticket-price-notice__cta{padding-inline:.5rem}
 }
