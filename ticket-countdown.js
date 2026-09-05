@@ -1,10 +1,11 @@
 /* Ticket-price countdown, rendered into #priceClockMount in the homepage hero.
-   Midnight at the start of Monday, September 14, 2026 in Miami is 04:00 UTC.
-   Update the deadline below for future changes. */
+   Prices increase at midnight at the end of Friday, September 11, 2026 in Miami
+   (00:00 Saturday, September 12, ET = 04:00 UTC). Update the deadline below
+   for future changes. */
 (function () {
   'use strict';
 
-  var deadline = Date.parse('2026-09-14T00:00:00-04:00');
+  var deadline = Date.parse('2026-09-12T00:00:00-04:00');
 
   function init() {
     var mount = document.getElementById('priceClockMount');
@@ -36,6 +37,8 @@
       if (seconds <= 0) {
         window.clearInterval(intervalId);
         document.removeEventListener('visibilitychange', onVisibilityChange);
+        window.removeEventListener('resize', syncSize);
+        if (anchorObserver) anchorObserver.disconnect();
         notice.remove();
         return false;
       }
@@ -52,20 +55,32 @@
       if (!document.hidden) update();
     }
 
-    // Match the width of the primary hero button so the box lines up beneath it.
+    // Match the primary hero button's size so the box sits flush in the row.
     var anchor = document.querySelector('.hero__ctas .btn');
-    function syncWidth() {
+    var buttons = Array.prototype.slice.call(document.querySelectorAll('.hero__ctas .btn'));
+    var anchorObserver;
+    function syncSize() {
       if (!anchor) return;
-      notice.style.minWidth = window.innerWidth > 600 ? Math.round(anchor.getBoundingClientRect().width) + 'px' : '';
+      // Desktop row: match the tallest button. Stacked phones: match the Summit Pass button.
+      var stacked = window.innerWidth <= 600;
+      var tallest = stacked ? anchor.getBoundingClientRect().height : buttons.reduce(function (max, btn) {
+        return Math.max(max, btn.getBoundingClientRect().height);
+      }, 0);
+      notice.style.minWidth = stacked ? '' : Math.round(anchor.getBoundingClientRect().width) + 'px';
+      notice.style.height = Math.round(tallest) + 'px';
     }
 
     if (update()) {
       mount.appendChild(notice);
-      syncWidth();
+      syncSize();
       intervalId = window.setInterval(update, 1000);
       document.addEventListener('visibilitychange', onVisibilityChange);
-      window.addEventListener('resize', syncWidth);
-      if (document.fonts && document.fonts.ready) document.fonts.ready.then(syncWidth);
+      window.addEventListener('resize', syncSize);
+      if (document.fonts && document.fonts.ready) document.fonts.ready.then(syncSize);
+      if (window.ResizeObserver && anchor) {
+        anchorObserver = new window.ResizeObserver(syncSize);
+        buttons.forEach(function (btn) { anchorObserver.observe(btn); });
+      }
     }
   }
 
