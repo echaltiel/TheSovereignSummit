@@ -6167,35 +6167,29 @@ body.menu-open{overflow:hidden}
 #content .speakers__grid:not(.speakers__grid--md) .speaker__portrait{height:auto;aspect-ratio:262/205}
 }
 
-/* v291: a restrained price-increase announcement beneath the navigation. */
-.ticket-price-notice{
-  background:rgba(19,30,51,.96);color:var(--cream);border-bottom:1px solid var(--line);
+/* v290: a clear price-increase notice beneath the sticky navigation. */
+
+/* v294 ticket price countdown, boxed, under the hero CTAs */
+.price-clock{
+  display:inline-flex;flex-direction:column;align-items:center;gap:.5rem;
+  margin:1.4rem 0 0;padding:.8rem 1.5rem .75rem;
+  border:1px solid rgba(255,105,65,.55);border-radius:14px;
+  background:rgba(10,43,85,.82);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
+  box-shadow:0 12px 34px rgba(0,0,0,.3);color:var(--cream);
 }
-.ticket-price-notice__inner{
-  max-width:1380px;min-height:42px;margin:0 auto;padding:.5rem clamp(1rem,2.5vw,2.5rem);
-  display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:.25rem .8rem;
+.price-clock__title{font-family:var(--fb);font-size:1rem;font-weight:700;line-height:1.25;letter-spacing:-.01em;color:var(--cream)}
+.price-clock__timer{display:inline-flex;align-items:flex-start;gap:.4rem}
+.price-clock__unit{display:flex;flex-direction:column;align-items:center;gap:.3rem;min-width:2.4rem}
+.price-clock__num{
+  font-family:var(--fm);font-size:1.75rem;font-weight:700;line-height:1;
+  font-variant-numeric:tabular-nums;letter-spacing:-.03em;color:var(--cream);
 }
-.ticket-price-notice__title{
-  margin:0;min-width:0;font-family:var(--fb);font-size:.875rem;font-weight:600;
-  line-height:1.35;letter-spacing:0;text-align:center;text-wrap:balance;
-}
-.ticket-price-notice__title time{white-space:nowrap}
-.ticket-price-notice__separator{color:var(--cream-50);line-height:1}
-.ticket-price-notice__clock{
-  display:inline-flex;align-items:baseline;gap:.55rem;flex-shrink:0;
-  font-family:var(--fm);font-size:.875rem;font-weight:500;line-height:1.35;
-  letter-spacing:0;white-space:nowrap;color:var(--gold);
-}
-.ticket-price-notice__unit{display:inline-flex;align-items:baseline}
-.ticket-price-notice__value{
-  display:inline-block;min-width:2ch;font-variant-numeric:tabular-nums;
-}
-.ticket-price-notice__unit-label{font:inherit}
-#content .ticket-price-cutoff{
-  margin:-.25rem auto 1rem;font-family:var(--fb);font-size:.875rem;
-  font-weight:400;line-height:1.5;text-align:center;color:var(--cream-72);
-}
+.price-clock__sep{font-family:var(--fm);font-size:1.75rem;font-weight:700;line-height:1;color:var(--cream-50)}
+.price-clock__lbl{font-family:var(--fm);font-size:.68rem;line-height:1;letter-spacing:.08em;color:var(--cream-72)}
+.price-clock--final-day .price-clock__unit[data-unit="days"],
+.price-clock--final-day .price-clock__unit[data-unit="days"] + .price-clock__sep{display:none}
 @media (max-width:600px){
-  .ticket-price-notice__inner{flex-direction:column;gap:.25rem;padding:.5rem 1rem}
-  .ticket-price-notice__separator{display:none}
+  .price-clock{display:flex;width:100%;margin-top:1.1rem;padding:.75rem 1rem .7rem;gap:.4rem}
+  .price-clock__title{font-size:.95rem}
 }
+
