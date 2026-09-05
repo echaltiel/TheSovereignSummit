@@ -6166,3 +6166,23 @@ body.menu-open{overflow:hidden}
 @media (max-width:520px){
 #content .speakers__grid:not(.speakers__grid--md) .speaker__portrait{height:auto;aspect-ratio:262/205}
 }
+
+/* v289: shared ticket countdown; retain the existing desktop/mobile visibility. */
+.btn.ticket-countdown{
+  flex-direction:column;gap:.25rem;line-height:1.2;
+}
+.nav__cta.ticket-countdown{
+  min-height:64px;padding:.65rem 1.4rem;
+}
+.ticket-countdown__label{
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+}
+.ticket-countdown__value{
+  font-family:var(--fm);font-size:.8125rem;font-weight:500;line-height:1.2;
+  font-variant-numeric:tabular-nums;letter-spacing:0;text-transform:none;
+  white-space:nowrap;
+}
+.ticket-countdown__deadline{
+  position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;
+  clip:rect(0,0,0,0);clip-path:inset(50%);white-space:nowrap;border:0;
+}
