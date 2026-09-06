@@ -6192,6 +6192,7 @@ body.menu-open{overflow:hidden}
   .price-clock{display:flex;width:100%;margin-top:1.1rem;padding:.75rem 1rem .7rem;gap:.4rem}
   .price-clock__title{font-size:.95rem}
 }
-/* v295 blurb: keep phrase segments intact so wrapping stacks on meaning */
-.hero__blurb .hb-a,.hero__blurb .hb-l{display:block}
-@media (max-width:600px){html body .hero__blurb{font-size:min(1.18rem,4.7vw)}}
+/* v295 blurb: two lines on wide viewports, three lines under 700px */
+.hero__blurb .hb-a,.hero__blurb .hb-l{display:inline}
+.hero__blurb .hb-l:last-child{display:block}
+@media (max-width:699px){.hero__blurb .hb-a,.hero__blurb .hb-l{display:block} html body .hero__blurb{font-size:min(1.18rem,4.7vw)}}
