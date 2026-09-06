@@ -115,6 +115,18 @@ body.menu-open{overflow:hidden}
 }
 .hero__bg{position:absolute;inset:0;z-index:0}
 .hero__bg img{width:100%;height:100%;object-fit:cover;object-position:center 32%;filter:saturate(.9)}
+/* Hero video: the separate still also covers no-JS and blocked autoplay. */
+.hero__bg > .hero__poster{position:absolute;inset:0;z-index:0;display:block}
+.hero__bg > .hero__poster img,
+.hero__bg > video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 32%}
+.hero__bg > video{z-index:0;filter:saturate(.9);opacity:0;pointer-events:none}
+.hero__bg > video.is-playing{opacity:1}
+.hero__bg > video::-webkit-media-controls,
+.hero__bg > video::-webkit-media-controls-start-playback-button{display:none!important;-webkit-appearance:none}
+@media (prefers-reduced-motion:reduce){
+  .hero__bg > video{display:none}
+  .hero__bg > .hero__poster{display:block}
+}
 .hero__scrim{
   position:absolute;inset:0;z-index:1;
   background:

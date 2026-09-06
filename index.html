@@ -38,7 +38,7 @@
 <link rel="preconnect" href="https://api.coingecko.com" crossorigin>
 <link rel="preconnect" href="https://api.fiscaldata.treasury.gov" crossorigin>
 <link rel="preconnect" href="https://api.eia.gov" crossorigin>
-<link rel="stylesheet" href="styles.css?v=295">
+<link rel="stylesheet" href="styles.css?v=296">
 <script>if(location.hash==='#leadership')location.replace('/team#leadership');</script>
 <style>
 /* Hero headline: single line, sized to fit at every width. */
@@ -274,10 +274,60 @@
 
 <section class="hero" id="top">
   <div class="hero__bg" aria-hidden="true">
-    <picture>
-      <source srcset="https://thesovereignsummit.com/images/fontainebleau.webp" type="image/webp">
-      <img src="https://thesovereignsummit.com/images/fontainebleau.jpg" alt="" width="988" height="556" fetchpriority="high" decoding="async">
+    <picture class="hero__poster">
+      <source srcset="/images/fontainebleau-hero-poster.webp" type="image/webp">
+      <img src="/images/fontainebleau-hero-poster.jpg" alt="" width="1264" height="720" fetchpriority="high" decoding="async">
     </picture>
+    <video autoplay muted loop playsinline preload="metadata" poster="/images/fontainebleau-hero-poster.jpg" aria-hidden="true">
+      <source src="/images/fontainebleau-hero.webm" type="video/webm">
+      <source src="/images/fontainebleau-hero.mp4" type="video/mp4">
+      <img src="/images/fontainebleau-hero-poster.jpg" alt="" width="1264" height="720">
+    </video>
+    <script>
+    (function () {
+      var hero = document.getElementById('top');
+      var video = hero.querySelector('video');
+      var motion = window.matchMedia('(prefers-reduced-motion: reduce)');
+      var visible = !('IntersectionObserver' in window);
+      var pending = false;
+      function showPoster() { video.classList.remove('is-playing'); }
+      function shouldPlay() { return visible && !document.hidden && !motion.matches; }
+      function syncPlayback() {
+        if (!shouldPlay()) { video.pause(); showPoster(); return; }
+        if (pending || !video.paused) return;
+        pending = true;
+        var play = video.play();
+        if (play && play.then) {
+          play.then(function () {
+            pending = false;
+            if (!shouldPlay()) { video.pause(); showPoster(); }
+          }).catch(function () { pending = false; showPoster(); });
+        } else { pending = false; }
+      }
+      // Keep the still visible until playback actually starts, including iOS Low Power Mode.
+      video.autoplay = false;
+      video.muted = true;
+      video.pause();
+      video.addEventListener('playing', function () {
+        if (shouldPlay()) video.classList.add('is-playing');
+        else { video.pause(); showPoster(); }
+      });
+      video.addEventListener('pause', showPoster);
+      video.addEventListener('error', showPoster);
+      if ('IntersectionObserver' in window) {
+        new IntersectionObserver(function (entries) {
+          visible = entries[0].isIntersecting;
+          syncPlayback();
+        }, { threshold: 0 }).observe(hero);
+      }
+      if (motion.addEventListener) motion.addEventListener('change', syncPlayback);
+      else motion.addListener(syncPlayback);
+      document.addEventListener('visibilitychange', syncPlayback);
+      window.addEventListener('pagehide', function () { video.pause(); showPoster(); });
+      window.addEventListener('pageshow', syncPlayback);
+      syncPlayback();
+    })();
+    </script>
   </div>
   <div class="hero__scrim" aria-hidden="true"></div>
   <div class="wrap hero__in">
