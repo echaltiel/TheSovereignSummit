@@ -292,14 +292,7 @@
       method:'POST',
       headers:{'Content-Type':'application/json'},
       body:JSON.stringify({email:email})
-    }).then(function(r){ if(!r.ok) throw new Error('api'); })
-    .catch(function(){
-      return fetch('https://formsubmit.co/ajax/info@thesovereignsummit.com',{
-        method:'POST',
-        headers:{'Content-Type':'application/json','Accept':'application/json'},
-        body:JSON.stringify({email:email,_subject:'New newsletter signup - thesovereignsummit.com'})
-      });
-    });
+    }).then(function(r){ if(!r.ok) throw new Error('subscribe'); });
   }
   document.querySelectorAll('.news__form').forEach(function(f){
     f.addEventListener('submit', function(e){
@@ -311,6 +304,8 @@
         if(inp) inp.value='';
         if(btn){ btn.textContent='Subscribed \u2713'; }
         try{ localStorage.setItem(DONE,'1'); }catch(err){}
+      }).catch(function(){
+        if(btn){ btn.disabled=false; btn.textContent='Try again \u2192'; }
       });
     });
   });
