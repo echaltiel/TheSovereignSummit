@@ -981,6 +981,23 @@ body{overflow-x:clip}
   #content .sp-hero__actions .sp-btn{min-height:64px;padding:1.12rem 1.9rem;font-size:.84rem;letter-spacing:.11em}
   #content .sp-hero__top{justify-content:space-between;grid-template-columns:minmax(0,640px) minmax(400px,440px)}
 }
+
+/* Package rail floating arrow (mobile/tablet carousel only) */
+#content .sp-package-rail{position:relative}
+#content .sp-rail-next-wrap{display:none}
+@media(max-width:1080px){
+  #content .sp-rail-next-wrap{display:block;position:absolute;top:0;right:-8px;bottom:1rem;width:40px;padding-top:150px;pointer-events:none;z-index:3}
+  #content .sp-rail-next{position:sticky;top:calc(50vh - 20px);display:flex;align-items:center;justify-content:center;width:40px;height:40px;margin:0;padding:0;border:1px solid rgba(244,236,224,.42);border-radius:50%;background:rgba(10,18,36,.86);color:var(--cream,#F4ECE0);box-shadow:0 6px 18px rgba(0,0,0,.35);cursor:pointer;pointer-events:auto;-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);transition:opacity .25s ease,visibility .25s ease;animation:sp-rail-nudge 1.6s ease-in-out 1.2s 3}
+  #content .sp-rail-next svg{width:20px;height:20px}
+  #content .sp-rail-next:active{background:rgba(10,18,36,.98)}
+  #content .sp-package-rail.is-end .sp-rail-next,#content .sp-package-rail.is-touched .sp-rail-next{animation:none}
+  #content .sp-package-rail.is-end .sp-rail-next{opacity:0;visibility:hidden;pointer-events:none}
+}
+@media(max-width:1160px) and (min-width:1081px){
+  #content .sp-rail-next-wrap{display:none}
+}
+@keyframes sp-rail-nudge{0%,100%{transform:translateX(0)}50%{transform:translateX(-6px)}}
+@media(prefers-reduced-motion:reduce){#content .sp-rail-next{animation:none}}
 </style>
 <style id="menu-compact">
 .mobile-menu__link{padding-top:clamp(.5rem,1.4vh,1rem) !important;padding-bottom:clamp(.5rem,1.4vh,1rem) !important;font-size:clamp(.88rem,2.2vh,1.05rem) !important}
@@ -1125,6 +1142,7 @@ body{overflow-x:clip}
 
     <p class="sp-swipe-hint" aria-hidden="true">Swipe to compare packages →</p>
 
+    <div class="sp-package-rail">
     <div class="sp-package-grid" id="package-grid" role="region" aria-label="Core sponsorship package comparison" tabindex="0">
       <!-- Title -->
       <article class="sp-package sp-package--title" id="title-package">
@@ -1302,6 +1320,12 @@ body{overflow-x:clip}
         </div>
       </article>
     </div>
+    <div class="sp-rail-next-wrap" aria-hidden="true">
+      <button class="sp-rail-next" type="button" id="package-rail-next" aria-label="Next package" tabindex="-1">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 6 6 6-6 6"/></svg>
+      </button>
+    </div>
+    </div>
 
     <p class="sp-disclaimer">Custom builds, freight, venue labor, and specialty production are quoted separately.</p>
   </div>
@@ -1328,13 +1352,6 @@ body{overflow-x:clip}
             </span>
             <span class="sp-activation__body"><strong>Livestream &amp; Media</strong><small>Every Main Stage broadcast</small></span>
             <span class="sp-activation__price">$15,000</span>
-          </a>
-          <a class="sp-activation sp-select" href="#inquire" data-interest="Featured Partnership Only" data-item="Workshop Track — $10,000">
-            <span class="sp-activation__icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H4z"/><path d="M8 20h8"/><path d="M12 16v4"/><path d="M8 9h8"/><path d="M8 12h5"/></svg>
-            </span>
-            <span class="sp-activation__body"><strong>Workshop Track</strong><small>2 tracks available</small></span>
-            <span class="sp-activation__price">$10,000</span>
           </a>
           <a class="sp-activation sp-select" href="#inquire" data-interest="Featured Partnership Only" data-item="Sovereign Lounge — $15,000 + build costs">
             <span class="sp-activation__icon sp-activation__icon--silver">
@@ -1668,6 +1685,33 @@ body{overflow-x:clip}
     window.scrollTo({top:top,behavior:behavior});
     if(history.replaceState)history.replaceState(null,'','#package-grid');
   });
+})();
+</script>
+
+<script>
+(function(){
+  var grid=document.getElementById('package-grid');
+  var btn=document.getElementById('package-rail-next');
+  var rail=grid&&grid.closest('.sp-package-rail');
+  if(!grid||!btn||!rail)return;
+  function step(){
+    var card=grid.querySelector('.sp-package');
+    var gap=parseFloat(getComputedStyle(grid).columnGap)||0;
+    return card?card.getBoundingClientRect().width+gap:grid.clientWidth;
+  }
+  function update(){
+    var atEnd=grid.scrollLeft>=grid.scrollWidth-grid.clientWidth-8;
+    rail.classList.toggle('is-end',atEnd);
+    if(grid.scrollLeft>8)rail.classList.add('is-touched');
+  }
+  btn.addEventListener('click',function(){
+    rail.classList.add('is-touched');
+    var behavior=window.matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth';
+    grid.scrollBy({left:step(),behavior:behavior});
+  });
+  grid.addEventListener('scroll',update,{passive:true});
+  window.addEventListener('resize',update);
+  update();
 })();
 </script>
 
