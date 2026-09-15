@@ -64,12 +64,13 @@
    the longest line (21.5em in Archivo 800) always fits on one line. Learn more sits under it in coral. */
 .hero__blurb .hb-a,.hero__blurb .hb-l{white-space:nowrap}
 @media (min-width:1025px){
-  html body .hero__blurb{font-size:min(clamp(1.38rem,1.78vw,1.66rem),calc((min(100vw,1360px) - 4rem) / 39.7))!important}
+  html body .hero__blurb{font-size:min(clamp(1.38rem,1.78vw,1.66rem),calc((min(100vw,1360px) - 4rem) / 40.6))!important}
 }
 @media (max-width:1024px){
   .hero__blurb .hb-a,.hero__blurb .hb-l{display:block}
   html body .hero__blurb{max-width:none;font-size:min(1.38rem,calc((100vw - 2*clamp(1.25rem,4vw,2rem)) / 21.8))!important}
 }
+.hero__blurb .hb-l:first-child{display:inline-block;padding:.06em .42em;margin:0 -.1em;border-radius:.35em;background:var(--gold-soft);color:var(--cream)}
 .hero__blurb a{color:var(--gold);transition:color .2s}
 .hero__blurb a:hover{color:var(--gold-deep)}
 /* The agenda pages pad #content by the header height at certain window sizes.
