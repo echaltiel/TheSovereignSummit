@@ -139,6 +139,30 @@
   .hero__ctas .btn{padding:.7rem 1rem;font-size:.93rem}
 }
 @media (max-width:699px){.hero .hero__ctas .btn--room{font-size:min(1.16rem,calc((100vw - 148px) / 16.4))!important}}
+/* Blurb rhythm: three statement lines on an even beat, highlight pill with
+   breathing room and its text flush with the left edge, mission link set
+   apart as its own action. Spacing only; copy, sizes and breaks unchanged. */
+.hero .hero__blurb .hb-l:first-child{padding:.17em .5em}
+.hero .hero__blurb a{display:inline-block;margin-top:.6em;padding:.2em 0}
+@media (max-width:1024px){
+  html body .hero .hero__blurb{line-height:1.3!important}
+  .hero .hero__blurb .hb-a{margin-bottom:.5em}
+  .hero .hero__blurb .hb-l:first-child{margin:0 0 .5em -.5em}
+  .hero .hero__blurb a{margin-top:.95em}
+}
+@media (max-width:699px){
+  .hero .hero__blurb{margin-top:1.7rem}
+  .hero .hero__ctas{margin-top:1.7rem}
+}
+@media (max-width:440px) and (max-height:720px){
+  .hero .hero__blurb{margin-top:1rem!important}
+  .hero .hero__blurb .hb-a,.hero .hero__blurb .hb-l:first-child{margin-bottom:.38em}
+  .hero .hero__blurb a{margin-top:.6em}
+}
+@media (min-width:1025px) and (max-height:680px){
+  .hero .hero__blurb .hb-l:first-child{padding:.06em .5em}
+  .hero .hero__blurb a{margin-top:.15em;padding:0}
+}
 /* Countdown box in the CTA row: right of the hotel button when it fits,
    otherwise it wraps under the Summit Pass button. Keeps the marquee above
    the fold on laptop-height windows. */
