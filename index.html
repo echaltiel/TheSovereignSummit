@@ -204,6 +204,17 @@
   .hero .hero__blurb a::after{content:"";position:absolute;inset:0;border-radius:inherit}
   html body .hero .hero__blurb:active{background:rgba(8,15,32,.45);border-color:rgba(244,236,224,.22)}
 }
+/* Phones and tablets: headline, venue and date share the left edge of the text
+   inside the blurb card (card padding + 1px border), not the card's outer edge. */
+@media (max-width:1024px){
+  .hero__in{--card-inset:calc(min(1.38rem,(100vw - 2*clamp(1.25rem,4vw,2rem)) / 23.3) * .7 + 1px)}
+  .hero h1,.hero .hero__kicker{padding-left:var(--card-inset)}
+}
+/* optical: the big O carries ~2px of side bearing the small text does not */
+@media (max-width:699px){.hero__line1{margin-left:-.03em}}
+@media (min-width:700px) and (max-width:1024px){
+  .hero__in{--card-inset:calc(min(1.38rem,(100vw - 2*clamp(1.25rem,4vw,2rem)) / 23.3) * .9 + 1px)}
+}
 /* Countdown box in the CTA row: right of the hotel button when it fits,
    otherwise it wraps under the Summit Pass button. Keeps the marquee above
    the fold on laptop-height windows. */
