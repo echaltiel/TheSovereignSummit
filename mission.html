@@ -54,6 +54,26 @@
 .mobile-menu__cta{margin-top:.4rem !important;padding-top:.55rem !important;padding-bottom:.55rem !important}
 }
 </style>
+<style id="mission-title">
+/* Page title: same treatment as .sec-hd__num on Speakers, Leadership, Venue.
+   This is the page's real h1 (was screen-reader only). Coral rule carries over
+   the old eyebrow dash and separates the title from the statement. */
+#content .mission .msx-ptitle{
+  display:block;font-family:var(--fb);font-weight:800;text-transform:uppercase;
+  font-size:clamp(2.75rem,3.9vw,3.4rem);line-height:1;letter-spacing:-.01em;
+  color:var(--msx-paper);margin:0 0 1.35rem;
+}
+#content .mission .msx-ptitle::after{content:"";display:block;width:44px;height:3px;margin-top:1.1rem;background:var(--msx-orange)}
+/* Connective words step back, like the two-tone subtitles elsewhere */
+#content .mission .msx-hero .msx-mlock__lead{color:rgba(244,236,224,.72);font-size:clamp(1.02rem,1.3vw,1.25rem);margin-bottom:.75rem}
+#content .mission .msx-hero .msx-mlock__lead--mid{margin:1.05rem 0 .55rem}
+@media (max-width:900px){
+  #content .mission .msx-grid--hero>div:first-child{padding-top:.3rem!important}
+}
+@media (max-width:340px){
+  #content .mission .msx-ptitle{font-size:2.4rem}
+}
+</style>
 </head>
 <body>
 <div class="header" id="siteHeader">
@@ -135,13 +155,11 @@
 <main id="content">
 
   <section class="about mission">
-    <h1 class="msx-sr">Our Mission</h1>
-
     <!-- 01 · Hero -->
     <div class="msx-band msx-hero">
       <div class="container msx-grid msx-grid--hero">
         <div>
-          <div class="msx-eyebrow">Our Mission <span class="msx-eyebrow__dash"></span></div>
+          <h1 class="msx-ptitle">Our Mission</h1>
           <div class="msx-mlock">
             <span class="msx-mlock__lead">To foster</span>
             <span class="msx-mlock__chip">Meaningful Conversations</span>
