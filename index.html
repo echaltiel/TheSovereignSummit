@@ -53,13 +53,18 @@
    the share of full size the window height allows (1px = full size). The
    hero's top and bottom padding (--pad) takes whatever is left, so the pieces
    always add up to the window. Layouts by size:
-   - 700px wide and up: four cards in a row. Pictures drop out under 640px of
-     height. The marquee joins the first screen from 924px of height.
-   - Under 700px wide: pillars become a 2 x 2 grid of text. Their captions
-     show only when the screen is taller than 640px, and the headline runs on
-     one line unless the screen is tall enough for two.
+   - 700px wide and up: the two pitch lines share one line. Four cards in a
+     row, with pictures from 640px of height. The marquee joins the first
+     screen from 924px of height.
+   - Under 700px wide (phones): the pillars are four rows, each title beside
+     its two caption lines, on screens taller than 700px (770px with the ticket
+     countdown) and about 370px wide or more; otherwise a 2 x 2 grid of
+     titles. The headline runs on one line unless the screen is tall enough
+     for two.
    - Short and wide (over 600px wide, 574px tall or less): one compact hero
-     block and a row of pillar titles. */
+     block and a row of pillar titles.
+   The photo is darkest behind the text. On wide screens it brightens past the
+   right edge of the text; on phones it stays dark. */
 #content{padding-top:0 !important}
 :root{--vh8:100vh;--mq8:calc(1.848rem + 32px)} /* --mq8: height of the marquee strip (one 1.12rem line at 1.65, 30px padding, 2px border) */
 @supports (height:100svh){:root{--vh8:100svh}}
@@ -75,9 +80,11 @@
   --mqIn:0px;                                   /* marquee height counted inside the first screen */
   --room:calc(var(--vh8) - var(--header-h) - var(--mqIn));
   min-height:calc(var(--vh8) + var(--mq8) - var(--mqIn));
-  --n:860;                                      /* full-size heights of this layout, added up */
+  --n:840;                                      /* full-size heights of this layout, added up */
   --k:0px;                                      /* height set aside for a countdown row, when one shows */
   --sbw:0px;                                    /* width a classic scrollbar takes out of 100vw */
+  --gut:clamp(1.25rem,4vw,2rem);                /* side gutter of .wrap */
+  --col:calc(min(100vw - var(--sbw),var(--max)) - 2 * var(--gut));   /* width of the text column */
   --u:calc((var(--room) - var(--k)) / var(--n));
   /* hero */
   --f-title:min(calc((min(100vw,var(--max)) - 4rem) / 10.4),max(2.2rem,min(clamp(2.9rem,7.6vw,6.2rem),calc(var(--u) * 99.2))));
@@ -85,18 +92,22 @@
   --f-date:max(.8rem,min(clamp(.94rem,1.45vw,1.31rem),calc(var(--u) * 21)));
   --g-where:max(5px,min(14px,calc(var(--u) * 14)));
   --g-date:0px;
-  --g-pitch:max(.5rem,min(clamp(1.25rem,2vw,1.5rem),calc(var(--u) * 24)));
-  --f-lead:max(1rem,min(clamp(1.19rem,1.55vw,1.4rem),calc(var(--u) * 22.4)));
-  --g-pill:max(3px,min(8px,calc(var(--u) * 8)));
-  --f-pill:max(1.15rem,min(clamp(1.44rem,1.95vw,1.75rem),calc(var(--u) * 28)));
-  --g-ctas:max(.6rem,min(clamp(1.6rem,2.4vw,1.9rem),calc(var(--u) * 30.4)));
-  --h-btn:max(2.75rem,min(4.125rem,calc(var(--u) * 66)));
+  --g-pitch:max(.6rem,min(clamp(1.3rem,2vw,1.75rem),calc(var(--u) * 28)));
+  /* the two pitch lines share one line, same size: it runs 33.6em wide */
+  --f-pitch:min(calc(var(--col) / 34.4),max(1.06rem,min(1.75rem,calc(var(--u) * 30))));
+  --f-lead:var(--f-pitch);
+  --g-pill:0px;
+  --f-pill:var(--f-pitch);
+  --g-ctas:max(.75rem,min(clamp(1.75rem,2.6vw,2.125rem),calc(var(--u) * 34)));
+  --h-btn:max(2.875rem,min(4.5rem,calc(var(--u) * 74)));
   --h-btn2:var(--h-btn);
   --g-btn:14px;
-  --f-btn:max(1.03rem,min(1.28rem,calc(var(--u) * 20.5)));
-  --f-btn2:max(.94rem,min(1.09rem,calc(var(--u) * 17.4)));
+  --f-btn:min(2.6vw,max(1.125rem,min(1.375rem,calc(var(--u) * 25))));
+  --f-btn2:calc(var(--f-btn) * .92);
+  --px-btn:max(28px,min(46px,calc(var(--u) * 46)));
+  --px-btn2:max(22px,min(36px,calc(var(--u) * 36)));
   --h-clock:0px;                                /* extra row when the ticket countdown shows */
-  --h-hero:calc(var(--f-title) * 1.589 + var(--g-where) + var(--g-pitch) + var(--f-lead) * 1.4 + var(--g-pill) + var(--f-pill) * 1.66 + var(--g-ctas) + var(--h-btn) + var(--h-clock));
+  --h-hero:calc(var(--f-title) * 1.589 + var(--g-where) + var(--g-pitch) + var(--f-pitch) * 1.66 + var(--g-ctas) + var(--h-btn) + var(--h-clock));
   /* pillars */
   --c-pt:max(.6rem,min(1.65rem,calc(var(--u) * 26.4)));
   --h-label:1.053rem;
@@ -115,6 +126,8 @@
   --h-cards:calc(var(--c-pt) + var(--h-label) + var(--g-label) + var(--h-card) + var(--c-pb) + 1px);
   /* whatever height is left goes to the hero's top and bottom padding */
   --pad:max(.5rem,min(3rem,calc((var(--room) - var(--h-hero) - var(--h-cards)) / 2)));
+  /* right edge of the text, for the scrim: the wider of the headline and the pitch line */
+  --tx-r:calc(max(0px,(100vw - var(--sbw) - var(--max)) / 2) + var(--gut) + max(var(--f-title) * 10.3,var(--f-pitch) * 33.6));
 }
 /* Mouse-driven screens can have a scrollbar that takes width: leave room for one. */
 @media (hover:hover) and (pointer:fine){
@@ -126,18 +139,20 @@
 }
 /* Under 640px of height the pictures leave and the cards become text. */
 @media (min-width:700px) and (max-height:639.98px){
-  .fold8{--n:682;--g-art:0px;--h-art:0px;--cap-pt:8px}
+  .fold8{--n:662;--g-art:0px;--h-art:0px;--cap-pt:8px}
   .f8__art{display:none}
 }
 /* 700 to 1023px wide: the four cards are narrower, so captions run longer. */
 @media (min-width:700px) and (max-width:1023.98px){
   .fold8{
-    --n:805;
+    --n:785;
     --f-ct:min(1.9vw,max(.8rem,min(1rem,calc(var(--u) * 16))));
     --h-art:max(0px,min(130px,calc(var(--u) * 130)));
     --f-cap:.75rem;
     --h-cap:calc(.75rem * 1.4 * var(--cap-lines) + var(--cap-pt) + var(--cap-pb));
     --cap-lines:3;
+    --px-btn:max(24px,min(40px,calc(var(--u) * 40)));
+    --px-btn2:max(20px,min(30px,calc(var(--u) * 30)));
   }
 }
 @media (min-width:700px) and (max-width:744.98px){
@@ -147,7 +162,7 @@
   .fold8{--cap-lines:2}
 }
 @media (min-width:700px) and (max-width:1023.98px) and (max-height:639.98px){
-  .fold8{--n:690;--h-art:0px}
+  .fold8{--n:670;--h-art:0px}
 }
 
 /* ---- Hero ---- */
@@ -156,11 +171,12 @@
 .h8 .hero__bg img,.h8 .hero__bg > video{filter:none}
 .h8 .hero__bg > .hero__poster img,.h8 .hero__bg > video{object-position:center 22%}
 @media (min-width:2200px){.h8 .hero__bg > .hero__poster img,.h8 .hero__bg > video{object-position:center 40%}}
-/* Flat tint behind the sticky header, then the scrim proper below it. */
+/* Flat tint behind the sticky header, then the scrim proper below it: dark
+   behind the text, brightening from the right edge of the text. */
 .h8::before{content:"";position:absolute;left:0;right:0;top:0;height:var(--header-h);z-index:1;background:rgba(19,30,51,.6)}
 .h8__scrim{position:absolute;left:0;right:0;bottom:0;top:var(--header-h);z-index:1;background:
-  linear-gradient(90deg,rgba(19,30,51,.93) 0%,rgba(19,30,51,.82) 38%,rgba(19,30,51,.2) 100%),
-  linear-gradient(180deg,rgba(19,30,51,.6) 0%,rgba(19,30,51,.5) 28%,rgba(19,30,51,.1) 46%,rgba(19,30,51,.1) 84%,rgba(0,24,57,.55) 100%)}
+  linear-gradient(90deg,rgba(19,30,51,.9) 0,rgba(19,30,51,.87) calc(var(--tx-r) + 1.5vw),rgba(19,30,51,.55) calc(var(--tx-r) + 12vw),rgba(19,30,51,.2) calc(var(--tx-r) + 30vw)),
+  linear-gradient(180deg,rgba(19,30,51,.35) 0%,rgba(19,30,51,0) 34%,rgba(19,30,51,0) 72%,rgba(0,24,57,.5) 100%)}
 .h8__in{position:relative;z-index:2}
 
 .h8__title{margin:0;font-family:var(--fb);font-weight:800;font-size:var(--f-title);line-height:.98;letter-spacing:-.02em;text-transform:uppercase;color:var(--cream)}
@@ -169,14 +185,15 @@
 .h8__venue{font-family:var(--fd);font-weight:400;font-size:var(--f-venue);line-height:1.05;letter-spacing:0;text-transform:none;white-space:nowrap;color:var(--gold);text-shadow:0 1px 2px rgba(4,10,24,.55),0 2px 18px rgba(4,10,24,.6)}
 .h8__date{font-family:var(--fm);font-weight:700;font-size:var(--f-date);line-height:1.2;letter-spacing:.18em;white-space:nowrap;color:rgba(244,236,224,.94);text-shadow:0 1px 8px rgba(19,30,51,.9)}
 
-.h8__pitch{margin:var(--g-pitch) 0 0}
-.h8__lead{display:block;font-family:var(--fb);font-weight:500;font-size:var(--f-lead);line-height:1.4;color:rgba(244,236,224,.93);text-shadow:0 1px 14px rgba(4,10,24,.8);text-wrap:balance}
-.h8__pill{display:inline-block;margin-top:var(--g-pill);padding:.16em .5em .2em;border-radius:.35em;background:rgba(255,105,65,.24);font-family:var(--fb);font-weight:800;font-size:var(--f-pill);line-height:1.3;letter-spacing:-.02em;color:var(--cream)}
+/* One line on wide screens: the lead, then the highlighted line, same size. */
+.h8__pitch{display:flex;flex-wrap:nowrap;align-items:baseline;column-gap:.55em;margin:var(--g-pitch) 0 0;font-size:var(--f-pitch)}
+.h8__lead{display:block;flex:none;font-family:var(--fb);font-weight:600;font-size:var(--f-lead);line-height:1.4;white-space:nowrap;color:rgba(244,236,224,.96);text-shadow:0 1px 14px rgba(4,10,24,.8)}
+.h8__pill{display:inline-block;flex:none;margin-top:var(--g-pill);padding:.16em .5em .2em;border-radius:.35em;background:rgba(255,105,65,.24);font-family:var(--fb);font-weight:800;font-size:var(--f-pill);line-height:1.3;letter-spacing:-.02em;white-space:nowrap;color:var(--cream)}
 
 .h8 .hero__ctas{display:flex;flex-wrap:wrap;align-items:center;gap:var(--g-btn) 16px;margin:var(--g-ctas) 0 0 !important}
-.h8 .hero__ctas .btn{width:auto;min-height:var(--h-btn);padding:0 36px;font-size:var(--f-btn);border-radius:999px;box-shadow:0 10px 34px rgba(255,105,65,.32);transition:transform .18s ease,box-shadow .18s ease,background .18s ease,border-color .18s ease}
+.h8 .hero__ctas .btn{width:auto;min-height:var(--h-btn);padding:0 var(--px-btn);font-size:var(--f-btn);border-radius:999px;box-shadow:0 10px 34px rgba(255,105,65,.32);transition:transform .18s ease,box-shadow .18s ease,background .18s ease,border-color .18s ease}
 .h8 .hero__ctas .btn:hover{transform:translateY(-2px);box-shadow:0 16px 44px rgba(255,105,65,.45)}
-.h8 .hero__ctas .h8__stay{min-height:var(--h-btn2);padding:0 26px;font-size:var(--f-btn2);font-weight:600;color:var(--cream);background:rgba(0,24,57,.55);border:1px solid rgba(244,236,224,.6);box-shadow:none}
+.h8 .hero__ctas .h8__stay{min-height:var(--h-btn2);padding:0 var(--px-btn2);font-size:var(--f-btn2);font-weight:600;color:var(--cream);background:rgba(0,24,57,.55);border:1px solid rgba(244,236,224,.6);box-shadow:none}
 .h8 .hero__ctas .h8__stay:hover{background:rgba(0,24,57,.75);border-color:var(--cream);box-shadow:none}
 
 /* Countdown box (ticket-countdown.js) keeps its place in the button row. Its
@@ -188,9 +205,10 @@
 .hero__ctas .price-clock__unit{gap:.12rem}
 .hero__ctas .price-clock__num,.hero__ctas .price-clock__sep{font-size:max(1.1rem,min(1.4rem,calc(var(--u) * 22.4)))}
 .hero__ctas .price-clock__lbl{font-size:max(.54rem,min(.68rem,calc(var(--u) * 10.9)))}
-/* 1024px wide and up it sits beside the buttons, so they never go shorter than it. */
-@media (min-width:1024px){
-  .fold8:has(.price-clock){--h-btn:max(3.25rem,min(4.125rem,calc(var(--u) * 66)))}
+/* 1024px wide and up it sits beside the buttons: the buttons never go shorter
+   than it, and stay small enough for the three to share one row. */
+@media (min-width:1024px) and (min-height:575px){
+  .fold8:has(.price-clock){--h-btn:max(3.25rem,min(4.5rem,calc(var(--u) * 74)));--f-btn:max(1.06rem,min(1.2rem,calc(var(--u) * 22.5)));--px-btn:max(28px,min(36px,calc(var(--u) * 46)));--px-btn2:max(22px,min(28px,calc(var(--u) * 36)))}
 }
 /* 700 to 1023px wide it wraps under the buttons: count that row. */
 @media (min-width:700px) and (max-width:1023.98px){
@@ -198,7 +216,7 @@
 }
 /* ...and the pictures need 80px more height before they show. */
 @media (min-width:700px) and (max-width:1023.98px) and (min-height:575px) and (max-height:719.98px){
-  .fold8:has(.price-clock){--n:690;--g-art:0px;--h-art:0px;--cap-pt:8px}
+  .fold8:has(.price-clock){--n:700;--g-art:0px;--h-art:0px;--cap-pt:8px}
   .fold8:has(.price-clock) .f8__art{display:none}
 }
 
@@ -234,51 +252,63 @@
   .f8__card--energy .f8__art img{object-position:50% 34%}
 }
 
-/* ---- Under 700px wide ----
+/* ---- Phones: under 700px wide (except short-and-wide windows, below) ----
    Headline on one line when space is tight, two when there is room. Venue over
-   date, full-width buttons, and the pillars as a 2 x 2 grid of text. The text
-   runs the full width here, so the scrim darkens top to bottom. */
-@media (max-width:699.98px){
+   date, the lead over the highlighted line, full-width buttons. The text runs
+   the full width here, so the whole photo stays dark.
+   Spacing comes in three groups (name and place; the pitch; the buttons), with
+   more room between groups than inside them. */
+@media (max-width:600px),(max-width:699.98px) and (min-height:575px){
   .fold8{
     --mqIn:0px;
-    --gut:clamp(1.25rem,4vw,2rem);                        /* side gutter of .wrap */
-    --col:calc(100vw - var(--sbw) - 2 * var(--gut));      /* width of the text column */
-    --t1:calc(var(--col) / 10.75);                        /* largest headline that fits on one line (it runs 10.32em wide) */
-    /* pillars first: their height is fixed, the hero gets the rest.
-       Captions join only when the screen is taller than --cap-at; done with
-       lengths, not a height query, so it cannot flip when a phone's toolbar
-       slides away. */
-    --cap-fs:.72rem;--cap-lh:1.32;--cap-n:4;              /* caption type, and how many lines it runs to at this width */
-    --cap-at:9999px;                                      /* captions show on screens taller than this (never under 340px wide) */
+    --t1:calc(var(--col) / 10.75);                        /* largest headline that fits on one line (it runs about 10.3em wide) */
+    /* Pillars first: their heights never depend on --u, the hero gets the
+       rest. Captions show (as rows) only on screens taller than --cap-at and
+       wide enough for each caption line to fit at 11.5px or more. Both are
+       done with lengths, not media queries, so nothing flips when a phone's
+       toolbar slides away. */
+    --pu:calc((var(--vh8) - 560px) / 240);                /* 0px at 560px tall, 1px at 800px */
+    --f-ct:max(.75rem,min(.82rem,calc(var(--col) / 29))); /* pillar titles */
+    --tcol:calc(var(--f-ct) * 7.7);                       /* title column: "AND BEYOND" runs 7.58em */
+    --px:clamp(11px,3.5vw,15px);                          /* card side padding */
+    --gx:clamp(10px,3.5vw,16px);                          /* space between title and caption */
+    --cap-fs:min(.8125rem,calc((var(--col) - 2px - 2 * var(--px) - var(--tcol) - var(--gx)) / 16.9));  /* longest caption line: 16.1em, plus 5% */
+    --cap-lh:1.32;
+    --cap-at:700px;
+    --cap-on:max(0px,min(calc((var(--vh8) - var(--cap-at)) * 9999),calc((var(--cap-fs) - 11.5px) * 9999)));
     --lab-at:540px;                                       /* the "On stage" label shows on screens taller than this */
-    --cap-h:calc(var(--cap-fs) * var(--cap-lh) * var(--cap-n));
-    --cap-on:max(0px,calc((var(--vh8) - var(--cap-at)) * 9999));
     --lab-on:max(0px,calc((var(--vh8) - var(--lab-at)) * 9999));
-    --h-cap:min(calc(var(--cap-h) + 5px),var(--cap-on));
-    --f-ct:min(.8rem,4vw);
-    --h-card:calc(var(--f-ct) + 24px + var(--h-cap));
+    --py:max(8px,min(10px,calc(var(--pu) * 10)));        /* card top and bottom padding */
+    --sec-pt:max(12px,min(18px,calc(var(--pu) * 18)));
+    --sec-pb:max(10px,min(14px,calc(var(--pu) * 14)));
     --h-label:min(.975rem,var(--lab-on));
-    --g-label:min(6px,var(--lab-on));
-    --h-cards:calc(var(--h-label) + var(--g-label) + 2 * var(--h-card) + 29px);
-    --n:350.6;
+    --g-label:min(max(6px,min(10px,calc(var(--pu) * 10))),var(--lab-on));
+    --h-title:calc(var(--f-ct) + 7px);                    /* title and the 7px under it (the 2px rule sits inside that) */
+    --h-cards-rows:calc(var(--sec-pt) + var(--h-label) + var(--g-label) + 2px + 4 * (2 * var(--py) + max(var(--h-title),2 * var(--cap-fs) * var(--cap-lh))) + 3px + var(--sec-pb) + 1px);
+    --h-cards-sq:calc(var(--sec-pt) + var(--h-label) + var(--g-label) + 2 * (2 * var(--py) + var(--h-title) + 2px) + 6px + var(--sec-pb) + 1px);
+    --h-cards:max(var(--h-cards-sq),min(var(--h-cards-rows),var(--cap-on)));
+    /* hero */
+    --n:363.4;
     --u:calc((var(--room) - var(--h-cards) - var(--t1) * 1.02 - var(--k)) / var(--n));
-    --g-where:max(4px,min(10px,calc(var(--u) * 10)));
+    /* gaps shrink faster than type as the screen gets shorter: at 40% of full size they are at their floors */
+    --g-where:max(4px,min(12px,calc((var(--u) - .4px) * 20)));
     --f-venue:min(calc(var(--col) / 10),max(1.15rem,min(1.6rem,calc(var(--u) * 25.6))));
     --g-date:max(3px,min(6px,calc(var(--u) * 6)));
     --f-date:max(.75rem,min(.84rem,calc(var(--u) * 13.44)));
-    --g-pitch:max(7px,min(18px,calc(var(--u) * 18)));
-    --f-lead:min(calc(var(--col) / 19.3),max(.875rem,min(1.09rem,calc(var(--u) * 17.44))));
-    --g-pill:max(3px,min(8px,calc(var(--u) * 8)));
+    --g-pitch:max(7px,min(28px,calc((var(--u) - .4px) * 46.67)));
+    --f-lead:min(calc(var(--col) / 19.7),max(.875rem,min(1.125rem,calc(var(--u) * 18))));
+    --g-pill:max(3px,min(10px,calc((var(--u) - .4px) * 16.67)));
     --f-pill:min(calc(var(--col) / 14.6),max(1rem,min(1.25rem,calc(var(--u) * 20))));
-    --g-ctas:max(8px,min(22px,calc(var(--u) * 22)));
-    --h-btn:max(2.75rem,min(3.75rem,calc(var(--u) * 60)));
-    --g-btn:max(6px,min(10px,calc(var(--u) * 10)));
-    --h-btn2:max(2.625rem,min(3.5rem,calc(var(--u) * 56)));
+    --g-ctas:max(8px,min(30px,calc((var(--u) - .4px) * 50)));
+    --h-btn:max(2.75rem,min(3.25rem,calc(var(--u) * 52)));
+    --g-btn:max(6px,min(12px,calc((var(--u) - .4px) * 20)));
+    --h-btn2:max(2.625rem,min(3rem,calc(var(--u) * 48)));
     --h-row2:calc(var(--g-btn) + var(--h-btn2));          /* second button, stacked */
-    --f-btn:min(5.3vw,max(1rem,min(1.22rem,calc(var(--u) * 19.5))));
+    --h-cbox:max(3.4rem,var(--h-btn),calc(var(--u) * 60)); /* countdown box, when it shows */
+    --f-btn:min(5.3vw,max(1rem,min(1.2rem,calc(var(--u) * 19.2))));
     --f-btn2:min(4.6vw,max(.94rem,min(1.06rem,calc(var(--u) * 17))));
     --h-rest:calc(var(--g-where) + var(--f-venue) * 1.05 + var(--g-date) + var(--f-date) * 1.2 + var(--g-pitch) + var(--f-lead) * 1.4 + var(--g-pill) + var(--f-pill) * 1.66 + var(--g-ctas) + var(--h-btn) + var(--h-row2) + var(--h-clock));
-    --pad:max(6px,min(30px,calc((var(--room) - var(--h-cards) - var(--t1) * 1.02 - var(--h-rest)) / 2)));
+    --pad:max(6px,min(32px,calc((var(--room) - var(--h-cards) - var(--t1) * 1.02 - var(--h-rest)) / 2)));
     /* the headline takes what is left: one line, or two when two fit */
     --t-left:calc(var(--room) - var(--h-cards) - var(--h-rest) - 2 * var(--pad));
     --t2:min(calc(var(--col) / 6.25),3.6rem,calc(var(--t-left) / 2.04));
@@ -286,47 +316,46 @@
     --f-title:max(min(1.5rem,var(--t1)),min(var(--t1),calc(var(--t-left) / 1.02)),min(var(--t2),var(--t2-on)));
   }
   .h8 .hero__bg > .hero__poster img,.h8 .hero__bg > video{object-position:60% 50%}
-  .h8__scrim{background:linear-gradient(180deg,rgba(19,30,51,.8) 0%,rgba(19,30,51,.84) 34%,rgba(19,30,51,.78) 58%,rgba(19,30,51,.62) 82%,rgba(0,24,57,.82) 100%)}
+  .h8__scrim{background:linear-gradient(180deg,rgba(19,30,51,.86) 0%,rgba(19,30,51,.9) 30%,rgba(19,30,51,.88) 62%,rgba(19,30,51,.82) 84%,rgba(0,24,57,.9) 100%)}
   .h8__title{line-height:1.02}
   .h8__line{white-space:normal;margin-left:-.03em}
   .h8__l2{white-space:nowrap}
   .h8__where{display:block}
   .h8__venue{display:block;white-space:normal}
   .h8__date{display:block;margin-top:var(--g-date);letter-spacing:.22em}
-  .hero__ctas .price-clock{min-height:3.4rem;height:max(3.4rem,var(--h-btn)) !important;padding:max(.08rem,min(.2rem,calc(var(--u) * 3.2))) 1rem;gap:.12rem}
+  .h8__pitch{display:block}
+  .hero__ctas .price-clock{min-height:3.4rem;height:var(--h-cbox) !important;padding:max(.08rem,min(.2rem,calc(var(--u) * 3.2))) 1rem;gap:.12rem}
   .hero__ctas .price-clock__title{font-size:max(.78rem,min(.9rem,calc(var(--u) * 14.4)))}
   .hero__ctas .price-clock__num,.hero__ctas .price-clock__sep{font-size:max(1.15rem,min(1.35rem,calc(var(--u) * 21.6)))}
   .hero__ctas .price-clock__lbl{font-size:max(.56rem,min(.68rem,calc(var(--u) * 10.9)))}
 
-  .f8{padding:12px 0 10px}
+  /* Pillars. Rows: one panel, each title in a left column beside its two
+     caption lines, split where the copy is split. Titles only: a 2 x 2 grid
+     of cards. Every switch below is a length that is 0 or very large. */
+  .f8{padding:var(--sec-pt) 0 var(--sec-pb)}
   .f8__eyebrow{font-size:.75rem;height:var(--h-label);overflow:hidden}
-  .f8__grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:6px;margin-top:var(--g-label)}
-  .f8__card{display:block;padding:8px 10px}
-  .f8__t{padding:0 0 6px}
-  .f8__t::after{left:0}
+  .f8__grid{grid-template-columns:repeat(auto-fill,minmax(min(100%,max(40%,var(--cap-on))),1fr));gap:max(0px,calc(6px - var(--cap-on)));margin-top:var(--g-label);border:min(1px,var(--cap-on)) solid rgba(244,236,224,.25);border-radius:2px}
+  .f8__card{display:grid;grid-template-columns:var(--tcol) minmax(0,1fr);column-gap:min(var(--gx),var(--cap-on));align-items:start;padding:var(--py) var(--px);border-style:solid;border-width:1px max(0px,calc(1px - var(--cap-on))) max(0px,calc(1px - var(--cap-on)));border-color:rgba(244,236,224,.25)}
+  .f8__card:first-child{border-top-width:max(0px,calc(1px - var(--cap-on)))}
+  .f8__t{padding:0 0 7px;font-size:var(--f-ct);margin-top:min(var(--cap-on),max(0px,calc((var(--cap-fs) * var(--cap-lh) - var(--f-ct)) / 2)))}
+  .f8__t::after{left:0;width:20px}
   .f8__art{display:none}
-  .f8__d{display:block;min-height:max(0px,calc(var(--h-cap) - 5px));max-height:min(12rem,var(--cap-on));margin-top:min(5px,var(--h-cap));padding:0;overflow:hidden;text-align:left;font-size:var(--cap-fs);line-height:var(--cap-lh)}
-  .f8__d br{display:none}
+  .f8__d{display:block;min-height:0;max-height:min(10rem,var(--cap-on));margin:0 calc(4px - var(--px)) 0 0;padding:0;overflow:hidden;text-align:left;font-size:var(--cap-fs);line-height:var(--cap-lh);text-wrap:wrap} /* may run into the card's right padding, so a wider fallback font still fits each line */
+  .f8__d br{display:inline}
 }
-@media (min-width:340px) and (max-width:699.98px){.fold8{--cap-at:660px}}
-@media (min-width:360px) and (max-width:699.98px){.fold8{--cap-n:3;--cap-at:640px}}
-@media (min-width:375px) and (max-width:699.98px){.fold8{--cap-fs:.75rem;--cap-lh:1.35}}
-@media (min-width:505px) and (max-width:699.98px){.fold8{--cap-n:2}}
 /* 601 to 699px wide: both buttons share one row. */
-@media (min-width:600.1px) and (max-width:699.98px){
-  .fold8{--h-row2:0px;--h-btn2:var(--h-btn);--g-btn:12px;--f-btn:min(3.1vw,max(1rem,min(1.22rem,calc(var(--u) * 19.5))));--f-btn2:min(2.7vw,max(.94rem,min(1.06rem,calc(var(--u) * 17))))}
+@media (min-width:600.1px) and (max-width:699.98px) and (min-height:575px){
+  .fold8{--h-row2:0px;--h-btn2:var(--h-btn);--g-btn:12px;--f-btn:min(3.1vw,calc((var(--col) - 124px) / 23),max(1rem,min(1.2rem,calc(var(--u) * 19.2))));--f-btn2:min(2.7vw,calc((var(--col) - 124px) / 26.1),max(.94rem,min(1.06rem,calc(var(--u) * 17))));--px-btn:26px;--px-btn2:20px}
   .h8 .hero__ctas{gap:12px}
-  .h8 .hero__ctas .btn{padding:0 26px}
-  .h8 .hero__ctas .h8__stay{padding:0 20px}
-  .fold8:has(.price-clock){--k:72px;--h-clock:calc(12px + max(3.4rem,var(--h-btn)))}
+  .fold8:has(.price-clock){--k:72px;--h-clock:calc(12px + var(--h-cbox))}
 }
-@media (min-width:340px) and (max-width:600px){.fold8:has(.price-clock){--cap-at:720px}}
 @media (max-width:600px){
+  .fold8{--px-btn:20px;--px-btn2:20px}
   .h8 .hero__ctas{flex-direction:column;align-items:stretch}
-  .h8 .hero__ctas .btn{width:100%;padding:0 20px}
+  .h8 .hero__ctas .btn{width:100%}
   .hero__ctas .price-clock{align-self:stretch}
-  /* with the countdown showing: one more stacked row, and captions need a taller screen */
-  .fold8:has(.price-clock){--k:70px;--h-clock:calc(var(--g-btn) + max(3.4rem,var(--h-btn)));--lab-at:600px}
+  /* with the countdown showing: one more stacked row, and the caption rows need a taller screen */
+  .fold8:has(.price-clock){--k:70px;--h-clock:calc(var(--g-btn) + var(--h-cbox));--lab-at:600px;--cap-at:770px}
 }
 
 /* ---- Short and wide: over 600px wide, 574px tall or less ----
@@ -343,8 +372,7 @@
     --g-where:max(3px,min(8px,calc(var(--u) * 8)));
     --g-date:0px;
     --g-pitch:max(5px,min(16px,calc(var(--u) * 16)));
-    --col:calc(min(100vw,var(--max)) - var(--sbw) - 2 * clamp(1.25rem,4vw,2rem));
-    --f-lead:min(calc((var(--col) - 12px) / 35.5),max(.94rem,min(1.15rem,calc(var(--u) * 18.4))));
+    --f-lead:min(calc((var(--col) - 12px) / 36.2),max(.94rem,min(1.15rem,calc(var(--u) * 18.4))));
     --g-pill:0px;
     --f-pill:min(calc((var(--col) - 12px) / 31.4),max(1rem,min(1.3rem,calc(var(--u) * 20.8))));
     --g-ctas:max(7px,min(20px,calc(var(--u) * 20)));
@@ -354,6 +382,8 @@
     --g-btn:12px;
     --f-btn:max(1rem,min(1.06rem,calc(var(--u) * 17)));
     --f-btn2:max(.94rem,min(.97rem,calc(var(--u) * 15.5)));
+    --px-btn:26px;
+    --px-btn2:20px;
     --h-hero:calc(var(--f-title) * 1.589 + var(--g-where) + var(--g-pitch) + var(--f-pill) * 1.66 + var(--g-ctas) + var(--h-btn) + var(--h-clock));
     --c-pt:max(6px,min(16px,calc(var(--u) * 16)));
     --lab-on:max(0px,calc((var(--vh8) - 360px) * 9999));  /* the "On stage" label steps out under 360px of height */
@@ -369,30 +399,21 @@
     --h-card:calc(var(--ct-pt) + var(--f-ct) + var(--ct-pb) + var(--h-cap) + 2px);
     --h-cards:calc(var(--c-pt) + var(--h-label) + var(--g-label) + var(--h-card) + var(--c-pb) + 1px);
     --pad:max(.5rem,min(1.5rem,calc((var(--room) - var(--h-hero) - var(--h-cards)) / 2)));
+    --tx-r:calc(max(0px,(100vw - var(--sbw) - var(--max)) / 2) + var(--gut) + max(var(--f-title) * 10.3,var(--f-lead) * 18.97 + 12px + var(--f-pill) * 14.04));
   }
   .h8 .hero__bg > .hero__poster img,.h8 .hero__bg > video{object-position:center 22%}
-  .h8__scrim{background:
-    linear-gradient(90deg,rgba(19,30,51,.93) 0%,rgba(19,30,51,.82) 38%,rgba(19,30,51,.2) 100%),
-    linear-gradient(180deg,rgba(19,30,51,.6) 0%,rgba(19,30,51,.5) 28%,rgba(19,30,51,.1) 46%,rgba(19,30,51,.1) 84%,rgba(0,24,57,.55) 100%)}
   .h8__title{line-height:.98}
-  .h8__line{white-space:nowrap;margin-left:0}
-  .h8__where{display:flex}
-  .h8__venue{display:inline;white-space:nowrap}
-  .h8__date{display:inline;margin-top:0;letter-spacing:.18em}
-  .h8__pitch{display:flex;flex-wrap:wrap;align-items:center;gap:4px 12px}
-  .h8 .hero__ctas{flex-direction:row;align-items:center;gap:12px}
-  .h8 .hero__ctas .btn{width:auto;padding:0 26px}
-  .h8 .hero__ctas .h8__stay{padding:0 20px}
+  .h8__pitch{flex-wrap:wrap;align-items:center;gap:4px 12px}
+  .h8 .hero__ctas{gap:12px}
   .hero__ctas .price-clock{align-self:flex-start;min-height:3.25rem;height:3.25rem !important;padding:.1rem 1.1rem;gap:.1rem}
   .hero__ctas .price-clock__title{font-size:.74rem}
   .hero__ctas .price-clock__num,.hero__ctas .price-clock__sep{font-size:1.1rem}
   .hero__ctas .price-clock__lbl{font-size:.54rem}
 
   .f8{padding:var(--c-pt) 0 var(--c-pb)}
-  .f8__eyebrow{font-size:.81rem;height:var(--h-label);overflow:hidden}
-  .f8__grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin-top:var(--g-label)}
-  .f8__card{display:flex;padding:0}
-  .f8__t{padding:var(--ct-pt) 12px var(--ct-pb);font-size:var(--f-ct)}
+  .f8__eyebrow{height:var(--h-label);overflow:hidden}
+  .f8__grid{gap:8px}
+  .f8__t{padding:var(--ct-pt) 12px var(--ct-pb)}
   .f8__t::after{left:12px}
   .f8__art{display:none}
   .f8__d{display:none}
@@ -400,8 +421,7 @@
 /* ...with room for captions on wide ones... */
 @media (min-width:1024px) and (min-height:440px) and (max-height:574.98px){
   .fold8{--n:478;--f-cap:clamp(.75rem,1.2vw,.84rem);--cap-pt:6px;--cap-pb:max(8px,min(12px,calc(var(--u) * 12)));--h-cap:calc(var(--f-cap) * 2.9 + var(--cap-pt) + var(--cap-pb))}
-  .f8__d{display:flex;max-height:none;min-height:var(--h-cap);margin-top:0;padding:var(--cap-pt) 10px var(--cap-pb);overflow:visible;text-align:center;font-size:var(--f-cap);line-height:1.45}
-  .f8__d br{display:inline}
+  .f8__d{display:flex;min-height:var(--h-cap);padding:var(--cap-pt) 10px var(--cap-pb);font-size:var(--f-cap)}
 }
 /* ...and the countdown: beside the buttons from 1024px wide, under them below that. */
 @media (min-width:1024px) and (max-height:574.98px){
