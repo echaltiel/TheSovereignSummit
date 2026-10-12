@@ -57,9 +57,9 @@
      row, with pictures from 640px of height. The marquee joins the first
      screen from 924px of height.
    - Under 700px wide (phones): the pillars are four rows, each title beside
-     its two caption lines, on screens taller than 700px (770px with the ticket
-     countdown) and about 370px wide or more; otherwise a 2 x 2 grid of
-     titles. The headline runs on one line unless the screen is tall enough
+     its two caption lines, whenever they fit with the hero at its tightest
+     (from about 600px tall, and about 350px wide or more); otherwise a 2 x 2
+     grid of titles. The headline runs on one line unless the screen is tall enough
      for two.
    - Short and wide (over 600px wide, 574px tall or less): one compact hero
      block and a row of pillar titles.
@@ -267,26 +267,28 @@
     --mqIn:0px;
     --t1:calc(var(--col) / 10.75);                        /* largest headline that fits on one line (it runs about 10.3em wide) */
     /* Pillars first: their heights never depend on --u, the hero gets the
-       rest. Captions show (as rows) only on screens taller than --cap-at and
-       wide enough for each caption line to fit at 11.5px or more. Both are
+       rest. Captions show (as rows) whenever the rows plus the hero at its
+       tightest (--hero-min) fit, and each caption line fits at 11.5px or more. Both are
        done with lengths, not media queries, so nothing flips when a phone's
        toolbar slides away. */
     --pu:calc((var(--vh8) - 560px) / 240);                /* 0px at 560px tall, 1px at 800px */
-    --f-ct:max(.75rem,min(.82rem,calc(var(--col) / 29))); /* pillar titles */
+    --f-ct:max(.72rem,min(.82rem,calc(var(--col) / 29))); /* pillar titles */
     --tcol:calc(var(--f-ct) * 7.7);                       /* title column: "AND BEYOND" runs 7.58em */
-    --px:clamp(11px,3.5vw,15px);                          /* card side padding */
-    --gx:clamp(10px,3.5vw,16px);                          /* space between title and caption */
+    --px:clamp(10px,calc(4.6vw - 6.5px),15px);            /* card side padding */
+    --gx:clamp(10px,calc(4.6vw - 6.5px),16px);            /* space between title and caption */
     --cap-fs:min(.8125rem,calc((var(--col) - 2px - 2 * var(--px) - var(--tcol) - var(--gx)) / 16.9));  /* longest caption line: 16.1em, plus 5% */
-    --cap-lh:1.32;
-    --cap-at:700px;
-    --cap-on:max(0px,min(calc((var(--vh8) - var(--cap-at)) * 9999),calc((var(--cap-fs) - 11.5px) * 9999)));
+    --cap-lh:1.3;
+    /* the hero at its floors: headline, venue, date, lead, highlight, buttons, gaps and padding */
+    --h-clock-min:0px;
+    --hero-min:calc(var(--t1) * 1.02 + 4px + min(calc(var(--col) / 10),1.15rem) * 1.05 + 3px + .9rem + 7px + min(calc(var(--col) / 23.1),.875rem) * 1.4 + 3px + min(calc(var(--col) / 14.6),1rem) * 1.66 + 8px + 2.75rem + 6px + 2.625rem + var(--h-clock-min) + 12px + 4px);
+    --cap-on:max(0px,min(calc((var(--room) - var(--k) - var(--h-cards-rows) - var(--hero-min)) * 9999),calc((var(--cap-fs) - 11.5px) * 9999)));
     --lab-at:540px;                                       /* the "On stage" label shows on screens taller than this */
     --lab-on:max(0px,calc((var(--vh8) - var(--lab-at)) * 9999));
-    --py:max(8px,min(10px,calc(var(--pu) * 10)));        /* card top and bottom padding */
-    --sec-pt:max(12px,min(18px,calc(var(--pu) * 18)));
-    --sec-pb:max(10px,min(14px,calc(var(--pu) * 14)));
+    --py:max(6px,min(10px,calc(var(--pu) * 10)));        /* card top and bottom padding */
+    --sec-pt:max(10px,min(18px,calc(var(--pu) * 18)));
+    --sec-pb:max(8px,min(14px,calc(var(--pu) * 14)));
     --h-label:min(.975rem,var(--lab-on));
-    --g-label:min(max(6px,min(10px,calc(var(--pu) * 10))),var(--lab-on));
+    --g-label:min(max(5px,min(10px,calc(var(--pu) * 10))),var(--lab-on));
     --h-title:calc(var(--f-ct) + 7px);                    /* title and the 7px under it (the 2px rule sits inside that) */
     --h-cards-rows:calc(var(--sec-pt) + var(--h-label) + var(--g-label) + 2px + 4 * (2 * var(--py) + max(var(--h-title),2 * var(--cap-fs) * var(--cap-lh))) + 3px + var(--sec-pb) + 1px);
     --h-cards-sq:calc(var(--sec-pt) + var(--h-label) + var(--g-label) + 2 * (2 * var(--py) + var(--h-title) + 2px) + 6px + var(--sec-pb) + 1px);
@@ -351,7 +353,7 @@
 @media (min-width:600.1px) and (max-width:699.98px) and (min-height:575px){
   .fold8{--h-row2:0px;--h-btn2:var(--h-btn);--g-btn:12px;--f-btn:min(3.1vw,calc((var(--col) - 124px) / 23),max(1rem,min(1.2rem,calc(var(--u) * 19.2))));--f-btn2:min(2.7vw,calc((var(--col) - 124px) / 26.1),max(.94rem,min(1.06rem,calc(var(--u) * 17))));--px-btn:26px;--px-btn2:20px}
   .h8 .hero__ctas{gap:12px}
-  .fold8:has(.price-clock){--k:72px;--h-clock:calc(12px + var(--h-cbox))}
+  .fold8:has(.price-clock){--k:72px;--h-clock:calc(12px + var(--h-cbox));--h-clock-min:calc(12px + 3.4rem)}
 }
 @media (max-width:600px){
   .fold8{--px-btn:20px;--px-btn2:20px}
@@ -359,7 +361,7 @@
   .h8 .hero__ctas .btn{width:100%}
   .hero__ctas .price-clock{align-self:stretch}
   /* with the countdown showing: one more stacked row, and the caption rows need a taller screen */
-  .fold8:has(.price-clock){--k:70px;--h-clock:calc(var(--g-btn) + var(--h-cbox));--lab-at:600px;--cap-at:770px}
+  .fold8:has(.price-clock){--k:70px;--h-clock:calc(var(--g-btn) + var(--h-cbox));--lab-at:600px;--h-clock-min:calc(6px + 3.4rem)}
 }
 
 /* ---- Short and wide: over 600px wide, 574px tall or less ----
