@@ -71,7 +71,20 @@
 /* Real header heights. The page script re-measures on load; these keep the
    first paint (and a page with scripts off) from sitting 15 to 20px low. */
 :root{--header-h:119px}
-@media (max-width:600px){:root{--header-h:138px}}
+@media (max-width:600px){:root{--header-h:calc(33px + clamp(74px,calc(74px + (var(--vh8) - 680px) * .25),102px))}}
+
+/* Phone header, homepage only. iPhone Safari was enlarging the ticker text to
+   about twice its set size (text autosizing on the wide scrolling strip);
+   that is switched off here. On shorter phones the header gives height back
+   to the hero: the logo bar and the ticker text scale with the screen height
+   (full size from about 790px tall, smallest at 680px and below). Lengths of
+   100svh, so a toolbar sliding away never resizes it. */
+@media (max-width:600px){
+  #siteHeader{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+  #siteHeader .ticker__btc{font-size:clamp(.66rem,calc(.66rem + (var(--vh8) - 680px) * .045),1rem)}
+  #siteHeader .nav{height:clamp(74px,calc(74px + (var(--vh8) - 680px) * .25),102px)}
+  #siteHeader .nav__brand img{height:clamp(60px,calc(60px + (var(--vh8) - 680px) * .217),86px)}
+}
 
 /* ---- First-screen sizes: 700px wide and up ---- */
 .fold8{
