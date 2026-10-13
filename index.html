@@ -54,8 +54,8 @@
    hero's top and bottom padding (--pad) takes whatever is left, so the pieces
    always add up to the window. Layouts by size:
    - 700px wide and up: the two pitch lines share one line. Four cards in a
-     row, with pictures from 640px of height. The marquee joins the first
-     screen from 924px of height.
+     row, with pictures from 640px of height (680px under 1024px wide). The
+     marquee joins the first screen from 924px of height.
    - Under 700px wide (phones): the pillars are four rows, each title beside
      its two caption lines, whenever they fit with the hero at its tightest
      (from about 600px tall, and about 350px wide or more); otherwise a 2 x 2
@@ -63,8 +63,22 @@
      for two.
    - Short and wide (over 600px wide, 574px tall or less): one compact hero
      block and a row of pillar titles.
+   Between the pitch and the buttons: a row of speaker faces with a line of
+   names (phones: "Speakers"), linking to the Speakers section. On phones it
+   shows when it fits with everything above at its tightest, and it is the
+   first thing to step out on short screens, before the pillar captions do.
    The photo is darkest behind the text. On wide screens it brightens past the
    right edge of the text; on phones it stays dark. */
+/* Phone faces row: its height and on/off switch are registered lengths, so
+   each one is passed along as a single computed value instead of being pasted
+   in as text. Without that, the chained phone sizes grow past Safari's
+   65,536-token limit for a var() inside a longer value, and the hero breaks.
+   --f8-pr is never set: it is 0px where @property works and invalid where it
+   does not, which turns the row off on those older browsers (iOS before 16.4),
+   leaving the phone layout as it was before the row. */
+@property --f8-pr{syntax:'<length>';inherits:true;initial-value:0px}
+@property --f8-fon{syntax:'<length>';inherits:true;initial-value:0px}
+@property --f8-hf{syntax:'<length>';inherits:true;initial-value:0px}
 #content{padding-top:0 !important}
 :root{--vh8:100vh;--mq8:calc(1.848rem + 32px)} /* --mq8: height of the marquee strip (one 1.12rem line at 1.65, 30px padding, 2px border) */
 @supports (height:100svh){:root{--vh8:100svh}}
@@ -93,7 +107,7 @@
   --mqIn:0px;                                   /* marquee height counted inside the first screen */
   --room:calc(var(--vh8) - var(--header-h) - var(--mqIn));
   min-height:calc(var(--vh8) + var(--mq8) - var(--mqIn));
-  --n:857;                                      /* full-size heights of this layout, added up */
+  --n:931;                                      /* full-size heights of this layout, added up */
   --k:0px;                                      /* height set aside for a countdown row, when one shows */
   --sbw:0px;                                    /* width a classic scrollbar takes out of 100vw */
   --gut:clamp(1.25rem,4vw,2rem);                /* side gutter of .wrap */
@@ -111,6 +125,14 @@
   --f-lead:var(--f-pitch);
   --g-pill:0px;
   --f-pill:var(--f-pitch);
+  /* speaker faces row: gap above, circles (2px ring each), names */
+  --g-faces:max(6px,min(clamp(1rem,1.5vw,1.375rem),calc(var(--u) * 22),calc(var(--fit) - 34px)));
+  --nf:6.32;                                    /* width of 8 overlapping circles, in circles (each overlaps the last by 24%) */
+  --g-with:16px;
+  --face:max(28px,min(calc((var(--col) - var(--g-with) - 360px) / var(--nf) - 4px),calc(var(--fit) - var(--g-faces) - 4px),max(36px,min(48px,calc(var(--u) * 56)))));  /* never so wide that the names drop under 12.5px, never taller than the room left */
+  --f-with:max(12.5px,min(17px,calc(var(--f-pitch) * .66),calc((var(--col) - (var(--face) + 4px) * var(--nf) - var(--g-with)) / 28.8)));  /* the names run 27.4em */
+  --fw-on:max(0px,calc((var(--fit) - 38px) * 9999));  /* off only when even the smallest row would not fit (a countdown row on a short screen) */
+  --h-faces:min(calc(var(--g-faces) + var(--face) + 4px),var(--fw-on));
   --g-ctas:max(.75rem,min(clamp(1.75rem,2.6vw,2.125rem),calc(var(--u) * 34)));
   --h-btn:max(3rem,min(4.75rem,calc(var(--u) * 84)));
   --h-btn2:var(--h-btn);
@@ -120,7 +142,9 @@
   --px-btn:max(28px,min(52px,calc(var(--u) * 52)));
   --px-btn2:max(22px,min(40px,calc(var(--u) * 40)));
   --h-clock:0px;                                /* extra row when the ticket countdown shows */
-  --h-hero:calc(var(--f-title) * 1.589 + var(--g-where) + var(--g-pitch) + var(--f-pitch) * 1.66 + var(--g-ctas) + var(--h-btn) + var(--h-clock));
+  --h-hero0:calc(var(--f-title) * 1.589 + var(--g-where) + var(--g-pitch) + var(--f-pitch) * 1.66 + var(--g-ctas) + var(--h-btn) + var(--h-clock));
+  --h-hero:calc(var(--h-hero0) + var(--h-faces));
+  --fit:calc(var(--room) - var(--h-hero0) - var(--h-cards) - 1rem);   /* room for the faces row with the hero padding at its floor */
   /* pillars */
   --cw:calc((var(--col) - 36px) / 4);           /* width of one pillar card */
   --c-pt:max(.6rem,min(1.65rem,calc(var(--u) * 26.4)));
@@ -153,13 +177,13 @@
 }
 /* Under 640px of height the pictures leave and the cards become text. */
 @media (min-width:700px) and (max-height:639.98px){
-  .fold8{--n:679;--g-art:0px;--h-art:0px;--cap-pt:8px}
+  .fold8{--n:753;--g-art:0px;--h-art:0px;--cap-pt:8px}
   .f8__art{display:none}
 }
 /* 700 to 1023px wide: the four cards are narrower, so captions run longer. */
 @media (min-width:700px) and (max-width:1023.98px){
   .fold8{
-    --n:802;
+    --n:876;
     --f-ct:min(1.9vw,max(.8rem,min(1rem,calc(var(--u) * 16))));
     --h-art:max(0px,min(130px,calc(var(--u) * 130)));
     --f-cap:.75rem;
@@ -175,8 +199,9 @@
 @media (min-width:1000px) and (max-width:1023.98px){
   .fold8{--cap-lines:2}
 }
-@media (min-width:700px) and (max-width:1023.98px) and (max-height:639.98px){
-  .fold8{--n:687;--h-art:0px}
+@media (min-width:700px) and (max-width:1023.98px) and (max-height:679.98px){
+  .fold8{--n:761;--g-art:0px;--h-art:0px;--cap-pt:8px}
+  .f8__art{display:none}
 }
 
 /* ---- Hero ---- */
@@ -189,7 +214,7 @@
    behind the text, brightening from the right edge of the text. */
 .h8::before{content:"";position:absolute;left:0;right:0;top:0;height:var(--header-h);z-index:1;background:rgba(19,30,51,.6)}
 .h8__scrim{position:absolute;left:0;right:0;bottom:0;top:var(--header-h);z-index:1;background:
-  linear-gradient(90deg,rgba(19,30,51,.9) 0,rgba(19,30,51,.88) calc(var(--tx-r) - 10vw),rgba(19,30,51,.86) calc(var(--tx-r) - 3vw),rgba(19,30,51,.82) calc(var(--tx-r) + 3vw),rgba(19,30,51,.74) calc(var(--tx-r) + 9vw),rgba(19,30,51,.63) calc(var(--tx-r) + 15vw),rgba(19,30,51,.5) calc(var(--tx-r) + 21vw),rgba(19,30,51,.38) calc(var(--tx-r) + 28vw),rgba(19,30,51,.28) calc(var(--tx-r) + 36vw),rgba(19,30,51,.22) calc(var(--tx-r) + 45vw)),
+  linear-gradient(90deg,rgba(19,30,51,.95) 0,rgba(19,30,51,.94) calc(var(--tx-r) - 10vw),rgba(19,30,51,.92) calc(var(--tx-r) - 3vw),rgba(19,30,51,.87) calc(var(--tx-r) + 3vw),rgba(19,30,51,.77) calc(var(--tx-r) + 9vw),rgba(19,30,51,.64) calc(var(--tx-r) + 15vw),rgba(19,30,51,.51) calc(var(--tx-r) + 21vw),rgba(19,30,51,.39) calc(var(--tx-r) + 28vw),rgba(19,30,51,.29) calc(var(--tx-r) + 36vw),rgba(19,30,51,.225) calc(var(--tx-r) + 45vw)),
   linear-gradient(180deg,rgba(19,30,51,.35) 0%,rgba(19,30,51,0) 34%,rgba(19,30,51,0) 72%,rgba(0,24,57,.5) 100%)}
 .h8__in{position:relative;z-index:2}
 
@@ -203,6 +228,19 @@
 .h8__pitch{display:flex;flex-wrap:nowrap;align-items:baseline;column-gap:.55em;margin:var(--g-pitch) 0 0;font-size:var(--f-pitch)}
 .h8__lead{display:block;flex:none;font-family:var(--fb);font-weight:600;font-size:var(--f-lead);line-height:1.4;white-space:nowrap;color:rgba(244,236,224,.96);text-shadow:0 1px 14px rgba(4,10,24,.8)}
 .h8__pill{display:inline-block;flex:none;margin-top:var(--g-pill);padding:.16em .5em .2em;border-radius:.35em;background:rgba(255,105,65,.24);font-family:var(--fb);font-weight:800;font-size:var(--f-pill);line-height:1.3;letter-spacing:-.02em;white-space:nowrap;color:var(--cream)}
+
+/* Speaker faces: overlapping circles, then the names, all one link to the
+   Speakers section below. The 6px padding makes the tap area taller without
+   moving anything (the margins take it back). */
+.h8__faces{display:flex;align-items:center;gap:var(--g-with);width:max-content;max-width:calc(100% + 4px);max-height:var(--fw-on);overflow:hidden;margin:calc(min(var(--g-faces),var(--fw-on)) - min(6px,var(--fw-on))) -4px calc(min(6px,var(--fw-on)) * -1) 0;padding:min(6px,var(--fw-on)) 4px min(6px,var(--fw-on)) 0;color:rgba(244,236,224,.92);text-decoration:none}
+.h8__pics{display:flex;flex:none;padding-left:calc((var(--face) + 4px) * .24)}
+.h8__pics img{display:block;flex:none;box-sizing:content-box;width:var(--face);height:var(--face);margin-left:calc((var(--face) + 4px) * -.24);border:2px solid #121d33;border-radius:50%;background:#3a4252;object-fit:cover}
+.h8__with{font-family:var(--fb);font-weight:600;font-size:var(--f-with);line-height:1.25;letter-spacing:0;white-space:nowrap;color:rgba(244,236,224,.92);text-shadow:0 1px 10px rgba(4,10,24,.8);transition:color .18s ease}
+.h8__with-s{display:none}
+.h8__arr{display:inline-block;transition:transform .18s ease}
+.h8__faces:hover .h8__with{color:var(--cream)}
+.h8__faces:hover .h8__arr{transform:translateX(3px)}
+.h8__faces:focus-visible{outline:2px solid var(--cream);outline-offset:4px;border-radius:999px}
 
 .h8 .hero__ctas{display:flex;flex-wrap:wrap;align-items:center;gap:var(--g-btn) 16px;margin:var(--g-ctas) 0 0 !important}
 .h8 .hero__ctas .btn{width:auto;min-height:var(--h-btn);padding:0 var(--px-btn);font-size:var(--f-btn);border-radius:999px;box-shadow:0 10px 34px rgba(255,105,65,.32);transition:transform .18s ease,box-shadow .18s ease,background .18s ease,border-color .18s ease}
@@ -230,14 +268,15 @@
 }
 /* ...and the pictures need 80px more height before they show. */
 @media (min-width:700px) and (max-width:1023.98px) and (min-height:575px) and (max-height:719.98px){
-  .fold8:has(.price-clock){--n:717;--g-art:0px;--h-art:0px;--cap-pt:8px}
+  .fold8:has(.price-clock){--n:791;--g-art:0px;--h-art:0px;--cap-pt:8px}
   .fold8:has(.price-clock) .f8__art{display:none}
 }
 
 @media (prefers-reduced-motion:no-preference){
-  .h8__line,.h8__where,.h8__pitch,.h8 .hero__ctas{opacity:0;transform:translateY(16px);animation:h8Rise .65s cubic-bezier(.22,.75,.3,1) forwards}
+  .h8__line,.h8__where,.h8__pitch,.h8__faces,.h8 .hero__ctas{opacity:0;transform:translateY(16px);animation:h8Rise .65s cubic-bezier(.22,.75,.3,1) forwards}
   .h8__where{animation-delay:.12s}
   .h8__pitch{animation-delay:.24s}
+  .h8__faces{animation-delay:.3s}
   .h8 .hero__ctas{animation-delay:.36s}
   @keyframes h8Rise{to{opacity:1;transform:none}}
 }
@@ -306,9 +345,20 @@
     --h-cards-rows:calc(var(--sec-pt) + var(--h-label) + var(--g-label) + 2px + 4 * (2 * var(--py) + max(var(--h-title),2 * var(--cap-fs) * var(--cap-lh))) + 3px + var(--sec-pb) + 1px);
     --h-cards-sq:calc(var(--sec-pt) + var(--h-label) + var(--g-label) + 2 * (2 * var(--py) + var(--h-title) + 2px) + 6px + var(--sec-pb) + 1px);
     --h-cards:max(var(--h-cards-sq),min(var(--h-cards-rows),var(--cap-on)));
+    /* Speaker faces: on when they fit beside everything above at its
+       tightest (rows keep priority); they shrink before anything else does. */
+    --fslack:calc(var(--room) - var(--k) - var(--h-cards) - var(--hero-min));
+    --f8-fon:calc(var(--f8-pr) + max(0px,calc((var(--fslack) - 37px) * 9999)));
+    --g-faces:max(7px,min(14px,calc(5px + var(--pu) * 9),calc(var(--fslack) - 30px)));
+    --f-with:11.5px;
+    --g-with:10px;
+    --nf:6.32;
+    --face:max(26px,min(calc(30px + var(--pu) * 6),36px,calc((var(--col) - var(--g-with) - var(--f-with) * 8.2) / var(--nf) - 4px),calc(var(--fslack) - var(--g-faces) - 4px)));
+    --f8-hf:calc(var(--f8-pr) + min(calc(var(--g-faces) + var(--face) + 4px),var(--f8-fon)));
+    --h-faces:var(--f8-hf,0px);
     /* hero */
     --n:363.4;
-    --u:calc((var(--room) - var(--h-cards) - var(--t1) * 1.02 - var(--k)) / var(--n));
+    --u:calc((var(--room) - var(--h-cards) - var(--t1) * 1.02 - var(--k) - var(--f8-hf,0px)) / var(--n));
     /* gaps shrink faster than type as the screen gets shorter: at 40% of full size they are at their floors */
     --g-where:max(4px,min(12px,calc((var(--u) - .4px) * 20)));
     --f-venue:min(calc(var(--col) / 10),max(1.15rem,min(1.6rem,calc(var(--u) * 25.6))));
@@ -326,7 +376,7 @@
     --h-cbox:max(3.4rem,var(--h-btn),calc(var(--u) * 60)); /* countdown box, when it shows */
     --f-btn:min(5.3vw,max(1rem,min(1.2rem,calc(var(--u) * 19.2))));
     --f-btn2:min(4.6vw,max(.94rem,min(1.06rem,calc(var(--u) * 17))));
-    --h-rest:calc(var(--g-where) + var(--f-venue) * 1.05 + var(--g-date) + var(--f-date) * 1.2 + var(--g-pitch) + var(--f-lead) * 1.4 + var(--g-pill) + var(--f-pill) * 1.66 + var(--g-ctas) + var(--h-btn) + var(--h-row2) + var(--h-clock));
+    --h-rest:calc(var(--g-where) + var(--f-venue) * 1.05 + var(--g-date) + var(--f-date) * 1.2 + var(--g-pitch) + var(--f-lead) * 1.4 + var(--g-pill) + var(--f-pill) * 1.66 + var(--f8-hf,0px) + var(--g-ctas) + var(--h-btn) + var(--h-row2) + var(--h-clock));
     --pad:max(6px,min(32px,calc((var(--room) - var(--h-cards) - var(--t1) * 1.02 - var(--h-rest)) / 2)));
     /* the headline takes what is left: one line, or two when two fit */
     --t-left:calc(var(--room) - var(--h-cards) - var(--h-rest) - 2 * var(--pad));
@@ -343,6 +393,11 @@
   .h8__venue{display:block;white-space:normal}
   .h8__date{display:block;margin-top:var(--g-date);letter-spacing:.22em}
   .h8__pitch{display:block}
+  /* faces: "Speakers" instead of the names; the row folds to nothing when it does not fit */
+  .h8__faces{max-height:var(--f8-fon,0px);margin:calc(min(var(--g-faces),var(--f8-fon,0px)) - min(6px,var(--f8-fon,0px))) -4px calc(min(6px,var(--f8-fon,0px)) * -1) 0;padding:min(6px,var(--f8-fon,0px)) 4px min(6px,var(--f8-fon,0px)) 0}
+  .h8__with{font-family:var(--fm);font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(244,236,224,.84)}
+  .h8__with-l{display:none}
+  .h8__with-s{display:inline}
   .hero__ctas .price-clock{min-height:3.4rem;height:var(--h-cbox) !important;padding:max(.08rem,min(.2rem,calc(var(--u) * 3.2))) 1rem;gap:.12rem}
   .hero__ctas .price-clock__title{font-size:max(.78rem,min(.9rem,calc(var(--u) * 14.4)))}
   .hero__ctas .price-clock__num,.hero__ctas .price-clock__sep{font-size:max(1.15rem,min(1.35rem,calc(var(--u) * 21.6)))}
@@ -361,6 +416,18 @@
   .f8__art{display:none}
   .f8__d{display:block;min-height:0;max-height:min(10rem,var(--cap-on));margin:0 calc(4px - var(--px)) 0 0;padding:0;overflow:hidden;text-align:left;font-size:var(--cap-fs);line-height:var(--cap-lh);text-wrap:wrap} /* may run into the card's right padding, so a wider fallback font still fits each line */
   .f8__d br{display:inline}
+}
+@media (max-width:340px){
+  .fold8{--nf:5.56}
+  .h8__pics img:nth-child(n+8){display:none}
+}
+@media (max-width:316px){
+  .fold8{--nf:4.8}
+  .h8__pics img:nth-child(n+7){display:none}
+}
+@media (max-width:292px){
+  .fold8{--nf:4.04}
+  .h8__pics img:nth-child(n+6){display:none}
 }
 /* 601 to 699px wide: both buttons share one row. */
 @media (min-width:600.1px) and (max-width:699.98px) and (min-height:575px){
@@ -383,7 +450,7 @@
 @media (min-width:600.1px) and (max-height:574.98px){
   .fold8{
     --mqIn:0px;
-    --n:420;
+    --n:472;
     --u:calc((var(--room) - var(--k)) / var(--n));
     --f-title:min(calc((min(100vw,var(--max)) - 4rem) / 10.4),max(1.75rem,min(4rem,7.6vw,calc(var(--u) * 64))));
     --f-venue:calc(var(--f-title) * .58);
@@ -395,6 +462,10 @@
     --g-pill:0px;
     --f-pill:min(calc((var(--col) - 12px) / 31.4),max(1rem,min(1.3rem,calc(var(--u) * 20.8))));
     --g-ctas:max(7px,min(20px,calc(var(--u) * 20)));
+    --g-faces:max(5px,min(12px,calc(var(--u) * 12),calc(var(--fit) - 30px)));
+    --g-with:12px;
+    --face:max(26px,min(36px,calc(var(--u) * 36),calc((var(--col) - var(--g-with) - 346px) / var(--nf) - 4px),calc(var(--fit) - var(--g-faces) - 4px)));
+    --f-with:max(12px,min(14px,calc(var(--u) * 14),calc((var(--col) - (var(--face) + 4px) * var(--nf) - var(--g-with)) / 28.8)));
     --h-btn:max(2.75rem,min(3.25rem,calc(var(--u) * 52)));
     --h-btn2:var(--h-btn);
     --h-row2:0px;
@@ -403,7 +474,8 @@
     --f-btn2:max(.94rem,min(.97rem,calc(var(--u) * 15.5)));
     --px-btn:26px;
     --px-btn2:20px;
-    --h-hero:calc(var(--f-title) * 1.589 + var(--g-where) + var(--g-pitch) + var(--f-pill) * 1.66 + var(--g-ctas) + var(--h-btn) + var(--h-clock));
+    --h-hero0:calc(var(--f-title) * 1.589 + var(--g-where) + var(--g-pitch) + var(--f-pill) * 1.66 + var(--g-ctas) + var(--h-btn) + var(--h-clock));
+    --h-hero:calc(var(--h-hero0) + var(--h-faces));
     --c-pt:max(6px,min(16px,calc(var(--u) * 16)));
     --lab-on:max(0px,calc((var(--vh8) - 360px) * 9999));  /* the "On stage" label steps out under 360px of height */
     --h-label:min(1.053rem,var(--lab-on));
@@ -439,8 +511,25 @@
 }
 /* ...with room for captions on wide ones... */
 @media (min-width:1024px) and (min-height:440px) and (max-height:574.98px){
-  .fold8{--n:478;--f-cap:clamp(.75rem,1.2vw,.84rem);--cap-pt:6px;--cap-pb:max(8px,min(12px,calc(var(--u) * 12)));--h-cap:calc(var(--f-cap) * 2.9 + var(--cap-pt) + var(--cap-pb))}
+  .fold8{--n:530;--f-cap:clamp(.75rem,1.2vw,.84rem);--cap-pt:6px;--cap-pb:max(8px,min(12px,calc(var(--u) * 12)));--h-cap:calc(var(--f-cap) * 2.9 + var(--cap-pt) + var(--cap-pb))}
   .f8__d{display:flex;min-height:var(--h-cap);padding:var(--cap-pt) 10px var(--cap-pb);font-size:var(--f-cap)}
+}
+/* ...under 720px wide the names make way for "Speakers"... */
+@media (min-width:600.1px) and (max-width:719.98px) and (max-height:574.98px){
+  .fold8{--f-with:11.5px;--face:max(26px,min(36px,calc(var(--u) * 36),calc((var(--col) - var(--g-with) - 95px) / var(--nf) - 4px),calc(var(--fit) - var(--g-faces) - 4px)))}
+  .h8__with{font-family:var(--fm);font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(244,236,224,.84)}
+  .h8__with-l{display:none}
+  .h8__with-s{display:inline}
+}
+/* ...and under 440px of height (phones on their side), or under 480px where the
+   captions show, the faces step out. */
+@media (min-width:600.1px) and (max-height:439.98px){
+  .fold8{--n:420;--h-faces:0px}
+  .h8__faces{display:none}
+}
+@media (min-width:1024px) and (min-height:440px) and (max-height:479.98px){
+  .fold8{--n:478;--h-faces:0px}
+  .h8__faces{display:none}
 }
 /* ...and the countdown: beside the buttons from 1024px wide, under them below that. */
 @media (min-width:1024px) and (max-height:574.98px){
@@ -610,6 +699,10 @@
       <span class="h8__where"><span class="h8__venue">Fontainebleau, Miami Beach</span> <span class="h8__date">February 4&ndash;7, 2027</span></span>
     </h1>
     <p class="h8__pitch"><span class="h8__lead">Meet the technologists. Explore the possibilities.</span> <span class="h8__pill">Prosper on your own terms.</span></p>
+    <a class="h8__faces" href="#speakers">
+      <span class="h8__pics" aria-hidden="true"><img src="data:image/webp;base64,UklGRo4FAABXRUJQVlA4IIIFAADwHgCdASpoAGgAPm0uk0YkIqGhKngM2IANiWkAEgvaxjDbyB1If3ujFqLgL76fIz/lb+JeDTS9tWNqLhpH6nbXr1fr3PViLD4a4DZYmsivhb1T5VEYo7ujLvCB/I1+VMsFAucBVHEow3vv1csGHERgvj5fMMhB6JiMHeiSoc2UXnAP3vkDRtPQVpqDZ/7vmrEzHHLwj8r+ZSPkb7pyFj56oShYqS+ACfFb/4ZRAyMLvJAaHKz/KdKG62EPdt2yUsw4SRk3wCVl0mATocYjettDPqvIT5We2AFeQNmkuN3DIlklE+NKd1TnG+Tj2e4Tar94xSOnne9g8z3LHmapL8QAAN+feMSBoORy792oLgipc9P/sU1Jw10+3PNdX5VA8wPycW+muRKpM2lH+RPW9aHFIEFNIBI0QSo1YC4sV4+izPAnRzJjeXo2J4VcPHhvUJTvPQsgt1BlbtQOi4SMWrgiIuNO7AIJavlpY1rOcWklMXdvLHbGMDHd8gKpao+u/UhqENtB0QEzFIpFa8jCy0LeUiIdhL2xeq8VWKG6S75zHM2cQqAvdqI5ccVVMKqnKyr8kq0s2PQWIrhwRWUo62Jj5/dOEkWg0YqSsRG9wO1QOqLe4riyvJoVzELsfLIhxrVJyLaJNcoZOk6Ld+8vlp1Gqg4Qf1s/w+CRoz/+guTDmWkat0EXYLiRjDyoqNqtPKkE5QmE69JlF4fFhXl+uma4cHKez/B0sParTqJauWftktBSDMVM0XTbIleMB5Fn5Z+wjT9sA35+LOl6I2U/y61ACVVdSZnt39rBN9lsy4pP7jdJlrKRAb/CbOoNB4DNAyzjcIBC3NReZBlpQouxlxB1aEYTt7Gz3nKDWaVOBAfpdonmh8qbD5lmWSBW7vgZSrovN7LirME2Gh8Jk4AOrcK1ua6unAyC5SHT0l2ErmzglF3H1QMjj6W07DMwoF2Ehjr4vigArQOlu2S7datUFhBwAVzWs7OmhIhNHknt6BtHTARUrtOFsr2c+bH58zsWyNIZUrWwtk803a+kuH8VW31WrtEQs/2tsBSoOaeMXyLRWNjIp6Zsk8k8woXeNbwkZqP20lp49QTHKRN9c+SElkkv96UEw4j3mUT+RLH9vRnBjPglmqvU8HSjeluh7SHUHo8vpOhLvRQhcPZ8hXXnHozWOjsXbjrBV3WhfQRtBSDcN0iw82XVCFtjI4oyVnbN/aSylfjvMU9W14eJulDBK+4hFNV7ZQGs1suig+XvPUGwI08TFbNOLN38wZv22VDFszfu9VMM7H0TOpubICrYsD/Or/xrYRXeUMa8yidUU6tMDHHhxxtGfev8IpO04s0tQSQxWmRws1YlUfgqIzkA45otPsQmVeHQRibcqAARs7z0MMiFjV00AocP2N0HmNySBobS5xtKuTaNyZzP4P3OK/PG/BANZ1kALherMpxKNDl9MJDQMyN90dab+29K6vjXcXqm1OusJpVnEAUituWJZp5am8KCBLF71hLLdIjidgsY77xwDaXRqKUUzTeCMlK2SOePvn39s9BwrTfkS67YR/+fwl2SXwuT5K9UB9I6u9ex/jxiv3HB5+DfuN/y/haxtvuh8Vzzf5J5HmkcFYSvheRd1EV3PHPVwGSB/Mk4h9R2DzdCAw7nAJABJ+FQWVbL7LhZnJjAcxSx2riDXyFV5UeWdpIHEmhJhvHZu+gHKZoHORqTd8DvtLhFkD1kH82y/NMFZjIMq+hmnQxx7pywyrXCFGQ2q/3RI9Fuqlr/RmL10qllprHYnmbTEfwovdrW9u038PajeqmK3uTk7gN72+gmf+17r2O0wcOAKkOZaoQ0+CCQmk4iC3S6bz1RNTQEazdnC/egGxku+tqMjHP073tAAAA=" alt="" title="Michael Saylor" width="104" height="104" decoding="async"><img src="data:image/webp;base64,UklGRpAFAABXRUJQVlA4IIQFAADwHgCdASpoAGgAPm0ulEckIiIhKdEdKIANiWkAEhF67jH7yN0Sf37IdYDwnsb32nZQfjp3t7g+g82DgzOXIROLpIqX6GRFfrPnXE0wbkedfekD4LPb8GzXOSqZpLx4ORcrBFUXZ75sBGNN/29bNNZwprDYyaWdhNML8QyeCqoQNYz8MWRXAv5ZzjI0RpyV3QvScb1eQ6q3JIEJP8dnKLHhdcq9XAfKf69fDkA2qR0l2qQor6vHRL5j3rqpIwFg1Hjivqe2HXuHN4PKgB4H7D/uOvwWj16i7n+ulFselApiLCchLzO4uBFcoCy4Q2YcmOps+yOH9w11xxq8VHYTcdoAAOI7Mt2vTFRUKArA1UQXIYOE6vH/GGZzdnemvKdcq4103sFioG+BXL9Rq3ls16oXuqo3iULCyvqDA0uGEF1bj8BLMhkoKLgrLi9DrOMFyUhredp6KrYglokbHIVfUeAbL7cH5zdJSYTvqFqFPofJP009wNjjlpFS0vRgZPKebLt5kflUu1AJ24TzsbR05MeV+E7lLzQgpTsFp+jtdZuMjgF6wmrTxYIhOaupJh6qIQcnET4u/1qC2RQgMiXILwtixmI1kITywreKVuzE3tZ+BmuwyD32bbMFGLNV1GG5MPiL/zm17QwHE8qIrgZ7u2kxosxf06FAv7QCUhJ0z4T/4QTzEmRntx06jb1dSHmwzAbHSaPzKwxCnbYwUhiZwpfMEX3ChwnRupGhxB749aUbQfp97EVFGs0f4gnS35xgHZH3x3Kwe5IkX/k/Hqvg6NqhfxoG2GNI5Zh1Zt0ZVrb9FP5/C686hDuAio5PI/aoyR7nWPR7kquuCbb0gcFbMzlK+l/d9xX2fYiFfaQ1YNpEObfBI1YE8KD+D2Xi1IKpC1klXr2Q9Za7PGHZlluzBfiPnIhu7OUrvM7lXWWALF5Q+J7lvip5yuBB0pueKHqAouaRj8d44X0YYSgVZkVNF9/5b5tNqVMpUepcH2UHSWXIR7fCxXUiyjzUHppiXoZQMDPn6y/lbCMcVtu+BXIk7igQMbZ7MzmQ//33MP3S9bhmxPiDWfeX/RdPzsYV7HWOKdefM5r5lMaC5pm7zsROZ3kCZARaaqzktWBRYKjcoD6NJWzwxfWU0phFfIUUA4CSdHUQNM2TWrnmHMa4uipOgZ/QR0hEqcyY0ho7kDjUpxQtNwCOv8UXSVm/Fq0A1BhEe7guziefau9y9Vyjd02MdrzmfPrj8ONuBgrd700LZ+TuHEUwDAE0aAc414chGyEkXExS9o3k4poS4EehwGCWa2bKs06ZSo949C2vWhlIQu8bLLGbDXJjoBZ6fzdl6VXLa2kt6JvmgZjptv7FXPE23YgNShv/S7cmoYfAmkcGgoqTgtiwon0woa0DkhGluGD1ys8uDdxafIbw/2Y6gAomFDew0LWhCpB31l083XODO65tZIZIbF/mEw99NDTRFYHsYI1NuZLpmmquXTs9rQMQWKKPLujhP7EgZIb4+rRd8M36Ghb3U2wsnJ63jT/BBJneJzjtB7kp/kDIlcxE36P4CEc7r/wBiwKGLEE/ET0BV0H78v9Goe42/bpg+ZA160rhEX1zhRj0PqM+p3J6sOqFb27TV0LnVvDNZN8d4zGMEmkTArDtiUJiwaztkHvia07eKG9K43CpmDjREvxfqN3AjBjiynH2X719q+xdYTeE6kYOUtcclg4AgPpJeCVnC0/wiDaUgcoED15Xhan6y57GpGCCyGkbLr18ZN5lEc4NLHa/XVmjCzQ+lhnfgYIf6FNSe94FyIGtr8lOdAaSssVVsbmhcQWT/DhqqLrvHddtur0GCyFSX8PSEsg/rj3zW+XMYcAeGtBn86eeeSyu//ei/drN1oAAAA==" alt="" title="Natalie Brunell" width="104" height="104" decoding="async"><img src="data:image/webp;base64,UklGRqYDAABXRUJQVlA4IJoDAABQFwCdASpoAGgAPm0ukkWkIqGYKj2oQAbEtIAJCt+rNZsAvg93XE3PfpadT3xZWTdzgpV9agLGwws+yGuzdD8B8neSb/oTzfjlS5TB+XV2bO5biRVc2LVtCm/DMGG4Wyi6kH9EefhZBYP8X6HBRhwjPfn2xX4US+vDyrgHZ8BMHPmjv+t6cyO0kt/kWpL1qfd+GY7OjXuT/IRkyizrizMym2SLrIRLaiByDGX2OTQ2Z4Ij6195qYY/48SaV9ZqOrXbb8AAQGcnQWOjCw2y1lQ82GgNv+9cKNaVEd+S8O+rA9WrxRDxfv1b4HL/KQIm4ImV5uQpAaMKEBCWqgFQ+xx7AxVNCNoT/wQCjg91eqW17ywsVoiEfLbf6IVVdzfuZV9WvV3xxrLWGom3f0qDK7k4/FzqmGBXLt4vjI+q3vG+GHlNwo3OLb5n13xRV07PXzNIfXByTVbGJOdEgnUDQWyFTuVDgJYaHElc79yFMAMJfpuT8sub0FB5uTCjpu1HcYG5Sch4ROSeSDLXqjROQTX0G770P13Vr0bNq+Z26uBIeY+JJT79IFpoMWXTTe7/CUO3kNZq4a28zAoDjUXaNg0m3XOnkosjrJS0rPJ7bdW1l2zD9vumc+maG0oX9orHMGnRITdHaCgm1fgGfOsXNJ/4m14Q+Urq/RW03mxx/Oug+1HLTjqrSAPPbLICGiAEchOXGjk4K3ksImF8mLGU33liWTdPerf+3g7lYcAM11YdneBA5S6kdOKSwFs//QCY51JRIAMGm8Wk6lG2dEni48csRoU7MYVNuX4MFMSPXYtx5c0AjTaKW60IkmSJ3WLUQ+crLua33mhTlVxZ+5O06FGswlOoxM+4ee33akbvX029pXRZ9d8ti/SkkHxMLaG1fJ6q7X32gn/4d4KpNplTyyMpGjlcXsPG2tQUmeK8aVw1omLFib6P+pl4xU2oUhjkqGlzuXCdmOfGEcm/tVWFMcVzosjrhEU3G700ccPtmltft8W9yGoBT+EtZKkmojt3vEjeTwyKG8Cq0U4T/SBGE4QoogAk+/CXMmfhpN5e0GzRalg+7JFbV3VkIox7sSELLArWVlZUV19QqrgiDoznQzO/5SXAH7eto0P4lihyQlOpUpnkvNI0l5Lb01QZvNZSFjbXnBT3OZ4ecp/9JwqFzKExeWaSaPHFQZE0rWtH95WoDRuOlrcuEqwzwASdu/ULO4MX0MqdrQ8+oAAA" alt="" title="Jeff Booth" width="104" height="104" decoding="async"><img src="data:image/webp;base64,UklGRlQFAABXRUJQVlA4IEgFAABQHgCdASpoAGgAPm0uk0YkIqGhK9R8oIANiWkAEhF6sjPbynvXg5mf8M9Ojjh5gweNMP/+VZ+DZqhuT7fLqbtCXKF8G5CZ8NZqU0K0JyNfWeVxr9oF+Z7f2aScYGS8zOTLAdu1mPnt0qkxfQGam6PKWDXRdspff43zUTP4RltJQVlwBFKVLVvOa+dj4AfiYhk3yn5hVrsaEcQlEIbya1/1GkljJNYKUDdfAs/CCEFwT7/dH/YY+zp6Q9pCuvbreAJv+ePeY1DC9fZ+Td9Pwxxd2nS6P4QoPnXnXfglQC0x30X+4e4OnAI1oOmtSHOtUKkHB6qyw4oxM3UKgAAJiwII/Z+Bu/oxjd8me245MAz+kvikq+bTVlfdC5C0gKZpaAFcejq8T2WF3GQUnYxLu8L46cl4WDddE2z4bvi7wmbcUW9GQvy354iakNgAI0dqHzMi7054vNqtydIj0n8rUN83H1cG72bQnzdRojkA7ftxrRE9oZ3LYRMu3tCS4icMKT1BJoMN1rKfSBKkMlyV2bJgozp+/pl6g9pNLEngYPNeB/5rdVQePGV+hyPkXfn/eWhjX8PSzvLirLF2VJRnZqv74U9XNqbYmhrTfSy+bOA9d8RwwvZGLuzDVX2wwbApoMSnuiaTbhat9gnbLsDmW/LzNkG4i5cP2d9nYBhhqAtQRyYf/EXwO+fypU+8HniSV2CQEgdKuUfm8YMJN33XKt/+wuAtBtT3FbbtSoJ9YwlLBYfNB9OGu4XUEYvNJDp2bPPBojCOQTSOwrw+8eTzhyS7n831y/SOg6t+QMfnZzH3nvyAvVWDvZ9BTUB3IpSW+m4mq88/F8ptZL0thhUYTXe7lBrJjc4wa6zTTlyLUofYTbduUlD8EXShB/lfu4OXiQQ6U90FpgWbSK9dd1bZapgHJgchm8Gv1eVxD9jf8+w8pBF0CirCyOKw6S7fUT+Nc6LQZgzAG32Pf0r42LfK1H1hophaIs/FmQjFnlCp4UJGvLYT1iPWEs8S1x7dAONNDwnvQHWzuZfr9LjvkV0tKVBJNGS7ngqnIsSkZ7+P8yioltS+EuG34/gUHLtYxCPoZAZli+QSd/tzVLceVpPSVc1wZaPvQzSwHnydJZobu2Pdlsu/jxi4iA4UbcCs4aSKKS2yZ8QmZMqjnZSCqSMAjj/QOOVexAS8PMiPALrdoMP0FCg5UlmyJO2ll4ovVcljlAQD1AdcJoVv8xa8rjquaxUZ81wD6yXJFdGyVdQiO2rODpvkFU2iIxKD9z1TsLzxvtBuVRqdJunPmiDH81RP9MP/XPfgWzaDMst/n5Nz35KhSUkTlPXhb7sy5lfOj+4UCHSqso5qjmWV5rHjhGC6XfTE5TsvgN41Ql64qfDSIJxr+xZ0QnYBFymMsy2nu7Flpce/z0xMaYGaAWxfrmvfJb0s/V7k3lB4bzf/XeStbca6qkFceRX+D7q0bKMyk6IZp+kBytrFYpeTkLwc4C5E7YOOX2FDvXtd9nAdBNKx/u5ujJqr/xMd3b/F6hs7KFyNfi6VauHuYp3ngLnin73rRVgEQySwHpt5xSnkuWWTt++ADhKKM4pLOAC38MS12Sbegy2ttsB5bZ/4sK61n+kKr3g9oCOdCTlVuIuIlBBCFa71RtcA/eYvRxnY4fX94TIMf9ucEdykjPA6sgdvkShrhvXEvOrQOJGd172JXZL17fbXcMKVfTNjJci2TTRa1fH/FwXFtrGPTqKsPJYxyLVWHesj0t5c8r5GEUGRm40gqk7XWEs6yq6/BxL30ozGAbqXini2TbYiktxAAA==" alt="" title="Jordan Schachtel" width="104" height="104" decoding="async"><img src="data:image/webp;base64,UklGRq4EAABXRUJQVlA4IKIEAABwHACdASpoAGgAPm0uk0WkIqGXKjY4QAbEtIAJB7/YvKXX6FWUXW7h2Ma4Rebg/+jxQdaKOLw79TSIoGwdTc9SDxw0NJN/lXT9pX854wQXnFk3yP8W3AEajq6mI0Z45OAtID3FEfoJpT65EXSMlZeuTpTDpAtfzsKhv+Eq3f2NantfYN1pChffgTp1QBpQBm8TTZWMYHSXDq/stRNO/HU5rl7grevWP/vFZ7wC1XQ/2TOzLzITAVExfCz3DpYIo6BmofYAVvIMc8g/dHjTlnOTxPwded17qQI0OTOz9WBDUWzHHb5F7FsAxv4JAABDoXRQ1EkNaWR31c2t6dUrVk7sLaGqeA5BYFL9zoSVXx1LVuxwnhtHcWFnDKGECZnkuUnHgC2esMk4UUa9czhlcWhPW/ZClYyajlsB2h9jBVHBcHyQ1wQPesJGPs53zGfSvoA9ZLCR7LBaOyEX5Z1mtgny9Ivk3cd5aKPPD17WHGz/bZlpb8bE7k5nl3DUOZHmcpLprUSpJg3nt7DMTEyEniamysStRudZBImlTJe5/Y+1ZIamPnGs5NTJUtDvHV+rGXWujpx8XdOyk8C8P0EgK4iv+FIKGdwiW5neRfInAeeYJUEO/ZaQzqVA4aolOvuJdJIs0Xj+sXx/OJc/vaOOMWA5tTbDLiKebeQTI+xz5inPEhSFq2MJi356CGCAXZ3O3/VyUxw5HZdpq4u4sFeWU7hu/hAl/P2/EZcNh3uSY0RntWo0budqL6eyWSYEhNg1R6wRlvb73g6KEVGI5M6hYNRCxT9Epl8fneHbexJioW1Sr2HoO1k2VGH5M+Bj+4abem9JylYm6NNnn6r/3sacSrsz/Y9VmC1Whc6cG16/8zaPX+NKV+cAz3q5uDxg/giOHNRoiChq8aJ1Wlg62Eu2y/Tqu6rx+kfC6X9vlkHKE9tXbwnw+ZGd1y50ylkjwwQtMaOHRa0BsvFIcGU9ph7GM0189+lnsSZrlGPR25IPaMg/76rLgKnB9agUTC78hUV0LfA+b3dpDPypwU0wVSFfIxCLlhorPyWvyqBVt5E6t+wPgsKln+aHLkDHWkfbsEJWJVN4UdC+p0IzZ/P6yOArPiHvNlKmspZmpZkmoUOGLBF/JJi9/AB5O/XRpd2Jgufq0pq4po+nDKZiVT6AYVC+tdI9TcYSLGyKIL/Ioz4w9aATvZNTrtNpSwL5dHXwQHcud6v6SevievkxSAo0iFEUb6En1arf4aOF5ejYVoWzCWraud1kCw/Xv0scPSacpJ1Y3g7pTSjqxbZcU54Q9xfvsiOcc/PVJvJCDsssJczc/3YciX/kUYMcI9csjC8KkfzXwdzfPfyBMx4Es7FRNM2rrSi26+4zi7d1ikJDHyEvLH3D3qiwZDyj5RAsnThLkH1B2tOqI2NJXSLsqUFoE6zdmdjvTHxUF7h6LBSxXcM0bewguLEExKJkL3eFF7pJtY3GNgjiZn776iOM07L1xpjL0qEP4iw/GpoHYAywokzlXn7MQVRppdzqqGC62/TtwWzadPR71oN0vtYf1cGhXfGlR95nhjTtx7tF65wDUBEZT8wwAAAA" alt="" title="Sam Callahan" width="104" height="104" decoding="async"><img src="data:image/webp;base64,UklGRhwFAABXRUJQVlA4IBAFAAAwHACdASpoAGgAPmkqj0WkIqEay+TAQAaEtIAJCG1bmsXljstAtKNraA734Hj8886PFtUVbiTS7kmc1a0dd92e6EsfGaOD/zA/BAp+w9tHgNIzi1aZ0Apkh9ILf5h64Sv0Kw7xE+eZJHUWv7eAWHxj669DJWP2flT+ujtFkswN9rxI5tucbeBqJYez48bU9tgr0Wofyqu9KevL22ZsYBXFfAF1w5gcd1hwlkAT83BflQfc4NDSRZrzn6ELWmQF/EN92vE+KNb+vhUK/M8v5nkMp9DpjU6aTpxnkg4QopqpaKUfBLSKm7XmPwAAGj0/LyNzCWvR9vwPY+82qNj69XAMnw5Z2SdbOrXKzXR+dneyjf4Pwfxy1zlUDSuGu9CbelDbXb2PVWeh+F7Po27sTYTubRZYlPo8mb+xuD4G1rC7hjLSp5dkt4BbKnXwOa9NDP5i+J4i0AfQB5i2Ml+wSC9YINO5PsaXcNa7fTsac125CXwfibDQh8tHccIpSfpHgpacK9Z+LEesQ2jIgfkisMOjmfh+UuP8jiemAJqQaDkgiXqGYbKvKCSHh1NF6igwa0yw2p0cpCTizD+bcxBSGd1hHtR2jr7aUme8Sa3jRNB0cOOMbn7yLQvK21rQ6TxP975vUMzmAVISR+ZEWmhQ4v+Rk2BTfevJ73BwBmU7Jl7g2EgoLiW+ogJb7JnBkf6flY+x0GC2cImSgeRhdmpifbg0VEpmIxjFMHsNtrRarUjL0/b70AX1ingvljT2+Rf9ux9bnNHyMK03elrq00/3Wd2QlacbOv8jT5I+AnakNzPxnuFFnVrFd7dmRdv6Obgx3cFAkSd6EF7fNhEgToU3+QqdxRaXQO5GW9ZPaDxqBg+l6VOhqzLyN1P+qnNRI7WUKK5wEFrAm17sPv9qAPcTE/NBdWeMDKiFwRwyOmEVQqkloQrfR0klwBxwH3jRK7AtInu5hgppbKsu8SlZvuv8lyj6wPEZludm7v1W+TN5U9HG/Krz6Darii2NIQYgQ88khP2d8wuc5FJ4Qjj/AylJ8rG+FEHP2uOms97lFBLUmiV/W6CTLlWb+h3/USzk7khy+Ucd5HMkJVa1fsYqoCYXwZFFfiOPpNOa+TDckuJmHXmXlY9iIprneJJvL1X9lQInhMra9VTm5Ufm9Spe0f2kTt5ruTKlsGwm2aZjPg2+26ltuVrDnDUqpUtIJa3rW/678hXEbYV+ox0wUUAwDKjUl8xlfh9wRcE9qQxSWTkM7dG/zoPmzj4wDhWEa7P39pvXAx6oAlVwD6CS/9fmghWu6NKjQ0H2Z5Tlz7fMpa9sYTD4yRqPjLrb9XA2h05cDijYWH2ekvFyjKmBD7kPoI25LasA+KbVlgWMVDm1hwykluClZwpzA2ia/Ir5VFDZqztn91bQvHnwN6BSU8PhtORtha4lQK9ZIZfFmA97ozkvjYedp63PIHolwewsBNtMma1aBErxKO/RR7XciPqz+/xLM92WxVS2a4BKx2bHQCbsqz+PjgSRAYEWszX/pBR/CqUh35CjQaW1JwHi2NkhHMG5rWyQF6UTLQn2IejT3l1WguGqoZc6f1F+GMmtwyktvEYSmqnHuQGTazXn/XEATc27A83tlejEgE6kjGJw3tL/lQiucR0LGirMTJXMA32Tr9PDbY/NwytlF7teHcoox/vkHDpaurJn9eMYKFerKH2Pb4U//EmMy3kk33aRgeLYbVzwwAA=" alt="" title="Eric Yakes" width="104" height="104" decoding="async"><img src="data:image/webp;base64,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" alt="" title="Terence Michael" width="104" height="104" decoding="async"><img src="data:image/webp;base64,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" alt="" title="Maurizio" width="104" height="104" decoding="async"></span>
+      <span class="h8__with"><span class="h8__with-l">With Michael&nbsp;Saylor, Natalie&nbsp;Brunell, Jeff&nbsp;Booth, and&nbsp;more</span><span class="h8__with-s">Speakers</span>&nbsp;<span class="h8__arr" aria-hidden="true">&rarr;</span></span>
+    </a>
     <div class="hero__ctas">
       <a class="btn" href="/tickets">Get Your Summit Pass <span class="btn__arrow">→</span></a>
       <a class="btn h8__stay" href="https://book.passkey.com/gt/221585758?gtid=45ddbbd9fc5ddc12358c8218e7a87edc" target="_blank" rel="noopener">Stay at the Fontainebleau <span class="btn__arrow">→</span></a>
