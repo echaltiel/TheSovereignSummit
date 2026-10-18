@@ -420,6 +420,7 @@
   .f8__d br{display:inline}
   .f8__grid{border:0;border-radius:0}
   .f8__card{border-color:rgba(244,236,224,.15)}
+  .f8__card + .f8__card{border-left-width:max(0px,calc(1px - var(--cap-on)))}   /* the column hairline is for the picture grid only */
   .f8__t{letter-spacing:.04em}
 }
 @media (max-width:340px){
