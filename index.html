@@ -232,7 +232,9 @@
    moving anything (the margins take it back). */
 .h8__faces{display:flex;align-items:center;gap:var(--g-with);width:max-content;max-width:calc(100% + 4px);max-height:var(--fw-on);overflow:hidden;margin:calc(min(var(--g-faces),var(--fw-on)) - min(6px,var(--fw-on))) -4px calc(min(6px,var(--fw-on)) * -1) 0;padding:min(6px,var(--fw-on)) 4px min(6px,var(--fw-on)) 0;color:rgba(244,236,224,.92);text-decoration:none}
 .h8__pics{display:flex;flex:none;padding-left:calc((var(--face) + 4px) * .24)}
-.h8__pics img{display:block;flex:none;box-sizing:content-box;width:var(--face);height:var(--face);margin-left:calc((var(--face) + 4px) * -.24);border:2px solid #121d33;border-radius:50%;background:#3a4252;object-fit:cover}
+.h8__pics img{position:relative;display:block;flex:none;box-sizing:content-box;width:var(--face);height:var(--face);margin-left:calc((var(--face) + 4px) * -.24);border:2px solid #121d33;border-radius:50%;background:#3a4252;object-fit:cover}
+/* the first face sits on top, each later one tucks behind the last */
+.h8__pics img:nth-child(1){z-index:8}.h8__pics img:nth-child(2){z-index:7}.h8__pics img:nth-child(3){z-index:6}.h8__pics img:nth-child(4){z-index:5}.h8__pics img:nth-child(5){z-index:4}.h8__pics img:nth-child(6){z-index:3}.h8__pics img:nth-child(7){z-index:2}.h8__pics img:nth-child(8){z-index:1}
 .h8__with{font-family:var(--fb);font-weight:600;font-size:var(--f-with);line-height:1.25;letter-spacing:0;white-space:nowrap;color:rgba(244,236,224,.92);text-shadow:0 1px 10px rgba(4,10,24,.8);transition:color .18s ease}
 .h8__with-s{display:none}
 .h8__arr{display:inline-block;transition:transform .18s ease}
