@@ -115,7 +115,7 @@
   --u:calc((var(--room) - var(--k)) / var(--n));
   /* hero */
   --f-title:min(calc((min(100vw,var(--max)) - 4rem) / 10.4),max(2.2rem,min(clamp(2.9rem,7.6vw,6.2rem),calc(var(--u) * 99.2))));
-  --f-venue:calc(var(--f-title) * .58);
+  --f-venue:calc(var(--f-title) * .7);
   --f-date:max(.8rem,min(clamp(.94rem,1.45vw,1.31rem),calc(var(--u) * 21)));
   --g-where:max(5px,min(14px,calc(var(--u) * 14)));
   --g-date:0px;
@@ -134,15 +134,13 @@
   --g-ctas:max(.75rem,min(clamp(1.75rem,2.6vw,2.125rem),calc(var(--u) * 34)));
   --h-btn:max(3rem,min(4.75rem,calc(var(--u) * 84)));
   --h-btn2:var(--h-btn);
-  --g-link:8px;                                 /* hotel link under the button */
-  --h-link:calc(var(--g-link) + var(--f-with) * 1.25);
   --g-btn:14px;
   --f-btn:min(2.6vw,max(1.125rem,min(1.5rem,calc(var(--u) * 28))));
   --f-btn2:calc(var(--f-btn) * .92);
   --px-btn:max(28px,min(52px,calc(var(--u) * 52)));
   --px-btn2:max(22px,min(40px,calc(var(--u) * 40)));
   --h-clock:0px;                                /* extra row when the ticket countdown shows */
-  --h-hero0:calc(var(--f-title) * 1.589 + var(--g-where) + var(--g-pitch) + var(--f-lead) * 1.4 + var(--g-ctas) + var(--h-btn) + var(--h-link) + var(--h-clock));
+  --h-hero0:calc(var(--f-title) * 1.589 + var(--g-where) + var(--g-pitch) + var(--f-lead) * 1.4 + var(--g-ctas) + var(--h-btn) + var(--h-clock));
   --h-hero:calc(var(--h-hero0) + var(--h-faces));
   --fit:calc(var(--room) - var(--h-hero0) - var(--h-cards) - 1rem);   /* room for the faces row with the hero padding at its floor */
   /* pillars */
@@ -244,10 +242,8 @@
 .h8 .hero__ctas{display:flex;flex-wrap:wrap;align-items:center;gap:var(--g-btn) 16px;margin:var(--g-ctas) 0 0 !important}
 .h8 .hero__ctas .btn{width:auto;min-height:var(--h-btn);padding:0 var(--px-btn);font-size:var(--f-btn);border-radius:999px;box-shadow:0 10px 34px rgba(255,105,65,.32);transition:transform .18s ease,box-shadow .18s ease,background .18s ease,border-color .18s ease}
 .h8 .hero__ctas .btn:hover{transform:translateY(-2px);box-shadow:0 16px 44px rgba(255,105,65,.45)}
-.h8__stay{display:inline-block;margin-top:var(--g-link);font-family:var(--fb);font-weight:600;font-size:var(--f-with);line-height:1.25;white-space:nowrap;color:rgba(244,236,224,.92);text-shadow:0 1px 10px rgba(4,10,24,.8);text-decoration:none;transition:color .18s ease}
-.h8__stay:hover{color:var(--cream)}
-.h8__stay:hover .h8__arr{transform:translateX(3px)}
-.h8__stay:focus-visible{outline:2px solid var(--cream);outline-offset:4px;border-radius:999px}
+.h8 .hero__ctas .h8__stay{min-height:var(--h-btn2);padding:0 var(--px-btn2);font-size:var(--f-btn2);font-weight:600;color:var(--cream);background:rgba(0,24,57,.55);border:1px solid rgba(244,236,224,.6);box-shadow:none}
+.h8 .hero__ctas .h8__stay:hover{background:rgba(0,24,57,.75);border-color:var(--cream);box-shadow:none}
 
 /* Countdown box (ticket-countdown.js) keeps its place in the button row. Its
    height follows the buttons here, in step with the sizes above, so the height
@@ -274,12 +270,11 @@
 }
 
 @media (prefers-reduced-motion:no-preference){
-  .h8__line,.h8__where,.h8__pitch,.h8__faces,.h8 .hero__ctas,.h8__stay{opacity:0;transform:translateY(16px);animation:h8Rise .65s cubic-bezier(.22,.75,.3,1) forwards}
+  .h8__line,.h8__where,.h8__pitch,.h8__faces,.h8 .hero__ctas{opacity:0;transform:translateY(16px);animation:h8Rise .65s cubic-bezier(.22,.75,.3,1) forwards}
   .h8__where{animation-delay:.12s}
   .h8__pitch{animation-delay:.24s}
   .h8__faces{animation-delay:.3s}
   .h8 .hero__ctas{animation-delay:.36s}
-  .h8__stay{animation-delay:.44s}
   @keyframes h8Rise{to{opacity:1;transform:none}}
 }
 
@@ -334,7 +329,7 @@
     --cap-lh:1.3;
     /* the hero at its floors: headline, venue, date, lead, highlight, buttons, gaps and padding */
     --h-clock-min:0px;
-    --hero-min:calc(var(--t1) * 1.02 + 4px + min(calc(var(--col) / 10),1.15rem) * 1.05 + 3px + .9rem + 7px + min(calc(var(--col) / 23.1),.875rem) * 1.4 + 3px + min(calc(var(--col) / 14.6),1rem) * 1.66 + 8px + 2.75rem + 8px + 14.4px + var(--h-clock-min) + 12px + 4px);
+    --hero-min:calc(var(--t1) * 1.02 + 4px + min(calc(var(--col) / 10),1.15rem) * 1.05 + 3px + .9rem + 7px + min(calc(var(--col) / 23.1),.875rem) * 1.4 + 3px + min(calc(var(--col) / 14.6),1rem) * 1.66 + 8px + 2.75rem + 6px + 2.625rem + var(--h-clock-min) + 12px + 4px);
     --cap-on:max(0px,min(calc((var(--room) - var(--k) - var(--h-cards-rows) - var(--hero-min)) * 9999),calc((var(--cap-fs) - 11.5px) * 9999)));
     --lab-at:540px;                                       /* the "On stage" label shows on screens taller than this */
     --lab-on:max(0px,calc((var(--vh8) - var(--lab-at)) * 9999));
@@ -363,7 +358,7 @@
     --u:calc((var(--room) - var(--h-cards) - var(--t1) * 1.02 - var(--k) - var(--f8-hf,0px)) / var(--n));
     /* gaps shrink faster than type as the screen gets shorter: at 40% of full size they are at their floors */
     --g-where:max(4px,min(12px,calc((var(--u) - .4px) * 20)));
-    --f-venue:min(calc(var(--col) / 10),max(1.15rem,min(1.6rem,calc(var(--u) * 25.6))));
+    --f-venue:min(calc(var(--col) / 9.9),max(1.5rem,min(1.75rem,calc(var(--u) * 42))));
     --g-date:max(3px,min(6px,calc(var(--u) * 6)));
     --f-date:max(.75rem,min(.84rem,calc(var(--u) * 13.44)));
     --g-pitch:max(5px,min(19px,calc((var(--u) - .4px) * 31)));
@@ -372,7 +367,7 @@
     --h-btn:max(2.75rem,min(3.25rem,calc(var(--u) * 52)));
     --g-btn:max(6px,min(12px,calc((var(--u) - .4px) * 20)));
     --h-btn2:max(2.625rem,min(3rem,calc(var(--u) * 48)));
-    --h-row2:var(--h-link);                                /* hotel link under the button */
+    --h-row2:calc(var(--g-btn) + var(--h-btn2));          /* second button, stacked */
     --h-cbox:max(3.4rem,var(--h-btn),calc(var(--u) * 60)); /* countdown box, when it shows */
     --f-btn:min(5.3vw,max(1rem,min(1.2rem,calc(var(--u) * 19.2))));
     --f-btn2:min(4.6vw,max(.94rem,min(1.06rem,calc(var(--u) * 17))));
@@ -432,7 +427,7 @@
 }
 /* 601 to 699px wide: both buttons share one row. */
 @media (min-width:600.1px) and (max-width:699.98px) and (min-height:575px){
-  .fold8{--h-row2:var(--h-link);--h-btn2:var(--h-btn);--g-btn:12px;--f-btn:min(3.1vw,calc((var(--col) - 124px) / 23),max(1rem,min(1.2rem,calc(var(--u) * 19.2))));--f-btn2:min(2.7vw,calc((var(--col) - 124px) / 26.1),max(.94rem,min(1.06rem,calc(var(--u) * 17))));--px-btn:26px;--px-btn2:20px}
+  .fold8{--h-row2:0px;--h-btn2:var(--h-btn);--g-btn:12px;--f-btn:min(3.1vw,calc((var(--col) - 124px) / 23),max(1rem,min(1.2rem,calc(var(--u) * 19.2))));--f-btn2:min(2.7vw,calc((var(--col) - 124px) / 26.1),max(.94rem,min(1.06rem,calc(var(--u) * 17))));--px-btn:26px;--px-btn2:20px}
   .h8 .hero__ctas{gap:12px}
   .fold8:has(.price-clock){--k:72px;--h-clock:calc(12px + var(--h-cbox));--h-clock-min:calc(12px + 3.4rem)}
 }
@@ -454,7 +449,7 @@
     --n:472;
     --u:calc((var(--room) - var(--k)) / var(--n));
     --f-title:min(calc((min(100vw,var(--max)) - 4rem) / 10.4),max(1.75rem,min(4rem,7.6vw,calc(var(--u) * 64))));
-    --f-venue:calc(var(--f-title) * .58);
+    --f-venue:calc(var(--f-title) * .7);
     --f-date:max(.75rem,min(1rem,calc(var(--u) * 16)));
     --g-where:max(3px,min(8px,calc(var(--u) * 8)));
     --g-date:0px;
@@ -467,13 +462,13 @@
     --f-with:max(12px,min(14px,calc(var(--u) * 14),calc((var(--col) - (var(--face) + 4px) * var(--nf) - var(--g-with)) / 28.8)));
     --h-btn:max(2.75rem,min(3.25rem,calc(var(--u) * 52)));
     --h-btn2:var(--h-btn);
-    --h-row2:var(--h-link);
+    --h-row2:0px;
     --g-btn:12px;
     --f-btn:max(1rem,min(1.06rem,calc(var(--u) * 17)));
     --f-btn2:max(.94rem,min(.97rem,calc(var(--u) * 15.5)));
     --px-btn:26px;
     --px-btn2:20px;
-    --h-hero0:calc(var(--f-title) * 1.589 + var(--g-where) + var(--g-pitch) + var(--f-lead) * 1.4 + var(--g-ctas) + var(--h-btn) + var(--h-link) + var(--h-clock));
+    --h-hero0:calc(var(--f-title) * 1.589 + var(--g-where) + var(--g-pitch) + var(--f-lead) * 1.4 + var(--g-ctas) + var(--h-btn) + var(--h-clock));
     --h-hero:calc(var(--h-hero0) + var(--h-faces));
     --c-pt:max(6px,min(16px,calc(var(--u) * 16)));
     --lab-on:max(0px,calc((var(--vh8) - 360px) * 9999));  /* the "On stage" label steps out under 360px of height */
@@ -704,9 +699,9 @@
     </a>
     <div class="hero__ctas">
       <a class="btn" href="/tickets">Get Your Summit Pass <span class="btn__arrow">→</span></a>
+      <a class="btn h8__stay" href="https://book.passkey.com/gt/221585758?gtid=45ddbbd9fc5ddc12358c8218e7a87edc" target="_blank" rel="noopener">Stay at the Fontainebleau <span class="btn__arrow">→</span></a>
       <div id="priceClockMount"></div>
     </div>
-    <a class="h8__stay" href="https://book.passkey.com/gt/221585758?gtid=45ddbbd9fc5ddc12358c8218e7a87edc" target="_blank" rel="noopener">Stay at the Fontainebleau&nbsp;<span class="h8__arr" aria-hidden="true">&rarr;</span></a>
   </div>
 </section>
 
