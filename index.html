@@ -321,9 +321,9 @@
        done with lengths, not media queries, so nothing flips when a phone's
        toolbar slides away. */
     --pu:calc((var(--vh8) - 560px) / 240);                /* 0px at 560px tall, 1px at 800px */
-    --f-ct:max(.72rem,min(.82rem,calc(var(--col) / 29))); /* pillar titles */
+    --f-ct:max(.9rem,min(1rem,calc(var(--col) / 22)));    /* pillar titles */
     --tcol:calc(var(--f-ct) * 7.7);                       /* title column: "AND BEYOND" runs 7.58em */
-    --px:clamp(10px,calc(4.6vw - 6.5px),15px);            /* card side padding */
+    --px:0px;                                             /* no box, so no card side padding */
     --gx:clamp(10px,calc(4.6vw - 6.5px),16px);            /* space between title and caption */
     --cap-fs:min(.8125rem,calc((var(--col) - 2px - 2 * var(--px) - var(--tcol) - var(--gx)) / 16.9));  /* longest caption line: 16.1em, plus 5% */
     --cap-lh:1.3;
@@ -412,6 +412,17 @@
   .f8__art{display:none}
   .f8__d{display:block;min-height:0;max-height:min(10rem,var(--cap-on));margin:0 calc(4px - var(--px)) 0 0;padding:0;overflow:hidden;text-align:left;font-size:var(--cap-fs);line-height:var(--cap-lh);text-wrap:wrap} /* may run into the card's right padding, so a wider fallback font still fits each line */
   .f8__d br{display:inline}
+  /* On Stage on phones: the hero photo runs on behind the rows and fades to
+     navy by the last one; the rows lose their box and keep hairlines only. */
+  .fold8{position:relative;overflow:hidden}
+  .h8{position:static;overflow:visible}
+  .f8{position:relative;z-index:2;background:linear-gradient(180deg,rgba(0,24,57,0) 0,rgba(0,24,57,.55) 30%,rgba(0,24,57,.92) 62%,var(--ink) 85%);border-top:0}
+  .f8::before{content:"";position:absolute;left:0;right:0;top:calc(-1 * var(--pad));height:280px;z-index:-1;pointer-events:none;background:radial-gradient(70vw 240px at 50% 0,rgba(255,105,65,.1),rgba(255,105,65,0) 70%)}
+  .f8 > .wrap{position:relative}
+  .fold8 .marquee{position:relative;z-index:2}
+  .f8__grid{border:0;border-radius:0}
+  .f8__card{border-color:rgba(244,236,224,.15)}
+  .f8__t{letter-spacing:.04em}
 }
 @media (max-width:340px){
   .fold8{--nf:5.56}
