@@ -368,7 +368,7 @@
     --g-date:max(3px,min(6px,calc(var(--u) * 6)));
     --f-date:max(.75rem,min(.84rem,calc(var(--u) * 13.44)));
     --g-pitch:max(5px,min(19px,calc((var(--u) - .4px) * 31)));
-    --f-lead:min(calc(var(--col) / 22),max(.9375rem,min(1.125rem,calc(var(--u) * 20))));   /* wraps to two lines on phones */
+    --f-lead:min(calc(var(--col) / 29.8),max(.9375rem,min(1.125rem,calc(var(--u) * 20))));  /* one line: the sentence runs 28.7em */
     --g-ctas:max(8px,min(30px,calc((var(--u) - .4px) * 50)));
     --h-btn:max(2.75rem,min(3.25rem,calc(var(--u) * 52)));
     --g-btn:max(6px,min(12px,calc((var(--u) - .4px) * 20)));
@@ -377,7 +377,7 @@
     --h-cbox:max(3.4rem,var(--h-btn),calc(var(--u) * 60)); /* countdown box, when it shows */
     --f-btn:min(5.3vw,max(1rem,min(1.2rem,calc(var(--u) * 19.2))));
     --f-btn2:min(4.6vw,max(.94rem,min(1.06rem,calc(var(--u) * 17))));
-    --h-rest:calc(var(--g-where) + var(--f-venue) * 1.05 + var(--g-date) + var(--f-date) * 1.2 + var(--g-pitch) + var(--f-lead) * 2.8 + var(--f8-hf,0px) + var(--g-ctas) + var(--h-btn) + var(--h-row2) + var(--h-clock));
+    --h-rest:calc(var(--g-where) + var(--f-venue) * 1.05 + var(--g-date) + var(--f-date) * 1.2 + var(--g-pitch) + var(--f-lead) * 1.4 + var(--f8-hf,0px) + var(--g-ctas) + var(--h-btn) + var(--h-row2) + var(--h-clock));
     --pad:max(6px,min(32px,calc((var(--room) - var(--h-cards) - var(--t1) * 1.02 - var(--h-rest)) / 2)));
     /* the headline takes what is left: one line, or two when two fit */
     --t-left:calc(var(--room) - var(--h-cards) - var(--h-rest) - 2 * var(--pad));
@@ -394,7 +394,6 @@
   .h8__venue{display:block;white-space:normal}
   .h8__date{display:block;margin-top:var(--g-date);letter-spacing:.22em}
   .h8__pitch{display:block}
-  .h8__lead{white-space:normal}
   /* faces: "Speakers" instead of the names; the row folds to nothing when it does not fit */
   .h8__faces{max-height:var(--f8-fon,0px);margin:calc(min(var(--g-faces),var(--f8-fon,0px)) - min(6px,var(--f8-fon,0px))) -4px calc(min(6px,var(--f8-fon,0px)) * -1) 0;padding:min(6px,var(--f8-fon,0px)) 4px min(6px,var(--f8-fon,0px)) 0}
   .h8__with{font-family:var(--fm);font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(244,236,224,.84)}
