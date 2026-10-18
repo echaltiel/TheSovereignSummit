@@ -149,7 +149,7 @@
   --h-label:1.053rem;
   --g-label:max(7px,min(14px,calc(var(--u) * 14)));
   --ct-pt:max(9px,min(15px,calc(var(--u) * 15)));
-  --f-ct:max(.9rem,min(clamp(1.06rem,1.45vw,1.28rem),calc(var(--u) * 20.5)));
+  --f-ct:max(1.05rem,min(clamp(1.25rem,1.7vw,1.5rem),calc(var(--u) * 24)));
   --ct-pb:max(7px,min(11px,calc(var(--u) * 11)));
   --g-art:max(2px,min(6px,calc(var(--u) * 6)));
   --h-art:max(0px,min(160px,calc(var(--u) * 160)));
@@ -182,7 +182,7 @@
 @media (min-width:700px) and (max-width:1023.98px){
   .fold8{
     --n:876;
-    --f-ct:min(1.9vw,max(.8rem,min(1rem,calc(var(--u) * 16))));
+    --f-ct:min(2.2vw,max(.95rem,min(1.2rem,calc(var(--u) * 19))));
     --h-art:max(0px,min(130px,calc(var(--u) * 130)));
     --f-cap:.75rem;
     --h-cap:calc(.75rem * 1.4 * var(--cap-lines) + var(--cap-pt) + var(--cap-pb));
@@ -203,7 +203,8 @@
 }
 
 /* ---- Hero ---- */
-.h8{position:relative;overflow:hidden;flex:1 0 auto;display:flex;flex-direction:column;justify-content:center;padding:calc(var(--header-h) + var(--pad)) 0 var(--pad)}
+.fold8{position:relative;overflow:hidden}
+.h8{position:static;overflow:visible;flex:1 0 auto;display:flex;flex-direction:column;justify-content:center;padding:calc(var(--header-h) + var(--pad)) 0 var(--pad)}
 /* Brighter than before: no desaturation, and the crop sits on the beach and pools. */
 .h8 .hero__bg img,.h8 .hero__bg > video{filter:none}
 .h8 .hero__bg > .hero__poster img,.h8 .hero__bg > video{object-position:center 22%}
@@ -279,11 +280,16 @@
 }
 
 /* ---- On stage: the four pillars (same look as the mission page cards) ---- */
-.f8{flex:none;padding:var(--c-pt) 0 var(--c-pb);background:var(--ink);border-top:1px solid var(--line)}
-.fold8 > .marquee{flex:none}
+/* On Stage: the hero photo runs on behind the section and fades to navy by
+   the bottom; one faint coral glow at the top; no boxes, hairlines only. */
+.f8{position:relative;z-index:2;flex:none;padding:var(--c-pt) 0 var(--c-pb);background:linear-gradient(180deg,rgba(0,24,57,0) 0,rgba(0,24,57,.55) 30%,rgba(0,24,57,.92) 62%,var(--ink) 85%)}
+.f8::before{content:"";position:absolute;left:0;right:0;top:calc(-1 * var(--pad));height:280px;z-index:-1;pointer-events:none;background:radial-gradient(min(70vw,900px) 240px at 50% 0,rgba(255,105,65,.1),rgba(255,105,65,0) 70%)}
+.f8 > .wrap{position:relative}
+.fold8 > .marquee{position:relative;z-index:2;flex:none}
 .f8__eyebrow{margin:0;font-family:var(--fm);font-size:.81rem;font-weight:700;line-height:1.3;letter-spacing:.18em;text-transform:uppercase;color:rgba(244,236,224,.78)}
 .f8__grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:var(--g-label)}
-.f8__card{margin:0;display:flex;flex-direction:column;overflow:hidden;border:1px solid rgba(244,236,224,.25);border-radius:2px;background:#020c1e}
+.f8__card{margin:0;display:flex;flex-direction:column;overflow:hidden;border:0;border-radius:0;background:transparent}
+.f8__card + .f8__card{border-left:1px solid rgba(244,236,224,.15)}
 .f8__t{position:relative;margin:0;padding:var(--ct-pt) 16px var(--ct-pb);font-family:var(--fb);font-size:var(--f-ct);font-weight:800;line-height:1;letter-spacing:.06em;text-transform:uppercase;white-space:nowrap;color:var(--cream)}
 .f8__t::after{content:"";position:absolute;left:16px;bottom:0;width:24px;height:2px;background:var(--gold)}
 .f8__art{position:relative;flex:none;height:var(--h-art);margin-top:var(--g-art);overflow:hidden;-webkit-mask-image:linear-gradient(180deg,transparent 0,#000 7%,#000 82%,transparent 100%);mask-image:linear-gradient(180deg,transparent 0,#000 7%,#000 82%,transparent 100%)}
@@ -412,14 +418,6 @@
   .f8__art{display:none}
   .f8__d{display:block;min-height:0;max-height:min(10rem,var(--cap-on));margin:0 calc(4px - var(--px)) 0 0;padding:0;overflow:hidden;text-align:left;font-size:var(--cap-fs);line-height:var(--cap-lh);text-wrap:wrap} /* may run into the card's right padding, so a wider fallback font still fits each line */
   .f8__d br{display:inline}
-  /* On Stage on phones: the hero photo runs on behind the rows and fades to
-     navy by the last one; the rows lose their box and keep hairlines only. */
-  .fold8{position:relative;overflow:hidden}
-  .h8{position:static;overflow:visible}
-  .f8{position:relative;z-index:2;background:linear-gradient(180deg,rgba(0,24,57,0) 0,rgba(0,24,57,.55) 30%,rgba(0,24,57,.92) 62%,var(--ink) 85%);border-top:0}
-  .f8::before{content:"";position:absolute;left:0;right:0;top:calc(-1 * var(--pad));height:280px;z-index:-1;pointer-events:none;background:radial-gradient(70vw 240px at 50% 0,rgba(255,105,65,.1),rgba(255,105,65,0) 70%)}
-  .f8 > .wrap{position:relative}
-  .fold8 .marquee{position:relative;z-index:2}
   .f8__grid{border:0;border-radius:0}
   .f8__card{border-color:rgba(244,236,224,.15)}
   .f8__t{letter-spacing:.04em}
@@ -486,7 +484,7 @@
     --h-label:min(1.053rem,var(--lab-on));
     --g-label:min(max(5px,min(10px,calc(var(--u) * 10))),var(--lab-on));
     --ct-pt:max(7px,min(12px,calc(var(--u) * 12)));
-    --f-ct:min(max(.75rem,1.9vw),max(.8rem,min(1.06rem,calc(var(--u) * 17))));
+    --f-ct:min(max(.9rem,2.2vw),max(.95rem,min(1.25rem,calc(var(--u) * 20))));
     --ct-pb:max(7px,min(10px,calc(var(--u) * 10)));
     --g-art:0px;
     --h-art:0px;
