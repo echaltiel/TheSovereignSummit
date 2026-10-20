@@ -290,8 +290,7 @@
 .fold8 > .marquee{position:relative;z-index:2;flex:none}
 .f8__eyebrow{margin:0;font-family:var(--fm);font-size:.81rem;font-weight:700;line-height:1.3;letter-spacing:.18em;text-transform:uppercase;color:rgba(244,236,224,.78)}
 .f8__grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:var(--g-label)}
-.f8__card{margin:0;display:flex;flex-direction:column;overflow:hidden;border:0;border-radius:0;background:transparent}
-.f8__card + .f8__card{border-left:1px solid rgba(244,236,224,.15)}
+.f8__card{margin:0;display:flex;flex-direction:column;overflow:hidden;border:1px solid rgba(244,236,224,.18);border-radius:2px;background:rgba(0,24,57,.38);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
 .f8__t{position:relative;margin:0;padding:var(--ct-pt) 16px var(--ct-pb);font-family:var(--fb);font-size:var(--f-ct);font-weight:800;line-height:1;letter-spacing:.06em;text-transform:uppercase;white-space:nowrap;color:var(--cream)}
 .f8__t::after{content:"";position:absolute;left:16px;bottom:0;width:24px;height:2px;background:var(--gold)}
 .f8__art{position:relative;flex:none;height:var(--h-art);margin-top:var(--g-art);overflow:hidden;-webkit-mask-image:linear-gradient(180deg,transparent 0,#000 7%,#000 82%,transparent 100%);mask-image:linear-gradient(180deg,transparent 0,#000 7%,#000 82%,transparent 100%)}
@@ -420,8 +419,7 @@
   .f8__d{display:block;min-height:0;max-height:min(10rem,var(--cap-on));margin:0 calc(4px - var(--px)) 0 0;padding:0;overflow:hidden;text-align:left;font-size:var(--cap-fs);line-height:var(--cap-lh);text-wrap:wrap} /* may run into the card's right padding, so a wider fallback font still fits each line */
   .f8__d br{display:inline}
   .f8__grid{border:0;border-radius:0}
-  .f8__card{border-color:rgba(244,236,224,.15)}
-  .f8__card + .f8__card{border-left-width:max(0px,calc(1px - var(--cap-on)))}   /* the column hairline is for the picture grid only */
+  .f8__card{border-color:rgba(244,236,224,.15);border-radius:0;background:transparent;-webkit-backdrop-filter:none;backdrop-filter:none}
   .f8__t{letter-spacing:.04em}
 }
 @media (max-width:340px){
