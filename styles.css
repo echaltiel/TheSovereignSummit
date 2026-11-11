@@ -6208,3 +6208,44 @@ body.menu-open{overflow:hidden}
 .hero__blurb .hb-a,.hero__blurb .hb-l{display:inline}
 .hero__blurb .hb-l:last-child{display:block}
 @media (max-width:699px){.hero__blurb .hb-a,.hero__blurb .hb-l{display:block} html body .hero__blurb{font-size:min(1.18rem,4.7vw)}}
+
+/* v297 partners: logo cards, homepage rail (same scroll behavior as speakers rail), partners page grid */
+#content a.partner{text-decoration:none;color:inherit}
+#content .partner--logo .partner__photo{padding:1.6rem 1.9rem;mix-blend-mode:normal}
+#content .partner__portrait--haslogo.partner__portrait--dark{background:#0A1224 !important}
+#content .partner--logo .partner__portrait--tall .partner__photo{padding:.7rem}
+#content .partners__rail{position:relative}
+#content .partners__grid--rail{
+  --rail-gap:.6rem;--rail-cols:4;
+  display:flex;gap:var(--rail-gap);align-items:stretch;
+  overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;
+  scrollbar-width:none;-ms-overflow-style:none;
+  padding:6px 0 30px;margin-bottom:-30px; /* room for the card shadow inside the scroller */
+}
+#content .partners__grid--rail::-webkit-scrollbar{display:none}
+#content .partners__grid--rail .partner{
+  flex:0 0 calc((100% - (var(--rail-cols) - 1) * var(--rail-gap)) / var(--rail-cols));
+  min-width:0;scroll-snap-align:start;
+  display:flex !important;flex-direction:column;align-items:stretch;
+  padding:1.75rem 1.5rem 1.5rem;
+}
+#content .partners__grid--rail .partner.reveal{transform:none}
+#content .partners__grid--rail .partner__portrait{
+  width:calc(100% + 3rem) !important;height:150px !important;aspect-ratio:auto;
+  margin:-1.75rem -1.5rem 1.25rem !important;flex:none;
+}
+#content .partners__grid--rail .partner__name,
+#content .partners__grid--logos .partner__name{font-size:1.45rem;line-height:1.1;text-align:center;padding:0;margin:0 0 .45rem}
+#content .partners__grid--rail .partner__name,#content .partners__grid--rail .partner__role{text-align:center !important;padding:0 !important;width:100%;align-self:center}
+#content .partners__grid--rail .partner__role{font-size:.68rem;letter-spacing:.15em;margin:0}
+#content .partners__grid--rail .partner--cta .partner__photo{padding:.9rem}
+#content .partners__rail .speakers__arrow{top:calc(50% - 12px)}
+@media (max-width:1080px){#content .partners__grid--rail{--rail-cols:2}}
+@media (max-width:520px){
+  #content .partners__grid--rail{--rail-cols:1.35}
+  #content .partners__grid--rail .partner__portrait{height:130px !important}
+  #content .partners__grid--rail .partner__name{font-size:1.25rem}
+  #content .partner--logo .partner__photo{padding:1.1rem 1.3rem}
+  #content .partners__grid--logos .partner__name{font-size:1.2rem;text-align:left;margin:0}
+  #content .partners__grid--logos .partner .partner__photo{padding:.6rem}
+}

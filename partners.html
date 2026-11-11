@@ -38,7 +38,7 @@
 <link rel="preconnect" href="https://api.coingecko.com" crossorigin>
 <link rel="preconnect" href="https://api.fiscaldata.treasury.gov" crossorigin>
 <link rel="preconnect" href="https://api.eia.gov" crossorigin>
-<link rel="stylesheet" href="styles.css?v=295">
+<link rel="stylesheet" href="styles.css?v=297">
 <style>#content{padding-top:calc(var(--header-h) + clamp(1rem,2.5vw,2rem))}</style>
 <style id="menu-compact">
 .mobile-menu__link{padding-top:clamp(.5rem,1.4vh,1rem) !important;padding-bottom:clamp(.5rem,1.4vh,1rem) !important;font-size:clamp(.88rem,2.2vh,1.05rem) !important}
@@ -139,84 +139,36 @@
       <div class="sec-hd__num">Partners</div>
       <h2 class="section-title sec-hd__title">Built with partners who understand <em>the mission.</em></h2>
     </header>
-    <div class="partners__grid" id="partnersGrid">
-      <div class="partner" data-partner="01">
-        <div class="partner__index">01</div>
-        <div class="partner__portrait partner__portrait--haslogo"><img class="partner__photo" src="images/partner-placeholder.png" alt="" /></div>
-        <h3 class="partner__name"><em>Partner TBA</em></h3>
-        <div class="partner__role">To be announced</div>
-        
-      </div>
-      <div class="partner" data-partner="02">
-        <div class="partner__index">02</div>
-        <div class="partner__portrait partner__portrait--haslogo"><img class="partner__photo" src="images/partner-placeholder.png" alt="" /></div>
-        <h3 class="partner__name"><em>Partner TBA</em></h3>
-        <div class="partner__role">To be announced</div>
-        
-      </div>
-      <div class="partner" data-partner="03">
-        <div class="partner__index">03</div>
-        <div class="partner__portrait partner__portrait--haslogo"><img class="partner__photo" src="images/partner-placeholder.png" alt="" /></div>
-        <h3 class="partner__name"><em>Partner TBA</em></h3>
-        <div class="partner__role">To be announced</div>
-        
-      </div>
-      <div class="partner" data-partner="04">
-        <div class="partner__index">04</div>
-        <div class="partner__portrait partner__portrait--haslogo"><img class="partner__photo" src="images/partner-placeholder.png" alt="" /></div>
-        <h3 class="partner__name"><em>Partner TBA</em></h3>
-        <div class="partner__role">To be announced</div>
-        
-      </div>
-      <div class="partner" data-partner="05">
-        <div class="partner__index">05</div>
-        <div class="partner__portrait partner__portrait--haslogo"><img class="partner__photo" src="images/partner-placeholder.png" alt="" /></div>
-        <h3 class="partner__name"><em>Partner TBA</em></h3>
-        <div class="partner__role">To be announced</div>
-        
-      </div>
-      <div class="partner" data-partner="06">
-        <div class="partner__index">06</div>
-        <div class="partner__portrait partner__portrait--haslogo"><img class="partner__photo" src="images/partner-placeholder.png" alt="" /></div>
-        <h3 class="partner__name"><em>Partner TBA</em></h3>
-        <div class="partner__role">To be announced</div>
-        
-      </div>
-      <div class="partner" data-partner="07">
-        <div class="partner__index">07</div>
-        <div class="partner__portrait partner__portrait--haslogo"><img class="partner__photo" src="images/partner-placeholder.png" alt="" /></div>
-        <h3 class="partner__name"><em>Partner TBA</em></h3>
-        <div class="partner__role">To be announced</div>
-        
-      </div>
-      <div class="partner" data-partner="08">
-        <div class="partner__index">08</div>
-        <div class="partner__portrait partner__portrait--haslogo"><img class="partner__photo" src="images/partner-placeholder.png" alt="" /></div>
-        <h3 class="partner__name"><em>Partner TBA</em></h3>
-        <div class="partner__role">To be announced</div>
-        
-      </div>
-      <div class="partner" data-partner="09">
-        <div class="partner__index">09</div>
-        <div class="partner__portrait partner__portrait--haslogo"><img class="partner__photo" src="images/partner-placeholder.png" alt="" /></div>
-        <h3 class="partner__name"><em>Partner TBA</em></h3>
-        <div class="partner__role">To be announced</div>
-        
-      </div>
-      <div class="partner" data-partner="10">
-        <div class="partner__index">10</div>
-        <div class="partner__portrait partner__portrait--haslogo"><img class="partner__photo" src="images/partner-placeholder.png" alt="" /></div>
-        <h3 class="partner__name"><em>Partner TBA</em></h3>
-        <div class="partner__role">To be announced</div>
-        
-      </div>
-      <div class="partner" data-partner="11">
-        <div class="partner__index">11</div>
-        <div class="partner__portrait partner__portrait--haslogo"><img class="partner__photo" src="images/partner-placeholder.png" alt="" /></div>
-        <h3 class="partner__name"><em>Partner TBA</em></h3>
-        <div class="partner__role">To be announced</div>
-        
-      </div>
+    <div class="partners__grid partners__grid--logos" id="partnersGrid">
+      <a class="partner partner--logo" data-partner="01" href="https://www.btcpolicy.org/" target="_blank" rel="noopener" aria-label="Bitcoin Policy Institute">
+        <div class="partner__portrait partner__portrait--haslogo"><img class="partner__photo" src="images/partners/bitcoin-policy-institute.webp" alt="Bitcoin Policy Institute logo" loading="lazy" decoding="async"></div>
+        <h3 class="partner__name"><em>Bitcoin Policy Institute</em></h3>
+        <div class="partner__role">btcpolicy.org</div>
+      </a>
+      <a class="partner partner--logo" data-partner="02" href="https://bitcoinday.io/" target="_blank" rel="noopener" aria-label="Bitcoin Day">
+        <div class="partner__portrait partner__portrait--haslogo"><img class="partner__photo" src="images/partners/bitcoin-day.webp" alt="Bitcoin Day logo" loading="lazy" decoding="async"></div>
+        <h3 class="partner__name"><em>Bitcoin Day</em></h3>
+        <div class="partner__role">bitcoinday.io</div>
+      </a>
+      <a class="partner partner--logo" data-partner="03" href="https://fomo21.com/" target="_blank" rel="noopener" aria-label="Fomo21">
+        <div class="partner__portrait partner__portrait--haslogo partner__portrait--dark"><img class="partner__photo" src="images/partners/fomo21.webp" alt="Fomo21 logo" loading="lazy" decoding="async"></div>
+        <h3 class="partner__name"><em>Fomo21</em></h3>
+        <div class="partner__role">fomo21.com</div>
+      </a>
+      <a class="partner partner--logo" data-partner="04" href="https://www.proofofconference.com/" target="_blank" rel="noopener" aria-label="Proof of Conference">
+        <div class="partner__portrait partner__portrait--haslogo partner__portrait--tall"><img class="partner__photo" src="images/partners/proof-of-conference.webp" alt="Proof of Conference logo" loading="lazy" decoding="async"></div>
+        <h3 class="partner__name"><em>Proof of Conference</em></h3>
+        <div class="partner__role">proofofconference.com</div>
+      </a>
+      <!-- Become a Partner stays the last card. Add new partners above it. -->
+      <a class="partner partner--cta" data-partner="cta" href="/get-involved" aria-label="Become a partner of The Sovereign Summit">
+        <div class="partner__portrait partner__portrait--haslogo"><picture>
+          <source media="(max-width:520px)" srcset="images/partner-placeholder-mobile.png">
+          <img class="partner__photo" src="images/partner-placeholder.png" alt="Become a partner" />
+        </picture></div>
+        <h3 class="partner__name"><em>Click Here</em></h3>
+        <div class="partner__role">To Learn More</div>
+      </a>
     </div>
     <p class="speakers__footnote">Know an organization, media outlet, or community that belongs in this room?<br><a href="mailto:info@thesovereignsummit.com" style="color:var(--accent);text-decoration:none"><em>Email info@thesovereignsummit.com to explore a partnership.</em></a></p>
   </div>

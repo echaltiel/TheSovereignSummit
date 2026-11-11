@@ -38,7 +38,7 @@
 <link rel="preconnect" href="https://api.coingecko.com" crossorigin>
 <link rel="preconnect" href="https://api.fiscaldata.treasury.gov" crossorigin>
 <link rel="preconnect" href="https://api.eia.gov" crossorigin>
-<link rel="stylesheet" href="styles.css?v=296">
+<link rel="stylesheet" href="styles.css?v=297">
 <script>if(location.hash==='#leadership')location.replace('/team#leadership');</script>
 <style>
 /* Homepage hero, Oct 2026 redesign: photo hero, the four "On stage" pillars,
@@ -950,15 +950,37 @@
       <div class="sec-hd__num">Partners</div>
       <h2 class="section-title sec-hd__title">Built with partners who understand <em>the mission.</em></h2>
     </header>
-    <div class="partners__grid partners__grid--single">
-      <a class="partner partner--cta" href="/get-involved" aria-label="Become a partner of The Sovereign Summit">
-        <div class="partner__portrait partner__portrait--haslogo"><picture>
-          <source media="(max-width:600px)" srcset="images/partner-placeholder-mobile.png">
-          <img class="partner__photo" src="images/partner-placeholder.png" alt="Become a partner" />
-        </picture></div>
+    <div class="partners__rail">
+      <div class="partners__grid partners__grid--rail" id="partnersRail">
+      <a class="partner partner--logo" data-partner="01" href="https://www.btcpolicy.org/" target="_blank" rel="noopener" aria-label="Bitcoin Policy Institute">
+        <div class="partner__portrait partner__portrait--haslogo"><img class="partner__photo" src="images/partners/bitcoin-policy-institute.webp" alt="Bitcoin Policy Institute logo" loading="lazy" decoding="async"></div>
+        <h3 class="partner__name"><em>Bitcoin Policy Institute</em></h3>
+        <div class="partner__role">btcpolicy.org</div>
+      </a>
+      <a class="partner partner--logo" data-partner="02" href="https://bitcoinday.io/" target="_blank" rel="noopener" aria-label="Bitcoin Day">
+        <div class="partner__portrait partner__portrait--haslogo"><img class="partner__photo" src="images/partners/bitcoin-day.webp" alt="Bitcoin Day logo" loading="lazy" decoding="async"></div>
+        <h3 class="partner__name"><em>Bitcoin Day</em></h3>
+        <div class="partner__role">bitcoinday.io</div>
+      </a>
+      <a class="partner partner--logo" data-partner="03" href="https://fomo21.com/" target="_blank" rel="noopener" aria-label="Fomo21">
+        <div class="partner__portrait partner__portrait--haslogo partner__portrait--dark"><img class="partner__photo" src="images/partners/fomo21.webp" alt="Fomo21 logo" loading="lazy" decoding="async"></div>
+        <h3 class="partner__name"><em>Fomo21</em></h3>
+        <div class="partner__role">fomo21.com</div>
+      </a>
+      <a class="partner partner--logo" data-partner="04" href="https://www.proofofconference.com/" target="_blank" rel="noopener" aria-label="Proof of Conference">
+        <div class="partner__portrait partner__portrait--haslogo partner__portrait--tall"><img class="partner__photo" src="images/partners/proof-of-conference.webp" alt="Proof of Conference logo" loading="lazy" decoding="async"></div>
+        <h3 class="partner__name"><em>Proof of Conference</em></h3>
+        <div class="partner__role">proofofconference.com</div>
+      </a>
+      <!-- Become a Partner stays the last card. Add new partners above it. -->
+      <a class="partner partner--cta" data-partner="cta" href="/get-involved" aria-label="Become a partner of The Sovereign Summit">
+        <div class="partner__portrait partner__portrait--haslogo"><img class="partner__photo" src="images/partner-placeholder.png" alt="Become a partner" /></div>
         <h3 class="partner__name"><em>Click Here</em></h3>
         <div class="partner__role">To Learn More</div>
       </a>
+      </div>
+      <button class="speakers__arrow speakers__arrow--prev partners__arrow" type="button" aria-label="Previous partners" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+      <button class="speakers__arrow speakers__arrow--next partners__arrow" type="button" aria-label="More partners"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
     </div>
   </div>
 </section>
@@ -1406,6 +1428,33 @@
   prev.addEventListener('click', function(){ rail.scrollBy({left: -step(), behavior:'smooth'}); });
   rail.addEventListener('scroll', update, {passive:true});
   window.addEventListener('resize', update);
+  update();
+})();
+</script>
+
+<script>
+(function(){
+  var rail = document.getElementById('partnersRail');
+  if (!rail) return;
+  var wrap = rail.parentNode;
+  var prev = wrap.querySelector('.speakers__arrow--prev');
+  var next = wrap.querySelector('.speakers__arrow--next');
+  if (!prev || !next) return;
+  function step(){
+    var c = rail.querySelector('.partner');
+    var gap = parseFloat(getComputedStyle(rail).columnGap) || 0;
+    return c ? c.getBoundingClientRect().width + gap : rail.clientWidth/4;
+  }
+  function update(){
+    var max = rail.scrollWidth - rail.clientWidth - 2;
+    prev.hidden = rail.scrollLeft <= 2;
+    next.hidden = rail.scrollLeft >= max;
+  }
+  next.addEventListener('click', function(){ rail.scrollBy({left: step(), behavior:'smooth'}); });
+  prev.addEventListener('click', function(){ rail.scrollBy({left: -step(), behavior:'smooth'}); });
+  rail.addEventListener('scroll', update, {passive:true});
+  window.addEventListener('resize', update);
+  window.addEventListener('load', update);
   update();
 })();
 </script>
