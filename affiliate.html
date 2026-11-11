@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#131E33" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<title>Affiliate Program · The Sovereign Summit · February 4&ndash;7, 2027</title>
+<meta name="robots" content="noindex, nofollow" />
+<meta name="description" content="The Sovereign Summit affiliate program. Your code gives buyers 10% off and earns you 10% commission on all net ticket sales, plus reward tiers. February 4&ndash;7, 2027, Fontainebleau Miami Beach." />
+
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="The Sovereign Summit" />
+<meta property="og:url" content="https://thesovereignsummit.com/affiliate" />
+<meta property="og:title" content="Affiliate Program · The Sovereign Summit · February 4&ndash;7, 2027" />
+<meta property="og:description" content="Bring your community. Earn 10% commission on all net ticket sales, plus reward tiers." />
+<meta property="og:image" content="https://thesovereignsummit.com/images/og-home-v2.png" />
+<meta property="og:image:secure_url" content="https://thesovereignsummit.com/images/og-home-v2.png" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="The Sovereign Summit, February 4-7, 2027 at the Fontainebleau, Miami Beach." />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Affiliate Program · The Sovereign Summit" />
+<meta name="twitter:description" content="Bring your community. Earn 10% commission on all net ticket sales, plus reward tiers." />
+<meta name="twitter:image" content="https://thesovereignsummit.com/images/og-home-v2.png" />
+<meta name="twitter:image:alt" content="The Sovereign Summit, February 4-7, 2027 at the Fontainebleau, Miami Beach." />
+
+<link rel="icon" type="image/png" href="/favicon.png" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Instrument+Serif&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css?v=295">
+
+<style>
+/* ================================================================
+   Affiliate program — shares the sponsorships page system
+   ================================================================ */
+
+html{scroll-behavior:smooth;overflow-x:clip}
+body{overflow-x:clip}
+
+#content{
+  --sp-bg:#001839;
+  --sp-bg-deep:#001227;
+  --sp-card:#082343;
+  --sp-card-hi:#0D2A50;
+  --sp-cream:#F4ECE0;
+  --sp-muted:rgba(244,236,224,.68);
+  --sp-faint:rgba(244,236,224,.48);
+  --sp-rule:rgba(244,236,224,.13);
+  --sp-rule-strong:rgba(244,236,224,.24);
+  --sp-orange:#FF6941;
+  --sp-gold:#E8C46A;
+  --sp-silver:#C6CED9;
+  --sp-gold-dim:rgba(232,196,106,.13);
+  --sp-silver-dim:rgba(198,206,217,.1);
+  --sp-shadow:0 24px 70px rgba(0,0,0,.24);
+  --fb:'Archivo',system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  --fd:'Instrument Serif',Georgia,serif;
+  --fm:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;
+  min-width:0;
+  padding-top:var(--header-h,80px);
+  background:var(--sp-bg);
+  color:var(--sp-cream);
+  font-family:var(--fb);
+  overflow-x:clip;
+  overflow-y:visible;
+}
+#content *,#content *::before,#content *::after{box-sizing:border-box}
+#content h1,#content h2,#content h3,#content p,#content ul{margin:0}
+#content a{color:inherit}
+#content section{padding:clamp(3.25rem,6vw,5.75rem) 0}
+#content .sp-container{width:100%;max-width:1320px;margin:0 auto;padding-inline:clamp(1.1rem,3vw,2.5rem)}
+
+/* Type and shared controls */
+#content .sp-kicker{margin-bottom:.68rem;font-family:var(--fm);font-size:.75rem;font-weight:700;line-height:1.35;letter-spacing:.18em;text-transform:uppercase;color:var(--sp-orange)}
+#content .sp-section-head{display:flex;align-items:flex-end;justify-content:space-between;gap:1.5rem;margin-bottom:1.35rem}
+#content .sp-section-title{max-width:18ch;font-family:var(--fb);font-size:clamp(2rem,3.5vw,3.35rem);font-weight:900;line-height:.96;letter-spacing:-.04em;text-transform:uppercase;color:var(--sp-cream)}
+#content .sp-section-note{max-width:34ch;font-size:1rem;line-height:1.5;color:var(--sp-muted)}
+#content .sp-btn{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;min-height:54px;padding:.94rem 1.45rem;border:1px solid transparent;border-radius:999px;font-family:var(--fm);font-size:.74rem;font-weight:700;line-height:1.2;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;white-space:nowrap;cursor:pointer;transition:transform .18s ease,background-color .18s ease,border-color .18s ease,box-shadow .18s ease}
+#content .sp-btn:hover{transform:translateY(-2px)}
+#content .sp-btn:focus-visible{outline:2px solid var(--sp-orange);outline-offset:3px}
+#content .sp-btn--primary{background:var(--sp-orange);border-color:var(--sp-orange);color:#001227;box-shadow:0 8px 26px rgba(255,105,65,.22)}
+#content .sp-btn--primary:hover{box-shadow:0 12px 34px rgba(255,105,65,.34)}
+#content .sp-btn--ghost{background:rgba(0,18,39,.34);border-color:rgba(244,236,224,.34);color:var(--sp-cream);backdrop-filter:blur(12px)}
+#content .sp-btn--ghost:hover{background:rgba(244,236,224,.07);border-color:rgba(244,236,224,.58)}
+
+/* Hero */
+#content .sp-hero{position:relative;display:flex;align-items:center;min-height:clamp(500px,61svh,590px);padding:clamp(3rem,4.5vw,4.25rem) 0 clamp(4.5rem,6vw,5.75rem);isolation:isolate;overflow:hidden}
+#content .sp-hero__bg{position:absolute;inset:0;z-index:-3}
+#content .sp-hero__bg img{width:100%;height:100%;object-fit:cover;object-position:center 42%;filter:saturate(.82) contrast(1.02)}
+#content .sp-hero__scrim{position:absolute;inset:0;z-index:-2;background:linear-gradient(90deg,rgba(0,18,39,.98) 0%,rgba(0,24,57,.9) 44%,rgba(0,24,57,.43) 78%,rgba(0,24,57,.22) 100%),linear-gradient(180deg,rgba(0,18,39,.24) 0%,rgba(0,18,39,.08) 44%,rgba(0,18,39,.48) 70%,var(--sp-bg-deep) 100%)}
+#content .sp-hero__scrim::after{content:"";position:absolute;inset:auto 0 -1px;height:clamp(88px,17vw,170px);background:linear-gradient(180deg,transparent 0%,rgba(0,18,39,.22) 30%,rgba(0,18,39,.7) 68%,var(--sp-bg-deep) 100%);pointer-events:none}
+#content .sp-hero__inner{position:relative;width:100%}
+#content .sp-hero__top{display:grid;grid-template-columns:minmax(0,590px) minmax(430px,470px);align-items:end;justify-content:start;gap:clamp(2rem,3.2vw,3rem)}
+#content .sp-hero__copy{max-width:710px}
+#content .sp-hero h1{max-width:11ch;font-family:var(--fb);font-size:clamp(3.15rem,6.7vw,6rem);font-weight:900;line-height:.9;letter-spacing:-.058em;text-transform:uppercase;text-wrap:balance;color:var(--sp-cream)}
+#content .sp-hero__sub{max-width:49ch;margin-top:1.05rem;font-size:clamp(1.06rem,1.4vw,1.22rem);line-height:1.55;color:rgba(244,236,224,.86)}
+#content .sp-hero__actions{position:relative;z-index:2;display:flex;flex-wrap:wrap;gap:.78rem;margin-top:1.5rem;padding-bottom:.2rem}
+
+/* Inquiry */
+#content .sp-inquiry{padding-top:clamp(3.25rem,5vw,5rem);padding-bottom:clamp(3.75rem,6vw,5.75rem);background:var(--sp-bg-deep)}
+#content .sp-inquiry__panel{display:grid;grid-template-columns:minmax(280px,.72fr) minmax(0,1.28fr);overflow:hidden;border:1px solid var(--sp-rule);border-radius:24px;background:linear-gradient(135deg,rgba(255,255,255,.045),rgba(255,255,255,.012));box-shadow:0 28px 70px rgba(0,0,0,.2)}
+#content .sp-inquiry__intro{display:flex;flex-direction:column;justify-content:space-between;gap:2rem;padding:clamp(1.6rem,3vw,2.5rem);border-right:1px solid var(--sp-rule)}
+#content .sp-inquiry__intro h2{max-width:12ch;font-family:var(--fb);font-size:clamp(2.15rem,3.8vw,3.45rem);font-weight:900;line-height:.96;letter-spacing:-.04em;text-transform:uppercase;color:var(--sp-cream)}
+#content .sp-inquiry__intro p{max-width:31ch;margin-top:.78rem;font-size:1rem;line-height:1.58;color:var(--sp-muted)}
+#content .sp-inquiry__steps{display:grid;gap:.62rem}
+#content .sp-inquiry__step{display:flex;align-items:center;gap:.68rem;font-size:.87rem;line-height:1.4;color:var(--sp-muted)}
+#content .sp-inquiry__step span{display:grid;place-items:center;width:27px;height:27px;border:1px solid rgba(255,105,65,.3);border-radius:50%;background:rgba(255,105,65,.1);font-family:var(--fm);font-size:.62rem;font-weight:700;color:var(--sp-orange);flex:0 0 auto}
+#content .sp-form{min-width:0;padding:clamp(1.6rem,3vw,2.5rem)}
+#content .sp-form__row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.9rem}
+#content .sp-field{display:flex;min-width:0;flex-direction:column;gap:.38rem;margin-bottom:.9rem}
+#content .sp-field input,#content .sp-field select,#content .sp-field textarea{width:100%;min-width:0;min-height:50px;padding:.84rem .95rem;border:1px solid var(--sp-rule-strong);border-radius:12px;background:rgba(0,18,39,.54);font-family:var(--fb);font-size:16px;line-height:1.35;color:var(--sp-cream);outline:none;transition:border-color .18s ease,background-color .18s ease,box-shadow .18s ease}
+#content .sp-field input::placeholder,#content .sp-field textarea::placeholder{color:rgba(244,236,224,.4)}
+#content .sp-field input:focus,#content .sp-field select:focus,#content .sp-field textarea:focus{border-color:var(--sp-orange);background:rgba(0,18,39,.78);box-shadow:0 0 0 3px rgba(255,105,65,.11)}
+#content .sp-field textarea{min-height:96px;resize:vertical}
+#content .sp-field select{padding-right:2.6rem;appearance:none;cursor:pointer;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%23F4ECE0' stroke-width='2.5'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right .95rem center}
+#content .sp-field select option{background:var(--sp-bg-deep);color:var(--sp-cream)}
+#content .sp-form__foot{display:flex;align-items:center;justify-content:space-between;gap:1rem;margin-top:.1rem}
+#content .sp-form__note{max-width:37ch;font-size:.78rem;line-height:1.5;color:var(--sp-faint)}
+#content .sp-form__thanks{margin-top:1rem;padding:.9rem 1rem;border:1px solid rgba(255,105,65,.4);border-radius:12px;background:rgba(255,105,65,.08);font-size:.92rem;line-height:1.45;color:var(--sp-cream)}
+
+/* ================================================================
+   Affiliate page components
+   ================================================================ */
+#content .af-gold{color:var(--sp-gold)}
+#content .af-hero h1{max-width:13ch;font-size:clamp(2.9rem,5.6vw,5.1rem)}
+#content .af-hero .sp-hero__top{grid-template-columns:minmax(0,640px) minmax(340px,400px);align-items:end}
+
+/* Commission card */
+#content .af-rate{padding:1.4rem 1.5rem 1.5rem;border:1px solid rgba(244,236,224,.24);border-radius:20px;background:rgba(0,18,39,.66);backdrop-filter:blur(14px);box-shadow:var(--sp-shadow)}
+#content .af-rate__num{font-family:var(--fb);font-size:clamp(4rem,6.4vw,5.4rem);font-weight:900;line-height:.86;letter-spacing:-.06em;color:var(--sp-cream)}
+#content .af-rate__label{margin-top:.85rem;font-family:var(--fm);font-size:.72rem;font-weight:700;line-height:1.4;letter-spacing:.14em;text-transform:uppercase;color:var(--sp-orange)}
+#content .af-rate p{margin-top:.5rem;font-size:.95rem;line-height:1.55;color:var(--sp-muted)}
+
+/* Reward tiers */
+#content .af-tiers{position:relative;margin-top:-1px;background:var(--sp-bg-deep);scroll-margin-top:var(--header-h,80px)}
+#content .af-table{width:100%;border-collapse:separate;border-spacing:0;border:1px solid var(--sp-rule);border-radius:22px;overflow:hidden;background:linear-gradient(180deg,rgba(255,255,255,.05),rgba(255,255,255,.015))}
+#content .af-table th,#content .af-table td{padding:1.15rem 1.4rem;text-align:left;vertical-align:middle;border-bottom:1px solid var(--sp-rule)}
+#content .af-table tbody tr:last-child td{border-bottom:0}
+#content .af-table thead th{padding-block:.9rem;font-family:var(--fm);font-size:.68rem;font-weight:700;line-height:1.35;letter-spacing:.12em;text-transform:uppercase;color:var(--sp-muted);background:rgba(0,18,39,.5)}
+#content .af-table tbody tr:nth-child(even) td{background:rgba(255,255,255,.022)}
+#content .af-table .af-sales{width:22%;font-family:var(--fb);font-size:clamp(1.5rem,2.2vw,2rem);font-weight:900;line-height:1;letter-spacing:-.04em;white-space:nowrap;color:var(--sp-cream)}
+#content .af-table .af-comm{width:18%;font-family:var(--fm);font-size:1rem;font-weight:700;white-space:nowrap;color:rgba(244,236,224,.82)}
+#content .af-reward{display:flex;flex-wrap:wrap;gap:.45rem .5rem;padding:0;list-style:none}
+#content .af-reward li{display:inline-flex;align-items:center;padding:.42rem .72rem;border:1px solid var(--sp-rule-strong);border-radius:999px;background:rgba(255,255,255,.035);font-size:.9rem;font-weight:600;line-height:1.3;color:var(--sp-cream)}
+#content .af-reward li.is-vip{border-color:rgba(232,196,106,.42);background:var(--sp-gold-dim);color:var(--sp-gold)}
+#content .af-reward small{margin-left:.4rem;font-size:.78rem;font-weight:500;color:var(--sp-muted)}
+#content .af-foot{margin-top:1.05rem;font-size:.82rem;line-height:1.55;color:var(--sp-faint)}
+#content .af-foot--strong{margin-top:.55rem;font-size:.95rem;font-weight:600;color:rgba(244,236,224,.86)}
+
+/* How it works */
+#content .af-how{background:linear-gradient(180deg,var(--sp-bg),#032044)}
+#content .af-steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem}
+#content .af-card{min-width:0;padding:1.35rem 1.4rem 1.45rem;border:1px solid var(--sp-rule);border-radius:20px;background:rgba(255,255,255,.026);box-shadow:0 1px 0 rgba(255,255,255,.025) inset}
+#content .af-card__n{display:inline-grid;place-items:center;width:34px;height:34px;border:1px solid rgba(255,105,65,.3);border-radius:50%;background:rgba(255,105,65,.1);font-family:var(--fm);font-size:.7rem;font-weight:700;color:var(--sp-orange)}
+#content .af-card h3{margin-top:.95rem;font-family:var(--fd);font-size:1.5rem;font-weight:400;line-height:1.12;color:var(--sp-cream)}
+#content .af-card p{margin-top:.6rem;font-size:.95rem;line-height:1.58;color:var(--sp-muted)}
+#content .af-example{margin-top:1rem;padding:clamp(1.4rem,2.6vw,2rem);border:1px solid rgba(255,105,65,.4);border-radius:22px;background:linear-gradient(135deg,rgba(255,105,65,.09),rgba(255,255,255,.015))}
+#content .af-example__grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:.75rem;margin-top:1.05rem}
+#content .af-example__item{min-width:0;padding:1rem 1.05rem;border:1px solid var(--sp-rule);border-radius:15px;background:rgba(0,18,39,.5)}
+#content .af-example__item strong{display:block;font-family:var(--fb);font-size:clamp(1.5rem,2.3vw,2.05rem);font-weight:900;line-height:1;letter-spacing:-.04em;color:var(--sp-cream)}
+#content .af-example__item span{display:block;margin-top:.5rem;font-size:.86rem;line-height:1.42;color:var(--sp-muted)}
+#content .af-notes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem;margin-top:1rem}
+#content .af-note h3{font-family:var(--fm);font-size:.74rem;font-weight:700;line-height:1.4;letter-spacing:.12em;text-transform:uppercase;color:var(--sp-cream)}
+#content .af-note p{margin-top:.55rem;font-size:.95rem;line-height:1.58;color:var(--sp-muted)}
+
+/* Payouts and deadlines */
+#content .af-pay{background:var(--sp-bg-deep)}
+#content .af-pay__lede{max-width:62ch;margin-bottom:1.35rem;font-size:1.05rem;line-height:1.58;color:rgba(244,236,224,.84)}
+#content .af-dates{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}
+#content .af-date{padding:1.4rem 1.5rem 1.5rem;border:1px solid var(--sp-rule-strong);border-radius:20px;background:rgba(255,255,255,.03)}
+#content .af-date__date{margin-top:.2rem;font-family:var(--fb);font-size:clamp(2rem,3.6vw,3.1rem);font-weight:900;line-height:1;letter-spacing:-.045em;text-transform:uppercase;color:var(--sp-cream)}
+#content .af-date p{margin-top:.6rem;font-size:.88rem;line-height:1.5;color:var(--sp-muted)}
+#content .af-terms{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem;margin-top:1rem}
+#content .af-terms .af-card--warn{border-color:rgba(255,105,65,.45)}
+
+/* Request form */
+#content .sp-inquiry{scroll-margin-top:var(--header-h,80px)}
+
+/* Program terms */
+#content .af-legal{background:var(--sp-bg);scroll-margin-top:var(--header-h,80px)}
+#content .af-legal__list{margin:0;border:1px solid var(--sp-rule);border-radius:22px;overflow:hidden;background:rgba(255,255,255,.022)}
+#content .af-legal__row{display:grid;grid-template-columns:minmax(180px,260px) minmax(0,1fr);gap:1.5rem;padding:1.05rem 1.4rem;border-bottom:1px solid var(--sp-rule)}
+#content .af-legal__row:last-child{border-bottom:0}
+#content .af-legal dt{font-family:var(--fm);font-size:.72rem;font-weight:700;line-height:1.5;letter-spacing:.12em;text-transform:uppercase;color:var(--sp-cream)}
+#content .af-legal dd{margin:0;font-size:.95rem;line-height:1.58;color:var(--sp-muted)}
+#content .af-legal dd a{color:var(--sp-cream)}
+
+@media(max-width:1160px){
+  #content .af-hero .sp-hero__top{grid-template-columns:1fr}
+  #content .af-rate{width:min(100%,470px)}
+  #content .af-example__grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  #content .af-terms{grid-template-columns:1fr}
+  #content .sp-inquiry__panel{grid-template-columns:1fr}
+  #content .sp-inquiry__intro{border-right:0;border-bottom:1px solid var(--sp-rule)}
+  #content .sp-inquiry__steps{grid-template-columns:repeat(3,minmax(0,1fr));gap:.5rem}
+  #content .sp-inquiry__step{align-items:flex-start;font-size:.78rem}
+}
+@media(max-width:860px){
+  #content .af-steps,#content .af-notes{grid-template-columns:1fr}
+}
+@media(max-width:680px){
+  #content section{padding:3.2rem 0}
+  #content .sp-container{padding-inline:1rem}
+  #content .sp-section-head{display:block;margin-bottom:1rem}
+  #content .sp-section-note{margin-top:.55rem;font-size:.94rem}
+  #content .sp-hero{min-height:auto;padding:3.15rem 0 4.1rem}
+  #content .sp-hero__scrim{background:linear-gradient(90deg,rgba(0,18,39,.97),rgba(0,24,57,.78)),linear-gradient(180deg,rgba(0,18,39,.1),rgba(0,18,39,.82))}
+  #content .af-hero h1{max-width:11ch;font-size:clamp(2.5rem,12.6vw,3.9rem)}
+  #content .sp-hero__sub{max-width:36ch;margin-top:.9rem;font-size:1.02rem;line-height:1.55}
+  #content .sp-hero__actions{display:grid;grid-template-columns:1fr;margin-top:1.35rem}
+  #content .sp-hero__actions .sp-btn{width:100%;min-height:52px}
+  #content .af-rate{padding:1.15rem 1.2rem 1.25rem;border-radius:17px}
+  /* tier table becomes stacked cards */
+  #content .af-table,#content .af-table tbody,#content .af-table tr,#content .af-table td{display:block;width:100%}
+  #content .af-table{border:0;border-radius:0;background:none;overflow:visible}
+  #content .af-table thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+  #content .af-table tr{margin-bottom:.75rem;padding:1.05rem 1.05rem 1.1rem;border:1px solid var(--sp-rule);border-radius:17px;background:linear-gradient(180deg,rgba(255,255,255,.05),rgba(255,255,255,.015))}
+  #content .af-table td,#content .af-table tbody tr:nth-child(even) td{padding:0;border:0;background:none}
+  #content .af-table td::before{content:attr(data-label);display:block;margin-bottom:.3rem;font-family:var(--fm);font-size:.62rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--sp-faint)}
+  #content .af-table .af-sales,#content .af-table .af-comm{width:100%}
+  #content .af-table .af-comm{margin-top:.85rem}
+  #content .af-table td:last-child{margin-top:.85rem}
+  #content .af-reward li{font-size:.86rem}
+  #content .af-example{border-radius:18px}
+  #content .af-example__grid{gap:.6rem}
+  #content .af-example__item{padding:.85rem .8rem}
+  #content .af-dates{grid-template-columns:1fr}
+  #content .af-legal__list{border-radius:17px}
+  #content .af-legal__row{grid-template-columns:1fr;gap:.35rem;padding:1rem 1.05rem}
+  #content .sp-inquiry__panel{border-radius:19px}
+  #content .sp-inquiry__intro,#content .sp-form{padding:1.25rem}
+  #content .sp-inquiry__intro h2{font-size:2.3rem}
+  #content .sp-inquiry__steps{grid-template-columns:1fr;gap:.55rem}
+  #content .sp-inquiry__step{align-items:center;font-size:.82rem}
+  #content .sp-form__row{grid-template-columns:1fr;gap:0}
+  #content .sp-field input,#content .sp-field textarea{min-height:52px;border-radius:11px}
+  #content .sp-field textarea{min-height:104px}
+  #content .sp-form__foot{flex-direction:column;align-items:stretch;gap:.85rem}
+  #content .sp-form__foot .sp-btn{width:100%;min-height:52px}
+  #content .sp-form__note{order:2;max-width:none;text-align:center}
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  #content .sp-btn{transition:none}
+}
+
+</style>
+<style id="menu-compact">
+.mobile-menu__link{padding-top:clamp(.5rem,1.4vh,1rem) !important;padding-bottom:clamp(.5rem,1.4vh,1rem) !important;font-size:clamp(.88rem,2.2vh,1.05rem) !important}
+.mobile-menu__cta{margin-top:clamp(.6rem,1.5vh,1.5rem) !important;padding-top:clamp(.75rem,1.6vh,1rem) !important;padding-bottom:clamp(.75rem,1.6vh,1rem) !important}
+.mobile-menu__social{margin-top:clamp(.5rem,1.2vh,1rem) !important;padding-top:.7rem !important;padding-bottom:.7rem !important}
+@media (max-height:680px){
+.mobile-menu__link{padding-top:.42rem !important;padding-bottom:.42rem !important;font-size:.84rem !important}
+.mobile-menu__cta{margin-top:.5rem !important;padding-top:.65rem !important;padding-bottom:.65rem !important}
+.mobile-menu__social{margin-top:.4rem !important;padding-top:.5rem !important;padding-bottom:.5rem !important}
+}
+@media (max-height:580px){
+.mobile-menu__link{padding-top:.28rem !important;padding-bottom:.28rem !important;font-size:.78rem !important}
+.mobile-menu__cta{margin-top:.4rem !important;padding-top:.55rem !important;padding-bottom:.55rem !important}
+}
+</style>
+</head>
+<body>
+
+<!-- ===== SITE HEADER ===== -->
+<div class="header" id="siteHeader">
+  <a class="ticker" href="/tickets" aria-label="View Summit passes">
+    <div class="ticker__inner">
+      <span class="ticker__btc" id="btcTicker">₿itcoin</span>
+    </div>
+  </a>
+  <div class="nav-wrap" id="navWrap">
+    <nav class="nav">
+      <a class="nav__brand" href="/#top" aria-label="The Sovereign Summit">
+        <img src="images/nav-bar-header-withdate.png?v=2" alt="The Sovereign Summit, February 4-7 2027" fetchpriority="high">
+      </a>
+      <div class="nav__sp nav__sp--2" aria-hidden="true"></div>
+      <ul class="nav__links">
+        <li><a class="nav__link" href="/speakers">Speakers</a></li>
+        <li><a class="nav__link" href="/sponsors">Sponsors</a></li>
+        <li><a class="nav__link" href="/vip">VIP</a></li>
+        <li class="nav__item--dd">
+          <button type="button" class="nav__link nav__dd-toggle" aria-expanded="false" aria-haspopup="true">Schedule <span class="nav__chev" aria-hidden="true">▾</span></button>
+          <div class="nav__dd">
+            <a class="nav__dd-link" href="/agenda">Summit Agenda</a>
+            <a class="nav__dd-link" href="/events">Events &amp; Experiences</a>
+          </div>
+        </li>
+        <li class="nav__item--dd">
+          <button type="button" class="nav__link nav__dd-toggle" aria-expanded="false" aria-haspopup="true">Venue <span class="nav__chev" aria-hidden="true">&#9662;</span></button>
+          <div class="nav__dd">
+            <a class="nav__dd-link" href="/hotel">Hotel</a>
+            <a class="nav__dd-link" href="/convention-center">Convention Center</a>
+          </div>
+        </li>
+        <li class="nav__item--dd">
+          <button type="button" class="nav__link nav__dd-toggle" aria-expanded="false" aria-haspopup="true">About <span class="nav__chev" aria-hidden="true">▾</span></button>
+          <div class="nav__dd">
+            <a class="nav__dd-link" href="/faq">FAQ</a>
+            <a class="nav__dd-link" href="/mission">Mission</a>
+            <a class="nav__dd-link" href="/leadership">Leadership</a>
+          </div>
+        </li>
+      </ul>
+      <div class="nav__sp" aria-hidden="true"></div>
+      <div class="nav__sp" aria-hidden="true"></div>
+      <div class="nav__actions">
+        <a href="/tickets" class="btn nav__cta">Buy Tickets <span class="btn__arrow">→</span></a>
+        <button class="nav__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </div>
+</div>
+
+<!-- ===== MOBILE MENU ===== -->
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+  <div class="mobile-menu__inner">
+    <ul class="mobile-menu__links">
+      <li><a class="mobile-menu__link" href="/speakers">Speakers <span aria-hidden="true">→</span></a></li>
+      <li><a class="mobile-menu__link" href="/sponsors">Sponsors <span aria-hidden="true">→</span></a></li>
+      <li><a class="mobile-menu__link" href="/vip">VIP <span aria-hidden="true">→</span></a></li>
+      <li><a class="mobile-menu__link" href="/agenda">Summit Agenda <span aria-hidden="true">→</span></a></li>
+      <li><a class="mobile-menu__link" href="/events">Events &amp; Experiences <span aria-hidden="true">→</span></a></li>
+      <li><a class="mobile-menu__link" href="/hotel">Hotel <span aria-hidden="true">→</span></a></li>
+      <li><a class="mobile-menu__link" href="/convention-center">Convention Center <span aria-hidden="true">→</span></a></li>
+      <li><a class="mobile-menu__link" href="/faq">FAQ <span aria-hidden="true">→</span></a></li>
+      <li><a class="mobile-menu__link" href="/mission">Mission <span aria-hidden="true">→</span></a></li>
+      <li><a class="mobile-menu__link" href="/leadership">Leadership <span aria-hidden="true">→</span></a></li>
+    </ul>
+    <a href="/tickets" class="btn mobile-menu__cta">Buy Tickets <span class="btn__arrow">→</span></a>
+    <a href="https://x.com/sovereignmiami" target="_blank" rel="noopener" class="mobile-menu__social" aria-label="Follow The Sovereign Summit on X">
+      <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+      <span>Follow on X</span>
+    </a>
+  </div>
+</div>
+
+<!-- ===== MAIN CONTENT ===== -->
+<main id="content">
+
+<!-- Hero -->
+<section class="sp-hero af-hero" id="affiliate">
+  <div class="sp-hero__bg" aria-hidden="true">
+    <img src="images/fontainebleau.webp" alt="" fetchpriority="high" decoding="async">
+  </div>
+  <div class="sp-hero__scrim" aria-hidden="true"></div>
+  <div class="sp-container sp-hero__inner">
+    <div class="sp-hero__top">
+      <div class="sp-hero__copy">
+        <div class="sp-kicker">Affiliate Program</div>
+        <h1>Bring your community. Earn your place.</h1>
+        <p class="sp-hero__sub">Your affiliate code gives buyers 10% off. Commissions and reward tiers use net ticket sales after the discount, fees, refunds and chargebacks.</p>
+        <div class="sp-hero__actions">
+          <a class="sp-btn sp-btn--primary" href="#apply">Request Your Code <span aria-hidden="true">→</span></a>
+          <a class="sp-btn sp-btn--ghost" href="#rewards">See Rewards <span aria-hidden="true">↓</span></a>
+        </div>
+      </div>
+      <div class="af-rate">
+        <div class="af-rate__num">10%</div>
+        <div class="af-rate__label">Commission on all net ticket sales</div>
+        <p>Earn from your first dollar, between milestones and above $20,000. No commission cap.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Reward tiers -->
+<section class="af-tiers" id="rewards">
+  <div class="sp-container">
+    <div class="sp-section-head">
+      <div>
+        <div class="sp-kicker">Reward Tiers</div>
+        <h2 class="sp-section-title">Your rewards build as you sell.</h2>
+      </div>
+      <p class="sp-section-note">Rewards are cumulative. Each tier includes previous benefits.</p>
+    </div>
+
+    <table class="af-table">
+      <thead>
+        <tr>
+          <th scope="col">Net Sales</th>
+          <th scope="col">Commission*</th>
+          <th scope="col">Your Total Reward Package</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="af-sales" data-label="Net Sales">$500</td>
+          <td class="af-comm" data-label="Commission*">$50</td>
+          <td data-label="Your Total Reward Package">
+            <ul class="af-reward"><li>1 complimentary Summit Pass</li></ul>
+          </td>
+        </tr>
+        <tr>
+          <td class="af-sales" data-label="Net Sales">$2,000</td>
+          <td class="af-comm" data-label="Commission*">$200</td>
+          <td data-label="Your Total Reward Package">
+            <ul class="af-reward"><li class="is-vip">1 VIP Pass <small>upgrades your Summit Pass</small></li></ul>
+          </td>
+        </tr>
+        <tr>
+          <td class="af-sales" data-label="Net Sales">$6,000</td>
+          <td class="af-comm" data-label="Commission*">$600</td>
+          <td data-label="Your Total Reward Package">
+            <ul class="af-reward"><li class="is-vip">2 VIP Passes total</li></ul>
+          </td>
+        </tr>
+        <tr>
+          <td class="af-sales" data-label="Net Sales">$10,000</td>
+          <td class="af-comm" data-label="Commission*">$1,000</td>
+          <td data-label="Your Total Reward Package">
+            <ul class="af-reward"><li class="is-vip">2 VIP Passes</li><li>Flight reimbursement up to $600</li></ul>
+          </td>
+        </tr>
+        <tr>
+          <td class="af-sales" data-label="Net Sales">$20,000</td>
+          <td class="af-comm" data-label="Commission*">$2,000</td>
+          <td data-label="Your Total Reward Package">
+            <ul class="af-reward"><li class="is-vip">2 VIP Passes</li><li>Flight reimbursement up to $600</li><li>A room at Fontainebleau Miami Beach provided for 3 nights</li></ul>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p class="af-foot">*Examples of total commission, not milestone-only payouts. Earn 10% of all net sales. Payment and <a href="#terms">program terms</a> are below.</p>
+    <p class="af-foot af-foot--strong">The VIP upgrade replaces your complimentary Summit Pass; the maximum is two passes total.</p>
+  </div>
+</section>
+
+<!-- How it works -->
+<section class="af-how" id="how-it-works">
+  <div class="sp-container">
+    <div class="sp-section-head">
+      <div>
+        <div class="sp-kicker">Share the Summit. Build momentum.</div>
+        <h2 class="sp-section-title">How it works.</h2>
+      </div>
+    </div>
+
+    <div class="af-steps">
+      <article class="af-card">
+        <span class="af-card__n">01</span>
+        <h3>Use your affiliate code</h3>
+        <p>Share the affiliate code assigned by the Summit team. Buyers enter your code at checkout for 10% off their ticket purchase, and the sale is attributed to you.</p>
+      </article>
+      <article class="af-card">
+        <span class="af-card__n">02</span>
+        <h3>Share your code with your community</h3>
+        <p>Include your code in social posts, newsletters, podcasts and personal invitations. Remind buyers to enter it at checkout and disclose that you earn commission.</p>
+      </article>
+      <article class="af-card">
+        <span class="af-card__n">03</span>
+        <h3>Earn on every net sales dollar</h3>
+        <p>Commission = total net ticket sales x 10%, after the buyer discount, fees, refunds and chargebacks. Reward tiers unlock extra benefits; commission accrues on every net sales dollar.</p>
+      </article>
+    </div>
+
+    <div class="af-example">
+      <div class="sp-kicker">Example: $20,000 in net ticket sales</div>
+      <p class="af-pay__lede" style="margin-bottom:0">Your total package:</p>
+      <div class="af-example__grid">
+        <div class="af-example__item"><strong>$2,000</strong><span>in commission</span></div>
+        <div class="af-example__item"><strong class="af-gold">2</strong><span>VIP Passes</span></div>
+        <div class="af-example__item"><strong>$600</strong><span>maximum flight reimbursement</span></div>
+        <div class="af-example__item"><strong>3 nights</strong><span>in a room provided at Fontainebleau Miami Beach</span></div>
+      </div>
+    </div>
+
+    <div class="af-notes">
+      <div class="af-card af-note">
+        <h3>10% on every dollar of net ticket sales</h3>
+        <p>You earn 10% commission on every dollar of net ticket sales. You do not need to reach the next reward tier to earn commission.</p>
+      </div>
+      <div class="af-card af-note">
+        <h3>Above $20,000: the same 10% continues</h3>
+        <p>For example, $25,000 in net sales earns $2,500 in total commission, plus the full $20,000 reward package. Every additional $1,000 in net sales earns another $100.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Payouts and deadlines -->
+<section class="af-pay" id="payouts">
+  <div class="sp-container">
+    <div class="sp-section-head">
+      <div>
+        <div class="sp-kicker">Commission Payments / Required Documentation</div>
+        <h2 class="sp-section-title">Payouts &amp; deadlines.</h2>
+      </div>
+    </div>
+    <p class="af-pay__lede">Total commissions are paid 60 days after the conference ends. For affiliates earning $600 or more in total commissions, payment requires timely submission of a completed Form W-9.</p>
+
+    <div class="af-dates">
+      <div class="af-date">
+        <div class="sp-kicker">Commission payment date</div>
+        <div class="af-date__date">April 8, 2027</div>
+        <p>60 days after the conference ends on February 7, 2027.</p>
+      </div>
+      <div class="af-date">
+        <div class="sp-kicker">W-9 submission deadline</div>
+        <div class="af-date__date">March 9, 2027</div>
+        <p>30 days after the conference ends on February 7, 2027.</p>
+      </div>
+    </div>
+
+    <div class="af-terms">
+      <div class="af-card af-note">
+        <h3>W-9 requirement</h3>
+        <p>Under this program, a completed Form W-9 must be submitted to receive total commissions of $600 or more. At the 10% commission rate, this threshold is reached at $6,000 in net ticket sales.</p>
+      </div>
+      <div class="af-card af-note af-card--warn">
+        <h3>Missed deadline: commissions are forfeited</h3>
+        <p>If your total commissions are $600 or more and you do not submit the required completed Form W-9 by March 9, 2027, all of your commissions are forfeited.</p>
+      </div>
+      <div class="af-card af-note">
+        <h3>Flight receipts due March 9, 2027</h3>
+        <p>Flight receipts must be received within 30 days after the conference ends, by March 9, 2027. Flight reimbursement is up to $600.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Program terms -->
+<section class="af-legal" id="terms">
+  <div class="sp-container">
+    <div class="sp-section-head">
+      <div>
+        <div class="sp-kicker">The Fine Print</div>
+        <h2 class="sp-section-title">Program terms.</h2>
+      </div>
+    </div>
+    <dl class="af-legal__list">
+      <div class="af-legal__row"><dt>Eligible tickets</dt><dd>Summit Pass and VIP Summit Pass purchases made with your code. Kids passes, hotel rooms, side-event tickets and sponsorships are excluded.</dd></div>
+      <div class="af-legal__row"><dt>Net sales</dt><dd>Ticket revenue after the buyer discount, fees, refunds and chargebacks. Any sales tax collected is excluded.</dd></div>
+      <div class="af-legal__row"><dt>Enrollment</dt><dd>By approval. Request a code through the form below. The Summit team assigns one code per affiliate.</dd></div>
+      <div class="af-legal__row"><dt>Your own purchases</dt><dd>Tickets you buy yourself do not count toward commission or reward tiers.</dd></div>
+      <div class="af-legal__row"><dt>Other discounts</dt><dd>Your affiliate code cannot be combined with any other discount or promotion.</dd></div>
+      <div class="af-legal__row"><dt>Sales deadline</dt><dd>Sales count through February 3, 2027 at 11:59 pm ET.</dd></div>
+      <div class="af-legal__row"><dt>Payment method</dt><dd>ACH, check or Bitcoin, at your choice. There is no minimum payout.</dd></div>
+      <div class="af-legal__row"><dt>Tax forms</dt><dd>Request a secure upload link from the Summit team for your Form W-9. Do not send tax forms by plain email. Affiliates outside the U.S. submit Form W-8BEN or W-8BEN-E in place of the W-9, by the same March 9, 2027 deadline.</dd></div>
+      <div class="af-legal__row"><dt>Refunds and chargebacks</dt><dd>Commission is calculated on final net sales. A pass or travel reward already used is not taken back. A reward not yet used can be withdrawn if refunds or chargebacks bring you below its tier.</dd></div>
+      <div class="af-legal__row"><dt>Passes</dt><dd>Issued within 7 days of reaching a tier. Passes may be transferred to a named guest. They have no cash value and may not be resold.</dd></div>
+      <div class="af-legal__row"><dt>Flight reimbursement</dt><dd>Once per affiliate, for your own travel to the Summit, up to $600. Send receipts to <a href="mailto:info@thesovereignsummit.com">info@thesovereignsummit.com</a> by March 9, 2027. Reimbursed with commissions on April 8, 2027.</dd></div>
+      <div class="af-legal__row"><dt>Hotel</dt><dd>Once per affiliate. Three nights between February 4 and 7, 2027 in a standard room at Fontainebleau Miami Beach, booked by the Summit team. Room rate, taxes and resort fee are covered. Incidentals are not.</dd></div>
+      <div class="af-legal__row"><dt>Promotion rules</dt><dd>Disclose that you earn commission. Do not post your code on coupon or deal sites, and do not run paid ads that bid on the Summit&rsquo;s name.</dd></div>
+      <div class="af-legal__row"><dt>Program changes</dt><dd>The Summit may change or end the program with written notice by email. Commission and rewards already earned are honored.</dd></div>
+    </dl>
+  </div>
+</section>
+
+<!-- Request a code -->
+<section class="sp-inquiry" id="apply">
+  <div class="sp-container">
+    <div class="sp-inquiry__panel">
+      <div class="sp-inquiry__intro">
+        <div>
+          <div class="sp-kicker">Become an Affiliate</div>
+          <h2>Request your code.</h2>
+          <p>Tell us about your community. Affiliate codes are assigned by the Summit team.</p>
+        </div>
+        <div class="sp-inquiry__steps">
+          <div class="sp-inquiry__step"><span>01</span>Request your code</div>
+          <div class="sp-inquiry__step"><span>02</span>Share it with your community</div>
+          <div class="sp-inquiry__step"><span>03</span>Earn on every net sales dollar</div>
+        </div>
+      </div>
+
+      <form class="sp-form" action="https://formsubmit.co/info@thesovereignsummit.com" method="POST">
+        <input type="hidden" name="_subject" value="New affiliate request - thesovereignsummit.com">
+        <input type="hidden" name="_next" value="https://thesovereignsummit.com/affiliate?sent=1#apply">
+        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+
+        <div class="sp-form__row">
+          <label class="sp-field">
+            <span>Name</span>
+            <input type="text" name="name" required autocomplete="name" enterkeyhint="next">
+          </label>
+          <label class="sp-field">
+            <span>Email</span>
+            <input type="email" name="email" required autocomplete="email" inputmode="email" enterkeyhint="next">
+          </label>
+        </div>
+
+        <div class="sp-form__row">
+          <label class="sp-field">
+            <span>Company or Community</span>
+            <input type="text" name="community" autocomplete="organization" enterkeyhint="next">
+          </label>
+          <label class="sp-field">
+            <span>Where You Will Share</span>
+            <input type="text" name="channels" required placeholder="Newsletter, podcast, X, events" enterkeyhint="next">
+          </label>
+        </div>
+
+        <label class="sp-field">
+          <span>Anything else?</span>
+          <textarea name="message" rows="4" placeholder="Links, audience, or questions."></textarea>
+        </label>
+
+        <div class="sp-form__foot">
+          <p class="sp-form__note">Questions? Email <a href="mailto:info@thesovereignsummit.com">info@thesovereignsummit.com</a>.</p>
+          <button type="submit" class="sp-btn sp-btn--primary">Request Your Code <span aria-hidden="true">→</span></button>
+        </div>
+
+        <div class="sp-form__thanks" id="inqThanks" hidden aria-live="polite">Thank you. We received your request and will get back to you shortly.</div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__top footer__top--3col" id="subscribe">
+      <div class="footer__col footer__news">
+        <img class="footer__brand-mark footer__brand-mark--nav" src="images/nav-bar-header.png?v=1" alt="The Sovereign Summit" loading="lazy" decoding="async">
+        <div class="footer__col-label">Newsletter</div>
+        <p class="footer__news-copy">Speaker announcements, program updates, and more.<br>Unsubscribe any time you like.</p>
+        <form class="news__form">
+        <input class="news__input" type="email" placeholder="your@email.com" required>
+        <button type="submit" class="news__submit">Subscribe →</button>
+      </form>
+      </div>
+      <div class="footer__col"><div class="footer__col-label">Event</div><ul><li><a href="/speakers">Speakers</a></li><li><a href="/agenda">Agenda</a></li><li><a href="/events">Events &amp; Experiences</a></li><li><a href="/hotel">Hotel</a></li><li><a href="/convention-center">Convention Center</a></li><li><a href="/faq">FAQ</a></li><li><a href="/mission">Mission</a></li><li><a href="/leadership">Leadership</a></li></ul></div>
+      <div class="footer__col"><div class="footer__col-label">Engage</div><ul><li><a href="/press">Press</a></li><li><a href="/vip">VIP</a></li><li><a href="/sponsors">Sponsors</a></li><li><a href="/partners">Partners</a></li><li><a href="mailto:info@thesovereignsummit.com">Email Us</a></li><li><a class="footer__x" href="https://x.com/sovereignmiami" target="_blank" rel="noopener" aria-label="The Sovereign Summit on X"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a></li></ul></div>
+    </div>
+    <div class="footer__bottom">
+      <div>© 2027 The Sovereign Summit &middot; Miami Beach, FL</div>
+    </div>
+  </div>
+</footer>
+</main>
+
+<script>
+(function(){
+  if(new URLSearchParams(location.search).get('sent')==='1'){
+    var form=document.querySelector('.sp-form');var thanks=document.getElementById('inqThanks');
+    if(form&&thanks){Array.prototype.forEach.call(form.elements,function(el){el.disabled=true;});thanks.hidden=false;}
+  }
+})();
+</script>
+
+<script>
+(function(){
+  var btcEl = document.getElementById('btcTicker');
+  if(btcEl && window.fetch){
+    var showPrice = function(usd){
+      var n = Math.round(Number(usd));
+      if(!isFinite(n) || n <= 0) return;
+      btcEl.textContent = '$' + n.toLocaleString('en-US') + ' USD per ₿itcoin';
+    };
+    fetch('https://api.coinbase.com/v2/prices/BTC-USD/spot')
+      .then(function(r){ return r.json(); })
+      .then(function(j){ showPrice(j && j.data && j.data.amount); })
+      .catch(function(){
+        fetch('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd')
+          .then(function(r){ return r.json(); })
+          .then(function(j){ showPrice(j && j.bitcoin && j.bitcoin.usd); })
+          .catch(function(){ /* keep fallback text */ });
+      });
+  }
+
+  var header = document.getElementById('siteHeader');
+  var setH = function(){
+    if(!header) return;
+    var h = Math.round(header.getBoundingClientRect().height);
+    document.documentElement.style.setProperty('--header-h', h + 'px');
+  };
+  setH();
+  window.addEventListener('resize', setH);
+  var navToggle = document.getElementById('navToggle');
+  var mobileMenu = document.getElementById('mobileMenu');
+  if(navToggle && mobileMenu){
+    var closeMenu = function(){
+      navToggle.setAttribute('aria-expanded','false');
+      mobileMenu.setAttribute('aria-hidden','true');
+      mobileMenu.classList.remove('is-open');
+      document.body.classList.remove('menu-open');
+    };
+    navToggle.addEventListener('click', function(){
+      var open = navToggle.getAttribute('aria-expanded') === 'true';
+      if(open){ closeMenu(); }
+      else{
+        navToggle.setAttribute('aria-expanded','true');
+        mobileMenu.setAttribute('aria-hidden','false');
+        mobileMenu.classList.add('is-open');
+        document.body.classList.add('menu-open');
+      }
+    });
+    mobileMenu.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', closeMenu); });
+    window.addEventListener('resize', function(){
+      if(window.innerWidth > 1280 && navToggle.getAttribute('aria-expanded') === 'true') closeMenu();
+    });
+  }
+})();
+</script>
+
+<script>
+(function(){
+  var DONE='tss_news_done';
+  function sendEmail(email){
+    return fetch('/api/subscribe',{
+      method:'POST',
+      headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({email:email})
+    }).then(function(r){ if(!r.ok) throw new Error('subscribe'); });
+  }
+  document.querySelectorAll('.news__form').forEach(function(f){
+    f.addEventListener('submit', function(e){
+      e.preventDefault();
+      var inp=f.querySelector('.news__input');
+      var btn=f.querySelector('.news__submit');
+      var em=inp && inp.value.trim();
+      if(!em) return;
+      if(btn){ btn.disabled=true; btn.textContent='One sec…'; }
+      sendEmail(em).then(function(){
+        if(inp) inp.value='';
+        if(btn) btn.textContent='Subscribed ✓';
+        try{ localStorage.setItem(DONE,'1'); }catch(err){}
+      }).catch(function(){
+        if(btn){ btn.disabled=false; btn.textContent='Try again'; }
+      });
+    });
+  });
+})();
+</script>
+
+</body>
+</html>
