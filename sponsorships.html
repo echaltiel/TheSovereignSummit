@@ -1006,6 +1006,9 @@ body{overflow-x:clip}
 }
 @keyframes sp-rail-nudge{0%,100%{transform:translateX(0)}50%{transform:translateX(-6px)}}
 @media(prefers-reduced-motion:reduce){#content .sp-rail-next{animation:none}}
+/* Taken activation: stays listed but can no longer be selected */
+#content .sp-activation--taken{opacity:.5;cursor:default;pointer-events:none}
+#content .sp-activation--taken .sp-activation__price{color:var(--sp-muted);text-transform:uppercase;letter-spacing:.12em}
 </style>
 <style id="menu-compact">
 .mobile-menu__link{padding-top:clamp(.5rem,1.4vh,1rem) !important;padding-bottom:clamp(.5rem,1.4vh,1rem) !important;font-size:clamp(.88rem,2.2vh,1.05rem) !important}
@@ -1157,10 +1160,10 @@ body{overflow-x:clip}
         <div class="sp-package__head">
           <div class="sp-package__identity">
             <div class="sp-package__tier">Platinum</div>
-            <div class="sp-package__availability">Limited to two</div>
+            <div class="sp-package__availability">1 of 2 remaining</div>
           </div>
           <img class="sp-package__emblem sp-package__emblem--title" src="images/emblem-platinum.webp?v=1" width="106" height="128" loading="lazy" decoding="async" alt="" aria-hidden="true">
-          <div class="sp-package__price">$100,000<small>per package</small></div>
+          <div class="sp-package__price">$75,000<small>per package</small></div>
         </div>
 
         <div class="sp-package__visual">
@@ -1208,7 +1211,7 @@ body{overflow-x:clip}
         </details>
 
         <div class="sp-package__actions">
-          <a class="sp-btn sp-btn--primary sp-select" href="#inquire" data-interest="Platinum Sponsor" data-item="Platinum Sponsor: $100,000">Request Availability</a>
+          <a class="sp-btn sp-btn--primary sp-select" href="#inquire" data-interest="Platinum Sponsor" data-item="Platinum Sponsor: $75,000">Request Availability</a>
         </div>
       </article>
 
@@ -1220,7 +1223,7 @@ body{overflow-x:clip}
             <div class="sp-package__availability">Limited to four</div>
           </div>
           <img class="sp-package__emblem sp-package__emblem--gold" src="images/emblem-gold.webp?v=1" width="107" height="128" loading="lazy" decoding="async" alt="" aria-hidden="true">
-          <div class="sp-package__price">$50,000<small>per package</small></div>
+          <div class="sp-package__price">$25,000<small>per package</small></div>
         </div>
 
         <div class="sp-package__visual">
@@ -1267,7 +1270,7 @@ body{overflow-x:clip}
         </details>
 
         <div class="sp-package__actions">
-          <a class="sp-btn sp-btn--gold sp-select" href="#inquire" data-interest="Gold Sponsor" data-item="Gold Sponsor: $50,000">Request Availability</a>
+          <a class="sp-btn sp-btn--gold sp-select" href="#inquire" data-interest="Gold Sponsor" data-item="Gold Sponsor: $25,000">Request Availability</a>
         </div>
       </article>
 
@@ -1389,13 +1392,13 @@ body{overflow-x:clip}
             <span class="sp-activation__body"><strong>VIP Oceanfront Soiree</strong><small>Friday evening</small></span>
             <span class="sp-activation__price">$15,000</span>
           </a>
-          <a class="sp-activation sp-select" href="#inquire" data-interest="Featured Partnership Only" data-item="VIP Welcome Reception: $12,500 + event costs">
+          <div class="sp-activation sp-activation--taken" aria-label="VIP Welcome Reception, taken">
             <span class="sp-activation__icon sp-activation__icon--gold">
               <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h10l-1 7a4 4 0 0 1-8 0L7 3Z"/><path d="M12 14v7"/><path d="M8 21h8"/></svg>
             </span>
             <span class="sp-activation__body"><strong>VIP Welcome Reception</strong><small>Thursday evening</small></span>
-            <span class="sp-activation__price">$12,500</span>
-          </a>
+            <span class="sp-activation__price">Taken</span>
+          </div>
           <a class="sp-activation sp-select" href="#inquire" data-interest="Featured Partnership Only" data-item="Bitcoin Fundamentals: $7,500">
             <span class="sp-activation__icon sp-activation__icon--gold">
               <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h7a3 3 0 0 1 3 3v13a3 3 0 0 0-3-3H4z"/><path d="M20 4h-3a3 3 0 0 0-3 3v13a3 3 0 0 1 3-3h3z"/></svg>
