@@ -6272,3 +6272,6 @@ body.menu-open{overflow:hidden}
 @media (max-width:480px){#content .partners__grid.partners__grid--featured{margin-bottom:.35rem}}
 /* v302 partner cards show name only (no web address); clicking the card opens the site */
 #content .partners__grid .partner > .partner__name:last-child{margin-bottom:0}
+/* v303 more room between the featured partner card and the partners below it */
+#content .partners__grid.partners__grid--featured{margin-bottom:1.5rem}
+@media (max-width:720px){#content .partners__grid.partners__grid--featured{margin-bottom:1.25rem}}

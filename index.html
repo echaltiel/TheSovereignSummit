@@ -38,7 +38,7 @@
 <link rel="preconnect" href="https://api.coingecko.com" crossorigin>
 <link rel="preconnect" href="https://api.fiscaldata.treasury.gov" crossorigin>
 <link rel="preconnect" href="https://api.eia.gov" crossorigin>
-<link rel="stylesheet" href="styles.css?v=302">
+<link rel="stylesheet" href="styles.css?v=303">
 <script>if(location.hash==='#leadership')location.replace('/team#leadership');</script>
 <style>
 /* Homepage hero, Oct 2026 redesign: photo hero, the four "On stage" pillars,
@@ -1438,6 +1438,9 @@
 /* v301 partners and speakers rails share the speakers grid spacing at every width */
 @media (max-width:720px){#content .speakers__grid--rail,#content .partners__grid--rail{--rail-gap:.4rem}#content .speakers__grid--top{margin-bottom:calc(.4rem - 6px)}}
 @media (max-width:480px){#content .speakers__grid--rail,#content .partners__grid--rail{--rail-gap:.35rem}#content .speakers__grid--top{margin-bottom:calc(.35rem - 6px)}}
+/* v303 speakers: scrolling row shows two across on phones, like the top row, and both rows share one card height */
+@media (max-width:520px){#content .speakers__grid--rail{--rail-cols:2}}
+#content #speakersGridTop > .speaker,#content #speakersGridFeatured > .speaker{min-height:var(--spk-h,0px)}
 </style>
 <script>
 (function(){
@@ -1611,6 +1614,28 @@
   // Run after the speaker profile script has bound its click handlers to the original cards.
   function init(){ setup('speakersGridFeatured'); setup('partnersRail'); }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
+})();
+</script>
+<script>
+/* Speakers: give the fixed top row and the scrolling row the same card height. */
+(function(){
+  var top = document.getElementById('speakersGridTop');
+  var row = document.getElementById('speakersGridFeatured');
+  if (!top || !row) return;
+  var sec = top.closest('section') || document.documentElement;
+  function sync(){
+    sec.style.setProperty('--spk-h', '0px');
+    var h = 0;
+    [top, row].forEach(function(g){
+      Array.prototype.forEach.call(g.children, function(c){ h = Math.max(h, c.getBoundingClientRect().height); });
+    });
+    sec.style.setProperty('--spk-h', Math.ceil(h) + 'px');
+  }
+  var t;
+  window.addEventListener('resize', function(){ cancelAnimationFrame(t); t = requestAnimationFrame(sync); });
+  window.addEventListener('load', sync);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(sync);
+  sync();
 })();
 </script>
 
