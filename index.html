@@ -957,31 +957,25 @@
         <h3 class="partner__name"><em>Bitcoin Policy Institute</em></h3>
         <div class="partner__role">btcpolicy.org</div>
       </a>
-      <a class="partner partner--logo" data-partner="02" href="https://bitcoinday.io/" target="_blank" rel="noopener" aria-label="Bitcoin Day">
-        <div class="partner__portrait partner__portrait--haslogo"><img class="partner__photo" src="images/partners/bitcoin-day.webp" alt="Bitcoin Day logo" loading="lazy" decoding="async"></div>
-        <h3 class="partner__name"><em>Bitcoin Day</em></h3>
-        <div class="partner__role">bitcoinday.io</div>
-      </a>
-      <a class="partner partner--logo" data-partner="03" href="https://fomo21.com/" target="_blank" rel="noopener" aria-label="Fomo21">
-        <div class="partner__portrait partner__portrait--haslogo partner__portrait--dark"><img class="partner__photo" src="images/partners/fomo21.webp" alt="Fomo21 logo" loading="lazy" decoding="async"></div>
-        <h3 class="partner__name"><em>Fomo21</em></h3>
-        <div class="partner__role">fomo21.com</div>
-      </a>
-      <a class="partner partner--logo" data-partner="04" href="https://www.proofofconference.com/" target="_blank" rel="noopener" aria-label="Proof of Conference">
-        <div class="partner__portrait partner__portrait--haslogo partner__portrait--tall"><img class="partner__photo" src="images/partners/proof-of-conference.webp" alt="Proof of Conference logo" loading="lazy" decoding="async"></div>
-        <h3 class="partner__name"><em>Proof of Conference</em></h3>
-        <div class="partner__role">proofofconference.com</div>
-      </a>
-      <a class="partner partner--logo" data-partner="05" href="https://www.bitcoinbay.foundation/" target="_blank" rel="noopener" aria-label="Bitcoin Bay Foundation">
+      <a class="partner partner--logo" data-partner="02" href="https://www.bitcoinbay.foundation/" target="_blank" rel="noopener" aria-label="Bitcoin Bay Foundation">
         <div class="partner__portrait partner__portrait--haslogo partner__portrait--dark"><img class="partner__photo" src="images/partners/bitcoin-bay.webp" alt="Bitcoin Bay Foundation logo" loading="lazy" decoding="async"></div>
         <h3 class="partner__name"><em>Bitcoin Bay Foundation</em></h3>
         <div class="partner__role">bitcoinbay.foundation</div>
       </a>
-      <!-- Become a Partner stays the last card. Add new partners above it. -->
-      <a class="partner partner--cta" data-partner="cta" href="/get-involved" aria-label="Become a partner of The Sovereign Summit">
-        <div class="partner__portrait partner__portrait--haslogo"><img class="partner__photo" src="images/partner-placeholder.png" alt="Become a partner" /></div>
-        <h3 class="partner__name"><em>Click Here</em></h3>
-        <div class="partner__role">To Learn More</div>
+      <a class="partner partner--logo" data-partner="03" href="https://bitcoinday.io/" target="_blank" rel="noopener" aria-label="Bitcoin Day">
+        <div class="partner__portrait partner__portrait--haslogo"><img class="partner__photo" src="images/partners/bitcoin-day.webp" alt="Bitcoin Day logo" loading="lazy" decoding="async"></div>
+        <h3 class="partner__name"><em>Bitcoin Day</em></h3>
+        <div class="partner__role">bitcoinday.io</div>
+      </a>
+      <a class="partner partner--logo" data-partner="04" href="https://fomo21.com/" target="_blank" rel="noopener" aria-label="Fomo21">
+        <div class="partner__portrait partner__portrait--haslogo partner__portrait--dark"><img class="partner__photo" src="images/partners/fomo21.webp" alt="Fomo21 logo" loading="lazy" decoding="async"></div>
+        <h3 class="partner__name"><em>Fomo21</em></h3>
+        <div class="partner__role">fomo21.com</div>
+      </a>
+      <a class="partner partner--logo" data-partner="05" href="https://www.proofofconference.com/" target="_blank" rel="noopener" aria-label="Proof of Conference">
+        <div class="partner__portrait partner__portrait--haslogo partner__portrait--tall"><img class="partner__photo" src="images/partners/proof-of-conference.webp" alt="Proof of Conference logo" loading="lazy" decoding="async"></div>
+        <h3 class="partner__name"><em>Proof of Conference</em></h3>
+        <div class="partner__role">proofofconference.com</div>
       </a>
       </div>
       <button class="speakers__arrow speakers__arrow--prev partners__arrow" type="button" aria-label="Previous partners" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
@@ -1437,6 +1431,13 @@
 })();
 </script>
 
+<style>
+/* v298 homepage partners: continuous marquee, pauses on hover. JS adds .is-marquee;
+   without JS, without container query units, or with reduced motion, the scroll-snap rail stays. */
+#content .partners__rail.is-marquee .partners__viewport{overflow:hidden;container-type:inline-size;padding:6px 0 30px;margin-bottom:-30px;touch-action:pan-y}
+#content .partners__rail.is-marquee .partners__grid--rail{overflow:visible;scroll-snap-type:none;scroll-behavior:auto;width:max-content;padding:0;margin:0;will-change:transform}
+#content .partners__rail.is-marquee .partners__grid--rail .partner{flex:0 0 calc((100cqw - (var(--rail-cols) - 1) * var(--rail-gap)) / var(--rail-cols));scroll-snap-align:none}
+</style>
 <script>
 (function(){
   var rail = document.getElementById('partnersRail');
@@ -1444,23 +1445,151 @@
   var wrap = rail.parentNode;
   var prev = wrap.querySelector('.speakers__arrow--prev');
   var next = wrap.querySelector('.speakers__arrow--next');
-  if (!prev || !next) return;
-  function step(){
-    var c = rail.querySelector('.partner');
-    var gap = parseFloat(getComputedStyle(rail).columnGap) || 0;
-    return c ? c.getBoundingClientRect().width + gap : rail.clientWidth/4;
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var cq = window.CSS && CSS.supports && CSS.supports('width', '1cqw');
+
+  if (reduce || !cq || !window.requestAnimationFrame) {
+    // Fallback: static scroll-snap rail with arrows.
+    if (!prev || !next) return;
+    var fstep = function(){
+      var c = rail.querySelector('.partner');
+      var g = parseFloat(getComputedStyle(rail).columnGap) || 0;
+      return c ? c.getBoundingClientRect().width + g : rail.clientWidth/4;
+    };
+    var fupdate = function(){
+      var max = rail.scrollWidth - rail.clientWidth - 2;
+      prev.hidden = rail.scrollLeft <= 2;
+      next.hidden = rail.scrollLeft >= max;
+    };
+    next.addEventListener('click', function(){ rail.scrollBy({left: fstep(), behavior:'smooth'}); });
+    prev.addEventListener('click', function(){ rail.scrollBy({left: -fstep(), behavior:'smooth'}); });
+    rail.addEventListener('scroll', fupdate, {passive:true});
+    window.addEventListener('resize', fupdate);
+    window.addEventListener('load', fupdate);
+    fupdate();
+    return;
   }
-  function update(){
-    var max = rail.scrollWidth - rail.clientWidth - 2;
-    prev.hidden = rail.scrollLeft <= 2;
-    next.hidden = rail.scrollLeft >= max;
+
+  var SPEED = 40;  // px per second
+  var vp = document.createElement('div');
+  vp.className = 'partners__viewport';
+  wrap.insertBefore(vp, rail);
+  vp.appendChild(rail);
+  wrap.classList.add('is-marquee');
+  rail.scrollLeft = 0;
+
+  var originals = Array.prototype.slice.call(rail.children);
+  var clones = [], setW = 0, step = 0, pos = 0, v = 0, last = 0;
+  var nudge = null, hovering = false, focused = false, dragging = false;
+  var holdUntil = 0, visible = true, revealed = false;
+
+  function mod(x){ return setW ? ((x % setW) + setW) % setW : 0; }
+
+  function measure(){
+    clones.forEach(function(c){ rail.removeChild(c); });
+    clones = [];
+    rail.style.transform = 'none';
+    var first = originals[0].getBoundingClientRect();
+    var g = parseFloat(getComputedStyle(rail).columnGap) || 0;
+    var approx = originals.length * (first.width + g);
+    var copies = Math.max(1, Math.ceil(vp.clientWidth / approx));
+    for (var n = 0; n < copies; n++) {
+      originals.forEach(function(o){
+        var c = o.cloneNode(true);
+        c.setAttribute('aria-hidden', 'true');
+        c.setAttribute('tabindex', '-1');
+        c.removeAttribute('id');
+        c.style.transitionDelay = '0ms';
+        if (revealed) c.classList.add('in');
+        rail.appendChild(c);
+        clones.push(c);
+      });
+    }
+    setW = clones[0].getBoundingClientRect().left - first.left;
+    step = setW / originals.length;
+    pos = mod(pos);
+    render();
   }
-  next.addEventListener('click', function(){ rail.scrollBy({left: step(), behavior:'smooth'}); });
-  prev.addEventListener('click', function(){ rail.scrollBy({left: -step(), behavior:'smooth'}); });
-  rail.addEventListener('scroll', update, {passive:true});
-  window.addEventListener('resize', update);
-  window.addEventListener('load', update);
-  update();
+
+  function render(){ rail.style.transform = 'translate3d(' + (-mod(pos)).toFixed(2) + 'px,0,0)'; }
+
+  function frame(t){
+    var dt = last ? Math.min(t - last, 64) / 1000 : 0;
+    last = t;
+    if (nudge) {
+      if (!nudge.t0) nudge.t0 = t;
+      var k = Math.min((t - nudge.t0) / nudge.dur, 1);
+      pos = nudge.from + (nudge.to - nudge.from) * (1 - Math.pow(1 - k, 3));
+      if (k >= 1) { nudge = null; pos = mod(pos); }
+      v = 0;
+    } else {
+      var run = !hovering && !focused && !dragging && visible && t >= holdUntil;
+      v += ((run ? SPEED : 0) - v) * Math.min(1, dt * 6);   // ease in and out of the pause
+      if (!dragging) pos = mod(pos + v * dt);
+    }
+    render();
+    requestAnimationFrame(frame);
+  }
+
+  function go(dir){
+    var base = nudge ? nudge.to : pos;
+    var to = dir > 0 ? (Math.floor(base / step + 0.01) + 1) * step
+                     : (Math.ceil(base / step - 0.01) - 1) * step;
+    nudge = { from: pos, to: to, dur: 550, t0: 0 };
+  }
+  if (prev && next) {
+    prev.hidden = false; next.hidden = false;
+    next.addEventListener('click', function(){ go(1); });
+    prev.addEventListener('click', function(){ go(-1); });
+  }
+
+  // Pause on mouse hover (arrows included) and on keyboard focus.
+  wrap.addEventListener('pointerenter', function(e){ if (e.pointerType === 'mouse') hovering = true; });
+  wrap.addEventListener('pointerleave', function(e){ if (e.pointerType === 'mouse') hovering = false; });
+  wrap.addEventListener('focusin', function(e){ focused = e.target.matches && e.target.matches(':focus-visible'); });
+  wrap.addEventListener('focusout', function(e){ focused = !!(e.relatedTarget && wrap.contains(e.relatedTarget) && e.relatedTarget.matches(':focus-visible')); });
+  // Keep a keyboard-focused original card in view.
+  originals.forEach(function(o, i){
+    o.addEventListener('focus', function(){ if (!o.matches(':focus-visible')) return; nudge = { from: pos, to: pos + (mod(i * step - pos + setW / 2) - setW / 2), dur: 450, t0: 0 }; });
+  });
+
+  // Touch: swipe to move, pause briefly after.
+  var lastX = 0, startX = 0, moved = false;
+  vp.addEventListener('pointerdown', function(e){
+    if (e.pointerType === 'mouse') return;
+    dragging = true; nudge = null; v = 0; moved = false; startX = lastX = e.clientX;
+  });
+  vp.addEventListener('pointermove', function(e){
+    if (!dragging || e.pointerType === 'mouse') return;
+    pos = mod(pos - (e.clientX - lastX));
+    lastX = e.clientX;
+    if (Math.abs(e.clientX - startX) > 6) moved = true;
+  });
+  function endDrag(){ if (dragging) { dragging = false; holdUntil = performance.now() + 1500; } }
+  vp.addEventListener('pointerup', endDrag);
+  vp.addEventListener('pointercancel', endDrag);
+  vp.addEventListener('click', function(e){ if (moved) { e.preventDefault(); e.stopPropagation(); moved = false; } }, true);
+
+  // Reveal all cards together and idle while off screen.
+  if ('IntersectionObserver' in window) {
+    new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        visible = e.isIntersecting;
+        if (visible && !revealed) {
+          revealed = true;
+          Array.prototype.forEach.call(rail.children, function(c){ c.classList.add('in'); });
+        }
+      });
+    }, { threshold: 0.05 }).observe(vp);
+  } else {
+    revealed = true;
+    originals.forEach(function(c){ c.classList.add('in'); });
+  }
+
+  var rt;
+  window.addEventListener('resize', function(){ cancelAnimationFrame(rt); rt = requestAnimationFrame(measure); });
+  measure();
+  requestAnimationFrame(frame);
 })();
 </script>
 
