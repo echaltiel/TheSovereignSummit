@@ -6249,3 +6249,26 @@ body.menu-open{overflow:hidden}
   #content .partners__grid--logos .partner__name{font-size:1.2rem;text-align:left;margin:0}
   #content .partners__grid--logos .partner .partner__photo{padding:.6rem}
 }
+
+/* v302 featured partner (Official Media Partner): one card across the middle two columns,
+   above the partner row (homepage) or grid (partners page). Same card language as the other
+   partner cards (cream logo panel on top, text below), just wider, with a label above the name. */
+#content .partners__grid.partners__grid--featured{border:none;margin:0 0 .6rem}
+#content .partners__grid--featured + .partners__rail{margin-top:-6px} /* carousel viewport adds 6px above the cards */
+#content .partners__grid--featured .partner--featured{grid-column:2 / span 2;display:flex !important;flex-direction:column;align-items:stretch;padding:1.75rem 1.5rem 1.5rem;border:none}
+#content .partner--featured .partner__portrait{width:calc(100% + 3rem) !important;height:170px !important;margin:-1.75rem -1.5rem 1.25rem !important;flex:none}
+#content .partner--featured .partner__photo{padding:1.7rem 2rem;mix-blend-mode:normal}
+#content .partner--featured .partner__portrait.partner__portrait--haslogo{background:#FE4303 !important} /* Simply Bitcoin brand orange, matches their artwork */
+#content .partner--featured .partner__eyebrow{font-family:var(--fm);font-size:.68rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--paper,#F4ECE0);text-align:center;margin:0 0 .6rem}
+#content .partner--featured .partner__name{font-size:1.7rem;line-height:1.1;text-align:center;padding:0;margin:0 0 .45rem;width:100%}
+#content .partner--featured .partner__role{font-size:.68rem;letter-spacing:.15em;text-align:center;margin:0;width:100%}
+@media (max-width:1080px){#content .partners__grid--featured .partner--featured{grid-column:1 / -1}}
+@media (max-width:720px){#content .partners__grid.partners__grid--featured{margin-bottom:.4rem}}
+@media (max-width:520px){
+  #content .partner--featured .partner__portrait{height:140px !important}
+  #content .partner--featured .partner__photo{padding:1.2rem 1.4rem}
+  #content .partner--featured .partner__name{font-size:1.45rem}
+}
+@media (max-width:480px){#content .partners__grid.partners__grid--featured{margin-bottom:.35rem}}
+/* v302 partner cards show name only (no web address); clicking the card opens the site */
+#content .partners__grid .partner > .partner__name:last-child{margin-bottom:0}
