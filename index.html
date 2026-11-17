@@ -1437,6 +1437,10 @@
 #content .partners__rail.is-marquee .partners__viewport{overflow:hidden;container-type:inline-size;padding:6px 0 30px;margin-bottom:-30px;touch-action:pan-y}
 #content .partners__rail.is-marquee .partners__grid--rail{overflow:visible;scroll-snap-type:none;scroll-behavior:auto;width:max-content;padding:0;margin:0;will-change:transform}
 #content .partners__rail.is-marquee .partners__grid--rail .partner{flex:0 0 calc((100cqw - (var(--rail-cols) - 1) * var(--rail-gap)) / var(--rail-cols));scroll-snap-align:none}
+/* v299 more space between partner cards */
+#content .partners__rail .partners__grid--rail{--rail-gap:1.75rem}
+@media (max-width:1080px){#content .partners__rail .partners__grid--rail{--rail-gap:1.25rem}}
+@media (max-width:520px){#content .partners__rail .partners__grid--rail{--rail-gap:1rem}}
 </style>
 <script>
 (function(){
