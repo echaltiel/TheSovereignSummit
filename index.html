@@ -757,8 +757,7 @@
       <div class="sec-hd__num">Speakers</div>
       <h2 class="section-title sec-hd__title">The minds shaping <em>the next decade.</em></h2>
     </header>
-    <div class="speakers__rail">
-      <div class="speakers__grid speakers__grid--rail" id="speakersGridFeatured">
+    <div class="speakers__grid speakers__grid--wrap speakers__grid--top" id="speakersGridTop">
       <div class="speaker" data-speaker="01">
         <div class="speaker__index">01</div>
         <div class="speaker__portrait speaker__portrait--hasphoto">
@@ -822,6 +821,9 @@
           <p class="side-event__desc">Yianni Psaltis is an investor and company builder working where AI meets human healthspan. He co-founded NeoGenesis Capital and was previously Managing Director at Link Ventures, where he was on the founding team of the Link-XPV Fund. Earlier, working with Dr. Peter H. Diamandis, he helped launch XPRIZE Healthspan. He holds a PhD in Cancer Biology from Georgetown University.</p>
           <div class="spk-links"><a class="spk-link" href="https://x.com/YianniPsaltis" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg> @YianniPsaltis</a><a class="spk-link" href="https://neogenesiscapital.com/" target="_blank" rel="noopener">neogenesiscapital.com</a><a class="spk-link" href="https://psaltis.io" target="_blank" rel="noopener">psaltis.io</a></div>
         </div></div>
+    </div>
+    <div class="speakers__rail">
+      <div class="speakers__grid speakers__grid--rail" id="speakersGridFeatured">
       <div class="speaker" data-speaker="10">
         <div class="speaker__index">05</div>
         <div class="speaker__portrait speaker__portrait--hasphoto">
@@ -1421,194 +1423,193 @@
 })();
 </script>
 
-<script>
-(function(){
-  var rail = document.getElementById('speakersGridFeatured');
-  if (!rail || !rail.classList.contains('speakers__grid--rail')) return;
-  var prev = document.querySelector('.speakers__arrow--prev');
-  var next = document.querySelector('.speakers__arrow--next');
-  if (!prev || !next) return;
-  function step(){
-    var c = rail.querySelector('.speaker');
-    var gap = parseFloat(getComputedStyle(rail).columnGap) || 0;
-    return c ? c.getBoundingClientRect().width + gap : rail.clientWidth/4;
-  }
-  function update(){
-    var max = rail.scrollWidth - rail.clientWidth - 2;
-    prev.hidden = rail.scrollLeft <= 2;
-    next.hidden = rail.scrollLeft >= max;
-  }
-  next.addEventListener('click', function(){ rail.scrollBy({left: step(), behavior:'smooth'}); });
-  prev.addEventListener('click', function(){ rail.scrollBy({left: -step(), behavior:'smooth'}); });
-  rail.addEventListener('scroll', update, {passive:true});
-  window.addEventListener('resize', update);
-  update();
-})();
-</script>
-
 <style>
-/* v298 homepage partners: continuous marquee, pauses on hover. JS adds .is-marquee;
-   without JS, without container query units, or with reduced motion, the scroll-snap rail stays. */
-#content .partners__rail.is-marquee .partners__viewport{overflow:hidden;container-type:inline-size;padding:6px 0 30px;margin-bottom:-30px;touch-action:pan-y}
-#content .partners__rail.is-marquee .partners__grid--rail{overflow:visible;scroll-snap-type:none;scroll-behavior:auto;width:max-content;padding:0;margin:0;will-change:transform}
-#content .partners__rail.is-marquee .partners__grid--rail .partner{flex:0 0 calc((100cqw - (var(--rail-cols) - 1) * var(--rail-gap)) / var(--rail-cols));scroll-snap-align:none}
+/* v300 homepage carousels (speakers row 2, partners): continuous scroll, pauses on hover.
+   JS wraps the track in .mq-viewport and adds .is-marquee to the rail; without JS, without
+   container query units, or with reduced motion, the scroll-snap rail with arrows stays. */
+#content .is-marquee > .mq-viewport{overflow:hidden;container-type:inline-size;padding:6px 0 30px;margin-bottom:-30px;touch-action:pan-y}
+#content .is-marquee > .mq-viewport > .mq-track{overflow:visible;scroll-snap-type:none;scroll-behavior:auto;width:max-content;padding:0;margin:0;will-change:transform}
+#content .is-marquee > .mq-viewport > .mq-track > *{flex:0 0 calc((100cqw - (var(--rail-cols) - 1) * var(--rail-gap)) / var(--rail-cols));scroll-snap-align:none}
 /* v299 more space between partner cards */
 #content .partners__rail .partners__grid--rail{--rail-gap:1.75rem}
 @media (max-width:1080px){#content .partners__rail .partners__grid--rail{--rail-gap:1.25rem}}
 @media (max-width:520px){#content .partners__rail .partners__grid--rail{--rail-gap:1rem}}
+/* v300 speakers: row 1 stationary, row 2 scrolls. Row gap matches the column gap (.6rem),
+   less the 6px the carousel viewport adds on top for card shadows. */
+#content .speakers__grid--top{margin-bottom:calc(.6rem - 6px)}
 </style>
 <script>
 (function(){
-  var rail = document.getElementById('partnersRail');
-  if (!rail) return;
-  var wrap = rail.parentNode;
-  var prev = wrap.querySelector('.speakers__arrow--prev');
-  var next = wrap.querySelector('.speakers__arrow--next');
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var cq = window.CSS && CSS.supports && CSS.supports('width', '1cqw');
+  var canRun = !reduce && cq && !!window.requestAnimationFrame;
+  var SPEED = 40;  // px per second
 
-  if (reduce || !cq || !window.requestAnimationFrame) {
-    // Fallback: static scroll-snap rail with arrows.
+  // Fallback: static scroll-snap rail with arrows.
+  function staticRail(rail, prev, next){
     if (!prev || !next) return;
-    var fstep = function(){
-      var c = rail.querySelector('.partner');
+    function step(){
+      var c = rail.firstElementChild;
       var g = parseFloat(getComputedStyle(rail).columnGap) || 0;
       return c ? c.getBoundingClientRect().width + g : rail.clientWidth/4;
-    };
-    var fupdate = function(){
+    }
+    function update(){
       var max = rail.scrollWidth - rail.clientWidth - 2;
       prev.hidden = rail.scrollLeft <= 2;
       next.hidden = rail.scrollLeft >= max;
-    };
-    next.addEventListener('click', function(){ rail.scrollBy({left: fstep(), behavior:'smooth'}); });
-    prev.addEventListener('click', function(){ rail.scrollBy({left: -fstep(), behavior:'smooth'}); });
-    rail.addEventListener('scroll', fupdate, {passive:true});
-    window.addEventListener('resize', fupdate);
-    window.addEventListener('load', fupdate);
-    fupdate();
-    return;
+    }
+    next.addEventListener('click', function(){ rail.scrollBy({left: step(), behavior:'smooth'}); });
+    prev.addEventListener('click', function(){ rail.scrollBy({left: -step(), behavior:'smooth'}); });
+    rail.addEventListener('scroll', update, {passive:true});
+    window.addEventListener('resize', update);
+    window.addEventListener('load', update);
+    update();
   }
 
-  var SPEED = 40;  // px per second
-  var vp = document.createElement('div');
-  vp.className = 'partners__viewport';
-  wrap.insertBefore(vp, rail);
-  vp.appendChild(rail);
-  wrap.classList.add('is-marquee');
-  rail.scrollLeft = 0;
+  function marquee(rail, wrap, prev, next){
+    var vp = document.createElement('div');
+    vp.className = 'mq-viewport';
+    wrap.insertBefore(vp, rail);
+    vp.appendChild(rail);
+    rail.classList.add('mq-track');
+    wrap.classList.add('is-marquee');
+    rail.scrollLeft = 0;
+    // Focusing a card inside the clipped viewport must not scroll it.
+    vp.addEventListener('scroll', function(){ if (vp.scrollLeft) vp.scrollLeft = 0; });
 
-  var originals = Array.prototype.slice.call(rail.children);
-  var clones = [], setW = 0, step = 0, pos = 0, v = 0, last = 0;
-  var nudge = null, hovering = false, focused = false, dragging = false;
-  var holdUntil = 0, visible = true, revealed = false;
+    var originals = Array.prototype.slice.call(rail.children);
+    var clones = [], setW = 0, step = 0, pos = 0, v = 0, last = 0;
+    var nudge = null, hovering = false, focused = false, dragging = false;
+    var holdUntil = 0, visible = true, revealed = false;
 
-  function mod(x){ return setW ? ((x % setW) + setW) % setW : 0; }
+    function mod(x){ return setW ? ((x % setW) + setW) % setW : 0; }
+    function render(){ rail.style.transform = 'translate3d(' + (-mod(pos)).toFixed(2) + 'px,0,0)'; }
 
-  function measure(){
-    clones.forEach(function(c){ rail.removeChild(c); });
-    clones = [];
-    rail.style.transform = 'none';
-    var first = originals[0].getBoundingClientRect();
-    var g = parseFloat(getComputedStyle(rail).columnGap) || 0;
-    var approx = originals.length * (first.width + g);
-    var copies = Math.max(1, Math.ceil(vp.clientWidth / approx));
-    for (var n = 0; n < copies; n++) {
-      originals.forEach(function(o){
-        var c = o.cloneNode(true);
-        c.setAttribute('aria-hidden', 'true');
-        c.setAttribute('tabindex', '-1');
-        c.removeAttribute('id');
-        c.style.transitionDelay = '0ms';
-        if (revealed) c.classList.add('in');
-        rail.appendChild(c);
-        clones.push(c);
+    function makeClone(o){
+      var c = o.cloneNode(true);
+      c.setAttribute('aria-hidden', 'true');
+      c.setAttribute('tabindex', '-1');
+      c.removeAttribute('id');
+      c.style.transitionDelay = '0ms';
+      Array.prototype.forEach.call(c.querySelectorAll('a,button,[tabindex]'), function(el){ el.setAttribute('tabindex', '-1'); });
+      if (revealed) c.classList.add('in');
+      // Speaker cards open their profile from the original card's handler.
+      if (o.querySelector('.speaker__details')) {
+        c.addEventListener('click', function(e){ e.preventDefault(); o.click(); });
+      }
+      return c;
+    }
+
+    function measure(){
+      clones.forEach(function(c){ rail.removeChild(c); });
+      clones = [];
+      rail.style.transform = 'none';
+      var first = originals[0].getBoundingClientRect();
+      var g = parseFloat(getComputedStyle(rail).columnGap) || 0;
+      var approx = originals.length * (first.width + g);
+      var copies = Math.max(1, Math.ceil(vp.clientWidth / approx));
+      for (var n = 0; n < copies; n++) {
+        originals.forEach(function(o){ var c = makeClone(o); rail.appendChild(c); clones.push(c); });
+      }
+      setW = clones[0].getBoundingClientRect().left - first.left;
+      step = setW / originals.length;
+      pos = mod(pos);
+      render();
+    }
+
+    function frame(t){
+      var dt = last ? Math.min(t - last, 64) / 1000 : 0;
+      last = t;
+      if (nudge) {
+        if (!nudge.t0) nudge.t0 = t;
+        var k = Math.min((t - nudge.t0) / nudge.dur, 1);
+        pos = nudge.from + (nudge.to - nudge.from) * (1 - Math.pow(1 - k, 3));
+        if (k >= 1) { nudge = null; pos = mod(pos); }
+        v = 0;
+      } else {
+        var run = !hovering && !focused && !dragging && visible && t >= holdUntil;
+        v += ((run ? SPEED : 0) - v) * Math.min(1, dt * 6);   // ease in and out of the pause
+        if (!dragging) pos = mod(pos + v * dt);
+      }
+      render();
+      requestAnimationFrame(frame);
+    }
+
+    function go(dir){
+      var base = nudge ? nudge.to : pos;
+      var to = dir > 0 ? (Math.floor(base / step + 0.01) + 1) * step
+                       : (Math.ceil(base / step - 0.01) - 1) * step;
+      nudge = { from: pos, to: to, dur: 550, t0: 0 };
+    }
+    if (prev && next) {
+      prev.hidden = false; next.hidden = false;
+      next.addEventListener('click', function(){ go(1); });
+      prev.addEventListener('click', function(){ go(-1); });
+    }
+
+    // Pause on mouse hover (arrows included) and on keyboard focus.
+    wrap.addEventListener('pointerenter', function(e){ if (e.pointerType === 'mouse') hovering = true; });
+    wrap.addEventListener('pointerleave', function(e){ if (e.pointerType === 'mouse') hovering = false; });
+    wrap.addEventListener('focusin', function(e){ focused = !!(e.target.matches && e.target.matches(':focus-visible')); });
+    wrap.addEventListener('focusout', function(e){ focused = !!(e.relatedTarget && wrap.contains(e.relatedTarget) && e.relatedTarget.matches(':focus-visible')); });
+    // Bring a keyboard-focused card into view.
+    originals.forEach(function(o, i){
+      o.addEventListener('focus', function(){
+        if (!o.matches(':focus-visible')) return;
+        nudge = { from: pos, to: pos + (mod(i * step - pos + setW / 2) - setW / 2), dur: 450, t0: 0 };
       });
-    }
-    setW = clones[0].getBoundingClientRect().left - first.left;
-    step = setW / originals.length;
-    pos = mod(pos);
-    render();
-  }
+    });
 
-  function render(){ rail.style.transform = 'translate3d(' + (-mod(pos)).toFixed(2) + 'px,0,0)'; }
+    // Touch: swipe to move, short pause after.
+    var lastX = 0, startX = 0, moved = false;
+    vp.addEventListener('pointerdown', function(e){
+      if (e.pointerType === 'mouse') return;
+      dragging = true; nudge = null; v = 0; moved = false; startX = lastX = e.clientX;
+    });
+    vp.addEventListener('pointermove', function(e){
+      if (!dragging || e.pointerType === 'mouse') return;
+      pos = mod(pos - (e.clientX - lastX));
+      lastX = e.clientX;
+      if (Math.abs(e.clientX - startX) > 6) moved = true;
+    });
+    function endDrag(){ if (dragging) { dragging = false; holdUntil = performance.now() + 1500; } }
+    vp.addEventListener('pointerup', endDrag);
+    vp.addEventListener('pointercancel', endDrag);
+    vp.addEventListener('click', function(e){ if (moved) { e.preventDefault(); e.stopPropagation(); moved = false; } }, true);
 
-  function frame(t){
-    var dt = last ? Math.min(t - last, 64) / 1000 : 0;
-    last = t;
-    if (nudge) {
-      if (!nudge.t0) nudge.t0 = t;
-      var k = Math.min((t - nudge.t0) / nudge.dur, 1);
-      pos = nudge.from + (nudge.to - nudge.from) * (1 - Math.pow(1 - k, 3));
-      if (k >= 1) { nudge = null; pos = mod(pos); }
-      v = 0;
+    // Reveal all cards together; idle while off screen.
+    if ('IntersectionObserver' in window) {
+      new IntersectionObserver(function(entries){
+        entries.forEach(function(e){
+          visible = e.isIntersecting;
+          if (visible && !revealed) {
+            revealed = true;
+            Array.prototype.forEach.call(rail.children, function(c){ c.classList.add('in'); });
+          }
+        });
+      }, { threshold: 0.05 }).observe(vp);
     } else {
-      var run = !hovering && !focused && !dragging && visible && t >= holdUntil;
-      v += ((run ? SPEED : 0) - v) * Math.min(1, dt * 6);   // ease in and out of the pause
-      if (!dragging) pos = mod(pos + v * dt);
+      revealed = true;
+      originals.forEach(function(c){ c.classList.add('in'); });
     }
-    render();
+
+    var rt;
+    window.addEventListener('resize', function(){ cancelAnimationFrame(rt); rt = requestAnimationFrame(measure); });
+    measure();
     requestAnimationFrame(frame);
   }
 
-  function go(dir){
-    var base = nudge ? nudge.to : pos;
-    var to = dir > 0 ? (Math.floor(base / step + 0.01) + 1) * step
-                     : (Math.ceil(base / step - 0.01) - 1) * step;
-    nudge = { from: pos, to: to, dur: 550, t0: 0 };
+  function setup(id){
+    var rail = document.getElementById(id);
+    if (!rail || !rail.firstElementChild) return;
+    var wrap = rail.parentNode;
+    var prev = wrap.querySelector(':scope > .speakers__arrow--prev');
+    var next = wrap.querySelector(':scope > .speakers__arrow--next');
+    if (canRun) marquee(rail, wrap, prev, next); else staticRail(rail, prev, next);
   }
-  if (prev && next) {
-    prev.hidden = false; next.hidden = false;
-    next.addEventListener('click', function(){ go(1); });
-    prev.addEventListener('click', function(){ go(-1); });
-  }
-
-  // Pause on mouse hover (arrows included) and on keyboard focus.
-  wrap.addEventListener('pointerenter', function(e){ if (e.pointerType === 'mouse') hovering = true; });
-  wrap.addEventListener('pointerleave', function(e){ if (e.pointerType === 'mouse') hovering = false; });
-  wrap.addEventListener('focusin', function(e){ focused = e.target.matches && e.target.matches(':focus-visible'); });
-  wrap.addEventListener('focusout', function(e){ focused = !!(e.relatedTarget && wrap.contains(e.relatedTarget) && e.relatedTarget.matches(':focus-visible')); });
-  // Keep a keyboard-focused original card in view.
-  originals.forEach(function(o, i){
-    o.addEventListener('focus', function(){ if (!o.matches(':focus-visible')) return; nudge = { from: pos, to: pos + (mod(i * step - pos + setW / 2) - setW / 2), dur: 450, t0: 0 }; });
-  });
-
-  // Touch: swipe to move, pause briefly after.
-  var lastX = 0, startX = 0, moved = false;
-  vp.addEventListener('pointerdown', function(e){
-    if (e.pointerType === 'mouse') return;
-    dragging = true; nudge = null; v = 0; moved = false; startX = lastX = e.clientX;
-  });
-  vp.addEventListener('pointermove', function(e){
-    if (!dragging || e.pointerType === 'mouse') return;
-    pos = mod(pos - (e.clientX - lastX));
-    lastX = e.clientX;
-    if (Math.abs(e.clientX - startX) > 6) moved = true;
-  });
-  function endDrag(){ if (dragging) { dragging = false; holdUntil = performance.now() + 1500; } }
-  vp.addEventListener('pointerup', endDrag);
-  vp.addEventListener('pointercancel', endDrag);
-  vp.addEventListener('click', function(e){ if (moved) { e.preventDefault(); e.stopPropagation(); moved = false; } }, true);
-
-  // Reveal all cards together and idle while off screen.
-  if ('IntersectionObserver' in window) {
-    new IntersectionObserver(function(entries){
-      entries.forEach(function(e){
-        visible = e.isIntersecting;
-        if (visible && !revealed) {
-          revealed = true;
-          Array.prototype.forEach.call(rail.children, function(c){ c.classList.add('in'); });
-        }
-      });
-    }, { threshold: 0.05 }).observe(vp);
-  } else {
-    revealed = true;
-    originals.forEach(function(c){ c.classList.add('in'); });
-  }
-
-  var rt;
-  window.addEventListener('resize', function(){ cancelAnimationFrame(rt); rt = requestAnimationFrame(measure); });
-  measure();
-  requestAnimationFrame(frame);
+  // Run after the speaker profile script has bound its click handlers to the original cards.
+  function init(){ setup('speakersGridFeatured'); setup('partnersRail'); }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
 })();
 </script>
 
@@ -1644,7 +1645,7 @@
   function close(){
     modal.classList.remove('is-open'); modal.setAttribute('aria-hidden','true');
     document.body.classList.remove('menu-open');
-    if(lastCard) lastCard.focus();
+    if(lastCard) lastCard.focus({preventScroll:true});
   }
   document.getElementById('spkModalClose').addEventListener('click', close);
   modal.addEventListener('click', function(e){ if(e.target===modal) close(); });
