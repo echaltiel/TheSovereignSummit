@@ -1430,20 +1430,19 @@
 #content .is-marquee > .mq-viewport{overflow:hidden;container-type:inline-size;padding:6px 0 30px;margin-bottom:-30px;touch-action:pan-y}
 #content .is-marquee > .mq-viewport > .mq-track{overflow:visible;scroll-snap-type:none;scroll-behavior:auto;width:max-content;padding:0;margin:0;will-change:transform}
 #content .is-marquee > .mq-viewport > .mq-track > *{flex:0 0 calc((100cqw - (var(--rail-cols) - 1) * var(--rail-gap)) / var(--rail-cols));scroll-snap-align:none}
-/* v299 more space between partner cards */
-#content .partners__rail .partners__grid--rail{--rail-gap:1.75rem}
-@media (max-width:1080px){#content .partners__rail .partners__grid--rail{--rail-gap:1.25rem}}
-@media (max-width:520px){#content .partners__rail .partners__grid--rail{--rail-gap:1rem}}
 /* v300 speakers: row 1 stationary, row 2 scrolls. Row gap matches the column gap (.6rem),
    less the 6px the carousel viewport adds on top for card shadows. */
 #content .speakers__grid--top{margin-bottom:calc(.6rem - 6px)}
+/* v301 partners and speakers rails share the speakers grid spacing at every width */
+@media (max-width:720px){#content .speakers__grid--rail,#content .partners__grid--rail{--rail-gap:.4rem}#content .speakers__grid--top{margin-bottom:calc(.4rem - 6px)}}
+@media (max-width:480px){#content .speakers__grid--rail,#content .partners__grid--rail{--rail-gap:.35rem}#content .speakers__grid--top{margin-bottom:calc(.35rem - 6px)}}
 </style>
 <script>
 (function(){
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var cq = window.CSS && CSS.supports && CSS.supports('width', '1cqw');
   var canRun = !reduce && cq && !!window.requestAnimationFrame;
-  var SPEED = 40;  // px per second
+  var SPEED = 60;  // px per second
 
   // Fallback: static scroll-snap rail with arrows.
   function staticRail(rail, prev, next){
