@@ -6,5 +6,8 @@
     { "source": "/team", "destination": "/leadership", "permanent": true },
     { "source": "/venue", "destination": "/hotel", "permanent": true },
     { "source": "/floor-plan", "destination": "/convention-center", "permanent": true }
+  ],
+  "rewrites": [
+    { "source": "/([Pp][Rr][Oo][Mm][Oo])", "destination": "/promo.html" }
   ]
 }
