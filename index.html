@@ -559,6 +559,20 @@
 </style>
 <script src="/js/promo.js?v=1" defer></script>
 <script src="/ticket-countdown.js?v=9" defer></script>
+<style id="sponsors-grid">
+/* Sponsors: logo tiles first, "Become a sponsor" tile always last. Two across on wider screens; phones keep the single-tile layout. */
+@media (min-width:601px){
+  #content #sponsors .partners__grid--sponsors{grid-template-columns:repeat(2,minmax(0,440px));gap:1rem;border:none}
+}
+#content #sponsors .partners__grid--sponsors .partner--logo .partner__portrait{aspect-ratio:440/215}
+#content #sponsors .partners__grid--sponsors .partner--logo .partner__photo{width:100%;height:100%;object-fit:contain}
+@media (max-width:600px){
+  #content #sponsors .partners__grid--sponsors{gap:.75rem}
+  #content #sponsors .partners__grid--sponsors .partner--logo{display:flex !important;flex-direction:column;padding:0;gap:0;overflow:hidden}
+  #content #sponsors .partners__grid--sponsors .partner--logo .partner__portrait{width:100% !important;height:auto !important;aspect-ratio:440/215}
+  #content #sponsors .partners__grid--sponsors .partner--logo .partner__name{font-size:1.6rem;padding:1rem 1rem 1.15rem;margin:0}
+}
+</style>
 </head>
 <body>
 <div class="header" id="siteHeader">
@@ -998,7 +1012,11 @@
       <div class="sec-hd__num">Sponsors</div>
       <h2 class="section-title sec-hd__title">Brands supporting <em>Sovereignty.</em></h2>
     </header>
-    <div class="partners__grid partners__grid--single">
+    <div class="partners__grid partners__grid--single partners__grid--sponsors">
+      <a class="partner partner--logo" data-sponsor="01" href="https://www.forager.tv/" target="_blank" rel="noopener" aria-label="Forager">
+        <div class="partner__portrait partner__portrait--haslogo partner__portrait--dark"><img class="partner__photo" src="images/sponsors/forager.webp" alt="Forager logo" loading="lazy" decoding="async"></div>
+        <h3 class="partner__name"><em>Forager</em></h3>
+      </a>
       <a class="partner partner--cta partner--cta-sponsor" href="/get-involved" aria-label="Become a sponsor of The Sovereign Summit">
         <div class="partner__portrait partner__portrait--haslogo"><picture>
           <source media="(max-width:600px)" srcset="images/sponsor-placeholder-mobile.png">
