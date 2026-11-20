@@ -6275,3 +6275,60 @@ body.menu-open{overflow:hidden}
 /* v303 more room between the featured partner card and the partners below it */
 #content .partners__grid.partners__grid--featured{margin-bottom:1.5rem}
 @media (max-width:720px){#content .partners__grid.partners__grid--featured{margin-bottom:1.25rem}}
+/* v304 sponsor tiers (Platinum large, Gold medium, Silver small) and logo-only partner/sponsor tiles */
+#content .sp-tiers{display:flex;flex-direction:column;align-items:center;gap:clamp(2.25rem,4.5vw,3.75rem);margin-top:clamp(1.25rem,3vw,2.25rem)}
+#content .sp-tier{width:100%;display:flex;flex-direction:column;align-items:center;gap:clamp(1rem,2vw,1.5rem)}
+#content .sp-tier__label{display:flex;align-items:center;gap:1.1rem;width:min(100%,760px);margin:0;font-family:'JetBrains Mono',ui-monospace,monospace;font-size:.72rem;font-weight:700;line-height:1;letter-spacing:.34em;text-indent:.34em;text-transform:uppercase;color:rgba(244,236,224,.72)}
+#content .sp-tier__label::before,#content .sp-tier__label::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,rgba(244,236,224,0),rgba(244,236,224,.24))}
+#content .sp-tier__label::after{background:linear-gradient(90deg,rgba(244,236,224,.24),rgba(244,236,224,0))}
+#content .sp-tier__row{display:flex;flex-wrap:wrap;justify-content:center;gap:var(--sp-gap,1.1rem);width:100%}
+#content .sp-tier--platinum{--sp-w:540px;--sp-ratio:2.25/1;--sp-title:2.4rem}
+#content .sp-tier--gold{--sp-w:390px;--sp-ratio:2.2/1;--sp-title:1.85rem}
+#content .sp-tier--silver{--sp-w:270px;--sp-ratio:2.1/1;--sp-title:1.4rem}
+#content .sp-logo,#content .sp-slot{box-sizing:border-box;flex:0 1 var(--sp-w);width:var(--sp-w);max-width:100%;aspect-ratio:var(--sp-ratio);border-radius:16px;text-decoration:none;color:inherit;transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease,background-color .25s ease}
+#content .sp-logo{display:flex;align-items:center;justify-content:center;overflow:hidden;background:#FAF5EA;border:1px solid rgba(244,236,224,.10)}
+#content .sp-logo--dark{background:#0A1224}
+#content .sp-logo img{display:block;width:100%;height:100%;object-fit:contain;padding:15% 16%;box-sizing:border-box}
+#content .sp-logo:hover,#content .sp-logo:focus-visible{transform:translateY(-3px);border-color:rgba(244,236,224,.28);box-shadow:0 16px 36px rgba(0,0,0,.38)}
+#content .sp-slot{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.7rem;padding:1rem;text-align:center;border:1px solid rgba(244,236,224,.14);background:radial-gradient(120% 140% at 50% 0%,rgba(244,236,224,.06),rgba(244,236,224,.012) 60%),#0A1224}
+#content .sp-slot__title{font-family:'Instrument Serif',Georgia,serif;font-weight:400;font-size:var(--sp-title);line-height:1;color:#F4ECE0;letter-spacing:-.005em}
+#content .sp-slot__title em{font-style:italic}
+#content .sp-slot__cta{font-family:'JetBrains Mono',ui-monospace,monospace;font-size:.68rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);white-space:nowrap}
+#content .sp-slot__cta span{display:inline-block;transition:transform .2s ease}
+#content .sp-slot:hover,#content .sp-slot:focus-visible{border-color:var(--accent);background:rgba(255,105,65,.06);transform:translateY(-3px)}
+#content .sp-slot:hover .sp-slot__cta span{transform:translateX(3px)}
+#content .sp-logo:focus-visible,#content .sp-slot:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+@media (max-width:1000px){
+  #content .sp-tier--platinum{--sp-w:min(540px,100%)}
+  #content .sp-tier--gold{--sp-w:min(390px,72%)}
+  #content .sp-tier--silver{--sp-w:min(270px,48%)}
+}
+@media (max-width:600px){
+  #content .sp-tiers{gap:2.1rem}
+  #content .sp-tier__row{--sp-gap:.75rem}
+  #content .sp-tier__label{font-size:.66rem;letter-spacing:.3em;text-indent:.3em;gap:.8rem}
+  #content .sp-tier--platinum{--sp-w:100%;--sp-title:2.1rem}
+  #content .sp-tier--gold{--sp-w:82%;--sp-title:1.65rem}
+  #content .sp-tier--silver{--sp-w:calc(50% - .375rem);--sp-title:1.15rem}
+  #content .sp-slot{gap:.5rem}
+  #content .sp-slot__cta{font-size:.6rem;letter-spacing:.18em}
+}
+@media (prefers-reduced-motion:reduce){#content .sp-logo,#content .sp-slot,#content .sp-slot__cta span{transition:none}#content .sp-logo:hover,#content .sp-slot:hover{transform:none}}
+#content .sp-tiers + .speakers__footnote{margin-top:clamp(2rem,4vw,2.75rem)}
+/* logo-only partner cards (Simply Bitcoin's featured card keeps its caption) */
+#content .partner.partner--logo,#content #partnersGrid .partner--cta{padding:0 !important;display:block !important;background:transparent !important;border:1px solid rgba(244,236,224,.10) !important;border-radius:16px;overflow:hidden;transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}
+#content .partner.partner--logo .partner__portrait,#content #partnersGrid .partner--cta .partner__portrait{margin:0 !important;width:100% !important;height:auto !important;aspect-ratio:2.1/1;grid-row:auto !important;border-radius:0 !important}
+#content .partner.partner--logo .partner__photo{display:block;width:100%;height:100%;object-fit:contain;padding:13% 12% !important;box-sizing:border-box}
+#content .partner.partner--logo .partner__portrait--tall .partner__photo{padding:5% !important}
+#content .partner.partner--logo:hover,#content #partnersGrid .partner--cta:hover{transform:translateY(-3px);border-color:rgba(244,236,224,.28) !important;box-shadow:0 16px 36px rgba(0,0,0,.38)}
+#content #partnersGrid{display:flex !important;flex-wrap:wrap;justify-content:center;gap:10px;border:none !important}
+#content #partnersGrid .partner{flex:0 0 calc(25% - 7.5px);width:calc(25% - 7.5px);max-width:none}
+@media (max-width:900px){#content #partnersGrid .partner{flex-basis:calc(33.333% - 6.7px);width:calc(33.333% - 6.7px)}}
+@media (max-width:600px){
+  #content #partnersGrid{gap:.7rem}
+  #content #partnersGrid .partner{flex-basis:calc(50% - .35rem);width:calc(50% - .35rem)}
+  #content #partnersGrid .partner .partner__portrait{aspect-ratio:1.75/1}
+  #content #partnersGrid .partner.partner--logo .partner__photo{padding:12% 10% !important}
+  #content #partnersGrid .partner--cta{flex-basis:100%;width:100%}
+  #content #partnersGrid .partner--cta .partner__portrait{aspect-ratio:3/1}
+}
