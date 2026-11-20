@@ -6321,14 +6321,3 @@ body.menu-open{overflow:hidden}
 #content .partner.partner--logo .partner__photo{display:block;width:100%;height:100%;object-fit:contain;padding:13% 12% !important;box-sizing:border-box}
 #content .partner.partner--logo .partner__portrait--tall .partner__photo{padding:5% !important}
 #content .partner.partner--logo:hover,#content #partnersGrid .partner--cta:hover{transform:translateY(-3px);border-color:rgba(244,236,224,.28) !important;box-shadow:0 16px 36px rgba(0,0,0,.38)}
-#content #partnersGrid{display:flex !important;flex-wrap:wrap;justify-content:center;gap:10px;border:none !important}
-#content #partnersGrid .partner{flex:0 0 calc(25% - 7.5px);width:calc(25% - 7.5px);max-width:none}
-@media (max-width:900px){#content #partnersGrid .partner{flex-basis:calc(33.333% - 6.7px);width:calc(33.333% - 6.7px)}}
-@media (max-width:600px){
-  #content #partnersGrid{gap:.7rem}
-  #content #partnersGrid .partner{flex-basis:calc(50% - .35rem);width:calc(50% - .35rem)}
-  #content #partnersGrid .partner .partner__portrait{aspect-ratio:1.75/1}
-  #content #partnersGrid .partner.partner--logo .partner__photo{padding:12% 10% !important}
-  #content #partnersGrid .partner--cta{flex-basis:100%;width:100%}
-  #content #partnersGrid .partner--cta .partner__portrait{aspect-ratio:3/1}
-}
