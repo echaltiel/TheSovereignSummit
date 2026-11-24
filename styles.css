@@ -6358,3 +6358,6 @@ body.menu-open{overflow:hidden}
 #content .trailer__frame.is-playing .trailer__play{display:none}
 @media (max-width:720px){#content .trailer__frame{border-radius:12px}#content .trailer__play-label{font-size:.68rem}}
 @media (prefers-reduced-motion:reduce){#content .trailer__play-btn{transition:none}}
+/* v307 */
+#content .sp-slot--tba,#content .sp-slot--tba:hover{cursor:default;transform:none;border-color:rgba(244,236,224,.14);background:radial-gradient(120% 140% at 50% 0%,rgba(244,236,224,.06),rgba(244,236,224,.012) 60%),#0A1224}
+#content .sp-slot--tba .sp-slot__title{color:rgba(244,236,224,.82)}
