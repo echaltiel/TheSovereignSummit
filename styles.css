@@ -6342,3 +6342,19 @@ body.menu-open{overflow:hidden}
   #content .sp-tier__name{letter-spacing:.16em;padding-left:.16em}
 }
 @media (prefers-reduced-motion:reduce){#content .sp-tier__name{animation:none;background-position:50% 0}}
+
+/* v306 */
+#content .trailer{padding:clamp(2.2rem,5vw,4rem) 0 clamp(.5rem,2vw,1.5rem)}
+#content .trailer .trailer__hd{margin:0}
+#content .trailer__frame{position:relative;width:100%;max-width:min(880px,calc((100vh - 240px) * 4 / 3));max-width:min(880px,calc((100svh - 240px) * 4 / 3));min-width:min(100%,340px);margin:0 auto;aspect-ratio:4/3;border-radius:16px;overflow:hidden;background:#0A1224;border:1px solid rgba(244,236,224,.14);box-shadow:0 24px 60px rgba(0,0,0,.35)}
+#content .trailer__video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;background:#0A1224}
+#content .trailer__play{position:absolute;inset:0;width:100%;height:100%;border:0;padding:0;margin:0;cursor:pointer;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.9rem;color:#F4ECE0;background:linear-gradient(180deg,rgba(10,18,36,.10) 0%,rgba(10,18,36,.18) 55%,rgba(10,18,36,.62) 100%);-webkit-tap-highlight-color:transparent}
+#content .trailer__play-btn{width:clamp(60px,8vw,84px);height:clamp(60px,8vw,84px);border-radius:50%;display:grid;place-items:center;background:rgba(244,236,224,.94);color:#131E33;box-shadow:0 8px 28px rgba(0,0,0,.35);transition:transform .2s ease}
+#content .trailer__play-btn svg{margin-left:3px}
+#content .trailer__play:hover .trailer__play-btn{transform:scale(1.06)}
+#content .trailer__play:focus-visible{outline:2px solid #F4ECE0;outline-offset:-6px}
+#content .trailer__play-label{font-family:var(--fm);font-size:.78rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;text-shadow:0 1px 8px rgba(0,0,0,.6)}
+#content .trailer__play-label i{font-style:normal;opacity:.7;margin-left:.6em}
+#content .trailer__frame.is-playing .trailer__play{display:none}
+@media (max-width:720px){#content .trailer__frame{border-radius:12px}#content .trailer__play-label{font-size:.68rem}}
+@media (prefers-reduced-motion:reduce){#content .trailer__play-btn{transition:none}}
